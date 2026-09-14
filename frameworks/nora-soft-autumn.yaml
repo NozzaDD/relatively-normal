@@ -1,0 +1,45 @@
+# examples/nora-soft-autumn.yaml
+# The first test case. When colour-system.md is applied to these inputs,
+# the output must match this. If it doesn't, the method is wrong, not the case.
+
+subject: owner
+analysed: 2026-09-13
+method_version: 1
+
+inputs:
+  photos: 3                # face straight on, profile, hair and shoulders; natural indirect light
+  questions:
+    wears_most: knitwear
+    wants_to_feel: "calm, put together, not trying"
+    reaches_for: "teal, olive, a good brown"
+
+expected_axes:
+  temperature: {reading: warm-neutral, confidence: medium}
+  value:       {reading: medium, confidence: high}
+  chroma:      {reading: soft, confidence: high}
+
+expected_result:
+  primary_season: soft_autumn
+  secondary_season: soft_summer          # the honest runner-up; temperature is the only axis separating them
+  direction: teal_ochre                  # selected by question 3
+  tier_proportions: {foundations: 0.55, supporting: 0.30, accents: 0.15}
+
+expected_rules_in_force:
+  - black stays below the waist or in leather and hardware
+  - rust as small pieces only
+  - light and soft colours nearest the face
+  - near-complementary pairs allowed, contrast kept in the foundation tier
+  - dress to low natural contrast
+
+known_items_and_expected_verdicts:
+  - {item: "deep teal knit", hex: "1F5F63", expected: in, nearest: deep teal}
+  - {item: "black trousers", hex: "000000", expected: in, nearest: "black (below waist)"}
+  - {item: "rust scarf", hex: "A6502F", expected: in, nearest: rust, note: "accent tier — small piece, correct"}
+  - {item: "pure white shirt", hex: "FFFFFF", expected: hard_miss, nearest: cream, note: "white near the face fails for this season"}
+  - {item: "cobalt top", hex: "0047FF", expected: out, nearest: deep teal}
+
+notes: >
+  Soft Summer is the plausible misread. Both are soft-primary, low-contrast, medium-value.
+  What separates them is temperature, which is the axis photo analysis gets wrong most often.
+  If the method returns Soft Summer as primary on these inputs, check the white-balance
+  handling before anything else.
