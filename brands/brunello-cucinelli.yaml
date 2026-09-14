@@ -1,0 +1,23 @@
+name: Brunello Cucinelli
+slug: brunello-cucinelli
+country: Italy
+ownership: listed
+price_band: luxury
+core_materials:
+  - cashmere
+  - wool
+  - cotton
+construction_notes: >
+  Cashmere is the foundation of the house. The rubric questions are yarn grade,
+  ply and whether knitwear is fully fashioned — shaped on the machine rather than
+  cut from panels. Verify per garment; the brand's reputation is not a substitute
+  for a composition label under rubric field 1.
+rubric_score:
+affiliate_available: unknown
+partnership_tier: later
+notes: >
+  Solomeo, Umbria. Founded 1978. Publicly listed, with the founding family
+  retaining control — recorded as listed under this schema, since that is the
+  ownership form that constrains how the company behaves.
+  UNVERIFIED: any reported stake in yarn suppliers (see cariaggi.yaml).
+  Partnership tier later: large, tightly controlled brand presentation.

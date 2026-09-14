@@ -12,6 +12,7 @@ A styling newsletter, and eventually a wardrobe tool.
 | `content/` | Notes, posts, calendar, note bank |
 | `content/posts/` | One markdown file per weekly post |
 | `consultations/` | One folder per beta consultation |
+| `staples/` | The staples catalogue — reliable basics by slot |
 | `data/` | UTM scheme, metrics |
 | `app/` | The website, later — empty for now |
 

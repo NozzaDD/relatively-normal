@@ -1,0 +1,82 @@
+# staples/tops.yaml — slot: top
+# CANDIDATES ONLY. Nothing here has been researched, priced, scored or verified.
+# hex values must be sampled from product photographs before any matching runs.
+# See staples/README.md.
+
+- item: extra-fine merino crew neck
+  brand: uniqlo
+  slot: top
+  price: unknown
+  currency: unknown
+  fibre: extra-fine merino wool — verify percentage on the label
+  rubric_score:
+  seasons_served: unknown
+  colourways:
+    - {name: black, hex: unknown, url: , affiliate: }
+    - {name: navy, hex: unknown, url: , affiliate: }
+    - {name: grey, hex: unknown, url: , affiliate: }
+  reviewed:
+  notes: >
+    The reference case for why staples exist: one item, a deep colour range,
+    re-run every season. Colour range rotates — the three above are the reliably
+    recurring ones; olive, wine and camel appear in some seasons and not others.
+    Availability: Germany confirmed. Switzerland UNVERIFIED — check before
+    recommending to Swiss readers.
+
+- item: loopwheeled cotton t-shirt
+  brand: merz b. schwanen
+  slot: top
+  price: unknown
+  currency: unknown
+  fibre: cotton jersey, loopwheeled — verify weight and percentage per style
+  rubric_score:
+  seasons_served: unknown
+  colourways:
+    - {name: white, hex: unknown, url: , affiliate: }
+    - {name: black, hex: unknown, url: , affiliate: }
+    - {name: natural / undyed, hex: unknown, url: , affiliate: }
+  reviewed:
+  notes: >
+    Also in brands/ as merz-b-schwanen. Strong on construction (no side seams,
+    loopwheeled) and expected wear count; narrow colour range, so it fills the
+    neutral end of a gap rather than a colour gap.
+    Priced high for a t-shirt — a good test of rubric field 4, where the question
+    is whether the price is coherent with the making, not whether it is low.
+
+- item: wool knit crew neck
+  brand: cos
+  slot: top
+  price: unknown
+  currency: unknown
+  fibre: unknown — wool content varies by style, verify per garment
+  rubric_score:
+  seasons_served: unknown
+  colourways:
+    - {name: black, hex: unknown, url: , affiliate: }
+    - {name: navy, hex: unknown, url: , affiliate: }
+    - {name: cream, hex: unknown, url: , affiliate: }
+  reviewed:
+  notes: >
+    Stocked in both Switzerland and Germany, which is the main argument for it.
+    Fibre is the open question — the knitwear ranges from pure wool to heavily
+    blended, so this cannot be treated as one item until a specific style is
+    pinned down.
+
+- item: long-staple cotton t-shirt
+  brand: sunspel
+  slot: top
+  price: unknown
+  currency: unknown
+  fibre: long-staple cotton — verify percentage and weight
+  rubric_score:
+  seasons_served: unknown
+  colourways:
+    - {name: white, hex: unknown, url: , affiliate: }
+    - {name: navy, hex: unknown, url: , affiliate: }
+  reviewed:
+  notes: >
+    Named in matching.md §5 as an example of a deep-colourway staple ("the
+    Sunspel tee in twelve"). That figure is illustrative and has not been checked.
+    UK brand — availability in Switzerland and Germany is online-first; confirm
+    shipping, duties and returns before recommending to Swiss readers, since
+    Switzerland is outside the EU customs union.

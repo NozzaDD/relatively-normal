@@ -1,0 +1,78 @@
+# staples/shoes.yaml — slot: shoes
+# CANDIDATES ONLY. Nothing here has been researched, priced, scored or verified.
+# hex values must be sampled from product photographs before any matching runs.
+
+- item: leather footbed sandal
+  brand: birkenstock
+  slot: shoes
+  price: unknown
+  currency: unknown
+  fibre: leather upper and footbed cover — materials vary by model, verify
+  rubric_score:
+  seasons_served: unknown
+  colourways:
+    - {name: black, hex: unknown, url: , affiliate: }
+    - {name: taupe / mocha, hex: unknown, url: , affiliate: }
+    - {name: white, hex: unknown, url: , affiliate: }
+  reviewed:
+  notes: >
+    German, available everywhere in both markets. Candidate on expected wear
+    count: the footbed and sole can be replaced, which is the repairability
+    criterion in rubric field 5.
+    Many models are synthetic rather than leather — the material is the thing to
+    verify, and the model name alone does not settle it.
+
+- item: goodyear-welted leather shoe
+  brand: ludwig reiter
+  slot: shoes
+  price: unknown
+  currency: unknown
+  fibre: leather — verify tannage and lining per model
+  rubric_score:
+  seasons_served: unknown
+  colourways:
+    - {name: black, hex: unknown, url: , affiliate: }
+    - {name: dark brown, hex: unknown, url: , affiliate: }
+  reviewed:
+  notes: >
+    Austrian, sold in Germany and Switzerland. Welted construction means the shoe
+    can be resoled repeatedly — the clearest rubric field 5 case in this folder,
+    and a genuine field 2 construction marker.
+    Sits at the top of the price range for a staple; whether it belongs in
+    staples/ or in brands/ as an investment piece is a judgement for the owner.
+
+- item: leather shoe, resoleable
+  brand: trippen
+  slot: shoes
+  price: unknown
+  currency: unknown
+  fibre: leather — verify per model
+  rubric_score:
+  seasons_served: unknown
+  colourways:
+    - {name: black, hex: unknown, url: , affiliate: }
+  reviewed:
+  notes: >
+    German, made in Germany. Distinctive rather than neutral, which cuts both
+    ways for a staple: strong on construction and wear count, weak on the
+    "goes with everything" test a staple is supposed to pass.
+    Colour range UNVERIFIED beyond black.
+
+- item: welted leather derby
+  brand: paraboot
+  slot: shoes
+  price: unknown
+  currency: unknown
+  fibre: leather — verify per model
+  rubric_score:
+  seasons_served: unknown
+  colourways:
+    - {name: black, hex: unknown, url: , affiliate: }
+    - {name: brown, hex: unknown, url: , affiliate: }
+  reviewed:
+  notes: >
+    French, stocked by good independents in both markets rather than through own
+    stores — availability is patchier than the others here and should be checked
+    per city before recommending.
+    Included over a sneaker because sneakers rarely clear rubric field 5: most
+    cannot be resoled.
