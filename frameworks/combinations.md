@@ -14,40 +14,67 @@ A Wada combination has three properties at once:
 
 | Property | Rule | Why it works |
 |---|---|---|
-| **Hue opposition** | Two hues 120–180° apart on the wheel — near-complementary or split-complementary | This is where the vibration comes from |
-| **Chroma matched** | Both at the same saturation level: both muted, or both clear. Chroma C* within 10 of each other | Matched chroma is what stops opposition from shouting |
-| **Value contrast** | One deep, one light. ΔL* ≥ 25 | Separation in value keeps the pair legible instead of muddy |
+| **Hue opposition** | Two hues 100–180° apart on the wheel (Lab hue, h°) — near-complementary or split-complementary | This is where the vibration comes from |
+| **Chroma matched** | Both at the same *relative* saturation: Δ relative chroma ≤ 0.20 | Matched chroma is what stops opposition from shouting |
+| **Value contrast** | ΔL* ≥ 15 | Separation in value keeps the pair legible instead of muddy |
 
 Saturated teal against saturated orange is a costume. The same hues pulled down to matched low chroma and set far apart in value read as considered. **The energy comes from the hue; the calm comes from the chroma; the clarity comes from the value.**
 
-## 3. The generator
+### Relative chroma
 
-Given a season's palette from `seasons.yaml`, produce its combinations:
+```
+relative_chroma = C* / C*max(L*, h)
+```
+
+where **C\*max(L\*, h)** is the sRGB gamut boundary — the largest chroma that can be displayed at that lightness and hue. Relative chroma is the fraction of the available saturation a colour actually uses.
+
+**Why the rule changed.** Absolute chroma (C\*) cannot be compared across hues, because the gamut is far wider at some hues and lightnesses than at others. A deep teal has almost no room to be saturated; a mid-lightness ochre has a great deal. Measured absolutely, deep teal `1F5F63` is C\* 20.2 and ochre `C7912B` is C\* 59.4 — a gap of 39, which reads as "one muted, one vivid" and fails a matched-chroma test. Measured relatively, deep teal sits at **0.846** of its gamut boundary and ochre at **0.850** — a difference of **0.004**. Both are as saturated as their corner of the gamut allows, which is exactly why they read as a matched pair. The absolute rule killed the reference pair; the relative rule keeps it.
+
+## 3. The generators
+
+Given a season's palette from `seasons.yaml`, two generators run over every pair of anchors across all three tiers. They share the chroma test and differ on hue and value.
+
+| | Hue gap | Δ relative chroma | ΔL* |
+|---|---|---|---|
+| **Opposition** | 100–180° | ≤ 0.20 | ≥ 15 |
+| **Tonal** | ≤ 40° | ≤ 0.20 | ≥ 25 |
+
+Opposition is the Wada mechanism above. Tonal is the same discipline applied to one hue family: matched chroma and a wide value step, without the hue vibration.
+
+For each generator:
 
 1. Take every pair of anchors across all three tiers.
-2. Keep pairs where the hue angle difference (in Lab hue, h°) is between 120° and 180°.
-3. Keep pairs where the chroma difference |C*₁ − C*₂| ≤ 10.
-4. Keep pairs where the lightness difference |L*₁ − L*₂| ≥ 25.
+2. Keep pairs whose Lab hue gap is inside the generator's band.
+3. Keep pairs where |relative_chroma₁ − relative_chroma₂| ≤ 0.20.
+4. Keep pairs where |L*₁ − L*₂| meets the generator's minimum.
 5. For each surviving pair, name the **dominant** (deeper) and the **counter** (lighter). Dominant takes 60–70% of the outfit; counter takes 30–40%.
 6. Optionally add a **bridge**: a foundation-tier neutral whose L* sits between the two. Three-colour combinations use dominant / counter / bridge at roughly 50 / 30 / 20.
-7. Rank by hue separation (closer to 180° ranks higher) then by value contrast.
+7. Rank within each generator by hue separation (opposition: closer to 180° ranks higher; tonal: closer to 0° ranks higher) then by value contrast.
+
+**Ranking the two lists.** Opposition pairs rank first by default; tonal pairs follow. A mood answer of *calm, quiet* or *grounded* (intake question 2) promotes the tonal list above the opposition list. Mood is a ranking input, never a filter — both lists are always produced.
 
 Soft seasons will produce muted pairs; bright seasons will produce clear ones. The rule is the same; the palette does the work.
 
-**Direction re-weighting.** When the intake questions have chosen a direction (see `colour-system.md` §5), rank combinations containing that direction's anchor first. The owner's `teal_ochre` direction puts every teal-containing pair at the top.
+**Direction re-weighting.** When the intake questions have chosen a direction (see `colour-system.md` §5), rank combinations containing that direction's anchor first within each list. The owner's `teal_ochre` direction puts every teal-containing pair at the top.
 
 ## 4. Worked example — Soft Autumn
 
-These four are the combinations that came out of the original analysis, restated with the generator's fields:
+These four are the combinations that came out of the original analysis. Every number below is computed from the hex values in `seasons.yaml` (sRGB → CIELAB, D65); nothing is estimated.
 
-| Name | Dominant | Counter | Bridge | Hue gap | Notes |
-|---|---|---|---|---|---|
-| **Teal and Ochre** | deep teal `1F5F63` | ochre `C7912B` | warm mid grey `8B8378` | ~145° | The reference pair. Keep the teal deep and green-leaning, never cool-bright |
-| **Petrol and Cinnamon** | petrol `2C5A66` | cinnamon `B5693C` | camel `B89A6B` | ~150° | Warmer counter than ochre; reads richer, good for outerwear |
-| **Olive and Faded Rose** | dark olive `4E5A3A` | dusty rose `C09A93` | warm taupe `A8957C` | ~160° | The quietest pair. Rose near the face, olive as the body |
-| **Plum and Old Gold** | soft plum `5C3A4E` | old gold `B8963E` | chocolate `4A3728` | ~130° | The most evening of the four; gold in small pieces only |
+| Name | Dominant | Counter | Bridge | Hue gap | Δ rel. chroma | ΔL* | Generator |
+|---|---|---|---|---|---|---|---|
+| **Teal and Ochre** | deep teal `1F5F63` | ochre `C7912B` | warm mid grey `8B8378` | 125.0° | 0.00 (0.85 / 0.85) | 27.1 | **Opposition** — passes all three |
+| **Petrol and Cinnamon** | petrol `2C5A66` | cinnamon `B5693C` | camel `B89A6B` | 169.3° | 0.10 (0.72 / 0.62) | 16.5 | **Opposition** — passes all three |
+| **Olive and Faded Rose** | dark olive `4E5A3A` | dusty rose `C09A93` | warm taupe `A8957C` | 88.2° | 0.13 (0.40 / 0.27) | 30.4 | **Unresolved — see note** |
+| **Plum and Old Gold** | soft plum `5C3A4E` | old gold `B8963E` | chocolate `4A3728` | 104.5° | 0.40 (0.33 / 0.73) | 34.6 | **Neither** — a deliberate chroma step |
 
-Every one of these passes the three tests: opposed hue, matched low chroma, wide value gap. That's the proof the generator reproduces the hand-made result.
+**Teal and Ochre** is the reference pair. Keep the teal deep and green-leaning, never cool-bright.
+
+**Petrol and Cinnamon** — warmer counter than ochre; reads richer, good for outerwear. The narrowest value gap of the four, and the reason the opposition minimum is 15 rather than 25. Note the camel bridge sits *above* both in lightness (L\* 65.3), not between them; a bridge that meets §3.6 would be warm mid grey.
+
+**Olive and Faded Rose** — the quietest pair. Rose near the face, olive as the body. *Owner decision needed:* this pair was designated tonal, but its computed hue gap is 88.2°, outside the tonal band (≤ 40°) and outside the opposition band (≥ 100°). It passes both generators' chroma and value tests. As the thresholds stand it is produced by neither generator; the row is left unclassified rather than mislabelled.
+
+**Plum and Old Gold** — the most evening of the four; gold in small pieces only. This one is not a matched-chroma pair and was never meant to be: a low-saturation plum (0.33) against a near-saturated gold (0.73) is a **deliberate chroma step**, the gold doing the work an accent does. It sits outside both generators, and it is kept here as the example of what the generators do not produce — a pair that works for a reason the mechanism does not encode. The chocolate bridge is deeper than both (L\* 24.8), not between them.
 
 ## 5. Wada's dictionary as a personal subset
 
@@ -68,7 +95,7 @@ That's the machinery behind intake question 2, "what do you want to feel like in
 
 | Answer keywords | Kobayashi region | Effect on ranking |
 |---|---|---|
-| calm, quiet, grounded, easy | soft | Prefer combinations with lower chroma and narrower value gap (ΔL* 25–35) |
+| calm, quiet, grounded, easy | soft | Promote the tonal list above the opposition list (§3); within each, prefer lower chroma and a narrower value gap |
 | sharp, awake, noticed, precise | hard | Prefer wider value gaps (ΔL* ≥ 40) and the clearer end of the season |
 | warm, cosy, soft | warm-soft | Weight toward the warm-leaning anchors |
 | cool, clean, modern | cool-soft or cool-hard | Weight toward the cool-leaning anchors within the season |

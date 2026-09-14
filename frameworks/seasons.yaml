@@ -6,6 +6,13 @@
 # `black` and `white` = where those two can sit relative to the face.
 # `contrast` = the natural contrast level to dress to.
 # `directions` = named leans within the season, selected by the intake questions.
+#
+# Invariant: a `black` or `white` rule may only name a colour that exists as an
+# anchor in this file (CLAUDE.md, hard rule 5). White rules resolve against the
+# season's own white-named anchor (cream / soft white / warm white / pure white);
+# `anywhere` resolves against whichever of those the season carries. Black rules
+# resolve against 000000, which counts as present when it sits in the tiers or
+# in the `avoid` list.
 
 light_spring:
   primary: light
@@ -14,7 +21,7 @@ light_spring:
   contrast: low-medium
   black: away_from_face
   white: cream_only
-  foundations: [{name: warm ivory, hex: "F5EBD8"}, {name: camel, hex: "C9A66B"}, {name: light warm grey, hex: "C8C2B4"}, {name: soft navy, hex: "3F4F6B"}, {name: warm taupe, hex: "B8A48A"}]
+  foundations: [{name: warm ivory, hex: "F5EBD8"}, {name: cream, hex: "EFE6D3"}, {name: camel, hex: "C9A66B"}, {name: light warm grey, hex: "C8C2B4"}, {name: soft navy, hex: "3F4F6B"}, {name: warm taupe, hex: "B8A48A"}]  # cream added so `white: cream_only` names an anchor — hex reused from Soft Autumn, owner to confirm
   supporting: [{name: peach, hex: "F2B58B"}, {name: warm aqua, hex: "8FD1C8"}, {name: light coral, hex: "F08A7A"}, {name: butter yellow, hex: "F3DC8C"}, {name: leaf green, hex: "9BC46A"}]
   accents: [{name: bright coral, hex: "FF6F61"}, {name: turquoise, hex: "3FBFBF"}, {name: warm pink, hex: "F48FB1"}, {name: golden yellow, hex: "F5C531"}]
   avoid: ["000000", "8B008B", "4B0082", "708090"]
@@ -29,7 +36,7 @@ true_spring:
   contrast: medium
   black: away_from_face
   white: cream_only
-  foundations: [{name: camel, hex: "C69C6D"}, {name: warm beige, hex: "D9C4A1"}, {name: golden brown, hex: "9C6B3F"}, {name: warm navy, hex: "34495E"}, {name: khaki, hex: "A89A6B"}]
+  foundations: [{name: cream, hex: "EFE6D3"}, {name: camel, hex: "C69C6D"}, {name: warm beige, hex: "D9C4A1"}, {name: golden brown, hex: "9C6B3F"}, {name: warm navy, hex: "34495E"}, {name: khaki, hex: "A89A6B"}]  # cream added so `white: cream_only` names an anchor — hex reused from Soft Autumn, owner to confirm
   supporting: [{name: coral, hex: "F0766B"}, {name: warm green, hex: "7BB661"}, {name: turquoise, hex: "40C4B8"}, {name: marigold, hex: "F2A93B"}, {name: warm pink, hex: "F28C9D"}]
   accents: [{name: tomato red, hex: "E63B2E"}, {name: bright yellow, hex: "FFD23F"}, {name: kelly green, hex: "4CAF50"}, {name: bright turquoise, hex: "00BFA5"}]
   avoid: ["000000", "5D3A9B", "B0B0B0", "7A0D3A"]
@@ -44,7 +51,7 @@ bright_spring:
   contrast: high
   black: anywhere
   white: anywhere
-  foundations: [{name: bright navy, hex: "1F3A93"}, {name: charcoal, hex: "3C3C3C"}, {name: warm white, hex: "FBF7EF"}, {name: camel, hex: "C8A165"}, {name: cool taupe, hex: "A79E8F"}]
+  foundations: [{name: black, hex: "000000"}, {name: bright navy, hex: "1F3A93"}, {name: charcoal, hex: "3C3C3C"}, {name: warm white, hex: "FBF7EF"}, {name: camel, hex: "C8A165"}, {name: cool taupe, hex: "A79E8F"}]  # black added so `black: anywhere` names an anchor — owner to confirm
   supporting: [{name: bright coral, hex: "FF5A4E"}, {name: emerald, hex: "1DB47A"}, {name: bright turquoise, hex: "1FC9C3"}, {name: hot pink, hex: "FF4F9A"}, {name: lemon, hex: "FFE94D"}]
   accents: [{name: true red, hex: "E5202B"}, {name: cobalt, hex: "1E5EFF"}, {name: bright violet, hex: "8E44FF"}, {name: lime, hex: "B7F542"}]
   avoid: ["8B8B7A", "B5A38F", "6B4E3D", "C0C0C0"]
@@ -104,8 +111,8 @@ soft_autumn:
   contrast: low
   black: below_waist_or_hardware
   white: cream_only
-  foundations: [{name: deep teal, hex: "1F5F63"}, {name: dark olive, hex: "4E5A3A"}, {name: warm mid grey, hex: "8B8378"}, {name: chocolate, hex: "4A3728"}, {name: camel, hex: "B89A6B"}]
-  supporting: [{name: ochre, hex: "C7912B"}, {name: moss, hex: "7C8A4B"}, {name: dusty rose, hex: "C09A93"}, {name: sage, hex: "9AA88B"}, {name: warm taupe, hex: "A8957C"}]
+  foundations: [{name: cream, hex: "EFE6D3"}, {name: deep teal, hex: "1F5F63"}, {name: dark olive, hex: "4E5A3A"}, {name: warm mid grey, hex: "8B8378"}, {name: chocolate, hex: "4A3728"}, {name: camel, hex: "B89A6B"}]
+  supporting: [{name: ochre, hex: "C7912B"}, {name: moss, hex: "7C8A4B"}, {name: dusty rose, hex: "C09A93"}, {name: sage, hex: "9AA88B"}, {name: warm taupe, hex: "A8957C"}, {name: petrol, hex: "2C5A66"}, {name: cinnamon, hex: "B5693C"}, {name: soft plum, hex: "5C3A4E"}, {name: old gold, hex: "B8963E"}]
   accents: [{name: rust, hex: "A6502F"}, {name: muted teal, hex: "5A9A9C"}, {name: salmon, hex: "D9907A"}, {name: mustard, hex: "D3A82A"}]
   avoid: ["000000", "FF00FF", "0000CD", "FFFFFF"]
   directions:
@@ -120,7 +127,7 @@ true_autumn:
   contrast: medium
   black: below_waist_or_hardware
   white: cream_only
-  foundations: [{name: dark chocolate, hex: "3B2A1E"}, {name: olive, hex: "5B6236"}, {name: camel, hex: "B48A50"}, {name: warm khaki, hex: "9B8B5A"}, {name: teal, hex: "236E6B"}]
+  foundations: [{name: cream, hex: "EFE6D3"}, {name: dark chocolate, hex: "3B2A1E"}, {name: olive, hex: "5B6236"}, {name: camel, hex: "B48A50"}, {name: warm khaki, hex: "9B8B5A"}, {name: teal, hex: "236E6B"}]  # cream added so `white: cream_only` names an anchor — hex reused from Soft Autumn, owner to confirm
   supporting: [{name: rust, hex: "B4552D"}, {name: mustard, hex: "D3A12A"}, {name: terracotta, hex: "C2673F"}, {name: forest, hex: "2F5D3A"}, {name: warm burgundy, hex: "7A2E2E"}]
   accents: [{name: pumpkin, hex: "E07A2D"}, {name: tomato, hex: "C93B2B"}, {name: bright olive, hex: "8DA33B"}, {name: turquoise, hex: "2A9D8F"}]
   avoid: ["000000", "FF69B4", "9370DB", "E0E0E0"]
@@ -135,7 +142,7 @@ deep_autumn:
   contrast: medium-high
   black: anywhere_with_warm_partner
   white: cream_or_warm_white
-  foundations: [{name: black-brown, hex: "2B1E17"}, {name: dark olive, hex: "3F4A2A"}, {name: deep teal, hex: "184E4F"}, {name: chocolate, hex: "4A3323"}, {name: warm charcoal, hex: "3A3632"}]
+  foundations: [{name: black, hex: "000000"}, {name: cream, hex: "EFE6D3"}, {name: warm white, hex: "FBF7EF"}, {name: black-brown, hex: "2B1E17"}, {name: dark olive, hex: "3F4A2A"}, {name: deep teal, hex: "184E4F"}, {name: chocolate, hex: "4A3323"}, {name: warm charcoal, hex: "3A3632"}]  # black, cream and warm white added so `black: anywhere_with_warm_partner` and `white: cream_or_warm_white` name anchors — cream/warm white hexes reused from Soft Autumn/Bright Spring, owner to confirm
   supporting: [{name: burgundy, hex: "6E1F2E"}, {name: forest, hex: "1F4D3A"}, {name: rust, hex: "9E4A24"}, {name: mustard, hex: "C3931F"}, {name: aubergine, hex: "4B2A45"}]
   accents: [{name: tomato red, hex: "C6362A"}, {name: pumpkin, hex: "DA6F1E"}, {name: emerald, hex: "1B7A55"}, {name: hot mustard, hex: "E8B52F"}]
   avoid: ["FFC0CB", "E6E6FA", "B0E0E6", "F5F5DC"]

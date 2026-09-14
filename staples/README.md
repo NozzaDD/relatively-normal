@@ -49,7 +49,7 @@ colourways:
   price: 40
   currency: EUR
   fibre: 100% extra-fine merino
-  rubric_score: 9        # passes on fibre, wear count and price-per-wear; not on origin
+  rubric_score: 9        # out of 15 (five fields, 0–3 each, frameworks/material-rubric.md): strong on fibre, wear count and price band; weak on origin
   seasons_served: [soft_autumn, true_autumn, soft_summer, true_summer, deep_winter]
   colourways:
     - {name: olive, hex: "5B6236", url: "…", affiliate: "…"}
@@ -67,10 +67,8 @@ colourways:
 - **`item`** — the item's name. Its **slug** for `utm_content` (see
   `data/utm-scheme.md`) is this name hyphenated: `merino crew neck` →
   `merino-crew-neck`, and a specific colourway appends the colour.
-- **`rubric_score`** — from `frameworks/material-rubric.md`. **Scale conflict:**
-  the example above scores 9, but the rubric as written has five fields of 0–3,
-  so it tops out at 15. One of the two needs to change; neither has been changed
-  here.
+- **`rubric_score`** — from `frameworks/material-rubric.md`, on its 0–15 scale
+  (five fields, 0–3 each). The passing threshold lives in that file.
 - **`reviewed`** — year and month of the last check. Any colourway older than six
   months is shown with a "check availability" flag rather than a confident link.
   Better a caveat than a dead link.

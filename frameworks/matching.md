@@ -16,14 +16,61 @@ Patterned items produce two or three meaningful clusters; plain items produce on
 
 ## 2. Score against the palette
 
-For each extracted colour, compute **ΔE2000** against every anchor in the user's palette — all three tiers plus the `avoid` list from `seasons.yaml`.
+Each extracted colour is evaluated in a fixed order. The first stage that returns a verdict wins; later stages do not run.
+
+1. **Slot-conditional rules** — the season's `black` and `white` fields in `seasons.yaml`, which depend on which of the five slots the item sits in.
+2. **Avoid list** — the season's clearest misses.
+3. **Palette anchors** — ΔE2000 against every anchor in the three tiers.
+
+The order matters. Black is in Soft Autumn's `avoid` list *and* allowed below the waist; if the avoid list ran first, correctly-worn black trousers would fail. Rules first, then misses, then matches.
+
+### Stage 1 — slot-conditional rules
+
+A rule fires when the item's dominant colour is within **ΔE2000 ≤ 8** of the rule colour: `000000` for the black rule, `FFFFFF` for the white rule. Cream, soft white and warm white are ordinary anchors and are scored in stage 3 like any other colour; the white rule exists to catch *optic* white specifically.
+
+Every rule names a colour that exists as an anchor for that season (CLAUDE.md, hard rule 5), so `nearest` is always a real anchor name.
+
+**Black** — by `black` field value and slot:
+
+| `black` | top | bottom | shoes | bag | accessory | `nearest` |
+|---|---|---|---|---|---|---|
+| `anywhere` | in | in | in | in | in | black |
+| `anywhere_with_warm_partner` | in | in | in | in | in | black — plus an outfit flag in §3 if no warm-tier item is present |
+| `below_waist_or_hardware` | **out** — *black works on you, just not next to your face* | in | in | in | in | black (below waist) for bottom and shoes; black (hardware) for bag and accessory; black for top |
+| `away_from_face` | **out** — *black works on you, just not next to your face* | in | in | in | in | black (away from face) for the allowed slots; black for top |
+| `avoid` | hard miss | hard miss | hard miss | hard miss | hard miss | black |
+
+**White** (item within ΔE 8 of `FFFFFF`) — by `white` field value and slot:
+
+| `white` | top | bottom | shoes | bag | accessory | `nearest` |
+|---|---|---|---|---|---|---|
+| `pure_white` | in | in | in | in | in | pure white |
+| `anywhere` | in | in | in | in | in | the season's white anchor (warm white or pure white) |
+| `soft_white` | **near** — *a softer white next to your face* | in | in | in | in | soft white |
+| `cream_or_warm_white` | **near** — *cream or a warm white next to your face* | in | in | in | in | warm white |
+| `cream_only` | **hard miss** — *cream, not white, next to your face* | in | in | in | in | cream |
+
+Only the `below_waist_or_hardware` row of the black table was specified by the owner; the remaining rows follow the same pattern (the top slot is the face slot, the other four are not) and are to be confirmed. The accessory slot is treated as hardware and away from the face throughout — a scarf is the case that breaks this, and it is not yet handled.
+
+### Stage 2 — avoid list
+
+Compute ΔE2000 from the colour to every entry in the season's `avoid` list.
+
+| Nearest avoid colour's ΔE | Verdict |
+|---|---|
+| ≤ 8 | **Hard miss** — flag explicitly; report the avoid colour hit |
+
+Stage 2 runs only if no stage-1 rule fired, so black on the bottom of a `below_waist_or_hardware` season never reaches it.
+
+### Stage 3 — palette anchors
+
+Compute ΔE2000 against every anchor in the three tiers.
 
 | Nearest anchor's ΔE | Verdict |
 |---|---|
 | ≤ 12 | **In palette** — matches that anchor |
 | 12 – 20 | **Near** — report the nearest anchor and what would need to shift (lighter, warmer, softer) |
 | > 20 | **Out** — report the nearest anchor anyway, so the user sees what the item *would* need to be |
-| ≤ 12 to an `avoid` colour | **Hard miss** — flag explicitly; this overrides a "near" against a real anchor |
 
 Thresholds are starting points. They should be tuned against the beta consultations: every judgement the owner makes by hand in November is a labelled example of where the line actually sits.
 
@@ -72,7 +119,7 @@ Each staple is one item with a list of colourways:
   price: 40
   currency: EUR
   fibre: 100% extra-fine merino
-  rubric_score: 9        # passes on fibre, wear count and price-per-wear; not on origin
+  rubric_score: 9        # out of 15 (five fields, 0–3 each, frameworks/material-rubric.md): strong on fibre, wear count and price band; weak on origin
   seasons_served: [soft_autumn, true_autumn, soft_summer, true_summer, deep_winter]
   colourways:
     - {name: olive, hex: "5B6236", url: "…", affiliate: "…"}
@@ -82,7 +129,7 @@ Each staple is one item with a list of colourways:
   reviewed: 2026-10
 ```
 
-**Matching a gap to a staple:** filter to the gap's slot, then for each staple find its colourway nearest the gap's target anchor. If the nearest colourway is within ΔE 12 and the staple's rubric score clears the threshold, it's a match. Output the *specific colourway*:
+**Matching a gap to a staple:** filter to the gap's slot, then for each staple find its colourway nearest the gap's target anchor. If the nearest colourway is within ΔE 12 and the staple's rubric score clears the passing threshold (set in `frameworks/material-rubric.md`, on the 0–15 scale), it's a match. Output the *specific colourway*:
 
 > *Nothing in your closet fills this. The merino crew in dark teal does: €40, pure merino, sits in your foundation tier and pairs with five of your items.*
 

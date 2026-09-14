@@ -58,5 +58,6 @@
   notes: >
     Italian, stocked by independents in both markets. Relevant to the Soft Autumn
     rule that black is allowed below the waist and in leather and hardware —
-    a black belt is in-palette where a black scarf is not, and the matcher as
-    specified does not currently know that (see the generator notes).
+    a black belt is in-palette where a black scarf is not. The matcher's
+    slot-conditional rules (matching.md §2, stage 1) treat the whole accessory
+    slot as hardware, so a black scarf currently scores as in — an open case.

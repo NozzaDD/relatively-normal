@@ -77,20 +77,23 @@ reasoning alongside the score.
 
 ## Passing threshold
 
-<!-- Owner to fill. What total, and which per-field minimums, make a brand or
-     garment a pass? Consider whether a 0 in any single field should fail the
-     whole thing regardless of total, and whether the threshold differs for
-     staples versus investment pieces. -->
+The scale is **0–15**: five fields, 0–3 each. This is the scale `matching.md` §5
+scores staples on and the one every `rubric_score` in `brands/` and `staples/`
+uses.
 
-**Total required to pass:**
+<!-- Owner to fill. No threshold value has been set yet. Consider whether a 0 in
+     any single field should fail the whole thing regardless of total, and
+     whether the threshold differs for staples versus investment pieces. -->
+
+**Total required to pass:** ___ / 15
 
 **Per-field minimums:**
 
 **Automatic failures:**
 
-**Threshold for staples (`staples/`):**
+**Threshold for staples (`staples/`):** ___ / 15
 
-**Threshold for investment pieces (source 3, `brands/`):**
+**Threshold for investment pieces (source 3, `brands/`):** ___ / 15
 
 ---
 

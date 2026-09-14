@@ -56,7 +56,8 @@ background is weighted highest. The app should record which photo that is.
 - Three photos, all three angles, or the analysis does not run.
 - The result is only as good as the light. A confident wrong answer is worse than
   a hedged right one, so the app returns the **top two seasons** and a confidence
-  per axis rather than one certain answer.
+  per axis rather than one certain answer. The runner-up is the season one axis
+  away from the winner, on the least confident axis (`colour-system.md` §2).
 
 ---
 
@@ -79,6 +80,8 @@ toward the neutrals that suit that garment type.
 
 - denim → the blue-adjacent neutrals in the season
 - tailoring → the greys and browns
+- knitwear → the season's warm mid-tones (texture carries the depth)
+- dresses → the supporting tier (one garment covers the body, so it needs colour)
 
 ### Question 2 — What do you want to feel like in your clothes?
 
@@ -122,10 +125,6 @@ direction.
 
 ## Open questions for the owner
 
-- Question 1 specifies a foundation shift for **denim** and **tailoring** only.
-  **knitwear** and **dresses** are offered as answers but no shift is defined for
-  them — and `examples/nora-soft-autumn.yaml` answers `knitwear`. Left as-is,
-  since the fix is a decision about the method, not a gap in this file.
 - The photo checklist has no defined behaviour for a user who confirms makeup is
   present: whether that blocks analysis or only lowers confidence is unspecified
   in `colour-system.md` §2.
