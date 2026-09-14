@@ -32,25 +32,27 @@ Every rule names a colour that exists as an anchor for that season (CLAUDE.md, h
 
 **Black** — by `black` field value and slot:
 
-| `black` | top | bottom | shoes | bag | accessory | `nearest` |
-|---|---|---|---|---|---|---|
-| `anywhere` | in | in | in | in | in | black |
-| `anywhere_with_warm_partner` | in | in | in | in | in | black — plus an outfit flag in §3 if no warm-tier item is present |
-| `below_waist_or_hardware` | **out** — *black works on you, just not next to your face* | in | in | in | in | black (below waist) for bottom and shoes; black (hardware) for bag and accessory; black for top |
-| `away_from_face` | **out** — *black works on you, just not next to your face* | in | in | in | in | black (away from face) for the allowed slots; black for top |
-| `avoid` | hard miss | hard miss | hard miss | hard miss | hard miss | black |
+| `black` | top | accessory, `near_face: true` | bottom | shoes | bag | accessory, `near_face: false` | `nearest` |
+|---|---|---|---|---|---|---|---|
+| `anywhere` | in | in | in | in | in | in | black |
+| `anywhere_with_warm_partner` | in | in | in | in | in | in | black — plus an outfit flag in §3 if no warm-tier item is present |
+| `below_waist_or_hardware` | **out** — *black works on you, just not next to your face* | **out** — same reason | in | in | in | in | black (below waist) for bottom and shoes; black (hardware) for bag and hardware accessories; black for top and near-face accessories |
+| `away_from_face` | **out** — *black works on you, just not next to your face* | **out** — same reason | in | in | in | in | black (away from face) for the allowed slots; black for top and near-face accessories |
+| `avoid` | hard miss | hard miss | hard miss | hard miss | hard miss | hard miss | black |
 
 **White** (item within ΔE 8 of `FFFFFF`) — by `white` field value and slot:
 
-| `white` | top | bottom | shoes | bag | accessory | `nearest` |
-|---|---|---|---|---|---|---|
-| `pure_white` | in | in | in | in | in | pure white |
-| `anywhere` | in | in | in | in | in | the season's white anchor (warm white or pure white) |
-| `soft_white` | **near** — *a softer white next to your face* | in | in | in | in | soft white |
-| `cream_or_warm_white` | **near** — *cream or a warm white next to your face* | in | in | in | in | warm white |
-| `cream_only` | **hard miss** — *cream, not white, next to your face* | in | in | in | in | cream |
+| `white` | top | accessory, `near_face: true` | bottom | shoes | bag | accessory, `near_face: false` | `nearest` |
+|---|---|---|---|---|---|---|---|
+| `pure_white` | in | in | in | in | in | in | pure white |
+| `anywhere` | in | in | in | in | in | in | the season's white anchor (warm white or pure white) |
+| `soft_white` | **near** — *a softer white next to your face* | **near** — same reason | in | in | in | in | soft white |
+| `cream_or_warm_white` | **near** — *cream or a warm white next to your face* | **near** — same reason | in | in | in | in | warm white |
+| `cream_only` | **hard miss** — *cream, not white, next to your face* | **hard miss** — same reason | in | in | in | in | cream |
 
-Only the `below_waist_or_hardware` row of the black table was specified by the owner; the remaining rows follow the same pattern (the top slot is the face slot, the other four are not) and are to be confirmed. The accessory slot is treated as hardware and away from the face throughout — a scarf is the case that breaks this, and it is not yet handled.
+**Accessories carry a `near_face` flag, set at tagging.** Scarves and hats are `true`; belts, jewellery and watches are `false`. The vision model proposes the flag and the user confirms it. When `near_face` is true the accessory is evaluated under the top slot's rules for black and white; when false, under the hardware rules. The flag is stored on the item and is what stage 1 reads.
+
+Only the `below_waist_or_hardware` row of the black table was specified by the owner; the remaining rows follow the same pattern (the top slot and near-face accessories are the face positions, the rest are not) and are to be confirmed.
 
 ### Stage 2 — avoid list
 
@@ -69,8 +71,8 @@ Compute ΔE2000 against every anchor in the three tiers.
 | Nearest anchor's ΔE | Verdict |
 |---|---|
 | ≤ 12 | **In palette** — matches that anchor |
-| 12 – 20 | **Near** — report the nearest anchor and what would need to shift (lighter, warmer, softer) |
-| > 20 | **Out** — report the nearest anchor anyway, so the user sees what the item *would* need to be |
+| 12 – 16 | **Near** — report the nearest anchor and what would need to shift (lighter, warmer, softer) |
+| > 16 | **Out** — report the nearest anchor anyway, so the user sees what the item *would* need to be |
 
 Thresholds are starting points. They should be tuned against the beta consultations: every judgement the owner makes by hand in November is a labelled example of where the line actually sits.
 
@@ -196,6 +198,8 @@ What the matcher returns for an outfit, and what the recommendation step consume
   ]
 }
 ```
+
+Accessory items additionally carry `near_face` (true / false) from tagging — see §2, stage 1.
 
 The language model receives this JSON and writes the sentence a person reads. It never computes anything in it.
 

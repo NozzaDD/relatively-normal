@@ -99,6 +99,8 @@ These are the rules from the original analysis, restated so they apply to every 
 | "Near-complementary pairs, contrast in the foundation tier" | The Wada mechanism, fully specified in `combinations.md`: opposed hue, matched chroma, wide value gap. Generated from the palette, not hand-picked. |
 | "Match your contrast" | Dress to the natural contrast between features. Low-contrast people are overwhelmed by high-contrast outfits; high-contrast people look washed out in tonal ones. |
 
+"Away from the face" is a position, not a slot, and accessories straddle it. Every accessory is tagged with a **`near_face`** flag: scarves and hats are `true`; belts, jewellery and watches are `false`. The vision model proposes the flag and the user confirms it. A near-face accessory follows the top slot's black and white rules; a hardware accessory follows the hardware rules. The mechanics are in `matching.md` §2.
+
 ## 7. Combinations are a separate step
 
 A palette answers "which colours". `combinations.md` answers "which colours together" — the Wada mechanism run over the season's anchors, ranked by the chosen direction and the mood answer. Both files are needed to produce what the original analysis produced by hand.

@@ -32,30 +32,31 @@ where **C\*max(L\*, h)** is the sRGB gamut boundary — the largest chroma that 
 
 ## 3. The generators
 
-Given a season's palette from `seasons.yaml`, two generators run over every pair of anchors across all three tiers. They share the chroma test and differ on hue and value.
+Given a season's palette from `seasons.yaml`, three generators run over every pair of anchors across all three tiers. They partition the hue circle — Tonal ≤ 40°, Muted 40–100°, Opposition 100–180° — so every pair falls into exactly one band and is tested by that band's generator.
 
-| | Hue gap | Δ relative chroma | ΔL* |
-|---|---|---|---|
-| **Opposition** | 100–180° | ≤ 0.20 | ≥ 15 |
-| **Tonal** | ≤ 40° | ≤ 0.20 | ≥ 25 |
+| | Hue gap | Relative chroma of each | Δ relative chroma | ΔL* |
+|---|---|---|---|---|
+| **Opposition** | 100–180° | — | ≤ 0.20 | ≥ 15 |
+| **Tonal** | ≤ 40° | — | ≤ 0.20 | ≥ 25 |
+| **Muted** | 40–100° | both ≤ 0.45 | ≤ 0.15 | ≥ 25 |
 
-Opposition is the Wada mechanism above. Tonal is the same discipline applied to one hue family: matched chroma and a wide value step, without the hue vibration.
+Opposition is the Wada mechanism above. Tonal is the same discipline applied to one hue family: matched chroma and a wide value step, without the hue vibration. Muted fills the band between them: in the middle band neither opposition nor analogy is doing the work, so the pair only holds when both colours are quiet and the value gap carries it — hence the cap on each colour's relative chroma, the tighter chroma match, and the wider value minimum.
 
 For each generator:
 
 1. Take every pair of anchors across all three tiers.
 2. Keep pairs whose Lab hue gap is inside the generator's band.
-3. Keep pairs where |relative_chroma₁ − relative_chroma₂| ≤ 0.20.
+3. Keep pairs where |relative_chroma₁ − relative_chroma₂| is within the generator's limit. Muted additionally requires each colour's relative chroma ≤ 0.45.
 4. Keep pairs where |L*₁ − L*₂| meets the generator's minimum.
 5. For each surviving pair, name the **dominant** (deeper) and the **counter** (lighter). Dominant takes 60–70% of the outfit; counter takes 30–40%.
 6. Optionally add a **bridge**: a foundation-tier neutral whose L* sits between the two. Three-colour combinations use dominant / counter / bridge at roughly 50 / 30 / 20.
-7. Rank within each generator by hue separation (opposition: closer to 180° ranks higher; tonal: closer to 0° ranks higher) then by value contrast.
+7. Rank within each generator: opposition by hue separation (closer to 180° ranks higher) then value contrast; tonal by hue separation (closer to 0° ranks higher) then value contrast; muted by value contrast then hue separation, since in that band the value gap is what carries the pair.
 
-**Ranking the two lists.** Opposition pairs rank first by default; tonal pairs follow. A mood answer of *calm, quiet* or *grounded* (intake question 2) promotes the tonal list above the opposition list. Mood is a ranking input, never a filter — both lists are always produced.
+**Ranking the three lists.** Default order is Opposition, then Tonal, then Muted. A mood answer of *calm, quiet* or *grounded* (intake question 2) promotes Tonal and Muted above Opposition, keeping Tonal ahead of Muted. Mood is a ranking input, never a filter — all three lists are always produced.
 
 Soft seasons will produce muted pairs; bright seasons will produce clear ones. The rule is the same; the palette does the work.
 
-**Direction re-weighting.** When the intake questions have chosen a direction (see `colour-system.md` §5), rank combinations containing that direction's anchor first within each list. The owner's `teal_ochre` direction puts every teal-containing pair at the top.
+**Direction re-weighting.** When the intake questions have chosen a direction (see `colour-system.md` §5), rank combinations containing that direction's anchor first within each of the three lists. The owner's `teal_ochre` direction puts every teal-containing pair at the top.
 
 ## 4. Worked example — Soft Autumn
 
@@ -65,16 +66,16 @@ These four are the combinations that came out of the original analysis. Every nu
 |---|---|---|---|---|---|---|---|
 | **Teal and Ochre** | deep teal `1F5F63` | ochre `C7912B` | warm mid grey `8B8378` | 125.0° | 0.00 (0.85 / 0.85) | 27.1 | **Opposition** — passes all three |
 | **Petrol and Cinnamon** | petrol `2C5A66` | cinnamon `B5693C` | camel `B89A6B` | 169.3° | 0.10 (0.72 / 0.62) | 16.5 | **Opposition** — passes all three |
-| **Olive and Faded Rose** | dark olive `4E5A3A` | dusty rose `C09A93` | warm taupe `A8957C` | 88.2° | 0.13 (0.40 / 0.27) | 30.4 | **Unresolved — see note** |
-| **Plum and Old Gold** | soft plum `5C3A4E` | old gold `B8963E` | chocolate `4A3728` | 104.5° | 0.40 (0.33 / 0.73) | 34.6 | **Neither** — a deliberate chroma step |
+| **Olive and Faded Rose** | dark olive `4E5A3A` | dusty rose `C09A93` | warm taupe `A8957C` | 88.2° | 0.13 (0.40 / 0.27) | 30.4 | **Muted** — passes all four |
+| **Plum and Old Gold** | soft plum `5C3A4E` | old gold `B8963E` | chocolate `4A3728` | 104.5° | 0.40 (0.33 / 0.73) | 34.6 | **None** — a deliberate chroma step |
 
 **Teal and Ochre** is the reference pair. Keep the teal deep and green-leaning, never cool-bright.
 
 **Petrol and Cinnamon** — warmer counter than ochre; reads richer, good for outerwear. The narrowest value gap of the four, and the reason the opposition minimum is 15 rather than 25. Note the camel bridge sits *above* both in lightness (L\* 65.3), not between them; a bridge that meets §3.6 would be warm mid grey.
 
-**Olive and Faded Rose** — the quietest pair. Rose near the face, olive as the body. *Owner decision needed:* this pair was designated tonal, but its computed hue gap is 88.2°, outside the tonal band (≤ 40°) and outside the opposition band (≥ 100°). It passes both generators' chroma and value tests. As the thresholds stand it is produced by neither generator; the row is left unclassified rather than mislabelled.
+**Olive and Faded Rose** — the quietest pair. Rose near the face, olive as the body. A Muted pair: at 88.2° the hues are neither opposed nor analogous, so in this middle band neither opposition nor analogy is doing the work — the pair only holds because both colours are quiet (0.40 and 0.27, under the 0.45 cap) and the value gap of 30.4 carries it.
 
-**Plum and Old Gold** — the most evening of the four; gold in small pieces only. This one is not a matched-chroma pair and was never meant to be: a low-saturation plum (0.33) against a near-saturated gold (0.73) is a **deliberate chroma step**, the gold doing the work an accent does. It sits outside both generators, and it is kept here as the example of what the generators do not produce — a pair that works for a reason the mechanism does not encode. The chocolate bridge is deeper than both (L\* 24.8), not between them.
+**Plum and Old Gold** — the most evening of the four; gold in small pieces only. This one is not a matched-chroma pair and was never meant to be: a low-saturation plum (0.33) against a near-saturated gold (0.73) is a **deliberate chroma step**, the gold doing the work an accent does. Its hue gap puts it in the opposition band, but a Δ relative chroma of 0.40 fails every generator's chroma test. It sits outside all three, and it is kept here as the example of what the generators do not produce — a pair that works for a reason the mechanism does not encode. The chocolate bridge is deeper than both (L\* 24.8), not between them.
 
 ## 5. Wada's dictionary as a personal subset
 
@@ -95,7 +96,7 @@ That's the machinery behind intake question 2, "what do you want to feel like in
 
 | Answer keywords | Kobayashi region | Effect on ranking |
 |---|---|---|
-| calm, quiet, grounded, easy | soft | Promote the tonal list above the opposition list (§3); within each, prefer lower chroma and a narrower value gap |
+| calm, quiet, grounded, easy | soft | Promote the tonal and muted lists above the opposition list (§3); within each, prefer lower chroma and a narrower value gap |
 | sharp, awake, noticed, precise | hard | Prefer wider value gaps (ΔL* ≥ 40) and the clearer end of the season |
 | warm, cosy, soft | warm-soft | Weight toward the warm-leaning anchors |
 | cool, clean, modern | cool-soft or cool-hard | Weight toward the cool-leaning anchors within the season |
