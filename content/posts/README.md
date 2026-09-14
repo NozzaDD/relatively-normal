@@ -15,11 +15,17 @@ by the site in `app/`:
 ---
 title:
 date:
-status: draft | scheduled | published
-tags: []
-utm_campaign:
+format:
+campaign:
+brands: []
+affiliate: no
 ---
 ```
 
-Then the post body in markdown. Keep drafts here too — `status` tracks where a
-piece is, so nothing needs to move between folders.
+All six fields are required on every post. `brands` lists brand slugs as they are
+named in `brands/`; `affiliate` is yes/no; `campaign` matches the UTM scheme in
+`data/utm-scheme.md`.
+
+Then the post body in markdown. Drafts live here too — the calendar in
+`content/calendar.md` tracks what state each piece is in, so nothing needs to move
+between folders.

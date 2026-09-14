@@ -15,4 +15,5 @@ A styling newsletter, and eventually a wardrobe tool.
 | `data/` | UTM scheme, metrics |
 | `app/` | The website, later — empty for now |
 
-Each folder has its own README explaining what belongs there.
+Each folder has its own README explaining what belongs there. `CLAUDE.md` at the
+root holds the working rules for the project — read it first.

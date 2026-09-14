@@ -19,6 +19,9 @@ Brand-specific judgements (`brands/`) and anything written for publication
 
 ## Suggested files
 
-- `colour-system.md`
-- `coverage-matrix.md`
+- `colour.yaml`
+- `coverage-matrix`
 - `material-rubric.md`
+
+The material rubric is the source of truth for whether a brand or garment passes;
+quality judgements are made against it, not from general knowledge.
