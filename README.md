@@ -14,6 +14,7 @@ A styling newsletter, and eventually a wardrobe tool.
 | `consultations/` | One folder per beta consultation |
 | `staples/` | The staples catalogue — reliable basics by slot |
 | `data/` | UTM scheme, metrics |
+| `engine/` | The deterministic colour engine in Python — the frameworks, executable |
 | `app/` | The website, later — empty for now |
 
 Each folder has its own README explaining what belongs there. `CLAUDE.md` at the
