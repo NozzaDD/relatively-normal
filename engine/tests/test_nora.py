@@ -281,3 +281,79 @@ class TestLayerYieldsTheFace(unittest.TestCase):
         o = matcher.score_outfits([{"name": "coat and cobalt", "items": items}], self.season, items)["outfits"][0]
         self.assertEqual(o["slots"]["layer"]["verdict"], "out")
         self.assertIsNone(o["face_colour"])
+
+
+class TestPhotoIntake(unittest.TestCase):
+    """engine/intake.py on two generated images: a solid deep-teal rectangle on
+    a white background, and the same rectangle as a transparent PNG. Both must
+    come back within ΔE 3 of deep teal's hex."""
+
+    TEAL = (0x1F, 0x5F, 0x63)
+
+    @classmethod
+    def setUpClass(cls):
+        import tempfile
+        from PIL import Image
+        cls.tmp = tempfile.TemporaryDirectory()
+        folder = Path(cls.tmp.name)
+        # a) opaque: white 300x300 with a 160x160 teal rectangle in the middle
+        im = Image.new("RGB", (300, 300), (255, 255, 255))
+        for y in range(70, 230):
+            for x in range(70, 230):
+                im.putpixel((x, y), cls.TEAL)
+        im.save(folder / "top_deep-teal-knit.png")
+        im.save(folder / "top_deep-teal-knit-jpeg.jpg", quality=95)
+        # b) transparent cutout: the same rectangle, everything else alpha 0
+        cut = Image.new("RGBA", (300, 300), (0, 0, 0, 0))
+        for y in range(70, 230):
+            for x in range(70, 230):
+                cut.putpixel((x, y), cls.TEAL + (255,))
+        cut.save(folder / "accessory_deep-teal-cutout.png")
+        # c) an unknown slot prefix
+        im.save(folder / "hat_deep-teal.png")
+        from engine import intake
+        cls.out = intake.run_folder(folder)
+        cls.by_file = {it["file"]: it for it in cls.out["items"]}
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.tmp.cleanup()
+
+    def _assert_teal(self, item):
+        de = colour.delta_e_2000(colour.hex_to_lab(item["hex"]), colour.srgb_to_lab(self.TEAL))
+        self.assertLessEqual(de, 3.0, f'{item["file"]}: {item["hex"]} is ΔE {de:.1f} from deep teal')
+
+    def test_opaque_rectangle_on_white(self):
+        it = self.by_file["top_deep-teal-knit.png"]
+        self.assertEqual(it["mode"], "background")
+        self.assertEqual(it["background"], "FFFFFF")
+        self._assert_teal(it)
+
+    def test_opaque_rectangle_as_jpeg(self):
+        self._assert_teal(self.by_file["top_deep-teal-knit-jpeg.jpg"])
+
+    def test_transparent_cutout(self):
+        it = self.by_file["accessory_deep-teal-cutout.png"]
+        self.assertEqual(it["mode"], "alpha")
+        self._assert_teal(it)
+
+    def test_filename_gives_slot_and_name(self):
+        it = self.by_file["top_deep-teal-knit.png"]
+        self.assertEqual((it["slot"], it["name"]), ("top", "deep teal knit"))
+
+    def test_unknown_slot_is_a_warning_not_a_guess(self):
+        it = self.by_file["hat_deep-teal.png"]
+        self.assertIsNone(it["slot"])
+        self.assertTrue(any("hat_deep-teal.png" in w for w in self.out["warnings"]))
+
+    def test_csv_and_contact_sheet_are_written(self):
+        import csv as _csv
+        with open(self.out["csv"], newline="") as fh:
+            rows = list(_csv.DictReader(fh))
+        self.assertEqual(rows[0].keys() if rows else None, rows[0].keys())
+        self.assertEqual(list(rows[0].keys()), ["name", "slot", "hex", "dressiness", "weight", "near_face", "notes"])
+        by_name = {r["name"]: r for r in rows}
+        self.assertEqual(by_name["deep teal knit"]["slot"], "top")
+        self.assertEqual(by_name["deep teal knit"]["dressiness"], "")
+        self.assertEqual(by_name["deep teal"]["slot"], "")   # the hat: slot left blank
+        self.assertTrue(Path(self.out["sheet"]).read_text().count("<img") == 4)

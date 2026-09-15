@@ -10,8 +10,9 @@ frameworks win and the code is wrong.
 ## Running it
 
 Python 3.11+. `engine/colour.py` is standard library only. Reading
-`seasons.yaml` needs **PyYAML** (`pip install pyyaml`); that is the only
-dependency.
+`seasons.yaml` needs **PyYAML** (`pip install pyyaml`), and the photo intake
+needs **Pillow** (`pip install pillow`) for image loading only. Those are the
+only dependencies.
 
 From the repository root:
 
@@ -75,7 +76,8 @@ horizons.result("soft_autumn", "teal_ochre", items,
 | `matcher.py` | `matching.md` §1–§5 | `extract_colours` (k-means in Lab over pixels); `score_item` with the three-stage order — slot rules, avoid list, anchors — and the full black/white tables including `near_face`; `outfit_checks` (coverage, palette share, tier balance, contrast); `pair_valid` and `outfit_valid`, the four outfit pairing rules of `combinations.md` §5 (neutrals are the ground); `zone_fit` and `weather_fit`; `score_outfits` scoring every saved outfit and `rank_gaps` ranking gaps across them by unlocks, with `zone_gaps` per occasion; `fill_gap` with Source 1 (own closet) implemented and Sources 2 and 3 as stubs returning nothing; `score_outfit` producing the §6 JSON. |
 | `horizons.py` | `horizons.md` §2–§4 | `result` — the §6 JSON extended with `long_term` (ideal palette, ranked combinations, rules in force, runner-up, direction-of-travel data) and `short_term` (current palette sorted into the ideal's tiers, the distance figure and its reading, over-represented and missing colours, works-now outfits, ranked next moves). |
 | `render.py` | `horizons.md` §6 | `render(result)` — the result dict as one self-contained HTML page: colouring and runner-up at the top, ideal palette and current wardrobe as two columns of proportional colour blocks (the current one sorted into the ideal's tiers, out and hard-miss items set apart), the distance figure, the outfit in hand with its checks, works-now and next moves side by side, combinations as swatch pairs, and the long-term data. Inline CSS, no external assets. It computes nothing: every number and verdict is read from the JSON. |
-| `run.py` | — | The command line: `python -m engine.run --season … --direction … --items items.csv [--outfits outfits.csv] --out result.html`. Reads the items file (`templates/items.csv` format or YAML), the optional outfits file (`templates/outfits.csv` format), calls `horizons.result`, writes the page. |
+| `intake.py` | `matching.md` §1 | `run_folder(folder)` — every photo in a folder to `items.csv` and a `contact-sheet.html`. Alpha channel: pixels with alpha > 200; otherwise the background is the median of the four corner regions and pixels within ΔE 10 of it are dropped. `extract_colours` runs on the rest; the dominant colour is the hex. Slot and name come from `slot_item-name.jpg`; an unknown prefix is a warning, not a guess. Dressiness, weight and near_face are left blank for the person. See `examples/photos/README.md`. |
+| `run.py` | — | The command line: `python -m engine.run --season … --direction … (--items items.csv | --photos folder) [--outfits outfits.csv] --out result.html`. `--photos` runs intake first and continues from the CSV it writes; `--items` takes a CSV (`templates/items.csv` format) or YAML that already exists. The optional outfits file is `templates/outfits.csv` format. Calls `horizons.result`, writes the page. |
 | `tests/test_nora.py` | `examples/nora-soft-autumn.yaml` | Asserts every expected verdict, the runner-up season, the named pairs' generators, and the exact three ranked lists over Soft Autumn. |
 
 ## Item shape

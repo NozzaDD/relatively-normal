@@ -4,6 +4,10 @@
         --items engine/examples/nora-items.csv --outfits engine/examples/nora-outfits.csv \\
         --out result.html
 
+`--photos folder` runs the photo intake first (engine/intake.py) and uses the
+items.csv it writes into that folder; `--items` takes a CSV that already
+exists. One of the two is required.
+
 `--items` reads either the CSV in templates/items.csv (name, slot, hex,
 dressiness, weight, near_face, notes) or a YAML list (name, hex, slot,
 optional near_face, dressiness, weight, share). `--outfits` reads the CSV in
@@ -122,7 +126,9 @@ def main(argv=None):
     ap = argparse.ArgumentParser(prog="python -m engine.run", description="Render the result screen for one person.")
     ap.add_argument("--season", required=True, help="season key from seasons.yaml, e.g. soft_autumn")
     ap.add_argument("--direction", required=True, help="direction key within the season, e.g. teal_ochre")
-    ap.add_argument("--items", required=True, help="items file: templates/items.csv format, or a YAML list")
+    src = ap.add_mutually_exclusive_group(required=True)
+    src.add_argument("--items", help="items file: templates/items.csv format, or a YAML list")
+    src.add_argument("--photos", help="folder of garment photos; intake writes items.csv there first")
     ap.add_argument("--outfits", default=None, help="saved outfits: templates/outfits.csv format")
     ap.add_argument("--out", required=True, help="path of the HTML file to write")
     ap.add_argument("--mood", default=None, help="answer to intake question 2 (free text)")
@@ -131,7 +137,15 @@ def main(argv=None):
     ap.add_argument("--json", default=None, help="also write the raw result JSON here")
     args = ap.parse_args(argv)
 
-    items = load_items(args.items)
+    items_path = args.items
+    if args.photos:
+        from . import intake
+        out = intake.run_folder(args.photos)
+        for w in out["warnings"]:
+            print("warning:", w, file=sys.stderr)
+        print(f"intake: {out['csv']} and {out['sheet']}", file=sys.stderr)
+        items_path = out["csv"]
+    items = load_items(items_path)
     outfits = load_outfits(args.outfits, items) if args.outfits else None
     result = horizons.result(args.season, args.direction, items, outfits=outfits,
                              mood=args.mood, confidence=parse_confidence(args.confidence))
