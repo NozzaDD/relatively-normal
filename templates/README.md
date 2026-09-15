@@ -1,0 +1,28 @@
+# Input templates
+
+Two spreadsheets. Fill them in Numbers or Google Sheets, export as CSV, commit.
+They are the same data the canvas will write later; nothing gets retyped.
+
+## items.csv — one row per piece
+
+| column | values | meaning |
+|---|---|---|
+| name | text | how you'd refer to it |
+| slot | top · bottom · layer · shoes · bag · accessory | layer = coat, jacket, cardigan, anything over the top |
+| hex | six characters, no # | sampled from the garment in flat daylight |
+| dressiness | 1–4 | 1 casual → 4 dressy. Where it sits left-to-right on the worksheet grid |
+| weight | 1–4 | 1 light → 4 heavy. How much warmth it gives, not colour temperature |
+| near_face | true / blank | accessories only: scarves and hats true, belts and jewellery blank |
+| notes | text | fibre, fit, anything |
+
+## outfits.csv — one row per outfit you'd actually wear
+
+| column | values | meaning |
+|---|---|---|
+| outfit | text | a name |
+| occasion | text | from the worksheet cards, or your own |
+| dress_code | 1–5 | the dot rating on the occasion card |
+| weather | clear · rain | rain changes more than people admit |
+| top … accessory | item names from items.csv, or blank | one per slot; blank means empty |
+
+The five rows already in items.csv are the test case. Replace them.
