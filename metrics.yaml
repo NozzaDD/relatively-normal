@@ -1,0 +1,17 @@
+# data/metrics.yaml
+# Update by hand whenever a number changes. The backlog's milestone triggers read this.
+
+last_updated: 2026-09-15
+
+free_subscribers: 36
+paid_subscribers: 0
+affiliate_orders: 0
+brand_partnerships: 0
+consultations_completed: 0
+tool_users: 0
+
+events:
+  beta_round_1_announced: null
+  beta_session_1_published: null
+  beta_round_1_complete: null
+  tool_live_for_paid: null
