@@ -14,7 +14,9 @@
 # trigger, and lists what can run now. Nothing here is ever deleted; it's
 # marked published or dropped, so the record of what worked stays.
 
-metrics_file: data/metrics.yaml
+# A top-level key cannot sit above a top-level list in one YAML document, so this
+# is the list's first entry: readers look for the entry carrying a metrics_file key.
+- metrics_file: data/metrics.yaml
 
 # ---------------------------------------------------------------------------
 # MILESTONE POSTS — the origin story, told in pieces, each at its moment
@@ -291,6 +293,41 @@ metrics_file: data/metrics.yaml
   status: idea
   source: plan §2
   notes: The register that AI can't write. Never delegate these.
+
+# ---------------------------------------------------------------------------
+# ANGLES — positions the whole newsletter returns to
+# ---------------------------------------------------------------------------
+
+- id: angle-attention
+  type: series
+  title: Where you put your attention is the whole game
+  angle: >
+    The attention economy wants you looking at everything. A palette you trust is a filter:
+    "I love it, but it's pink, and pink next to my face isn't for me" — and that is a relief,
+    not a loss. The tool, used right, removes noise. What's left is calm, confidence, and more
+    pleasure, not less: you can look at something beautiful and simply enjoy that it exists.
+    "Oh my god it's beautiful, I really enjoy looking at it" — full stop. That's the shift.
+  trigger: {kind: none}
+  status: idea
+  source: Nora, 2026-09-15
+  notes: >
+    A main angle. Works as notes (one line: the pink example), as a weekly post (the argument),
+    and as the frame for the launch essay. It is the emotional case for the whole product.
+
+- id: angle-stylist-in-your-pocket
+  type: series
+  title: The stylist in your pocket
+  angle: >
+    We want to be the friend you text before you buy. Every budget, every location, every
+    colour season, every body shape. Not a magazine that assumes you live in New York and
+    have a magazine budget. A friend who knows your wardrobe and tells you the truth.
+  trigger: {kind: none}
+  status: idea
+  source: Nora, 2026-09-15
+  notes: >
+    Positioning, not a single post. "Every body shape" is a product commitment: the tool
+    extends into body shape later, which is where the Closet Coup body-visualisation work
+    comes back in. Colour first, shape second.
 
 # ---------------------------------------------------------------------------
 # RULES that live with the backlog
