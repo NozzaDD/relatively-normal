@@ -184,3 +184,66 @@ class TestNoraHorizons(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestNoraOutfits(unittest.TestCase):
+    """The three example outfits in engine/examples/nora-outfits.csv: the zone
+    and weather flags they must raise, and the unlock counts on ranked gaps."""
+
+    @classmethod
+    def setUpClass(cls):
+        from engine import run
+        cls.items = run.load_items(REPO_ROOT / "engine" / "examples" / "nora-items.csv")
+        cls.outfits = run.load_outfits(REPO_ROOT / "engine" / "examples" / "nora-outfits.csv", cls.items)
+        cls.result = horizons.result("soft_autumn", "teal_ochre", cls.items, outfits=cls.outfits)
+        cls.by_name = {o["name"]: o for o in cls.result["outfits"]}
+
+    def test_items_carry_the_two_attributes_and_the_layer_slot_exists(self):
+        self.assertEqual(len(self.items), 5)  # the template's blank hint rows are skipped
+        self.assertEqual({i["dressiness"] for i in self.items}, {2, 3})
+        self.assertIn("layer", matcher.SLOTS)
+        self.assertNotIn("layer", matcher.COVERAGE_SLOTS)
+
+    def test_work_tuesday_raises_no_zone_or_weather_flag(self):
+        o = self.by_name["work Tuesday"]
+        self.assertEqual(o["checks"]["zone"]["flags"], [])
+        self.assertIsNone(o["checks"]["weather"]["flag"])
+
+    def test_dinner_in_rain_without_a_layer_is_not_enough_for_rain(self):
+        o = self.by_name["dinner with friends"]
+        self.assertEqual(o["checks"]["weather"]["flag"], "not enough for rain")
+        self.assertFalse(o["checks"]["weather"]["layer_present"])
+        self.assertEqual(o["checks"]["zone"]["flags"], [])
+        self.assertFalse(o["passes"])
+
+    def test_work_into_evening_is_flagged_twice(self):
+        o = self.by_name["work into evening"]
+        # once as a hard miss at the face (the white shirt) ...
+        top = o["slots"]["top"]
+        self.assertEqual(top["item_id"], "pure white shirt")
+        self.assertEqual(top["verdict"], "hard_miss")
+        self.assertEqual(top["where"], "at the face")
+        # ... and once as too casual for the occasion (the rust scarf, dressiness 2 against dress code 4)
+        flags = {(z["item_id"], z["flag"]) for z in o["checks"]["zone"]["flags"]}
+        self.assertEqual(flags, {("rust scarf", "too casual")})
+        self.assertFalse(o["passes"])
+
+    def test_ranked_gaps_carry_unlock_counts(self):
+        gaps = {(g["type"], g.get("slot"), g.get("item_id")): g for g in self.result["gaps_ranked"]}
+        self.assertEqual(gaps[("empty_slot", "shoes", None)]["unlocks"], 3)
+        self.assertEqual(gaps[("empty_slot", "bag", None)]["unlocks"], 3)
+        self.assertEqual(gaps[("hard_miss", "top", "pure white shirt")]["unlocks"], 1)
+        self.assertEqual(gaps[("too_casual", "accessory", "rust scarf")]["unlocks"], 1)
+        self.assertEqual(gaps[("not_enough_for_rain", "layer", None)]["unlocks"], 1)
+        zone = gaps[("zone_gap", "accessory", None)]
+        self.assertEqual(zone["flag"], "no accessory dressy enough for work into evening")
+        self.assertEqual(zone["unlocks"], 1)
+        # the two three-outfit gaps rank first
+        self.assertEqual([g["unlocks"] for g in self.result["gaps_ranked"][:2]], [3, 3])
+        # the layer is never a coverage gap
+        self.assertNotIn(("empty_slot", "layer", None), gaps)
+
+    def test_missing_list_needs_ten_items(self):
+        miss = self.result["short_term"]["missing"]
+        self.assertIsNone(miss["anchors"])
+        self.assertEqual(miss["note"], horizons.NOT_ENOUGH_ITEMS)

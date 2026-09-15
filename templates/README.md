@@ -25,4 +25,10 @@ They are the same data the canvas will write later; nothing gets retyped.
 | weather | clear · rain | rain changes more than people admit |
 | top … accessory | item names from items.csv, or blank | one per slot; blank means empty |
 
-The five rows already in items.csv are the test case. Replace them.
+Each file holds its header row and one example row to show the format; replace the example. The filled-in test case lives in `engine/examples/nora-items.csv` and `nora-outfits.csv`, and
+
+```sh
+python -m engine.run --season soft_autumn --direction teal_ochre --items engine/examples/nora-items.csv --outfits engine/examples/nora-outfits.csv --out result.html
+```
+
+turns the two spreadsheets into the result screen.

@@ -53,7 +53,7 @@ One number and one sentence. The **palette distance**: the share-weighted mean �
 | 18 – 28 | *A real gap. Worth steering deliberately over the next year.* |
 | > 28 | *Your wardrobe and your colouring disagree. Start with the pieces nearest your face.* |
 
-Then: which colours are **over-represented** (present in the closet, absent or accent-tier in the ideal) and which are **missing** (foundation or supporting in the ideal, absent from the closet).
+Then: which items are **pulling against you** — the items whose verdict is not *in*, largest contribution to the distance first, each with its verdict and its nearest admitted anchor as the fix — and which colours are **missing**: foundation-tier anchors no item lands on. The missing list is judged only when the closet holds ten or more items; below that it reads *not enough items to judge — add more before reading this*.
 
 ### 3c. What works now
 

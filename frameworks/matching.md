@@ -80,7 +80,9 @@ An item's verdict is its dominant colour's verdict, with secondary colours repor
 
 ## 3. Score the outfit
 
-Once items sit in the five slots, three checks run on the set:
+Items sit in six slots: **top, bottom, layer, shoes, bag, accessory**. The layer (coat, jacket, cardigan — anything worn over the top) is optional and is never a coverage gap. Every item also carries two attributes set at tagging: **dressiness** (1–4, casual to dressy) and **weight** (1–4, light to heavy — thermal warmth, not colour temperature). Outfits carry an **occasion**, a **dress code** (1–5) and **weather** (clear or rain).
+
+These checks run on the set:
 
 **Coverage.** Which slots are empty. Reported as plain text: *Missing: bottom, shoes.* This is the gap detector and it's a lookup, not an algorithm.
 
@@ -90,9 +92,15 @@ Once items sit in the five slots, three checks run on the set:
 
 **Contrast.** Compute the Lab lightness range across the outfit's dominant colours. Compare to the season's `contrast` level. A low-contrast season wearing a 70-point lightness spread gets: *Higher contrast than your natural colouring; consider closing the gap between top and bottom.*
 
+**Zone fit.** Every filled item's dressiness must be within 1 of the occasion's dress code. Otherwise flag the item: *too casual* when it sits below, *too dressy* when it sits above. Not checked when the outfit has no occasion.
+
+**Weather fit.** If the weather is rain, the layer slot is required and the outfit's heaviest item must have weight ≥ 3; otherwise flag *not enough for rain*. In clear weather the layer is optional.
+
+An outfit *works now* (`horizons.md` §3c) when it passes the pairing rules in `combinations.md` §5 and both of these checks.
+
 ## 4. Rank the gaps
 
-A gap is any of: an empty slot; an out-of-palette item in a filled slot; a tier imbalance; a contrast mismatch. Rank them by **how many outfits the fix would unlock** — an empty bottom slot that appears in four of five saved outfits outranks a slightly-off scarf in one.
+A gap is any of: an empty slot; an out-of-palette item in a filled slot; an item flagged too casual or too dressy; an outfit not enough for rain; a tier imbalance; a contrast mismatch; and a **zone gap** — for each occasion, a slot where the closet holds no item within 1 of the dress code, phrased *no [slot] dressy enough for [occasion]*. Rank them by **how many outfits the fix would unlock** — the count of outfits the fix would complete or repair — so an empty bottom slot that appears in four of five saved outfits outranks a slightly-off scarf in one.
 
 The top three ranked gaps are what the monthly recommendation run works from. Nothing else is sent.
 
@@ -182,13 +190,17 @@ What the matcher returns for an outfit, and what the recommendation step consume
     "bottom":    null,
     "shoes":     {"item_id": "…", "dominant": {"hex": "000000", "lab": [0, 0, 0]}, "verdict": "in", "nearest": "black (below waist)", "delta_e": 0},
     "bag":       {"item_id": "…", "dominant": {"hex": "7B4F2E", "lab": [38, 15, 24]}, "verdict": "near", "nearest": "chocolate", "delta_e": 15.2},
+    "layer":     null,
     "accessory": null
   },
+  "occasion": "work", "dress_code": 3, "weather": "clear",
   "checks": {
     "coverage":   {"missing": ["bottom", "accessory"]},
     "palette":    {"in": 2, "near": 1, "out": 0, "hard_miss": 0},
     "tier_mix":   {"foundation": 0.67, "supporting": 0.33, "accent": 0.0, "flag": null},
-    "contrast":   {"lightness_range": 36, "season_target": "low", "flag": null}
+    "contrast":   {"lightness_range": 36, "season_target": "low", "flag": null},
+    "zone":       {"dress_code": 3, "flags": [{"item_id": "…", "slot": "accessory", "dressiness": 1, "flag": "too casual"}]},
+    "weather":    {"weather": "clear", "layer_present": false, "heaviest": 3, "flag": null}
   },
   "gaps_ranked": [
     {"type": "empty_slot", "slot": "bottom", "unlocks": 4,
@@ -199,7 +211,7 @@ What the matcher returns for an outfit, and what the recommendation step consume
 }
 ```
 
-Accessory items additionally carry `near_face` (true / false) from tagging — see §2, stage 1.
+Every item carries `dressiness` (1–4) and `weight` (1–4) from tagging; accessory items additionally carry `near_face` (true / false) — see §2, stage 1. Each slot entry in the JSON reports them alongside the verdict. With saved outfits the matcher returns one such block per outfit and a single `gaps_ranked` across all of them.
 
 The language model receives this JSON and writes the sentence a person reads. It never computes anything in it.
 

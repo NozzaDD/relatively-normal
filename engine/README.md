@@ -25,11 +25,16 @@ python -m unittest discover -s engine/tests -t . -v
 Rendering the result screen for one person — items file in, HTML out:
 
 ```sh
-python -m engine.run --season soft_autumn --direction teal_ochre --items engine/examples/nora-items.yaml --out result.html
+python -m engine.run --season soft_autumn --direction teal_ochre --items engine/examples/nora-items.csv --outfits engine/examples/nora-outfits.csv --out result.html
 ```
 
-`engine/examples/nora-items.yaml` holds the five Nora test-case items, so that
-command runs with no other setup. Two optional flags carry the intake answers
+`engine/examples/nora-items.csv` and `nora-outfits.csv` hold the five Nora
+test-case items and three outfits in the `templates/` spreadsheet formats, so
+that command runs with no other setup. `--items` also accepts a YAML list
+(`engine/examples/nora-items.yaml`); `--outfits` is optional — without it one
+outfit is built from the first item per slot and labelled
+`auto: first item per slot`, and works-now is generated from the pairing
+rules. Two optional flags carry the intake answers
 the screen also shows — `--mood "calm, put together, not trying"` and
 `--confidence temperature=medium,value=high,chroma=high` (the runner-up season
 needs the confidences) — and `--json path` also writes the raw result. The
@@ -67,10 +72,10 @@ horizons.result("soft_autumn", "teal_ochre", items,
 | `colour.py` | `matching.md` §1 (colour space), `combinations.md` §2 | sRGB → CIELAB (D65), Lab ↔ LCh, ΔE2000, and `relative_chroma(L, C, h)` = C\* / C\*max where C\*max is the sRGB gamut boundary at that lightness and hue, found by bisection. Pure functions. |
 | `palette.py` | `colour-system.md` §2 (runner-up), §4, §5 | Loads `seasons.yaml`; a `Season` carries its anchors as Lab with tier and relative chroma, its rules (`black`, `white`, `contrast`, `metal`, `avoid`) and its directions. `apply_direction` re-weights toward a direction. `runner_up` derives the second season from per-axis confidence. |
 | `generators.py` | `combinations.md` §3, §5 | Opposition, Tonal and Muted exactly as specified, run over chromatic anchors only (neutrals, relative chroma ≤ 0.15, are excluded) — bands, chroma caps, Δ relative chroma limits, ΔL\* minimums, per-generator ranking, the default and calm orderings, direction re-weighting, and the optional bridge. |
-| `matcher.py` | `matching.md` §1–§5 | `extract_colours` (k-means in Lab over pixels); `score_item` with the three-stage order — slot rules, avoid list, anchors — and the full black/white tables including `near_face`; `outfit_checks` (coverage, palette share, tier balance, contrast); `pair_valid` and `outfit_valid`, the four outfit pairing rules of `combinations.md` §5 (neutrals are the ground); `rank_gaps`; `fill_gap` with Source 1 (own closet) implemented and Sources 2 and 3 as stubs returning nothing; `score_outfit` producing the §6 JSON. |
+| `matcher.py` | `matching.md` §1–§5 | `extract_colours` (k-means in Lab over pixels); `score_item` with the three-stage order — slot rules, avoid list, anchors — and the full black/white tables including `near_face`; `outfit_checks` (coverage, palette share, tier balance, contrast); `pair_valid` and `outfit_valid`, the four outfit pairing rules of `combinations.md` §5 (neutrals are the ground); `zone_fit` and `weather_fit`; `score_outfits` scoring every saved outfit and `rank_gaps` ranking gaps across them by unlocks, with `zone_gaps` per occasion; `fill_gap` with Source 1 (own closet) implemented and Sources 2 and 3 as stubs returning nothing; `score_outfit` producing the §6 JSON. |
 | `horizons.py` | `horizons.md` §2–§4 | `result` — the §6 JSON extended with `long_term` (ideal palette, ranked combinations, rules in force, runner-up, direction-of-travel data) and `short_term` (current palette sorted into the ideal's tiers, the distance figure and its reading, over-represented and missing colours, works-now outfits, ranked next moves). |
 | `render.py` | `horizons.md` §6 | `render(result)` — the result dict as one self-contained HTML page: colouring and runner-up at the top, ideal palette and current wardrobe as two columns of proportional colour blocks (the current one sorted into the ideal's tiers, out and hard-miss items set apart), the distance figure, the outfit in hand with its checks, works-now and next moves side by side, combinations as swatch pairs, and the long-term data. Inline CSS, no external assets. It computes nothing: every number and verdict is read from the JSON. |
-| `run.py` | — | The command line: `python -m engine.run --season … --direction … --items items.yaml --out result.html`. Reads the items file (name, hex, slot, optional near_face and share), calls `horizons.result`, writes the page. |
+| `run.py` | — | The command line: `python -m engine.run --season … --direction … --items items.csv [--outfits outfits.csv] --out result.html`. Reads the items file (`templates/items.csv` format or YAML), the optional outfits file (`templates/outfits.csv` format), calls `horizons.result`, writes the page. |
 | `tests/test_nora.py` | `examples/nora-soft-autumn.yaml` | Asserts every expected verdict, the runner-up season, the named pairs' generators, and the exact three ranked lists over Soft Autumn. |
 
 ## Item shape
@@ -79,7 +84,10 @@ horizons.result("soft_autumn", "teal_ochre", items,
 {"id": "…", "hex": "1F5F63", "slot": "top", "near_face": True, "share": 1.0}
 ```
 
-- `slot`: `top` | `bottom` | `shoes` | `bag` | `accessory`
+- `slot`: `top` | `bottom` | `layer` | `shoes` | `bag` | `accessory` — the layer
+  is optional and never a coverage gap
+- `dressiness` 1–4 (casual to dressy) and `weight` 1–4 (light to heavy, thermal)
+  — read by the zone and weather checks; absent on YAML items unless given
 - `near_face`: read for the accessory slot only. Scarves and hats `True`; belts,
   jewellery and watches `False`. The vision model proposes it, the user
   confirms it. An accessory with no flag is scored as hardware and the result
@@ -120,8 +128,18 @@ owner's to overrule:
   admitted anchor as the fix.
 - **Next moves with the stubs in place**: every fill is from the closet, so
   `price_band` is 1 and `palette_improvement` is measured on the outfit in hand.
-- **Gap ranking** without saved outfits: every gap unlocks 1 and ties break by
-  severity (empty slot, hard miss, out, near, tier, contrast).
+- **Gap ranking**: `unlocks` is the number of outfits a fix would complete or
+  repair; without saved outfits there is one outfit, so every gap unlocks 1.
+  Ties break by severity: empty slot, hard miss, out, near, zone gap, too
+  casual / too dressy, not enough for rain, tier, contrast.
+- **Layer slot**: counts double in the tier balance like top and bottom (it
+  covers as much body), and is a face position for the black and white slot
+  rules (a coat collar sits at the face).
+- **Zone gaps** are raised only for slots where the closet holds items at all;
+  an empty closet slot is already the empty-slot gap. The layer is checked for
+  occasions that have a rain outfit, where it is required.
+- **Closet fills respect the occasion**: when the gap's outfit has a dress
+  code, a Source 1 candidate must also sit within 1 of it.
 
 ## What is not here
 

@@ -19,7 +19,7 @@ import html
 import json
 
 TIERS = ("foundations", "supporting", "accents")
-SLOTS = ("top", "bottom", "shoes", "bag", "accessory")
+SLOTS = ("top", "bottom", "layer", "shoes", "bag", "accessory")
 
 # horizons.md §3b, quoted; keyed by the `reading` the engine reports.
 DISTANCE_READINGS = {
@@ -143,21 +143,31 @@ def _current_column(st):
         entries = cp["tiers"][t]
         kept = [x for x in entries if x["verdict"] in ("in", "near")]
         apart = [x for x in entries if x["verdict"] not in ("in", "near")]
-        sw = "".join(_swatch(x["hex"], x["item_id"], x["verdict"], sub=f'nearest {x["nearest"]} · ΔE {x["delta_e"]}') for x in kept)
+        sw = "".join(_swatch(x["hex"], x["item_id"], x["verdict"], sub=_attrs(x) + f'nearest {x["nearest"]} · ΔE {x["delta_e"]}') for x in kept)
         if apart:
             sw += '<div class="sep">out or hard miss — nearest anchor in this tier, not in palette</div>'
             sw += "".join(_swatch(x["hex"], x["item_id"], x["verdict"], dim=True,
-                                  sub=f'nearest {x["nearest"]} · ΔE {x["delta_e"]}') for x in apart)
+                                  sub=_attrs(x) + f'nearest {x["nearest"]} · ΔE {x["delta_e"]}') for x in apart)
         if not entries:
             sw = '<div class="sub" style="font-size:12px">nothing here</div>'
         out.append(f'<div class="tier"><div class="tier-head"><span>{_e(t)}</span><span>{_pct(share)}</span></div>'
                    f'<div class="bar"><i style="width:{_pct(share)}"></i></div><div class="swatches">{sw}</div></div>')
     if cp["unplaced"]:
-        sw = "".join(_swatch(x["hex"], x["item_id"], x["verdict"], sub=f'{x["nearest"]} · ΔE {x["delta_e"]}') for x in cp["unplaced"])
+        sw = "".join(_swatch(x["hex"], x["item_id"], x["verdict"], sub=_attrs(x) + f'{x["nearest"]} · ΔE {x["delta_e"]}') for x in cp["unplaced"])
         out.append(f'<div class="tier"><div class="tier-head"><span>allowed by a slot rule — no tier</span></div>'
                    f'<div class="swatches">{sw}</div></div>')
     out.append('</div>')
     return "".join(out)
+
+
+def _attrs(x):
+    """'d3 · w2 · ' when an item carries dressiness and weight, else ''."""
+    parts = []
+    if x.get("dressiness") is not None:
+        parts.append(f'd{x["dressiness"]}')
+    if x.get("weight") is not None:
+        parts.append(f'w{x["weight"]}')
+    return (" · ".join(parts) + " · ") if parts else ""
 
 
 def _distance(st):
@@ -170,7 +180,8 @@ def _distance(st):
             for o in st["over_represented"]) + "</ul>"
     else:
         over = "none"
-    missing = ", ".join(st["missing"]) or "none"
+    miss = st["missing"]
+    missing = miss["note"] if miss.get("note") else (", ".join(miss["anchors"]) or "none")
     return f"""
 <section>
   <h2>Distance</h2>
@@ -183,14 +194,16 @@ def _distance(st):
 </section>"""
 
 
-def _outfit_in_hand(r):
+def _outfit_block(o):
     slots = "".join(
         (f'<div class="slot"><div class="c" style="background:#{_e(s["dominant"]["hex"])}"></div>'
          f'<b>{_e(slot)}</b> {_badge(s["verdict"])}<br>{_e(s["item_id"])}<br>'
-         f'<span class="sub">{_e(s["nearest"])} · ΔE {_e(s["delta_e"])}{(" · " + _e(s["reason"])) if s.get("reason") else ""}</span></div>')
-        if s else f'<div class="slot"><div class="c empty"></div><b>{_e(slot)}</b><br><span class="sub">empty</span></div>'
-        for slot, s in ((k, r["slots"][k]) for k in SLOTS))
-    c = r["checks"]
+         f'<span class="sub">{_e(_attrs(s))}{_e(s["nearest"])} · ΔE {_e(s["delta_e"])}'
+         f'{(" · " + _e(s["reason"])) if s.get("reason") else ""}</span></div>')
+        if s else f'<div class="slot"><div class="c empty"></div><b>{_e(slot)}</b><br><span class="sub">empty'
+                  f'{" (optional)" if slot == "layer" else ""}</span></div>'
+        for slot, s in ((k, o["slots"][k]) for k in SLOTS))
+    c = o["checks"]
     tm = c["tier_mix"]
     rows = [
         ("coverage", "missing: " + (", ".join(c["coverage"]["missing"]) or "none")),
@@ -200,10 +213,32 @@ def _outfit_in_hand(r):
         ("contrast", f'lightness range {c["contrast"]["lightness_range"]} · season target {c["contrast"]["season_target"]}'
                      + (f' · <span class="flag">{_e(c["contrast"]["flag"])}</span>' if c["contrast"]["flag"] else "")),
     ]
+    z = c["zone"]
+    if z["checked"]:
+        zf = ", ".join(f'{x["item_id"]} {x["flag"]}' for x in z["flags"])
+        rows.append(("zone fit", f'dress code {_e(z["dress_code"])} · ' + (f'<span class="flag">{_e(zf)}</span>' if zf else "fits")))
+    w = c["weather"]
+    if w["checked"]:
+        rows.append(("weather", f'{_e(w["weather"])} · layer {"present" if w["layer_present"] else "absent"} · heaviest {_e(w["heaviest"])}'
+                     + (f' · <span class="flag">{_e(w["flag"])}</span>' if w["flag"] else " · fits")))
+    pf = ", ".join(o["pairing"]["flags"])
+    rows.append(("pairing", "valid" if o["pairing"]["valid"] else f'<span class="flag">{_e(pf or "invalid")}</span>'))
     if c.get("warm_partner", {}).get("flag"):
         rows.append(("black", f'<span class="flag">{_e(c["warm_partner"]["flag"])}</span>'))
     kv = "".join(f"<dt>{_e(k)}</dt><dd>{v}</dd>" for k, v in rows)
-    return f'<section><h2>Outfit in hand</h2><div class="slots">{slots}</div><dl class="kv" style="margin-top:12px">{kv}</dl></section>'
+    meta = " · ".join(x for x in (
+        _e(o["occasion"]) if o.get("occasion") else "",
+        f'dress code {_e(o["dress_code"])}' if o.get("dress_code") is not None else "",
+        _e(o["weather"]) if o.get("weather") else "") if x)
+    status = '<span class="badge b-in">works now</span>' if o["passes"] else '<span class="badge b-out">not yet</span>'
+    return (f'<div style="margin:0 0 18px"><h3>{_e(o["name"])} {status}</h3>'
+            f'<div class="sub" style="margin-bottom:8px">{meta}</div>'
+            f'<div class="slots">{slots}</div><dl class="kv" style="margin-top:12px">{kv}</dl></div>')
+
+
+def _outfits(r):
+    head = "Your outfits" if r.get("mode") == "saved" else "Outfit in hand"
+    return f'<section><h2>{_e(head)}</h2>{"".join(_outfit_block(o) for o in r["outfits"])}</section>'
 
 
 def _works_now(st):
@@ -213,10 +248,14 @@ def _works_now(st):
     else:
         li = []
         for o in outfits:
-            how = o.get("matched_pair") or _name(o.get("pairing"))
             flags = f' · <span class="flag">{_e(", ".join(o["flags"]))}</span>' if o.get("flags") else ""
-            li.append(f'<li><b>{_e(" + ".join(o["items"]))}</b><br><span class="sub">{_e(how)}'
-                      f'{(" · " + _e(o["generator"])) if o.get("generator") else ""} · closeness {_e(o["closeness_to_named"])}</span>{flags}</li>')
+            if o.get("name"):
+                meta = " · ".join(x for x in (o.get("occasion") or "", f'dress code {o["dress_code"]}' if o.get("dress_code") is not None else "", o.get("weather") or "") if x)
+                li.append(f'<li><b>{_e(o["name"])}</b> — {_e(" + ".join(o["items"]))}<br><span class="sub">{_e(meta)}</span>{flags}</li>')
+            else:
+                how = o.get("matched_pair") or _name(o.get("pairing"))
+                li.append(f'<li><b>{_e(" + ".join(o["items"]))}</b><br><span class="sub">{_e(how)}'
+                          f'{(" · " + _e(o["generator"])) if o.get("generator") else ""} · closeness {_e(o["closeness_to_named"])}</span>{flags}</li>')
         body = f'<ul>{"".join(li)}</ul>'
     return f'<div><h2>Works now</h2>{body}</div>'
 
@@ -234,9 +273,12 @@ def _next_moves(r):
     gaps = r["gaps_ranked"]
     if gaps:
         gl = "".join(
-            f'<li>{_e(_name(g["type"]))}{(" — " + _e(g["slot"])) if g.get("slot") else ""}'
+            f'<li>{_e(_name(g["type"]))}{(" — " + _e(g["slot"])) if g.get("slot") and g["type"] != "zone_gap" else ""}'
+            f'{(" — " + _e(g["item_id"])) if g.get("item_id") else ""}'
             f'{(" — " + _e(g["flag"])) if g.get("flag") else ""}'
-            f'{(" — nearest " + _e(g["nearest"])) if g.get("nearest") else ""} · unlocks {_e(g["unlocks"])}'
+            f'{(" — nearest " + _e(g["nearest"])) if g.get("nearest") else ""}'
+            f' · <b>unlocks {_e(g["unlocks"])}</b>'
+            f'{(" <span class=sub>(" + _e(", ".join(g["outfits"])) + ")</span>") if g.get("outfits") else ""}'
             f'{(" · fill: " + _e(g["fill"]["item_id"]) + " (" + _e(g["fill"]["source"]) + ")") if g.get("fill") else " · no fill yet"}</li>'
             for g in gaps)
         body += f'<h3 style="margin-top:12px">Gaps, ranked</h3><ul>{gl}</ul>'
@@ -270,7 +312,7 @@ def _long_term(lt):
         ("contrast", _name(rules["contrast"])), ("metal", _name(rules["metal"])),
         ("grow", _name(dt["grow_tier"]) if dt["grow_tier"] else "—"),
         ("let fade", ", ".join(dt["fade_items"]) or "—"),
-        ("missing", ", ".join(dt["missing_colours"]) or "—"),
+        ("missing", dt["missing_note"] if dt.get("missing_note") else (", ".join(dt["missing_colours"] or []) or "—")),
         ("investment piece", dt["investment_piece"] or "— (needs the brand database)"),
     ]
     body = "".join(f"<dt>{_e(k)}</dt><dd>{_e(v)}</dd>" for k, v in kv)
@@ -288,7 +330,7 @@ def render(result):
         _header(result),
         f'<section><div class="grid2">{_ideal_column(lt)}{_current_column(st)}</div></section>',
         _distance(st),
-        _outfit_in_hand(result),
+        _outfits(result),
         f'<section><div class="grid2">{_works_now(st)}{_next_moves(result)}</div></section>',
         _combinations(lt),
         _long_term(lt),

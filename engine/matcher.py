@@ -2,27 +2,38 @@
 checks, ranked gaps and closet fills.
 
 Items are dicts: {"id": str, "hex": str, "slot": str, "near_face": bool|None,
-"share": float}. `slot` is one of SLOTS. `near_face` is read only for the
-accessory slot (matching.md §2, stage 1); an accessory with no flag is scored
-as hardware and the missing flag is reported. `share` defaults to 1.0 and is
-the item's weight in share-weighted figures.
+"dressiness": int|None, "weight": int|None, "share": float}. `slot` is one of
+SLOTS. `near_face` is read only for the accessory slot (matching.md §2,
+stage 1); an accessory with no flag is scored as hardware and the missing flag
+is reported. `dressiness` (1-4, casual to dressy) and `weight` (1-4, light to
+heavy — thermal, not colour temperature) feed the zone and weather checks in
+§3. `share` defaults to 1.0 and is the item's weight in share-weighted figures.
+
+Outfits are specs: {"name", "occasion", "dress_code" (1-5), "weather"
+("clear" | "rain"), "items": [item dicts]}. Gaps are ranked across all the
+outfits given (§4): a gap's `unlocks` is the number of outfits the fix would
+complete or repair.
 
 No language model runs here. Every verdict can be explained by pointing at a
 number.
 """
-import math
 import random
 
 from . import colour, generators
 from .palette import TIERS, TIER_SHARE
 
-SLOTS = ("top", "bottom", "shoes", "bag", "accessory")
-BODY_WEIGHT = {"top": 2, "bottom": 2, "shoes": 1, "bag": 1, "accessory": 1}  # §3 tier balance
+SLOTS = ("top", "bottom", "layer", "shoes", "bag", "accessory")
+COVERAGE_SLOTS = ("top", "bottom", "shoes", "bag", "accessory")   # layer is optional, never a coverage gap
+FACE_SLOTS = ("top", "layer")                                     # positions next to the face for the slot rules
+BODY_WEIGHT = {"top": 2, "bottom": 2, "layer": 2, "shoes": 1, "bag": 1, "accessory": 1}  # §3 tier balance
 
 RULE_TRIGGER_DE = 8.0     # stage 1: item within ΔE 8 of 000000 / FFFFFF
 HARD_MISS_DE = 8.0        # stage 2: ΔE to an avoid colour
 IN_DE = 12.0              # stage 3
 NEAR_DE = 16.0
+
+ZONE_TOLERANCE = 1        # §3 zone fit: dressiness within 1 of the occasion's dress code
+RAIN_MIN_WEIGHT = 3       # §3 weather fit: heaviest item at least this in rain
 
 # §3 contrast — the lightness spread above which a season's contrast level is
 # exceeded. Starting values, to be tuned against the beta consultations like
@@ -33,8 +44,9 @@ ACCENT_HEAVY_SHARE = 0.30      # twice the 15% target
 FOUNDATION_LIGHT_SHARE = 0.30  # roughly half the 55% target
 
 FACE_REASON = "black works on you, just not next to your face"
-GAP_SEVERITY = {"empty_slot": 0, "hard_miss": 1, "out": 2, "near": 3,
-                "tier_imbalance": 4, "contrast_mismatch": 5}
+GAP_SEVERITY = {"empty_slot": 0, "hard_miss": 1, "out": 2, "near": 3, "zone_gap": 4,
+                "too_casual": 5, "too_dressy": 5, "not_enough_for_rain": 6,
+                "tier_imbalance": 7, "contrast_mismatch": 8}
 
 
 # ================================================================ §1 extraction
@@ -91,11 +103,11 @@ def extract_colours(pixels, k=3, floor=0.08, alpha_min=200, sample=20000, seed=0
 # ================================================================ §2 scoring
 
 def _is_face(slot, near_face):
-    return slot == "top" or (slot == "accessory" and bool(near_face))
+    return slot in FACE_SLOTS or (slot == "accessory" and bool(near_face))
 
 
 def _black_rule(season, slot, near_face):
-    """Stage 1 black table. Returns (verdict, nearest, reason) or None."""
+    """Stage 1 black table. Returns (verdict, nearest, reason)."""
     rule, face = season.black, _is_face(slot, near_face)
     if rule == "anywhere":
         return "in", "black", None
@@ -115,7 +127,7 @@ def _black_rule(season, slot, near_face):
 
 
 def _white_rule(season, slot, near_face):
-    """Stage 1 white table. Returns (verdict, nearest, reason) or None."""
+    """Stage 1 white table. Returns (verdict, nearest, reason)."""
     rule, face = season.white, _is_face(slot, near_face)
     anchor = season.white_anchor().name
     if rule in ("pure_white", "anywhere"):
@@ -169,6 +181,7 @@ def score_item(item, season):
     near_face = item.get("near_face")
     result = {"item_id": item.get("id"), "slot": slot,
               "near_face": near_face if slot == "accessory" else None,
+              "dressiness": item.get("dressiness"), "weight": item.get("weight"),
               "dominant": {"hex": item["hex"].upper().lstrip('#'), "lab": [round(v, 2) for v in lab],
                            "relative_chroma": round(rel, 3), "neutral": generators.is_neutral(rel)},
               "verdict": None, "nearest": None, "delta_e": None, "tier": None,
@@ -223,101 +236,6 @@ def score_item(item, season):
 
 def score_items(items, season):
     return [score_item(i, season) for i in items]
-
-
-# ================================================================ §3 outfit checks
-
-def _share(item):
-    return float(item.get("share", 1.0))
-
-
-def outfit_checks(scored, season):
-    """The four checks on a set of scored items that sit in the five slots.
-    `scored` is one item per slot at most (an outfit, not a closet)."""
-    by_slot = {s: None for s in SLOTS}
-    for r in scored:
-        if by_slot[r["slot"]] is None:
-            by_slot[r["slot"]] = r
-    filled = [r for r in by_slot.values() if r]
-
-    # coverage
-    missing = [s for s in SLOTS if by_slot[s] is None]
-
-    # palette share
-    palette = {"in": 0, "near": 0, "out": 0, "hard_miss": 0}
-    for r in filled:
-        palette[r["verdict"]] += 1
-
-    # tier balance — in/near items with a tier, weighted by body coverage
-    counted = [r for r in filled if r["verdict"] in ("in", "near") and r["tier"]]
-    total = sum(BODY_WEIGHT[r["slot"]] for r in counted)
-    mix = {t: 0.0 for t in TIERS}
-    for r in counted:
-        mix[r["tier"]] += BODY_WEIGHT[r["slot"]]
-    if total:
-        mix = {t: round(v / total, 2) for t, v in mix.items()}
-    tier_flag = None
-    if total and mix["accents"] > ACCENT_HEAVY_SHARE:
-        tier_flag = "accent-heavy"
-    elif len(counted) >= 2 and mix["foundations"] < FOUNDATION_LIGHT_SHARE:
-        tier_flag = "foundation-light"
-
-    # contrast
-    Ls = [r["dominant"]["lab"][0] for r in filled]
-    spread = round(max(Ls) - min(Ls), 1) if len(Ls) >= 2 else 0.0
-    limit = CONTRAST_MAX_RANGE.get(season.contrast, 100)
-    contrast_flag = "higher contrast than your natural colouring" if spread > limit else None
-
-    # black with warm partner (stage 1 note)
-    warm_flag = None
-    if season.black == "anywhere_with_warm_partner" and any(
-            r["stage"] == 1 and r["nearest"].startswith("black") for r in filled):
-        if not any(r["tier"] in ("foundations", "supporting") and not r["nearest"].startswith("black")
-                   for r in filled):
-            warm_flag = "black needs a warm-tier partner in this outfit"
-
-    return {"coverage": {"missing": missing},
-            "palette": palette,
-            "tier_mix": {"foundation": mix["foundations"], "supporting": mix["supporting"],
-                         "accent": mix["accents"], "flag": tier_flag},
-            "contrast": {"lightness_range": spread, "season_target": season.contrast,
-                         "flag": contrast_flag},
-            "warm_partner": {"flag": warm_flag}}
-
-
-# ================================================================ §4 ranked gaps
-
-def find_gaps(scored, checks):
-    gaps = []
-    for slot in checks["coverage"]["missing"]:
-        gaps.append({"type": "empty_slot", "slot": slot})
-    for r in scored:
-        if r["verdict"] in ("near", "out", "hard_miss"):
-            gaps.append({"type": r["verdict"], "slot": r["slot"], "item_id": r["item_id"],
-                         "nearest": r["nearest"], "delta_e": r["delta_e"]})
-    if checks["tier_mix"]["flag"]:
-        gaps.append({"type": "tier_imbalance", "slot": None, "flag": checks["tier_mix"]["flag"]})
-    if checks["contrast"]["flag"]:
-        gaps.append({"type": "contrast_mismatch", "slot": None, "flag": checks["contrast"]["flag"]})
-    return gaps
-
-
-def rank_gaps(gaps, saved_outfits=None):
-    """§4 — rank by how many outfits the fix would unlock. `saved_outfits` is a
-    list of scored outfits (lists of scored items); a gap's `unlocks` is the
-    number of them that share it, at least 1 for the outfit in hand. Ties break
-    by severity: empty slot, hard miss, out, near, tier, contrast."""
-    saved_outfits = saved_outfits or []
-    for g in gaps:
-        n = 1
-        for outfit in saved_outfits:
-            slots = {r["slot"] for r in outfit}
-            if g["type"] == "empty_slot" and g["slot"] not in slots:
-                n += 1
-            elif g.get("item_id") and any(r["item_id"] == g["item_id"] for r in outfit):
-                n += 1
-        g["unlocks"] = n
-    return sorted(gaps, key=lambda g: (-g["unlocks"], GAP_SEVERITY[g["type"]]))
 
 
 # ================================================================ neutrals are the ground (combinations.md §5)
@@ -377,6 +295,186 @@ def outfit_valid(scored, pairs):
     return {"valid": all(c["valid"] for c in checks), "flags": flags, "pairs": checks}
 
 
+# ================================================================ §3 outfit checks
+
+def _by_slot(scored):
+    by_slot = {s: None for s in SLOTS}
+    for r in scored:
+        if by_slot[r["slot"]] is None:
+            by_slot[r["slot"]] = r
+    return by_slot
+
+
+def zone_fit(filled, dress_code):
+    """§3 zone fit — every filled item's dressiness within ZONE_TOLERANCE of
+    the occasion's dress code, else "too casual" / "too dressy" per item.
+    Not checked when the outfit has no occasion."""
+    if dress_code is None:
+        return {"dress_code": None, "checked": False, "flags": []}
+    flags = []
+    for r in filled:
+        d = r.get("dressiness")
+        if d is None:
+            flags.append({"item_id": r["item_id"], "slot": r["slot"], "dressiness": None, "flag": "dressiness not set"})
+        elif d < dress_code - ZONE_TOLERANCE:
+            flags.append({"item_id": r["item_id"], "slot": r["slot"], "dressiness": d, "flag": "too casual"})
+        elif d > dress_code + ZONE_TOLERANCE:
+            flags.append({"item_id": r["item_id"], "slot": r["slot"], "dressiness": d, "flag": "too dressy"})
+    return {"dress_code": dress_code, "checked": True, "flags": flags}
+
+
+def weather_fit(by_slot, weather):
+    """§3 weather fit — in rain the layer slot is required and the outfit's
+    heaviest item must weigh at least RAIN_MIN_WEIGHT, else "not enough for
+    rain". The layer is otherwise optional and never a coverage gap."""
+    filled = [r for r in by_slot.values() if r]
+    weights = [r["weight"] for r in filled if r.get("weight") is not None]
+    heaviest = max(weights) if weights else None
+    layer = by_slot["layer"] is not None
+    if weather != "rain":
+        return {"weather": weather, "checked": weather is not None, "layer_present": layer,
+                "heaviest": heaviest, "flag": None}
+    ok = layer and heaviest is not None and heaviest >= RAIN_MIN_WEIGHT
+    return {"weather": weather, "checked": True, "layer_present": layer, "heaviest": heaviest,
+            "flag": None if ok else "not enough for rain"}
+
+
+def outfit_checks(scored, season, dress_code=None, weather=None):
+    """The checks on a set of scored items that sit in the slots (one item per
+    slot at most): coverage, palette share, tier balance, contrast, the warm
+    partner note, zone fit and weather fit."""
+    by_slot = _by_slot(scored)
+    filled = [r for r in by_slot.values() if r]
+
+    # coverage — the five body slots; layer is optional
+    missing = [s for s in COVERAGE_SLOTS if by_slot[s] is None]
+
+    # palette share
+    palette = {"in": 0, "near": 0, "out": 0, "hard_miss": 0}
+    for r in filled:
+        palette[r["verdict"]] += 1
+
+    # tier balance — in/near items with a tier, weighted by body coverage
+    counted = [r for r in filled if r["verdict"] in ("in", "near") and r["tier"]]
+    total = sum(BODY_WEIGHT[r["slot"]] for r in counted)
+    mix = {t: 0.0 for t in TIERS}
+    for r in counted:
+        mix[r["tier"]] += BODY_WEIGHT[r["slot"]]
+    if total:
+        mix = {t: round(v / total, 2) for t, v in mix.items()}
+    tier_flag = None
+    if total and mix["accents"] > ACCENT_HEAVY_SHARE:
+        tier_flag = "accent-heavy"
+    elif len(counted) >= 2 and mix["foundations"] < FOUNDATION_LIGHT_SHARE:
+        tier_flag = "foundation-light"
+
+    # contrast
+    Ls = [r["dominant"]["lab"][0] for r in filled]
+    spread = round(max(Ls) - min(Ls), 1) if len(Ls) >= 2 else 0.0
+    limit = CONTRAST_MAX_RANGE.get(season.contrast, 100)
+    contrast_flag = "higher contrast than your natural colouring" if spread > limit else None
+
+    # black with warm partner (stage 1 note)
+    warm_flag = None
+    if season.black == "anywhere_with_warm_partner" and any(
+            r["stage"] == 1 and r["nearest"].startswith("black") for r in filled):
+        if not any(r["tier"] in ("foundations", "supporting") and not r["nearest"].startswith("black")
+                   for r in filled):
+            warm_flag = "black needs a warm-tier partner in this outfit"
+
+    return {"coverage": {"missing": missing},
+            "palette": palette,
+            "tier_mix": {"foundation": mix["foundations"], "supporting": mix["supporting"],
+                         "accent": mix["accents"], "flag": tier_flag},
+            "contrast": {"lightness_range": spread, "season_target": season.contrast,
+                         "flag": contrast_flag},
+            "warm_partner": {"flag": warm_flag},
+            "zone": zone_fit(filled, dress_code),
+            "weather": weather_fit(by_slot, weather)}
+
+
+# ================================================================ §4 gaps
+
+def find_gaps(scored, checks):
+    """The gaps in one outfit. Each carries a `key` so the same gap can be
+    recognised across outfits when unlock counts are taken."""
+    gaps = []
+    for slot in checks["coverage"]["missing"]:
+        gaps.append({"type": "empty_slot", "slot": slot, "key": ("empty_slot", slot)})
+    for r in scored:
+        if r["verdict"] in ("near", "out", "hard_miss"):
+            gaps.append({"type": r["verdict"], "slot": r["slot"], "item_id": r["item_id"],
+                         "nearest": r["admitted_nearest"], "delta_e": r["admitted_delta_e"],
+                         "where": r["where"], "key": (r["verdict"], r["item_id"])})
+    for z in checks["zone"]["flags"]:
+        t = z["flag"].replace(" ", "_")
+        gaps.append({"type": t, "slot": z["slot"], "item_id": z["item_id"], "flag": z["flag"],
+                     "dressiness": z["dressiness"], "key": (t, z["item_id"])})
+    if checks["weather"]["flag"]:
+        gaps.append({"type": "not_enough_for_rain", "slot": "layer", "flag": checks["weather"]["flag"],
+                     "key": ("not_enough_for_rain",)})
+    if checks["tier_mix"]["flag"]:
+        gaps.append({"type": "tier_imbalance", "slot": None, "flag": checks["tier_mix"]["flag"],
+                     "key": ("tier_imbalance", checks["tier_mix"]["flag"])})
+    if checks["contrast"]["flag"]:
+        gaps.append({"type": "contrast_mismatch", "slot": None, "flag": checks["contrast"]["flag"],
+                     "key": ("contrast_mismatch",)})
+    return gaps
+
+
+def zone_gaps(closet_scored, outfits):
+    """§4 zone gap — for each occasion, a slot where the closet holds no item
+    within ZONE_TOLERANCE of the dress code, phrased "no [slot] dressy enough
+    for [occasion]". Only raised where the closet holds items in that slot at
+    all: an empty closet slot is already the empty-slot gap. The layer slot is
+    checked for occasions that have a rain outfit, since the layer is required
+    there. `unlocks` is the number of outfits with that occasion."""
+    gaps = []
+    seen = set()
+    for o in outfits:
+        occ, dc = o.get("occasion"), o.get("dress_code")
+        if occ is None or dc is None or (occ, dc) in seen:
+            continue
+        seen.add((occ, dc))
+        same = [x for x in outfits if x.get("occasion") == occ and x.get("dress_code") == dc]
+        slots = list(COVERAGE_SLOTS) + (["layer"] if any(x.get("weather") == "rain" for x in same) else [])
+        for slot in slots:
+            in_slot = [r for r in closet_scored if r["slot"] == slot]
+            if not in_slot:
+                continue
+            if not any(r.get("dressiness") is not None and abs(r["dressiness"] - dc) <= ZONE_TOLERANCE
+                       for r in in_slot):
+                gaps.append({"type": "zone_gap", "slot": slot, "occasion": occ, "dress_code": dc,
+                             "flag": f"no {slot} dressy enough for {occ}", "unlocks": len(same),
+                             "key": ("zone_gap", slot, occ, dc), "outfit": same[0]["name"]})
+    return gaps
+
+
+def rank_gaps(outfits, closet_scored):
+    """§4 — one list of gaps across all outfits, ranked by how many outfits
+    the fix would complete or repair (`unlocks`); ties break by severity:
+    empty slot, hard miss, out, near, zone gap, too casual / too dressy, not
+    enough for rain, tier, contrast. Each gap names the first outfit it was
+    found in, which is the outfit its fill is searched against."""
+    merged = {}
+    for o in outfits:
+        for g in o["gaps"]:
+            key = g["key"]
+            if key not in merged:
+                merged[key] = {k: v for k, v in g.items() if k != "key"}
+                merged[key]["unlocks"] = 0
+                merged[key]["outfit"] = o["name"]
+                merged[key]["outfits"] = []
+            merged[key]["unlocks"] += 1
+            merged[key]["outfits"].append(o["name"])
+    ranked = list(merged.values())
+    for z in zone_gaps(closet_scored, outfits):
+        z.pop("key", None)
+        z["outfits"] = [x["name"] for x in outfits if x.get("occasion") == z["occasion"]]
+        ranked.append(z)
+    return sorted(ranked, key=lambda g: (-g["unlocks"], GAP_SEVERITY[g["type"]]))
+
+
 # ================================================================ §5 fills
 
 def _pairs_with(r, others, pairs):
@@ -384,11 +482,12 @@ def _pairs_with(r, others, pairs):
     return sum(1 for o in others if pair_valid(r, o, pairs)["valid"])
 
 
-def fill_from_closet(gap, outfit_scored, closet_scored, pairs):
+def fill_from_closet(gap, outfit_scored, closet_scored, pairs, dress_code=None):
     """Source 1 — the user's own closet. Filter to the gap's slot, keep
-    in-palette candidates not already in the outfit, require the outfit to
-    stay valid under the pairing rules with the candidate in it, and take the
-    one that pairs with most of what is there."""
+    in-palette candidates not already in the outfit (and within the occasion's
+    dress code when there is one), require the outfit to stay valid under the
+    pairing rules with the candidate in it, and take the one that pairs with
+    most of what is there."""
     if not gap.get("slot"):
         return None
     in_outfit = {r["item_id"] for r in outfit_scored}
@@ -396,6 +495,9 @@ def fill_from_closet(gap, outfit_scored, closet_scored, pairs):
     best = None
     for c in closet_scored:
         if c["slot"] != gap["slot"] or c["item_id"] in in_outfit or c["verdict"] != "in":
+            continue
+        if dress_code is not None and (c.get("dressiness") is None
+                                       or abs(c["dressiness"] - dress_code) > ZONE_TOLERANCE):
             continue
         if others and not outfit_valid(others + [c], pairs)["valid"]:
             continue
@@ -423,9 +525,9 @@ def fill_from_brands(gap, season):
     return None
 
 
-def fill_gap(gap, outfit_scored, closet_scored, season, pairs):
+def fill_gap(gap, outfit_scored, closet_scored, season, pairs, dress_code=None):
     """§5 — the three sources in strict order; stop at the first that answers."""
-    for fn in (lambda: fill_from_closet(gap, outfit_scored, closet_scored, pairs),
+    for fn in (lambda: fill_from_closet(gap, outfit_scored, closet_scored, pairs, dress_code),
                lambda: fill_from_staples(gap, season),
                lambda: fill_from_brands(gap, season)):
         fill = fn()
@@ -434,27 +536,47 @@ def fill_gap(gap, outfit_scored, closet_scored, season, pairs):
     return None
 
 
-# ================================================================ the outfit call
+# ================================================================ outfits
 
-def score_outfit(outfit_items, season, closet_items=None, saved_outfits=None, outfit_id=None):
-    """matching.md §6 — the matcher's output for one outfit.
+def score_outfits(specs, season, closet_items, pairs=None):
+    """Score every outfit spec and rank the gaps across them (§3, §4, §5).
 
-    `outfit_items`: the items on the canvas, at most one per slot.
-    `closet_items`: everything uploaded (defaults to the outfit); source 1
-    searches it. `saved_outfits`: other outfits (lists of items) for ranking
-    gaps by how many they appear in.
+    Each spec: {"name", "occasion", "dress_code", "weather", "items": [...]}.
+    Returns {"outfits": [...], "gaps_ranked": [...]}. An outfit `passes` when
+    it is valid under the pairing rules and carries no zone or weather flag.
     """
-    scored = score_items(outfit_items, season)
-    closet_scored = score_items(closet_items, season) if closet_items is not None else scored
-    saved_scored = [score_items(o, season) for o in (saved_outfits or [])]
-    checks = outfit_checks(scored, season)
-    pairs = [p for lst in generators.run(season.anchors).values() for p in lst]
-    gaps = rank_gaps(find_gaps(scored, checks), saved_scored)
-    for g in gaps:
-        g["fill"] = fill_gap(g, scored, closet_scored, season, pairs)
-    slots = {s: None for s in SLOTS}
-    for r in scored:
-        if slots[r["slot"]] is None:
-            slots[r["slot"]] = r
-    return {"outfit_id": outfit_id, "season": season.key, "slots": slots,
-            "checks": checks, "gaps_ranked": gaps}
+    if pairs is None:
+        pairs = [p for lst in generators.run(season.anchors).values() for p in lst]
+    closet_scored = score_items(closet_items, season)
+    by_id = {r["item_id"]: r for r in closet_scored}
+    outfits = []
+    for spec in specs:
+        scored = [by_id[i["id"]] if i.get("id") in by_id else score_item(i, season) for i in spec["items"]]
+        checks = outfit_checks(scored, season, spec.get("dress_code"), spec.get("weather"))
+        pairing = outfit_valid(scored, pairs)
+        passes = pairing["valid"] and not checks["zone"]["flags"] and not checks["weather"]["flag"]
+        outfits.append({"name": spec.get("name"), "occasion": spec.get("occasion"),
+                        "dress_code": spec.get("dress_code"), "weather": spec.get("weather"),
+                        "slots": _by_slot(scored), "checks": checks,
+                        "pairing": {"valid": pairing["valid"], "flags": pairing["flags"]},
+                        "passes": passes, "gaps": find_gaps(scored, checks)})
+    ranked = rank_gaps(outfits, closet_scored)
+    by_name = {o["name"]: o for o in outfits}
+    for g in ranked:
+        o = by_name.get(g.get("outfit"))
+        outfit_scored = [r for r in o["slots"].values() if r] if o else []
+        g["fill"] = fill_gap(g, outfit_scored, closet_scored, season, pairs,
+                             o.get("dress_code") if o else None) if g["type"] != "zone_gap" else None
+    return {"outfits": outfits, "gaps_ranked": ranked}
+
+
+def score_outfit(outfit_items, season, closet_items=None, outfit_id=None, occasion=None,
+                 dress_code=None, weather=None):
+    """matching.md §6 — the matcher's output for one outfit. A convenience
+    over `score_outfits` for a single spec."""
+    spec = {"name": outfit_id, "occasion": occasion, "dress_code": dress_code,
+            "weather": weather, "items": outfit_items}
+    out = score_outfits([spec], season, closet_items if closet_items is not None else outfit_items)
+    o = out["outfits"][0]
+    return {"outfit_id": outfit_id, "season": season.key, "slots": o["slots"], "checks": o["checks"],
+            "pairing": o["pairing"], "passes": o["passes"], "gaps_ranked": out["gaps_ranked"]}
