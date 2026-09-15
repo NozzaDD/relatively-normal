@@ -1,0 +1,302 @@
+# content/backlog.yaml
+# One place for every note, post, series and campaign idea.
+# Each entry has a trigger. Ideas that depend on something happening first
+# carry a milestone or date; they surface automatically when it's reached.
+#
+# type:     note | post | series | campaign
+# trigger:  kind: none        -> evergreen, can run any time
+#           kind: date        -> on or after `from`, optionally until `to`
+#           kind: milestone   -> when data/metrics.yaml shows metric >= value
+#           kind: event       -> after a named thing has happened
+# status:   idea | drafted | scheduled | published | dropped
+#
+# A session asked to "show what's ready" reads data/metrics.yaml, checks every
+# trigger, and lists what can run now. Nothing here is ever deleted; it's
+# marked published or dropped, so the record of what worked stays.
+
+metrics_file: data/metrics.yaml
+
+# ---------------------------------------------------------------------------
+# MILESTONE POSTS — the origin story, told in pieces, each at its moment
+# ---------------------------------------------------------------------------
+
+- id: ipad-first-100
+  type: post
+  title: How my iPad got me my first hundred subscribers
+  angle: >
+    Everyone writes "how I got started". The angle here is the device and the guilt.
+    For months this ran on my work laptop, which was never quite allowed and always
+    felt restricted — every session carried a small sense of doing the wrong thing.
+    Moving to an iPad and cloud sessions removed the friction and the guilt at once,
+    and the subscriber count followed. The post is about what permission does to output.
+  trigger: {kind: milestone, metric: free_subscribers, value: 100}
+  status: idea
+  source: Nora, 2026-09-15
+  notes: >
+    Do not publish at 100 exactly; publish when it's a clean round number the reader
+    can see on the profile. Include the actual dates — the iPad arrived 2 Sept 2026.
+
+- id: first-paid-subscriber
+  type: post
+  title: Someone paid me eight euros and I can't stop thinking about it
+  angle: What the first paying subscriber actually changes, which is not the money.
+  trigger: {kind: milestone, metric: paid_subscribers, value: 1}
+  status: idea
+  source: Claude, 2026-09-15
+
+- id: first-500
+  type: post
+  title: Five hundred, and what I'd tell the version of me at thirty-six
+  angle: The honest retrospective — what compounded, what didn't, what I'd skip.
+  trigger: {kind: milestone, metric: free_subscribers, value: 500}
+  status: idea
+  source: Claude, 2026-09-15
+
+- id: first-affiliate-sale
+  type: note
+  title: Someone bought the thing I said they should buy
+  angle: Short, slightly disbelieving. Name the item and the gap it filled.
+  trigger: {kind: milestone, metric: affiliate_orders, value: 1}
+  status: idea
+  source: Claude, 2026-09-15
+
+- id: first-brand-partner
+  type: post
+  title: A brand paid me, and here's the rule that made me say yes
+  angle: >
+    The partnership policy, published at the moment it first applies — only brands that
+    already passed the rubric in an unpaid piece. Turns a sponsorship into a trust story.
+  trigger: {kind: milestone, metric: brand_partnerships, value: 1}
+  status: idea
+  source: Claude, 2026-09-15
+
+- id: first-consultation-done
+  type: post
+  title: What I learned styling a stranger's wardrobe from seventeen photos
+  angle: The first beta consultation, written as method not testimonial.
+  trigger: {kind: event, name: beta_session_1_published}
+  status: idea
+  source: Claude, 2026-09-15
+
+- id: tool-launch-essay
+  type: post
+  title: I want to stop guessing what's missing from my wardrobe. So I built the thing.
+  angle: >
+    The "Find My Engine" structure — think out loud about the problem, name why the usual
+    advice fails, show the method, reveal the tool. Free for paid subscribers from today.
+  trigger: {kind: event, name: tool_live_for_paid}
+  status: idea
+  source: plan §6
+
+# ---------------------------------------------------------------------------
+# CAMPAIGNS — from the plan, section 4
+# ---------------------------------------------------------------------------
+
+- id: campaign-beta-round-1
+  type: campaign
+  title: Five free consultations — subscribe and comment to enter
+  trigger: {kind: date, from: 2026-10-06, to: 2026-10-12}
+  status: scheduled
+  source: plan §3
+  notes: Capped at five, publicly. Seventeen items. Intake off the comments, via a form.
+
+- id: campaign-black-week
+  type: campaign
+  title: The only thing worth buying this week is something filling a gap you already know
+  trigger: {kind: date, from: 2026-11-16, to: 2026-11-30}
+  status: scheduled
+  source: plan §4
+  notes: Framing post a week early. Not a deals roundup. Daily notes 23–30 Nov. Biggest affiliate week.
+
+- id: campaign-december-occasions
+  type: campaign
+  title: Dressing for the things December actually asks of you
+  trigger: {kind: date, from: 2026-11-30, to: 2026-12-27}
+  status: scheduled
+  source: plan §4
+  notes: Work parties, family, NYE. Deliberately not a gift guide.
+
+- id: campaign-beta-round-2
+  type: campaign
+  title: Round two — priority for paid subscribers
+  trigger: {kind: event, name: beta_round_1_complete}
+  status: idea
+  source: plan §3
+  notes: The paid tier's first concrete benefit. Likely source of the first ten paying subscribers.
+
+- id: campaign-new-year-new-gaps
+  type: series
+  title: New Year, New Gaps — four weeks, one step each
+  trigger: {kind: date, from: 2026-12-28, to: 2027-01-31}
+  status: idea
+  source: plan §4
+  notes: Palette, inventory, occasions, gaps ranked. On a worksheet in 2027; with the tool in 2028.
+
+- id: campaign-reader-spotlights
+  type: series
+  title: Reader spotlights — five of ten questions, published with their profile
+  trigger: {kind: milestone, metric: free_subscribers, value: 2000}
+  status: idea
+  source: plan §4
+  notes: Fortnightly. Prioritise other Substack writers. Questions 3, 4 and 10 stay in every piece.
+
+# ---------------------------------------------------------------------------
+# RECURRING SERIES — format families readers already know how to read
+# ---------------------------------------------------------------------------
+
+- id: series-polly-pocket
+  type: series
+  title: What I'd style for … (and won't buy)
+  angle: >
+    Hypothetical looks as a thinking tool — the gap in the market is doing this out loud,
+    as a way of learning your own style, rather than glossily and implicitly.
+  trigger: {kind: none}
+  status: idea
+  source: market research, 2026-09-10
+  notes: Scenario dressing family. Name it and number it like Sunday Night Shoppies.
+
+- id: series-wanted-vs-bought
+  type: series
+  title: Wanted vs bought
+  angle: Monthly two-column ledger. The bought column is usually nearly empty — that's the point.
+  trigger: {kind: none}
+  status: idea
+  source: market research, 2026-09-10
+
+- id: series-one-piece-x-ways
+  type: series
+  title: One piece, five ways
+  angle: Permutation play. A white shirt, a teal knit, across a week of occasions.
+  trigger: {kind: none}
+  status: idea
+  source: market research, 2026-09-10
+
+- id: series-on-the-hunt
+  type: series
+  title: On the hunt
+  angle: A material or construction detail found in the wild, and what it tells you. The Italian-boyfriend register.
+  trigger: {kind: none}
+  status: idea
+  source: plan §2
+
+- id: series-fashion-week-european-lens
+  type: series
+  title: What of this is actually wearable in a European autumn
+  angle: React to one show look through the lens of a real climate and a real budget. London, Milan, Paris — twice a year.
+  trigger: {kind: date, from: 2026-09-17, to: 2026-10-06}
+  status: idea
+  source: week plan, 2026-09-13
+  notes: Recurs Feb/Mar and Sep/Oct every year. Max Mara and Jil Sander are the natural Milan entry.
+
+# ---------------------------------------------------------------------------
+# NOTES — evergreen angles
+# ---------------------------------------------------------------------------
+
+- id: note-thesis
+  type: note
+  title: I style outfits I will never buy. It's how I figured out what I actually wear.
+  trigger: {kind: none}
+  status: idea
+  source: week plan, 2026-09-13
+  notes: Three sentences, no link. The premise note.
+
+- id: note-shipping-and-duties
+  type: note
+  title: Big US newsletters link to things Europeans can't practically buy
+  angle: Say it out loud. It's the differentiator and it's a strong opinion.
+  trigger: {kind: none}
+  status: idea
+  source: week plan, 2026-09-13
+
+- id: note-survived-the-move
+  type: note
+  title: The one piece that survived the move to Zürich when other things didn't
+  trigger: {kind: none}
+  status: idea
+  source: week plan, 2026-09-13
+
+- id: note-rebuy-question
+  type: note
+  title: What's the one thing in your wardrobe you'd rebuy immediately?
+  trigger: {kind: none}
+  status: idea
+  source: week plan, 2026-09-13
+  notes: Question notes are the cheapest comment generator on the platform.
+
+- id: note-purchase-that-didnt-work
+  type: note
+  title: A purchase that didn't work and what it taught me
+  trigger: {kind: none}
+  status: idea
+  source: week plan, 2026-09-13
+  notes: Confession notes outperform advice notes in this niche.
+
+- id: note-zurich-saturday
+  type: note
+  title: What I'd style for a Zürich autumn Saturday
+  trigger: {kind: none}
+  status: idea
+  source: week plan, 2026-09-13
+  notes: Polly Pocket in miniature.
+
+- id: note-secondhand-anticipation
+  type: note
+  title: Tracking a Vestiaire jumpsuit like it's a person I have a crush on
+  angle: Fast fashion dopamine peaks at checkout and dies at the door. Secondhand is anticipation. Choosing, not acquiring.
+  trigger: {kind: none}
+  status: idea
+  source: Feb 2026
+
+- id: note-minimalism-not-beige
+  type: note
+  title: I'm done pretending minimalism means beige everything
+  trigger: {kind: none}
+  status: idea
+  source: Feb 2026
+
+- id: note-treating-yourself
+  type: note
+  title: Nobody talks about how exhausting it is to unlearn that treating yourself means buying something
+  trigger: {kind: none}
+  status: idea
+  source: Feb 2026
+
+- id: note-five-years-still-love
+  type: note
+  title: Tell me one thing in your closet you've had five years and still love. I'll go first.
+  trigger: {kind: none}
+  status: idea
+  source: Feb 2026
+
+- id: note-suspicious-of-found-their-style
+  type: note
+  title: Why I'm suspicious of anyone who says they found their style
+  trigger: {kind: none}
+  status: idea
+  source: Feb 2026
+  notes: Works as a teaser for a post, too.
+
+- id: note-recommend-two-newsletters
+  type: note
+  title: Two newsletters I actually read, tagged
+  trigger: {kind: none}
+  status: idea
+  source: week plan, 2026-09-13
+  notes: How recommendation swaps start. Repeat monthly with different names.
+
+- id: note-italian-boyfriend
+  type: note
+  title: Everyone should get themselves an Italian boyfriend (a Genoa lunch, one sentence)
+  trigger: {kind: none}
+  status: idea
+  source: plan §2
+  notes: The register that AI can't write. Never delegate these.
+
+# ---------------------------------------------------------------------------
+# RULES that live with the backlog
+# ---------------------------------------------------------------------------
+# - Two notes a day. Never link the newsletter in the first note of the day.
+# - Ten minutes replying on other people's notes — that's where profile clicks come from.
+# - Sustainability is an ethic shown in what you do and don't buy, never a topic led with.
+# - A short "what I actually bought" list is the trusted form of affiliate links.
+# - Milestone posts publish at the moment, not months later. That is what this file is for.
