@@ -524,3 +524,49 @@ class TestWorksheetPrefixes(unittest.TestCase):
         self.assertIs(items["gold hoops"]["near_face"], False)
         self.assertIs(items["rust scarf"]["near_face"], True)
         self.assertNotIn("near_face", items["teal dress"])
+
+
+class TestMonochromePairing(unittest.TestCase):
+    """combinations.md §5 — two chromatic items within ΔE 12 of each other are
+    valid as monochrome, regardless of the generators, when both are in
+    palette."""
+
+    def setUp(self):
+        self.season = palette.get_season("soft_autumn")
+        self.dress = {"id": "teal dress", "hex": "1F5F63", "slot": "dress"}
+        self.top = {"id": "teal top", "hex": "1F5F63", "slot": "top"}
+
+    def _outfit(self, items):
+        return matcher.score_outfits([{"name": "o", "items": items}], self.season, items)["outfits"][0]
+
+    def test_teal_dress_plus_teal_top_is_monochrome_and_still_warned(self):
+        o = self._outfit([self.dress, self.top])
+        self.assertTrue(o["pairing"]["valid"])
+        self.assertTrue(o["passes"])
+        self.assertEqual(o["checks"]["warnings"], ["dress plus separates"])
+        a, b = matcher.score_item(self.dress, self.season), matcher.score_item(self.top, self.season)
+        v = matcher.pair_valid(a, b, [])          # no generated pairs at all: monochrome still holds
+        self.assertEqual((v["kind"], v["valid"], v["generator"]), ("monochrome", True, "monochrome"))
+        self.assertEqual(v["delta_e"], 0.0)
+
+    def test_a_near_neighbour_inside_delta_e_12_is_monochrome(self):
+        petrol = {"id": "petrol top", "hex": "2C5A66", "slot": "top"}   # ΔE ~7 from deep teal
+        v = matcher.pair_valid(matcher.score_item(self.dress, self.season),
+                               matcher.score_item(petrol, self.season), [])
+        self.assertEqual(v["kind"], "monochrome")
+        self.assertLessEqual(v["delta_e"], matcher.MONOCHROME_DE)
+
+    def test_out_of_palette_twins_are_not_monochrome(self):
+        cobalt_a = {"id": "cobalt top", "hex": "0047FF", "slot": "top"}
+        cobalt_b = {"id": "cobalt dress", "hex": "0047FF", "slot": "dress"}
+        v = matcher.pair_valid(matcher.score_item(cobalt_a, self.season),
+                               matcher.score_item(cobalt_b, self.season), [])
+        self.assertEqual(v["kind"], "chromatic+chromatic")   # both are out; the rule needs in-palette
+        self.assertFalse(v["valid"])
+
+    def test_a_far_pair_still_needs_a_generator(self):
+        ochre = {"id": "ochre top", "hex": "C7912B", "slot": "top"}
+        v = matcher.pair_valid(matcher.score_item(self.dress, self.season),
+                               matcher.score_item(ochre, self.season), [])
+        self.assertEqual(v["kind"], "chromatic+chromatic")
+        self.assertFalse(v["valid"])

@@ -87,12 +87,13 @@ These are the pairing rules for an outfit. They run after the slot rules for bla
 
 | Pair | Valid when |
 |---|---|
+| **Chromatic + chromatic, monochrome** | The two are within ΔE 12 of *each other* and both are in palette — valid regardless of the generators. One colour in two garments is a tonal outfit, not a failed pair |
 | **Chromatic + chromatic** | The pair matches a generated pair: each item is within ΔE 12 of one of that pair's two anchors |
 | **Chromatic + neutral** | Both are in palette |
 | **Neutral + neutral** | ΔL* ≥ 15; otherwise flag as **flat** |
 | **Three or more chromatic items** | Every chromatic pair must be valid; otherwise flag as **too many colours** |
 
-An outfit is valid when every pair in it is valid. This is what "works now" (`horizons.md` §3c) and the closet search (`matching.md` §5, source 1) are built from.
+The monochrome test runs first, so a pair that passes it is reported with kind **monochrome** and never reaches the generator test. An outfit is valid when every pair in it is valid. This is what "works now" (`horizons.md` §3c) and the closet search (`matching.md` §5, source 1) are built from.
 
 ## 6. Wada's dictionary as a personal subset
 

@@ -260,6 +260,7 @@ def score_items(items, season):
 # ================================================================ neutrals are the ground (combinations.md §5)
 
 PAIR_MATCH_DE = 12.0      # chromatic + chromatic: each item within ΔE 12 of a generated pair's anchor
+MONOCHROME_DE = 12.0      # chromatic + chromatic: the two within this of each other is monochrome
 NEUTRAL_MIN_DL = 15.0     # neutral + neutral: ΔL* at or above this, else "flat"
 
 
@@ -281,9 +282,16 @@ def _matched_pair(a, b, pairs):
 def pair_valid(a, b, pairs):
     """The outfit pairing rules for two scored items (combinations.md §5).
     Slot rules for black and white have already been applied — the verdicts
-    are on the items. Returns {"valid", "kind", "flag", "pair", "generator"}."""
+    are on the items. Returns {"valid", "kind", "flag", "pair", "generator"},
+    where `kind` is monochrome, chromatic+chromatic, chromatic+neutral or
+    neutral+neutral."""
     na, nb = is_neutral_item(a), is_neutral_item(b)
     if not na and not nb:
+        # monochrome first: one colour in two garments, regardless of the generators
+        de = colour.delta_e_2000(tuple(a["dominant"]["lab"]), tuple(b["dominant"]["lab"]))
+        if de <= MONOCHROME_DE and a["verdict"] == "in" and b["verdict"] == "in":
+            return {"valid": True, "kind": "monochrome", "flag": None,
+                    "pair": None, "generator": "monochrome", "delta_e": round(de, 1)}
         p = _matched_pair(a, b, pairs)
         return {"valid": p is not None, "kind": "chromatic+chromatic",
                 "flag": None if p else "no generated pair",
