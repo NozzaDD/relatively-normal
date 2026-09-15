@@ -52,6 +52,8 @@ Every rule names a colour that exists as an anchor for that season (CLAUDE.md, h
 
 **Accessories carry a `near_face` flag, set at tagging.** Scarves and hats are `true`; belts, jewellery and watches are `false`. The vision model proposes the flag and the user confirms it. When `near_face` is true the accessory is evaluated under the top slot's rules for black and white; when false, under the hardware rules. The flag is stored on the item and is what stage 1 reads.
 
+**The layer slot** (coat, jacket, cardigan) is a face position for the black and white rules — the top column above — only when the outfit has no in-palette accessory with `near_face: true`. When such an accessory is present, the accessory is the face colour and the layer is evaluated as away from the face, under the bottom / shoes / bag column, with `nearest` reported as *black (away from face)*. A scarf sits between the collar and the face. Scored on its own, outside an outfit, a layer is at the face.
+
 Only the `below_waist_or_hardware` row of the black table was specified by the owner; the remaining rows follow the same pattern (the top slot and near-face accessories are the face positions, the rest are not) and are to be confirmed.
 
 ### Stage 2 — avoid list

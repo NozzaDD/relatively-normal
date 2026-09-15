@@ -133,8 +133,11 @@ owner's to overrule:
   Ties break by severity: empty slot, hard miss, out, near, zone gap, too
   casual / too dressy, not enough for rain, tier, contrast.
 - **Layer slot**: counts double in the tier balance like top and bottom (it
-  covers as much body), and is a face position for the black and white slot
-  rules (a coat collar sits at the face).
+  covers as much body). For the black and white slot rules it is a face
+  position (a coat collar sits at the face) unless the outfit has an
+  in-palette accessory with `near_face: true`, in which case the accessory is
+  the face colour and the layer is scored away from the face (`matching.md`
+  §2). Scored alone — the closet-level reading — a layer is at the face.
 - **Zone gaps** are raised only for slots where the closet holds items at all;
   an empty closet slot is already the empty-slot gap. The layer is checked for
   occasions that have a rain outfit, where it is required.

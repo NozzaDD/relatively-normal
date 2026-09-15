@@ -247,3 +247,37 @@ class TestNoraOutfits(unittest.TestCase):
         miss = self.result["short_term"]["missing"]
         self.assertIsNone(miss["anchors"])
         self.assertEqual(miss["note"], horizons.NOT_ENOUGH_ITEMS)
+
+
+class TestLayerYieldsTheFace(unittest.TestCase):
+    """matching.md §2: a layer is a face position unless the outfit has an
+    in-palette near-face accessory — then the accessory is the face colour."""
+
+    def setUp(self):
+        self.season = palette.get_season("soft_autumn")
+        self.coat = {"id": "black coat", "hex": "000000", "slot": "layer"}
+        self.scarf = {"id": "rust scarf", "hex": "A6502F", "slot": "accessory", "near_face": True}
+
+    def test_black_coat_alone_is_out(self):
+        r = matcher.score_item(self.coat, self.season)
+        self.assertEqual((r["verdict"], r["where"]), ("out", "at the face"))
+        o = matcher.score_outfits([{"name": "coat only", "items": [self.coat]}], self.season, [self.coat])["outfits"][0]
+        self.assertEqual(o["slots"]["layer"]["verdict"], "out")
+        self.assertIsNone(o["face_colour"])
+
+    def test_black_coat_with_the_rust_scarf_is_in(self):
+        items = [self.coat, self.scarf]
+        o = matcher.score_outfits([{"name": "coat and scarf", "items": items}], self.season, items)["outfits"][0]
+        layer = o["slots"]["layer"]
+        self.assertEqual(layer["verdict"], "in")
+        self.assertEqual(layer["nearest"], "black (away from face)")
+        self.assertEqual(layer["where"], "away from the face")
+        self.assertEqual(o["face_colour"], "rust scarf")
+        self.assertEqual(o["slots"]["accessory"]["verdict"], "in")
+
+    def test_an_out_of_palette_scarf_does_not_take_the_face(self):
+        cobalt_scarf = {"id": "cobalt scarf", "hex": "0047FF", "slot": "accessory", "near_face": True}
+        items = [self.coat, cobalt_scarf]
+        o = matcher.score_outfits([{"name": "coat and cobalt", "items": items}], self.season, items)["outfits"][0]
+        self.assertEqual(o["slots"]["layer"]["verdict"], "out")
+        self.assertIsNone(o["face_colour"])

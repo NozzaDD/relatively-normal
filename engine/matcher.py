@@ -24,7 +24,8 @@ from .palette import TIERS, TIER_SHARE
 
 SLOTS = ("top", "bottom", "layer", "shoes", "bag", "accessory")
 COVERAGE_SLOTS = ("top", "bottom", "shoes", "bag", "accessory")   # layer is optional, never a coverage gap
-FACE_SLOTS = ("top", "layer")                                     # positions next to the face for the slot rules
+FACE_SLOTS = ("top", "layer")                                     # positions next to the face for the slot rules;
+                                                                  # a layer yields the face to an in-palette near-face accessory
 BODY_WEIGHT = {"top": 2, "bottom": 2, "layer": 2, "shoes": 1, "bag": 1, "accessory": 1}  # §3 tier balance
 
 RULE_TRIGGER_DE = 8.0     # stage 1: item within ΔE 8 of 000000 / FFFFFF
@@ -102,13 +103,18 @@ def extract_colours(pixels, k=3, floor=0.08, alpha_min=200, sample=20000, seed=0
 
 # ================================================================ §2 scoring
 
-def _is_face(slot, near_face):
-    return slot in FACE_SLOTS or (slot == "accessory" and bool(near_face))
+def _is_face(slot, near_face, layer_face=True):
+    """Whether an item sits next to the face for the slot rules. A layer does
+    unless `layer_face` is False — the outfit has an in-palette accessory with
+    near_face true, and a scarf sits between the collar and the face."""
+    if slot == "layer":
+        return layer_face
+    return slot == "top" or (slot == "accessory" and bool(near_face))
 
 
-def _black_rule(season, slot, near_face):
+def _black_rule(season, slot, face):
     """Stage 1 black table. Returns (verdict, nearest, reason)."""
-    rule, face = season.black, _is_face(slot, near_face)
+    rule = season.black
     if rule == "anywhere":
         return "in", "black", None
     if rule == "anywhere_with_warm_partner":
@@ -118,7 +124,7 @@ def _black_rule(season, slot, near_face):
     if rule in ("below_waist_or_hardware", "away_from_face"):
         if face:
             return "out", "black", FACE_REASON
-        if rule == "below_waist_or_hardware":
+        if rule == "below_waist_or_hardware" and slot != "layer":
             where = "below waist" if slot in ("bottom", "shoes") else "hardware"
         else:
             where = "away from face"
@@ -126,9 +132,9 @@ def _black_rule(season, slot, near_face):
     raise ValueError(f"{season.key}: unknown black rule {rule!r}")
 
 
-def _white_rule(season, slot, near_face):
+def _white_rule(season, slot, face):
     """Stage 1 white table. Returns (verdict, nearest, reason)."""
-    rule, face = season.white, _is_face(slot, near_face)
+    rule = season.white
     anchor = season.white_anchor().name
     if rule in ("pure_white", "anywhere"):
         return "in", anchor, None
@@ -168,10 +174,14 @@ def nearest_anchor(lab, season):
     return min(((a, colour.delta_e_2000(lab, a.lab)) for a in season.anchors), key=lambda x: x[1])
 
 
-def score_item(item, season):
+def score_item(item, season, layer_face=True):
     """matching.md §2 — the three-stage evaluation of one item's dominant colour.
     Stage 1 slot rules, then stage 2 avoid list, then stage 3 anchors. The first
-    stage that returns a verdict wins."""
+    stage that returns a verdict wins.
+
+    `layer_face` matters only for the layer slot: True (the default, and the
+    closet-level reading) treats the layer as a face position; `score_outfits`
+    passes False when the outfit has an in-palette near-face accessory."""
     slot = item["slot"]
     if slot not in SLOTS:
         raise ValueError(f"item {item.get('id')!r}: unknown slot {slot!r}")
@@ -179,6 +189,7 @@ def score_item(item, season):
     L, C, h = colour.lab_to_lch(lab)
     rel = colour.relative_chroma(L, C, h)
     near_face = item.get("near_face")
+    face = _is_face(slot, near_face, layer_face)
     result = {"item_id": item.get("id"), "slot": slot,
               "near_face": near_face if slot == "accessory" else None,
               "dressiness": item.get("dressiness"), "weight": item.get("weight"),
@@ -196,12 +207,12 @@ def score_item(item, season):
     for rule_hex, rule_fn in (("000000", _black_rule), ("FFFFFF", _white_rule)):
         de = colour.delta_e_2000(lab, colour.hex_to_lab(rule_hex))
         if de <= RULE_TRIGGER_DE:
-            verdict, nearest, reason = rule_fn(season, slot, near_face)
+            verdict, nearest, reason = rule_fn(season, slot, face)
             base = nearest.split(" (")[0]
             named = season.find(base)
             result.update(verdict=verdict, nearest=nearest, delta_e=round(de, 1), stage=1,
                           reason=reason, tier=named.tier if named else None,
-                          where="at the face" if _is_face(slot, near_face) else "away from the face")
+                          where="at the face" if face else "away from the face")
             if verdict == "in":
                 # admitted here: the rule colour itself is the nearest admitted anchor
                 result.update(admitted_nearest=nearest, admitted_delta_e=round(de, 1))
@@ -552,11 +563,19 @@ def score_outfits(specs, season, closet_items, pairs=None):
     outfits = []
     for spec in specs:
         scored = [by_id[i["id"]] if i.get("id") in by_id else score_item(i, season) for i in spec["items"]]
+        # the layer yields the face to an in-palette near-face accessory (§2):
+        # the accessory is the face colour, so the layer is re-scored away from it
+        face_colour = next((r["item_id"] for r in scored
+                            if r["slot"] == "accessory" and r["near_face"] and r["verdict"] == "in"), None)
+        if face_colour:
+            scored = [score_item(i, season, layer_face=False) if i["slot"] == "layer" else r
+                      for i, r in zip(spec["items"], scored)]
         checks = outfit_checks(scored, season, spec.get("dress_code"), spec.get("weather"))
         pairing = outfit_valid(scored, pairs)
         passes = pairing["valid"] and not checks["zone"]["flags"] and not checks["weather"]["flag"]
         outfits.append({"name": spec.get("name"), "occasion": spec.get("occasion"),
                         "dress_code": spec.get("dress_code"), "weather": spec.get("weather"),
+                        "face_colour": face_colour,
                         "slots": _by_slot(scored), "checks": checks,
                         "pairing": {"valid": pairing["valid"], "flags": pairing["flags"]},
                         "passes": passes, "gaps": find_gaps(scored, checks)})
