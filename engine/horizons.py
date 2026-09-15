@@ -130,11 +130,14 @@ def works_now_generated(closet_scored, gen_lists, limit=None):
     by_slot = {s: [r for r in ok if r["slot"] == s] for s in matcher.SLOTS}
     pairs = [p for lst in gen_lists.values() for p in lst]
     outfits = []
-    for top, bottom in product(by_slot["top"], by_slot["bottom"]):
-        core = matcher.pair_valid(top, bottom, pairs)
+    cores = [((top, bottom), matcher.pair_valid(top, bottom, pairs))
+             for top, bottom in product(by_slot["top"], by_slot["bottom"])]
+    cores += [((dress,), {"valid": True, "kind": "dress", "generator": None, "pair": None})
+              for dress in by_slot["dress"]]
+    for core_items, core in cores:
         if not core["valid"]:
             continue
-        items = [top, bottom]
+        items = list(core_items)
         for slot in ("layer", "shoes", "bag", "accessory"):
             for cand in by_slot[slot]:
                 if matcher.outfit_valid(items + [cand], pairs)["valid"]:
@@ -142,7 +145,7 @@ def works_now_generated(closet_scored, gen_lists, limit=None):
                     break
         check = matcher.outfit_valid(items, pairs)
         outfits.append({"name": None, "occasion": None, "items": [r["item_id"] for r in items],
-                        "core_pair": [top["item_id"], bottom["item_id"]],
+                        "core_pair": [r["item_id"] for r in core_items],
                         "pairing": core["kind"], "generator": core["generator"],
                         "matched_pair": core["pair"], "flags": check["flags"],
                         "closeness_to_named": round(_closeness_to_named(items), 1)})

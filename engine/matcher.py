@@ -22,11 +22,13 @@ import random
 from . import colour, generators
 from .palette import TIERS, TIER_SHARE
 
-SLOTS = ("top", "bottom", "layer", "shoes", "bag", "accessory")
-COVERAGE_SLOTS = ("top", "bottom", "shoes", "bag", "accessory")   # layer is optional, never a coverage gap
-FACE_SLOTS = ("top", "layer")                                     # positions next to the face for the slot rules;
-                                                                  # a layer yields the face to an in-palette near-face accessory
-BODY_WEIGHT = {"top": 2, "bottom": 2, "layer": 2, "shoes": 1, "bag": 1, "accessory": 1}  # §3 tier balance
+SLOTS = ("top", "bottom", "dress", "layer", "shoes", "bag", "accessory")
+COVERAGE_SLOTS = ("top", "bottom", "shoes", "bag", "accessory")   # layer is optional, never a coverage gap;
+                                                                  # a dress fills top and bottom together
+FACE_SLOTS = ("top", "dress", "layer")                            # positions next to the face for the slot rules;
+                                                                  # a layer or a dress yields the face to an in-palette near-face accessory
+YIELDING_SLOTS = ("layer", "dress")
+BODY_WEIGHT = {"top": 2, "bottom": 2, "dress": 4, "layer": 2, "shoes": 1, "bag": 1, "accessory": 1}  # §3 tier balance
 
 RULE_TRIGGER_DE = 8.0     # stage 1: item within ΔE 8 of 000000 / FFFFFF
 HARD_MISS_DE = 8.0        # stage 2: ΔE to an avoid colour
@@ -50,7 +52,7 @@ FACE_REASON = "black works on you, just not next to your face"
 GAP_SEVERITY = {"empty_slot": 0, "hard_miss": 1, "out": 2, "near": 3, "context_gap": 4, "zone_gap": 5,
                 "not_corporate": 6, "too_casual": 6, "too_dressy": 6, "not_enough_for_rain": 7,
                 "tier_imbalance": 8, "contrast_mismatch": 9}
-FACE_VISIBLE = {"home": ("top", "layer", "accessory"), "office": SLOTS}   # §3 context check
+FACE_VISIBLE = {"home": ("top", "dress", "layer", "accessory"), "office": SLOTS}   # §3 context check
 FORMALITIES = ("corporate", "casual")
 SETTINGS = ("office", "home")
 
@@ -109,10 +111,11 @@ def extract_colours(pixels, k=3, floor=0.08, alpha_min=200, sample=20000, seed=0
 # ================================================================ §2 scoring
 
 def _is_face(slot, near_face, layer_face=True):
-    """Whether an item sits next to the face for the slot rules. A layer does
-    unless `layer_face` is False — the outfit has an in-palette accessory with
-    near_face true, and a scarf sits between the collar and the face."""
-    if slot == "layer":
+    """Whether an item sits next to the face for the slot rules. A layer or a
+    dress does unless `layer_face` is False — the outfit has an in-palette
+    accessory with near_face true, and a scarf sits between the collar (or the
+    neckline) and the face."""
+    if slot in YIELDING_SLOTS:
         return layer_face
     return slot == "top" or (slot == "accessory" and bool(near_face))
 
@@ -129,7 +132,7 @@ def _black_rule(season, slot, face):
     if rule in ("below_waist_or_hardware", "away_from_face"):
         if face:
             return "out", "black", FACE_REASON
-        if rule == "below_waist_or_hardware" and slot != "layer":
+        if rule == "below_waist_or_hardware" and slot not in YIELDING_SLOTS:
             where = "below waist" if slot in ("bottom", "shoes") else "hardware"
         else:
             where = "away from face"
@@ -184,8 +187,8 @@ def score_item(item, season, layer_face=True):
     Stage 1 slot rules, then stage 2 avoid list, then stage 3 anchors. The first
     stage that returns a verdict wins.
 
-    `layer_face` matters only for the layer slot: True (the default, and the
-    closet-level reading) treats the layer as a face position; `score_outfits`
+    `layer_face` matters only for the layer and dress slots: True (the default,
+    and the closet-level reading) treats them as face positions; `score_outfits`
     passes False when the outfit has an in-palette near-face accessory."""
     slot = item["slot"]
     if slot not in SLOTS:
@@ -385,8 +388,12 @@ def outfit_checks(scored, season, dress_code=None, weather=None, formality=None,
     by_slot = _by_slot(scored)
     filled = [r for r in by_slot.values() if r]
 
-    # coverage — the five body slots; layer is optional
-    missing = [s for s in COVERAGE_SLOTS if by_slot[s] is None]
+    # coverage — the five body slots; layer is optional; a dress fills top and bottom
+    missing = [s for s in COVERAGE_SLOTS if by_slot[s] is None
+               and not (s in ("top", "bottom") and by_slot["dress"] is not None)]
+    warnings = []
+    if by_slot["dress"] is not None and (by_slot["top"] is not None or by_slot["bottom"] is not None):
+        warnings.append("dress plus separates")
 
     # palette share
     palette = {"in": 0, "near": 0, "out": 0, "hard_miss": 0}
@@ -422,6 +429,7 @@ def outfit_checks(scored, season, dress_code=None, weather=None, formality=None,
             warm_flag = "black needs a warm-tier partner in this outfit"
 
     return {"coverage": {"missing": missing},
+            "warnings": warnings,
             "palette": palette,
             "tier_mix": {"foundation": mix["foundations"], "supporting": mix["supporting"],
                          "accent": mix["accents"], "flag": tier_flag},
@@ -480,7 +488,7 @@ def zone_gaps(closet_scored, outfits):
             continue
         seen.add((occ, dc))
         same = [x for x in outfits if x.get("occasion") == occ and x.get("dress_code") == dc]
-        slots = list(COVERAGE_SLOTS) + (["layer"] if any(x.get("weather") == "rain" for x in same) else [])
+        slots = list(COVERAGE_SLOTS) + ["dress"] + (["layer"] if any(x.get("weather") == "rain" for x in same) else [])
         for slot in slots:
             in_slot = [r for r in closet_scored if r["slot"] == slot]
             if not in_slot:
@@ -630,12 +638,12 @@ def score_outfits(specs, season, closet_items, pairs=None):
     outfits = []
     for spec in specs:
         scored = [by_id[i["id"]] if i.get("id") in by_id else score_item(i, season) for i in spec["items"]]
-        # the layer yields the face to an in-palette near-face accessory (§2):
-        # the accessory is the face colour, so the layer is re-scored away from it
+        # a layer or a dress yields the face to an in-palette near-face accessory (§2):
+        # the accessory is the face colour, so they are re-scored away from it
         face_colour = next((r["item_id"] for r in scored
                             if r["slot"] == "accessory" and r["near_face"] and r["verdict"] == "in"), None)
         if face_colour:
-            scored = [score_item(i, season, layer_face=False) if i["slot"] == "layer" else r
+            scored = [score_item(i, season, layer_face=False) if i["slot"] in YIELDING_SLOTS else r
                       for i, r in zip(spec["items"], scored)]
         formality = spec.get("formality") or "casual"
         setting = spec.get("setting") or "office"

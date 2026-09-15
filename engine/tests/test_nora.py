@@ -310,8 +310,8 @@ class TestPhotoIntake(unittest.TestCase):
             for x in range(70, 230):
                 cut.putpixel((x, y), cls.TEAL + (255,))
         cut.save(folder / "accessory_deep-teal-cutout.png")
-        # c) an unknown slot prefix
-        im.save(folder / "hat_deep-teal.png")
+        # c) an unknown slot prefix (hat_ is a worksheet category now, so not that)
+        im.save(folder / "cardigan_deep-teal.png")
         from engine import intake
         cls.out = intake.run_folder(folder)
         cls.by_file = {it["file"]: it for it in cls.out["items"]}
@@ -343,9 +343,9 @@ class TestPhotoIntake(unittest.TestCase):
         self.assertEqual((it["slot"], it["name"]), ("top", "deep teal knit"))
 
     def test_unknown_slot_is_a_warning_not_a_guess(self):
-        it = self.by_file["hat_deep-teal.png"]
+        it = self.by_file["cardigan_deep-teal.png"]
         self.assertIsNone(it["slot"])
-        self.assertTrue(any("hat_deep-teal.png" in w for w in self.out["warnings"]))
+        self.assertTrue(any("cardigan_deep-teal.png" in w for w in self.out["warnings"]))
 
     def test_csv_and_contact_sheet_are_written(self):
         import csv as _csv
@@ -356,7 +356,7 @@ class TestPhotoIntake(unittest.TestCase):
         by_name = {r["name"]: r for r in rows}
         self.assertEqual(by_name["deep teal knit"]["slot"], "top")
         self.assertEqual(by_name["deep teal knit"]["dressiness"], "")
-        self.assertEqual(by_name["deep teal"]["slot"], "")   # the hat: slot left blank
+        self.assertEqual(by_name["deep teal"]["slot"], "")   # the cardigan: slot left blank
         self.assertTrue(Path(self.out["sheet"]).read_text().count("<img") == 4)
 
 
@@ -414,7 +414,7 @@ class TestCorporateContext(unittest.TestCase):
     def test_corporate_at_home_checks_only_what_the_camera_sees(self):
         o = self.by_name["video call"]
         ctx = o["checks"]["context"]
-        self.assertEqual(ctx["face_visible"], ["top", "layer", "accessory"])
+        self.assertEqual(ctx["face_visible"], ["top", "dress", "layer", "accessory"])
         flags = {(f["item_id"], f["flag"]) for f in ctx["flags"]}
         self.assertEqual(flags, {("rust scarf", "not corporate")})   # the trousers are below the camera
         self.assertFalse(o["passes"])
@@ -431,3 +431,96 @@ class TestCorporateContext(unittest.TestCase):
         types = [g["type"] for g in self.result["gaps_ranked"] if g["unlocks"] == 1]
         self.assertLess(types.index("context_gap"), types.index("zone_gap"))
         self.assertLess(matcher.GAP_SEVERITY["context_gap"], matcher.GAP_SEVERITY["zone_gap"])
+
+
+class TestDressSlot(unittest.TestCase):
+    """The dress slot: coverage, the separates warning, and the face rules."""
+
+    def setUp(self):
+        self.season = palette.get_season("soft_autumn")
+        self.dress = {"id": "black dress", "hex": "000000", "slot": "dress"}
+        self.teal = {"id": "deep teal knit", "hex": "1F5F63", "slot": "top"}
+        self.scarf = {"id": "rust scarf", "hex": "A6502F", "slot": "accessory", "near_face": True}
+
+    def _outfit(self, items, name="o"):
+        return matcher.score_outfits([{"name": name, "items": items}], self.season, items)["outfits"][0]
+
+    def test_a_dress_alone_completes_top_and_bottom(self):
+        o = self._outfit([self.dress])
+        self.assertEqual(o["checks"]["coverage"]["missing"], ["shoes", "bag", "accessory"])
+        self.assertEqual(o["checks"]["warnings"], [])
+        self.assertIn("dress", matcher.SLOTS)
+        self.assertEqual(matcher.BODY_WEIGHT["dress"], 4)
+
+    def test_a_dress_with_a_top_is_warned_not_failed(self):
+        teal_dress = {"id": "teal dress", "hex": "1F5F63", "slot": "dress"}
+        stone_top = {"id": "stone tee", "hex": "D6CEC2", "slot": "top"}   # a neutral, so the pair is valid
+        o = self._outfit([teal_dress, stone_top])
+        self.assertEqual(o["checks"]["warnings"], ["dress plus separates"])
+        self.assertNotIn("top", o["checks"]["coverage"]["missing"])
+        self.assertTrue(o["pairing"]["valid"])
+        self.assertTrue(o["passes"])
+        self.assertFalse(any(g["type"] == "dress_plus_separates" for g in o["gaps"]))
+
+    def test_black_dress_alone_is_out(self):
+        r = matcher.score_item(self.dress, self.season)
+        self.assertEqual((r["verdict"], r["where"]), ("out", "at the face"))
+        o = self._outfit([self.dress])
+        self.assertEqual(o["slots"]["dress"]["verdict"], "out")
+
+    def test_black_dress_with_the_rust_scarf_is_in(self):
+        o = self._outfit([self.dress, self.scarf])
+        d = o["slots"]["dress"]
+        self.assertEqual((d["verdict"], d["nearest"], d["where"]), ("in", "black (away from face)", "away from the face"))
+        self.assertEqual(o["face_colour"], "rust scarf")
+        self.assertEqual(o["checks"]["coverage"]["missing"], ["shoes", "bag"])
+
+
+class TestWorksheetPrefixes(unittest.TestCase):
+    """jewellery_ -> accessory with near_face false; scarf_ and hat_ -> true;
+    dress_ -> the dress slot."""
+
+    @classmethod
+    def setUpClass(cls):
+        import tempfile
+        from PIL import Image
+        from engine import intake
+        cls.tmp = tempfile.TemporaryDirectory()
+        folder = Path(cls.tmp.name)
+        for name in ("jewellery_gold-hoops.png", "scarf_rust-scarf.png", "hat_camel-beret.png", "dress_teal-dress.png"):
+            im = Image.new("RGBA", (120, 120), (0, 0, 0, 0))
+            for y in range(20, 100):
+                for x in range(20, 100):
+                    im.putpixel((x, y), (0xA6, 0x50, 0x2F, 255))
+            im.save(folder / name)
+        cls.out = intake.run_folder(folder)
+        cls.by_file = {it["file"]: it for it in cls.out["items"]}
+        import csv
+        with open(cls.out["csv"], newline="") as fh:
+            cls.rows = {r["name"]: r for r in csv.DictReader(fh)}
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.tmp.cleanup()
+
+    def test_jewellery_is_hardware(self):
+        it = self.by_file["jewellery_gold-hoops.png"]
+        self.assertEqual((it["slot"], it["near_face"]), ("accessory", False))
+        self.assertEqual(self.rows["gold hoops"]["near_face"], "false")
+
+    def test_scarf_and_hat_are_near_face(self):
+        for f in ("scarf_rust-scarf.png", "hat_camel-beret.png"):
+            with self.subTest(file=f):
+                self.assertEqual((self.by_file[f]["slot"], self.by_file[f]["near_face"]), ("accessory", True))
+        self.assertEqual(self.rows["rust scarf"]["near_face"], "true")
+
+    def test_dress_prefix(self):
+        self.assertEqual((self.by_file["dress_teal-dress.png"]["slot"], self.by_file["dress_teal-dress.png"]["near_face"]), ("dress", None))
+        self.assertEqual(self.out["warnings"], [])
+
+    def test_loader_reads_the_written_flags(self):
+        from engine import run
+        items = {i["id"]: i for i in run.load_items(self.out["csv"])}
+        self.assertIs(items["gold hoops"]["near_face"], False)
+        self.assertIs(items["rust scarf"]["near_face"], True)
+        self.assertNotIn("near_face", items["teal dress"])

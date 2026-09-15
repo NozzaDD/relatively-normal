@@ -52,7 +52,7 @@ Every rule names a colour that exists as an anchor for that season (CLAUDE.md, h
 
 **Accessories carry a `near_face` flag, set at tagging.** Scarves and hats are `true`; belts, jewellery and watches are `false`. The vision model proposes the flag and the user confirms it. When `near_face` is true the accessory is evaluated under the top slot's rules for black and white; when false, under the hardware rules. The flag is stored on the item and is what stage 1 reads.
 
-**The layer slot** (coat, jacket, cardigan) is a face position for the black and white rules — the top column above — only when the outfit has no in-palette accessory with `near_face: true`. When such an accessory is present, the accessory is the face colour and the layer is evaluated as away from the face, under the bottom / shoes / bag column, with `nearest` reported as *black (away from face)*. A scarf sits between the collar and the face. Scored on its own, outside an outfit, a layer is at the face.
+**The layer slot** (coat, jacket, cardigan) and **the dress slot** are face positions for the black and white rules — the top column above — only when the outfit has no in-palette accessory with `near_face: true`. When such an accessory is present, the accessory is the face colour and the layer or dress is evaluated as away from the face, under the bottom / shoes / bag column, with `nearest` reported as *black (away from face)*. A scarf sits between the collar, or the neckline, and the face. Scored on its own, outside an outfit, a layer or a dress is at the face.
 
 Only the `below_waist_or_hardware` row of the black table was specified by the owner; the remaining rows follow the same pattern (the top slot and near-face accessories are the face positions, the rest are not) and are to be confirmed.
 
@@ -82,7 +82,7 @@ An item's verdict is its dominant colour's verdict, with secondary colours repor
 
 ## 3. Score the outfit
 
-Items sit in six slots: **top, bottom, layer, shoes, bag, accessory**. The layer (coat, jacket, cardigan — anything worn over the top) is optional and is never a coverage gap. Every item also carries two attributes set at tagging: **dressiness** (1–4, casual to dressy) and **weight** (1–4, light to heavy — thermal warmth, not colour temperature). Outfits carry an **occasion**, a **dress code** (1–5) and **weather** (clear or rain).
+Items sit in seven slots: **top, bottom, dress, layer, shoes, bag, accessory**. A **dress** fills both the top and the bottom coverage requirement — an outfit with a dress and no top or bottom is complete — and counts as four in the tier balance, since it covers what top and bottom would together. A dress alongside a top or a bottom is warned as *dress plus separates*; a warning, not a failure. The layer (coat, jacket, cardigan — anything worn over the top) is optional and is never a coverage gap. Every item also carries two attributes set at tagging: **dressiness** (1–4, casual to dressy) and **weight** (1–4, light to heavy — thermal warmth, not colour temperature). Outfits carry an **occasion**, a **dress code** (1–5) and **weather** (clear or rain).
 
 These checks run on the set:
 
@@ -98,7 +98,7 @@ These checks run on the set:
 
 **Weather fit.** If the weather is rain, the layer slot is required and the outfit's heaviest item must have weight ≥ 3; otherwise flag *not enough for rain*. In clear weather the layer is optional.
 
-**Context fit.** Outfits carry a **formality** (corporate or casual; casual when blank) and a **setting** (office or home; office when blank). When formality is corporate, every item in a *face-visible* slot must be in the season's `corporate` list in `seasons.yaml` — in palette, and admitted against an anchor on that list — else flag *not corporate*, naming the item. Face-visible slots are top, layer and accessory when the setting is home (what the camera sees); every slot when the setting is office.
+**Context fit.** Outfits carry a **formality** (corporate or casual; casual when blank) and a **setting** (office or home; office when blank). When formality is corporate, every item in a *face-visible* slot must be in the season's `corporate` list in `seasons.yaml` — in palette, and admitted against an anchor on that list — else flag *not corporate*, naming the item. Face-visible slots are top, dress, layer and accessory when the setting is home (what the camera sees); every slot when the setting is office.
 
 An outfit *works now* (`horizons.md` §3c) when it passes the pairing rules in `combinations.md` §5 and the zone, weather and context checks.
 
@@ -192,6 +192,7 @@ What the matcher returns for an outfit, and what the recommendation step consume
   "slots": {
     "top":       {"item_id": "…", "dominant": {"hex": "1F5F63", "lab": [36, -14, -8]}, "verdict": "in", "nearest": "deep teal", "delta_e": 4.1},
     "bottom":    null,
+    "dress":     null,
     "shoes":     {"item_id": "…", "dominant": {"hex": "000000", "lab": [0, 0, 0]}, "verdict": "in", "nearest": "black (below waist)", "delta_e": 0},
     "bag":       {"item_id": "…", "dominant": {"hex": "7B4F2E", "lab": [38, 15, 24]}, "verdict": "near", "nearest": "chocolate", "delta_e": 15.2},
     "layer":     null,
@@ -200,6 +201,7 @@ What the matcher returns for an outfit, and what the recommendation step consume
   "occasion": "work", "dress_code": 3, "weather": "clear", "formality": "corporate", "setting": "office",
   "checks": {
     "coverage":   {"missing": ["bottom", "accessory"]},
+    "warnings":   [],
     "palette":    {"in": 2, "near": 1, "out": 0, "hard_miss": 0},
     "tier_mix":   {"foundation": 0.67, "supporting": 0.33, "accent": 0.0, "flag": null},
     "contrast":   {"lightness_range": 36, "season_target": "low", "flag": null},

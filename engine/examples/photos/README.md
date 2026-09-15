@@ -22,11 +22,19 @@ spaces.
 | `top_deep-teal-knit.jpg` | top | deep teal knit |
 | `bottom_black-trousers.png` | bottom | black trousers |
 | `layer_camel-coat.jpg` | layer | camel coat |
-| `accessory_rust-scarf.png` | accessory | rust scarf |
+| `dress_navy-shirt-dress.jpg` | dress | navy shirt dress |
+| `scarf_rust-scarf.png` | accessory, near_face true | rust scarf |
+| `hat_camel-beret.jpg` | accessory, near_face true | camel beret |
+| `jewellery_gold-hoops.png` | accessory, near_face false | gold hoops |
 
-Slots are `top`, `bottom`, `layer`, `shoes`, `bag`, `accessory`. A file whose
-prefix is not one of those still gets its colour extracted, but its slot is
-left blank in the CSV and it is listed in the warnings — nothing is guessed.
+Slots are `top`, `bottom`, `dress`, `layer`, `shoes`, `bag`, `accessory`. The
+worksheet's four accessory categories map onto them: **shoes** → `shoes_`,
+**bags** → `bag_`, **jewellery** → `jewellery_` (an accessory with
+`near_face` false), **scarves and hats** → `scarf_` or `hat_` (an accessory
+with `near_face` true). Intake writes the flag into the CSV from the prefix,
+so it never has to be typed. A file whose prefix is none of these still gets
+its colour extracted, but its slot is left blank in the CSV and it is listed
+in the warnings — nothing is guessed.
 
 ## Photographing
 

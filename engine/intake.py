@@ -34,17 +34,28 @@ CSV_HEADER = ["name", "slot", "hex", "dressiness", "weight", "near_face", "notes
 
 # ---------------------------------------------------------------- filenames
 
+# The worksheet's accessory categories, mapped to slots and the near_face flag.
+PREFIX_MAP = {"jewellery": ("accessory", False), "jewelry": ("accessory", False),
+              "scarf": ("accessory", True), "hat": ("accessory", True)}
+
+
 def parse_filename(path):
-    """`slot_item-name.ext` -> (slot or None, name). The slot is None when the
-    prefix is not one of the six slots; the name is still derived."""
+    """`slot_item-name.ext` -> (slot or None, name, near_face or None). The
+    prefix is one of the seven slots, or a worksheet category: `jewellery_`
+    is an accessory with near_face false, `scarf_` and `hat_` an accessory
+    with near_face true. Any other prefix gives slot None; the name is still
+    derived."""
     stem = Path(path).stem
     if "_" in stem:
         prefix, rest = stem.split("_", 1)
     else:
         prefix, rest = "", stem
     name = rest.replace("-", " ").replace("_", " ").strip()
-    slot = prefix.lower() if prefix.lower() in SLOTS else None
-    return slot, name
+    prefix = prefix.lower()
+    if prefix in PREFIX_MAP:
+        slot, near_face = PREFIX_MAP[prefix]
+        return slot, name, near_face
+    return (prefix if prefix in SLOTS else None), name, None
 
 
 # ---------------------------------------------------------------- pixels
@@ -101,7 +112,7 @@ def extract_item(path):
     """One photo -> {"file", "slot", "name", "hex", "share", "mode",
     "background", "pixels_used", "colours", "warnings"}."""
     path = Path(path)
-    slot, name = parse_filename(path)
+    slot, name, near_face = parse_filename(path)
     warnings = []
     if slot is None:
         warnings.append(f"{path.name}: slot not recognised from the filename prefix "
@@ -112,7 +123,7 @@ def extract_item(path):
     if not colours:
         warnings.append(f"{path.name}: no garment pixels found after removing the background")
     dominant = colours[0] if colours else None
-    return {"file": path.name, "slot": slot, "name": name,
+    return {"file": path.name, "slot": slot, "name": name, "near_face": near_face,
             "hex": dominant["hex"] if dominant else None,
             "share": round(dominant["share"], 3) if dominant else None,
             "mode": "alpha" if has_alpha else "background",
@@ -143,7 +154,8 @@ def run_folder(folder, csv_path=None, sheet_path=None):
         w.writerow(CSV_HEADER)
         for it in items:
             note = "" if it["slot"] else "slot not recognised from filename — fill in"
-            w.writerow([it["name"], it["slot"] or "", it["hex"] or "", "", "", "", note])
+            nf = "" if it["near_face"] is None else ("true" if it["near_face"] else "false")
+            w.writerow([it["name"], it["slot"] or "", it["hex"] or "", "", "", nf, note])
     sheet_path.write_text(contact_sheet(items, folder), encoding="utf-8")
     return {"items": items, "warnings": warnings, "csv": str(csv_path), "sheet": str(sheet_path)}
 
@@ -164,7 +176,8 @@ def contact_sheet(items, folder):
         cards.append(
             f'<div class="card"><img src="{e(it["file"])}" alt="{e(it["file"])}">'
             f'<div class="side">{sw}<div class="hex">{e(it["hex"] or "—")}</div>'
-            f'<div class="meta"><b>{e(it["name"])}</b><br>{e(it["slot"] or "slot?")} · {e(it["file"])}<br>'
+            f'<div class="meta"><b>{e(it["name"])}</b><br>{e(it["slot"] or "slot?")}'
+            f'{(" · near face" if it["near_face"] else " · hardware") if it["near_face"] is not None else ""} · {e(it["file"])}<br>'
             f'{e(it["mode"])}{bg} · {it["pixels_used"]} px · share {e(it["share"])}</div>'
             f'<div>{others}</div>{warn}</div></div>')
     return f"""<!doctype html>

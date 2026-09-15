@@ -19,7 +19,7 @@ import html
 import json
 
 TIERS = ("foundations", "supporting", "accents")
-SLOTS = ("top", "bottom", "layer", "shoes", "bag", "accessory")
+SLOTS = ("top", "bottom", "dress", "layer", "shoes", "bag", "accessory")
 
 # horizons.md §3b, quoted; keyed by the `reading` the engine reports.
 DISTANCE_READINGS = {
@@ -201,12 +201,13 @@ def _outfit_block(o):
          f'<span class="sub">{_e(_attrs(s))}{_e(s["nearest"])} · ΔE {_e(s["delta_e"])}'
          f'{(" · " + _e(s["reason"])) if s.get("reason") else ""}</span></div>')
         if s else f'<div class="slot"><div class="c empty"></div><b>{_e(slot)}</b><br><span class="sub">empty'
-                  f'{" (optional)" if slot == "layer" else ""}</span></div>'
+                  f'{" (optional)" if slot in ("layer", "dress") else ""}</span></div>'
         for slot, s in ((k, o["slots"][k]) for k in SLOTS))
     c = o["checks"]
     tm = c["tier_mix"]
     rows = [
-        ("coverage", "missing: " + (", ".join(c["coverage"]["missing"]) or "none")),
+        ("coverage", "missing: " + (", ".join(c["coverage"]["missing"]) or "none")
+                     + (f' · <span class="flag">{_e(", ".join(c["warnings"]))}</span>' if c.get("warnings") else "")),
         ("palette", ", ".join(f'{k.replace("_", " ")} {v}' for k, v in c["palette"].items())),
         ("tier mix", f'foundation {tm["foundation"]} · supporting {tm["supporting"]} · accent {tm["accent"]}'
                      + (f' · <span class="flag">{_e(tm["flag"])}</span>' if tm["flag"] else "")),

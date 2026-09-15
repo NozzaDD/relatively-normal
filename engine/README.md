@@ -86,8 +86,9 @@ horizons.result("soft_autumn", "teal_ochre", items,
 {"id": "…", "hex": "1F5F63", "slot": "top", "near_face": True, "share": 1.0}
 ```
 
-- `slot`: `top` | `bottom` | `layer` | `shoes` | `bag` | `accessory` — the layer
-  is optional and never a coverage gap
+- `slot`: `top` | `bottom` | `dress` | `layer` | `shoes` | `bag` | `accessory` —
+  the layer is optional and never a coverage gap; a dress fills top and bottom
+  together and counts as four in the tier balance
 - `dressiness` 1–4 (casual to dressy) and `weight` 1–4 (light to heavy, thermal)
   — read by the zone and weather checks; absent on YAML items unless given
 - `near_face`: read for the accessory slot only. Scarves and hats `True`; belts,
@@ -134,12 +135,14 @@ owner's to overrule:
   repair; without saved outfits there is one outfit, so every gap unlocks 1.
   Ties break by severity: empty slot, hard miss, out, near, zone gap, too
   casual / too dressy, not enough for rain, tier, contrast.
-- **Layer slot**: counts double in the tier balance like top and bottom (it
-  covers as much body). For the black and white slot rules it is a face
-  position (a coat collar sits at the face) unless the outfit has an
-  in-palette accessory with `near_face: true`, in which case the accessory is
-  the face colour and the layer is scored away from the face (`matching.md`
-  §2). Scored alone — the closet-level reading — a layer is at the face.
+- **Layer and dress slots**: the layer counts double in the tier balance like
+  top and bottom, the dress four. For the black and white slot rules both are
+  face positions (a collar or a neckline sits at the face) unless the outfit
+  has an in-palette accessory with `near_face: true`, in which case the
+  accessory is the face colour and they are scored away from the face
+  (`matching.md` §2). Scored alone — the closet-level reading — both are at the
+  face. A dress with a top or bottom raises the *dress plus separates* warning
+  in `checks.warnings`; it does not affect `passes`.
 - **Zone gaps** are raised only for slots where the closet holds items at all;
   an empty closet slot is already the empty-slot gap. The layer is checked for
   occasions that have a rain outfit, where it is required.
