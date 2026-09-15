@@ -25,7 +25,9 @@ ITEM_SLOTS = {
 }
 
 # The three ranked lists over Soft Autumn as reported on 2026-09-14, after the
-# Muted generator was added: (dominant, counter, hue gap, ΔL*, Δ relative chroma).
+# Muted generator was added, less the one pair that involved a neutral (warm mid
+# grey, relative chroma 0.115, no longer enters the generators — combinations.md
+# §5): (dominant, counter, hue gap, ΔL*, Δ relative chroma).
 EXPECTED_OPPOSITION = [
     ("petrol", "salmon", 178.1, 31.0, 0.19),
     ("petrol", "cinnamon", 169.3, 16.5, 0.10),
@@ -42,7 +44,6 @@ EXPECTED_OPPOSITION = [
 ]
 EXPECTED_TONAL = [
     ("dark olive", "sage", 4.8, 30.6, 0.20),
-    ("warm mid grey", "cream", 8.8, 36.4, 0.17),
     ("camel", "cream", 9.7, 26.3, 0.13),
     ("warm taupe", "cream", 11.5, 28.8, 0.05),
     ("chocolate", "warm taupe", 14.9, 38.0, 0.13),

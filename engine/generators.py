@@ -80,14 +80,42 @@ class Pair:
                 "split": "60-70 / 30-40" if not self.bridge else "50 / 30 / 20"}
 
 
+def is_tonal_pair(a, b):
+    """Two anchors form a valid Tonal pair: hue gap <= 40°, Δ relative chroma
+    <= 0.20, ΔL* >= 25 — the Tonal generator's own test."""
+    name, _ = test_pair(a.L, a.h, a.rel, b.L, b.h, b.rel)
+    return name == "tonal"
+
+
+def lightness_gap(a, dominant, counter):
+    """A bridge's lightness gap to the pair: its distance to the nearer of the
+    two, so a large gap means it is clearly separated from both."""
+    return min(abs(a.L - dominant.L), abs(a.L - counter.L))
+
+
+def bridge_candidates(dominant, counter, anchors):
+    """§3.6 — every anchor that adds no third voice: a neutral (§5), or a
+    chromatic anchor that forms a valid Tonal pair with the dominant or the
+    counter. Any tier, any lightness. Returns [(Anchor, 'neutral' | 'tonal')]."""
+    out = []
+    for a in anchors:
+        if a.name in (dominant.name, counter.name):
+            continue
+        if is_neutral(a.rel):
+            out.append((a, "neutral"))
+        elif is_tonal_pair(a, dominant) or is_tonal_pair(a, counter):
+            out.append((a, "tonal"))
+    return out
+
+
 def _bridge(dominant, counter, anchors):
-    """§3.6 — a foundation-tier neutral (relative chroma <= 0.15, §5) whose L*
-    sits strictly between the two. Where several qualify, the lowest relative
-    chroma is taken."""
-    lo, hi = sorted((dominant.L, counter.L))
-    candidates = [a for a in anchors if a.tier == "foundations" and is_neutral(a.rel)
-                  and lo < a.L < hi and a.name not in (dominant.name, counter.name)]
-    return min(candidates, key=lambda a: a.rel) if candidates else None
+    """§3.6 — the bridge: of the candidates, the one with the largest lightness
+    gap to the pair; ties go to the lower relative chroma. None if no anchor
+    qualifies."""
+    candidates = bridge_candidates(dominant, counter, anchors)
+    if not candidates:
+        return None
+    return max(candidates, key=lambda ac: (lightness_gap(ac[0], dominant, counter), -ac[0].rel))[0]
 
 
 def _rank_key(generator):

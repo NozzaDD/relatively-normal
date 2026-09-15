@@ -78,9 +78,11 @@ owner's to overrule:
 - **Direction re-weighting** (`palette.apply_direction`): the direction's anchor
   gets weight 2.0, anchors within 40° of it in hue get 1.5, the rest 1.0; tiers
   are re-ordered by weight. Nothing is added or removed.
-- **Bridge** (`generators._bridge`): "a foundation-tier neutral whose L\* sits
-  between the two" — "neutral" is read as lowest relative chroma among the
-  foundation anchors in that lightness range.
+- **Bridge** (`generators._bridge`): the §3.6 definition — a neutral, or a
+  chromatic anchor that forms a valid Tonal pair with the dominant or the
+  counter, any tier, any lightness. "Largest lightness gap to the pair" is read
+  as the bridge's distance to the nearer of the two anchors; ties go to the
+  lower relative chroma.
 - **Band boundaries**: a hue gap of exactly 40.0° is Tonal, exactly 100.0° is
   Muted.
 - **Runner-up ties**: when two axes tie on lowest confidence, temperature wins;
