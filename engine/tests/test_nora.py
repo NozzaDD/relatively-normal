@@ -570,3 +570,75 @@ class TestMonochromePairing(unittest.TestCase):
                                matcher.score_item(ochre, self.season), [])
         self.assertEqual(v["kind"], "chromatic+chromatic")
         self.assertFalse(v["valid"])
+
+
+class TestWorksNowRanking(unittest.TestCase):
+    """horizons.md §3c — works-now is ranked by pairing kind first. The closet
+    below is tops and bottoms only, so every outfit uses exactly two items and
+    the kind ordering is the only thing separating them."""
+
+    CLOSET = [
+        # tops
+        {"id": "teal knit", "hex": "1F5F63", "slot": "top"},        # chromatic
+        {"id": "rose blouse", "hex": "C09A93", "slot": "top"},      # chromatic
+        {"id": "sage shirt", "hex": "9AA88B", "slot": "top"},       # chromatic
+        {"id": "stone tee", "hex": "D6CEC2", "slot": "top"},        # neutral
+        # bottoms
+        {"id": "ochre skirt", "hex": "C7912B", "slot": "bottom"},   # opposition with teal
+        {"id": "olive trouser", "hex": "4E5A3A", "slot": "bottom"}, # muted with rose, tonal with sage
+        {"id": "petrol jean", "hex": "2C5A66", "slot": "bottom"},   # monochrome with teal
+        {"id": "grey trouser", "hex": "8B8378", "slot": "bottom"},  # neutral
+        {"id": "charcoal trouser", "hex": "3A3632", "slot": "bottom"},  # neutral
+    ]
+
+    @classmethod
+    def setUpClass(cls):
+        cls.season = palette.get_season("soft_autumn")
+        cls.scored = matcher.score_items(cls.CLOSET, cls.season)
+        cls.gen_lists = generators.run(cls.season.anchors)
+
+    def _kinds(self, mood=None):
+        out = horizons.works_now_generated(self.scored, self.gen_lists, mood=mood)
+        seen = []
+        for o in out:
+            if o["kind"] not in seen:
+                seen.append(o["kind"])
+        return out, seen
+
+    def test_the_closet_produces_every_kind(self):
+        _, seen = self._kinds()
+        self.assertEqual(set(seen), set(horizons.WORKS_NOW_ORDER),
+                         "the fixture must produce one outfit of each kind")
+
+    def test_default_order_is_opposition_first_monochrome_fourth(self):
+        out, seen = self._kinds()
+        self.assertEqual(seen, list(horizons.WORKS_NOW_ORDER))
+        self.assertEqual(out[0]["kind"], "opposition")
+        self.assertEqual({"teal knit", "ochre skirt"}, set(out[0]["items"]))
+        # every outfit uses two items, so kind alone decides the order
+        self.assertEqual({len(o["items"]) for o in out}, {2})
+
+    def test_calm_promotes_tonal_and_monochrome_above_opposition(self):
+        out, seen = self._kinds(mood="calm, put together, not trying")
+        self.assertEqual(seen, list(horizons.WORKS_NOW_ORDER_CALM))
+        self.assertEqual(out[0]["kind"], "tonal")
+        self.assertLess(seen.index("tonal"), seen.index("opposition"))
+        self.assertLess(seen.index("monochrome"), seen.index("opposition"))
+        self.assertLess(seen.index("muted"), seen.index("opposition"))
+
+    def test_items_used_breaks_ties_within_a_kind(self):
+        closet = self.CLOSET + [{"id": "rust scarf", "hex": "A6502F", "slot": "accessory", "near_face": True}]
+        scored = matcher.score_items(closet, self.season)
+        out = horizons.works_now_generated(scored, self.gen_lists)
+        opposition = [o for o in out if o["kind"] == "opposition"]
+        self.assertEqual([len(o["items"]) for o in opposition],
+                         sorted((len(o["items"]) for o in opposition), reverse=True))
+
+    def test_a_dress_alone_has_no_kind_and_sorts_last(self):
+        closet = self.CLOSET + [{"id": "teal dress", "hex": "1F5F63", "slot": "dress"}]
+        scored = matcher.score_items(closet, self.season)
+        out = horizons.works_now_generated(scored, self.gen_lists)
+        dress_only = [o for o in out if o["items"] == ["teal dress"]]
+        self.assertEqual(len(dress_only), 1)
+        self.assertIsNone(dress_only[0]["kind"])
+        self.assertIs(out[-1], dress_only[0])

@@ -57,7 +57,22 @@ Then: which items are **pulling against you** — the items whose verdict is not
 
 ### 3c. What works now
 
-Before any suggestion to buy: the outfits that can be built *today* from the uploaded items using in-palette pieces and the outfit pairing rules in `combinations.md` §5. Ranked by how many items they use and how close the pair is to a named combination.
+Before any suggestion to buy: the outfits that can be built *today* from the uploaded items using in-palette pieces and the outfit pairing rules in `combinations.md` §5.
+
+Ranked by **pairing kind first**, then by how many items they use, then by how close the pair is to a named combination:
+
+| | Default | Calm, quiet or grounded |
+|---|---|---|
+| 1 | Opposition | Tonal |
+| 2 | Muted | Monochrome |
+| 3 | Tonal | Muted |
+| 4 | Monochrome | Opposition |
+| 5 | Chromatic + neutral | Chromatic + neutral |
+| 6 | Neutral + neutral | Neutral + neutral |
+
+A mood answer of *calm, quiet* or *grounded* (intake question 2) promotes tonal and monochrome above opposition, and holds the three generators in the order `combinations.md` §3 gives them under that mood. An outfit built around a dress takes the best kind among its own pairs; a dress worn alone has none and sorts last.
+
+Saved outfits are shown in the order the person gave them; this ranking applies to the outfits the engine builds from the closet.
 
 *"From what you own, these three work: …"*
 

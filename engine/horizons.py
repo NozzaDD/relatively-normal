@@ -16,6 +16,14 @@ DISTANCE_BANDS = ((10, "matches"), (18, "mostly there"), (28, "real gap"), (floa
 MIN_PAIRS_FOR_NEXT_MOVE = 2   # §3d constraint
 COMBINATIONS_SHOWN = 5        # §2: three to five named pairs
 MIN_ITEMS_FOR_MISSING = 10    # §3b: below this the "missing" list is not judged
+
+# §3c — works-now is ranked by pairing kind first. The three generator names come
+# from combinations.md §3; the other three are the pairing kinds of §5.
+WORKS_NOW_ORDER = ("opposition", "muted", "tonal", "monochrome", "chromatic+neutral", "neutral+neutral")
+# A calm / quiet / grounded mood promotes tonal and monochrome above opposition, and
+# keeps the generators in the order combinations.md gives them under that mood
+# (tonal, then muted, then opposition).
+WORKS_NOW_ORDER_CALM = ("tonal", "monochrome", "muted", "opposition", "chromatic+neutral", "neutral+neutral")
 NOT_ENOUGH_ITEMS = "not enough items to judge — add more before reading this"
 AUTO_OUTFIT = "auto: first item per slot"
 
@@ -113,6 +121,24 @@ def missing(closet_scored, season):
 
 # ---------------------------------------------------------------- §3c works now
 
+def _pair_kind(check):
+    """The ranking kind of one pair: the generator's name for a pair the
+    generators produced, otherwise the pair's own kind (§5)."""
+    if check["kind"] == "chromatic+chromatic" and check.get("generator"):
+        return check["generator"]
+    return check["kind"]
+
+
+def _ranking_kind(core, check, order):
+    """An outfit's kind for ranking. A top-and-bottom core is its own pair's
+    kind. A dress core has no pair of its own, so it takes the best kind among
+    the outfit's actual pairs; a dress worn alone has none and sorts last."""
+    if core["kind"] != "dress":
+        return _pair_kind(core)
+    kinds = [k for k in (_pair_kind(c) for c in check["pairs"] if c["valid"]) if k in order]
+    return min(kinds, key=order.index) if kinds else None
+
+
 def _closeness_to_named(scored):
     """How close an outfit sits to a named combination: the largest ΔE from any
     chromatic item to its nearest anchor. 0 when the outfit is all neutrals."""
@@ -120,12 +146,16 @@ def _closeness_to_named(scored):
     return max(ds) if ds else 0.0
 
 
-def works_now_generated(closet_scored, gen_lists, limit=None):
+def works_now_generated(closet_scored, gen_lists, limit=None, mood=None):
     """§3c without saved outfits — outfits buildable today from in-palette
     items under the outfit pairing rules (combinations.md §5). A top and a
     bottom that form a valid pair are the core; layer, shoes, bag and
-    accessory join when the outfit stays valid with them in it. Ranked by
-    items used, then by closeness to a named combination."""
+    accessory join when the outfit stays valid with them in it.
+
+    Ranked by pairing kind first (WORKS_NOW_ORDER, or WORKS_NOW_ORDER_CALM
+    when the mood answer is calm, quiet or grounded), then by items used,
+    then by closeness to a named combination."""
+    order = WORKS_NOW_ORDER_CALM if generators.is_calm(mood) else WORKS_NOW_ORDER
     ok = [r for r in closet_scored if r["verdict"] == "in"]
     by_slot = {s: [r for r in ok if r["slot"] == s] for s in matcher.SLOTS}
     pairs = [p for lst in gen_lists.values() for p in lst]
@@ -147,15 +177,18 @@ def works_now_generated(closet_scored, gen_lists, limit=None):
         outfits.append({"name": None, "occasion": None, "items": [r["item_id"] for r in items],
                         "core_pair": [r["item_id"] for r in core_items],
                         "pairing": core["kind"], "generator": core["generator"],
+                        "kind": _ranking_kind(core, check, order),
                         "matched_pair": core["pair"], "flags": check["flags"],
                         "closeness_to_named": round(_closeness_to_named(items), 1)})
-    outfits.sort(key=lambda o: (-len(o["items"]), o["closeness_to_named"]))
+    outfits.sort(key=lambda o: (order.index(o["kind"]) if o["kind"] in order else len(order),
+                                -len(o["items"]), o["closeness_to_named"]))
     return outfits[:limit] if limit else outfits
 
 
 def works_now_saved(outfits):
-    """§3c with saved outfits — the ones that pass the pairing rules and both
-    the zone and weather checks, in the order given."""
+    """§3c with saved outfits — the ones that pass the pairing rules and the
+    zone, weather and context checks, in the order given. Saved outfits keep
+    the person's own order; the kind ranking applies to the generated list."""
     return [{"name": o["name"], "occasion": o["occasion"], "dress_code": o["dress_code"],
              "weather": o["weather"], "formality": o.get("formality"), "setting": o.get("setting"),
              "items": [r["item_id"] for r in o["slots"].values() if r],
@@ -267,7 +300,8 @@ def result(season_key, direction, items, outfits=None, mood=None, confidence=Non
         specs = [_auto_spec(items)]
 
     wardrobe = matcher.score_outfits(specs, season, items, pairs)
-    works = works_now_saved(wardrobe["outfits"]) if mode == "saved" else works_now_generated(closet_scored, gen_lists)
+    works = (works_now_saved(wardrobe["outfits"]) if mode == "saved"
+             else works_now_generated(closet_scored, gen_lists, mood=mood))
 
     current = current_palette(closet_scored, items)
     over = pulling_against(closet_scored)
