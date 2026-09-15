@@ -164,10 +164,13 @@ def score_item(item, season):
     if slot not in SLOTS:
         raise ValueError(f"item {item.get('id')!r}: unknown slot {slot!r}")
     lab = colour.hex_to_lab(item["hex"])
+    L, C, h = colour.lab_to_lch(lab)
+    rel = colour.relative_chroma(L, C, h)
     near_face = item.get("near_face")
     result = {"item_id": item.get("id"), "slot": slot,
               "near_face": near_face if slot == "accessory" else None,
-              "dominant": {"hex": item["hex"].upper().lstrip('#'), "lab": [round(v, 2) for v in lab]},
+              "dominant": {"hex": item["hex"].upper().lstrip('#'), "lab": [round(v, 2) for v in lab],
+                           "relative_chroma": round(rel, 3), "neutral": generators.is_neutral(rel)},
               "verdict": None, "nearest": None, "delta_e": None, "tier": None,
               "stage": None, "reason": None, "shift": None, "flags": []}
     if slot == "accessory" and near_face is None:
@@ -299,17 +302,75 @@ def rank_gaps(gaps, saved_outfits=None):
     return sorted(gaps, key=lambda g: (-g["unlocks"], GAP_SEVERITY[g["type"]]))
 
 
+# ================================================================ neutrals are the ground (combinations.md §5)
+
+PAIR_MATCH_DE = 12.0      # chromatic + chromatic: each item within ΔE 12 of a generated pair's anchor
+NEUTRAL_MIN_DL = 15.0     # neutral + neutral: ΔL* at or above this, else "flat"
+
+
+def is_neutral_item(r):
+    return r["dominant"]["neutral"]
+
+
+def _matched_pair(a, b, pairs):
+    """The generated pair the two chromatic items match, if any: each within
+    ΔE 12 of one of that pair's two anchors, one anchor each."""
+    la, lb = tuple(a["dominant"]["lab"]), tuple(b["dominant"]["lab"])
+    for p in pairs:
+        for x, y in ((p.dominant.lab, p.counter.lab), (p.counter.lab, p.dominant.lab)):
+            if colour.delta_e_2000(la, x) <= PAIR_MATCH_DE and colour.delta_e_2000(lb, y) <= PAIR_MATCH_DE:
+                return p
+    return None
+
+
+def pair_valid(a, b, pairs):
+    """The outfit pairing rules for two scored items (combinations.md §5).
+    Slot rules for black and white have already been applied — the verdicts
+    are on the items. Returns {"valid", "kind", "flag", "pair", "generator"}."""
+    na, nb = is_neutral_item(a), is_neutral_item(b)
+    if not na and not nb:
+        p = _matched_pair(a, b, pairs)
+        return {"valid": p is not None, "kind": "chromatic+chromatic",
+                "flag": None if p else "no generated pair",
+                "pair": p.name if p else None, "generator": p.generator if p else None}
+    if na and nb:
+        d_L = abs(a["dominant"]["lab"][0] - b["dominant"]["lab"][0])
+        ok = d_L >= NEUTRAL_MIN_DL
+        return {"valid": ok, "kind": "neutral+neutral", "flag": None if ok else "flat",
+                "pair": None, "generator": None}
+    ok = a["verdict"] == "in" and b["verdict"] == "in"
+    return {"valid": ok, "kind": "chromatic+neutral", "flag": None if ok else "not in palette",
+            "pair": None, "generator": "ground" if ok else None}
+
+
+def outfit_valid(scored, pairs):
+    """Every pair in the outfit must be valid. Three or more chromatic items
+    with any invalid chromatic pair flags "too many colours"."""
+    checks, flags = [], []
+    for i in range(len(scored)):
+        for j in range(i + 1, len(scored)):
+            v = pair_valid(scored[i], scored[j], pairs)
+            checks.append({"items": [scored[i]["item_id"], scored[j]["item_id"]], **v})
+            if v["flag"]:
+                flags.append(v["flag"])
+    chromatic = [r for r in scored if not is_neutral_item(r)]
+    if len(chromatic) >= 3 and any(c["kind"] == "chromatic+chromatic" and not c["valid"] for c in checks):
+        flags.append("too many colours")
+    return {"valid": all(c["valid"] for c in checks), "flags": flags, "pairs": checks}
+
+
 # ================================================================ §5 fills
 
-def _pairs_with(lab, others):
-    """How many of `others` (scored items) the colour makes a Wada pair with."""
-    return sum(1 for o in others if generators.pair_passes(lab, tuple(o["dominant"]["lab"])))
+def _pairs_with(r, others, pairs):
+    """How many of `others` (scored items) `r` forms a valid pair with."""
+    return sum(1 for o in others if pair_valid(r, o, pairs)["valid"])
 
 
-def fill_from_closet(gap, outfit_scored, closet_scored):
+def fill_from_closet(gap, outfit_scored, closet_scored, pairs):
     """Source 1 — the user's own closet. Filter to the gap's slot, keep
-    in-palette candidates not already in the outfit, require a Wada pair with
-    at least one item already there, and take the one that pairs with most."""
+    in-palette candidates not already in the outfit, require the outfit to
+    stay valid under the pairing rules with the candidate in it, and take the
+    one that pairs with most of what is there."""
     if not gap.get("slot"):
         return None
     in_outfit = {r["item_id"] for r in outfit_scored}
@@ -318,9 +379,9 @@ def fill_from_closet(gap, outfit_scored, closet_scored):
     for c in closet_scored:
         if c["slot"] != gap["slot"] or c["item_id"] in in_outfit or c["verdict"] != "in":
             continue
-        n = _pairs_with(tuple(c["dominant"]["lab"]), others)
-        if n == 0 and others:
+        if others and not outfit_valid(others + [c], pairs)["valid"]:
             continue
+        n = _pairs_with(c, others, pairs)
         key = (n, -c["delta_e"])
         if best is None or key > best[0]:
             best = (key, c, n)
@@ -344,9 +405,9 @@ def fill_from_brands(gap, season):
     return None
 
 
-def fill_gap(gap, outfit_scored, closet_scored, season):
+def fill_gap(gap, outfit_scored, closet_scored, season, pairs):
     """§5 — the three sources in strict order; stop at the first that answers."""
-    for fn in (lambda: fill_from_closet(gap, outfit_scored, closet_scored),
+    for fn in (lambda: fill_from_closet(gap, outfit_scored, closet_scored, pairs),
                lambda: fill_from_staples(gap, season),
                lambda: fill_from_brands(gap, season)):
         fill = fn()
@@ -369,9 +430,10 @@ def score_outfit(outfit_items, season, closet_items=None, saved_outfits=None, ou
     closet_scored = score_items(closet_items, season) if closet_items is not None else scored
     saved_scored = [score_items(o, season) for o in (saved_outfits or [])]
     checks = outfit_checks(scored, season)
+    pairs = [p for lst in generators.run(season.anchors).values() for p in lst]
     gaps = rank_gaps(find_gaps(scored, checks), saved_scored)
     for g in gaps:
-        g["fill"] = fill_gap(g, scored, closet_scored, season)
+        g["fill"] = fill_gap(g, scored, closet_scored, season, pairs)
     slots = {s: None for s in SLOTS}
     for r in scored:
         if slots[r["slot"]] is None:

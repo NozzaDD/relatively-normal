@@ -1,9 +1,11 @@
 """The three combination generators — combinations.md §3, exactly as specified.
 
 Opposition, Tonal and Muted partition the hue circle (Tonal <= 40°, Muted
-40-100°, Opposition 100-180°), so every pair of anchors is tested by exactly
-one generator. Input: a season's anchors. Output: ranked pairs carrying the
-computed hue gap, ΔL* and Δ relative chroma.
+40-100°, Opposition 100-180°), so every pair of chromatic anchors is tested by
+exactly one generator. Neutrals — relative chroma <= 0.15 (combinations.md §5)
+— do not enter the generators; they are the ground the pairs sit on. Input: a
+season's anchors. Output: ranked pairs carrying the computed hue gap, ΔL* and
+Δ relative chroma.
 """
 from dataclasses import dataclass
 
@@ -19,6 +21,11 @@ GENERATORS = {
 DEFAULT_ORDER = ("opposition", "tonal", "muted")
 CALM_ORDER = ("tonal", "muted", "opposition")
 CALM_WORDS = ("calm", "quiet", "grounded")
+NEUTRAL_REL = 0.15   # combinations.md §5: a neutral is anything with relative chroma <= 0.15
+
+
+def is_neutral(rel):
+    return rel <= NEUTRAL_REL
 
 
 def band_of(hue_gap):
@@ -43,17 +50,6 @@ def test_pair(L1, h1, rel1, L2, h2, rel2):
     if g["cap"] is not None:
         passes = passes and rel1 <= g["cap"] and rel2 <= g["cap"]
     return (name if passes else None), {"hue_gap": hg, "delta_L": d_L, "delta_rel": d_rel}
-
-
-def pair_passes(lab1, lab2):
-    """Wada pair check on two arbitrary Lab colours (used by the matcher and
-    horizons on item colours, not just anchors). Returns the generator name
-    that accepts the pair, or None."""
-    L1, C1, h1 = colour.lab_to_lch(lab1)
-    L2, C2, h2 = colour.lab_to_lch(lab2)
-    name, _ = test_pair(L1, h1, colour.relative_chroma(L1, C1, h1),
-                        L2, h2, colour.relative_chroma(L2, C2, h2))
-    return name
 
 
 @dataclass(frozen=True)
@@ -85,11 +81,12 @@ class Pair:
 
 
 def _bridge(dominant, counter, anchors):
-    """§3.6 — a foundation-tier neutral whose L* sits strictly between the
-    two. 'Neutral' is read as lowest relative chroma among the candidates."""
+    """§3.6 — a foundation-tier neutral (relative chroma <= 0.15, §5) whose L*
+    sits strictly between the two. Where several qualify, the lowest relative
+    chroma is taken."""
     lo, hi = sorted((dominant.L, counter.L))
-    candidates = [a for a in anchors if a.tier == "foundations" and lo < a.L < hi
-                  and a.name not in (dominant.name, counter.name)]
+    candidates = [a for a in anchors if a.tier == "foundations" and is_neutral(a.rel)
+                  and lo < a.L < hi and a.name not in (dominant.name, counter.name)]
     return min(candidates, key=lambda a: a.rel) if candidates else None
 
 
@@ -102,12 +99,14 @@ def _rank_key(generator):
 
 
 def run(anchors):
-    """Run all three generators over every pair of anchors. Returns a dict of
-    generator name -> ranked list of Pair (ranked within the generator only)."""
+    """Run all three generators over every pair of chromatic anchors (neutrals
+    excluded, §5). Returns a dict of generator name -> ranked list of Pair
+    (ranked within the generator only). Bridges may still be neutrals."""
     out = {name: [] for name in GENERATORS}
-    for i in range(len(anchors)):
-        for j in range(i + 1, len(anchors)):
-            a, b = anchors[i], anchors[j]
+    chromatic = [a for a in anchors if not is_neutral(a.rel)]
+    for i in range(len(chromatic)):
+        for j in range(i + 1, len(chromatic)):
+            a, b = chromatic[i], chromatic[j]
             name, m = test_pair(a.L, a.h, a.rel, b.L, b.h, b.rel)
             if name is None:
                 continue

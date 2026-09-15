@@ -32,7 +32,7 @@ where **C\*max(L\*, h)** is the sRGB gamut boundary — the largest chroma that 
 
 ## 3. The generators
 
-Given a season's palette from `seasons.yaml`, three generators run over every pair of anchors across all three tiers. They partition the hue circle — Tonal ≤ 40°, Muted 40–100°, Opposition 100–180° — so every pair falls into exactly one band and is tested by that band's generator.
+Given a season's palette from `seasons.yaml`, three generators run over every pair of **chromatic** anchors across all three tiers. A **neutral** is any anchor or item with relative chroma ≤ 0.15; neutrals do not enter the generators (see §5). The generators partition the hue circle — Tonal ≤ 40°, Muted 40–100°, Opposition 100–180° — so every pair falls into exactly one band and is tested by that band's generator.
 
 | | Hue gap | Relative chroma of each | Δ relative chroma | ΔL* |
 |---|---|---|---|---|
@@ -44,12 +44,12 @@ Opposition is the Wada mechanism above. Tonal is the same discipline applied to 
 
 For each generator:
 
-1. Take every pair of anchors across all three tiers.
+1. Take every pair of chromatic anchors (relative chroma > 0.15) across all three tiers.
 2. Keep pairs whose Lab hue gap is inside the generator's band.
 3. Keep pairs where |relative_chroma₁ − relative_chroma₂| is within the generator's limit. Muted additionally requires each colour's relative chroma ≤ 0.45.
 4. Keep pairs where |L*₁ − L*₂| meets the generator's minimum.
 5. For each surviving pair, name the **dominant** (deeper) and the **counter** (lighter). Dominant takes 60–70% of the outfit; counter takes 30–40%.
-6. Optionally add a **bridge**: a foundation-tier neutral whose L* sits between the two. Three-colour combinations use dominant / counter / bridge at roughly 50 / 30 / 20.
+6. Optionally add a **bridge**: a foundation-tier neutral — relative chroma ≤ 0.15, by the definition in §5 — whose L* sits between the two. Three-colour combinations use dominant / counter / bridge at roughly 50 / 30 / 20.
 7. Rank within each generator: opposition by hue separation (closer to 180° ranks higher) then value contrast; tonal by hue separation (closer to 0° ranks higher) then value contrast; muted by value contrast then hue separation, since in that band the value gap is what carries the pair.
 
 **Ranking the three lists.** Default order is Opposition, then Tonal, then Muted. A mood answer of *calm, quiet* or *grounded* (intake question 2) promotes Tonal and Muted above Opposition, keeping Tonal ahead of Muted. Mood is a ranking input, never a filter — all three lists are always produced.
@@ -77,7 +77,22 @@ These four are the combinations that came out of the original analysis. Every nu
 
 **Plum and Old Gold** — the most evening of the four; gold in small pieces only. This one is not a matched-chroma pair and was never meant to be: a low-saturation plum (0.33) against a near-saturated gold (0.73) is a **deliberate chroma step**, the gold doing the work an accent does. Its hue gap puts it in the opposition band, but a Δ relative chroma of 0.40 fails every generator's chroma test. It sits outside all three, and it is kept here as the example of what the generators do not produce — a pair that works for a reason the mechanism does not encode. The chocolate bridge is deeper than both (L\* 24.8), not between them.
 
-## 5. Wada's dictionary as a personal subset
+## 5. Neutrals are the ground
+
+A **neutral** is any anchor or item with **relative chroma ≤ 0.15**. Neutrals do not enter the three generators; the generators run over chromatic anchors only. A generated pair is two colours; the neutrals are what the pair sits on.
+
+These are the pairing rules for an outfit. They run after the slot rules for black and white in `matching.md` §2 have already been applied, so every item arrives with its verdict.
+
+| Pair | Valid when |
+|---|---|
+| **Chromatic + chromatic** | The pair matches a generated pair: each item is within ΔE 12 of one of that pair's two anchors |
+| **Chromatic + neutral** | Both are in palette |
+| **Neutral + neutral** | ΔL* ≥ 15; otherwise flag as **flat** |
+| **Three or more chromatic items** | Every chromatic pair must be valid; otherwise flag as **too many colours** |
+
+An outfit is valid when every pair in it is valid. This is what "works now" (`horizons.md` §3c) and the closet search (`matching.md` §5, source 1) are built from.
+
+## 6. Wada's dictionary as a personal subset
 
 Wada's 348 combinations are public with hex values. Filter them against the user's palette:
 
@@ -88,7 +103,7 @@ Wada's 348 combinations are public with hex values. Filter them against the user
 
 The result is a browsable booklet of Wada combinations that are actually wearable *by this person* — which is the thing the owner originally wanted, before the analysis existed to filter it. Different seasons get different subsets of the same 348; a Soft Autumn and a Bright Winter would share almost none.
 
-## 6. Mood — the other Japanese reference
+## 7. Mood — the other Japanese reference
 
 Shigenobu Kobayashi's *Color Image Scale* places combinations on two axes — **warm ↔ cool** and **soft ↔ hard** — and maps mood words onto the resulting quadrants: *natural, elegant, chic, casual, dynamic, gorgeous.*
 
@@ -103,13 +118,13 @@ That's the machinery behind intake question 2, "what do you want to feel like in
 
 Mood is a *ranking* input, never a filter. Nothing outside the season enters because of a mood word.
 
-## 7. What the model does with this
+## 8. What the model does with this
 
 - Names the combinations in the owner's register — "Petrol and Cinnamon", not "combination 7"
 - Writes the one-line placement note ("rose near the face, olive as the body")
 - Explains *why* a pair works, using the three properties, in a sentence a reader can repeat
 
-## 8. What it never does
+## 9. What it never does
 
 - Propose a pair the generator didn't produce
 - Move a colour outside its palette to make a pair work

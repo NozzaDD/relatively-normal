@@ -33,6 +33,7 @@ on the hunt for things worth buying.
 - content/ calendar.md, note-bank.md, posts/
 - consultations/ one folder per beta participant, never published without consent noted
 - staples/ the staples catalogue — one YAML per slot; schema in staples/README.md
+- engine/ the deterministic colour engine in Python; the frameworks are its specification, tests in engine/tests/
 - data/ utm-scheme.md, metrics
 - app/ empty until 2027
 

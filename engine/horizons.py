@@ -101,53 +101,54 @@ def over_and_missing(closet_scored, season):
 
 # ---------------------------------------------------------------- §3c works now
 
-def _closeness_to_named(lab_a, lab_b, pairs):
-    """How close an item pair sits to the nearest generated anchor pair: the
-    larger of the two item-to-anchor ΔEs, minimised over the list."""
-    best = float("inf")
-    for p in pairs:
-        for x, y in ((p.dominant.lab, p.counter.lab), (p.counter.lab, p.dominant.lab)):
-            d = max(colour.delta_e_2000(lab_a, x), colour.delta_e_2000(lab_b, y))
-            best = min(best, d)
-    return best
+def _closeness_to_named(scored):
+    """How close an outfit sits to a named combination: the largest ΔE from any
+    chromatic item to its nearest anchor. 0 when the outfit is all neutrals."""
+    ds = [r["delta_e"] for r in scored if not matcher.is_neutral_item(r)]
+    return max(ds) if ds else 0.0
 
 
 def works_now(closet_scored, season, gen_lists, limit=None):
-    """§3c — outfits buildable today from in-palette items. A top and a bottom
-    that make a Wada pair are the core; shoes, bag and accessory join when
-    they pair with the top or the bottom. Ranked by items used, then by
-    closeness to a named combination."""
+    """§3c — outfits buildable today from in-palette items under the outfit
+    pairing rules (combinations.md §5). A top and a bottom that form a valid
+    pair are the core; shoes, bag and accessory join when the outfit stays
+    valid with them in it. Ranked by items used, then by closeness to a named
+    combination."""
     ok = [r for r in closet_scored if r["verdict"] == "in"]
     by_slot = {s: [r for r in ok if r["slot"] == s] for s in matcher.SLOTS}
-    all_pairs = [p for pairs in gen_lists.values() for p in pairs]
-    lab = lambda r: tuple(r["dominant"]["lab"])
+    pairs = [p for lst in gen_lists.values() for p in lst]
     outfits = []
     for top, bottom in product(by_slot["top"], by_slot["bottom"]):
-        gen = generators.pair_passes(lab(top), lab(bottom))
-        if not gen:
+        core = matcher.pair_valid(top, bottom, pairs)
+        if not core["valid"]:
             continue
         items = [top, bottom]
         for slot in ("shoes", "bag", "accessory"):
             for cand in by_slot[slot]:
-                if generators.pair_passes(lab(cand), lab(top)) or generators.pair_passes(lab(cand), lab(bottom)):
+                if matcher.outfit_valid(items + [cand], pairs)["valid"]:
                     items.append(cand)
                     break
+        check = matcher.outfit_valid(items, pairs)
         outfits.append({"items": [r["item_id"] for r in items],
                         "core_pair": [top["item_id"], bottom["item_id"]],
-                        "generator": gen,
-                        "closeness_to_named": round(_closeness_to_named(lab(top), lab(bottom), all_pairs), 1)})
+                        "pairing": core["kind"],
+                        "generator": core["generator"],
+                        "matched_pair": core["pair"],
+                        "flags": check["flags"],
+                        "closeness_to_named": round(_closeness_to_named(items), 1)})
     outfits.sort(key=lambda o: (-len(o["items"]), o["closeness_to_named"]))
     return outfits[:limit] if limit else outfits
 
 
 # ---------------------------------------------------------------- §3d next moves
 
-def next_moves(outfit_result, closet_scored, closet_items, season, limit=3):
+def next_moves(outfit_result, closet_scored, closet_items, season, pairs, limit=3):
     """§3d — the one to three moves that would do the most, scored
     value = outfits_unlocked × palette_improvement ÷ price_band.
 
     With sources 2 and 3 stubbed, every fill comes from the closet, so:
-    outfits_unlocked is the number of closet items the piece pairs with;
+    outfits_unlocked is the number of closet items the piece forms a valid
+    pair with under the pairing rules (combinations.md §5);
     palette_improvement is how far the outfit's mean ΔE falls when the piece
     takes the gap's slot; price_band is 1 (already owned). A move must pair
     with at least two owned items (§3d constraint) or it is dropped.
@@ -161,7 +162,7 @@ def next_moves(outfit_result, closet_scored, closet_items, season, limit=3):
             continue
         piece = next(r for r in closet_scored if r["item_id"] == fill["item_id"])
         others = [r for r in closet_scored if r["item_id"] != piece["item_id"]]
-        unlocked = matcher._pairs_with(tuple(piece["dominant"]["lab"]), others)
+        unlocked = matcher._pairs_with(piece, others, pairs)
         if unlocked < MIN_PAIRS_FOR_NEXT_MOVE:
             continue
         after_items = [r for r in outfit_scored if r["slot"] != gap["slot"]] + [piece]
@@ -209,6 +210,7 @@ def result(season_key, direction, items, outfit=None, mood=None, confidence=None
     closet_scored = matcher.score_items(items, season)
     lt = long_term(season, confidence=confidence, mood=mood)
     gen_lists = generators.run(season.anchors)
+    pairs = [p for lst in gen_lists.values() for p in lst]
     works = works_now(closet_scored, season, gen_lists)
 
     if outfit is None:
@@ -227,7 +229,7 @@ def result(season_key, direction, items, outfit=None, mood=None, confidence=None
             "distance": distance(closet_scored, items),
             **om,
             "works_now": works,
-            "next_moves": next_moves(result_, closet_scored, items, season),
+            "next_moves": next_moves(result_, closet_scored, items, season, pairs),
         },
     })
     return result_

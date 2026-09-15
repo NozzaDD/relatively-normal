@@ -102,7 +102,7 @@ For each ranked gap, the system looks for a fill. **It checks the sources in thi
 
 ### Source 1 — the user's own closet
 
-Everything they uploaded, not just what's on the canvas. Filter to the missing slot, score each candidate's dominant colour against the palette *and* against the other items already in the outfit (a Wada pair check from `combinations.md`). If an in-palette item exists that pairs with what's there:
+Everything they uploaded, not just what's on the canvas. Filter to the missing slot, score each candidate's dominant colour against the palette *and* against the other items already in the outfit (the outfit pairing rules in `combinations.md` §5). If an in-palette item exists that pairs with what's there:
 
 > *You already own this: the olive trousers. They sit in your foundation tier and pair with the teal knit.*
 
