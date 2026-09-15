@@ -44,7 +44,7 @@ Per item: in / near / out / hard miss, with the nearest anchor named.
 
 ### 3b. The delta
 
-One number and one sentence. The **palette distance**: the share-weighted mean ΔE from each item's colour to its nearest ideal anchor.
+One number and one sentence. The **palette distance**: the share-weighted mean ΔE from each item's colour to its nearest ideal anchor. An item's contribution is its ΔE to the nearest anchor that would be *in* for that item's slot after the slot rules — never to the colour that triggered a hard miss — so black trousers admitted below the waist contribute 0, a white shirt at the face contributes its ΔE to cream, and out items contribute their ΔE to the nearest palette anchor.
 
 | Distance | Reading |
 |---|---|

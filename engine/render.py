@@ -163,7 +163,13 @@ def _current_column(st):
 def _distance(st):
     d = st["distance"]
     reading = d["reading"]
-    over = ", ".join(f'{o["colour"]} ({o["items"]})' for o in st["over_represented"]) or "none"
+    if st["over_represented"]:
+        over = "<ul style=\"margin:0 0 0 16px\">" + "".join(
+            f'<li><b>{_e(o["item"])}</b> — {_e(_name(o["verdict"]))}{(" " + _e(o["where"])) if o.get("where") else ""}; '
+            f'nearest: {_e(o["nearest"])} <span class="sub">(ΔE {_e(o["delta_e"])})</span></li>'
+            for o in st["over_represented"]) + "</ul>"
+    else:
+        over = "none"
     missing = ", ".join(st["missing"]) or "none"
     return f"""
 <section>
@@ -171,7 +177,7 @@ def _distance(st):
   <div><span class="big">{_e(d["palette_distance"])}</span> &nbsp;<span class="sub">— {_e(reading)}</span></div>
   <div>{_e(DISTANCE_READINGS.get(reading, ""))}</div>
   <dl class="kv" style="margin-top:10px">
-    <dt>pulling against you</dt><dd>{_e(over)}</dd>
+    <dt>pulling against you</dt><dd>{over}</dd>
     <dt>missing from the closet</dt><dd>{_e(missing)}</dd>
   </dl>
 </section>"""
@@ -263,7 +269,7 @@ def _long_term(lt):
         ("black", _name(rules["black"])), ("white", _name(rules["white"])),
         ("contrast", _name(rules["contrast"])), ("metal", _name(rules["metal"])),
         ("grow", _name(dt["grow_tier"]) if dt["grow_tier"] else "—"),
-        ("let fade", ", ".join(dt["fade_colours"]) or "—"),
+        ("let fade", ", ".join(dt["fade_items"]) or "—"),
         ("missing", ", ".join(dt["missing_colours"]) or "—"),
         ("investment piece", dt["investment_piece"] or "— (needs the brand database)"),
     ]

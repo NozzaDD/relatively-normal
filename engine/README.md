@@ -111,8 +111,13 @@ owner's to overrule:
 - **Tier balance**: only in/near items with a tier are counted; `accent-heavy`
   fires above a 30% accent share, `foundation-light` below a 30% foundation
   share.
-- **Palette distance** uses the ΔE each verdict reported, so black trousers
-  allowed by a slot rule count at ΔE 0, not at their distance to chocolate.
+- **Palette distance**: an item contributes its ΔE to the nearest anchor that
+  would be "in" for its slot after the slot rules — never to the colour that
+  triggered a hard miss. Black trousers admitted below the waist contribute 0;
+  a white shirt at the face contributes its ΔE to cream; out items contribute
+  their ΔE to the nearest palette anchor. "Pulling against you" lists the items
+  whose verdict is not "in", largest contribution first, each with its nearest
+  admitted anchor as the fix.
 - **Next moves with the stubs in place**: every fill is from the closet, so
   `price_band` is 1 and `palette_improvement` is measured on the outfit in hand.
 - **Gap ranking** without saved outfits: every gap unlocks 1 and ties break by

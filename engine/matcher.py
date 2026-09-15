@@ -172,7 +172,10 @@ def score_item(item, season):
               "dominant": {"hex": item["hex"].upper().lstrip('#'), "lab": [round(v, 2) for v in lab],
                            "relative_chroma": round(rel, 3), "neutral": generators.is_neutral(rel)},
               "verdict": None, "nearest": None, "delta_e": None, "tier": None,
-              "stage": None, "reason": None, "shift": None, "flags": []}
+              "stage": None, "reason": None, "shift": None, "flags": [],
+              # distance contribution (horizons.md §3b): the nearest anchor that would be
+              # "in" for this slot after the slot rules, and the ΔE to it
+              "admitted_nearest": None, "admitted_delta_e": None, "where": None}
     if slot == "accessory" and near_face is None:
         result["flags"].append("near_face not set; scored as hardware")
 
@@ -184,22 +187,37 @@ def score_item(item, season):
             base = nearest.split(" (")[0]
             named = season.find(base)
             result.update(verdict=verdict, nearest=nearest, delta_e=round(de, 1), stage=1,
-                          reason=reason, tier=named.tier if named else None)
+                          reason=reason, tier=named.tier if named else None,
+                          where="at the face" if _is_face(slot, near_face) else "away from the face")
+            if verdict == "in":
+                # admitted here: the rule colour itself is the nearest admitted anchor
+                result.update(admitted_nearest=nearest, admitted_delta_e=round(de, 1))
+            elif named:
+                # not admitted here: the anchor the rule names (cream, soft white, ...)
+                result.update(admitted_nearest=named.name,
+                              admitted_delta_e=round(colour.delta_e_2000(lab, named.lab), 1))
+            else:
+                # not admitted and the rule colour is not a tier anchor: nearest tier anchor
+                a2, de2 = nearest_anchor(lab, season)
+                result.update(admitted_nearest=a2.name, admitted_delta_e=round(de2, 1))
             return result
 
     # -- stage 2: avoid list
     avoid_hex, avoid_de = min(((h, colour.delta_e_2000(lab, colour.hex_to_lab(h))) for h in season.avoid),
                               key=lambda x: x[1])
     if avoid_de <= HARD_MISS_DE:
+        a2, de2 = nearest_anchor(lab, season)
         result.update(verdict="hard_miss", nearest=f"avoid {avoid_hex}", delta_e=round(avoid_de, 1),
-                      stage=2, reason="within reach of an avoid colour")
+                      stage=2, reason="within reach of an avoid colour",
+                      admitted_nearest=a2.name, admitted_delta_e=round(de2, 1))
         return result
 
     # -- stage 3: palette anchors
     anchor, de = nearest_anchor(lab, season)
     verdict = "in" if de <= IN_DE else "near" if de <= NEAR_DE else "out"
     result.update(verdict=verdict, nearest=anchor.name, delta_e=round(de, 1), stage=3, tier=anchor.tier,
-                  shift=_shift_hint(lab, anchor) if verdict == "near" else None)
+                  shift=_shift_hint(lab, anchor) if verdict == "near" else None,
+                  admitted_nearest=anchor.name, admitted_delta_e=round(de, 1))
     return result
 
 

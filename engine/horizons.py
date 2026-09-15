@@ -72,31 +72,32 @@ def current_palette(closet_scored, closet_items):
 
 
 def distance(closet_scored, closet_items):
-    """§3b — share-weighted mean ΔE from each item's colour to its nearest
-    ideal anchor. Uses the ΔE each verdict reported, so an item allowed by a
-    slot rule (black below the waist) counts at its distance to the rule
-    colour rather than to a far-off tier anchor."""
+    """§3b — share-weighted mean of each item's contribution: its ΔE to the
+    nearest anchor that would be "in" for that item's slot after the slot
+    rules, never to the colour that triggered a hard miss. Black trousers
+    admitted below the waist contribute 0; a white shirt at the face
+    contributes its ΔE to cream; out items contribute their ΔE to the nearest
+    palette anchor."""
     share = {i.get("id"): float(i.get("share", 1.0)) for i in closet_items}
-    num = sum(r["delta_e"] * share.get(r["item_id"], 1.0) for r in closet_scored)
+    num = sum(r["admitted_delta_e"] * share.get(r["item_id"], 1.0) for r in closet_scored)
     den = sum(share.get(r["item_id"], 1.0) for r in closet_scored)
     d = round(num / den, 1) if den else 0.0
     return {"palette_distance": d, "reading": _reading(d)}
 
 
 def over_and_missing(closet_scored, season):
-    """§3b — over-represented: closet colours whose nearest anchor is accent-tier
-    or that are out / hard miss. Missing: foundation or supporting anchors no
-    in/near item lands on."""
-    over = {}
-    for r in closet_scored:
-        if r["verdict"] in ("out", "hard_miss") or r["tier"] == "accents":
-            over[r["nearest"]] = over.get(r["nearest"], 0) + 1
+    """§3b — pulling against you: the items whose verdict is not "in", each
+    with its verdict, where the rule caught it, and its nearest admitted anchor
+    as the fix; ordered by contribution to the distance, largest first.
+    Missing: foundation or supporting anchors no in/near item lands on."""
+    over = [{"item": r["item_id"], "verdict": r["verdict"], "where": r["where"],
+             "nearest": r["admitted_nearest"], "delta_e": r["admitted_delta_e"]}
+            for r in closet_scored if r["verdict"] != "in"]
+    over.sort(key=lambda o: -o["delta_e"])
     landed = {r["nearest"] for r in closet_scored if r["verdict"] in ("in", "near")}
     missing = [a.name for a in season.anchors if a.tier in ("foundations", "supporting")
                and a.name not in landed]
-    return {"over_represented": [{"colour": k, "items": v} for k, v in
-                                 sorted(over.items(), key=lambda kv: -kv[1])],
-            "missing": missing}
+    return {"over_represented": over, "missing": missing}
 
 
 # ---------------------------------------------------------------- §3c works now
@@ -155,7 +156,7 @@ def next_moves(outfit_result, closet_scored, closet_items, season, pairs, limit=
     """
     moves = []
     outfit_scored = [r for r in outfit_result["slots"].values() if r]
-    before = sum(r["delta_e"] for r in outfit_scored) / len(outfit_scored) if outfit_scored else 0.0
+    before = sum(r["admitted_delta_e"] for r in outfit_scored) / len(outfit_scored) if outfit_scored else 0.0
     for gap in outfit_result["gaps_ranked"]:
         fill = gap.get("fill")
         if not fill or fill["source"] != "closet":
@@ -166,7 +167,7 @@ def next_moves(outfit_result, closet_scored, closet_items, season, pairs, limit=
         if unlocked < MIN_PAIRS_FOR_NEXT_MOVE:
             continue
         after_items = [r for r in outfit_scored if r["slot"] != gap["slot"]] + [piece]
-        after = sum(r["delta_e"] for r in after_items) / len(after_items)
+        after = sum(r["admitted_delta_e"] for r in after_items) / len(after_items)
         improvement = round(before - after, 2)
         moves.append({"source": fill["source"], "item_id": piece["item_id"], "slot": gap["slot"],
                       "for_gap": gap["type"], "nearest": piece["nearest"],
@@ -180,13 +181,14 @@ def next_moves(outfit_result, closet_scored, closet_items, season, pairs, limit=
 
 def direction_of_travel(current, over_missing):
     """§2 — the data behind the one-paragraph steer: which tier should grow
-    (largest shortfall against 55/30/15), which colours should fade, which are
-    missing. The investment piece needs the brand database and is null."""
+    (largest shortfall against 55/30/15), which items are pulling against the
+    palette and could fade, which colours are missing. The investment piece
+    needs the brand database and is null."""
     shortfall = {t: TIER_SHARE[t] - current["proportions"][t] for t in TIERS}
     grow = max(shortfall, key=shortfall.get)
     return {"grow_tier": grow if shortfall[grow] > 0 else None,
             "tier_shortfall": {t: round(v, 2) for t, v in shortfall.items()},
-            "fade_colours": [o["colour"] for o in over_missing["over_represented"]],
+            "fade_items": [o["item"] for o in over_missing["over_represented"]],
             "missing_colours": over_missing["missing"],
             "investment_piece": None}
 
