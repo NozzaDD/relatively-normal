@@ -23,6 +23,7 @@ on the hunt for things worth buying.
    rubric exists.
 4. Sustainability is a rule, not a posture. Never describe a brand as sustainable
    unless a rubric field supports it.
+5. A rule may only name a colour that exists as an anchor in seasons.yaml.
 
 ## Structure
 
@@ -31,6 +32,8 @@ on the hunt for things worth buying.
 - brands/ one YAML per brand; schema in brands/README.md
 - content/ calendar.md, note-bank.md, posts/
 - consultations/ one folder per beta participant, never published without consent noted
+- staples/ the staples catalogue — one YAML per slot; schema in staples/README.md
+- engine/ the deterministic colour engine in Python; the frameworks are its specification, tests in engine/tests/
 - data/ utm-scheme.md, metrics
 - app/ empty until 2027
 

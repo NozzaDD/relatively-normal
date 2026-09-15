@@ -42,6 +42,8 @@ The analysis is a judgement across all three photos, never one. Where photos dis
 ### Confidence
 Output a confidence for each axis (high / medium / low) and **always return the top two seasons**, not one. Photo-based analysis is unreliable at the margins — lighting alone can move temperature a full step. A confident wrong answer is worse than a hedged right one.
 
+**The runner-up season** is the season that differs from the winner on exactly one axis, choosing the axis with the lowest confidence. Flip that axis one step toward the centre-or-opposite reading that changes the season, hold the other two, and read the result from the table in §3. When two axes tie for lowest confidence, temperature is the one to flip — it is the axis photo analysis gets wrong most often. Example: a Soft Autumn read with chroma high, value high and temperature medium has Soft Summer as runner-up, because temperature is the least certain axis and it is the only one that separates the two.
+
 ## 3. Mapping axes to a season
 
 | Primary | Secondary | Season |
@@ -75,7 +77,11 @@ Plus, per season: metals, where black is allowed, where white is allowed, the na
 
 A season is a region, not a point. Two Soft Autumns can look completely different: one leans **teal and ochre**, another **rust and olive**. The three intake questions pick the direction:
 
-1. **What do you wear most?** (denim / tailoring / knitwear / dresses) — sets the *foundation texture* and shifts foundations toward the neutrals that suit that garment type (denim → the blue-adjacent neutrals in the season; tailoring → the greys and browns)
+1. **What do you wear most?** (denim / tailoring / knitwear / dresses) — sets the *foundation texture* and shifts foundations toward the neutrals that suit that garment type:
+   - denim → the blue-adjacent neutrals in the season
+   - tailoring → the greys and browns
+   - knitwear → the season's warm mid-tones; texture carries the depth, so the colour does not have to
+   - dresses → the supporting tier; one garment covers the body, so it needs colour
 2. **What do you want to feel like in your clothes?** (free text) — mapped to a direction keyword: *calm, grounded, quiet* → the muted end of the season; *sharp, awake, noticed* → the clearer end; *warm, soft, easy* → the warm-neutral end
 3. **What do you reach for to look like yourself?** (free text) — the strongest signal. If they name a colour, that colour's family becomes the anchor of the supporting tier, provided it's inside the season.
 
@@ -92,6 +98,8 @@ These are the rules from the original analysis, restated so they apply to every 
 | "Light and soft colours near the face" | Whatever tier holds the colours closest to the person's own skin and hair value goes nearest the face. |
 | "Near-complementary pairs, contrast in the foundation tier" | The Wada mechanism, fully specified in `combinations.md`: opposed hue, matched chroma, wide value gap. Generated from the palette, not hand-picked. |
 | "Match your contrast" | Dress to the natural contrast between features. Low-contrast people are overwhelmed by high-contrast outfits; high-contrast people look washed out in tonal ones. |
+
+"Away from the face" is a position, not a slot, and accessories straddle it. Every accessory is tagged with a **`near_face`** flag: scarves and hats are `true`; belts, jewellery and watches are `false`. The vision model proposes the flag and the user confirms it. A near-face accessory follows the top slot's black and white rules; a hardware accessory follows the hardware rules. The mechanics are in `matching.md` §2.
 
 ## 7. Combinations are a separate step
 

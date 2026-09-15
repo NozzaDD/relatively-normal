@@ -1,0 +1,48 @@
+name: Max Mara
+slug: max-mara
+country: Italy
+ownership: family
+price_band: luxury
+core_materials:
+  - camel hair
+  - wool
+  - cashmere
+construction_notes: >
+  The house is built on coats. The camel coat is the reference piece and the
+  reason the brand matters for a Soft Autumn palette — camel sits in the
+  foundation tier. Composition varies by coat and season; verify the label rather
+  than assuming camel hair throughout.
+rubric_score:
+affiliate_available: unknown
+partnership_tier: later
+lines:
+  - name: Max Mara
+    price_band: luxury
+    notes: >
+      The main line and the coats. Highest price, strongest material case.
+  - name: "'S Max Mara"
+    price_band: upper
+    notes: >
+      More everyday than the main line, still tailoring-led.
+  - name: Max Mara Weekend
+    price_band: mid
+    notes: >
+      Casual and knitwear-led. The most realistic line for a reader buying now,
+      and the one most likely to yield staple candidates.
+  - name: Marella
+    price_band: mid
+    notes: >
+      The most accessible of the group lines.
+  - name: Sportmax
+    price_band: upper
+    notes: >
+      The most fashion-driven line; shortest relevance window, so weakest on
+      rubric field 5 (expected wear count) as a category, not necessarily per
+      garment.
+notes: >
+  Reggio Emilia. Founded 1951 by Achille Maramotti and owned by the family
+  through the Max Mara Fashion Group. Ownership is recorded as family at the
+  group level; the individual lines are group lines.
+  UNVERIFIED: per-line production locations and per-line compositions.
+  Partnership tier is later — a house this size is unlikely to work with a new
+  newsletter, and the group structure means no single point of contact.

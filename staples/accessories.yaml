@@ -1,0 +1,64 @@
+# staples/accessories.yaml — slot: accessory
+# CANDIDATES ONLY. Nothing here has been researched, priced, scored or verified.
+# hex values must be sampled from product photographs before any matching runs.
+
+- item: merino socks
+  brand: falke
+  slot: accessory
+  price: unknown
+  currency: unknown
+  fibre: merino wool blend — percentage varies by model, verify
+  rubric_score:
+  seasons_served: unknown
+  colourways:
+    - {name: black, hex: unknown, url: , affiliate: }
+    - {name: navy, hex: unknown, url: , affiliate: }
+    - {name: grey, hex: unknown, url: , affiliate: }
+  reviewed:
+  notes: >
+    German, stocked everywhere in both markets, and one of the few accessory
+    staples with a genuinely deep colour range.
+    Low stakes for colour matching — socks sit far from the face and rarely
+    change a verdict — so this is a coverage entry more than a palette one.
+
+- item: cashmere or lambswool scarf
+  brand: johnstons of elgin
+  slot: accessory
+  price: unknown
+  currency: unknown
+  fibre: cashmere or lambswool depending on model — verify
+  rubric_score:
+  seasons_served: unknown
+  colourways:
+    - {name: camel, hex: unknown, url: , affiliate: }
+    - {name: grey, hex: unknown, url: , affiliate: }
+    - {name: navy, hex: unknown, url: , affiliate: }
+  reviewed:
+  notes: >
+    Scottish, with a wide colour range — which is what makes a scarf the most
+    useful accessory staple. A scarf sits directly against the face, so it is the
+    accessory most likely to change an outfit's verdict, and the one where
+    sampling an accurate hex matters most.
+    Availability in Switzerland and Germany is online-first; confirm.
+    horizons.md §6 uses an ochre scarf as a worked example of a short-term next
+    move — that example is illustrative, not a product.
+
+- item: leather belt
+  brand: anderson's
+  slot: accessory
+  price: unknown
+  currency: unknown
+  fibre: leather — verify tannage per model
+  rubric_score:
+  seasons_served: unknown
+  colourways:
+    - {name: black, hex: unknown, url: , affiliate: }
+    - {name: brown, hex: unknown, url: , affiliate: }
+  reviewed:
+  notes: >
+    Italian, stocked by independents in both markets. Relevant to the Soft Autumn
+    rule that black is allowed below the waist and in leather and hardware —
+    a black belt is in-palette where a black scarf is not. The matcher reads
+    the accessory's near_face flag (matching.md §2, stage 1): a belt is false
+    and scores as hardware; a scarf is true and scores under the top slot's
+    rules.

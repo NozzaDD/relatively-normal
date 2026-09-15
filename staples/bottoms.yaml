@@ -1,0 +1,76 @@
+# staples/bottoms.yaml — slot: bottom
+# CANDIDATES ONLY. Nothing here has been researched, priced, scored or verified.
+# hex values must be sampled from product photographs before any matching runs.
+
+- item: five-pocket denim
+  brand: closed
+  slot: bottom
+  price: unknown
+  currency: unknown
+  fibre: cotton denim, elastane content varies by style — verify
+  rubric_score:
+  seasons_served: unknown
+  colourways:
+    - {name: indigo / rinse, hex: unknown, url: , affiliate: }
+    - {name: black, hex: unknown, url: , affiliate: }
+    - {name: ecru, hex: unknown, url: , affiliate: }
+  reviewed:
+  notes: >
+    Also in brands/ as closed. German brand, widely stocked in both markets,
+    which is the practical argument. Denim colour is washed and uneven, so a
+    single sampled hex will understate it — sample the mid-tone of the leg, not
+    the whole garment.
+
+- item: rigid selvedge denim
+  brand: nudie jeans
+  slot: bottom
+  price: unknown
+  currency: unknown
+  fibre: cotton, rigid — verify elastane content per style
+  rubric_score:
+  seasons_served: unknown
+  colourways:
+    - {name: raw indigo, hex: unknown, url: , affiliate: }
+    - {name: black, hex: unknown, url: , affiliate: }
+  reviewed:
+  notes: >
+    Candidate mainly on expected wear count (rubric field 5): the brand offers
+    repairs, which is the repairability criterion that separates a 2 from a 3.
+    VERIFY the repair offer and whether it applies in Switzerland and Germany
+    before it is used as an argument.
+
+- item: wool trouser
+  brand: cos
+  slot: bottom
+  price: unknown
+  currency: unknown
+  fibre: unknown — wool content varies by style, verify per garment
+  rubric_score:
+  seasons_served: unknown
+  colourways:
+    - {name: black, hex: unknown, url: , affiliate: }
+    - {name: navy, hex: unknown, url: , affiliate: }
+    - {name: grey, hex: unknown, url: , affiliate: }
+  reviewed:
+  notes: >
+    The trouser slot is where a deep neutral range matters most, because the
+    bottom is one of the two slots that count double in the tier-balance check
+    (matching.md §3). Fibre must be pinned down per style.
+
+- item: wool-blend trouser
+  brand: arket
+  slot: bottom
+  price: unknown
+  currency: unknown
+  fibre: unknown — verify wool percentage
+  rubric_score:
+  seasons_served: unknown
+  colourways:
+    - {name: black, hex: unknown, url: , affiliate: }
+    - {name: beige, hex: unknown, url: , affiliate: }
+  reviewed:
+  notes: >
+    Availability: Germany confirmed. Switzerland UNVERIFIED — check store and
+    shipping coverage before this goes in front of Swiss readers.
+    Included as a second trouser option because one trouser staple is not enough
+    to cover a foundation-tier gap across seasons.

@@ -1,0 +1,58 @@
+# staples/bags.yaml — slot: bag
+# CANDIDATES ONLY. Nothing here has been researched, priced, scored or verified.
+# hex values must be sampled from product photographs before any matching runs.
+
+- item: leather tote
+  brand: tsatsas
+  slot: bag
+  price: unknown
+  currency: unknown
+  fibre: leather — verify tannage and origin per model
+  rubric_score:
+  seasons_served: unknown
+  colourways:
+    - {name: black, hex: unknown, url: , affiliate: }
+  reviewed:
+  notes: >
+    German (Frankfurt), made in Germany — which is the rubric field 3 argument.
+    Prices are high enough that this may be an investment piece rather than a
+    staple; that call depends on where the staples threshold lands in
+    frameworks/material-rubric.md.
+    Colour range UNVERIFIED.
+
+- item: vegetable-tanned leather bag
+  brand: sonnenleder
+  slot: bag
+  price: unknown
+  currency: unknown
+  fibre: vegetable-tanned leather — verify per model
+  rubric_score:
+  seasons_served: unknown
+  colourways:
+    - {name: natural, hex: unknown, url: , affiliate: }
+    - {name: black, hex: unknown, url: , affiliate: }
+  reviewed:
+  notes: >
+    German, made in Germany. Vegetable-tanned leather darkens with use, so the
+    sampled hex has a shelf life that other materials do not — worth a note in
+    the tool if a bag's colour is ever matched against a palette.
+    Natural vegetable-tanned leather sits close to the camel and taupe end of a
+    warm palette, which makes it unusually useful for Soft Autumn specifically.
+
+- item: leather shoulder bag
+  brand: il bisonte
+  slot: bag
+  price: unknown
+  currency: unknown
+  fibre: vegetable-tanned cowhide — verify per model
+  rubric_score:
+  seasons_served: unknown
+  colourways:
+    - {name: natural, hex: unknown, url: , affiliate: }
+    - {name: black, hex: unknown, url: , affiliate: }
+    - {name: dark brown, hex: unknown, url: , affiliate: }
+  reviewed:
+  notes: >
+    Italian, stocked in both markets. Same darkening caveat as Sonnenleder.
+    The Italian-materials angle in CLAUDE.md applies here more directly than to
+    most staples, which is worth remembering when this one is written about.

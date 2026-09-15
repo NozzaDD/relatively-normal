@@ -57,7 +57,7 @@ Then: which colours are **over-represented** (present in the closet, absent or a
 
 ### 3c. What works now
 
-Before any suggestion to buy: the outfits that can be built *today* from the uploaded items using in-palette pieces and the combination generator. Ranked by how many items they use and how close the pair is to a named combination.
+Before any suggestion to buy: the outfits that can be built *today* from the uploaded items using in-palette pieces and the outfit pairing rules in `combinations.md` §5. Ranked by how many items they use and how close the pair is to a named combination.
 
 *"From what you own, these three work: …"*
 
@@ -71,7 +71,7 @@ The one to three purchases that would do the most, ranked by a single score:
 value = outfits_unlocked × palette_improvement ÷ price_band
 ```
 
-- `outfits_unlocked` — how many of the person's existing items the new piece pairs with (Wada check from `combinations.md` against every item in the closet, not just the canvas)
+- `outfits_unlocked` — how many of the person's existing items the new piece pairs with (the outfit pairing rules in `combinations.md` §5, against every item in the closet, not just the canvas)
 - `palette_improvement` — how much the delta in 3b falls if this piece is added
 - `price_band` — from the staples catalogue or brand database
 
