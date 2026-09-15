@@ -375,7 +375,8 @@ class TestCorporateContext(unittest.TestCase):
     def test_soft_autumn_corporate_list_is_the_owners(self):
         season = palette.get_season("soft_autumn")
         self.assertEqual(season.corporate, ["deep teal", "petrol", "chocolate", "dark olive",
-                                            "warm mid grey", "cream", "soft plum"])
+                                            "warm mid grey", "cream", "soft plum", "black",
+                                            "warm charcoal", "stone"])
         self.assertIsNotNone(season.find("warm charcoal"))
         self.assertIsNotNone(season.find("stone"))
 
@@ -406,8 +407,8 @@ class TestCorporateContext(unittest.TestCase):
         ctx = o["checks"]["context"]
         self.assertEqual(ctx["face_visible"], list(matcher.SLOTS))
         flags = {(f["item_id"], f["flag"]) for f in ctx["flags"]}
-        # rust is accent-only in that context; black is not on the Soft Autumn list (rule as written)
-        self.assertEqual(flags, {("rust scarf", "not corporate"), ("black trousers", "not corporate")})
+        # rust is accent-only in that context; black is on every corporate list
+        self.assertEqual(flags, {("rust scarf", "not corporate")})
         self.assertFalse(o["passes"])
 
     def test_corporate_at_home_checks_only_what_the_camera_sees(self):
@@ -421,7 +422,7 @@ class TestCorporateContext(unittest.TestCase):
     def test_context_gaps_per_corporate_occasion(self):
         gaps = {(g["type"], g.get("slot"), g.get("occasion")): g for g in self.result["gaps_ranked"]}
         self.assertEqual(gaps[("context_gap", "accessory", "client meeting")]["flag"], "no corporate accessory for client meeting")
-        self.assertEqual(gaps[("context_gap", "bottom", "client meeting")]["unlocks"], 1)
+        self.assertNotIn(("context_gap", "bottom", "client meeting"), gaps)  # black trousers are corporate
         self.assertEqual(gaps[("context_gap", "accessory", "video call")]["unlocks"], 1)
         self.assertNotIn(("context_gap", "bottom", "video call"), gaps)   # bottom is not face-visible at home
         self.assertNotIn(("context_gap", "top", "client meeting"), gaps)  # the teal knit is corporate
