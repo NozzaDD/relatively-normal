@@ -1,7 +1,7 @@
 # Ready now
 
 Generated from `content/backlog.yaml` against `data/metrics.yaml` on 2026-09-15. 
-Do not edit by hand — change the backlog or the metrics and regenerate.
+Do not edit by hand — change the backlog or the metrics and run `python -m content.ready_now`.
 
 **19 of 33** live entries can run today. Metrics as of 2026-09-15: 36 free subscribers, 0 paid, 0 affiliate orders, 0 consultations. No milestone events have happened yet.
 
