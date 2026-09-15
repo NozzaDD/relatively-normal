@@ -1,0 +1,31 @@
+# The five known items from frameworks/examples/nora-soft-autumn.yaml, in the
+# form engine/run.py reads: name, hex, slot, and near_face for accessories.
+#
+#   python -m engine.run --season soft_autumn --direction teal_ochre \
+#       --items engine/examples/nora-items.yaml --out result.html
+#
+# The committed nora-result.html was produced with the two optional intake
+# flags as well, so the runner-up season and the mood ranking appear:
+#       --mood "calm, put together, not trying" \
+#       --confidence temperature=medium,value=high,chroma=high
+
+- name: deep teal knit
+  hex: "1F5F63"
+  slot: top
+
+- name: black trousers
+  hex: "000000"
+  slot: bottom
+
+- name: rust scarf
+  hex: "A6502F"
+  slot: accessory
+  near_face: true
+
+- name: pure white shirt
+  hex: "FFFFFF"
+  slot: top
+
+- name: cobalt top
+  hex: "0047FF"
+  slot: top

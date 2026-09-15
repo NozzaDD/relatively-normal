@@ -22,7 +22,21 @@ python -m unittest discover -s engine/tests -t . -v
 (`pytest engine/tests` also works if pytest is installed — the tests are plain
 `unittest` cases.)
 
-Using it:
+Rendering the result screen for one person — items file in, HTML out:
+
+```sh
+python -m engine.run --season soft_autumn --direction teal_ochre --items engine/examples/nora-items.yaml --out result.html
+```
+
+`engine/examples/nora-items.yaml` holds the five Nora test-case items, so that
+command runs with no other setup. Two optional flags carry the intake answers
+the screen also shows — `--mood "calm, put together, not trying"` and
+`--confidence temperature=medium,value=high,chroma=high` (the runner-up season
+needs the confidences) — and `--json path` also writes the raw result. The
+committed `engine/examples/nora-result.html` was produced with both optional
+flags.
+
+Using it from Python:
 
 ```python
 from engine import palette, generators, matcher, horizons
@@ -55,6 +69,8 @@ horizons.result("soft_autumn", "teal_ochre", items,
 | `generators.py` | `combinations.md` §3, §5 | Opposition, Tonal and Muted exactly as specified, run over chromatic anchors only (neutrals, relative chroma ≤ 0.15, are excluded) — bands, chroma caps, Δ relative chroma limits, ΔL\* minimums, per-generator ranking, the default and calm orderings, direction re-weighting, and the optional bridge. |
 | `matcher.py` | `matching.md` §1–§5 | `extract_colours` (k-means in Lab over pixels); `score_item` with the three-stage order — slot rules, avoid list, anchors — and the full black/white tables including `near_face`; `outfit_checks` (coverage, palette share, tier balance, contrast); `pair_valid` and `outfit_valid`, the four outfit pairing rules of `combinations.md` §5 (neutrals are the ground); `rank_gaps`; `fill_gap` with Source 1 (own closet) implemented and Sources 2 and 3 as stubs returning nothing; `score_outfit` producing the §6 JSON. |
 | `horizons.py` | `horizons.md` §2–§4 | `result` — the §6 JSON extended with `long_term` (ideal palette, ranked combinations, rules in force, runner-up, direction-of-travel data) and `short_term` (current palette sorted into the ideal's tiers, the distance figure and its reading, over-represented and missing colours, works-now outfits, ranked next moves). |
+| `render.py` | `horizons.md` §6 | `render(result)` — the result dict as one self-contained HTML page: colouring and runner-up at the top, ideal palette and current wardrobe as two columns of proportional colour blocks (the current one sorted into the ideal's tiers, out and hard-miss items set apart), the distance figure, the outfit in hand with its checks, works-now and next moves side by side, combinations as swatch pairs, and the long-term data. Inline CSS, no external assets. It computes nothing: every number and verdict is read from the JSON. |
+| `run.py` | — | The command line: `python -m engine.run --season … --direction … --items items.yaml --out result.html`. Reads the items file (name, hex, slot, optional near_face and share), calls `horizons.result`, writes the page. |
 | `tests/test_nora.py` | `examples/nora-soft-autumn.yaml` | Asserts every expected verdict, the runner-up season, the named pairs' generators, and the exact three ranked lists over Soft Autumn. |
 
 ## Item shape
@@ -111,3 +127,5 @@ owner's to overrule:
 - The photo analysis in `colour-system.md` §2. The engine takes a season and
   confidences as input; reading them from photographs is the vision model's job.
 - Any sentence a person reads. The output is data; the model writes the words.
+  The renderer quotes the four distance readings from `horizons.md` §3b and
+  leaves the long-term paragraph to the owner.
