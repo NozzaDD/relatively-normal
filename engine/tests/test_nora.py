@@ -230,16 +230,17 @@ class TestNoraOutfits(unittest.TestCase):
 
     def test_ranked_gaps_carry_unlock_counts(self):
         gaps = {(g["type"], g.get("slot"), g.get("item_id")): g for g in self.result["gaps_ranked"]}
-        self.assertEqual(gaps[("empty_slot", "shoes", None)]["unlocks"], 3)
-        self.assertEqual(gaps[("empty_slot", "bag", None)]["unlocks"], 3)
+        # five example outfits, none with shoes or a bag
+        self.assertEqual(gaps[("empty_slot", "shoes", None)]["unlocks"], 5)
+        self.assertEqual(gaps[("empty_slot", "bag", None)]["unlocks"], 5)
         self.assertEqual(gaps[("hard_miss", "top", "pure white shirt")]["unlocks"], 1)
         self.assertEqual(gaps[("too_casual", "accessory", "rust scarf")]["unlocks"], 1)
         self.assertEqual(gaps[("not_enough_for_rain", "layer", None)]["unlocks"], 1)
         zone = gaps[("zone_gap", "accessory", None)]
         self.assertEqual(zone["flag"], "no accessory dressy enough for work into evening")
         self.assertEqual(zone["unlocks"], 1)
-        # the two three-outfit gaps rank first
-        self.assertEqual([g["unlocks"] for g in self.result["gaps_ranked"][:2]], [3, 3])
+        # the two five-outfit gaps rank first
+        self.assertEqual([g["unlocks"] for g in self.result["gaps_ranked"][:2]], [5, 5])
         # the layer is never a coverage gap
         self.assertNotIn(("empty_slot", "layer", None), gaps)
 
@@ -357,3 +358,75 @@ class TestPhotoIntake(unittest.TestCase):
         self.assertEqual(by_name["deep teal knit"]["dressiness"], "")
         self.assertEqual(by_name["deep teal"]["slot"], "")   # the hat: slot left blank
         self.assertTrue(Path(self.out["sheet"]).read_text().count("<img") == 4)
+
+
+class TestCorporateContext(unittest.TestCase):
+    """The two corporate example outfits: not-corporate flags by setting, and
+    the context gaps per corporate occasion."""
+
+    @classmethod
+    def setUpClass(cls):
+        from engine import run
+        cls.items = run.load_items(REPO_ROOT / "engine" / "examples" / "nora-items.csv")
+        cls.outfits = run.load_outfits(REPO_ROOT / "engine" / "examples" / "nora-outfits.csv", cls.items)
+        cls.result = horizons.result("soft_autumn", "teal_ochre", cls.items, outfits=cls.outfits)
+        cls.by_name = {o["name"]: o for o in cls.result["outfits"]}
+
+    def test_soft_autumn_corporate_list_is_the_owners(self):
+        season = palette.get_season("soft_autumn")
+        self.assertEqual(season.corporate, ["deep teal", "petrol", "chocolate", "dark olive",
+                                            "warm mid grey", "cream", "soft plum"])
+        self.assertIsNotNone(season.find("warm charcoal"))
+        self.assertIsNotNone(season.find("stone"))
+
+    def test_loader_defaults_and_values(self):
+        by = {o["name"]: o for o in self.outfits}
+        self.assertEqual((by["client meeting"]["formality"], by["client meeting"]["setting"]), ("corporate", "office"))
+        self.assertEqual((by["video call"]["formality"], by["video call"]["setting"]), ("corporate", "home"))
+        self.assertEqual((by["work Tuesday"]["formality"], by["work Tuesday"]["setting"]), ("casual", "office"))
+        blank = {"outfit": "x", "occasion": "", "dress_code": "", "weather": "", "formality": "", "setting": ""}
+        from engine import run
+        import csv, io
+        text = "outfit,occasion,dress_code,weather,formality,setting,top,bottom,layer,shoes,bag,accessory\nblank,,,,,,deep teal knit,,,,,\n"
+        import tempfile, os
+        with tempfile.NamedTemporaryFile("w", suffix=".csv", delete=False) as fh:
+            fh.write(text); path = fh.name
+        try:
+            o = run.load_outfits(path, self.items)[0]
+        finally:
+            os.unlink(path)
+        self.assertEqual((o["formality"], o["setting"]), ("casual", "office"))
+
+    def test_casual_outfits_are_not_context_checked(self):
+        self.assertFalse(self.by_name["work Tuesday"]["checks"]["context"]["checked"])
+        self.assertEqual(self.by_name["work Tuesday"]["checks"]["context"]["flags"], [])
+
+    def test_corporate_in_the_office_checks_every_slot(self):
+        o = self.by_name["client meeting"]
+        ctx = o["checks"]["context"]
+        self.assertEqual(ctx["face_visible"], list(matcher.SLOTS))
+        flags = {(f["item_id"], f["flag"]) for f in ctx["flags"]}
+        # rust is accent-only in that context; black is not on the Soft Autumn list (rule as written)
+        self.assertEqual(flags, {("rust scarf", "not corporate"), ("black trousers", "not corporate")})
+        self.assertFalse(o["passes"])
+
+    def test_corporate_at_home_checks_only_what_the_camera_sees(self):
+        o = self.by_name["video call"]
+        ctx = o["checks"]["context"]
+        self.assertEqual(ctx["face_visible"], ["top", "layer", "accessory"])
+        flags = {(f["item_id"], f["flag"]) for f in ctx["flags"]}
+        self.assertEqual(flags, {("rust scarf", "not corporate")})   # the trousers are below the camera
+        self.assertFalse(o["passes"])
+
+    def test_context_gaps_per_corporate_occasion(self):
+        gaps = {(g["type"], g.get("slot"), g.get("occasion")): g for g in self.result["gaps_ranked"]}
+        self.assertEqual(gaps[("context_gap", "accessory", "client meeting")]["flag"], "no corporate accessory for client meeting")
+        self.assertEqual(gaps[("context_gap", "bottom", "client meeting")]["unlocks"], 1)
+        self.assertEqual(gaps[("context_gap", "accessory", "video call")]["unlocks"], 1)
+        self.assertNotIn(("context_gap", "bottom", "video call"), gaps)   # bottom is not face-visible at home
+        self.assertNotIn(("context_gap", "top", "client meeting"), gaps)  # the teal knit is corporate
+
+    def test_context_gap_ranks_above_zone_gap_at_equal_unlocks(self):
+        types = [g["type"] for g in self.result["gaps_ranked"] if g["unlocks"] == 1]
+        self.assertLess(types.index("context_gap"), types.index("zone_gap"))
+        self.assertLess(matcher.GAP_SEVERITY["context_gap"], matcher.GAP_SEVERITY["zone_gap"])

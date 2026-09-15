@@ -154,7 +154,8 @@ def works_now_saved(outfits):
     """§3c with saved outfits — the ones that pass the pairing rules and both
     the zone and weather checks, in the order given."""
     return [{"name": o["name"], "occasion": o["occasion"], "dress_code": o["dress_code"],
-             "weather": o["weather"], "items": [r["item_id"] for r in o["slots"].values() if r],
+             "weather": o["weather"], "formality": o.get("formality"), "setting": o.get("setting"),
+             "items": [r["item_id"] for r in o["slots"].values() if r],
              "flags": []} for o in outfits if o["passes"]]
 
 
@@ -162,7 +163,8 @@ def works_now_saved(outfits):
 
 def next_moves(gaps_ranked, outfits, closet_scored, pairs, limit=3):
     """§3d — the one to three moves that would do the most, scored
-    value = outfits_unlocked × palette_improvement ÷ price_band.
+    value = outfits_unlocked × palette_improvement ÷ price_band. At equal
+    value, a move filling a context gap ranks above one filling a zone gap.
 
     With sources 2 and 3 stubbed, every fill comes from the closet, so:
     outfits_unlocked is the number of closet items the piece forms a valid
@@ -192,7 +194,9 @@ def next_moves(gaps_ranked, outfits, closet_scored, pairs, limit=3):
                       "for_gap": gap["type"], "outfit": gap.get("outfit"), "nearest": piece["nearest"],
                       "outfits_unlocked": unlocked, "palette_improvement": improvement,
                       "price_band": 1, "value": round(unlocked * improvement / 1, 2)})
-    moves.sort(key=lambda m: -m["value"])
+    # equal value: the gap's rank order decides, so a context-gap fill sits above a
+    # zone-gap fill of the same unlock count (horizons.md §3d)
+    moves.sort(key=lambda m: (-m["value"], matcher.GAP_SEVERITY.get(m["for_gap"], 99)))
     return moves[:limit]
 
 
@@ -253,7 +257,8 @@ def result(season_key, direction, items, outfits=None, mood=None, confidence=Non
         for o in outfits:
             names = [o["slots"].get(s) for s in matcher.SLOTS]
             specs.append({"name": o["name"], "occasion": o.get("occasion"), "dress_code": o.get("dress_code"),
-                          "weather": o.get("weather"), "items": [by_id[n] for n in names if n]})
+                          "weather": o.get("weather"), "formality": o.get("formality"), "setting": o.get("setting"),
+                          "items": [by_id[n] for n in names if n]})
     else:
         mode = "auto"
         specs = [_auto_spec(items)]

@@ -23,6 +23,8 @@ They are the same data the canvas will write later; nothing gets retyped.
 | occasion | text | from the worksheet cards, or your own |
 | dress_code | 1–5 | the dot rating on the occasion card |
 | weather | clear · rain | rain changes more than people admit |
+| formality | corporate · casual | corporate means every face-visible item must come from the season's corporate list; blank means casual |
+| setting | office · home | at home only top, layer and accessory are face-visible (the camera); in the office every slot is; blank means office |
 | top … accessory | item names from items.csv, or blank | one per slot; blank means empty |
 
 Each file holds its header row and one example row to show the format; replace the example. The filled-in test case lives in `engine/examples/nora-items.csv` and `nora-outfits.csv`, and

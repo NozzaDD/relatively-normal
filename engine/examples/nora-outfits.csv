@@ -1,4 +1,6 @@
-outfit,occasion,dress_code,weather,top,bottom,layer,shoes,bag,accessory
-work Tuesday,work,3,clear,deep teal knit,black trousers,,,,rust scarf
-dinner with friends,dinner with friends,2,rain,deep teal knit,black trousers,,,,
-work into evening,work into evening,4,clear,pure white shirt,black trousers,,,,rust scarf
+outfit,occasion,dress_code,weather,formality,setting,top,bottom,layer,shoes,bag,accessory
+work Tuesday,work,3,clear,casual,office,deep teal knit,black trousers,,,,rust scarf
+dinner with friends,dinner with friends,2,rain,casual,home,deep teal knit,black trousers,,,,
+work into evening,work into evening,4,clear,casual,office,pure white shirt,black trousers,,,,rust scarf
+client meeting,client meeting,3,clear,corporate,office,deep teal knit,black trousers,,,,rust scarf
+video call,video call,3,clear,corporate,home,deep teal knit,black trousers,,,,rust scarf

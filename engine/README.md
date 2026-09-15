@@ -73,7 +73,7 @@ horizons.result("soft_autumn", "teal_ochre", items,
 | `colour.py` | `matching.md` §1 (colour space), `combinations.md` §2 | sRGB → CIELAB (D65), Lab ↔ LCh, ΔE2000, and `relative_chroma(L, C, h)` = C\* / C\*max where C\*max is the sRGB gamut boundary at that lightness and hue, found by bisection. Pure functions. |
 | `palette.py` | `colour-system.md` §2 (runner-up), §4, §5 | Loads `seasons.yaml`; a `Season` carries its anchors as Lab with tier and relative chroma, its rules (`black`, `white`, `contrast`, `metal`, `avoid`) and its directions. `apply_direction` re-weights toward a direction. `runner_up` derives the second season from per-axis confidence. |
 | `generators.py` | `combinations.md` §3, §5 | Opposition, Tonal and Muted exactly as specified, run over chromatic anchors only (neutrals, relative chroma ≤ 0.15, are excluded) — bands, chroma caps, Δ relative chroma limits, ΔL\* minimums, per-generator ranking, the default and calm orderings, direction re-weighting, and the optional bridge. |
-| `matcher.py` | `matching.md` §1–§5 | `extract_colours` (k-means in Lab over pixels); `score_item` with the three-stage order — slot rules, avoid list, anchors — and the full black/white tables including `near_face`; `outfit_checks` (coverage, palette share, tier balance, contrast); `pair_valid` and `outfit_valid`, the four outfit pairing rules of `combinations.md` §5 (neutrals are the ground); `zone_fit` and `weather_fit`; `score_outfits` scoring every saved outfit and `rank_gaps` ranking gaps across them by unlocks, with `zone_gaps` per occasion; `fill_gap` with Source 1 (own closet) implemented and Sources 2 and 3 as stubs returning nothing; `score_outfit` producing the §6 JSON. |
+| `matcher.py` | `matching.md` §1–§5 | `extract_colours` (k-means in Lab over pixels); `score_item` with the three-stage order — slot rules, avoid list, anchors — and the full black/white tables including `near_face`; `outfit_checks` (coverage, palette share, tier balance, contrast); `pair_valid` and `outfit_valid`, the four outfit pairing rules of `combinations.md` §5 (neutrals are the ground); `zone_fit`, `weather_fit` and `context_fit` (the corporate list, face-visible by setting); `score_outfits` scoring every saved outfit and `rank_gaps` ranking gaps across them by unlocks, with `zone_gaps` per occasion; `fill_gap` with Source 1 (own closet) implemented and Sources 2 and 3 as stubs returning nothing; `score_outfit` producing the §6 JSON. |
 | `horizons.py` | `horizons.md` §2–§4 | `result` — the §6 JSON extended with `long_term` (ideal palette, ranked combinations, rules in force, runner-up, direction-of-travel data) and `short_term` (current palette sorted into the ideal's tiers, the distance figure and its reading, over-represented and missing colours, works-now outfits, ranked next moves). |
 | `render.py` | `horizons.md` §6 | `render(result)` — the result dict as one self-contained HTML page: colouring and runner-up at the top, ideal palette and current wardrobe as two columns of proportional colour blocks (the current one sorted into the ideal's tiers, out and hard-miss items set apart), the distance figure, the outfit in hand with its checks, works-now and next moves side by side, combinations as swatch pairs, and the long-term data. Inline CSS, no external assets. It computes nothing: every number and verdict is read from the JSON. |
 | `intake.py` | `matching.md` §1 | `run_folder(folder)` — every photo in a folder to `items.csv` and a `contact-sheet.html`. Alpha channel: pixels with alpha > 200; otherwise the background is the median of the four corner regions and pixels within ΔE 10 of it are dropped. `extract_colours` runs on the rest; the dominant colour is the hex. Slot and name come from `slot_item-name.jpg`; an unknown prefix is a warning, not a guess. Dressiness, weight and near_face are left blank for the person. See `examples/photos/README.md`. |
@@ -145,6 +145,16 @@ owner's to overrule:
   occasions that have a rain outfit, where it is required.
 - **Closet fills respect the occasion**: when the gap's outfit has a dress
   code, a Source 1 candidate must also sit within 1 of it.
+- **Corporate lists for the eleven seasons the owner did not spell out** are
+  derived by the rule *C\* ≤ 21 and (L\* ≤ 40 or C\* ≤ 11)*, which reproduces
+  the owner's Soft Autumn list exactly; each is commented `owner to confirm`
+  in `seasons.yaml`. Black is on a season's list only where it is a tier
+  anchor, so in Soft Autumn black trousers are *not corporate* in an office
+  setting under the rule as written.
+- **An item is corporate** when its verdict is *in* and the anchor it was
+  admitted against is on the list. **Context gaps**, like zone gaps, are
+  raised only for slots where the closet holds items. A context flag also
+  keeps an outfit out of works-now.
 
 ## What is not here
 

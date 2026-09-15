@@ -98,11 +98,13 @@ These checks run on the set:
 
 **Weather fit.** If the weather is rain, the layer slot is required and the outfit's heaviest item must have weight ≥ 3; otherwise flag *not enough for rain*. In clear weather the layer is optional.
 
-An outfit *works now* (`horizons.md` §3c) when it passes the pairing rules in `combinations.md` §5 and both of these checks.
+**Context fit.** Outfits carry a **formality** (corporate or casual; casual when blank) and a **setting** (office or home; office when blank). When formality is corporate, every item in a *face-visible* slot must be in the season's `corporate` list in `seasons.yaml` — in palette, and admitted against an anchor on that list — else flag *not corporate*, naming the item. Face-visible slots are top, layer and accessory when the setting is home (what the camera sees); every slot when the setting is office.
+
+An outfit *works now* (`horizons.md` §3c) when it passes the pairing rules in `combinations.md` §5 and the zone, weather and context checks.
 
 ## 4. Rank the gaps
 
-A gap is any of: an empty slot; an out-of-palette item in a filled slot; an item flagged too casual or too dressy; an outfit not enough for rain; a tier imbalance; a contrast mismatch; and a **zone gap** — for each occasion, a slot where the closet holds no item within 1 of the dress code, phrased *no [slot] dressy enough for [occasion]*. Rank them by **how many outfits the fix would unlock** — the count of outfits the fix would complete or repair — so an empty bottom slot that appears in four of five saved outfits outranks a slightly-off scarf in one.
+A gap is any of: an empty slot; an out-of-palette item in a filled slot; an item flagged too casual or too dressy; an outfit not enough for rain; a tier imbalance; a contrast mismatch; a **zone gap** — for each occasion, a slot where the closet holds no item within 1 of the dress code, phrased *no [slot] dressy enough for [occasion]*; and a **context gap** — for each corporate occasion, a face-visible slot where the closet holds no item from the corporate list, phrased *no corporate [slot] for [occasion]*. Rank them by **how many outfits the fix would unlock** — the count of outfits the fix would complete or repair — so an empty bottom slot that appears in four of five saved outfits outranks a slightly-off scarf in one.
 
 The top three ranked gaps are what the monthly recommendation run works from. Nothing else is sent.
 
@@ -195,14 +197,15 @@ What the matcher returns for an outfit, and what the recommendation step consume
     "layer":     null,
     "accessory": null
   },
-  "occasion": "work", "dress_code": 3, "weather": "clear",
+  "occasion": "work", "dress_code": 3, "weather": "clear", "formality": "corporate", "setting": "office",
   "checks": {
     "coverage":   {"missing": ["bottom", "accessory"]},
     "palette":    {"in": 2, "near": 1, "out": 0, "hard_miss": 0},
     "tier_mix":   {"foundation": 0.67, "supporting": 0.33, "accent": 0.0, "flag": null},
     "contrast":   {"lightness_range": 36, "season_target": "low", "flag": null},
     "zone":       {"dress_code": 3, "flags": [{"item_id": "…", "slot": "accessory", "dressiness": 1, "flag": "too casual"}]},
-    "weather":    {"weather": "clear", "layer_present": false, "heaviest": 3, "flag": null}
+    "weather":    {"weather": "clear", "layer_present": false, "heaviest": 3, "flag": null},
+    "context":    {"formality": "corporate", "setting": "office", "face_visible": ["top", "bottom", "layer", "shoes", "bag", "accessory"], "flags": [{"item_id": "…", "slot": "accessory", "flag": "not corporate"}]}
   },
   "gaps_ranked": [
     {"type": "empty_slot", "slot": "bottom", "unlocks": 4,

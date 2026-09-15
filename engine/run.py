@@ -11,8 +11,9 @@ exists. One of the two is required.
 `--items` reads either the CSV in templates/items.csv (name, slot, hex,
 dressiness, weight, near_face, notes) or a YAML list (name, hex, slot,
 optional near_face, dressiness, weight, share). `--outfits` reads the CSV in
-templates/outfits.csv (outfit, occasion, dress_code, weather, then one column
-per slot holding an item name or blank). Optional flags carry the two intake
+templates/outfits.csv (outfit, occasion, dress_code, weather, formality,
+setting, then one column per slot holding an item name or blank; formality
+defaults to casual and setting to office when blank). Optional flags carry the two intake
 inputs the result screen also uses: `--mood` (the answer to question 2) and
 `--confidence temperature=medium,value=high,chroma=high` (needed for the
 runner-up season). `--json` also writes the raw result.
@@ -98,6 +99,12 @@ def load_outfits(path, items):
         weather = (row.get("weather") or "").strip().lower() or None
         if weather not in (None, "clear", "rain"):
             raise SystemExit(f"{where}: weather must be clear or rain, got {weather!r}")
+        formality = (row.get("formality") or "").strip().lower() or "casual"
+        if formality not in ("corporate", "casual"):
+            raise SystemExit(f"{where}: formality must be corporate or casual, got {formality!r}")
+        setting = (row.get("setting") or "").strip().lower() or "office"
+        if setting not in ("office", "home"):
+            raise SystemExit(f"{where}: setting must be office or home, got {setting!r}")
         slots = {}
         for s in SLOTS:
             v = (row.get(s) or "").strip()
@@ -105,7 +112,8 @@ def load_outfits(path, items):
                 raise SystemExit(f"{where}: {s} names {v!r}, which is not in the items file")
             slots[s] = v or None
         outfits.append({"name": name, "occasion": (row.get("occasion") or "").strip() or None,
-                        "dress_code": dc, "weather": weather, "slots": slots})
+                        "dress_code": dc, "weather": weather, "formality": formality, "setting": setting,
+                        "slots": slots})
     return outfits
 
 

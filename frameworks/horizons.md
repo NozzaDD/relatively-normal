@@ -75,6 +75,8 @@ value = outfits_unlocked × palette_improvement ÷ price_band
 - `palette_improvement` — how much the delta in 3b falls if this piece is added
 - `price_band` — from the staples catalogue or brand database
 
+A next move that fills a context gap ranks above one that fills a zone gap of the same unlock count: a corporate gap blocks a whole recurring week, a zone gap one event.
+
 **Constraint: a realistic next move must pair with at least two items the person already owns.** A perfect-palette piece that goes with nothing in the closet is a long-term purchase, and it belongs in section 2, not here.
 
 Each suggestion names its source (`matching.md` §5): *already own* → *staple* → *brand*. Staples fill most short-term gaps because they're cheap, reliable and available in the colourway the gap needs; investment pieces are the long-term horizon.

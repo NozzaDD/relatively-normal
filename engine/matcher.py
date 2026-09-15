@@ -45,9 +45,14 @@ ACCENT_HEAVY_SHARE = 0.30      # twice the 15% target
 FOUNDATION_LIGHT_SHARE = 0.30  # roughly half the 55% target
 
 FACE_REASON = "black works on you, just not next to your face"
-GAP_SEVERITY = {"empty_slot": 0, "hard_miss": 1, "out": 2, "near": 3, "zone_gap": 4,
-                "too_casual": 5, "too_dressy": 5, "not_enough_for_rain": 6,
-                "tier_imbalance": 7, "contrast_mismatch": 8}
+# context gap ranks above zone gap at equal unlocks (horizons.md §3d): a corporate
+# gap blocks a recurring week, a zone gap one event
+GAP_SEVERITY = {"empty_slot": 0, "hard_miss": 1, "out": 2, "near": 3, "context_gap": 4, "zone_gap": 5,
+                "not_corporate": 6, "too_casual": 6, "too_dressy": 6, "not_enough_for_rain": 7,
+                "tier_imbalance": 8, "contrast_mismatch": 9}
+FACE_VISIBLE = {"home": ("top", "layer", "accessory"), "office": SLOTS}   # §3 context check
+FORMALITIES = ("corporate", "casual")
+SETTINGS = ("office", "home")
 
 
 # ================================================================ §1 extraction
@@ -350,7 +355,30 @@ def weather_fit(by_slot, weather):
             "flag": None if ok else "not enough for rain"}
 
 
-def outfit_checks(scored, season, dress_code=None, weather=None):
+def is_corporate_item(r, season):
+    """An item counts as corporate when it is in palette and the anchor it was
+    admitted against (base name, without the '(below waist)' qualifier) is in
+    the season's corporate list."""
+    if r["verdict"] != "in" or not r.get("admitted_nearest"):
+        return False
+    return r["admitted_nearest"].split(" (")[0] in (season.corporate or [])
+
+
+def context_fit(by_slot, formality, setting, season):
+    """§3 context fit — when formality is corporate, every item in a
+    face-visible slot must be in the season's corporate list, else "not
+    corporate" naming the item. Face-visible slots: top, layer and accessory
+    when the setting is home; every slot when it is office."""
+    if formality != "corporate":
+        return {"formality": formality, "setting": setting, "checked": False, "face_visible": [], "flags": []}
+    visible = list(FACE_VISIBLE[setting or "office"])
+    flags = [{"item_id": by_slot[s]["item_id"], "slot": s, "nearest": by_slot[s]["admitted_nearest"],
+              "flag": "not corporate"}
+             for s in visible if by_slot[s] and not is_corporate_item(by_slot[s], season)]
+    return {"formality": formality, "setting": setting, "checked": True, "face_visible": visible, "flags": flags}
+
+
+def outfit_checks(scored, season, dress_code=None, weather=None, formality=None, setting=None):
     """The checks on a set of scored items that sit in the slots (one item per
     slot at most): coverage, palette share, tier balance, contrast, the warm
     partner note, zone fit and weather fit."""
@@ -401,7 +429,8 @@ def outfit_checks(scored, season, dress_code=None, weather=None):
                          "flag": contrast_flag},
             "warm_partner": {"flag": warm_flag},
             "zone": zone_fit(filled, dress_code),
-            "weather": weather_fit(by_slot, weather)}
+            "weather": weather_fit(by_slot, weather),
+            "context": context_fit(by_slot, formality, setting, season)}
 
 
 # ================================================================ §4 gaps
@@ -424,6 +453,9 @@ def find_gaps(scored, checks):
     if checks["weather"]["flag"]:
         gaps.append({"type": "not_enough_for_rain", "slot": "layer", "flag": checks["weather"]["flag"],
                      "key": ("not_enough_for_rain",)})
+    for c in checks["context"]["flags"]:
+        gaps.append({"type": "not_corporate", "slot": c["slot"], "item_id": c["item_id"], "flag": c["flag"],
+                     "nearest": c["nearest"], "key": ("not_corporate", c["item_id"])})
     if checks["tier_mix"]["flag"]:
         gaps.append({"type": "tier_imbalance", "slot": None, "flag": checks["tier_mix"]["flag"],
                      "key": ("tier_imbalance", checks["tier_mix"]["flag"])})
@@ -461,7 +493,39 @@ def zone_gaps(closet_scored, outfits):
     return gaps
 
 
-def rank_gaps(outfits, closet_scored):
+def context_gaps(closet_scored, outfits, season):
+    """§4 context gap — for each corporate occasion, a face-visible slot where
+    the closet holds no item from the corporate list, phrased "no corporate
+    [slot] for [occasion]". Face-visible follows the occasion's outfits'
+    settings (the union when they differ). Like zone gaps, raised only where
+    the closet holds items in that slot; an empty closet slot is already the
+    empty-slot gap. `unlocks` is the number of corporate outfits with that
+    occasion."""
+    gaps = []
+    seen = set()
+    for o in outfits:
+        occ = o.get("occasion")
+        if o.get("formality") != "corporate" or occ is None or occ in seen:
+            continue
+        seen.add(occ)
+        same = [x for x in outfits if x.get("occasion") == occ and x.get("formality") == "corporate"]
+        visible = []
+        for x in same:
+            for s in FACE_VISIBLE[x.get("setting") or "office"]:
+                if s not in visible:
+                    visible.append(s)
+        for slot in SLOTS:
+            if slot not in visible:
+                continue
+            in_slot = [r for r in closet_scored if r["slot"] == slot]
+            if in_slot and not any(is_corporate_item(r, season) for r in in_slot):
+                gaps.append({"type": "context_gap", "slot": slot, "occasion": occ,
+                             "flag": f"no corporate {slot} for {occ}", "unlocks": len(same),
+                             "outfit": same[0]["name"], "outfits": [x["name"] for x in same]})
+    return gaps
+
+
+def rank_gaps(outfits, closet_scored, season=None):
     """§4 — one list of gaps across all outfits, ranked by how many outfits
     the fix would complete or repair (`unlocks`); ties break by severity:
     empty slot, hard miss, out, near, zone gap, too casual / too dressy, not
@@ -483,6 +547,8 @@ def rank_gaps(outfits, closet_scored):
         z.pop("key", None)
         z["outfits"] = [x["name"] for x in outfits if x.get("occasion") == z["occasion"]]
         ranked.append(z)
+    if season is not None:
+        ranked.extend(context_gaps(closet_scored, outfits, season))
     return sorted(ranked, key=lambda g: (-g["unlocks"], GAP_SEVERITY[g["type"]]))
 
 
@@ -552,9 +618,10 @@ def fill_gap(gap, outfit_scored, closet_scored, season, pairs, dress_code=None):
 def score_outfits(specs, season, closet_items, pairs=None):
     """Score every outfit spec and rank the gaps across them (§3, §4, §5).
 
-    Each spec: {"name", "occasion", "dress_code", "weather", "items": [...]}.
-    Returns {"outfits": [...], "gaps_ranked": [...]}. An outfit `passes` when
-    it is valid under the pairing rules and carries no zone or weather flag.
+    Each spec: {"name", "occasion", "dress_code", "weather", "formality",
+    "setting", "items": [...]}. Returns {"outfits": [...], "gaps_ranked": [...]}.
+    An outfit `passes` when it is valid under the pairing rules and carries no
+    zone, weather or context flag.
     """
     if pairs is None:
         pairs = [p for lst in generators.run(season.anchors).values() for p in lst]
@@ -570,31 +637,35 @@ def score_outfits(specs, season, closet_items, pairs=None):
         if face_colour:
             scored = [score_item(i, season, layer_face=False) if i["slot"] == "layer" else r
                       for i, r in zip(spec["items"], scored)]
-        checks = outfit_checks(scored, season, spec.get("dress_code"), spec.get("weather"))
+        formality = spec.get("formality") or "casual"
+        setting = spec.get("setting") or "office"
+        checks = outfit_checks(scored, season, spec.get("dress_code"), spec.get("weather"), formality, setting)
         pairing = outfit_valid(scored, pairs)
-        passes = pairing["valid"] and not checks["zone"]["flags"] and not checks["weather"]["flag"]
+        passes = (pairing["valid"] and not checks["zone"]["flags"] and not checks["weather"]["flag"]
+                  and not checks["context"]["flags"])
         outfits.append({"name": spec.get("name"), "occasion": spec.get("occasion"),
                         "dress_code": spec.get("dress_code"), "weather": spec.get("weather"),
+                        "formality": formality, "setting": setting,
                         "face_colour": face_colour,
                         "slots": _by_slot(scored), "checks": checks,
                         "pairing": {"valid": pairing["valid"], "flags": pairing["flags"]},
                         "passes": passes, "gaps": find_gaps(scored, checks)})
-    ranked = rank_gaps(outfits, closet_scored)
+    ranked = rank_gaps(outfits, closet_scored, season)
     by_name = {o["name"]: o for o in outfits}
     for g in ranked:
         o = by_name.get(g.get("outfit"))
         outfit_scored = [r for r in o["slots"].values() if r] if o else []
-        g["fill"] = fill_gap(g, outfit_scored, closet_scored, season, pairs,
-                             o.get("dress_code") if o else None) if g["type"] != "zone_gap" else None
+        g["fill"] = (fill_gap(g, outfit_scored, closet_scored, season, pairs, o.get("dress_code") if o else None)
+                     if g["type"] not in ("zone_gap", "context_gap") else None)
     return {"outfits": outfits, "gaps_ranked": ranked}
 
 
 def score_outfit(outfit_items, season, closet_items=None, outfit_id=None, occasion=None,
-                 dress_code=None, weather=None):
+                 dress_code=None, weather=None, formality=None, setting=None):
     """matching.md §6 — the matcher's output for one outfit. A convenience
     over `score_outfits` for a single spec."""
     spec = {"name": outfit_id, "occasion": occasion, "dress_code": dress_code,
-            "weather": weather, "items": outfit_items}
+            "weather": weather, "formality": formality, "setting": setting, "items": outfit_items}
     out = score_outfits([spec], season, closet_items if closet_items is not None else outfit_items)
     o = out["outfits"][0]
     return {"outfit_id": outfit_id, "season": season.key, "slots": o["slots"], "checks": o["checks"],

@@ -72,6 +72,7 @@ class Season:
     anchors: list          # Anchor, all three tiers, tier order then file order
     avoid: list            # hex strings
     directions: dict       # key -> {"anchor": name, "note": str}
+    corporate: list = None # anchor names that read as appropriate in a formal workplace
     direction: str = None  # set by apply_direction
 
     # -- lookups ---------------------------------------------------------
@@ -95,7 +96,7 @@ class Season:
 
     def rules(self):
         return {"black": self.black, "white": self.white, "contrast": self.contrast,
-                "metal": self.metal, "avoid": list(self.avoid)}
+                "metal": self.metal, "avoid": list(self.avoid), "corporate": list(self.corporate or [])}
 
     def axes(self):
         """The season as readings on the three axes. The axis not named by
@@ -132,7 +133,8 @@ def load_seasons(path=None):
                               metal=s["metal"], contrast=s["contrast"], black=s["black"],
                               white=s["white"], anchors=anchors,
                               avoid=[h.upper() for h in s["avoid"]],
-                              directions={k: dict(v) for k, v in s.get("directions", {}).items()})
+                              directions={k: dict(v) for k, v in s.get("directions", {}).items()},
+                              corporate=list(s.get("corporate", [])))
     _cache[path] = seasons
     return seasons
 

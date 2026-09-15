@@ -217,6 +217,11 @@ def _outfit_block(o):
     if z["checked"]:
         zf = ", ".join(f'{x["item_id"]} {x["flag"]}' for x in z["flags"])
         rows.append(("zone fit", f'dress code {_e(z["dress_code"])} · ' + (f'<span class="flag">{_e(zf)}</span>' if zf else "fits")))
+    ctx = c["context"]
+    if ctx["checked"]:
+        cf = ", ".join(f'{x["item_id"]} {x["flag"]}' for x in ctx["flags"])
+        rows.append(("context", f'corporate · {_e(ctx["setting"])} · face-visible: {_e(", ".join(ctx["face_visible"]))} · '
+                     + (f'<span class="flag">{_e(cf)}</span>' if cf else "fits")))
     w = c["weather"]
     if w["checked"]:
         rows.append(("weather", f'{_e(w["weather"])} · layer {"present" if w["layer_present"] else "absent"} · heaviest {_e(w["heaviest"])}'
@@ -229,7 +234,8 @@ def _outfit_block(o):
     meta = " · ".join(x for x in (
         _e(o["occasion"]) if o.get("occasion") else "",
         f'dress code {_e(o["dress_code"])}' if o.get("dress_code") is not None else "",
-        _e(o["weather"]) if o.get("weather") else "") if x)
+        _e(o["weather"]) if o.get("weather") else "",
+        f'{_e(o["formality"])} · {_e(o["setting"])}' if o.get("formality") else "") if x)
     status = '<span class="badge b-in">works now</span>' if o["passes"] else '<span class="badge b-out">not yet</span>'
     return (f'<div style="margin:0 0 18px"><h3>{_e(o["name"])} {status}</h3>'
             f'<div class="sub" style="margin-bottom:8px">{meta}</div>'
@@ -250,7 +256,7 @@ def _works_now(st):
         for o in outfits:
             flags = f' · <span class="flag">{_e(", ".join(o["flags"]))}</span>' if o.get("flags") else ""
             if o.get("name"):
-                meta = " · ".join(x for x in (o.get("occasion") or "", f'dress code {o["dress_code"]}' if o.get("dress_code") is not None else "", o.get("weather") or "") if x)
+                meta = " · ".join(x for x in (o.get("occasion") or "", f'dress code {o["dress_code"]}' if o.get("dress_code") is not None else "", o.get("weather") or "", f'{o["formality"]} · {o["setting"]}' if o.get("formality") else "") if x)
                 li.append(f'<li><b>{_e(o["name"])}</b> — {_e(" + ".join(o["items"]))}<br><span class="sub">{_e(meta)}</span>{flags}</li>')
             else:
                 how = o.get("matched_pair") or _name(o.get("pairing"))
@@ -273,7 +279,7 @@ def _next_moves(r):
     gaps = r["gaps_ranked"]
     if gaps:
         gl = "".join(
-            f'<li>{_e(_name(g["type"]))}{(" — " + _e(g["slot"])) if g.get("slot") and g["type"] != "zone_gap" else ""}'
+            f'<li>{_e(_name(g["type"]))}{(" — " + _e(g["slot"])) if g.get("slot") and g["type"] not in ("zone_gap", "context_gap") else ""}'
             f'{(" — " + _e(g["item_id"])) if g.get("item_id") else ""}'
             f'{(" — " + _e(g["flag"])) if g.get("flag") else ""}'
             f'{(" — nearest " + _e(g["nearest"])) if g.get("nearest") else ""}'
