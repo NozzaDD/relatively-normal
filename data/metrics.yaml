@@ -15,3 +15,5 @@ events:
   beta_session_1_published: null
   beta_round_1_complete: null
   tool_live_for_paid: null
+  trial_session_1_complete: null
+  trial_round_1_complete: null
