@@ -337,12 +337,14 @@
     properly, and the pattern underneath them written down: opposed hue, matched softness,
     a wide gap in lightness. Show the outfits, then show the rule they were all obeying.
     Ends with the ask — I'll do this for four people's October work wardrobes.
-  trigger: {kind: none}
+  trigger: {kind: event, name: building_in_public_3_published}
   status: idea
   source: Nora, 2026-09-15
   notes: >
     The recruitment post for the trial. The outfits come first and the method second;
-    that order is the whole persuasion.
+    that order is the whole persuasion. The event fires when the third building-in-public
+    note or post has gone out, which is what makes the recruitment ask land as a next step
+    rather than a cold pitch.
 
 - id: series-nature-palettes
   type: series

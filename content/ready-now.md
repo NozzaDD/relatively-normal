@@ -3,7 +3,7 @@
 Generated from `content/backlog.yaml` against `data/metrics.yaml` on 2026-09-16. 
 Do not edit by hand — change the backlog or the metrics and run `python -m content.ready_now`.
 
-**23 of 39** live entries can run today. Metrics as of 2026-09-15: 36 free subscribers, 0 paid, 0 affiliate orders, 0 consultations. No milestone events have happened yet.
+**22 of 39** live entries can run today. Metrics as of 2026-09-15: 36 free subscribers, 0 paid, 0 affiliate orders, 0 consultations. No milestone events have happened yet.
 
 ## Ready
 
@@ -18,10 +18,6 @@ Do not edit by hand — change the backlog or the metrics and run `python -m con
 - **One piece, five ways** — `series-one-piece-x-ways` · idea · evergreen
 - **What I'd style for … (and won't buy)** — `series-polly-pocket` · idea · evergreen
 - **Wanted vs bought** — `series-wanted-vs-bought` · idea · evergreen
-
-### Post (1)
-
-- **I saved the outfits I kept going back to, then worked out why they worked** — `post-reverse-engineered-outfits` · idea · evergreen
 
 ### Note (13)
 
@@ -57,6 +53,7 @@ Do not edit by hand — change the backlog or the metrics and run `python -m con
 | Someone paid me eight euros and I can't stop thinking about it | post | paid subscribers 0 of 1 |
 | How my iPad got me my first hundred subscribers | post | free subscribers 36 of 100 |
 | My outfits before the tool, and my outfits after | post | trial round 1 complete has not happened |
+| I saved the outfits I kept going back to, then worked out why they worked | post | building in public 3 published has not happened |
 | I want to stop guessing what's missing from my wardrobe. So I built the thing. | post | tool live for paid has not happened |
 | Someone bought the thing I said they should buy | note | affiliate orders 0 of 1 |
 
