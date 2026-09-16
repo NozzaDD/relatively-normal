@@ -164,6 +164,12 @@ owner's to overrule:
   closet item or none.
 - **A composition** is the set of slots an outfit fills; the summary weights
   them by life weight.
+- **A trial** (`--trial`, `frameworks/scope.md`) changes three things and
+  nothing else: the missing-from-the-closet list is suppressed (its row is
+  dropped from the page, not just emptied), the title names the occasion and
+  month, and the long-term horizon is replaced by what the slice showed. Every
+  verdict, rule, gap, bar and next move is identical to a full run — there is a
+  test that asserts exactly that.
 - **Closet fills respect the occasion**: when the gap's outfit has a dress
   code, a Source 1 candidate must also sit within 1 of it.
 - **Corporate lists for the eleven seasons the owner did not spell out** are

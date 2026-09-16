@@ -25,6 +25,8 @@ WORKS_NOW_ORDER = ("opposition", "muted", "tonal", "monochrome", "chromatic+neut
 # (tonal, then muted, then opposition).
 WORKS_NOW_ORDER_CALM = ("tonal", "monochrome", "muted", "opposition", "chromatic+neutral", "neutral+neutral")
 NOT_ENOUGH_ITEMS = "not enough items to judge — add more before reading this"
+TRIAL_NO_MISSING = ("not asked — this is one occasion's wardrobe, which cannot say "
+                    "what a whole one is missing")
 HIGH_CARE_SHARE = 0.25        # §3d materials: over this share, "you said easy" is a contradiction
 EASY_WORDS = ("easy", "low-maintenance", "low maintenance", "no fuss", "fuss-free", "throw on")
 STRATEGIC_PIECES = 3          # §2b: strongest pieces shown per direction
@@ -112,10 +114,14 @@ def pulling_against(closet_scored):
     return over
 
 
-def missing(closet_scored, season):
+def missing(closet_scored, season, suppressed=False):
     """§3b — foundation-tier anchors no in/near item lands on. Judged only
     when the closet holds MIN_ITEMS_FOR_MISSING items or more; below that the
-    list is null and `note` says so."""
+    list is null and `note` says so. A trial suppresses it outright: one
+    occasion's wardrobe cannot say what a whole one is missing."""
+    if suppressed:
+        return {"anchors": None, "note": TRIAL_NO_MISSING, "items_in_closet": len(closet_scored),
+                "suppressed": True}
     if len(closet_scored) < MIN_ITEMS_FOR_MISSING:
         return {"anchors": None, "note": NOT_ENOUGH_ITEMS, "items_in_closet": len(closet_scored)}
     landed = {r["nearest"] for r in closet_scored if r["verdict"] in ("in", "near")}
@@ -289,6 +295,68 @@ def where_they_should_head(comps, gaps_ranked):
     return out
 
 
+# ---------------------------------------------------------------- the trial slice
+
+def trial_findings(outfits, closet_scored, current, over, season):
+    """What one occasion's wardrobe actually showed — and, as plainly, what it
+    could not show. Replaces the long-term horizon in a trial: everything here
+    is read off the outfits that were checked, never extrapolated."""
+    verdicts = {}
+    for r in closet_scored:
+        verdicts[r["verdict"]] = verdicts.get(r["verdict"], 0) + 1
+    landed = []
+    for tier in TIERS:
+        for e in current["tiers"][tier]:
+            if e["verdict"] in ("in", "near") and e["nearest"] not in landed:
+                landed.append(e["nearest"])
+    recurring = [{"flag": f, "outfits": [o["name"] for o in outfits
+                                         if f in _all_flags(o)]}
+                 for f in sorted({f for o in outfits for f in _all_flags(o)})]
+    recurring = [r for r in recurring if len(r["outfits"]) > 1]
+    return {
+        "items_seen": len(closet_scored),
+        "outfits_checked": len(outfits),
+        "outfits_working": sum(1 for o in outfits if o["passes"]),
+        "verdicts": verdicts,
+        "anchors_landed_on": landed,
+        "pulling_against": [o["item"] for o in over],
+        "recurring_flags": recurring,
+        "shows": _trial_shows(landed, over, recurring, season),
+        "does_not_show": [
+            "the other occasions — weekends, travel, anything that is not work",
+            "whether the season reading holds outside this month's light",
+            "what to buy: the staples catalogue and the brand database are not wired up",
+            "body shape, which the colour system does not assess at all",
+        ],
+    }
+
+
+def _all_flags(o):
+    """Every flag an outfit carries, from whichever check raised it."""
+    c = o["checks"]
+    out = list(c["warnings"]) + [f["flag"] for f in c["zone"]["flags"]] + \
+        [f["flag"] for f in c["context"]["flags"]] + list((o.get("pairing") or {}).get("flags") or [])
+    for key in ("weather", "tier_mix", "contrast", "texture"):
+        if c.get(key, {}).get("flag"):
+            out.append(c[key]["flag"])
+    return out
+
+
+def _trial_shows(landed, over, recurring, season):
+    """The findings themselves, as short statements of fact about this slice."""
+    out = []
+    if landed:
+        out.append(f"this wardrobe sits on {len(landed)} of the season's anchors: {', '.join(landed)}")
+    if over:
+        out.append("the colours pulling against you here are "
+                   + ", ".join(f"{o['item']} (nearest {o['nearest']})" for o in over))
+    for r in recurring:
+        out.append(f"“{r['flag']}” came up in {len(r['outfits'])} of the outfits, not one")
+    if not out:
+        out.append("nothing in this slice pulls against the palette")
+    return out
+
+
 # ---------------------------------------------------------------- §2b directions, side by side
 
 def directions_block(season, closet_scored, pairs, mood=None):
@@ -442,7 +510,7 @@ def _auto_spec(items):
 
 
 def result(season_key, direction, items, outfits=None, mood=None, confidence=None,
-           materials=None, outfit_id=None, seasons_path=None):
+           materials=None, trial=None, outfit_id=None, seasons_path=None):
     """The full result screen as JSON-ready data.
 
     - `season_key`, `direction`: from colour-system.md.
@@ -454,6 +522,10 @@ def result(season_key, direction, items, outfits=None, mood=None, confidence=Non
     - `confidence`: axis -> high/medium/low, for the runner-up season.
     - `materials`: the intake file's material preferences (loves, avoids, note).
       They are reported, never scored — no verdict moves because of them.
+    - `trial`: {"occasion": str, "month": str} for the narrow first slice. It
+      suppresses the missing-from-the-closet list, titles the page for the
+      occasion, and replaces the long-term horizon with what this slice showed.
+      Every verdict, pairing rule, gap and bar is unchanged (frameworks/scope.md).
     """
     season = palette.get_season(season_key, seasons_path)
     if direction:
@@ -491,7 +563,7 @@ def result(season_key, direction, items, outfits=None, mood=None, confidence=Non
 
     current = current_palette(closet_scored, items)
     over = pulling_against(closet_scored)
-    miss = missing(closet_scored, season)
+    miss = missing(closet_scored, season, suppressed=bool(trial))
     comps = where_they_should_head(compositions(wardrobe["outfits"]), wardrobe["gaps_ranked"])
     first = wardrobe["outfits"][0]
     return {
@@ -502,6 +574,9 @@ def result(season_key, direction, items, outfits=None, mood=None, confidence=Non
         "slots": first["slots"],
         "checks": first["checks"],
         "gaps_ranked": wardrobe["gaps_ranked"],
+        "trial": (dict(trial, **{"findings": trial_findings(wardrobe["outfits"], closet_scored,
+                                                            current, over, season)})
+                  if trial else None),
         "long_term": {**lt, "direction_of_travel": direction_of_travel(current, over, miss),
                       "directions": directions_block(season, closet_scored, pairs, mood)},
         "short_term": {

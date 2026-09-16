@@ -994,3 +994,106 @@ class TestResultPage(unittest.TestCase):
             with self.subTest(fragment=fragment):
                 self.assertIn(fragment, self.html)
         self.assertNotIn("http://", self.html)
+
+
+class TestTrialSlice(unittest.TestCase):
+    """The narrow first slice (frameworks/scope.md): same engine, three
+    differences, nothing removed."""
+
+    TRIAL = REPO_ROOT / "engine" / "examples" / "trial-nora"
+
+    @classmethod
+    def setUpClass(cls):
+        from engine import render, run
+        cls.items = run.load_items(cls.TRIAL / "items.csv")
+        cls.outfits = run.load_outfits(cls.TRIAL / "outfits.csv", cls.items)
+        cls.trial = horizons.result("soft_autumn", "teal_ochre", cls.items, outfits=cls.outfits,
+                                    trial={"occasion": "work", "month": "October"})
+        cls.full = horizons.result("soft_autumn", "teal_ochre", cls.items, outfits=cls.outfits)
+        cls.html = render.render(cls.trial)
+
+    # -- the shape of the ask
+    def test_the_example_has_the_slots_the_trial_asks_for(self):
+        by_slot = {}
+        for i in self.items:
+            by_slot[i["slot"]] = by_slot.get(i["slot"], 0) + 1
+        self.assertEqual(by_slot, {"top": 4, "bottom": 4, "layer": 2, "shoes": 2, "bag": 2, "accessory": 4})
+        near = [i for i in self.items if i["slot"] == "accessory" and i.get("near_face")]
+        hardware = [i for i in self.items if i["slot"] == "accessory" and not i.get("near_face")]
+        self.assertEqual((len(near), len(hardware)), (2, 2))    # two scarves, two jewellery
+        # sixteen items plus the two optional layers
+        self.assertEqual(len(self.items) - by_slot["layer"], 16)
+
+    def test_four_outfits_covering_the_four_combinations(self):
+        self.assertEqual(len(self.outfits), 4)
+        self.assertEqual(sorted((o["formality"], o["setting"]) for o in self.outfits),
+                         [("casual", "home"), ("casual", "office"),
+                          ("corporate", "home"), ("corporate", "office")])
+        self.assertEqual(sorted(o["weather"] for o in self.outfits), ["clear", "clear", "clear", "rain"])
+        self.assertIn("work into evening", [o["occasion"] for o in self.outfits])
+
+    def test_all_four_outfits_are_checked(self):
+        self.assertEqual(len(self.trial["outfits"]), 4)
+        for o in self.trial["outfits"]:
+            with self.subTest(outfit=o["name"]):
+                for key in ("coverage", "palette", "tier_mix", "contrast", "zone", "weather",
+                            "context", "texture"):
+                    self.assertIn(key, o["checks"])
+                self.assertTrue(o["checks"]["context"]["checked"] or o["formality"] == "casual")
+                self.assertIsNotNone(o["shares"])
+                self.assertIn("before", o["improvement"])
+
+    # -- difference 1: the missing list
+    def test_trial_suppresses_the_missing_list(self):
+        miss = self.trial["short_term"]["missing"]
+        self.assertIsNone(miss["anchors"])
+        self.assertTrue(miss["suppressed"])
+        self.assertEqual(miss["note"], horizons.TRIAL_NO_MISSING)
+        self.assertNotIn("missing from the closet", self.html)
+
+    def test_a_full_run_on_the_same_wardrobe_still_lists_it(self):
+        miss = self.full["short_term"]["missing"]
+        self.assertFalse(miss.get("suppressed", False))
+        self.assertIsNotNone(miss["anchors"])          # eighteen items clears the ten-item floor
+
+    # -- difference 2: the title
+    def test_the_page_is_titled_for_the_occasion_and_month(self):
+        self.assertIn("<title>Work · October · Soft Autumn</title>", self.html)
+        self.assertIn('class="scope"', self.html)
+
+    # -- difference 3: the long-term block
+    def test_the_long_term_horizon_is_replaced(self):
+        self.assertIn("What this tells us about the rest of your wardrobe", self.html)
+        self.assertIn("What it did not", self.html)
+        self.assertNotIn("<h2>Long-term</h2>", self.html)
+        f = self.trial["trial"]["findings"]
+        self.assertEqual(f["outfits_checked"], 4)
+        self.assertTrue(f["shows"])
+        self.assertTrue(any("other occasions" in s for s in f["does_not_show"]))
+
+    # -- and nothing else moved
+    def test_every_verdict_gap_and_bar_is_identical_to_a_full_run(self):
+        shape = lambda r: ([(o["name"], s, (v or {}).get("verdict"), (v or {}).get("nearest"))
+                            for o in r["outfits"] for s, v in o["slots"].items()],
+                           [(g["type"], g.get("slot"), g["score"]) for g in r["gaps_ranked"]],
+                           [(o["name"], [(s["item_id"], s["share"]) for s in o["shares"]])
+                            for o in r["outfits"]],
+                           r["short_term"]["distance"],
+                           [m["item_id"] for m in r["short_term"]["next_moves"]])
+        self.assertEqual(shape(self.trial), shape(self.full))
+
+    def test_the_denim_bottom_is_admitted_below_the_waist(self):
+        o = next(o for o in self.trial["outfits"] if o["slots"]["bottom"]
+                 and o["slots"]["bottom"]["fibre"] == "denim")
+        self.assertEqual(o["slots"]["bottom"]["nearest"], "denim (below waist)")
+
+    def test_the_committed_result_page_is_current(self):
+        from engine import render
+        self.assertEqual((self.TRIAL / "result.html").read_text(),
+                         render.render(horizons.result(
+                             "soft_autumn", "teal_ochre", self.items, outfits=self.outfits,
+                             materials={"loves": ["wool", "cashmere"], "avoids": ["synthetic"],
+                                        "note": "something easy — I want to get dressed without thinking about it"},
+                             mood="calm, put together, not trying",
+                             confidence={"temperature": "medium", "value": "high", "chroma": "high"},
+                             trial={"occasion": "work", "month": "October"})))

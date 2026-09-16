@@ -81,6 +81,9 @@ ul { margin:6px 0 0 18px; padding:0; } li { margin:4px 0; }
 .dircard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
 table.sum { width:100%; border-collapse:collapse; font-size:13px; }
 table.sum th, table.sum td { text-align:left; padding:5px 8px; border-bottom:1px solid var(--line); }
+.chiprow { margin-bottom:8px; }
+.scope { display:inline-block; font-size:11px; letter-spacing:0.08em; text-transform:uppercase;
+         background:var(--ink); color:#fff; padding:3px 9px; border-radius:11px; }
 footer { font-size:12px; color:var(--muted); margin-top:20px; }
 """
 
@@ -124,8 +127,14 @@ def _header(r):
     conf = lt.get("confidence") or {}
     conf_txt = ", ".join(f"{k} {v}" for k, v in conf.items()) if conf else "not given"
     runner_txt = _title(runner.get("season")) if runner.get("season") else "not derived (no confidence given)"
+    tr = r.get("trial")
+    scope = ""
+    if tr:
+        label = " · ".join(x for x in (_title(tr.get("occasion")), tr.get("month")) if x)
+        scope = f'<div class="chiprow"><span class="scope">{_e(label)}</span></div>'
     return f"""
 <section>
+  {scope}
   <h2>Your colouring</h2>
   <h1>{_e(_title(lt["season"]))} · {_e(_name(lt["direction"]))}</h1>
   <div class="sub">runner-up: {_e(runner_txt)}{(" — on the " + _e(runner["axis"]) + " axis") if runner.get("axis") else ""}</div>
@@ -221,7 +230,11 @@ def _distance(st):
     else:
         over = "none"
     miss = st["missing"]
-    missing = miss["note"] if miss.get("note") else (", ".join(miss["anchors"]) or "none")
+    # a trial suppresses the row outright — the label alone would still imply an answer
+    missing_row = ""
+    if not miss.get("suppressed"):
+        missing = miss["note"] if miss.get("note") else (", ".join(miss["anchors"]) or "none")
+        missing_row = f'<dt>missing from the closet</dt><dd>{_e(missing)}</dd>' 
     return f"""
 <section>
   <h2>Distance</h2>
@@ -229,7 +242,7 @@ def _distance(st):
   <div>{_e(DISTANCE_READINGS.get(reading, ""))}</div>
   <dl class="kv" style="margin-top:10px">
     <dt>pulling against you</dt><dd>{over}</dd>
-    <dt>missing from the closet</dt><dd>{_e(missing)}</dd>
+    {missing_row}
   </dl>
 </section>"""
 
@@ -411,6 +424,27 @@ def _combinations(lt):
             f'<div class="note">ranked {_e(order)} · all pairs: {_e(counts)}</div></section>')
 
 
+def _trial(result):
+    """A trial replaces the long-term horizon: what one occasion's wardrobe
+    showed, and — as plainly — what it could not."""
+    tr = result.get("trial")
+    if not tr:
+        return ""
+    f = tr["findings"]
+    shows = "".join(f"<li>{_e(s)}</li>" for s in f["shows"])
+    cannot = "".join(f"<li>{_e(s)}</li>" for s in f["does_not_show"])
+    verdicts = " · ".join(f"{_e(_name(k))} {_e(v)}" for k, v in f["verdicts"].items())
+    return (f'<section><h2>What this tells us about the rest of your wardrobe</h2>'
+            f'<div class="sub">{_e(f["items_seen"])} items across {_e(f["outfits_checked"])} outfits, '
+            f'{_e(f["outfits_working"])} of them working today · {verdicts}</div>'
+            f'<h3 style="margin-top:12px">What the {_e(tr.get("occasion") or "trial")} case showed</h3>'
+            f'<ul>{shows}</ul>'
+            f'<h3 style="margin-top:12px">What it did not</h3><ul>{cannot}</ul>'
+            f'<div class="note">This is the first slice of a larger system, not a smaller one — '
+            f'the full wardrobe path is in the engine and simply unused here. See frameworks/scope.md.</div>'
+            f'</section>')
+
+
 def _long_term(lt):
     rules = lt["rules_in_force"]
     dt = lt["direction_of_travel"]
@@ -432,7 +466,10 @@ def _long_term(lt):
 def render(result):
     """The result dict from horizons.result -> a complete HTML document (str)."""
     lt, st = result["long_term"], result["short_term"]
-    title = f'{_title(lt["season"])} · {_name(lt["direction"])}'
+    tr = result.get("trial")
+    title = (" · ".join(x for x in (_title(tr.get("occasion")), tr.get("month"),
+                                    _title(lt["season"])) if x) if tr
+             else f'{_title(lt["season"])} · {_name(lt["direction"])}')
     body = "".join([
         _header(result),
         f'<section><div class="grid2">{_ideal_column(lt)}{_current_column(st)}</div></section>',
@@ -442,7 +479,7 @@ def render(result):
         _summary(st),
         _directions(lt),
         _combinations(lt),
-        _long_term(lt),
+        _trial(result) if result.get("trial") else _long_term(lt),
         '<footer>Every number, verdict and ranking on this page came from the engine; the page only lays them out.</footer>',
     ])
     return (f'<!doctype html>\n<html lang="en"><head><meta charset="utf-8">'

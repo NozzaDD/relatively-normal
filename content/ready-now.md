@@ -1,9 +1,9 @@
 # Ready now
 
-Generated from `content/backlog.yaml` against `data/metrics.yaml` on 2026-09-15. 
+Generated from `content/backlog.yaml` against `data/metrics.yaml` on 2026-09-16. 
 Do not edit by hand — change the backlog or the metrics and run `python -m content.ready_now`.
 
-**19 of 33** live entries can run today. Metrics as of 2026-09-15: 36 free subscribers, 0 paid, 0 affiliate orders, 0 consultations. No milestone events have happened yet.
+**20 of 34** live entries can run today. Metrics as of 2026-09-15: 36 free subscribers, 0 paid, 0 affiliate orders, 0 consultations. No milestone events have happened yet.
 
 ## Ready
 
@@ -15,6 +15,10 @@ Do not edit by hand — change the backlog or the metrics and run `python -m con
 - **One piece, five ways** — `series-one-piece-x-ways` · idea · evergreen
 - **What I'd style for … (and won't buy)** — `series-polly-pocket` · idea · evergreen
 - **Wanted vs bought** — `series-wanted-vs-bought` · idea · evergreen
+
+### Post (1)
+
+- **I saved the outfits I kept going back to, then worked out why they worked** — `post-reverse-engineered-outfits` · idea · evergreen
 
 ### Note (13)
 
@@ -36,13 +40,13 @@ Do not edit by hand — change the backlog or the metrics and run `python -m con
 
 | Entry | Type | Waiting on |
 |---|---|---|
-| Five free consultations — subscribe and comment to enter | campaign | opens 2026-10-06 (21 days) |
+| Five free consultations — subscribe and comment to enter | campaign | opens 2026-10-06 (20 days) |
 | Round two — priority for paid subscribers | campaign | beta round 1 complete has not happened |
-| The only thing worth buying this week is something filling a gap you already know | campaign | opens 2026-11-16 (62 days) |
-| Dressing for the things December actually asks of you | campaign | opens 2026-11-30 (76 days) |
-| New Year, New Gaps — four weeks, one step each | series | opens 2026-12-28 (104 days) |
+| The only thing worth buying this week is something filling a gap you already know | campaign | opens 2026-11-16 (61 days) |
+| Dressing for the things December actually asks of you | campaign | opens 2026-11-30 (75 days) |
+| New Year, New Gaps — four weeks, one step each | series | opens 2026-12-28 (103 days) |
 | Reader spotlights — five of ten questions, published with their profile | series | free subscribers 36 of 2000 |
-| What of this is actually wearable in a European autumn | series | opens 2026-09-17 (2 days) |
+| What of this is actually wearable in a European autumn | series | opens 2026-09-17 (1 days) |
 | Five hundred, and what I'd tell the version of me at thirty-six | post | free subscribers 36 of 500 |
 | A brand paid me, and here's the rule that made me say yes | post | brand partnerships 0 of 1 |
 | What I learned styling a stranger's wardrobe from seventeen photos | post | beta session 1 published has not happened |

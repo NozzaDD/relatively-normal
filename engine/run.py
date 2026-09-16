@@ -17,6 +17,13 @@ defaults to casual and setting to office when blank). Optional flags carry the t
 inputs the result screen also uses: `--mood` (the answer to question 2) and
 `--confidence temperature=medium,value=high,chroma=high` (needed for the
 runner-up season). `--json` also writes the raw result.
+
+`--trial` runs the narrow first slice — one occasion, one month
+(frameworks/scope.md). It changes three things and nothing else: the
+missing-from-the-closet list is suppressed, the page is titled for the
+occasion and month (`--occasion`, `--month`), and the long-term horizon is
+replaced by what this slice showed. Verdicts, pairing rules, combinations,
+gaps, colour-share bars and next moves are identical to a full run.
 """
 import argparse
 import csv
@@ -174,6 +181,14 @@ def main(argv=None):
     ap.add_argument("--mood", default=None, help="answer to intake question 2 (free text)")
     ap.add_argument("--confidence", default=None,
                     help="per-axis confidence, e.g. temperature=medium,value=high,chroma=high")
+    ap.add_argument("--trial", action="store_true",
+                    help="the narrow first slice: one occasion, one month (frameworks/scope.md). "
+                         "Suppresses the missing-from-the-closet list, titles the page for the "
+                         "occasion, and replaces the long-term horizon with what the slice showed. "
+                         "Every verdict, rule, gap and bar is unchanged.")
+    ap.add_argument("--month", default=None, help="the month a --trial covers, e.g. October")
+    ap.add_argument("--occasion", default=None,
+                    help="the occasion a --trial covers; defaults to the commonest in the outfits file")
     ap.add_argument("--json", default=None, help="also write the raw result JSON here")
     args = ap.parse_args(argv)
 
@@ -193,9 +208,16 @@ def main(argv=None):
         # a flag wins over the file, so one run can override a stored answer
         mood = mood or (intake_data["questions"] or {}).get("wants_to_feel")
         confidence = confidence or intake_data["confidence"]
+    trial = None
+    if args.trial:
+        occasion = args.occasion
+        if not occasion:
+            seen = [o["occasion"] for o in (outfits or []) if o.get("occasion")]
+            occasion = max(set(seen), key=seen.count) if seen else None
+        trial = {"occasion": occasion, "month": args.month}
     result = horizons.result(args.season, args.direction, items, outfits=outfits,
                              mood=mood, confidence=confidence,
-                             materials=(intake_data or {}).get("materials"))
+                             materials=(intake_data or {}).get("materials"), trial=trial)
     render.render_file(result, args.out)
     if args.json:
         with open(args.json, "w", encoding="utf-8") as fh:

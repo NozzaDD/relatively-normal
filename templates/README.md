@@ -1,5 +1,9 @@
 # Input templates
 
+`trial/` holds the narrow first ask — one occasion, one month — with its own
+README and pre-stubbed sheets. Start there unless you are doing a whole
+wardrobe.
+
 Two spreadsheets and one small YAML file. Fill the sheets in Numbers or Google
 Sheets, export as CSV, commit.
 They are the same data the canvas will write later; nothing gets retyped.
