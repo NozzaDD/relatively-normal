@@ -344,6 +344,69 @@
     The recruitment post for the trial. The outfits come first and the method second;
     that order is the whole persuasion.
 
+- id: series-nature-palettes
+  type: series
+  title: This is why that flower works, and here it is as an outfit
+  angle: >
+    Everyone posts a beautiful image and says look at these colours. Nobody says why.
+    Pull the palette out of the image, run the three tests on it — opposed hue, matched
+    relative chroma, wide value gap — and show the number. Then the wearable version:
+    the same relationship built from clothes. The explanation is the differentiator;
+    the pretty picture is table stakes.
+  trigger: {kind: none}
+  status: idea
+  source: Nora, 2026-09-15
+  notes: >
+    Draws from content/swipe/visuals/. Long term this becomes a tool feature — upload an
+    image you love, get its wearable palette. The format teaches the product.
+
+- id: series-artworks-reverse-engineered
+  type: series
+  title: The paintings I keep going back to, and the rule they all obey
+  angle: >
+    Same move as the outfits post, applied to art already saved as style inspiration.
+    Why these works hold together, shown with the three tests rather than asserted.
+  trigger: {kind: none}
+  status: idea
+  source: Nora, 2026-09-15
+  notes: Draws from content/swipe/artworks/.
+
+- id: post-before-and-after
+  type: post
+  title: My outfits before the tool, and my outfits after
+  angle: >
+    The most reliable format there is, with something most before-and-afters lack —
+    a method behind the change rather than better lighting. Same wardrobe, different
+    decisions, and the rule that produced them.
+  trigger: {kind: event, name: trial_round_1_complete}
+  status: idea
+  source: Nora, 2026-09-15
+
+- id: series-trial-feedback
+  type: series
+  title: What four strangers said about their October work wardrobes
+  angle: >
+    Findings and quotes from the first trial sessions, published as they arrive. What
+    surprised them, what the engine got wrong, what they went and bought.
+  trigger: {kind: event, name: trial_session_1_complete}
+  status: idea
+  source: Nora, 2026-09-15
+  notes: Permission to publish is asked at intake, never afterwards.
+
+- id: series-building-in-public
+  type: series
+  title: Building the thing, out loud
+  angle: >
+    A running thread from now until launch. Not a product announcement — the decisions,
+    the corrections, the day the rule turned out to be wrong. Starts before any ask is
+    made, so the trial recruitment lands as the next beat rather than a cold pitch.
+  trigger: {kind: none}
+  status: idea
+  source: Nora, 2026-09-15
+  notes: >
+    Start this week. The recruitment post (post-reverse-engineered-outfits) should
+    arrive third or fourth in the thread, not first.
+
 # ---------------------------------------------------------------------------
 # RULES that live with the backlog
 # ---------------------------------------------------------------------------

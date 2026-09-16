@@ -10,6 +10,8 @@ Everything written for an audience, plus the raw material it comes from.
 - `ready-now.md` — generated. What can run today and what is waiting on what.
 - `ready_now.py` — the generator behind that file.
 - `posts/` — the weekly newsletter posts, one markdown file each.
+- `swipe/` — saved inspiration: `formats/`, `visuals/`, `products/`,
+  `artworks/`, and `notes.md` for the observation that goes with each file.
 - `notes/` — working thoughts, half-ideas, research and observations that aren't
   yet a post.
 - `note-bank.md` — the running list of ideas, lines and fragments to pull from

@@ -3,14 +3,17 @@
 Generated from `content/backlog.yaml` against `data/metrics.yaml` on 2026-09-16. 
 Do not edit by hand — change the backlog or the metrics and run `python -m content.ready_now`.
 
-**20 of 34** live entries can run today. Metrics as of 2026-09-15: 36 free subscribers, 0 paid, 0 affiliate orders, 0 consultations. No milestone events have happened yet.
+**23 of 39** live entries can run today. Metrics as of 2026-09-15: 36 free subscribers, 0 paid, 0 affiliate orders, 0 consultations. No milestone events have happened yet.
 
 ## Ready
 
-### Series (6)
+### Series (9)
 
 - **Where you put your attention is the whole game** — `angle-attention` · idea · evergreen
 - **The stylist in your pocket** — `angle-stylist-in-your-pocket` · idea · evergreen
+- **The paintings I keep going back to, and the rule they all obey** — `series-artworks-reverse-engineered` · idea · evergreen
+- **Building the thing, out loud** — `series-building-in-public` · idea · evergreen
+- **This is why that flower works, and here it is as an outfit** — `series-nature-palettes` · idea · evergreen
 - **On the hunt** — `series-on-the-hunt` · idea · evergreen
 - **One piece, five ways** — `series-one-piece-x-ways` · idea · evergreen
 - **What I'd style for … (and won't buy)** — `series-polly-pocket` · idea · evergreen
@@ -47,11 +50,13 @@ Do not edit by hand — change the backlog or the metrics and run `python -m con
 | New Year, New Gaps — four weeks, one step each | series | opens 2026-12-28 (103 days) |
 | Reader spotlights — five of ten questions, published with their profile | series | free subscribers 36 of 2000 |
 | What of this is actually wearable in a European autumn | series | opens 2026-09-17 (1 days) |
+| What four strangers said about their October work wardrobes | series | trial session 1 complete has not happened |
 | Five hundred, and what I'd tell the version of me at thirty-six | post | free subscribers 36 of 500 |
 | A brand paid me, and here's the rule that made me say yes | post | brand partnerships 0 of 1 |
 | What I learned styling a stranger's wardrobe from seventeen photos | post | beta session 1 published has not happened |
 | Someone paid me eight euros and I can't stop thinking about it | post | paid subscribers 0 of 1 |
 | How my iPad got me my first hundred subscribers | post | free subscribers 36 of 100 |
+| My outfits before the tool, and my outfits after | post | trial round 1 complete has not happened |
 | I want to stop guessing what's missing from my wardrobe. So I built the thing. | post | tool live for paid has not happened |
 | Someone bought the thing I said they should buy | note | affiliate orders 0 of 1 |
 
