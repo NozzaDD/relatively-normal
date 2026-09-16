@@ -24,18 +24,34 @@ on the hunt for things worth buying.
 4. Sustainability is a rule, not a posture. Never describe a brand as sustainable
    unless a rubric field supports it.
 5. A rule may only name a colour that exists as an anchor in seasons.yaml.
+6. Identify a fabric by its declared fibre, never by its colour. Denim, suede and
+   silk share their colours with real palette anchors; a colour test cannot
+   separate them.
+7. When a frequency assumption doubles, a per-unit engagement assumption should
+   usually fall. This applies to the model and to any rule where more of
+   something is assumed to produce proportionally more.
+8. Report and stop rather than build something you can demonstrate is wrong.
+   Three framework errors were caught this way; none would have been caught by
+   building the instruction as written.
 
 ## Structure
 
 - voice/ samples + do/don't sheet. Read before any writing task.
-- frameworks/ colour.yaml, coverage-matrix, material-rubric.md
+- frameworks/ colour.yaml, coverage-matrix, material-rubric.md, scope.md
 - brands/ one YAML per brand; schema in brands/README.md
 - content/ calendar.md, note-bank.md, posts/
+- content/swipe/ inspiration — formats, visuals, products, artworks, and notes.md
 - consultations/ one folder per beta participant, never published without consent noted
 - staples/ the staples catalogue — one YAML per slot; schema in staples/README.md
 - engine/ the deterministic colour engine in Python; the frameworks are its specification, tests in engine/tests/
+- templates/trial/ the narrow first-trial scope — one occasion, one month
 - data/ utm-scheme.md, metrics
 - app/ empty until 2027
+
+Before building anything that sounds missing, read frameworks/scope.md. It is the
+answer to "should we build X": usually X already exists in engine/ and needs
+turning on, not writing. Narrowing happens in what we ask a person for, never by
+removing capability.
 
 ## Conventions
 
@@ -44,6 +60,20 @@ on the hunt for things worth buying.
 - Front matter on every post: title, date, format, campaign, brands, affiliate (yes/no).
 - Brand slugs are lowercase-hyphenated: max-mara-weekend, merz-b-schwanen.
 - Commit messages say what changed and why, one line.
+
+## How sessions work here
+
+The repository is the memory. Sessions are disposable: one task, one report, then
+let it go. Nothing you learned in a session survives it — if it matters, it goes
+into a file, and usually into frameworks/ or this document.
+
+Work must be merged to main before the next session starts, or the next session
+will not see it. A branch that has not landed does not exist as far as the next
+session is concerned.
+
+Separate areas of work belong in separate sessions. Engine and content do not
+share a session: they touch different files, fail in different ways, and mixing
+them makes both reports worse.
 
 ## When unsure
 
