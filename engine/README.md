@@ -26,7 +26,7 @@ python -m unittest discover -s engine/tests -t . -v
 Rendering the result screen for one person — items file in, HTML out:
 
 ```sh
-python -m engine.run --season soft_autumn --direction teal_ochre --items engine/examples/nora-items.csv --outfits engine/examples/nora-outfits.csv --out result.html
+python -m engine.run --season soft_autumn --direction teal_ochre --items engine/examples/nora-items.csv --outfits engine/examples/nora-outfits.csv --intake engine/examples/nora-intake.yaml --out result.html
 ```
 
 `engine/examples/nora-items.csv` and `nora-outfits.csv` hold the five Nora
@@ -86,9 +86,11 @@ horizons.result("soft_autumn", "teal_ochre", items,
 {"id": "…", "hex": "1F5F63", "slot": "top", "near_face": True, "share": 1.0}
 ```
 
-- `slot`: `top` | `bottom` | `dress` | `layer` | `shoes` | `bag` | `accessory` —
-  the layer is optional and never a coverage gap; a dress fills top and bottom
-  together and counts as four in the tier balance
+- `slot`: `top` | `bottom` | `dress` | `layer` | `base` | `shoes` | `bag` |
+  `accessory` — the layer and the base are optional and never coverage gaps; a
+  dress fills top and bottom together and counts as four in the tier balance
+- `fibre` and `surface`, both optional. `fibre: denim` is the only thing that
+  makes the denim rule apply — colour never does (`matching.md` §2)
 - `dressiness` 1–4 (casual to dressy) and `weight` 1–4 (light to heavy, thermal)
   — read by the zone and weather checks; absent on YAML items unless given
 - `near_face`: read for the accessory slot only. Scarves and hats `True`; belts,
@@ -146,6 +148,22 @@ owner's to overrule:
 - **Zone gaps** are raised only for slots where the closet holds items at all;
   an empty closet slot is already the empty-slot gap. The layer is checked for
   occasions that have a rain outfit, where it is required.
+- **Denim's colour signature** (`matcher.looks_like_denim`, L\* 15–70, hue
+  240–290, chroma 12–45) is used *only* by intake to propose `fibre: denim` in
+  the notes. It never writes the fibre column and never applies the rule.
+- **Texture** is only checked when every visible item has a surface set: an
+  unset surface is unknown, not smooth.
+- **A covered base** sits outside the tier balance, the contrast spread and the
+  texture read, as well as the face rules.
+- **Life weight** defaults to 5 where an occasion has none, and a gap's score is
+  `unlocks × mean life weight` of the outfits it affects.
+- **Strategic pieces** per direction are anchors the closet has nothing within
+  ΔE 12 of, ranked by how many owned items each would pair with.
+- **Best improvement** considers additions into empty coverage slots only, from
+  the closet; staples and brands are still stubs, so today every answer is a
+  closet item or none.
+- **A composition** is the set of slots an outfit fills; the summary weights
+  them by life weight.
 - **Closet fills respect the occasion**: when the gap's outfit has a dress
   code, a Source 1 candidate must also sit within 1 of it.
 - **Corporate lists for the eleven seasons the owner did not spell out** are

@@ -52,6 +52,12 @@ Every rule names a colour that exists as an anchor for that season (CLAUDE.md, h
 
 **Accessories carry a `near_face` flag, set at tagging.** Scarves and hats are `true`; belts, jewellery and watches are `false`. The vision model proposes the flag and the user confirms it. When `near_face` is true the accessory is evaluated under the top slot's rules for black and white; when false, under the hardware rules. The flag is stored on the item and is what stage 1 reads.
 
+**Denim is identified by an item's declared `fibre`, never by its colour.** When `fibre` is `denim`, the season's `denim` rule applies — every season's is `admitted_below_waist`: below the waist denim is always *in*; at the face a wash below **L\* 45** reads as a dark neutral and is admitted, above it is *out*. Everyone wears denim as a neutral and no season's palette contains it, so it needs a rule of its own.
+
+It cannot be a colour rule, because denim is not separable from real palette colours. True Summer's foundation **slate blue `5E6F8C`** sits at L\* 46.5, hue 273°, chroma 18.0 — inside any band drawn around blue denim, and between a stonewash (C\* 21.2) and a light wash (C\* 17.0) in chroma. A colour test would call that foundation a light-wash denim and reject it at the face. Dark indigo jeans (L\* 19–25) would fall outside the same band and be scored against the palette instead, which is what the rule exists to prevent. So the fibre decides, and the person declares it. Intake may *propose* `fibre: denim` from a colour signature — the same pattern as `near_face` — but it writes the proposal into the notes and leaves the `fibre` column empty, so a hint never applies the rule on its own.
+
+**The base slot** (worn under a top or a layer, small visible area) is judged only when neither a top nor a layer is present. Otherwise it is *in* by default, and sits outside the tier balance, the contrast and texture reads, and the face rules.
+
 **The layer slot** (coat, jacket, cardigan) and **the dress slot** are face positions for the black and white rules — the top column above — only when the outfit has no in-palette accessory with `near_face: true`. When such an accessory is present, the accessory is the face colour and the layer or dress is evaluated as away from the face, under the bottom / shoes / bag column, with `nearest` reported as *black (away from face)*. A scarf sits between the collar, or the neckline, and the face. Scored on its own, outside an outfit, a layer or a dress is at the face.
 
 Only the `below_waist_or_hardware` row of the black table was specified by the owner; the remaining rows follow the same pattern (the top slot and near-face accessories are the face positions, the rest are not) and are to be confirmed.
@@ -82,7 +88,7 @@ An item's verdict is its dominant colour's verdict, with secondary colours repor
 
 ## 3. Score the outfit
 
-Items sit in seven slots: **top, bottom, dress, layer, shoes, bag, accessory**. A **dress** fills both the top and the bottom coverage requirement — an outfit with a dress and no top or bottom is complete — and counts as four in the tier balance, since it covers what top and bottom would together. A dress alongside a top or a bottom is warned as *dress plus separates*; a warning, not a failure. The layer (coat, jacket, cardigan — anything worn over the top) is optional and is never a coverage gap. Every item also carries two attributes set at tagging: **dressiness** (1–4, casual to dressy) and **weight** (1–4, light to heavy — thermal warmth, not colour temperature). Outfits carry an **occasion**, a **dress code** (1–5) and **weather** (clear or rain).
+Items sit in eight slots: **top, bottom, dress, layer, base, shoes, bag, accessory**. A **base** is worn under a top or a layer and shows only a little; it is optional and never a coverage gap. Every item also carries an optional **fibre** (wool, cotton, silk, linen, denim, leather, suede, cashmere, synthetic, other) and an optional **surface** (smooth, matte, textured, pile, shiny). A **dress** fills both the top and the bottom coverage requirement — an outfit with a dress and no top or bottom is complete — and counts as four in the tier balance, since it covers what top and bottom would together. A dress alongside a top or a bottom is warned as *dress plus separates*; a warning, not a failure. The layer (coat, jacket, cardigan — anything worn over the top) is optional and is never a coverage gap. Every item also carries two attributes set at tagging: **dressiness** (1–4, casual to dressy) and **weight** (1–4, light to heavy — thermal warmth, not colour temperature). Outfits carry an **occasion**, a **dress code** (1–5) and **weather** (clear or rain).
 
 These checks run on the set:
 
@@ -98,13 +104,15 @@ These checks run on the set:
 
 **Weather fit.** If the weather is rain, the layer slot is required and the outfit's heaviest item must have weight ≥ 3; otherwise flag *not enough for rain*. In clear weather the layer is optional.
 
+**Texture fit.** When the season's contrast is low, or the outfit's own lightness range is under 25, an outfit whose visible items are **all `surface: smooth`** is flagged *flat — needs texture*. A muted palette carries low colour contrast, so texture is what stops it reading flat. An unset surface is unknown, not smooth: the check only runs when every visible item has one.
+
 **Context fit.** Outfits carry a **formality** (corporate or casual; casual when blank) and a **setting** (office or home; office when blank). When formality is corporate, every item in a *face-visible* slot must be in the season's `corporate` list in `seasons.yaml` — in palette, and admitted against an anchor on that list — else flag *not corporate*, naming the item. Face-visible slots are top, dress, layer and accessory when the setting is home (what the camera sees); every slot when the setting is office.
 
 An outfit *works now* (`horizons.md` §3c) when it passes the pairing rules in `combinations.md` §5 and the zone, weather and context checks.
 
 ## 4. Rank the gaps
 
-A gap is any of: an empty slot; an out-of-palette item in a filled slot; an item flagged too casual or too dressy; an outfit not enough for rain; a tier imbalance; a contrast mismatch; a **zone gap** — for each occasion, a slot where the closet holds no item within 1 of the dress code, phrased *no [slot] dressy enough for [occasion]*; and a **context gap** — for each corporate occasion, a face-visible slot where the closet holds no item from the corporate list, phrased *no corporate [slot] for [occasion]*. Rank them by **how many outfits the fix would unlock** — the count of outfits the fix would complete or repair — so an empty bottom slot that appears in four of five saved outfits outranks a slightly-off scarf in one.
+A gap is any of: an empty slot; an out-of-palette item in a filled slot; an item flagged too casual or too dressy; an outfit not enough for rain; a tier imbalance; a contrast mismatch; a **zone gap** — for each occasion, a slot where the closet holds no item within 1 of the dress code, phrased *no [slot] dressy enough for [occasion]*; and a **context gap** — for each corporate occasion, a face-visible slot where the closet holds no item from the corporate list, phrased *no corporate [slot] for [occasion]*. Each occasion carries a **life weight**, 1 to 10, for how much of the person's life it represents; an occasion with none counts as 5. Rank gaps by **unlocks × the mean life weight of the outfits the gap affects** — not by unlocks alone. Optimise for what gets worn most: a fix that serves the recurring week outranks one that serves a single event, even when both unlock the same number of outfits.
 
 The top three ranked gaps are what the monthly recommendation run works from. Nothing else is sent.
 
@@ -198,7 +206,8 @@ What the matcher returns for an outfit, and what the recommendation step consume
     "layer":     null,
     "accessory": null
   },
-  "occasion": "work", "dress_code": 3, "weather": "clear", "formality": "corporate", "setting": "office",
+  "occasion": "work", "dress_code": 3, "weather": "clear", "life_weight": 8,
+  "formality": "corporate", "setting": "office",
   "checks": {
     "coverage":   {"missing": ["bottom", "accessory"]},
     "warnings":   [],
@@ -207,7 +216,8 @@ What the matcher returns for an outfit, and what the recommendation step consume
     "contrast":   {"lightness_range": 36, "season_target": "low", "flag": null},
     "zone":       {"dress_code": 3, "flags": [{"item_id": "…", "slot": "accessory", "dressiness": 1, "flag": "too casual"}]},
     "weather":    {"weather": "clear", "layer_present": false, "heaviest": 3, "flag": null},
-    "context":    {"formality": "corporate", "setting": "office", "face_visible": ["top", "bottom", "layer", "shoes", "bag", "accessory"], "flags": [{"item_id": "…", "slot": "accessory", "flag": "not corporate"}]}
+    "context":    {"formality": "corporate", "setting": "office", "face_visible": ["top", "bottom", "layer", "shoes", "bag", "accessory"], "flags": [{"item_id": "…", "slot": "accessory", "flag": "not corporate"}]},
+    "texture":    {"checked": true, "surfaces": ["textured", "smooth"], "all_smooth": false, "flag": null}
   },
   "gaps_ranked": [
     {"type": "empty_slot", "slot": "bottom", "unlocks": 4,
@@ -218,7 +228,7 @@ What the matcher returns for an outfit, and what the recommendation step consume
 }
 ```
 
-Every item carries `dressiness` (1–4) and `weight` (1–4) from tagging; accessory items additionally carry `near_face` (true / false) — see §2, stage 1. Each slot entry in the JSON reports them alongside the verdict. With saved outfits the matcher returns one such block per outfit and a single `gaps_ranked` across all of them.
+Every item carries `dressiness` (1–4), `weight` (1–4), and optionally `fibre` and `surface`, from tagging; accessory items additionally carry `near_face` (true / false) — see §2, stage 1. Each slot entry in the JSON reports them alongside the verdict. With saved outfits the matcher returns one such block per outfit and a single `gaps_ranked` across all of them.
 
 The language model receives this JSON and writes the sentence a person reads. It never computes anything in it.
 

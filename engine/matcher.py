@@ -22,19 +22,33 @@ import random
 from . import colour, generators
 from .palette import TIERS, TIER_SHARE
 
-SLOTS = ("top", "bottom", "dress", "layer", "shoes", "bag", "accessory")
-COVERAGE_SLOTS = ("top", "bottom", "shoes", "bag", "accessory")   # layer is optional, never a coverage gap;
+SLOTS = ("top", "bottom", "dress", "layer", "base", "shoes", "bag", "accessory")
+COVERAGE_SLOTS = ("top", "bottom", "shoes", "bag", "accessory")   # layer and base are optional, never coverage gaps;
                                                                   # a dress fills top and bottom together
 FACE_SLOTS = ("top", "dress", "layer")                            # positions next to the face for the slot rules;
-                                                                  # a layer or a dress yields the face to an in-palette near-face accessory
+                                                                  # a layer or a dress yields the face to an in-palette near-face accessory;
+                                                                  # a base never sits at the face
 YIELDING_SLOTS = ("layer", "dress")
-BODY_WEIGHT = {"top": 2, "bottom": 2, "dress": 4, "layer": 2, "shoes": 1, "bag": 1, "accessory": 1}  # §3 tier balance
+COVERING_SLOTS = ("top", "layer")                                 # a base under one of these is not judged
+BODY_WEIGHT = {"top": 2, "bottom": 2, "dress": 4, "layer": 2, "base": 0,  # §3 tier balance; a base is excluded
+               "shoes": 1, "bag": 1, "accessory": 1}
+# How much of the body each slot covers, for the colour-share bars (horizons.md §3c).
+AREA_WEIGHT = {"dress": 4, "top": 2, "bottom": 2, "layer": 2, "shoes": 1, "bag": 1, "accessory": 1, "base": 0.5}
+
+# Item fields set at tagging (matching.md §3).
+FIBRES = ("wool", "cotton", "silk", "linen", "denim", "leather", "suede", "cashmere", "synthetic", "other")
+SURFACES = ("smooth", "matte", "textured", "pile", "shiny")
+HIGH_CARE_FIBRES = ("suede", "silk", "cashmere")   # the fibres the "you said easy" challenge counts
+
+DENIM_FACE_L = 45.0       # §2 denim: below this a wash reads as a dark neutral at the face
+FLAT_LIGHTNESS_RANGE = 25.0   # §3 texture: below this spread an all-smooth outfit reads flat
 
 RULE_TRIGGER_DE = 8.0     # stage 1: item within ΔE 8 of 000000 / FFFFFF
 HARD_MISS_DE = 8.0        # stage 2: ΔE to an avoid colour
 IN_DE = 12.0              # stage 3
 NEAR_DE = 16.0
 
+DEFAULT_LIFE_WEIGHT = 5   # §4: an occasion with no life_weight counts as the midpoint
 ZONE_TOLERANCE = 1        # §3 zone fit: dressiness within 1 of the occasion's dress code
 RAIN_MIN_WEIGHT = 3       # §3 weather fit: heaviest item at least this in rain
 
@@ -51,7 +65,7 @@ FACE_REASON = "black works on you, just not next to your face"
 # gap blocks a recurring week, a zone gap one event
 GAP_SEVERITY = {"empty_slot": 0, "hard_miss": 1, "out": 2, "near": 3, "context_gap": 4, "zone_gap": 5,
                 "not_corporate": 6, "too_casual": 6, "too_dressy": 6, "not_enough_for_rain": 7,
-                "tier_imbalance": 8, "contrast_mismatch": 9}
+                "flat_texture": 8, "tier_imbalance": 9, "contrast_mismatch": 10}
 FACE_VISIBLE = {"home": ("top", "dress", "layer", "accessory"), "office": SLOTS}   # §3 context check
 FORMALITIES = ("corporate", "casual")
 SETTINGS = ("office", "home")
@@ -117,6 +131,8 @@ def _is_face(slot, near_face, layer_face=True):
     neckline) and the face."""
     if slot in YIELDING_SLOTS:
         return layer_face
+    if slot == "base":
+        return False
     return slot == "top" or (slot == "accessory" and bool(near_face))
 
 
@@ -138,6 +154,21 @@ def _black_rule(season, slot, face):
             where = "away from face"
         return "in", f"black ({where})", None
     raise ValueError(f"{season.key}: unknown black rule {rule!r}")
+
+
+def _denim_rule(season, slot, face, L):
+    """Stage 1 denim (matching.md §2). Fired by the item's declared `fibre`,
+    never by its colour — see the file for why. Below the waist denim is
+    always in; at the face a wash below DENIM_FACE_L reads as a dark neutral
+    and is admitted, above it is out."""
+    rule = getattr(season, "denim", None) or "admitted_below_waist"
+    if rule != "admitted_below_waist":
+        raise ValueError(f"{season.key}: unknown denim rule {rule!r}")
+    if not face:
+        return "in", "denim (below waist)", None
+    if L < DENIM_FACE_L:
+        return "in", "denim (dark wash)", "a dark wash reads as a neutral at the face"
+    return "out", "denim", "a light wash next to your face"
 
 
 def _white_rule(season, slot, face):
@@ -182,14 +213,18 @@ def nearest_anchor(lab, season):
     return min(((a, colour.delta_e_2000(lab, a.lab)) for a in season.anchors), key=lambda x: x[1])
 
 
-def score_item(item, season, layer_face=True):
+def score_item(item, season, layer_face=True, base_judged=True):
     """matching.md §2 — the three-stage evaluation of one item's dominant colour.
     Stage 1 slot rules, then stage 2 avoid list, then stage 3 anchors. The first
     stage that returns a verdict wins.
 
     `layer_face` matters only for the layer and dress slots: True (the default,
     and the closet-level reading) treats them as face positions; `score_outfits`
-    passes False when the outfit has an in-palette near-face accessory."""
+    passes False when the outfit has an in-palette near-face accessory.
+
+    `base_judged` matters only for the base slot: True (the default, and the
+    closet-level reading) scores it like any other item; `score_outfits` passes
+    False when a top or a layer covers it, and the base is then in by default."""
     slot = item["slot"]
     if slot not in SLOTS:
         raise ValueError(f"item {item.get('id')!r}: unknown slot {slot!r}")
@@ -198,9 +233,12 @@ def score_item(item, season, layer_face=True):
     rel = colour.relative_chroma(L, C, h)
     near_face = item.get("near_face")
     face = _is_face(slot, near_face, layer_face)
+    fibre = (item.get("fibre") or None)
+    surface = (item.get("surface") or None)
     result = {"item_id": item.get("id"), "slot": slot,
               "near_face": near_face if slot == "accessory" else None,
               "dressiness": item.get("dressiness"), "weight": item.get("weight"),
+              "fibre": fibre, "surface": surface, "area": AREA_WEIGHT[slot],
               "dominant": {"hex": item["hex"].upper().lstrip('#'), "lab": [round(v, 2) for v in lab],
                            "relative_chroma": round(rel, 3), "neutral": generators.is_neutral(rel)},
               "verdict": None, "nearest": None, "delta_e": None, "tier": None,
@@ -210,6 +248,25 @@ def score_item(item, season, layer_face=True):
               "admitted_nearest": None, "admitted_delta_e": None, "where": None}
     if slot == "accessory" and near_face is None:
         result["flags"].append("near_face not set; scored as hardware")
+
+    # -- a base under a top or a layer is not judged: too little of it shows
+    if slot == "base" and not base_judged:
+        result.update(verdict="in", nearest="under a top", delta_e=0.0, stage=0,
+                      reason="only a little of it shows", where="covered",
+                      admitted_nearest="under a top", admitted_delta_e=0.0)
+        return result
+
+    # -- stage 1: denim, by declared fibre, before the colour rules
+    if fibre == "denim":
+        verdict, nearest, reason = _denim_rule(season, slot, face, L)
+        result.update(verdict=verdict, nearest=nearest, delta_e=0.0, stage=1, reason=reason,
+                      where="at the face" if face else "away from the face")
+        if verdict == "in":
+            result.update(admitted_nearest=nearest, admitted_delta_e=0.0)
+        else:
+            a2, de2 = nearest_anchor(lab, season)
+            result.update(admitted_nearest=a2.name, admitted_delta_e=round(de2, 1))
+        return result
 
     # -- stage 1: slot-conditional rules
     for rule_hex, rule_fn in (("000000", _black_rule), ("FFFFFF", _white_rule)):
@@ -255,6 +312,15 @@ def score_item(item, season, layer_face=True):
 
 def score_items(items, season):
     return [score_item(i, season) for i in items]
+
+
+def looks_like_denim(hex_str):
+    """The colour signature intake uses to *propose* fibre: denim for the
+    person to confirm (engine/intake.py). It never applies the denim rule on
+    its own — only a declared fibre does. Blue in the denim region: L* 15-70,
+    Lab hue 240-290, chroma 12-45."""
+    L, C, h = colour.lab_to_lch(colour.hex_to_lab(hex_str))
+    return 15 <= L <= 70 and 240 <= h <= 290 and 12 <= C <= 45
 
 
 # ================================================================ neutrals are the ground (combinations.md §5)
@@ -389,12 +455,31 @@ def context_fit(by_slot, formality, setting, season):
     return {"formality": formality, "setting": setting, "checked": True, "face_visible": visible, "flags": flags}
 
 
+def texture_fit(visible, season, lightness_range):
+    """§3 texture — when the season's contrast is low, or the outfit's own
+    lightness range is under FLAT_LIGHTNESS_RANGE, an outfit whose visible
+    items are all `surface: smooth` is flagged "flat — needs texture". A muted
+    palette carries low colour contrast, so texture is what stops it reading
+    flat. Not checked unless every visible item has a surface set: an unset
+    surface is unknown, not smooth."""
+    low = str(season.contrast).startswith("low") or lightness_range < FLAT_LIGHTNESS_RANGE
+    surfaces = [r.get("surface") for r in visible]
+    known = surfaces and all(s is not None for s in surfaces)
+    if not low or not known:
+        return {"checked": bool(low and visible), "surfaces": surfaces, "all_smooth": None, "flag": None}
+    all_smooth = all(s == "smooth" for s in surfaces)
+    return {"checked": True, "surfaces": surfaces, "all_smooth": all_smooth,
+            "flag": "flat — needs texture" if all_smooth else None}
+
+
 def outfit_checks(scored, season, dress_code=None, weather=None, formality=None, setting=None):
     """The checks on a set of scored items that sit in the slots (one item per
     slot at most): coverage, palette share, tier balance, contrast, the warm
     partner note, zone fit and weather fit."""
     by_slot = _by_slot(scored)
     filled = [r for r in by_slot.values() if r]
+    # a base under a top or a layer barely shows: out of the tier, contrast and texture reads
+    visible = [r for r in filled if not (r["slot"] == "base" and r.get("where") == "covered")]
 
     # coverage — the five body slots; layer is optional; a dress fills top and bottom
     missing = [s for s in COVERAGE_SLOTS if by_slot[s] is None
@@ -409,7 +494,7 @@ def outfit_checks(scored, season, dress_code=None, weather=None, formality=None,
         palette[r["verdict"]] += 1
 
     # tier balance — in/near items with a tier, weighted by body coverage
-    counted = [r for r in filled if r["verdict"] in ("in", "near") and r["tier"]]
+    counted = [r for r in visible if r["verdict"] in ("in", "near") and r["tier"] and BODY_WEIGHT[r["slot"]]]
     total = sum(BODY_WEIGHT[r["slot"]] for r in counted)
     mix = {t: 0.0 for t in TIERS}
     for r in counted:
@@ -423,7 +508,7 @@ def outfit_checks(scored, season, dress_code=None, weather=None, formality=None,
         tier_flag = "foundation-light"
 
     # contrast
-    Ls = [r["dominant"]["lab"][0] for r in filled]
+    Ls = [r["dominant"]["lab"][0] for r in visible]
     spread = round(max(Ls) - min(Ls), 1) if len(Ls) >= 2 else 0.0
     limit = CONTRAST_MAX_RANGE.get(season.contrast, 100)
     contrast_flag = "higher contrast than your natural colouring" if spread > limit else None
@@ -444,9 +529,10 @@ def outfit_checks(scored, season, dress_code=None, weather=None, formality=None,
             "contrast": {"lightness_range": spread, "season_target": season.contrast,
                          "flag": contrast_flag},
             "warm_partner": {"flag": warm_flag},
-            "zone": zone_fit(filled, dress_code),
+            "zone": zone_fit(visible, dress_code),
             "weather": weather_fit(by_slot, weather),
-            "context": context_fit(by_slot, formality, setting, season)}
+            "context": context_fit(by_slot, formality, setting, season),
+            "texture": texture_fit(visible, season, spread)}
 
 
 # ================================================================ §4 gaps
@@ -472,6 +558,9 @@ def find_gaps(scored, checks):
     for c in checks["context"]["flags"]:
         gaps.append({"type": "not_corporate", "slot": c["slot"], "item_id": c["item_id"], "flag": c["flag"],
                      "nearest": c["nearest"], "key": ("not_corporate", c["item_id"])})
+    if checks["texture"]["flag"]:
+        gaps.append({"type": "flat_texture", "slot": None, "flag": checks["texture"]["flag"],
+                     "key": ("flat_texture",)})
     if checks["tier_mix"]["flag"]:
         gaps.append({"type": "tier_imbalance", "slot": None, "flag": checks["tier_mix"]["flag"],
                      "key": ("tier_imbalance", checks["tier_mix"]["flag"])})
@@ -542,11 +631,15 @@ def context_gaps(closet_scored, outfits, season):
 
 
 def rank_gaps(outfits, closet_scored, season=None):
-    """§4 — one list of gaps across all outfits, ranked by how many outfits
-    the fix would complete or repair (`unlocks`); ties break by severity:
-    empty slot, hard miss, out, near, zone gap, too casual / too dressy, not
-    enough for rain, tier, contrast. Each gap names the first outfit it was
-    found in, which is the outfit its fill is searched against."""
+    """§4 — one list of gaps across all outfits, ranked by **unlocks × the mean
+    life weight of the outfits the gap affects**, so a fix that serves the
+    recurring week outranks one that serves a single event. Ties break by
+    severity: empty slot, hard miss, out, near, context gap, zone gap, too
+    casual / too dressy, not enough for rain, flat texture, tier, contrast.
+    Each gap names the first outfit it was found in, which is the outfit its
+    fill is searched against."""
+    weights = {o["name"]: (o.get("life_weight") if o.get("life_weight") is not None else DEFAULT_LIFE_WEIGHT)
+               for o in outfits}
     merged = {}
     for o in outfits:
         for g in o["gaps"]:
@@ -565,7 +658,12 @@ def rank_gaps(outfits, closet_scored, season=None):
         ranked.append(z)
     if season is not None:
         ranked.extend(context_gaps(closet_scored, outfits, season))
-    return sorted(ranked, key=lambda g: (-g["unlocks"], GAP_SEVERITY[g["type"]]))
+    for g in ranked:
+        names = g.get("outfits") or ([g["outfit"]] if g.get("outfit") else [])
+        ws = [weights.get(n, DEFAULT_LIFE_WEIGHT) for n in names] or [DEFAULT_LIFE_WEIGHT]
+        g["mean_life_weight"] = round(sum(ws) / len(ws), 1)
+        g["score"] = round(g["unlocks"] * g["mean_life_weight"], 1)
+    return sorted(ranked, key=lambda g: (-g["score"], -g["unlocks"], GAP_SEVERITY[g["type"]]))
 
 
 # ================================================================ §5 fills
@@ -645,7 +743,11 @@ def score_outfits(specs, season, closet_items, pairs=None):
     by_id = {r["item_id"]: r for r in closet_scored}
     outfits = []
     for spec in specs:
-        scored = [by_id[i["id"]] if i.get("id") in by_id else score_item(i, season) for i in spec["items"]]
+        by_slot_spec = {i["slot"] for i in spec["items"]}
+        base_judged = not (by_slot_spec & set(COVERING_SLOTS))
+        scored = [score_item(i, season, base_judged=base_judged) if i["slot"] == "base"
+                  else (by_id[i["id"]] if i.get("id") in by_id else score_item(i, season))
+                  for i in spec["items"]]
         # a layer or a dress yields the face to an in-palette near-face accessory (§2):
         # the accessory is the face colour, so they are re-scored away from it
         face_colour = next((r["item_id"] for r in scored
@@ -661,6 +763,8 @@ def score_outfits(specs, season, closet_items, pairs=None):
                   and not checks["context"]["flags"])
         outfits.append({"name": spec.get("name"), "occasion": spec.get("occasion"),
                         "dress_code": spec.get("dress_code"), "weather": spec.get("weather"),
+                        "life_weight": (spec.get("life_weight") if spec.get("life_weight") is not None
+                                        else DEFAULT_LIFE_WEIGHT),
                         "formality": formality, "setting": setting,
                         "face_colour": face_colour,
                         "slots": _by_slot(scored), "checks": checks,
@@ -680,8 +784,8 @@ def score_outfit(outfit_items, season, closet_items=None, outfit_id=None, occasi
                  dress_code=None, weather=None, formality=None, setting=None):
     """matching.md §6 — the matcher's output for one outfit. A convenience
     over `score_outfits` for a single spec."""
-    spec = {"name": outfit_id, "occasion": occasion, "dress_code": dress_code,
-            "weather": weather, "formality": formality, "setting": setting, "items": outfit_items}
+    spec = {"name": outfit_id, "occasion": occasion, "dress_code": dress_code, "weather": weather,
+            "formality": formality, "setting": setting, "items": outfit_items}
     out = score_outfits([spec], season, closet_items if closet_items is not None else outfit_items)
     o = out["outfits"][0]
     return {"outfit_id": outfit_id, "season": season.key, "slots": o["slots"], "checks": o["checks"],

@@ -19,7 +19,7 @@ import html
 import json
 
 TIERS = ("foundations", "supporting", "accents")
-SLOTS = ("top", "bottom", "dress", "layer", "shoes", "bag", "accessory")
+SLOTS = ("top", "bottom", "dress", "layer", "base", "shoes", "bag", "accessory")
 
 # horizons.md §3b, quoted; keyed by the `reading` the engine reports.
 DISTANCE_READINGS = {
@@ -71,6 +71,16 @@ ul { margin:6px 0 0 18px; padding:0; } li { margin:4px 0; }
 .slot .c { height:48px; border-radius:6px; border:1px solid rgba(0,0,0,0.12); margin-bottom:4px; }
 .slot .c.empty { background:repeating-linear-gradient(45deg,#f1ede6,#f1ede6 6px,#e6e0d6 6px,#e6e0d6 12px); }
 .note { font-size:13px; color:var(--muted); border-left:3px solid var(--line); padding-left:10px; margin-top:10px; }
+.shares { display:flex; height:30px; border-radius:6px; overflow:hidden; border:1px solid rgba(0,0,0,0.12); margin:6px 0 2px; }
+.shares > span { display:block; }
+.sharekey { font-size:11px; color:var(--muted); margin-bottom:8px; }
+.sharekey b { color:var(--ink); font-weight:600; }
+.improve { background:#f6f3ed; border-radius:8px; padding:10px 12px; margin-top:10px; }
+.cols3 { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+@media (max-width:760px) { .cols3 { grid-template-columns:1fr; } }
+.dircard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+table.sum { width:100%; border-collapse:collapse; font-size:13px; }
+table.sum th, table.sum td { text-align:left; padding:5px 8px; border-bottom:1px solid var(--line); }
 footer { font-size:12px; color:var(--muted); margin-top:20px; }
 """
 
@@ -161,13 +171,43 @@ def _current_column(st):
 
 
 def _attrs(x):
-    """'d3 · w2 · ' when an item carries dressiness and weight, else ''."""
+    """'d3 · w2 · wool · textured · ' for whatever the item carries."""
     parts = []
     if x.get("dressiness") is not None:
         parts.append(f'd{x["dressiness"]}')
     if x.get("weight") is not None:
         parts.append(f'w{x["weight"]}')
+    if x.get("fibre"):
+        parts.append(str(x["fibre"]))
+    if x.get("surface"):
+        parts.append(str(x["surface"]))
     return (" · ".join(parts) + " · ") if parts else ""
+
+
+def _share_bar(shares):
+    """The colour-share bar: each item's dominant colour, as wide as the area of
+    the body it covers."""
+    if not shares:
+        return ""
+    bar = "".join(f'<span style="flex:{s["share"]};background:#{_e(s["hex"])}" '
+                  f'title="{_e(s["item_id"])} · {_e(s["hex"])} · {round(s["share"] * 100)}%"></span>'
+                  for s in shares)
+    key = " · ".join(f'<b>{_e(s["item_id"])}</b> {round(s["share"] * 100)}% {_badge(s["verdict"])}'
+                     for s in shares)
+    return f'<div class="shares">{bar}</div><div class="sharekey">{key}</div>'
+
+
+def _improvement(imp):
+    """The one addition that most lowers this outfit's distance, with the shares
+    it would then have."""
+    if not imp or not imp.get("item_id"):
+        return (f'<div class="improve"><b>Best improvement</b><br><span class="sub">'
+                f'{_e((imp or {}).get("reason") or "none available")}</span></div>')
+    return (f'<div class="improve"><b>Best improvement</b> — add <b>{_e(imp["item_id"])}</b> '
+            f'({_e(imp["slot"])}, {_e(imp["source"])})<br>'
+            f'<span class="sub">distance {_e(imp["before"])} → {_e(imp["after"])} '
+            f'(−{_e(imp["improvement"])}) · {_e(imp["reason"])}</span>'
+            f'{_share_bar(imp["shares"])}</div>')
 
 
 def _distance(st):
@@ -218,6 +258,11 @@ def _outfit_block(o):
     if z["checked"]:
         zf = ", ".join(f'{x["item_id"]} {x["flag"]}' for x in z["flags"])
         rows.append(("zone fit", f'dress code {_e(z["dress_code"])} · ' + (f'<span class="flag">{_e(zf)}</span>' if zf else "fits")))
+    tx = c.get("texture") or {}
+    if tx.get("checked"):
+        rows.append(("texture", (f'<span class="flag">{_e(tx["flag"])}</span>' if tx["flag"]
+                                 else "has texture")
+                     + f' · {_e(", ".join(str(s) for s in tx["surfaces"] if s))}'))
     ctx = c["context"]
     if ctx["checked"]:
         cf = ", ".join(f'{x["item_id"]} {x["flag"]}' for x in ctx["flags"])
@@ -238,9 +283,13 @@ def _outfit_block(o):
         _e(o["weather"]) if o.get("weather") else "",
         f'{_e(o["formality"])} · {_e(o["setting"])}' if o.get("formality") else "") if x)
     status = '<span class="badge b-in">works now</span>' if o["passes"] else '<span class="badge b-out">not yet</span>'
-    return (f'<div style="margin:0 0 18px"><h3>{_e(o["name"])} {status}</h3>'
-            f'<div class="sub" style="margin-bottom:8px">{meta}</div>'
-            f'<div class="slots">{slots}</div><dl class="kv" style="margin-top:12px">{kv}</dl></div>')
+    extra = (f'{" · life weight " + _e(o["life_weight"]) if o.get("life_weight") is not None else ""}'
+             f'{" · distance " + _e(o["distance"]) if o.get("distance") is not None else ""}')
+    return (f'<div style="margin:0 0 22px"><h3>{_e(o["name"])} {status}</h3>'
+            f'<div class="sub" style="margin-bottom:8px">{meta}{extra}</div>'
+            f'{_share_bar(o.get("shares"))}'
+            f'<div class="slots">{slots}</div><dl class="kv" style="margin-top:12px">{kv}</dl>'
+            f'{_improvement(o.get("improvement"))}</div>')
 
 
 def _outfits(r):
@@ -292,6 +341,57 @@ def _next_moves(r):
     return f'<div><h2>Next move</h2>{body}</div>'
 
 
+def _directions(lt):
+    """§2b — the three directions side by side. The person picks."""
+    dirs = lt.get("directions") or []
+    if not dirs:
+        return ""
+    cards = []
+    for d in dirs:
+        sw = "".join(f'<span class="mini" style="background:#{_e(a["hex"])}" title="{_e(a["name"])}"></span>'
+                     for t in TIERS for a in d["palette"][t][:6])
+        combos = "".join(f'<div class="sub">{_e(c["name"])} <span class="n">{_e(c["generator"])}</span></div>'
+                         for c in d["combinations"]) or '<div class="sub">none</div>'
+        pieces = "".join(f'<div><span class="mini" style="background:#{_e(p["hex"])}"></span> '
+                         f'{_e(p["anchor"])} <span class="sub">{_e(p["tier"])} · pairs with {_e(p["pairs_with"])}</span></div>'
+                         for p in d["strategic_pieces"]) or '<div class="sub">nothing missing</div>'
+        cards.append(f'<div class="dircard"><b>{_e(_name(d["direction"]))}</b>'
+                     f'<div class="sub" style="margin-bottom:6px">{_e(d["note"])}</div>'
+                     f'<div style="margin-bottom:6px">{sw}</div>'
+                     f'<div class="sharekey" style="margin:6px 0 2px"><b>Combinations</b></div>{combos}'
+                     f'<div class="sharekey" style="margin:8px 0 2px"><b>Would do most for this closet</b></div>{pieces}</div>')
+    return (f'<section><h2>Three directions</h2><div class="cols3">{"".join(cards)}</div>'
+            f'<div class="note">The wardrobe you have is the same in all three. You pick; the engine does not.</div></section>')
+
+
+def _summary(st):
+    """The shapes actually worn, weighted by life weight, and where they head."""
+    comps = st.get("compositions") or []
+    if not comps:
+        return ""
+    rows = []
+    for c in comps:
+        h = c.get("heads_toward")
+        head = "—" if not h else (_e(_name(h["type"]))
+                                  + (" — " + _e(h["slot"]) if h.get("slot") else "")
+                                  + (" · fill: " + _e(h["fill"]) if h.get("fill") else ""))
+        rows.append(f'<tr><td>{_e(c["composition"])}</td><td>{_e(c["count"])}</td>'
+                    f'<td>{_e(c["life_weight"])}</td><td>{_e(c["passes"])} of {_e(c["count"])}</td>'
+                    f'<td>{head}</td></tr>')
+    mats = st.get("materials") or {}
+    notes = "".join(f'<div class="note">{"⚑ " if n["kind"] == "challenge" else ""}{_e(n["text"])}</div>'
+                    for n in mats.get("notes") or [])
+    said = ""
+    if mats.get("loves") or mats.get("avoids") or mats.get("sentence"):
+        said = (f'<div class="sub" style="margin-top:10px">You said: loves '
+                f'{_e(", ".join(mats.get("loves") or []) or "—")} · avoids '
+                f'{_e(", ".join(mats.get("avoids") or []) or "—")}'
+                f'{" · “" + _e(mats["sentence"]) + "”" if mats.get("sentence") else ""}</div>')
+    return (f'<section><h2>What you actually wear</h2>'
+            f'<table class="sum"><tr><th>Composition</th><th>Outfits</th><th>Life weight</th>'
+            f'<th>Work now</th><th>Should head</th></tr>{"".join(rows)}</table>{said}{notes}</section>')
+
+
 def _combinations(lt):
     # the bridge's hex is looked up by name from the ideal palette in the same JSON
     hex_of = {a["name"]: a["hex"] for t in TIERS for a in lt["ideal_palette"][t]}
@@ -339,6 +439,8 @@ def render(result):
         _distance(st),
         _outfits(result),
         f'<section><div class="grid2">{_works_now(st)}{_next_moves(result)}</div></section>',
+        _summary(st),
+        _directions(lt),
         _combinations(lt),
         _long_term(lt),
         '<footer>Every number, verdict and ranking on this page came from the engine; the page only lays them out.</footer>',

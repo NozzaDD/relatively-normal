@@ -4,6 +4,8 @@
 # scores by Lab distance to these anchors, so each tier needs spread, not volume.
 # `avoid` = the clearest misses for that season; used to flag hard failures.
 # `black` and `white` = where those two can sit relative to the face.
+# `denim` = where denim can sit. Denim is identified by an item's declared fibre,
+#   never by its colour (matching.md §2); every season admits it below the waist.
 # `contrast` = the natural contrast level to dress to.
 # `directions` = named leans within the season, selected by the intake questions.
 # `corporate` = the anchors that read as appropriate in a formal workplace (matching.md §3, context check).
@@ -23,6 +25,7 @@ light_spring:
   contrast: low-medium
   black: away_from_face
   white: cream_only
+  denim: admitted_below_waist
   foundations: [{name: warm ivory, hex: "F5EBD8"}, {name: cream, hex: "EFE6D3"}, {name: camel, hex: "C9A66B"}, {name: light warm grey, hex: "C8C2B4"}, {name: soft navy, hex: "3F4F6B"}, {name: warm taupe, hex: "B8A48A"}, {name: pebble, hex: "89837D"}, {name: warm charcoal, hex: "403A35"}]  # cream added so `white: cream_only` names an anchor — hex reused from Soft Autumn, owner to confirm — pebble added as the mid neutral; warm charcoal added as the dark neutral — hex chosen inside the season's warm temperature, owner to confirm
   supporting: [{name: peach, hex: "F2B58B"}, {name: warm aqua, hex: "8FD1C8"}, {name: light coral, hex: "F08A7A"}, {name: butter yellow, hex: "F3DC8C"}, {name: leaf green, hex: "9BC46A"}]
   accents: [{name: bright coral, hex: "FF6F61"}, {name: turquoise, hex: "3FBFBF"}, {name: warm pink, hex: "F48FB1"}, {name: golden yellow, hex: "F5C531"}]
@@ -39,6 +42,7 @@ true_spring:
   contrast: medium
   black: away_from_face
   white: cream_only
+  denim: admitted_below_waist
   foundations: [{name: cream, hex: "EFE6D3"}, {name: camel, hex: "C69C6D"}, {name: warm beige, hex: "D9C4A1"}, {name: golden brown, hex: "9C6B3F"}, {name: warm navy, hex: "34495E"}, {name: khaki, hex: "A89A6B"}, {name: linen, hex: "DBD3CD"}, {name: pebble, hex: "89837D"}, {name: warm charcoal, hex: "403A35"}]  # cream added so `white: cream_only` names an anchor — hex reused from Soft Autumn, owner to confirm — linen added as the light neutral; pebble added as the mid neutral; warm charcoal added as the dark neutral — hex chosen inside the season's warm temperature, owner to confirm
   supporting: [{name: coral, hex: "F0766B"}, {name: warm green, hex: "7BB661"}, {name: turquoise, hex: "40C4B8"}, {name: marigold, hex: "F2A93B"}, {name: warm pink, hex: "F28C9D"}]
   accents: [{name: tomato red, hex: "E63B2E"}, {name: bright yellow, hex: "FFD23F"}, {name: kelly green, hex: "4CAF50"}, {name: bright turquoise, hex: "00BFA5"}]
@@ -55,6 +59,7 @@ bright_spring:
   contrast: high
   black: anywhere
   white: anywhere
+  denim: admitted_below_waist
   foundations: [{name: black, hex: "000000"}, {name: bright navy, hex: "1F3A93"}, {name: charcoal, hex: "3C3C3C"}, {name: warm white, hex: "FBF7EF"}, {name: camel, hex: "C8A165"}, {name: cool taupe, hex: "A79E8F"}, {name: linen, hex: "DBD3CD"}, {name: pebble, hex: "89837D"}]  # black added so `black: anywhere` names an anchor — owner to confirm — linen added as the light neutral; pebble added as the mid neutral — hex chosen inside the season's warm temperature, owner to confirm
   supporting: [{name: bright coral, hex: "FF5A4E"}, {name: emerald, hex: "1DB47A"}, {name: bright turquoise, hex: "1FC9C3"}, {name: hot pink, hex: "FF4F9A"}, {name: lemon, hex: "FFE94D"}]
   accents: [{name: true red, hex: "E5202B"}, {name: cobalt, hex: "1E5EFF"}, {name: bright violet, hex: "8E44FF"}, {name: lime, hex: "B7F542"}]
@@ -71,6 +76,7 @@ light_summer:
   contrast: low
   black: avoid
   white: soft_white
+  denim: admitted_below_waist
   foundations: [{name: soft white, hex: "F4F2EE"}, {name: light grey, hex: "C9CDD2"}, {name: powder blue, hex: "B7CADB"}, {name: rose beige, hex: "D6C3BD"}, {name: soft navy, hex: "4C5B78"}, {name: slate grey, hex: "818488"}, {name: graphite, hex: "393C3F"}]  # slate grey added as the mid neutral; graphite added as the dark neutral — hex chosen inside the season's cool temperature, owner to confirm
   supporting: [{name: lavender, hex: "B9A9D6"}, {name: dusty rose, hex: "D9A5B3"}, {name: sky blue, hex: "8FB8DE"}, {name: sage, hex: "A9C1A9"}, {name: soft lemon, hex: "F2E8A6"}]
   accents: [{name: periwinkle, hex: "8C9EFF"}, {name: raspberry, hex: "D2527F"}, {name: mint, hex: "9FE2CF"}, {name: cool pink, hex: "F7A1C4"}]
@@ -87,6 +93,7 @@ true_summer:
   contrast: low-medium
   black: away_from_face
   white: soft_white
+  denim: admitted_below_waist
   foundations: [{name: cool grey, hex: "9AA0A6"}, {name: slate blue, hex: "5E6F8C"}, {name: cocoa rose, hex: "8C6E70"}, {name: soft white, hex: "F2F1EE"}, {name: dusty navy, hex: "3E4A63"}, {name: slate grey, hex: "818488"}, {name: graphite, hex: "393C3F"}]  # slate grey added as the mid neutral; graphite added as the dark neutral — hex chosen inside the season's cool temperature, owner to confirm
   supporting: [{name: rose, hex: "C98A9A"}, {name: cool blue, hex: "6F95C4"}, {name: mauve, hex: "A88BA8"}, {name: blue-green, hex: "5FA8A0"}, {name: cool sage, hex: "8FA89B"}]
   accents: [{name: raspberry, hex: "B03A64"}, {name: cornflower, hex: "5B7FE0"}, {name: orchid, hex: "C070C0"}, {name: teal, hex: "2E8B8B"}]
@@ -103,6 +110,7 @@ soft_summer:
   contrast: low
   black: away_from_face
   white: soft_white
+  denim: admitted_below_waist
   foundations: [{name: mushroom, hex: "A99E94"}, {name: grey-blue, hex: "8A98A8"}, {name: soft charcoal, hex: "5E5E62"}, {name: dusty taupe, hex: "B5A79B"}, {name: soft white, hex: "F0EEEA"}, {name: slate grey, hex: "818488"}, {name: graphite, hex: "393C3F"}]  # slate grey added as the mid neutral; graphite added as the dark neutral — hex chosen inside the season's cool temperature, owner to confirm
   supporting: [{name: dusty rose, hex: "C79CA0"}, {name: sage, hex: "9CAB98"}, {name: dusty blue, hex: "7F98B5"}, {name: mauve, hex: "9E8A9E"}, {name: soft plum, hex: "7C6478"}]
   accents: [{name: dusty teal, hex: "5E8F8A"}, {name: muted raspberry, hex: "A5546F"}, {name: soft periwinkle, hex: "8A94C8"}, {name: muted lavender, hex: "A091BF"}]
@@ -119,6 +127,7 @@ soft_autumn:
   contrast: low
   black: below_waist_or_hardware
   white: cream_only
+  denim: admitted_below_waist
   foundations: [{name: cream, hex: "EFE6D3"}, {name: deep teal, hex: "1F5F63"}, {name: dark olive, hex: "4E5A3A"}, {name: warm mid grey, hex: "8B8378"}, {name: chocolate, hex: "4A3728"}, {name: camel, hex: "B89A6B"}, {name: warm charcoal, hex: "3A3632"}, {name: stone, hex: "D6CEC2"}]  # warm charcoal and stone added as neutrals (relative chroma <= 0.15); before them Soft Autumn had only warm mid grey under the line
   supporting: [{name: ochre, hex: "C7912B"}, {name: moss, hex: "7C8A4B"}, {name: dusty rose, hex: "C09A93"}, {name: sage, hex: "9AA88B"}, {name: warm taupe, hex: "A8957C"}, {name: petrol, hex: "2C5A66"}, {name: cinnamon, hex: "B5693C"}, {name: soft plum, hex: "5C3A4E"}, {name: old gold, hex: "B8963E"}]
   accents: [{name: rust, hex: "A6502F"}, {name: muted teal, hex: "5A9A9C"}, {name: salmon, hex: "D9907A"}, {name: mustard, hex: "D3A82A"}]
@@ -136,6 +145,7 @@ true_autumn:
   contrast: medium
   black: below_waist_or_hardware
   white: cream_only
+  denim: admitted_below_waist
   foundations: [{name: cream, hex: "EFE6D3"}, {name: dark chocolate, hex: "3B2A1E"}, {name: olive, hex: "5B6236"}, {name: camel, hex: "B48A50"}, {name: warm khaki, hex: "9B8B5A"}, {name: teal, hex: "236E6B"}, {name: linen, hex: "DBD3CD"}, {name: pebble, hex: "89837D"}, {name: warm charcoal, hex: "403A35"}]  # cream added so `white: cream_only` names an anchor — hex reused from Soft Autumn, owner to confirm — linen added as the light neutral; pebble added as the mid neutral; warm charcoal added as the dark neutral — hex chosen inside the season's warm temperature, owner to confirm
   supporting: [{name: rust, hex: "B4552D"}, {name: mustard, hex: "D3A12A"}, {name: terracotta, hex: "C2673F"}, {name: forest, hex: "2F5D3A"}, {name: warm burgundy, hex: "7A2E2E"}]
   accents: [{name: pumpkin, hex: "E07A2D"}, {name: tomato, hex: "C93B2B"}, {name: bright olive, hex: "8DA33B"}, {name: turquoise, hex: "2A9D8F"}]
@@ -152,6 +162,7 @@ deep_autumn:
   contrast: medium-high
   black: anywhere_with_warm_partner
   white: cream_or_warm_white
+  denim: admitted_below_waist
   foundations: [{name: black, hex: "000000"}, {name: cream, hex: "EFE6D3"}, {name: warm white, hex: "FBF7EF"}, {name: black-brown, hex: "2B1E17"}, {name: dark olive, hex: "3F4A2A"}, {name: deep teal, hex: "184E4F"}, {name: chocolate, hex: "4A3323"}, {name: warm charcoal, hex: "3A3632"}, {name: linen, hex: "DBD3CD"}, {name: pebble, hex: "89837D"}]  # black, cream and warm white added so `black: anywhere_with_warm_partner` and `white: cream_or_warm_white` name anchors — cream/warm white hexes reused from Soft Autumn/Bright Spring, owner to confirm — linen added as the light neutral; pebble added as the mid neutral — hex chosen inside the season's warm temperature, owner to confirm
   supporting: [{name: burgundy, hex: "6E1F2E"}, {name: forest, hex: "1F4D3A"}, {name: rust, hex: "9E4A24"}, {name: mustard, hex: "C3931F"}, {name: aubergine, hex: "4B2A45"}]
   accents: [{name: tomato red, hex: "C6362A"}, {name: pumpkin, hex: "DA6F1E"}, {name: emerald, hex: "1B7A55"}, {name: hot mustard, hex: "E8B52F"}]
@@ -168,6 +179,7 @@ deep_winter:
   contrast: high
   black: anywhere
   white: pure_white
+  denim: admitted_below_waist
   foundations: [{name: black, hex: "000000"}, {name: charcoal, hex: "333336"}, {name: navy, hex: "1B2A4A"}, {name: pure white, hex: "FFFFFF"}, {name: deep pine, hex: "1E3D34"}, {name: slate grey, hex: "818488"}]  # slate grey added as the mid neutral — hex chosen inside the season's cool temperature, owner to confirm
   supporting: [{name: burgundy, hex: "6B1E3A"}, {name: royal blue, hex: "2540B8"}, {name: emerald, hex: "0F7A5A"}, {name: deep plum, hex: "4A1E5C"}, {name: cool red, hex: "B3122E"}]
   accents: [{name: hot pink, hex: "E8207A"}, {name: icy blue, hex: "BFE3FF"}, {name: bright teal, hex: "008B8B"}, {name: icy lilac, hex: "D9CFF5"}]
@@ -184,6 +196,7 @@ true_winter:
   contrast: high
   black: anywhere
   white: pure_white
+  denim: admitted_below_waist
   foundations: [{name: black, hex: "000000"}, {name: pure white, hex: "FFFFFF"}, {name: cool charcoal, hex: "36393F"}, {name: navy, hex: "14213D"}, {name: cool grey, hex: "8E9AAF"}, {name: slate grey, hex: "818488"}]  # slate grey added as the mid neutral — hex chosen inside the season's cool temperature, owner to confirm
   supporting: [{name: true red, hex: "D0021B"}, {name: royal blue, hex: "1F45C9"}, {name: emerald, hex: "17A06B"}, {name: fuchsia, hex: "D61C8E"}, {name: cool purple, hex: "5A2D91"}]
   accents: [{name: icy pink, hex: "F5C6DA"}, {name: icy blue, hex: "C5E3F6"}, {name: lemon ice, hex: "F5F5A0"}, {name: bright teal, hex: "00A8A8"}]
@@ -200,6 +213,7 @@ bright_winter:
   contrast: very_high
   black: anywhere
   white: pure_white
+  denim: admitted_below_waist
   foundations: [{name: black, hex: "000000"}, {name: pure white, hex: "FFFFFF"}, {name: bright navy, hex: "0B2E6B"}, {name: charcoal, hex: "2F2F33"}, {name: cool taupe, hex: "9C9A9A"}]
   supporting: [{name: cobalt, hex: "0047FF"}, {name: hot pink, hex: "FF2E88"}, {name: emerald, hex: "00A86B"}, {name: true red, hex: "E4002B"}, {name: bright purple, hex: "7B2CBF"}]
   accents: [{name: lemon, hex: "FFF44F"}, {name: bright turquoise, hex: "00E5E5"}, {name: icy lilac, hex: "D8C8FF"}, {name: lime, hex: "9EF01A"}]

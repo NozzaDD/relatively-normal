@@ -69,6 +69,7 @@ class Season:
     contrast: str
     black: str
     white: str
+    denim: str
     anchors: list          # Anchor, all three tiers, tier order then file order
     avoid: list            # hex strings
     directions: dict       # key -> {"anchor": name, "note": str}
@@ -95,7 +96,7 @@ class Season:
         raise ValueError(f"{self.key}: white rule {self.white!r} names no anchor in the tiers")
 
     def rules(self):
-        return {"black": self.black, "white": self.white, "contrast": self.contrast,
+        return {"black": self.black, "white": self.white, "denim": self.denim, "contrast": self.contrast,
                 "metal": self.metal, "avoid": list(self.avoid), "corporate": list(self.corporate or [])}
 
     def axes(self):
@@ -131,7 +132,7 @@ def load_seasons(path=None):
         anchors = [Anchor.from_hex(a["name"], a["hex"], tier) for tier in TIERS for a in s[tier]]
         seasons[key] = Season(key=key, primary=s["primary"], secondary=s["secondary"],
                               metal=s["metal"], contrast=s["contrast"], black=s["black"],
-                              white=s["white"], anchors=anchors,
+                              white=s["white"], denim=s.get("denim", "admitted_below_waist"), anchors=anchors,
                               avoid=[h.upper() for h in s["avoid"]],
                               directions={k: dict(v) for k, v in s.get("directions", {}).items()},
                               corporate=list(s.get("corporate", [])))

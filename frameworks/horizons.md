@@ -32,6 +32,16 @@ This is steering. It doesn't tell anyone to buy anything this month.
 
 ---
 
+## 2b. Three directions, side by side
+
+A season holds two or three named **directions** (`seasons.yaml`). Rather than choosing one, the result shows them all, and the person picks.
+
+For each direction: its **re-weighted palette**, its **top three combinations**, and the **three pieces that would do most for this closet** — anchors in that direction's palette the wardrobe has nothing within ΔE 12 of, ranked by how many owned items each would pair with.
+
+The wardrobe column (§3a) is shared: only the ideal changes between the three. The engine ranks the pieces; it does not pick the direction.
+
+---
+
 ## 3. Short-term horizon — the realistic
 
 **"This is what to do with what you have."**
@@ -76,6 +86,10 @@ Saved outfits are shown in the order the person gave them; this ranking applies 
 
 *"From what you own, these three work: …"*
 
+Each outfit is shown with a **colour-share bar**: every item's dominant colour, as wide as the area of the body it covers (dress 4, top 2, bottom 2, layer 2, shoes 1, bag 1, accessory 1, base 0.5), with each item's verdict beside it. Under it, the **single best improvement** — the one addition, from the closet, then the staples catalogue, then the brand database, that most lowers that outfit's distance — shown as a second bar with the shares it would then have.
+
+A **summary** closes the section: the most common compositions across all the outfits, weighted by life weight, and the highest-scoring gap each one should head toward.
+
 If none work, say so. That is a finding, not a failure.
 
 ### 3d. The realistic next move
@@ -89,6 +103,8 @@ value = outfits_unlocked × palette_improvement ÷ price_band
 - `outfits_unlocked` — how many of the person's existing items the new piece pairs with (the outfit pairing rules in `combinations.md` §5, against every item in the closet, not just the canvas)
 - `palette_improvement` — how much the delta in 3b falls if this piece is added
 - `price_band` — from the staples catalogue or brand database
+
+The person's **material preferences** (loves, avoids, and a sentence) are read here too, and they never change a verdict. Two things are said with them: when a loved fibre could dress the person head to toe from the closet and none of their outfits does, the result says so and names the items; and when the sentence says *easy* while more than a quarter of the wardrobe is suede, silk or cashmere, the result says that too.
 
 A next move that fills a context gap ranks above one that fills a zone gap of the same unlock count: a corporate gap blocks a whole recurring week, a zone gap one event.
 

@@ -22,11 +22,12 @@ import argparse
 import csv
 import json
 import sys
+from pathlib import Path
 
 import yaml
 
 from . import horizons, render
-from .matcher import SLOTS
+from .matcher import FIBRES, SLOTS, SURFACES
 
 
 def _int_or_none(v, what, where):
@@ -48,6 +49,13 @@ def _item_from_row(row, where):
     nf = row.get("near_face")
     if nf is not None and str(nf).strip() != "":
         item["near_face"] = str(nf).strip().lower() in ("true", "1", "yes")
+    for key in ("fibre", "surface"):
+        v = (row.get(key) or "").strip().lower()
+        if v:
+            allowed = FIBRES if key == "fibre" else SURFACES
+            if v not in allowed:
+                raise SystemExit(f"{where}: item {name!r} {key} must be one of {', '.join(allowed)}, got {v!r}")
+            item[key] = v
     for key in ("dressiness", "weight"):
         v = _int_or_none(row.get(key), key, f"{where}, item {name!r}")
         if v is not None:
@@ -96,6 +104,9 @@ def load_outfits(path, items):
         dc = _int_or_none(row.get("dress_code"), "dress_code", where)
         if dc is not None and not 1 <= dc <= 5:
             raise SystemExit(f"{where}: dress_code must be 1-5, got {dc}")
+        lw = _int_or_none(row.get("life_weight"), "life_weight", where)
+        if lw is not None and not 1 <= lw <= 10:
+            raise SystemExit(f"{where}: life_weight must be 1-10, got {lw}")
         weather = (row.get("weather") or "").strip().lower() or None
         if weather not in (None, "clear", "rain"):
             raise SystemExit(f"{where}: weather must be clear or rain, got {weather!r}")
@@ -113,8 +124,27 @@ def load_outfits(path, items):
             slots[s] = v or None
         outfits.append({"name": name, "occasion": (row.get("occasion") or "").strip() or None,
                         "dress_code": dc, "weather": weather, "formality": formality, "setting": setting,
-                        "slots": slots})
+                        "life_weight": lw, "slots": slots})
     return outfits
+
+
+def load_intake(path):
+    """The intake file (templates/intake.yaml): the three colour questions, the
+    axis confidences and the material preferences. Every part is optional."""
+    raw = yaml.safe_load(Path(path).read_text()) or {}
+    if not isinstance(raw, dict):
+        raise SystemExit(f"{path}: expected a YAML mapping")
+    conf = raw.get("confidence") or None
+    if conf:
+        missing = {"temperature", "value", "chroma"} - set(conf)
+        if missing:
+            raise SystemExit(f"{path}: confidence needs all three axes; missing {sorted(missing)}")
+    materials = raw.get("materials") or {}
+    for key in ("loves", "avoids"):
+        for f in materials.get(key) or []:
+            if f not in FIBRES:
+                raise SystemExit(f"{path}: materials {key} has {f!r}, not one of {', '.join(FIBRES)}")
+    return {"questions": raw.get("questions") or {}, "confidence": conf, "materials": materials}
 
 
 def parse_confidence(text):
@@ -138,6 +168,8 @@ def main(argv=None):
     src.add_argument("--items", help="items file: templates/items.csv format, or a YAML list")
     src.add_argument("--photos", help="folder of garment photos; intake writes items.csv there first")
     ap.add_argument("--outfits", default=None, help="saved outfits: templates/outfits.csv format")
+    ap.add_argument("--intake", default=None,
+                    help="intake file: templates/intake.yaml format (questions, confidence, materials)")
     ap.add_argument("--out", required=True, help="path of the HTML file to write")
     ap.add_argument("--mood", default=None, help="answer to intake question 2 (free text)")
     ap.add_argument("--confidence", default=None,
@@ -155,8 +187,15 @@ def main(argv=None):
         items_path = out["csv"]
     items = load_items(items_path)
     outfits = load_outfits(args.outfits, items) if args.outfits else None
+    intake_data = load_intake(args.intake) if args.intake else None
+    mood, confidence = args.mood, parse_confidence(args.confidence)
+    if intake_data:
+        # a flag wins over the file, so one run can override a stored answer
+        mood = mood or (intake_data["questions"] or {}).get("wants_to_feel")
+        confidence = confidence or intake_data["confidence"]
     result = horizons.result(args.season, args.direction, items, outfits=outfits,
-                             mood=args.mood, confidence=parse_confidence(args.confidence))
+                             mood=mood, confidence=confidence,
+                             materials=(intake_data or {}).get("materials"))
     render.render_file(result, args.out)
     if args.json:
         with open(args.json, "w", encoding="utf-8") as fh:

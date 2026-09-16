@@ -1,0 +1,17 @@
+# engine/examples/nora-intake.yaml — the test case's intake, in the
+# templates/intake.yaml format. Answers from frameworks/examples/nora-soft-autumn.yaml.
+
+questions:
+  wears_most: knitwear
+  wants_to_feel: "calm, put together, not trying"
+  reaches_for: "teal, olive, a good brown"
+
+confidence:
+  temperature: medium
+  value: high
+  chroma: high
+
+materials:
+  loves: [wool, cashmere]
+  avoids: [synthetic]
+  note: "something easy — I want to get dressed without thinking about it"

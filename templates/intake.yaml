@@ -1,0 +1,25 @@
+# templates/intake.yaml — what the person answers before the analysis runs.
+# Every part is optional; fill what you have.
+#
+#   python -m engine.run --season … --direction … --items items.csv --intake intake.yaml --out result.html
+
+# The three colour questions (frameworks/intake.md, part 2).
+questions:
+  wears_most:              # denim | tailoring | knitwear | dresses
+  wants_to_feel: ""        # free text — calm, quiet or grounded promotes the quiet combinations
+  reaches_for: ""          # free text — names the colour that anchors the supporting tier
+
+# How sure the photo reading was, per axis: high | medium | low.
+# The runner-up season is derived from the least certain axis, so all three are needed.
+confidence:
+  temperature:
+  value:
+  chroma:
+
+# Material preferences. These are reported, never scored — no verdict moves
+# because of them. Fibres: wool, cotton, silk, linen, denim, leather, suede,
+# cashmere, synthetic, other.
+materials:
+  loves: []                # if a loved fibre could dress you head to toe and never does, the result says so
+  avoids: []
+  note: ""                 # free text — saying "easy" here is checked against what the wardrobe actually is

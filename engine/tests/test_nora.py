@@ -352,7 +352,8 @@ class TestPhotoIntake(unittest.TestCase):
         with open(self.out["csv"], newline="") as fh:
             rows = list(_csv.DictReader(fh))
         self.assertEqual(rows[0].keys() if rows else None, rows[0].keys())
-        self.assertEqual(list(rows[0].keys()), ["name", "slot", "hex", "dressiness", "weight", "near_face", "notes"])
+        self.assertEqual(list(rows[0].keys()), ["name", "slot", "hex", "dressiness", "weight", "near_face",
+                                                "fibre", "surface", "notes"])
         by_name = {r["name"]: r for r in rows}
         self.assertEqual(by_name["deep teal knit"]["slot"], "top")
         self.assertEqual(by_name["deep teal knit"]["dressiness"], "")
@@ -642,3 +643,354 @@ class TestWorksNowRanking(unittest.TestCase):
         self.assertEqual(len(dress_only), 1)
         self.assertIsNone(dress_only[0]["kind"])
         self.assertIs(out[-1], dress_only[0])
+
+
+SA = lambda: palette.get_season("soft_autumn")
+
+
+def _outfit(items, season=None, **spec):
+    season = season or SA()
+    spec = {"name": spec.pop("name", "o"), "items": items, **spec}
+    return matcher.score_outfits([spec], season, items)["outfits"][0]
+
+
+class TestDenimByFibre(unittest.TestCase):
+    """Decision 1 — denim is identified by the declared fibre, never by colour."""
+
+    def setUp(self):
+        self.season = SA()
+
+    def test_every_season_admits_denim_below_the_waist(self):
+        for key, s in palette.load_seasons().items():
+            with self.subTest(season=key):
+                self.assertEqual(s.denim, "admitted_below_waist")
+                self.assertEqual(s.rules()["denim"], "admitted_below_waist")
+
+    def test_below_the_waist_any_wash_is_in(self):
+        for name, hexv in (("raw indigo", "1F2E4A"), ("mid wash", "5C7A9E"), ("light wash", "8FA9C4")):
+            r = matcher.score_item({"id": name, "hex": hexv, "slot": "bottom", "fibre": "denim"}, self.season)
+            with self.subTest(wash=name):
+                self.assertEqual((r["verdict"], r["nearest"], r["stage"]), ("in", "denim (below waist)", 1))
+
+    def test_at_the_face_the_wash_decides(self):
+        dark = matcher.score_item({"id": "dark", "hex": "2A3C5B", "slot": "top", "fibre": "denim"}, self.season)
+        light = matcher.score_item({"id": "light", "hex": "8FA9C4", "slot": "top", "fibre": "denim"}, self.season)
+        self.assertEqual((dark["verdict"], dark["nearest"]), ("in", "denim (dark wash)"))
+        self.assertEqual(light["verdict"], "out")
+        # the boundary is L* 45
+        self.assertLess(colour.lab_to_lch(colour.hex_to_lab("2A3C5B"))[0], matcher.DENIM_FACE_L)
+        self.assertGreater(colour.lab_to_lch(colour.hex_to_lab("8FA9C4"))[0], matcher.DENIM_FACE_L)
+
+    def test_colour_alone_never_applies_the_rule(self):
+        """The slate blue case: a True Summer foundation that looks like denim."""
+        slate = {"id": "slate blue top", "hex": "5E6F8C", "slot": "top"}
+        self.assertTrue(matcher.looks_like_denim(slate["hex"]), "the hint should fire on this colour")
+        ts = palette.get_season("true_summer")
+        r = matcher.score_item(slate, ts)
+        self.assertEqual(r["stage"], 3)                      # scored against the palette, not the denim rule
+        self.assertEqual((r["verdict"], r["nearest"]), ("in", "slate blue"))
+
+    def test_the_intake_hint_proposes_but_leaves_fibre_blank(self):
+        import csv as _csv
+        import tempfile
+        from PIL import Image
+        from engine import intake
+        with tempfile.TemporaryDirectory() as d:
+            folder = Path(d)
+            im = Image.new("RGBA", (120, 120), (0, 0, 0, 0))
+            for y in range(20, 100):
+                for x in range(20, 100):
+                    im.putpixel((x, y), (0x5C, 0x7A, 0x9E, 255))      # mid-wash blue
+            im.save(folder / "bottom_blue-jeans.png")
+            out = intake.run_folder(folder)
+            item = out["items"][0]
+            self.assertTrue(item["denim_hint"])
+            self.assertTrue(any("set fibre: denim" in w for w in out["warnings"]))
+            with open(out["csv"], newline="") as fh:
+                row = list(_csv.DictReader(fh))[0]
+            self.assertEqual(row["fibre"], "")                        # never written, so never applied
+            self.assertIn("looks like denim", row["notes"])
+
+
+class TestBaseSlot(unittest.TestCase):
+    """Decision 2 — a base is judged only when nothing covers it."""
+
+    def setUp(self):
+        self.season = SA()
+        self.base = {"id": "magenta slip", "hex": "FF00FF", "slot": "base"}
+        self.top = {"id": "teal knit", "hex": "1F5F63", "slot": "top"}
+        self.bottom = {"id": "grey trouser", "hex": "8B8378", "slot": "bottom"}
+
+    def test_base_is_a_slot_but_never_a_coverage_gap(self):
+        self.assertIn("base", matcher.SLOTS)
+        self.assertNotIn("base", matcher.COVERAGE_SLOTS)
+        self.assertEqual(matcher.BODY_WEIGHT["base"], 0)
+        self.assertEqual(matcher.AREA_WEIGHT["base"], 0.5)
+
+    def test_covered_by_a_top_it_is_in_by_default(self):
+        o = _outfit([self.top, self.bottom, self.base])
+        b = o["slots"]["base"]
+        self.assertEqual((b["verdict"], b["stage"], b["where"]), ("in", 0, "covered"))
+        self.assertNotIn("base", [f["item_id"] for f in o["checks"]["zone"]["flags"]])
+
+    def test_uncovered_it_is_judged(self):
+        o = _outfit([self.bottom, self.base])
+        self.assertEqual(o["slots"]["base"]["verdict"], "hard_miss")
+
+    def test_excluded_from_tier_balance_and_the_face_rules(self):
+        black_base = {"id": "black slip", "hex": "000000", "slot": "base"}
+        r = matcher.score_item(black_base, self.season)
+        self.assertEqual(r["where"], "away from the face")   # never a face position
+        self.assertEqual(r["verdict"], "in")
+        covered = _outfit([self.top, self.bottom, black_base])
+        bare = _outfit([self.top, self.bottom])
+        self.assertEqual(covered["checks"]["tier_mix"], bare["checks"]["tier_mix"])
+
+    def test_base_prefix_at_intake(self):
+        from engine import intake
+        self.assertEqual(intake.parse_filename("base_silk-slip.jpg"), ("base", "silk slip", None))
+
+
+class TestFibreSurfaceAndTexture(unittest.TestCase):
+    """Decision 3 — fabric and texture as item fields, and the flat check."""
+
+    def setUp(self):
+        self.season = SA()
+
+    def test_the_vocabularies(self):
+        self.assertEqual(matcher.FIBRES, ("wool", "cotton", "silk", "linen", "denim",
+                                          "leather", "suede", "cashmere", "synthetic", "other"))
+        self.assertEqual(matcher.SURFACES, ("smooth", "matte", "textured", "pile", "shiny"))
+
+    def test_fields_load_from_the_csv_and_reach_the_item(self):
+        from engine import run
+        items = {i["id"]: i for i in run.load_items(REPO_ROOT / "engine" / "examples" / "nora-items.csv")}
+        self.assertEqual((items["deep teal knit"]["fibre"], items["deep teal knit"]["surface"]),
+                         ("wool", "textured"))
+        r = matcher.score_item(items["deep teal knit"], self.season)
+        self.assertEqual((r["fibre"], r["surface"]), ("wool", "textured"))
+
+    def test_an_unknown_fibre_is_refused(self):
+        from engine import run
+        import tempfile, os
+        text = ("name,slot,hex,dressiness,weight,near_face,fibre,surface,notes\n"
+                "x,top,1F5F63,2,2,,tweed,smooth,\n")
+        with tempfile.NamedTemporaryFile("w", suffix=".csv", delete=False) as fh:
+            fh.write(text); path = fh.name
+        try:
+            with self.assertRaises(SystemExit):
+                run.load_items(path)
+        finally:
+            os.unlink(path)
+
+    def test_all_smooth_in_a_low_contrast_season_is_flat(self):
+        o = _outfit([{"id": "teal knit", "hex": "1F5F63", "slot": "top", "surface": "smooth"},
+                     {"id": "petrol trouser", "hex": "2C5A66", "slot": "bottom", "surface": "smooth"}])
+        self.assertEqual(o["checks"]["texture"]["flag"], "flat — needs texture")
+        self.assertTrue(any(g["type"] == "flat_texture" for g in o["gaps"]))
+
+    def test_one_textured_item_clears_it(self):
+        o = _outfit([{"id": "teal knit", "hex": "1F5F63", "slot": "top", "surface": "textured"},
+                     {"id": "petrol trouser", "hex": "2C5A66", "slot": "bottom", "surface": "smooth"}])
+        self.assertIsNone(o["checks"]["texture"]["flag"])
+
+    def test_an_unset_surface_is_unknown_not_smooth(self):
+        o = _outfit([{"id": "teal knit", "hex": "1F5F63", "slot": "top", "surface": "smooth"},
+                     {"id": "petrol trouser", "hex": "2C5A66", "slot": "bottom"}])
+        self.assertIsNone(o["checks"]["texture"]["flag"])
+        self.assertIsNone(o["checks"]["texture"]["all_smooth"])
+
+
+class TestMaterialPreferences(unittest.TestCase):
+    """Decision 4 — the intake file's material preferences, reported not scored."""
+
+    def setUp(self):
+        self.season = SA()
+        self.pairs = [p for lst in generators.run(self.season.anchors).values() for p in lst]
+
+    def test_the_example_intake_file_loads(self):
+        from engine import run
+        data = run.load_intake(REPO_ROOT / "engine" / "examples" / "nora-intake.yaml")
+        self.assertEqual(data["confidence"], {"temperature": "medium", "value": "high", "chroma": "high"})
+        self.assertEqual(data["questions"]["wears_most"], "knitwear")
+        self.assertEqual(data["materials"]["loves"], ["wool", "cashmere"])
+
+    def test_an_unknown_fibre_in_the_intake_is_refused(self):
+        from engine import run
+        import tempfile, os
+        with tempfile.NamedTemporaryFile("w", suffix=".yaml", delete=False) as fh:
+            fh.write("materials:\n  loves: [tweed]\n"); path = fh.name
+        try:
+            with self.assertRaises(SystemExit):
+                run.load_intake(path)
+        finally:
+            os.unlink(path)
+
+    def test_a_loved_fibre_that_could_dress_you_and_never_does(self):
+        items = [{"id": "linen shirt", "hex": "EFE6D3", "slot": "top", "fibre": "linen"},
+                 {"id": "linen trouser", "hex": "8B8378", "slot": "bottom", "fibre": "linen"},
+                 {"id": "wool knit", "hex": "1F5F63", "slot": "top", "fibre": "wool"}]
+        scored = matcher.score_items(items, self.season)
+        worn = matcher.score_outfits([{"name": "a", "items": [items[2], items[1]]}],
+                                     self.season, items)["outfits"]
+        out = horizons.material_notes({"loves": ["linen"]}, scored, worn, self.pairs)
+        note = next(n for n in out["notes"] if n["kind"] == "suggestion")
+        self.assertIn("you said you love linen", note["text"])
+        self.assertEqual(set(note["items"]), {"linen shirt", "linen trouser"})
+
+    def test_no_suggestion_when_an_outfit_already_is_that_fibre(self):
+        items = [{"id": "wool knit", "hex": "1F5F63", "slot": "top", "fibre": "wool"},
+                 {"id": "wool trouser", "hex": "8B8378", "slot": "bottom", "fibre": "wool"}]
+        scored = matcher.score_items(items, self.season)
+        worn = matcher.score_outfits([{"name": "a", "items": items}], self.season, items)["outfits"]
+        out = horizons.material_notes({"loves": ["wool"]}, scored, worn, self.pairs)
+        self.assertEqual([n for n in out["notes"] if n["kind"] == "suggestion"], [])
+
+    def test_easy_against_a_high_maintenance_wardrobe(self):
+        items = [{"id": "silk top", "hex": "1F5F63", "slot": "top", "fibre": "silk"},
+                 {"id": "suede skirt", "hex": "A6502F", "slot": "bottom", "fibre": "suede"},
+                 {"id": "wool knit", "hex": "4E5A3A", "slot": "top", "fibre": "wool"},
+                 {"id": "cotton tee", "hex": "EFE6D3", "slot": "top", "fibre": "cotton"}]
+        scored = matcher.score_items(items, self.season)
+        out = horizons.material_notes({"note": "I want something easy"}, scored, [], self.pairs)
+        challenge = next(n for n in out["notes"] if n["kind"] == "challenge")
+        self.assertIn("you said easy", challenge["text"])
+        self.assertEqual(challenge["share"], 0.5)
+
+    def test_preferences_change_no_verdict(self):
+        from engine import run
+        items = run.load_items(REPO_ROOT / "engine" / "examples" / "nora-items.csv")
+        outfits = run.load_outfits(REPO_ROOT / "engine" / "examples" / "nora-outfits.csv", items)
+        plain = horizons.result("soft_autumn", "teal_ochre", items, outfits=outfits)
+        withm = horizons.result("soft_autumn", "teal_ochre", items, outfits=outfits,
+                                materials={"loves": ["wool"], "avoids": ["synthetic"], "note": "easy"})
+        verdicts = lambda r: [(o["name"], s, (v or {}).get("verdict"))
+                              for o in r["outfits"] for s, v in o["slots"].items()]
+        self.assertEqual(verdicts(plain), verdicts(withm))
+        self.assertEqual(plain["short_term"]["distance"], withm["short_term"]["distance"])
+
+
+class TestLifeWeight(unittest.TestCase):
+    """Decision 5 — gaps rank by unlocks × the mean life weight of the outfits."""
+
+    def setUp(self):
+        from engine import run
+        self.items = run.load_items(REPO_ROOT / "engine" / "examples" / "nora-items.csv")
+        self.outfits = run.load_outfits(REPO_ROOT / "engine" / "examples" / "nora-outfits.csv", self.items)
+        self.result = horizons.result("soft_autumn", "teal_ochre", self.items, outfits=self.outfits)
+
+    def test_life_weight_loads_from_the_csv(self):
+        by = {o["name"]: o["life_weight"] for o in self.outfits}
+        self.assertEqual(by["work Tuesday"], 8)
+        self.assertEqual(by["work into evening"], 3)
+
+    def test_a_blank_life_weight_defaults_to_five(self):
+        season = SA()
+        out = matcher.score_outfits([{"name": "x", "items": [{"id": "t", "hex": "1F5F63", "slot": "top"}]}],
+                                    season, [{"id": "t", "hex": "1F5F63", "slot": "top"}])
+        self.assertEqual(out["outfits"][0]["life_weight"], matcher.DEFAULT_LIFE_WEIGHT)
+        self.assertEqual(matcher.DEFAULT_LIFE_WEIGHT, 5)
+
+    def test_score_is_unlocks_times_mean_life_weight(self):
+        for g in self.result["gaps_ranked"]:
+            with self.subTest(gap=g["type"]):
+                self.assertAlmostEqual(g["score"], round(g["unlocks"] * g["mean_life_weight"], 1), places=1)
+
+    def test_ranking_follows_the_score_not_the_count(self):
+        scores = [g["score"] for g in self.result["gaps_ranked"]]
+        self.assertEqual(scores, sorted(scores, reverse=True))
+        # the video-call gap (life weight 7) outranks the work-into-evening one (3)
+        by = {(g["type"], g.get("occasion")): g for g in self.result["gaps_ranked"]}
+        video = by[("context_gap", "video call")]
+        evening = next(g for g in self.result["gaps_ranked"] if g["type"] == "zone_gap")
+        self.assertEqual(video["unlocks"], evening["unlocks"])
+        self.assertGreater(video["score"], evening["score"])
+
+
+class TestDirectionsBlock(unittest.TestCase):
+    """Decision 6 — the three directions, side by side."""
+
+    @classmethod
+    def setUpClass(cls):
+        from engine import run
+        cls.items = run.load_items(REPO_ROOT / "engine" / "examples" / "nora-items.csv")
+        cls.result = horizons.result("soft_autumn", "teal_ochre", cls.items)
+        cls.dirs = cls.result["long_term"]["directions"]
+
+    def test_one_block_per_direction_in_the_season(self):
+        season = SA()
+        self.assertEqual([d["direction"] for d in self.dirs], list(season.directions))
+
+    def test_each_carries_a_palette_combinations_and_strategic_pieces(self):
+        for d in self.dirs:
+            with self.subTest(direction=d["direction"]):
+                self.assertEqual(set(d["palette"]), set(palette.TIERS))
+                self.assertLessEqual(len(d["combinations"]), horizons.DIRECTION_COMBINATIONS)
+                self.assertLessEqual(len(d["strategic_pieces"]), horizons.STRATEGIC_PIECES)
+                self.assertTrue(d["note"])
+
+    def test_the_palette_is_re_weighted_toward_the_direction(self):
+        for d in self.dirs:
+            with self.subTest(direction=d["direction"]):
+                first = d["palette"]["foundations"][0] if d["palette"]["foundations"] else None
+                heaviest = max(a["weight"] for t in palette.TIERS for a in d["palette"][t])
+                self.assertEqual(heaviest, 2.0)
+                self.assertIsNotNone(first)
+
+    def test_strategic_pieces_are_things_the_closet_lacks(self):
+        owned = {r["nearest"] for r in matcher.score_items(self.items, SA()) if r["verdict"] == "in"}
+        for d in self.dirs:
+            for p in d["strategic_pieces"]:
+                with self.subTest(direction=d["direction"], piece=p["anchor"]):
+                    self.assertNotIn(p["anchor"], owned)
+
+
+class TestResultPage(unittest.TestCase):
+    """The colour-share bars, the best improvement and the summary."""
+
+    @classmethod
+    def setUpClass(cls):
+        from engine import render, run
+        cls.items = run.load_items(REPO_ROOT / "engine" / "examples" / "nora-items.csv")
+        cls.outfits = run.load_outfits(REPO_ROOT / "engine" / "examples" / "nora-outfits.csv", cls.items)
+        cls.result = horizons.result("soft_autumn", "teal_ochre", cls.items, outfits=cls.outfits,
+                                     materials={"loves": ["wool"], "note": "easy"})
+        cls.html = render.render(cls.result)
+
+    def test_shares_are_area_weighted_and_sum_to_one(self):
+        o = next(o for o in self.result["outfits"] if o["name"] == "work Tuesday")
+        self.assertAlmostEqual(sum(s["share"] for s in o["shares"]), 1.0, places=2)
+        by = {s["item_id"]: s for s in o["shares"]}
+        # top 2 + bottom 2 + accessory 1 = 5
+        self.assertEqual(by["deep teal knit"]["area"], 2)
+        self.assertEqual(by["rust scarf"]["area"], 1)
+        self.assertAlmostEqual(by["rust scarf"]["share"], 0.2, places=2)
+
+    def test_every_share_carries_its_verdict(self):
+        for o in self.result["outfits"]:
+            for s in o["shares"]:
+                with self.subTest(outfit=o["name"], item=s["item_id"]):
+                    self.assertIn(s["verdict"], ("in", "near", "out", "hard_miss"))
+
+    def test_each_outfit_has_a_best_improvement(self):
+        for o in self.result["outfits"]:
+            with self.subTest(outfit=o["name"]):
+                imp = o["improvement"]
+                self.assertIn("before", imp)
+                self.assertGreaterEqual(imp["before"], imp["after"])
+                if imp["item_id"]:
+                    self.assertAlmostEqual(sum(s["share"] for s in imp["shares"]), 1.0, places=2)
+
+    def test_the_summary_weights_compositions_by_life_weight(self):
+        comps = self.result["short_term"]["compositions"]
+        self.assertEqual(comps[0]["composition"], "top + bottom + accessory")
+        self.assertEqual(comps[0]["life_weight"], 8 + 3 + 6 + 7)
+        self.assertEqual([c["life_weight"] for c in comps], sorted((c["life_weight"] for c in comps), reverse=True))
+        self.assertTrue(all("heads_toward" in c for c in comps))
+
+    def test_the_page_renders_every_new_block(self):
+        for fragment in ("Three directions", "What you actually wear", "Best improvement",
+                         'class="shares"', "life weight", "wool", "textured"):
+            with self.subTest(fragment=fragment):
+                self.assertIn(fragment, self.html)
+        self.assertNotIn("http://", self.html)

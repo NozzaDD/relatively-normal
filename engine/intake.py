@@ -21,7 +21,7 @@ from pathlib import Path
 from statistics import median
 
 from . import colour
-from .matcher import SLOTS, extract_colours
+from .matcher import SLOTS, extract_colours, looks_like_denim
 
 IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp", ".tif", ".tiff", ".bmp"}
 ALPHA_MIN = 200            # matching.md §1
@@ -29,7 +29,7 @@ BACKGROUND_DE = 10.0       # pixels this close to the estimated background are d
 CORNER_FRACTION = 0.10     # each corner region is this fraction of width and height
 DECODE_MAX = 800           # longest side after decode; colour extraction needs no more
 SAMPLE_FOR_FILTER = 40000  # pixels sampled before the per-pixel ΔE filter (pure Python)
-CSV_HEADER = ["name", "slot", "hex", "dressiness", "weight", "near_face", "notes"]
+CSV_HEADER = ["name", "slot", "hex", "dressiness", "weight", "near_face", "fibre", "surface", "notes"]
 
 
 # ---------------------------------------------------------------- filenames
@@ -123,7 +123,14 @@ def extract_item(path):
     if not colours:
         warnings.append(f"{path.name}: no garment pixels found after removing the background")
     dominant = colours[0] if colours else None
+    # A colour signature can only *propose* denim; the rule fires on a declared
+    # fibre, never on colour (matching.md §2). The proposal goes to the notes and
+    # the warnings; the fibre column is left for the person to fill in.
+    denim_hint = bool(dominant) and looks_like_denim(dominant["hex"])
+    if denim_hint:
+        warnings.append(f"{path.name}: looks like denim — set fibre: denim in the CSV to confirm")
     return {"file": path.name, "slot": slot, "name": name, "near_face": near_face,
+            "denim_hint": denim_hint,
             "hex": dominant["hex"] if dominant else None,
             "share": round(dominant["share"], 3) if dominant else None,
             "mode": "alpha" if has_alpha else "background",
@@ -153,9 +160,11 @@ def run_folder(folder, csv_path=None, sheet_path=None):
         w = csv.writer(fh)
         w.writerow(CSV_HEADER)
         for it in items:
-            note = "" if it["slot"] else "slot not recognised from filename — fill in"
+            notes = [] if it["slot"] else ["slot not recognised from filename — fill in"]
+            if it["denim_hint"]:
+                notes.append("looks like denim — set fibre: denim to confirm (a hint never applies the rule)")
             nf = "" if it["near_face"] is None else ("true" if it["near_face"] else "false")
-            w.writerow([it["name"], it["slot"] or "", it["hex"] or "", "", "", nf, note])
+            w.writerow([it["name"], it["slot"] or "", it["hex"] or "", "", "", nf, "", "", "; ".join(notes)])
     sheet_path.write_text(contact_sheet(items, folder), encoding="utf-8")
     return {"items": items, "warnings": warnings, "csv": str(csv_path), "sheet": str(sheet_path)}
 
@@ -172,6 +181,7 @@ def contact_sheet(items, folder):
         others = " ".join(f'<span class="mini" style="background:#{e(c["hex"])}" title="{e(c["hex"])} · {c["share"]}"></span>'
                           for c in it["colours"][1:])
         warn = "".join(f'<div class="warn">{e(w)}</div>' for w in it["warnings"])
+        warn += '<div class="warn">proposes fibre: denim — confirm in the CSV</div>' if it["denim_hint"] else ""
         bg = f' · background {e(it["background"])}' if it["background"] else ""
         cards.append(
             f'<div class="card"><img src="{e(it["file"])}" alt="{e(it["file"])}">'
