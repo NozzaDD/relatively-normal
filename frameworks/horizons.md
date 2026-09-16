@@ -32,6 +32,16 @@ This is steering. It doesn't tell anyone to buy anything this month.
 
 ---
 
+## 2b. Three directions, side by side
+
+A season holds two or three named **directions** (`seasons.yaml`). Rather than choosing one, the result shows them all, and the person picks.
+
+For each direction: its **re-weighted palette**, its **top three combinations**, and the **three pieces that would do most for this closet** — anchors in that direction's palette the wardrobe has nothing within ΔE 12 of, ranked by how many owned items each would pair with.
+
+The wardrobe column (§3a) is shared: only the ideal changes between the three. The engine ranks the pieces; it does not pick the direction.
+
+---
+
 ## 3. Short-term horizon — the realistic
 
 **"This is what to do with what you have."**
@@ -44,7 +54,7 @@ Per item: in / near / out / hard miss, with the nearest anchor named.
 
 ### 3b. The delta
 
-One number and one sentence. The **palette distance**: the share-weighted mean ΔE from each item's colour to its nearest ideal anchor.
+One number and one sentence. The **palette distance**: the share-weighted mean ΔE from each item's colour to its nearest ideal anchor. An item's contribution is its ΔE to the nearest anchor that would be *in* for that item's slot after the slot rules — never to the colour that triggered a hard miss — so black trousers admitted below the waist contribute 0, a white shirt at the face contributes its ΔE to cream, and out items contribute their ΔE to the nearest palette anchor.
 
 | Distance | Reading |
 |---|---|
@@ -53,13 +63,32 @@ One number and one sentence. The **palette distance**: the share-weighted mean �
 | 18 – 28 | *A real gap. Worth steering deliberately over the next year.* |
 | > 28 | *Your wardrobe and your colouring disagree. Start with the pieces nearest your face.* |
 
-Then: which colours are **over-represented** (present in the closet, absent or accent-tier in the ideal) and which are **missing** (foundation or supporting in the ideal, absent from the closet).
+Then: which items are **pulling against you** — the items whose verdict is not *in*, largest contribution to the distance first, each with its verdict and its nearest admitted anchor as the fix — and which colours are **missing**: foundation-tier anchors no item lands on. The missing list is judged only when the closet holds ten or more items; below that it reads *not enough items to judge — add more before reading this*.
 
 ### 3c. What works now
 
-Before any suggestion to buy: the outfits that can be built *today* from the uploaded items using in-palette pieces and the outfit pairing rules in `combinations.md` §5. Ranked by how many items they use and how close the pair is to a named combination.
+Before any suggestion to buy: the outfits that can be built *today* from the uploaded items using in-palette pieces and the outfit pairing rules in `combinations.md` §5.
+
+Ranked by **pairing kind first**, then by how many items they use, then by how close the pair is to a named combination:
+
+| | Default | Calm, quiet or grounded |
+|---|---|---|
+| 1 | Opposition | Tonal |
+| 2 | Muted | Monochrome |
+| 3 | Tonal | Muted |
+| 4 | Monochrome | Opposition |
+| 5 | Chromatic + neutral | Chromatic + neutral |
+| 6 | Neutral + neutral | Neutral + neutral |
+
+A mood answer of *calm, quiet* or *grounded* (intake question 2) promotes tonal and monochrome above opposition, and holds the three generators in the order `combinations.md` §3 gives them under that mood. An outfit built around a dress takes the best kind among its own pairs; a dress worn alone has none and sorts last.
+
+Saved outfits are shown in the order the person gave them; this ranking applies to the outfits the engine builds from the closet.
 
 *"From what you own, these three work: …"*
+
+Each outfit is shown with a **colour-share bar**: every item's dominant colour, as wide as the area of the body it covers (dress 4, top 2, bottom 2, layer 2, shoes 1, bag 1, accessory 1, base 0.5), with each item's verdict beside it. Under it, the **single best improvement** — the one addition, from the closet, then the staples catalogue, then the brand database, that most lowers that outfit's distance — shown as a second bar with the shares it would then have.
+
+A **summary** closes the section: the most common compositions across all the outfits, weighted by life weight, and the highest-scoring gap each one should head toward.
 
 If none work, say so. That is a finding, not a failure.
 
@@ -74,6 +103,10 @@ value = outfits_unlocked × palette_improvement ÷ price_band
 - `outfits_unlocked` — how many of the person's existing items the new piece pairs with (the outfit pairing rules in `combinations.md` §5, against every item in the closet, not just the canvas)
 - `palette_improvement` — how much the delta in 3b falls if this piece is added
 - `price_band` — from the staples catalogue or brand database
+
+The person's **material preferences** (loves, avoids, and a sentence) are read here too, and they never change a verdict. Two things are said with them: when a loved fibre could dress the person head to toe from the closet and none of their outfits does, the result says so and names the items; and when the sentence says *easy* while more than a quarter of the wardrobe is suede, silk or cashmere, the result says that too.
+
+A next move that fills a context gap ranks above one that fills a zone gap of the same unlock count: a corporate gap blocks a whole recurring week, a zone gap one event.
 
 **Constraint: a realistic next move must pair with at least two items the person already owns.** A perfect-palette piece that goes with nothing in the closet is a long-term purchase, and it belongs in section 2, not here.
 

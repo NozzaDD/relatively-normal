@@ -17,6 +17,10 @@ opinions into something I can apply consistently across clients and posts.
 Brand-specific judgements (`brands/`) and anything written for publication
 (`content/`). A framework should outlive any single brand or post.
 
+`scope.md` states what the first trials ask for and what they deliberately
+leave out — read it before building anything that sounds missing, because it is
+probably already in `engine/`.
+
 ## Suggested files
 
 - `colour.yaml`

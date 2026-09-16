@@ -110,6 +110,25 @@ in-season alternative. Never silently swap it.
 
 ---
 
+---
+
+## Part 3 — Material preferences
+
+**Format:** two lists and a sentence.
+
+| Field | Format |
+|---|---|
+| `loves` | any of: wool, cotton, silk, linen, denim, leather, suede, cashmere, synthetic, other |
+| `avoids` | the same list |
+| `note` | free text — what they want getting dressed to feel like |
+
+**What it sets: nothing.** No verdict, no score and no ranking moves because of a material preference. It is read back to the person in two ways:
+
+- **A suggestion.** If a loved fibre could make a complete outfit from what they own, and none of their saved outfits is that fibre throughout, the result names the pieces: *you said you love linen — you can build a whole outfit from it.*
+- **A challenge.** If the sentence says *easy* or *low-maintenance* and more than a quarter of the wardrobe is suede, silk or cashmere, the result says so: *you said easy; half your wardrobe is high-maintenance.*
+
+`fibre` is also what identifies denim (`matching.md` §2), so it is worth filling in per item even when no preference is stated.
+
 ## Output of intake
 
 - Three photos, meeting the checklist, with a record of which has the most neutral

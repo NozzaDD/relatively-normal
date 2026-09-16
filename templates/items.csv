@@ -1,9 +1,2 @@
-name,slot,hex,dressiness,weight,near_face,notes
-deep teal knit,top,1F5F63,2,3,,merino crew
-pure white shirt,top,FFFFFF,3,1,,cotton poplin
-cobalt top,top,0047FF,2,2,,
-black trousers,bottom,000000,3,2,,wool
-rust scarf,accessory,A6502F,2,2,true,
-,layer,,,,,"coat, jacket, cardigan — anything worn over the top"
-,shoes,,,,,
-,bag,,,,,
+name,slot,hex,dressiness,weight,near_face,fibre,surface,notes
+deep teal knit,top,1F5F63,2,3,,,,merino crew — example row; replace

@@ -1,0 +1,19 @@
+name,slot,hex,dressiness,weight,near_face,fibre,surface,notes
+deep teal knit,top,1F5F63,2,3,,wool,textured,from nora-items.csv
+pure white shirt,top,FFFFFF,3,1,,cotton,smooth,from nora-items.csv
+cobalt top,top,0047FF,2,2,,synthetic,smooth,from nora-items.csv
+cream silk blouse,top,EFE6D3,3,1,,silk,smooth,anchor: cream
+black trousers,bottom,000000,3,2,,wool,smooth,from nora-items.csv
+dark olive trouser,bottom,4E5A3A,3,2,,wool,smooth,anchor: dark olive
+indigo jeans,bottom,2A3C5B,2,3,,denim,textured,fibre denim — the denim rule applies
+charcoal skirt,bottom,3A3632,3,2,,wool,textured,anchor: warm charcoal
+deep teal coat,layer,1F5F63,3,4,,wool,textured,anchor: deep teal — the rain layer
+camel cardigan,layer,B89A6B,2,2,,cashmere,textured,anchor: camel
+chocolate loafers,shoes,4A3728,3,2,,leather,smooth,anchor: chocolate
+black boots,shoes,000000,2,3,,leather,smooth,black below the waist
+camel tote,bag,B89A6B,2,1,,leather,matte,anchor: camel
+black shoulder bag,bag,000000,3,1,,leather,smooth,black as hardware
+gold hoops,accessory,B8963E,3,1,false,other,shiny,anchor: old gold
+bronze cuff,accessory,B5693C,3,1,false,other,shiny,anchor: cinnamon
+rust scarf,accessory,A6502F,2,2,true,wool,textured,from nora-items.csv
+sage wool scarf,accessory,9AA88B,2,2,true,wool,textured,anchor: sage

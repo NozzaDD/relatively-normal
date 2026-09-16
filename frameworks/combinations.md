@@ -64,20 +64,20 @@ These four are the combinations that came out of the original analysis. Every nu
 
 | Name | Dominant | Counter | Bridge | Hue gap | Δ rel. chroma | ΔL* | Generator |
 |---|---|---|---|---|---|---|---|
-| **Teal and Ochre** | deep teal `1F5F63` | ochre `C7912B` | warm mid grey `8B8378` | 125.0° | 0.00 (0.85 / 0.85) | 27.1 | **Opposition** — passes all three |
-| **Petrol and Cinnamon** | petrol `2C5A66` | cinnamon `B5693C` | warm mid grey `8B8378` | 169.3° | 0.10 (0.72 / 0.62) | 16.5 | **Opposition** — passes all three |
+| **Teal and Ochre** | deep teal `1F5F63` | ochre `C7912B` | stone `D6CEC2` | 125.0° | 0.00 (0.85 / 0.85) | 27.1 | **Opposition** — passes all three |
+| **Petrol and Cinnamon** | petrol `2C5A66` | cinnamon `B5693C` | stone `D6CEC2` | 169.3° | 0.10 (0.72 / 0.62) | 16.5 | **Opposition** — passes all three |
 | **Olive and Faded Rose** | dark olive `4E5A3A` | dusty rose `C09A93` | cream `EFE6D3` | 88.2° | 0.13 (0.40 / 0.27) | 30.4 | **Muted** — passes all four |
-| **Plum and Old Gold** | soft plum `5C3A4E` | old gold `B8963E` | warm mid grey `8B8378` | 104.5° | 0.40 (0.33 / 0.73) | 34.6 | **None** — a deliberate chroma step |
+| **Plum and Old Gold** | soft plum `5C3A4E` | old gold `B8963E` | stone `D6CEC2` | 104.5° | 0.40 (0.33 / 0.73) | 34.6 | **None** — a deliberate chroma step |
 
-Bridges were re-checked against §3.6 on 2026-09-15. Warm mid grey (relative chroma 0.115) is the only Soft Autumn neutral. The three chromatic bridges from the original analysis all fail the Tonal test with both of their pair's anchors and were replaced: camel against cinnamon is hue 25.8°, Δrel 0.20, but ΔL\* only 13.1 (needs 25); warm taupe is 43.8° from dark olive and 44.4° from dusty rose (needs ≤ 40°); chocolate against old gold is 22.4° but Δrel 0.37 (needs ≤ 0.20). Replacements are the qualifying anchor with the largest lightness gap to the pair.
+Bridges were re-checked against §3.6 on 2026-09-15, and again the same day after warm charcoal `3A3632` (L\* 22.9, relative chroma 0.098) and stone `D6CEC2` (L\* 83.1, 0.095) joined warm mid grey (L\* 55.2, 0.115) as Soft Autumn's neutrals. Where several anchors qualify, the one with the largest lightness gap to the pair wins, which is why stone — the lightest of the three — now bridges three of the four. The three chromatic bridges from the original analysis all fail the Tonal test with both of their pair's anchors and were replaced: camel against cinnamon is hue 25.8°, Δrel 0.20, but ΔL\* only 13.1 (needs 25); warm taupe is 43.8° from dark olive and 44.4° from dusty rose (needs ≤ 40°); chocolate against old gold is 22.4° but Δrel 0.37 (needs ≤ 0.20). Replacements are the qualifying anchor with the largest lightness gap to the pair.
 
-**Teal and Ochre** is the reference pair. Keep the teal deep and green-leaning, never cool-bright. Bridge: warm mid grey, a neutral, L\* 55.2 — gap 8.7 to the pair.
+**Teal and Ochre** is the reference pair. Keep the teal deep and green-leaning, never cool-bright. Bridge: stone, a neutral, L\* 83.1 — gap 19.3 to the pair (above ochre); warm charcoal (13.8) and warm mid grey (8.7) also qualify.
 
-**Petrol and Cinnamon** — warmer counter than ochre; reads richer, good for outerwear. The narrowest value gap of the four, and the reason the opposition minimum is 15 rather than 25. Bridge: warm mid grey, the only anchor that qualifies — L\* 55.2, gap 3.0 to cinnamon, so it is a tight bridge; camel fails on lightness (ΔL\* 13.1 to cinnamon).
+**Petrol and Cinnamon** — warmer counter than ochre; reads richer, good for outerwear. The narrowest value gap of the four, and the reason the opposition minimum is 15 rather than 25. Bridge: stone, L\* 83.1 — gap 31.0 to the pair, the widest of the four; warm charcoal (12.7) and warm mid grey (3.0) also qualify. Camel, the original bridge, fails on lightness (ΔL\* 13.1 to cinnamon).
 
-**Olive and Faded Rose** — the quietest pair. Rose near the face, olive as the body. Bridge: cream, which forms a Tonal pair with dark olive (32.3°, Δrel 0.12, ΔL\* 55.1) and sits lightest of the three at L\* 91.5, gap 24.7 to the pair; warm mid grey, chocolate and sage also qualify with smaller gaps (11.7, 11.7, 0.2). A Muted pair: at 88.2° the hues are neither opposed nor analogous, so in this middle band neither opposition nor analogy is doing the work — the pair only holds because both colours are quiet (0.40 and 0.27, under the 0.45 cap) and the value gap of 30.4 carries it.
+**Olive and Faded Rose** — the quietest pair. Rose near the face, olive as the body. Bridge: cream, which forms a Tonal pair with dark olive (32.3°, Δrel 0.12, ΔL\* 55.1) and sits lightest of the three at L\* 91.5, gap 24.7 to the pair; stone, warm charcoal, warm mid grey, chocolate and sage also qualify with smaller gaps (16.2, 13.5, 11.7, 11.7, 0.2). A Muted pair: at 88.2° the hues are neither opposed nor analogous, so in this middle band neither opposition nor analogy is doing the work — the pair only holds because both colours are quiet (0.40 and 0.27, under the 0.45 cap) and the value gap of 30.4 carries it.
 
-**Plum and Old Gold** — the most evening of the four; gold in small pieces only. This one is not a matched-chroma pair and was never meant to be: a low-saturation plum (0.33) against a near-saturated gold (0.73) is a **deliberate chroma step**, the gold doing the work an accent does. Its hue gap puts it in the opposition band, but a Δ relative chroma of 0.40 fails every generator's chroma test. It sits outside all three, and it is kept here as the example of what the generators do not produce — a pair that works for a reason the mechanism does not encode. Bridge: warm mid grey, the only anchor that qualifies — L\* 55.2, gap 8.5 to old gold; chocolate fails on chroma against old gold and on lightness against soft plum (ΔL\* 4.3).
+**Plum and Old Gold** — the most evening of the four; gold in small pieces only. This one is not a matched-chroma pair and was never meant to be: a low-saturation plum (0.33) against a near-saturated gold (0.73) is a **deliberate chroma step**, the gold doing the work an accent does. Its hue gap puts it in the opposition band, but a Δ relative chroma of 0.40 fails every generator's chroma test. It sits outside all three, and it is kept here as the example of what the generators do not produce — a pair that works for a reason the mechanism does not encode. Bridge: stone, L\* 83.1 — gap 19.5 to the pair (above old gold); warm mid grey (8.5) and warm charcoal (6.1) also qualify. Chocolate, the original bridge, fails on chroma against old gold and on lightness against soft plum (ΔL\* 4.3).
 
 ## 5. Neutrals are the ground
 
@@ -87,12 +87,13 @@ These are the pairing rules for an outfit. They run after the slot rules for bla
 
 | Pair | Valid when |
 |---|---|
+| **Chromatic + chromatic, monochrome** | The two are within ΔE 12 of *each other* and both are in palette — valid regardless of the generators. One colour in two garments is a tonal outfit, not a failed pair |
 | **Chromatic + chromatic** | The pair matches a generated pair: each item is within ΔE 12 of one of that pair's two anchors |
 | **Chromatic + neutral** | Both are in palette |
 | **Neutral + neutral** | ΔL* ≥ 15; otherwise flag as **flat** |
 | **Three or more chromatic items** | Every chromatic pair must be valid; otherwise flag as **too many colours** |
 
-An outfit is valid when every pair in it is valid. This is what "works now" (`horizons.md` §3c) and the closet search (`matching.md` §5, source 1) are built from.
+The monochrome test runs first, so a pair that passes it is reported with kind **monochrome** and never reaches the generator test. An outfit is valid when every pair in it is valid. This is what "works now" (`horizons.md` §3c) and the closet search (`matching.md` §5, source 1) are built from.
 
 ## 6. Wada's dictionary as a personal subset
 
