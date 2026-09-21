@@ -11,10 +11,10 @@ SMALL = {'shoes', 'bag', 'accessory'}
 NOTES = {
  'board-1': ('verdict', """Rust does not need a second colour.
 
-Three rust things in one outfit sounds like too many until you see it: a padded
-jacket, a fine ribbed knit, a scarf. Same colour, three different weights, and
-it reads as one thing with texture rather than three things competing. The dark
-brown shoes and bag are there to stop it, not to join in."""),
+A padded jacket and a fine ribbed knit in the same colour, a tan leather skirt
+under them, and then nothing else bright at all. Two pieces of one colour at
+different weights read as one idea rather than as a match, and the brown shoes
+and the black bag are there to stop it, not to join in."""),
  'board-2': ('label', """Pale on pale, and one warm thing.
 
 A grey cardigan, a fine striped shirt, ecru trousers. Then brown boots, because
@@ -107,8 +107,9 @@ def main():
                 i, p['slot'], p['product_id'], pr['garment_type'], pr['colour1_name'],
                 pr['brand'] or '—', mark, carries))
         L += ['']
-        L += ['### Note (pattern: *%s*)' % NOTES[k][0], '', '> ' +
-              NOTES[k][1].strip().replace('\n\n', '\n>\n> ').replace('\n', '\n> '), '',
+        quote = '\n'.join('> ' + ln if ln.strip() else '>'
+                          for ln in NOTES[k][1].strip().split('\n'))
+        L += ['### Note (pattern: *%s*)' % NOTES[k][0], '', quote, '',
               '*Not my voice yet.*', '', src_line(b), '']
 
         swap = []

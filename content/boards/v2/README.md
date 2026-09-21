@@ -13,7 +13,7 @@ of it appears on the image itself.
 
 | Board | Title | Key colours | Result |
 |---|---|---|---|
-| 1 | One rust, top to toe | rust, off-black | passes |
+| 1 | Rust twice, and nothing else bright | rust, off-black | passes |
 | 2 | Pale on pale, one warm thing | lilac, rust | passes |
 | 3 | Ochre over black | black, ochre, olive | passes |
 | 4 | Brick, and nothing else loud | brick, rust | passes |
@@ -22,9 +22,9 @@ of it appears on the image itself.
 
 ---
 
-## Board 1 — One rust, top to toe
+## Board 1 — Rust twice, and nothing else bright
 
-*Same colour three times, three different weights.*
+*One colour at two weights, with brown underneath it.*
 
 <img src="board-1-a.jpg" width="360"> 
 <img src="board-1-b.jpg" width="360"> 
@@ -56,11 +56,11 @@ Notes size 1080×1350, JPEG under 1 MB.
 ### Note (pattern: *verdict*)
 
 > Rust does not need a second colour.
-> >
-> > Three rust things in one outfit sounds like too many until you see it: a padded
-> jacket, a fine ribbed knit, a scarf. Same colour, three different weights, and
-> it reads as one thing with texture rather than three things competing. The dark
-> brown shoes and bag are there to stop it, not to join in.
+>
+> A padded jacket and a fine ribbed knit in the same colour, a tan leather skirt
+> under them, and then nothing else bright at all. Two pieces of one colour at
+> different weights read as one idea rather than as a match, and the brown shoes
+> and the black bag are there to stop it, not to join in.
 
 *Not my voice yet.*
 
@@ -107,8 +107,8 @@ Notes size 1080×1350, JPEG under 1 MB.
 ### Note (pattern: *label*)
 
 > Pale on pale, and one warm thing.
-> >
-> > A grey cardigan, a fine striped shirt, ecru trousers. Then brown boots, because
+>
+> A grey cardigan, a fine striped shirt, ecru trousers. Then brown boots, because
 > an outfit this quiet needs one piece with some weight in it or the whole thing
 > floats off.
 
@@ -160,8 +160,8 @@ Post size, 1456px wide, with numbered labels:
 ### Note (pattern: *confession*)
 
 > I always assume ochre will be too much, and it never is.
-> >
-> > The trick seems to be that it only gets one job. Here it is a leather skirt and
+>
+> The trick seems to be that it only gets one job. Here it is a leather skirt and
 > everything above it — a black jacket, a grey knit, a black bag — stays flat and
 > dark, so the skirt is the only thing doing any work.
 
@@ -210,8 +210,8 @@ Notes size 1080×1350, JPEG under 1 MB.
 ### Note (pattern: *question*)
 
 > How much of one colour is too much?
-> >
-> > Brick on brick on brick, and then everything else turned all the way down:
+>
+> Brick on brick on brick, and then everything else turned all the way down:
 > white trousers, brown boots, a black bag, a grey wrap. I think the answer is
 > that it stops being too much the moment nothing else competes.
 
@@ -259,8 +259,8 @@ Notes size 1080×1350, JPEG under 1 MB.
 ### Note (pattern: *verdict*)
 
 > All black is not a lack of decisions.
-> >
-> > A long tailored coat, a chunky roll neck, wide flannel trousers, black derbies,
+>
+> A long tailored coat, a chunky roll neck, wide flannel trousers, black derbies,
 > a black bag. Five black things that do not match each other, which is the point
 > — and then one soft green wrap so the eye has somewhere to land.
 
@@ -313,8 +313,8 @@ Post size, 1456px wide, with numbered labels:
 ### Note (pattern: *label*)
 
 > Cream on top, brown underneath.
-> >
-> > A corduroy jacket, a cream knitted polo, wide camel trousers, flat black shoes.
+>
+> A corduroy jacket, a cream knitted polo, wide camel trousers, flat black shoes.
 > The only strong colour is the dark red scarf, and it is the last thing you put
 > on.
 

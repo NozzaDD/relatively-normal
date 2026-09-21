@@ -12,7 +12,7 @@ OUT = ROOT + '/content/boards/v2'
 
 # the owner writes the words; these are drafts, labelled "not my voice yet"
 WORDS = {
- 'IMG_0843.png': ("One rust, top to toe", "Same colour three times, three different weights."),
+ 'IMG_0843.png': ("Rust twice, and nothing else bright", "One colour at two weights, with brown underneath it."),
  'IMG_0861.png': ("Pale on pale, one warm thing", "Everything quiet except the boots."),
  'IMG_0814.png': ("Ochre over black", "The jacket does the talking and everything under it stays quiet."),
  'IMG_0802.png': ("Brick, and nothing else loud", "One strong colour and three quiet ones underneath."),
