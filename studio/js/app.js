@@ -4,14 +4,19 @@
 // The machine sorts, suggests and renders. It never places anything.
 
 import { createStaticSource, indexById, indexInspiration, emptyFilters,
-  filterProducts, WEIGHT_LABELS, FORMALITY_LABELS } from './data.js';
+  filterProducts, onShelf, effectiveChoice, isReviewed,
+  WEIGHT_LABELS, FORMALITY_LABELS } from './data.js';
 import * as M from './model.js';
 import { metrics, isTile } from './render.js';
 import { rankByLook } from './colour.js';
 import * as X from './export.js';
+import { createReview, loadChoices, saveChoices, choicesFile, choiceBox } from './review.js';
 
 const $ = (id) => document.getElementById(id);
 const STORE = 'rn.studio.board.v2';
+const SETTINGS = 'rn.studio.settings.v1';
+const LONG_PRESS_MS = 300;
+const SIDEWAYS_PX = 12;
 
 const S = {
   source: createStaticSource('.'),
@@ -19,10 +24,14 @@ const S = {
   board: M.createBoard('portrait'),
   history: M.createHistory(),
   filters: emptyFilters(),
+  choices: {},
+  settings: { frame: { ...M.DEFAULT_FRAME } },
   matchSort: false,
   view: 'grid',
   selected: null,
   shown: [],
+  taps: 0,
+  review: null,
 };
 window.__studio = S;                      // the test harness reaches in here
 
@@ -35,11 +44,19 @@ async function init() {
   S.inspiration = cat.inspiration;
   S.productsById = indexById(S.products);
   S.inspById = indexInspiration(S.inspiration);
+  S.choices = loadChoices();
+  loadSettings();
   buildFilterOptions(cat.meta);
   restore();
+  S.review = createReview({
+    source: S.source, choices: S.choices, products: () => S.products, toast,
+    onChange: () => { renderSlotBar(); renderShelf(); renderReviewBadge(); },
+  });
   wire();
+  renderSlotBar();
   renderShelf();
   renderMatrix();
+  renderReviewBadge();
   layoutStage();
   renderBoard();
 }
@@ -53,7 +70,6 @@ function buildFilterOptions(meta) {
       sel.appendChild(o);
     }
   };
-  add($('fSlot'), meta.slots || [...new Set(S.products.map((p) => p.slot).filter(Boolean))].sort());
   add($('fFamily'), meta.families || []);
   add($('fWeight'), [1, 2, 3, 4], (v) => `${v} · ${WEIGHT_LABELS[v]}`);
   add($('fFormality'), [1, 2, 3, 4], (v) => `${v} · ${FORMALITY_LABELS[v]}`);
@@ -65,11 +81,40 @@ function buildFilterOptions(meta) {
 
 function readFilters() {
   S.filters = {
-    slot: $('fSlot').value, family: $('fFamily').value, weight: $('fWeight').value,
+    ...S.filters,
+    family: $('fFamily').value, weight: $('fWeight').value,
     formality: $('fFormality').value, assetType: $('fAsset').value, brand: $('fBrand').value,
-    search: $('search').value, showWeak: $('fWeak').checked,
+    search: $('search').value, showUnreviewed: $('fUnreviewed').checked,
   };
   S.matchSort = $('fMatch').checked;
+}
+
+/** Category buttons with counts. Counts respect every other filter and the
+ *  gate, so the number is what tapping the button will show. */
+function renderSlotBar() {
+  const bar = $('slotBar');
+  bar.replaceChildren();
+  const pool = filterProducts(S.products, { ...S.filters, slot: '' }, S.choices);
+  const counts = {};
+  for (const p of pool) counts[p.slot] = (counts[p.slot] || 0) + 1;
+  for (const slot of ['', ...M.SLOT_ORDER]) {
+    const n = slot ? counts[slot] || 0 : pool.length;
+    const b = document.createElement('button');
+    b.className = 'ghost' + (S.filters.slot === slot ? ' on' : '');
+    b.dataset.slot = slot;
+    b.innerHTML = `${slot || 'All'}<small>${n}</small>`;
+    b.addEventListener('click', () => setSlot(slot));
+    bar.appendChild(b);
+  }
+}
+
+function setSlot(slot) {
+  S.filters.slot = S.filters.slot === slot ? '' : slot;
+  if (!slot) S.filters.slot = '';
+  renderSlotBar();
+  renderShelf();
+  renderHelpers();
+  if (S.view !== 'grid') setView('grid');
 }
 
 // -------------------------------------------------------------------- shelf
@@ -80,7 +125,7 @@ const imageRank = (p) => (p.asset_type === 'tile' ? 2 : 0)
   + (p.asset_quality === 'good' ? 0 : 1);
 
 function currentList() {
-  let list = filterProducts(S.products, S.filters);
+  let list = filterProducts(S.products, S.filters, S.choices);
   const look = S.board.inspiration ? S.inspById[S.board.inspiration] : null;
   if (S.matchSort && look) list = rankByLook(list, look);
   else list = list.map((p, i) => ({ p, i })).sort((a, b) => imageRank(a.p) - imageRank(b.p) || a.i - b.i)
@@ -92,7 +137,8 @@ function renderShelf() {
   const grid = $('grid');
   const list = currentList();
   S.shown = list;
-  $('shelfCount').textContent = `${list.length} of ${S.products.length}`;
+  const gate = S.products.filter((p) => onShelf(p, S.choices, S.filters.showUnreviewed)).length;
+  $('shelfCount').textContent = `${list.length} of ${gate}`;
   grid.replaceChildren();
   const frag = document.createDocumentFragment();
   for (const p of list) {
@@ -110,9 +156,11 @@ function renderShelf() {
       d.title = 'colour read with low confidence';
       cell.appendChild(d);
     }
-    if (p.asset_quality === 'weak') {
+    const flag = p.recoloured ? 'simulated' : (!p.clean && !isReviewed(p, S.choices)) ? 'unreviewed'
+      : p.asset_quality === 'weak' ? 'weak' : '';
+    if (flag) {
       const w = document.createElement('span');
-      w.className = 'weak'; w.textContent = 'weak';
+      w.className = 'weak'; w.textContent = flag;
       cell.appendChild(w);
     }
     const tag = document.createElement('span');
@@ -125,6 +173,11 @@ function renderShelf() {
   grid.appendChild(frag);
 }
 
+function renderReviewBadge() {
+  const pending = S.products.filter((p) => !p.clean && p.full && !isReviewed(p, S.choices)).length;
+  $('reviewBadge').textContent = pending ? String(pending) : '';
+}
+
 function renderMatrix() {
   const g = $('matrixGrid');
   g.replaceChildren();
@@ -135,7 +188,7 @@ function renderMatrix() {
   };
   g.appendChild(head(''));
   for (let f = 1; f <= 4; f++) g.appendChild(head(FORMALITY_LABELS[f]));
-  const pool = filterProducts(S.products, { ...S.filters, weight: '', formality: '' });
+  const pool = filterProducts(S.products, { ...S.filters, weight: '', formality: '' }, S.choices);
   for (let w = 1; w <= 4; w++) {
     g.appendChild(head(WEIGHT_LABELS[w]));
     for (let f = 1; f <= 4; f++) {
@@ -156,7 +209,7 @@ function renderMatrix() {
       c.addEventListener('click', () => {
         $('fWeight').value = String(w);
         $('fFormality').value = String(f);
-        readFilters(); renderShelf(); setView('grid');
+        readFilters(); renderSlotBar(); renderShelf(); setView('grid');
       });
       g.appendChild(c);
     }
@@ -165,10 +218,12 @@ function renderMatrix() {
 
 function setView(v) {
   S.view = v;
-  $('grid').classList.toggle('hidden', v !== 'grid');
+  $('shelfPane').classList.toggle('hidden', v !== 'grid');
   $('matrix').classList.toggle('hidden', v !== 'matrix');
+  $('review').classList.toggle('hidden', v !== 'review');
   document.querySelectorAll('.tab').forEach((t) => t.classList.toggle('on', t.dataset.view === v));
   if (v === 'matrix') renderMatrix();
+  if (v === 'review') S.review.render();
 }
 
 // -------------------------------------------------------------------- stage
@@ -190,6 +245,16 @@ function layoutStage() {
   st.style.height = `${h}px`;
 }
 
+function frameStyles(d, m) {
+  const f = S.board.frame || M.DEFAULT_FRAME;
+  d.style.padding = f.mat ? `${m.mat}px` : '0';
+  d.style.background = f.mat ? '#ffffff' : 'transparent';
+  d.style.borderColor = f.border ? M.KEYLINE : 'transparent';
+  const r = (f.radius || 0) * ($('stage').clientWidth / 1080);
+  d.style.borderRadius = `${r}px`;
+  d.style.overflow = 'hidden';
+}
+
 function renderBoard() {
   const st = $('stage');
   const W = st.clientWidth;
@@ -204,7 +269,7 @@ function renderBoard() {
   for (const el of M.stacked(S.board)) {
     const p = el.kind === 'product' ? S.productsById[el.product_id] : null;
     const insp = el.kind === 'inspiration' ? S.inspById[el.inspiration_id] : null;
-    const framed = isTile(el.kind, p?.asset_type);
+    const framed = isTile(el.kind, p?.asset_type, el.variant);
     const d = document.createElement('div');
     d.className = `el ${framed ? 'tile' : 'cut'}${S.selected === el.uid ? ' sel' : ''}`;
     d.dataset.uid = el.uid;
@@ -214,22 +279,27 @@ function renderBoard() {
     d.style.aspectRatio = String(el.aspect || 1);
     d.style.zIndex = String(el.z);
     d.style.transform = `translate(-50%,-50%) rotate(${el.rot || 0}deg) scaleX(${el.flip ? -1 : 1})`;
-    if (framed) d.style.padding = `${m.mat}px`;
+    if (framed) frameStyles(d, m);
     const img = document.createElement('img');
-    img.src = p ? S.source.assetUrl(p) : (insp ? S.source.inspirationUrl(insp) : '');
     img.alt = '';
     img.draggable = false;
-    d.appendChild(img);
-    if (S.selected === el.uid) {
-      for (const k of ['resize', 'rotate']) {
-        const h2 = document.createElement('div');
-        h2.className = `handle ${k}`;
-        h2.dataset.handle = k;
-        h2.dataset.uid = el.uid;
-        h2.textContent = k === 'resize' ? '⤡' : '⟳';
-        d.appendChild(h2);
-      }
+    if (el.crop && p) {
+      // a crop of the full photo: the image sits inside a clipping box
+      const wrap = document.createElement('div');
+      wrap.className = 'cropwrap';
+      const l = M.cropLayout(el.crop);
+      img.src = S.source.fullUrl(p);
+      img.style.width = `${l.imgW * 100}%`;
+      img.style.height = `${l.imgH * 100}%`;
+      img.style.left = `${l.left * 100}%`;
+      img.style.top = `${l.top * 100}%`;
+      wrap.appendChild(img);
+      d.appendChild(wrap);
+    } else {
+      img.src = p ? S.source.assetUrl(p) : (insp ? S.source.inspirationUrl(insp) : '');
+      d.appendChild(img);
     }
+    if (S.selected === el.uid) addHandles(d, el.uid);
     layers.appendChild(d);
   }
 
@@ -292,14 +362,27 @@ function renderBoard() {
   autosave();
 }
 
+function addHandles(d, uid) {
+  for (const k of ['resize', 'rotate']) {
+    const h = document.createElement('div');
+    h.className = `handle ${k}`;
+    h.dataset.handle = k;
+    h.dataset.uid = uid;
+    h.textContent = k === 'resize' ? '⤡' : '⟳';
+    d.appendChild(h);
+  }
+}
+
 function renderHelpers() {
   const list = M.slotChecklist(S.board, S.productsById);
   const sl = $('slotList');
   sl.replaceChildren();
   for (const s of list) {
-    const c = document.createElement('span');
-    c.className = 'slot-chip' + (s.count ? ' has' : '');
+    const c = document.createElement('button');
+    c.className = 'slot-chip' + (s.count ? ' has' : '') + (S.filters.slot === s.slot ? ' filtering' : '');
     c.textContent = s.count ? `${s.slot} ${s.count > 1 ? `×${s.count}` : ''}`.trim() : s.slot;
+    c.title = `Show ${s.slot} on the shelf`;
+    c.addEventListener('click', () => setSlot(s.slot));
     sl.appendChild(c);
   }
   const a = M.axes(S.board, S.productsById);
@@ -321,16 +404,32 @@ async function aspectOf(src) {
   } catch (e) { return 1; }
 }
 
+/** What the shelf places for a product: its cut-out, or the crop she chose. */
+function placement(p) {
+  const c = effectiveChoice(p, S.choices);
+  const box = choiceBox(p, c);
+  if (box) return { variant: c.choice, crop: box, aspect: M.shownAspect(p, c.choice, box) };
+  return { variant: 'cutout', crop: null, aspect: null };
+}
+
 async function placeProduct(pid, x, y) {
   const p = S.productsById[pid];
   if (!p) return;
   M.commit(S.history, S.board);
-  const aspect = await aspectOf(S.source.thumbUrl(p));
-  M.addElement(S.board, {
+  const pl = placement(p);
+  const aspect = pl.aspect || await aspectOf(S.source.thumbUrl(p));
+  const el = M.addElement(S.board, {
     kind: 'product', product_id: pid, x: clamp01(x), y: clamp01(y),
-    w: defaultWidth(p.slot), aspect,
+    w: defaultWidth(p.slot), aspect, variant: pl.variant, crop: pl.crop,
   });
   renderBoard();
+  return el;
+}
+
+/** A tap adds the piece to the middle, each new one a little further along. */
+async function placeByTap(pid) {
+  const k = S.taps++ % 6;
+  return placeProduct(pid, 0.5 + (k - 2.5) * 0.035, 0.5 + (k - 2.5) * 0.03);
 }
 
 async function placeInspiration(iid) {
@@ -339,7 +438,7 @@ async function placeInspiration(iid) {
   S.board.elements = S.board.elements.filter((e) => e.kind !== 'inspiration');
   S.board.inspiration = iid || null;
   if (insp) {
-    const aspect = await aspectOf(S.source.thumbUrl ? S.source.inspirationThumbUrl(insp) : insp.image);
+    const aspect = await aspectOf(S.source.inspirationThumbUrl(insp));
     M.addElement(S.board, {
       kind: 'inspiration', inspiration_id: iid, x: 0.27, y: 0.52, w: 0.40, aspect, z: 0,
     });
@@ -356,20 +455,31 @@ const clamp01 = (v) => Math.min(0.99, Math.max(0.01, v));
 
 // -------------------------------------------------------------- gestures
 let drag = null;
+const pointers = new Map();          // active pointers on the stage, for pinch
 
 function stagePoint(ev) {
   const r = $('stage').getBoundingClientRect();
   return { x: (ev.clientX - r.left) / r.width, y: (ev.clientY - r.top) / r.height, r };
 }
 
+// The shelf: a vertical swipe scrolls (the browser's pan-y), a tap adds to the
+// middle, a long press or a mostly sideways drag picks the piece up.
 function onShelfDown(ev) {
   const cell = ev.target.closest('.cell');
   if (!cell) return;
-  ev.preventDefault();
   const pid = cell.dataset.pid;
-  const p = S.productsById[pid];
-  if (!p) return;
-  drag = { type: 'shelf', pid, moved: false, pointerId: ev.pointerId };
+  if (!S.productsById[pid]) return;
+  drag = { type: 'shelf', pid, cell, x0: ev.clientX, y0: ev.clientY, lifted: false,
+    pointerId: ev.pointerId, timer: 0 };
+  drag.timer = setTimeout(() => { if (drag && drag.type === 'shelf' && !drag.lifted) lift(ev); }, LONG_PRESS_MS);
+}
+
+function lift(ev) {
+  const d = drag;
+  if (!d || d.lifted) return;
+  d.lifted = true;
+  clearTimeout(d.timer);
+  const p = S.productsById[d.pid];
   const g = $('drag');
   g.replaceChildren();
   const img = document.createElement('img');
@@ -378,12 +488,19 @@ function onShelfDown(ev) {
   g.style.left = `${ev.clientX}px`;
   g.style.top = `${ev.clientY}px`;
   g.hidden = false;
-  cell.setPointerCapture?.(ev.pointerId);
+  d.cell.classList.add('lifting');
+  try { d.cell.setPointerCapture(d.pointerId); } catch (e) { /* touch already panning */ }
 }
 
 function onShelfMove(ev) {
   if (!drag || drag.type !== 'shelf') return;
-  drag.moved = true;
+  if (!drag.lifted) {
+    const dx = ev.clientX - drag.x0, dy = ev.clientY - drag.y0;
+    if (Math.abs(dx) > SIDEWAYS_PX && Math.abs(dx) > Math.abs(dy) * 1.2) lift(ev);
+    else if (Math.abs(dy) > SIDEWAYS_PX) { clearTimeout(drag.timer); drag.scrolling = true; }
+    return;
+  }
+  ev.preventDefault();
   const g = $('drag');
   g.style.left = `${ev.clientX}px`;
   g.style.top = `${ev.clientY}px`;
@@ -393,29 +510,50 @@ async function onShelfUp(ev) {
   if (!drag || drag.type !== 'shelf') return;
   const d = drag;
   drag = null;
+  clearTimeout(d.timer);
+  d.cell.classList.remove('lifting');
   $('drag').hidden = true;
-  const r = $('stage').getBoundingClientRect();
-  const inside = ev.clientX >= r.left && ev.clientX <= r.right
-    && ev.clientY >= r.top && ev.clientY <= r.bottom;
-  if (inside) {
-    await placeProduct(d.pid, (ev.clientX - r.left) / r.width, (ev.clientY - r.top) / r.height);
-  } else if (!d.moved) {
-    await placeProduct(d.pid, 0.5, 0.5);        // a tap drops it in the middle
+  if (d.lifted) {
+    const r = $('stage').getBoundingClientRect();
+    const inside = ev.clientX >= r.left && ev.clientX <= r.right
+      && ev.clientY >= r.top && ev.clientY <= r.bottom;
+    if (inside) await placeProduct(d.pid, (ev.clientX - r.left) / r.width, (ev.clientY - r.top) / r.height);
+  } else if (!d.scrolling) {
+    await placeByTap(d.pid);
+  }
+}
+
+function onShelfCancel() {
+  if (drag && drag.type === 'shelf') {           // the browser took the swipe: a scroll
+    clearTimeout(drag.timer);
+    drag.cell.classList.remove('lifting');
+    drag = null;
+    $('drag').hidden = true;
   }
 }
 
 function onStageDown(ev) {
+  pointers.set(ev.pointerId, { x: ev.clientX, y: ev.clientY });
   const handle = ev.target.closest('.handle');
   const elDiv = ev.target.closest('.el');
   const pt = stagePoint(ev);
   // Without this the browser starts its own image drag on the first move and
   // sends pointercancel, which ends the gesture after a single frame.
   if (handle || elDiv) ev.preventDefault();
+  if (pointers.size === 2 && S.selected) {       // second finger: pinch the selected piece
+    const el = M.byId(S.board, S.selected);
+    const [a, b] = [...pointers.values()];
+    M.commit(S.history, S.board);
+    drag = { type: 'pinch', uid: el.uid, d0: Math.hypot(b.x - a.x, b.y - a.y),
+      a0: Math.atan2(b.y - a.y, b.x - a.x), w0: el.w, rot0: el.rot || 0 };
+    capture(ev);
+    return;
+  }
   if (handle) {
     const el = M.byId(S.board, handle.dataset.uid);
     M.commit(S.history, S.board);
     drag = { type: handle.dataset.handle, uid: el.uid, start: pt, w0: el.w, rot0: el.rot || 0 };
-    $('stage').setPointerCapture(ev.pointerId);
+    capture(ev);
     return;
   }
   if (!elDiv) { setSelection(null); return; }
@@ -423,10 +561,16 @@ function onStageDown(ev) {
   setSelection(el.uid);
   M.commit(S.history, S.board);
   drag = { type: 'move', uid: el.uid, dx: el.x - pt.x, dy: el.y - pt.y };
-  $('stage').setPointerCapture(ev.pointerId);
+  capture(ev);
+}
+
+/** Capture is a courtesy, not a requirement: a touch can end before it lands. */
+function capture(ev) {
+  try { $('stage').setPointerCapture(ev.pointerId); } catch (e) { /* fine */ }
 }
 
 function onStageMove(ev) {
+  if (pointers.has(ev.pointerId)) pointers.set(ev.pointerId, { x: ev.clientX, y: ev.clientY });
   if (!drag || drag.type === 'shelf') return;
   const el = M.byId(S.board, drag.uid);
   if (!el) return;
@@ -441,6 +585,12 @@ function onStageMove(ev) {
     const a0 = Math.atan2(drag.start.y - el.y, drag.start.x - el.x);
     const a1 = Math.atan2(pt.y - el.y, pt.x - el.x);
     el.rot = Math.round((drag.rot0 + ((a1 - a0) * 180) / Math.PI) * 10) / 10;
+  } else if (drag.type === 'pinch' && pointers.size >= 2) {
+    const [a, b] = [...pointers.values()];
+    const d1 = Math.hypot(b.x - a.x, b.y - a.y);
+    const a1 = Math.atan2(b.y - a.y, b.x - a.x);
+    el.w = Math.min(2.2, Math.max(0.04, drag.w0 * (d1 / Math.max(1, drag.d0))));
+    el.rot = Math.round((drag.rot0 + ((a1 - drag.a0) * 180) / Math.PI) * 10) / 10;
   }
   applyElementStyle(el);
 }
@@ -454,7 +604,9 @@ function applyElementStyle(el) {
   d.style.transform = `translate(-50%,-50%) rotate(${el.rot || 0}deg) scaleX(${el.flip ? -1 : 1})`;
 }
 
-function onStageUp() {
+function onStageUp(ev) {
+  pointers.delete(ev.pointerId);
+  if (drag && drag.type === 'pinch' && pointers.size >= 1) return;   // one finger still down
   if (drag && drag.type !== 'shelf') {
     drag = null;
     renderBoard();
@@ -474,17 +626,7 @@ function setSelection(uid) {
     d.querySelectorAll('.handle').forEach((h) => h.remove());
   });
   const d = uid && layers.querySelector(`[data-uid="${uid}"]`);
-  if (d) {
-    d.classList.add('sel');
-    for (const k of ['resize', 'rotate']) {
-      const h = document.createElement('div');
-      h.className = `handle ${k}`;
-      h.dataset.handle = k;
-      h.dataset.uid = uid;
-      h.textContent = k === 'resize' ? '⤡' : '⟳';
-      d.appendChild(h);
-    }
-  }
+  if (d) { d.classList.add('sel'); addHandles(d, uid); }
   $('elementBar').hidden = !uid;
 }
 
@@ -523,6 +665,14 @@ async function save() {
   }
 }
 
+async function exportChoices() {
+  const file = new File([JSON.stringify(choicesFile(S.choices), null, 1)], 'asset-choices.json',
+    { type: 'application/json' });
+  const how = await X.handOver([file], { title: 'asset-choices.json' });
+  toast(how === 'shared' ? 'Choices sent to the share sheet.' : how === 'cancelled' ? 'Cancelled.'
+    : 'asset-choices.json downloaded. Put it in content/catalogue/.');
+}
+
 async function openInfo(text) {
   const info = JSON.parse(text);
   if (info.kind !== 'relatively-normal.outfit') throw new Error('not an outfit file');
@@ -531,6 +681,7 @@ async function openInfo(text) {
   b.title = info.title || '';
   b.line = info.line || '';
   b.ground = info.canvas?.ground || M.GROUND;
+  b.frame = { ...M.DEFAULT_FRAME, ...(info.canvas?.frame || S.settings.frame) };
   const shown = info.elements_shown || {};
   b.showTitle = shown.title !== false;
   b.showLine = shown.line !== false;
@@ -548,7 +699,7 @@ async function openInfo(text) {
     const pl = p.placement || {};
     M.addElement(b, { kind: 'product', product_id: p.product_id, x: pl.x ?? 0.5, y: pl.y ?? 0.5,
       w: pl.w ?? 0.3, rot: pl.rotation || 0, flip: !!pl.flip, z: pl.layer ?? 1,
-      aspect: pl.aspect || 1 });
+      aspect: pl.aspect || 1, variant: p.image_variant || 'cutout', crop: p.image_crop || null });
   }
   S.board = b;
   S.selected = null;
@@ -572,15 +723,27 @@ function autosave() {
 function restore() {
   let raw = null;
   try { raw = localStorage.getItem(STORE); } catch (e) { raw = null; }
-  if (!raw) return;
+  if (!raw) { S.board.frame = { ...S.settings.frame }; return; }
   try {
     const b = JSON.parse(raw);
     if (b && Array.isArray(b.elements)) {
       b.elements = b.elements.filter((e) => e.kind === 'inspiration'
         ? !!S.inspById[e.inspiration_id] : !!S.productsById[e.product_id]);
       S.board = { ...M.createBoard(b.format || 'portrait'), ...b };
+      S.board.frame = { ...M.DEFAULT_FRAME, ...(b.frame || S.settings.frame) };
     }
   } catch (e) { /* corrupt or from an older version: start clean */ }
+}
+
+function loadSettings() {
+  try {
+    const s = JSON.parse(localStorage.getItem(SETTINGS) || '{}');
+    if (s && s.frame) S.settings.frame = { ...M.DEFAULT_FRAME, ...s.frame };
+  } catch (e) { /* defaults */ }
+}
+
+function saveSettings() {
+  try { localStorage.setItem(SETTINGS, JSON.stringify(S.settings)); } catch (e) { /* fine */ }
 }
 
 // -------------------------------------------------------------------- wiring
@@ -593,37 +756,43 @@ function syncControls() {
   $('oLine').checked = S.board.showLine;
   $('oSwatch').checked = S.board.showSwatches;
   $('oLabels').checked = S.board.showLabels;
+  const f = S.board.frame || M.DEFAULT_FRAME;
+  $('frBorder').checked = !!f.border;
+  $('frMat').checked = !!f.mat;
+  $('frRadius').value = String(f.radius || 0);
 }
 
 function wire() {
   syncControls();
   $('fMatch').disabled = !S.board.inspiration;
 
-  for (const id of ['fSlot', 'fFamily', 'fWeight', 'fFormality', 'fAsset', 'fBrand', 'fWeak', 'fMatch']) {
-    $(id).addEventListener('change', () => { readFilters(); renderShelf(); if (S.view === 'matrix') renderMatrix(); });
+  for (const id of ['fFamily', 'fWeight', 'fFormality', 'fAsset', 'fBrand', 'fUnreviewed', 'fMatch']) {
+    $(id).addEventListener('change', () => { readFilters(); renderSlotBar(); renderShelf(); if (S.view === 'matrix') renderMatrix(); });
   }
   let t;
   $('search').addEventListener('input', () => {
     clearTimeout(t);
-    t = setTimeout(() => { readFilters(); renderShelf(); }, 140);
+    t = setTimeout(() => { readFilters(); renderSlotBar(); renderShelf(); }, 140);
   });
   $('clearFilters').addEventListener('click', () => {
-    for (const id of ['fSlot', 'fFamily', 'fWeight', 'fFormality', 'fAsset', 'fBrand']) $(id).value = '';
-    $('search').value = ''; $('fWeak').checked = false; $('fMatch').checked = false;
-    readFilters(); renderShelf(); renderMatrix();
+    for (const id of ['fFamily', 'fWeight', 'fFormality', 'fAsset', 'fBrand']) $(id).value = '';
+    $('search').value = ''; $('fUnreviewed').checked = false; $('fMatch').checked = false;
+    readFilters(); S.filters.slot = ''; renderSlotBar(); renderShelf(); renderMatrix(); renderHelpers();
   });
   document.querySelectorAll('.tab').forEach((b) => b.addEventListener('click', () => setView(b.dataset.view)));
   $('toggleShelf').addEventListener('click', () => {
     $('shelf').classList.toggle('hidden');
     requestAnimationFrame(() => { layoutStage(); renderBoard(); });
   });
+  $('exportChoices').addEventListener('click', exportChoices);
 
-  // shelf drag
+  // shelf gestures
   const grid = $('grid');
   grid.addEventListener('pointerdown', onShelfDown);
   grid.addEventListener('pointermove', onShelfMove);
   grid.addEventListener('pointerup', onShelfUp);
-  grid.addEventListener('pointercancel', () => { drag = null; $('drag').hidden = true; });
+  grid.addEventListener('pointercancel', onShelfCancel);
+  grid.addEventListener('contextmenu', (e) => e.preventDefault());
 
   // canvas
   const stage = $('stage');
@@ -658,6 +827,17 @@ function wire() {
     $(id).addEventListener('change', (e) => { S.board[key] = e.target.checked; renderBoard(); });
   }
 
+  // the frame setting: one for the board, remembered as the default for the next
+  $('frameBtn').addEventListener('click', () => $('framePop').classList.toggle('hidden'));
+  const readFrame = () => {
+    S.board.frame = { border: $('frBorder').checked, mat: $('frMat').checked,
+      radius: Number($('frRadius').value) || 0 };
+    S.settings.frame = { ...S.board.frame };
+    saveSettings();
+    renderBoard();
+  };
+  for (const id of ['frBorder', 'frMat', 'frRadius']) $(id).addEventListener('change', readFrame);
+
   $('undo').addEventListener('click', () => {
     const b = M.undo(S.history, S.board);
     if (b) { S.board = b; S.selected = null; syncControls(); layoutStage(); renderBoard(); }
@@ -670,7 +850,9 @@ function wire() {
     if (S.board.elements.length && !confirm('Start a new board? The current one is not saved to a file.')) return;
     M.commit(S.history, S.board);
     S.board = M.createBoard(S.board.format);
+    S.board.frame = { ...S.settings.frame };
     S.selected = null;
+    S.taps = 0;
     syncControls(); renderBoard();
   });
   $('save').addEventListener('click', save);
@@ -755,7 +937,8 @@ function toast(msg, ms = 2600) {
 }
 
 // exposed for the headless test
-Object.assign(S, { placeProduct, placeInspiration, renderShelf, renderBoard, save, openInfo,
+Object.assign(S, { placeProduct, placeByTap, placeInspiration, renderShelf, renderBoard, save, openInfo,
+  setSlot, setView, exportChoices, saveChoices: () => saveChoices(S.choices),
   buildInfo: () => X.buildInfo(S.board, S.productsById, S.inspById),
   renderCanvas: async () => {
     const images = await X.loadBoardImages(S.board, S.source, S.productsById, S.inspById);

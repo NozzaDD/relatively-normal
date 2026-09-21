@@ -46,21 +46,21 @@ ok('slug is date then title', M.dateSlug('One rust, top to toe!', new Date(2026,
 ok('empty title still gets a name', M.dateSlug('', new Date(2026, 8, 21)) === '2026-09-21-untitled');
 
 const products = [
-  { product_id: 'P1', slot: 'top', weight: 2, formality: 3, asset_quality: 'good',
+  { product_id: 'P1', slot: 'top', weight: 2, formality: 3, asset_quality: 'good', clean: true,
     asset_type: 'cutout_flat', brand: 'ASPESI', product_name: 'Polo', garment_type: 'knit polo',
     price: 'CHF 156', price_confidence: 'given', product_url: '', product_url_confidence: 'input needed',
     brand_confidence: 'given', brand_role: 'recommend', material: '', material_confidence: 'input needed',
     product_name_confidence: 'given', colour_confidence: 'high', image_source: 'brand product shot',
     colours: [{ hex: '#A53B29', name: 'rust', family: 'orange', share: 0.6 }] },
-  { product_id: 'P2', slot: 'shoes', weight: 3, formality: 2, asset_quality: 'weak',
+  { product_id: 'P2', slot: 'shoes', weight: 3, formality: 2, asset_quality: 'weak', clean: false,
     asset_type: 'tile', brand: '', product_name: '', garment_type: 'loafers', price: '',
     colours: [{ hex: '#2B3446', name: 'navy', family: 'blue', share: 0.9 }] },
 ];
 const byId = indexById(products);
 
 console.log('\nfilters');
-ok('weak hidden by default', filterProducts(products, emptyFilters()).length === 1);
-ok('weak shown on request', filterProducts(products, { ...emptyFilters(), showWeak: true }).length === 2);
+ok('unreviewed hidden by default', filterProducts(products, emptyFilters(), {}).length === 1);
+ok('unreviewed shown on request', filterProducts(products, { ...emptyFilters(), showUnreviewed: true }, {}).length === 2);
 ok('slot filter', filterProducts(products, { ...emptyFilters(), slot: 'top' }).length === 1);
 ok('colour family filter', filterProducts(products, { ...emptyFilters(), family: 'orange' }).length === 1);
 ok('search hits the brand', filterProducts(products, { ...emptyFilters(), search: 'aspesi' }).length === 1);
@@ -113,5 +113,52 @@ ok('markdown has a row per piece', (md.match(/^\| \d /gm) || []).length === 2, m
 ok('markdown flags what to confirm', md.includes('Confirm before publishing'));
 ok('markdown leaves an unknown link empty', /\| 2 \|  \| loafers \| navy \|  \|  \|/.test(md), md);
 
-console.log(`\n${pass} passed, ${fail} failed`);
+
+
+// ------------------------------------------------------------- 22 Sept additions
+{
+  const { cropLayout, shownAspect, DEFAULT_FRAME, createBoard: cb } = M;
+  const { onShelf, effectiveChoice, isReviewed } = await import('../js/data.js');
+  const { choicesFile, choiceBox } = await import('../js/review.js');
+  console.log('\ncrops and the gate');
+  eq('cropLayout maps a quarter box', cropLayout([0.5, 0.5, 0.5, 0.5]), { imgW: 2, imgH: 2, left: -1, top: -1 });
+  const full = { full: { w: 1000, h: 2000 } };
+  ok('shownAspect follows the crop', Math.abs(shownAspect(full, 'item', [0, 0, 1, 0.25]) - 2) < 1e-9);
+  ok('shownAspect is null for the cut-out', shownAspect(full, 'cutout', null) === null);
+  ok('a new board carries the default frame', JSON.stringify(cb().frame) === JSON.stringify(DEFAULT_FRAME));
+  const clean = { product_id: 'C', clean: true };
+  const raw = { product_id: 'R', clean: false, full: { w: 10, h: 10 }, boxes: { item: [0, 0, 1, 1], person: [0, 0, 1, 1] } };
+  const filed = { product_id: 'F', clean: false, choice: 'person', custom_box: null, full: { w: 1, h: 1 }, boxes: { person: [0.1, 0.1, 0.5, 0.5] } };
+  const hiddenFiled = { product_id: 'H', clean: false, hidden: true };
+  ok('clean cut-outs pass the gate', onShelf(clean, {}, false));
+  ok('unreviewed pieces wait', !onShelf(raw, {}, false));
+  ok('the toggle lets them through', onShelf(raw, {}, true));
+  ok('a browser choice puts a piece on the shelf', onShelf(raw, { R: { choice: 'item' } }, false));
+  ok('a browser hide takes a clean piece off', !onShelf(clean, { C: { hidden: true } }, true));
+  ok('a filed choice counts as reviewed', isReviewed(filed, {}) && onShelf(filed, {}, false));
+  ok('a filed hide is honoured', !onShelf(hiddenFiled, {}, true));
+  ok('the browser overrides the file', onShelf(hiddenFiled, { H: { choice: 'full' } }, false));
+  eq('choiceBox reads a filed box', choiceBox(filed, effectiveChoice(filed, {})), [0.1, 0.1, 0.5, 0.5]);
+  eq('choiceBox for full is the whole image', choiceBox(raw, { choice: 'full' }), [0, 0, 1, 1]);
+  ok('choiceBox for the cut-out is null', choiceBox(raw, { choice: 'cutout' }) === null);
+  const f = choicesFile({ A: { choice: 'item' }, B: { hidden: true, choice: 'item' }, C: { later: true },
+    D: { choice: 'custom', box: [0.123456, 0.2, 0.3, 0.4] } });
+  eq('choices file keeps only decisions', Object.keys(f.choices).sort(), ['A', 'B', 'D']);
+  ok('hidden wins over a choice', f.choices.B.hidden === true && !f.choices.B.choice);
+  ok('boxes are rounded', f.choices.D.box[0] === 0.1235);
+
+  console.log('\ncolour simulated');
+  const sim = { product_id: 'S', slot: 'top', recoloured: true, recolour_source: 'B062-P016', brand: 'UNIQLO',
+    brand_confidence: 'given', product_name: 'crew neck sweatshirt', colours: [{ hex: '#8B2E23', name: 'rust' }],
+    image_source: 'colour simulated: recoloured', price: '', product_url: '' };
+  const b4 = M.createBoard();
+  M.addElement(b4, { product_id: 'S', aspect: 1 });
+  const info2 = buildInfo(b4, { S: sim }, {}, { date: new Date(2026, 8, 22) });
+  ok('info flags a simulated colour', info2.pieces[0].colour_simulated === true && info2.pieces[0].recolour_source === 'B062-P016');
+  const md2 = buildMarkdown(info2);
+  ok('markdown says colour simulated beside the piece', md2.includes('rust (colour simulated)'));
+  ok('markdown adds the disclosure line', md2.includes('**Colour simulated:**'));
+  ok('info records the image variant', info2.pieces[0].image_variant === 'cutout');
+}
+console.log(`\nafter additions: ${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);

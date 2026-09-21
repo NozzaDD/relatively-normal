@@ -1,6 +1,6 @@
 {
  "built_from": "content/catalogue",
- "products": 463,
+ "products": 476,
  "inspiration": 112,
  "slots": [
   "accessory",
@@ -75,5 +75,9 @@
   "cutout_flat",
   "cutout_model",
   "tile"
- ]
+ ],
+ "clean": 86,
+ "with_full": 390,
+ "hidden": 5,
+ "recoloured": 13
 }

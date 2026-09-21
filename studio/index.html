@@ -36,35 +36,44 @@
     <div class="shelf-tabs">
       <button class="tab on" data-view="grid">Shelf</button>
       <button class="tab" data-view="matrix">Matrix</button>
+      <button class="tab" data-view="review">Review <span id="reviewBadge" class="badge-n"></span></button>
       <span class="count" id="shelfCount"></span>
     </div>
 
-    <div class="filters" id="filters">
-      <input id="search" class="field" type="search" placeholder="Search brand, piece, colour" autocomplete="off">
-      <div class="filter-row">
-        <select id="fSlot" class="field"><option value="">Any slot</option></select>
-        <select id="fFamily" class="field"><option value="">Any colour</option></select>
+    <div id="shelfPane">
+      <div id="slotBar" class="slot-bar" aria-label="Category"></div>
+      <div class="filters" id="filters">
+        <input id="search" class="field" type="search" placeholder="Search brand, piece, colour" autocomplete="off">
+        <div class="filter-row">
+          <select id="fFamily" class="field"><option value="">Any colour</option></select>
+          <select id="fBrand" class="field"><option value="">Any brand</option></select>
+        </div>
+        <div class="filter-row">
+          <select id="fWeight" class="field"><option value="">Any weight</option></select>
+          <select id="fFormality" class="field"><option value="">Any formality</option></select>
+          <select id="fAsset" class="field"><option value="">Any image</option></select>
+        </div>
+        <div class="filter-row switches">
+          <label class="switch"><input type="checkbox" id="fUnreviewed"> Show unreviewed</label>
+          <label class="switch"><input type="checkbox" id="fMatch" disabled> Matches this look</label>
+          <button id="clearFilters" class="ghost small">Clear</button>
+        </div>
       </div>
-      <div class="filter-row">
-        <select id="fWeight" class="field"><option value="">Any weight</option></select>
-        <select id="fFormality" class="field"><option value="">Any formality</option></select>
-      </div>
-      <div class="filter-row">
-        <select id="fAsset" class="field"><option value="">Any image</option></select>
-        <select id="fBrand" class="field"><option value="">Any brand</option></select>
-      </div>
-      <div class="filter-row switches">
-        <label class="switch"><input type="checkbox" id="fWeak"> Show weak images</label>
-        <label class="switch"><input type="checkbox" id="fMatch" disabled> Matches this look</label>
-        <button id="clearFilters" class="ghost small">Clear</button>
-      </div>
+      <div id="grid" class="grid" aria-label="Products"></div>
     </div>
-
-    <div id="grid" class="grid" aria-label="Products"></div>
 
     <div id="matrix" class="matrix hidden">
       <div class="matrix-note">casual → dressy across, light → heavy down. Tap a cell to filter the shelf.</div>
       <div id="matrixGrid" class="matrix-grid"></div>
+    </div>
+
+    <div id="review" class="review hidden">
+      <div class="review-head">
+        <span id="reviewProgress" class="count"></span>
+        <button id="exportChoices" class="ghost small">Export choices</button>
+      </div>
+      <div id="reviewSlots" class="chips"></div>
+      <div id="reviewCards" class="rcards"></div>
     </div>
   </aside>
 
@@ -80,6 +89,7 @@
         <label class="swatch-pick" title="Background">
           <input type="color" id="ground" value="#F3EFE7">
         </label>
+        <button id="frameBtn" class="ghost" title="How framed images are drawn">Frame…</button>
       </div>
       <div class="bar-group wrap">
         <label class="switch"><input type="checkbox" id="oTitle" checked> Title</label>
@@ -89,11 +99,24 @@
       </div>
     </div>
 
+    <div id="framePop" class="pop hidden">
+      <label class="switch"><input type="checkbox" id="frBorder" checked> Thin border</label>
+      <label class="switch"><input type="checkbox" id="frMat" checked> White mat</label>
+      <label class="switch">Corners
+        <select id="frRadius" class="field small-field">
+          <option value="0">square</option>
+          <option value="10">soft</option>
+          <option value="22">round</option>
+        </select>
+      </label>
+      <span class="pop-note">Applies to the inspiration image and every box on the board.</span>
+    </div>
+
     <div id="stageWrap" class="stage-wrap">
       <div id="stage" class="stage">
         <div id="layers" class="layers"></div>
         <div id="overlay" class="overlay"></div>
-        <div id="hint" class="hint">Drag a piece from the shelf.</div>
+        <div id="hint" class="hint">Tap a piece on the shelf, or drag it here.</div>
       </div>
     </div>
 
@@ -121,6 +144,18 @@
       <button id="pickerClose" class="ghost">Close</button>
     </div>
     <div id="pickerGrid" class="picker-grid"></div>
+  </div>
+</div>
+
+<!-- draw your own box -->
+<div id="adjust" class="modal hidden">
+  <div class="modal-inner adjust-inner">
+    <div class="modal-bar">
+      <span class="count">Drag a rectangle. Drag inside it to move, its bottom-right corner to resize.</span>
+      <button id="adjustUse" class="primary">Use this box</button>
+      <button id="adjustCancel" class="ghost">Cancel</button>
+    </div>
+    <div id="adjustWrap" class="adjust-wrap"></div>
   </div>
 </div>
 

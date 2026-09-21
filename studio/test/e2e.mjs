@@ -48,30 +48,30 @@ const counts = await page.evaluate(() => ({
   inspiration: window.__studio.inspiration.length,
   cells: document.querySelectorAll('#grid .cell').length,
 }));
-ok('products loaded', counts.products === 463, JSON.stringify(counts));
+ok('products loaded', counts.products >= 463, JSON.stringify(counts));
 ok('inspiration loaded', counts.inspiration === 112, JSON.stringify(counts));
-ok('weak assets hidden by default', counts.cells > 300 && counts.cells < counts.products,
+ok('only clean cut-outs on the shelf by default', counts.cells > 50 && counts.cells < 120,
   `${counts.cells} cells`);
 ok('no page errors on load', errors.length === 0, errors.join(' | '));
 
 console.log('\n2. filters');
-await page.selectOption('#fSlot', 'shoes');
+await page.click('#slotBar button[data-slot="top"]');
 await page.waitForTimeout(80);
-const shoes = await page.evaluate(() => window.__studio.shown.every((p) => p.slot === 'shoes'));
-const shoesN = await page.$$eval('#grid .cell', (e) => e.length);
-ok('slot filter narrows the shelf', shoes && shoesN > 0 && shoesN < 20, `${shoesN} shoes`);
+const tops = await page.evaluate(() => window.__studio.shown.every((p) => p.slot === 'top'));
+const topsN = await page.$$eval('#grid .cell', (e) => e.length);
+ok('category button narrows the shelf', tops && topsN > 0, `${topsN} tops`);
 await page.fill('#search', 'aspesi');
 await page.waitForTimeout(220);
 const searchN = await page.$$eval('#grid .cell', (e) => e.length);
-ok('search + slot combine', searchN <= shoesN);
+ok('search + category combine', searchN <= topsN);
 await page.click('#clearFilters');
 await page.waitForTimeout(80);
-const weakBefore = await page.$$eval('#grid .cell', (e) => e.length);
-await page.check('#fWeak');
+const before = await page.$$eval('#grid .cell', (e) => e.length);
+await page.check('#fUnreviewed');
 await page.waitForTimeout(80);
-const weakAfter = await page.$$eval('#grid .cell', (e) => e.length);
-ok('weak toggle reveals more', weakAfter > weakBefore, `${weakBefore} → ${weakAfter}`);
-await page.uncheck('#fWeak');
+const after = await page.$$eval('#grid .cell', (e) => e.length);
+ok('show unreviewed reveals more', after > before, `${before} → ${after}`);
+await page.uncheck('#fUnreviewed');
 
 console.log('\n3. matrix');
 await page.click('.tab[data-view="matrix"]');

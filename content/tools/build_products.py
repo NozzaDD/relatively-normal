@@ -18,7 +18,9 @@ FIELDS = ['product_id', 'batch_id', 'shop', 'shop_type', 'slot', 'garment_type',
           'colour3_hex', 'colour3_share', 'colour3_family', 'colour3_name',
           'colour_confidence', 'colour_stability',
           'asset_type', 'asset_path', 'asset_quality',
-          'colour_name_text', 'notes', 'validated', 'used_in']
+          'colour_name_text', 'notes', 'validated', 'used_in',
+          # the desk's review decisions and the recoloured variants
+          'shelf', 'asset_choice', 'asset_box', 'recoloured', 'recolour_source']
 
 
 def read_rows():
@@ -79,8 +81,63 @@ def norm(s):
     return re.sub(r'[^a-z0-9]', '', (s or '').lower())
 
 
+def load_json(path, default):
+    try:
+        return json.load(open(path))
+    except (FileNotFoundError, json.JSONDecodeError):
+        return default
+
+
+def kept_columns():
+    """Columns the owner or another script fills in. They survive a rebuild."""
+    keep = {}
+    try:
+        for r in csv.DictReader(open(CAT + '/products.csv')):
+            keep[r['product_id']] = {k: r.get(k, '') for k in ('validated', 'used_in')}
+    except FileNotFoundError:
+        pass
+    return keep
+
+
+def variant_rows(base_by_id):
+    """Recoloured UNIQLO variants from uniqlo_variants.py, as full product rows."""
+    v = load_json(CAT + '/_variants.json', {})
+    out, hide = [], {}
+    for x in v.get('variants', []):
+        src = base_by_id.get(x['source'])
+        if not src:
+            continue
+        d = dict(src)
+        c = x['colour']
+        d.update(product_id=x['product_id'], n_images=0, image_paths='',
+                 colour1_hex=c['hex'], colour1_share=c['share'], colour1_L=c['L'],
+                 colour1_C=c['C'], colour1_h=c['h'], colour1_rel_chroma=c['rel'],
+                 colour1_neutral=c['neutral'], colour1_family=c['family'], colour1_name=c['name'],
+                 colour2_hex='', colour2_share='', colour2_family='', colour2_name='',
+                 colour3_hex='', colour3_share='', colour3_family='', colour3_name='',
+                 colour_confidence='medium', colour_stability='stable',
+                 asset_type='cutout_flat', asset_path=x['asset_path'], asset_quality='good',
+                 colour_name_text=x.get('colour_name_text', ''),
+                 notes=f"recoloured from {x['source']} in CIELAB; colour simulated, not the brand's photo",
+                 validated='', used_in='', shelf='', asset_choice='', asset_box='',
+                 recoloured='yes', recolour_source=x['source'])
+        out.append(d)
+    # the other UNIQLO images of a recoloured style leave the shelf, replaced by the variants
+    for style, rep in v.get('report', {}).items():
+        src = base_by_id.get(rep['source'])
+        if not src:
+            continue
+        for pid, r in base_by_id.items():
+            if (pid != rep['source'] and r['brand'] == src['brand']
+                    and r['garment_type'] == src['garment_type']):
+                hide[pid] = f"replaced by variants of {rep['source']}"
+    return out, hide
+
+
 def main():
     rows = read_rows()
+    keep = kept_columns()
+    choices = load_json(CAT + '/asset-choices.json', {}).get('choices', {})
     bat = json.load(open(CAT + '/batches.json'))
     assets = json.load(open(CAT + '/_assets.json'))
     cols = json.load(open(CAT + '/_colours.json'))
@@ -135,7 +192,16 @@ def main():
             asset_type=a.get('asset_type', ''), asset_path=a.get('asset_path', ''),
             asset_quality=a.get('asset_quality', ''),
             colour_name_text=none(r.get('colour_name_text', '')),
-            notes=r.get('notes', ''), validated='', used_in='')
+            notes=r.get('notes', ''),
+            validated=keep.get(pid, {}).get('validated', ''),
+            used_in=keep.get(pid, {}).get('used_in', ''),
+            shelf='', asset_choice='', asset_box='', recoloured='', recolour_source='')
+        ch = choices.get(pid)
+        if ch:
+            d['asset_choice'] = ch.get('choice', '')
+            d['asset_box'] = ','.join(str(v) for v in ch['box']) if ch.get('box') else ''
+            if ch.get('hidden'):
+                d['shelf'] = 'hidden'
         for i, col in enumerate(cl[:3], 1):
             d[f'colour{i}_hex'] = col['hex']
             d[f'colour{i}_share'] = col['share']
@@ -146,12 +212,24 @@ def main():
                          colour1_rel_chroma=col['rel'], colour1_neutral=col['neutral'])
         out.append(d)
 
+    by_id = {d['product_id']: d for d in out}
+    variants, hide = variant_rows(by_id)
+    for pid, why in hide.items():
+        by_id[pid]['shelf'] = 'hidden'
+        by_id[pid]['notes'] = (by_id[pid]['notes'] + '; ' + why).strip('; ')
+    for v in variants:
+        v['used_in'] = keep.get(v['product_id'], {}).get('used_in', '')
+        v['validated'] = keep.get(v['product_id'], {}).get('validated', '')
+    out.extend(variants)
+
     os.makedirs(CAT, exist_ok=True)
     with open(CAT + '/products.csv', 'w', newline='') as f:
         w = csv.DictWriter(f, FIELDS)
         w.writeheader()
         w.writerows(out)
     print(len(out), 'products ->', CAT + '/products.csv')
+    print('variants merged:', len(variants), ' hidden:', sum(1 for d in out if d['shelf'] == 'hidden'),
+          ' choices applied:', sum(1 for d in out if d['asset_choice']))
     for k in ('brand_confidence', 'colour_confidence', 'asset_type', 'shop_type', 'slot'):
         print(k, collections.Counter(d[k] for d in out).most_common())
 
