@@ -101,3 +101,18 @@ Order to re-run: `cluster_products.py` → `make_assets.py` → `crop_figures.py
 → `extract_colours.py` → `asset_quality.py` → `build_review_images.py` →
 `uniqlo_variants.py` → `build_products.py` → `inspiration_colours.py` →
 `build_inspiration.py` → `coverage_map.py` → `build_studio.py`.
+
+## Added 23 September 2026 — any-image adjust, multi-box split
+
+`build_review_images.py` now writes every screenshot of every product in
+Review (`review/{pid}-{i}.jpg`, i ≥ 1), boxes for each, and `suggested` cells
+where a page is plainly a listing grid. Listing-grid products keep the whole
+trimmed page as their full image, so the grid can be cut up. Clustering already
+caps a product at five images.
+
+`build_products.py` reads `splits` from `asset-choices.json` and creates one
+row per box: `{parent}-S{n}`, with `parent_id`, `asset_type = crop`,
+`asset_image` and `asset_box`, the slot and `colour_name_text` the stylist
+gave, batch, shop and brand from the parent (confidence inherited, never
+upgraded), and colours read from the box region by `extract_colours`. The
+`used_in` collector marks both the cut piece and its parent.

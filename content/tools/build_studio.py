@@ -66,14 +66,32 @@ def parse_box(v):
         return None
 
 
+def image_list(rv, sources):
+    """Every screenshot of a product as the desk sees it: path, size, boxes, cells."""
+    out = []
+    for i, e in enumerate(rv.get('images') or []):
+        if not e or 'error' in e:
+            continue
+        out.append(dict(path='full/' + os.path.basename(e['path']), w=e['w'], h=e['h'],
+                        item=e.get('item'), person=e.get('person'),
+                        suggested=e.get('suggested') or [],
+                        source=sources[i] if i < len(sources) else ''))
+    return out
+
+
 def build_products(rows, review):
     out = []
+    by_id = {r['product_id']: r for r in rows}
     for r in rows:
         if not n(r['asset_path']):
             continue
-        rv = review.get(r['product_id']) or {}
+        parent = by_id.get(n(r.get('parent_id'))) if n(r.get('parent_id')) else None
+        rv = review.get(parent['product_id'] if parent else r['product_id']) or {}
         clean = (n(r['asset_type']) == 'cutout_flat' and n(r['asset_quality']) == 'good')
         has_full = bool(rv.get('w')) and 'error' not in rv
+        images = image_list(rv, (parent or r)['image_paths'].split(';'))
+        idx = int(n(r.get('asset_image')) or 0)
+        entry = images[idx] if idx < len(images) else (images[0] if images else None)
         out.append(dict(
             product_id=r['product_id'],
             slot=n(r['slot']),
@@ -84,7 +102,7 @@ def build_products(rows, review):
             colours=colours_of(r),
             colour_confidence=n(r['colour_confidence']),
             colour_stability=n(r['colour_stability']),
-            asset=f"assets/{r['product_id']}.webp",
+            asset=(entry['path'] if n(r['asset_type']) == 'crop' and entry else f"assets/{r['product_id']}.webp"),
             thumb=f"thumbs/{r['product_id']}.webp",
             asset_type=n(r['asset_type']),
             asset_quality=n(r['asset_quality']),
@@ -102,8 +120,11 @@ def build_products(rows, review):
             # review: a clean flat cut-out needs no decision; everything else
             # gets a full photo and two boxes to choose from
             clean=clean,
-            full=dict(path=f"full/{r['product_id']}.jpg", w=rv['w'], h=rv['h']) if has_full else None,
+            full=dict(path=entry['path'], w=entry['w'], h=entry['h']) if (has_full and entry) else None,
             boxes=dict(item=rv['item'], person=rv['person']) if has_full else None,
+            images=images or None,
+            image=idx,
+            parent_id=n(r.get('parent_id')),
             choice=n(r.get('asset_choice')) or None,
             custom_box=parse_box(r.get('asset_box')),
             hidden=n(r.get('shelf')) == 'hidden',
@@ -168,18 +189,22 @@ def copy_assets(products, rows_by_id):
     keep, keep_full = set(), set()
     for p in products:
         pid = p['product_id']
-        keep.add(pid + '.webp')
         src = ROOT + '/' + rows_by_id[pid]['asset_path']
-        shutil.copyfile(src, f'{a_dir}/{pid}.webp')
-        if p['full']:
-            keep_full.add(pid + '.jpg')
-            shutil.copyfile(f"{CAT}/review/{pid}.jpg", f"{f_dir}/{pid}.jpg")
+        if p['asset_type'] != 'crop':                      # a crop has no asset of its own
+            keep.add(pid + '.webp')
+            shutil.copyfile(src, f'{a_dir}/{pid}.webp')
+        for e in p['images'] or []:
+            name = os.path.basename(e['path'])
+            keep_full.add(name)
+            shutil.copyfile(f"{CAT}/review/{name}", f"{f_dir}/{name}")
         # the thumb shows what the shelf will place: the chosen crop, or the cut-out
         box = None
         if p['full'] and p['choice'] in ('item', 'person', 'full', 'custom'):
             box = (p['custom_box'] if p['choice'] == 'custom' else
-                   [0, 0, 1, 1] if p['choice'] == 'full' else p['boxes'][p['choice']])
-        with Image.open(f"{CAT}/review/{pid}.jpg" if box else src) as im:
+                   [0, 0, 1, 1] if p['choice'] == 'full' else
+                   (p['images'][p['image']] if p['images'] and p['image'] < len(p['images']) else p['boxes'])[p['choice']])
+        keep.add(pid + '.webp')
+        with Image.open(f"{ROOT}/studio/{p['full']['path']}" if box else src) as im:
             t = crop_box(im.convert('RGB'), box) if box else im.convert('RGBA')
             t.thumbnail((THUMB, THUMB), Image.LANCZOS)
             t.save(f'{t_dir}/{pid}.webp', 'WEBP', quality=80, method=5)
@@ -247,7 +272,9 @@ def main():
                 clean=sum(1 for p in products if p['clean']),
                 with_full=sum(1 for p in products if p['full']),
                 hidden=sum(1 for p in products if p['hidden']),
-                recoloured=sum(1 for p in products if p['recoloured']))
+                recoloured=sum(1 for p in products if p['recoloured']),
+                derived=sum(1 for p in products if p['parent_id']),
+                images=sum(len(p['images'] or []) for p in products if not p['parent_id']))
     json.dump(products, open(DATA + '/products.json', 'w'), separators=(',', ':'))
     json.dump(inspiration, open(DATA + '/inspiration.json', 'w'), separators=(',', ':'))
     json.dump(meta, open(DATA + '/meta.json', 'w'), indent=1)

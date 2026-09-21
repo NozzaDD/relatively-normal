@@ -27,7 +27,8 @@ export async function loadBoardImages(board, source, productsById, inspById) {
         if (i) out[el.uid] = await loadImage(source.inspirationUrl(i));
       } else {
         const p = productsById[el.product_id];
-        if (p) out[el.uid] = await loadImage(source.assetUrl(p));
+        // a crop is drawn from the screenshot it was drawn on, never from the cut-out
+        if (p) out[el.uid] = await loadImage(el.crop ? source.fullUrl(p, el.image || 0) : source.assetUrl(p));
       }
     } catch (e) { /* a missing image just does not draw */ }
   }));
@@ -97,6 +98,10 @@ export function buildInfo(board, productsById, inspById, { date = new Date() } =
       recolour_source: p.recolour_source || '',
       image_variant: el.variant || 'cutout',
       image_crop: el.crop ? el.crop.map(round4) : null,
+      image_index: el.image || 0,
+      // a piece cut out of another product's screenshot carries its parent
+      parent_id: p.parent_id || '',
+      source_image: (p.images && p.images[el.image || 0] && p.images[el.image || 0].source) || '',
       placement: {
         x: round4(el.x), y: round4(el.y), w: round4(el.w),
         rotation: el.rot || 0, flip: !!el.flip, layer: el.z, aspect: round4(el.aspect),

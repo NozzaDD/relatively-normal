@@ -107,7 +107,12 @@ def garment_pixels(im, is_cutout, white_balance=False):
 
 def colours_for(path, is_cutout, wb=False, k=4):
     with Image.open(path) as im0:
-        im = im0.copy()
+        return colours_for_image(im0.copy(), is_cutout, wb=wb, k=k)
+
+
+def colours_for_image(im, is_cutout, wb=False, k=4):
+    """The same read on an image already in memory — a box cut from a screenshot."""
+    if True:
         im.thumbnail((320, 320), Image.LANCZOS)
         px, skin, keptshare, _ = garment_pixels(im, is_cutout, white_balance=wb)
     cols = extract_colours(px, k=k, floor=0.05, sample=20000, seed=0)

@@ -43,6 +43,20 @@ and in the export. Choices apply at once in the browser; **Export choices**
 hands over `asset-choices.json`, which goes in `content/catalogue/` for the
 build script to read.
 
+**Adjust box** opens every screenshot of the product (page UI trimmed), best
+first: arrows or the filmstrip move between them, the counter reads *2 of 5*,
+and **Use this one** starts the product's box on that image, prefilled with
+its item box. **Add box** draws further boxes on the same image; each gets a
+slot from the buttons and an optional colour name, and each becomes its own
+product — the parent's id plus a suffix (`B062-P018-S1`), the parent's batch,
+shop and brand with confidence inherited and never upgraded, your slot and
+colour name, and a runtime crop of that box as its image. The new piece is on
+the shelf at once; its colours are read from the box region by the build
+script at the next rebuild. The parent stays in the catalogue and you decide
+whether it is hidden or also on the shelf. Where a page is plainly a listing
+grid, **Suggested boxes** offers the detected cells to accept, adjust or delete
+one by one.
+
 **Frame…** on the canvas bar is one setting for every framed image on the
 board — the inspiration image, page tiles and every box: thin border, white
 mat, corner radius. It is saved with the board and remembered for the next.
@@ -80,7 +94,8 @@ uploaded. The page carries a `noindex` meta tag, an `X-Robots-Tag` header and a
 node studio/test/unit.mjs        # pure functions — no browser needed
 node studio/test/e2e.mjs         # headless Chromium, mouse: load, filter, drag, save, reopen
 node studio/test/e2e-touch.mjs   # headless Chromium, iPad touch profile via CDP: swipe, tap,
-                                 # long press, sideways drag, pinch, categories, review, frame
+                                 # long press, sideways drag, pinch, categories, review, frame,
+                                 # adjust on any image, multi-box split
 ```
 
 Playwright's WebKit is not installable in this environment (the browser

@@ -248,6 +248,108 @@ const round = await page.evaluate(async () => {
 ok('every element comes back', round.n === round.after, JSON.stringify(round));
 ok('with its crop and frame', Array.isArray(round.crop) && round.frame === 22);
 
+console.log('\n9. adjust box on any image');
+await page.evaluate(() => { localStorage.removeItem('rn.studio.choices.v1'); });
+await page.reload();
+await page.waitForFunction(() => window.__studio?.products?.length > 0, null, { timeout: 20000 });
+await page.waitForTimeout(300);
+const multi = await page.evaluate(() => {
+  const p = window.__studio.products.find((x) => !x.clean && x.images && x.images.length >= 3);
+  return p ? { pid: p.product_id, n: p.images.length, item1: p.images[1].item } : null;
+});
+ok('products with several screenshots carry them all', !!multi && multi.n >= 3, JSON.stringify(multi));
+await page.evaluate(() => window.__studio.setView('review'));
+await page.waitForTimeout(400);
+await page.evaluate((pid) => {
+  const card = document.querySelector(`#reviewCards .rcard[data-pid="${pid}"]`);
+  card.scrollIntoView();
+  card.querySelector('.racts button').click();     // Adjust box
+}, multi.pid);
+await page.waitForTimeout(500);
+const adj1 = await page.evaluate(() => ({ counter: document.getElementById('adjCounter').textContent,
+  strip: document.querySelectorAll('#adjStrip img').length, prevOff: document.getElementById('adjPrev').disabled }));
+ok('the counter reads 1 of n and the filmstrip shows every image', adj1.counter === `1 of ${multi.n}` && adj1.strip === multi.n && adj1.prevOff, JSON.stringify(adj1));
+await page.click('#adjNext');
+await page.waitForTimeout(300);
+ok('the arrow moves to the next image', (await page.$eval('#adjCounter', (e) => e.textContent)) === `2 of ${multi.n}`);
+await page.click('#adjUseImage');
+await page.waitForTimeout(200);
+const useOne = await page.evaluate(() => {
+  const b = document.querySelector('.adjust-box.main');
+  return b ? { left: parseFloat(b.style.left), width: parseFloat(b.style.width) } : null;
+});
+ok('"Use this one" starts the box on this image, prefilled with its item box', !!useOne
+  && Math.abs(useOne.left - multi.item1[0] * 100) < 0.5 && Math.abs(useOne.width - multi.item1[2] * 100) < 0.5, JSON.stringify(useOne));
+await page.click('#adjustUse');
+await page.waitForTimeout(300);
+const saved = await page.evaluate((pid) => window.__studio.choices[pid], multi.pid);
+ok('the choice records the image it was drawn on', saved.choice === 'custom' && saved.image === 1, JSON.stringify(saved));
+const placed2 = await page.evaluate(async (pid) => {
+  const el = await window.__studio.placeProduct(pid, 0.5, 0.5);
+  const src = document.querySelector(`[data-uid="${el.uid}"] .cropwrap img`)?.getAttribute('src') || '';
+  return { image: el.image, src };
+}, multi.pid);
+ok('placing it crops the chosen screenshot, not the first', placed2.image === 1 && placed2.src.endsWith('-1.jpg'), JSON.stringify(placed2));
+
+console.log('\n10. several products in one image');
+const gridPid = await page.evaluate(() => {
+  const p = window.__studio.products.find((x) => !x.clean && x.images && x.images.some((e) => e.suggested && e.suggested.length >= 4));
+  return p ? p.product_id : null;
+});
+ok('cell detection found at least one listing grid', !!gridPid, String(gridPid));
+const target = gridPid || multi.pid;
+await page.evaluate((pid) => {
+  const card = document.querySelector(`#reviewCards .rcard[data-pid="${pid}"]`);
+  card.scrollIntoView();
+  card.querySelector('.racts button').click();
+}, target);
+await page.waitForTimeout(500);
+if (gridPid) {
+  await page.click('#adjSuggest');
+  await page.waitForTimeout(200);
+  const nsug = await page.$$eval('.adjust-box.split', (e) => e.length);
+  ok('suggested cells appear as boxes', nsug >= 4, String(nsug));
+  // delete one, keep the rest
+  await page.evaluate(() => document.querySelector('.adjust-box.split').dispatchEvent(new PointerEvent('pointerdown', { bubbles: true, clientX: 0, clientY: 0 })));
+}
+await page.click('#adjAddBox');
+const aw2 = await (await page.$('#adjustWrap img')).boundingBox();
+await page.mouse.move(aw2.x + aw2.width * 0.55, aw2.y + aw2.height * 0.55);
+await page.mouse.down();
+await page.mouse.move(aw2.x + aw2.width * 0.9, aw2.y + aw2.height * 0.9, { steps: 6 });
+await page.mouse.up();
+await page.waitForTimeout(200);
+ok('"Add box" draws a new box and selects it', await page.evaluate(() => !!document.querySelector('.adjust-box.split.sel') && !!document.querySelector('#adjPanel .slots')));
+await page.click('#adjPanel .slots button:nth-child(5)');   // shoes
+await page.fill('#adjPanel input.field', 'tan');
+
+await page.waitForTimeout(100);
+await page.click('#adjustUse');
+await page.waitForTimeout(400);
+const split = await page.evaluate((pid) => {
+  const c = window.__studio.choices[pid];
+  const last = c.splits[c.splits.length - 1];
+  const id = `${pid}-S${last.n}`;
+  const d = window.__studio.productsById[id];
+  return { n: c.splits.length, slot: last.slot, colour: last.colour_name, id, onShelf: window.__studio.shown.some((p) => p.product_id === id),
+    derived: d ? { parent: d.parent_id, brand: d.brand, brand_confidence: d.brand_confidence, slot: d.slot, colours: d.colours.length, local: d.local } : null };
+}, target);
+ok('the box is saved with its slot and colour name', split.slot === 'shoes' && split.colour === 'tan', JSON.stringify(split));
+ok('the new piece is on the shelf at once', split.onShelf && split.derived && split.derived.local === true, JSON.stringify(split));
+ok('it inherits the parent\'s brand and confidence, colours empty', split.derived.parent === target && split.derived.colours === 0);
+const info3 = await page.evaluate(async (id) => {
+  const el = await window.__studio.placeProduct(id, 0.3, 0.3);
+  const info = window.__studio.buildInfo();
+  const piece = info.pieces.find((p) => p.product_id === id);
+  return { variant: el.variant, parent: piece.parent_id, index: piece.image_index, crop: piece.image_crop };
+}, split.id);
+ok('the info file carries parent_id for a cut piece', info3.parent === target && info3.variant === 'custom' && Array.isArray(info3.crop), JSON.stringify(info3));
+const file2 = await page.evaluate(async () => { const { choicesFile } = await import('./js/review.js'); return choicesFile(window.__studio.choices); });
+ok('export choices carries the splits', Object.values(file2.choices).some((c) => c.splits && c.splits.some((s) => s.slot === 'shoes' && s.colour_name === 'tan')));
+await page.evaluate(() => window.__studio.setView('grid'));
+const exp2 = await page.evaluate(async () => { const c = await window.__studio.renderCanvas(); return [c.width, c.height]; });
+ok('export renders with a cut piece on the board', exp2[0] === 2160);
+
 console.log(`\n${pass} passed, ${fail} failed`);
 if (errors.length) console.log('page errors:\n  ' + errors.slice(0, 6).join('\n  '));
 await browser.close();

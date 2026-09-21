@@ -160,5 +160,38 @@ ok('markdown leaves an unknown link empty', /\| 2 \|  \| loafers \| navy \|  \| 
   ok('markdown adds the disclosure line', md2.includes('**Colour simulated:**'));
   ok('info records the image variant', info2.pieces[0].image_variant === 'cutout');
 }
-console.log(`\nafter additions: ${pass} passed, ${fail} failed`);
+
+// ------------------------------------------------------------- 23 Sept additions
+{
+  const { derivedProducts, splitId, imageEntry } = await import('../js/data.js');
+  const { choicesFile } = await import('../js/review.js');
+  console.log('\nsplits and derived products');
+  const parent = { product_id: 'B062-P018', slot: 'multiple', brand: 'Sézane', brand_confidence: 'guessed',
+    brand_role: 'not filed', shop: 'sezane.com', garment_type: 'listing grid', weight: 2, formality: 2,
+    clean: false, full: { path: 'full/B062-P018.jpg', w: 1000, h: 1400 },
+    images: [{ path: 'full/B062-P018.jpg', w: 1000, h: 1400 }, { path: 'full/B062-P018-1.jpg', w: 800, h: 1000 }],
+    colours: [], image_source: 'brand product shot' };
+  const choices = { 'B062-P018': { choice: 'custom', box: [0, 0, 0.5, 0.5], image: 1,
+    splits: [{ n: 1, image: 1, box: [0.5, 0, 0.5, 0.5], slot: 'shoes', colour_name: 'tan' },
+      { n: 2, image: 0, box: [0, 0.5, 0.5, 0.5], slot: '', colour_name: '' }] } };
+  eq('splitId', splitId('B062-P018', 3), 'B062-P018-S3');
+  ok('imageEntry reads the list', imageEntry(parent, 1).w === 800);
+  ok('imageEntry falls back to full for index 0', imageEntry({ full: { path: 'x', w: 1, h: 2 } }, 0).h === 2);
+  ok('imageEntry is null past the end', imageEntry(parent, 5) === null);
+  const d = derivedProducts([parent], choices);
+  ok('one derived product per box', d.length === 2, String(d.length));
+  ok('ids are parent plus suffix', d[0].product_id === 'B062-P018-S1' && d[0].parent_id === 'B062-P018');
+  ok('the slot and colour name are hers', d[0].slot === 'shoes' && d[0].colour_name_text === 'tan');
+  ok('a box without a slot keeps the parent\'s', d[1].slot === 'multiple');
+  ok('brand confidence is inherited, never upgraded', d[0].brand === 'Sézane' && d[0].brand_confidence === 'guessed');
+  ok('it is a runtime crop of the right image', d[0].choice === 'custom' && d[0].image === 1
+    && JSON.stringify(d[0].custom_box) === JSON.stringify([0.5, 0, 0.5, 0.5]) && d[0].full.w === 800);
+  ok('no colours until the rebuild', d[0].colours.length === 0);
+  ok('the catalogue\'s row wins once it exists', derivedProducts([parent, { product_id: 'B062-P018-S1' }], choices).length === 1);
+  const f = choicesFile(choices);
+  ok('choices file carries image and splits', f.choices['B062-P018'].image === 1 && f.choices['B062-P018'].splits.length === 2
+    && f.choices['B062-P018'].splits[0].slot === 'shoes' && f.choices['B062-P018'].splits[0].colour_name === 'tan');
+  ok('shownAspect uses the chosen image', Math.abs(M.shownAspect(parent, 'custom', [0, 0, 0.5, 0.5], 1) - 0.8) < 1e-9);
+}
+console.log(`\nafter 23 Sept: ${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);

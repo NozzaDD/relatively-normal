@@ -20,7 +20,9 @@ FIELDS = ['product_id', 'batch_id', 'shop', 'shop_type', 'slot', 'garment_type',
           'asset_type', 'asset_path', 'asset_quality',
           'colour_name_text', 'notes', 'validated', 'used_in',
           # the desk's review decisions and the recoloured variants
-          'shelf', 'asset_choice', 'asset_box', 'recoloured', 'recolour_source']
+          'shelf', 'asset_choice', 'asset_box', 'recoloured', 'recolour_source',
+          # a piece the stylist cut out of another product's screenshot
+          'parent_id', 'asset_image']
 
 
 def read_rows():
@@ -120,7 +122,7 @@ def variant_rows(base_by_id):
                  colour_name_text=x.get('colour_name_text', ''),
                  notes=f"recoloured from {x['source']} in CIELAB; colour simulated, not the brand's photo",
                  validated='', used_in='', shelf='', asset_choice='', asset_box='',
-                 recoloured='yes', recolour_source=x['source'])
+                 recoloured='yes', recolour_source=x['source'], parent_id='', asset_image='')
         out.append(d)
     # the other UNIQLO images of a recoloured style leave the shelf, replaced by the variants
     for style, rep in v.get('report', {}).items():
@@ -134,9 +136,76 @@ def variant_rows(base_by_id):
     return out, hide
 
 
+def split_rows(choices, by_id, review):
+    """Rows for the boxes the stylist drew on other products' screenshots.
+
+    Batch, shop and brand come from the parent, confidence inherited and never
+    upgraded. Slot and colour name are hers. The colours are read from the box
+    region by the same pipeline that reads every other product."""
+    from PIL import Image
+    import extract_colours as X
+    from colour_names import classify
+    out = []
+    for pid, ch in choices.items():
+        parent = by_id.get(pid)
+        if not parent:
+            continue
+        for sp in ch.get('splits', []):
+            if not sp.get('box') or 'n' not in sp:
+                continue
+            imgs = review.get(pid, {}).get('images') or []
+            idx = int(sp.get('image', 0) or 0)
+            entry = imgs[idx] if idx < len(imgs) and imgs[idx] else None
+            if not entry or 'error' in entry:
+                continue
+            box = [float(v) for v in sp['box']]
+            d = dict(parent)
+            rid = f"{pid}-S{sp['n']}"
+            d.update(product_id=rid, parent_id=pid, n_images=1,
+                     image_paths=(parent['image_paths'].split(';') + [''] * 9)[idx],
+                     slot=sp.get('slot') or parent['slot'],
+                     colour_name_text=sp.get('colour_name', ''),
+                     product_name='', product_name_confidence='input needed',
+                     material='', material_confidence='input needed',
+                     price='', price_confidence='input needed',
+                     product_url='', product_url_confidence='input needed',
+                     shot_type='crop of ' + parent['shot_type'], complete_in_frame='',
+                     asset_type='crop', asset_quality='good',
+                     asset_path='content/catalogue/' + entry['path'], asset_image=idx,
+                     asset_choice='custom', asset_box=','.join(f'{v:.4f}' for v in box),
+                     shelf='', recoloured='', recolour_source='',
+                     notes=f'cut by hand from {pid} image {idx}', validated='', used_in='')
+            for i in (1, 2, 3):
+                for k in ('hex', 'share', 'family', 'name'):
+                    d[f'colour{i}_{k}'] = ''
+            for k in ('colour1_L', 'colour1_C', 'colour1_h', 'colour1_rel_chroma', 'colour1_neutral'):
+                d[k] = ''
+            try:
+                with Image.open(CAT + '/' + entry['path']) as im:
+                    W, H = im.size
+                    crop = im.convert('RGB').crop((int(box[0] * W), int(box[1] * H),
+                                                   int((box[0] + box[2]) * W), int((box[1] + box[3]) * H)))
+                cols, skin, kept = X.colours_for_image(crop, is_cutout=False)
+                for i, c in enumerate(cols[:3], 1):
+                    fam, nm, L, Cc, h, rel, nt = classify(c['hex'])
+                    d[f'colour{i}_hex'] = c['hex']; d[f'colour{i}_share'] = round(c['share'], 3)
+                    d[f'colour{i}_family'] = fam; d[f'colour{i}_name'] = nm
+                    if i == 1:
+                        d.update(colour1_L=round(L, 1), colour1_C=round(Cc, 1), colour1_h=round(h, 1),
+                                 colour1_rel_chroma=round(rel, 3), colour1_neutral=nt)
+                d['colour_confidence'] = X.confidence('tile', cols, skin, kept)
+                d['colour_stability'] = 'stable'
+            except Exception as e:
+                d['colour_confidence'] = 'low'
+                d['notes'] += f'; colour read failed: {type(e).__name__}'
+            out.append(d)
+    return out
+
+
 def main():
     rows = read_rows()
     keep = kept_columns()
+    review = load_json(CAT + '/_review_boxes.json', {})
     choices = load_json(CAT + '/asset-choices.json', {}).get('choices', {})
     bat = json.load(open(CAT + '/batches.json'))
     assets = json.load(open(CAT + '/_assets.json'))
@@ -195,11 +264,13 @@ def main():
             notes=r.get('notes', ''),
             validated=keep.get(pid, {}).get('validated', ''),
             used_in=keep.get(pid, {}).get('used_in', ''),
-            shelf='', asset_choice='', asset_box='', recoloured='', recolour_source='')
+            shelf='', asset_choice='', asset_box='', recoloured='', recolour_source='',
+            parent_id='', asset_image='')
         ch = choices.get(pid)
         if ch:
             d['asset_choice'] = ch.get('choice', '')
             d['asset_box'] = ','.join(str(v) for v in ch['box']) if ch.get('box') else ''
+            d['asset_image'] = ch.get('image', 0) if ch.get('choice') in ('custom', 'item', 'person', 'full') else ''
             if ch.get('hidden'):
                 d['shelf'] = 'hidden'
         for i, col in enumerate(cl[:3], 1):
@@ -221,6 +292,11 @@ def main():
         v['used_in'] = keep.get(v['product_id'], {}).get('used_in', '')
         v['validated'] = keep.get(v['product_id'], {}).get('validated', '')
     out.extend(variants)
+    splits = split_rows(choices, by_id, review)
+    for d in splits:
+        d['used_in'] = keep.get(d['product_id'], {}).get('used_in', '')
+        d['validated'] = keep.get(d['product_id'], {}).get('validated', '')
+    out.extend(splits)
 
     os.makedirs(CAT, exist_ok=True)
     with open(CAT + '/products.csv', 'w', newline='') as f:
@@ -228,7 +304,8 @@ def main():
         w.writeheader()
         w.writerows(out)
     print(len(out), 'products ->', CAT + '/products.csv')
-    print('variants merged:', len(variants), ' hidden:', sum(1 for d in out if d['shelf'] == 'hidden'),
+    print('variants merged:', len(variants), ' splits:', len(splits),
+          ' hidden:', sum(1 for d in out if d['shelf'] == 'hidden'),
           ' choices applied:', sum(1 for d in out if d['asset_choice']))
     for k in ('brand_confidence', 'colour_confidence', 'asset_type', 'shop_type', 'slot'):
         print(k, collections.Counter(d[k] for d in out).most_common())
