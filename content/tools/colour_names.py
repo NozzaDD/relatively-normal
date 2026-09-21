@@ -62,30 +62,28 @@ def _in_hue(h, lo, hi):
     return (lo <= h < hi) if lo <= hi else (h >= lo or h < hi)
 
 
-def classify(hex_str):
-    """-> (family, name, L, C, h, relative_chroma, is_neutral)"""
-    L, Cc, h = C.lab_to_lch(C.hex_to_lab(hex_str))
-    rel = C.relative_chroma(L, Cc, h)
-    if rel <= 0.15:                                   # combinations.md §5
-        if L <= 19:
-            return ('black', 'black' if Cc < 4 else 'off-black', L, Cc, h, rel, True)
-        if L >= 90:
-            return ('white', 'white' if Cc < 4 else 'off-white', L, Cc, h, rel, True)
-        warm = _in_hue(h, 30, 110)
-        if L >= 78:
-            fam, nm = ('warm neutral', 'cream') if warm else ('cool neutral', 'pale grey')
-            return (fam, nm, L, Cc, h, rel, True)
-        if warm:
-            if L >= 62:
-                return ('warm neutral', 'oatmeal', L, Cc, h, rel, True)
-            if L >= 45:
-                return ('warm neutral', 'stone', L, Cc, h, rel, True)
-            return ('warm neutral', 'taupe', L, Cc, h, rel, True)
+def _neutral_name(L, Cc, h):
+    if L <= 19:
+        return ('black', 'black' if Cc < 4 else 'off-black')
+    if L >= 90:
+        return ('white', 'white' if Cc < 4 else 'off-white')
+    warm = _in_hue(h, 30, 110)
+    if L >= 78:
+        return ('warm neutral', 'cream') if warm else ('cool neutral', 'pale grey')
+    if warm:
         if L >= 62:
-            return ('grey', 'light grey', L, Cc, h, rel, True)
-        if L >= 38:
-            return ('grey', 'mid grey', L, Cc, h, rel, True)
-        return ('grey', 'dark grey', L, Cc, h, rel, True)
+            return ('warm neutral', 'oatmeal')
+        if L >= 45:
+            return ('warm neutral', 'stone')
+        return ('warm neutral', 'taupe')
+    if L >= 62:
+        return ('grey', 'light grey')
+    if L >= 38:
+        return ('grey', 'mid grey')
+    return ('grey', 'dark grey')
+
+
+def _table(L, Cc, h):
     best = None
     for fam, name, lo, hi, Llo, Lhi, Cmin, Cmax in _CHROMATIC:
         if _in_hue(h, lo, hi) and Llo <= L < Lhi and Cmin <= Cc < Cmax:
@@ -95,11 +93,34 @@ def classify(hex_str):
             d += abs(L - (Llo + Lhi) / 2) / max(1, (Lhi - Llo) / 2) * 0.5
             if best is None or d < best[0]:
                 best = (d, fam, name)
+    return best
+
+
+def classify(hex_str):
+    """-> (family, name, L, C, h, relative_chroma, is_neutral)"""
+    L, Cc, h = C.lab_to_lch(C.hex_to_lab(hex_str))
+    rel = C.relative_chroma(L, Cc, h)
+    # A pale blue jacket is blue. The engine's neutral flag is about how much of
+    # the available chroma a colour uses, which is the right test for pairing and
+    # the wrong one for naming: at high L* even an obvious sky blue comes out
+    # under 0.15 and used to be filed as `cool neutral`, which then hid it from
+    # every colour match. So outside the warm band, where oatmeal and taupe
+    # genuinely are neutrals, a colour with real chroma keeps its own family and
+    # only carries the neutral flag.
+    if rel <= 0.15 and Cc >= 7 and not _in_hue(h, 20, 115):
+        t = _table(L, Cc, h)
+        if t:
+            return (t[1], t[2], L, Cc, h, rel, True)
+    if rel <= 0.15:                                   # combinations.md §5
+        fam, nm = _neutral_name(L, Cc, h)
+        return (fam, nm, L, Cc, h, rel, True)
+    best = _table(L, Cc, h)
     if best:
         return (best[1], best[2], L, Cc, h, rel, False)
-    # low-chroma chromatics that fall through: call them a muted neutral
-    fam = 'warm neutral' if _in_hue(h, 30, 110) else 'cool neutral'
-    return (fam, 'muted ' + ('warm' if fam.startswith('warm') else 'cool'), L, Cc, h, rel, False)
+    # a chromatic that no row fits — almost always a pale warm or a soft grey.
+    # Name it the way the neutral branch would; it keeps the vocabulary closed.
+    fam, nm = _neutral_name(L, Cc, h)
+    return (fam, nm, L, Cc, h, rel, False)
 
 
 if __name__ == '__main__':

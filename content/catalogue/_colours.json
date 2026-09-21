@@ -143,8 +143,8 @@
     "h": 20.9,
     "rel": 0.178,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "black",
+    "name": "off-black"
    },
    {
     "hex": "7F7979",
@@ -368,7 +368,7 @@
     "rel": 0.283,
     "neutral": false,
     "family": "cool neutral",
-    "name": "muted cool"
+    "name": "pale grey"
    },
    {
     "hex": "A3A2B3",
@@ -409,7 +409,7 @@
     "rel": 0.198,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "cream"
    },
    {
     "hex": "B5A293",
@@ -490,8 +490,8 @@
     "h": 358.4,
     "rel": 0.171,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "grey",
+    "name": "mid grey"
    },
    {
     "hex": "45302D",
@@ -572,8 +572,8 @@
     "h": 27.4,
     "rel": 0.156,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "black",
+    "name": "off-black"
    },
    {
     "hex": "4A5364",
@@ -736,8 +736,8 @@
     "h": 20.9,
     "rel": 0.178,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "black",
+    "name": "off-black"
    },
    {
     "hex": "7F7979",
@@ -785,8 +785,8 @@
     "h": 268.3,
     "rel": 0.234,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "black",
+    "name": "off-black"
    },
    {
     "hex": "9FBDF9",
@@ -1047,8 +1047,8 @@
     "h": 279.8,
     "rel": 0.215,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "black",
+    "name": "off-black"
    }
   ],
   "skin_share": 0.024,
@@ -1197,8 +1197,8 @@
     "h": 290.2,
     "rel": 0.188,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "white",
+    "name": "white"
    },
    {
     "hex": "29292C",
@@ -1249,8 +1249,8 @@
     "h": 269.7,
     "rel": 0.303,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "black",
+    "name": "off-black"
    }
   ],
   "skin_share": 0.013,
@@ -1369,8 +1369,8 @@
     "h": 246.4,
     "rel": 0.177,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "black",
+    "name": "black"
    },
    {
     "hex": "42272B",
@@ -1751,8 +1751,8 @@
     "h": 270.1,
     "rel": 0.194,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "black",
+    "name": "black"
    },
    {
     "hex": "373A41",
@@ -1916,7 +1916,7 @@
     "rel": 0.158,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "oatmeal"
    }
   ],
   "skin_share": 0.015,
@@ -2073,8 +2073,8 @@
     "h": 80.5,
     "rel": 0.233,
     "neutral": false,
-    "family": "warm neutral",
-    "name": "muted warm"
+    "family": "black",
+    "name": "black"
    },
    {
     "hex": "453D33",
@@ -2297,8 +2297,8 @@
     "h": 285.5,
     "rel": 0.162,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "black",
+    "name": "off-black"
    },
    {
     "hex": "6A2D39",
@@ -2361,7 +2361,7 @@
     "rel": 0.286,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "cream"
    }
   ],
   "skin_share": 0.444,
@@ -2533,7 +2533,7 @@
     "rel": 0.305,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "cream"
    }
   ],
   "skin_share": 0.446,
@@ -2551,8 +2551,8 @@
     "h": 88.4,
     "rel": 0.16,
     "neutral": false,
-    "family": "warm neutral",
-    "name": "muted warm"
+    "family": "white",
+    "name": "off-white"
    },
    {
     "hex": "B6A794",
@@ -2573,8 +2573,8 @@
     "h": 28.5,
     "rel": 0.447,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "black",
+    "name": "off-black"
    }
   ],
   "skin_share": 0.234,
@@ -2776,7 +2776,7 @@
     "rel": 0.401,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "cream"
    }
   ],
   "skin_share": 0.06,
@@ -2795,7 +2795,7 @@
     "rel": 0.373,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "cream"
    },
    {
     "hex": "B9997D",
@@ -2862,8 +2862,8 @@
     "h": 71.8,
     "rel": 0.307,
     "neutral": false,
-    "family": "warm neutral",
-    "name": "muted warm"
+    "family": "black",
+    "name": "black"
    },
    {
     "hex": "2E2927",
@@ -2993,8 +2993,8 @@
     "h": 41.3,
     "rel": 0.46,
     "neutral": false,
-    "family": "warm neutral",
-    "name": "muted warm"
+    "family": "black",
+    "name": "black"
    },
    {
     "hex": "462D27",
@@ -3122,7 +3122,7 @@
     "rel": 0.189,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "cream"
    },
    {
     "hex": "B0A090",
@@ -3200,8 +3200,8 @@
     "h": 26.4,
     "rel": 0.225,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "black",
+    "name": "off-black"
    },
    {
     "hex": "150A09",
@@ -3211,8 +3211,8 @@
     "h": 25.1,
     "rel": 0.311,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "black",
+    "name": "off-black"
    }
   ],
   "skin_share": 0.031,
@@ -3231,7 +3231,7 @@
     "rel": 0.166,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "oatmeal"
    },
    {
     "hex": "A78F7A",
@@ -3290,8 +3290,8 @@
     "h": 268.2,
     "rel": 0.258,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "grey",
+    "name": "mid grey"
    },
    {
     "hex": "6D7B90",
@@ -3342,8 +3342,8 @@
     "h": 273.2,
     "rel": 0.265,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "grey",
+    "name": "mid grey"
    },
    {
     "hex": "576580",
@@ -3544,8 +3544,8 @@
     "h": 27.8,
     "rel": 0.554,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "black",
+    "name": "off-black"
    },
    {
     "hex": "B4B0B1",
@@ -3687,7 +3687,7 @@
     "rel": 0.207,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "oatmeal"
    }
   ],
   "skin_share": 0.523,
@@ -3809,8 +3809,8 @@
     "h": 23.6,
     "rel": 0.366,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "black",
+    "name": "off-black"
    }
   ],
   "skin_share": 0.056,
@@ -3870,7 +3870,7 @@
     "rel": 0.227,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "cream"
    },
    {
     "hex": "262325",
@@ -3900,7 +3900,7 @@
     "rel": 0.175,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "cream"
    },
    {
     "hex": "212022",
@@ -3981,8 +3981,8 @@
     "h": 92.7,
     "rel": 0.196,
     "neutral": false,
-    "family": "warm neutral",
-    "name": "muted warm"
+    "family": "white",
+    "name": "off-white"
    },
    {
     "hex": "B3B1AC",
@@ -4064,7 +4064,7 @@
     "rel": 0.242,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "taupe"
    },
    {
     "hex": "171515",
@@ -4433,7 +4433,7 @@
     "rel": 0.192,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "cream"
    },
    {
     "hex": "251710",
@@ -4730,8 +4730,8 @@
     "h": 25.7,
     "rel": 0.177,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "grey",
+    "name": "dark grey"
    }
   ],
   "skin_share": 0.094,
@@ -5080,7 +5080,7 @@
     "rel": 0.242,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "cream"
    },
    {
     "hex": "17171B",
@@ -5337,7 +5337,7 @@
     "rel": 0.256,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "oatmeal"
    },
    {
     "hex": "F5F1EE",
@@ -5347,8 +5347,8 @@
     "h": 67.0,
     "rel": 0.241,
     "neutral": false,
-    "family": "warm neutral",
-    "name": "muted warm"
+    "family": "white",
+    "name": "white"
    }
   ],
   "skin_share": 0.259,
@@ -5478,8 +5478,8 @@
     "h": 48.8,
     "rel": 0.154,
     "neutral": false,
-    "family": "warm neutral",
-    "name": "muted warm"
+    "family": "black",
+    "name": "black"
    },
    {
     "hex": "393736",
@@ -5934,8 +5934,8 @@
     "h": 54.2,
     "rel": 0.16,
     "neutral": false,
-    "family": "warm neutral",
-    "name": "muted warm"
+    "family": "black",
+    "name": "black"
    },
    {
     "hex": "362B25",
@@ -6256,8 +6256,8 @@
     "h": 77.0,
     "rel": 0.32,
     "neutral": false,
-    "family": "warm neutral",
-    "name": "muted warm"
+    "family": "black",
+    "name": "black"
    },
    {
     "hex": "3B2E24",
@@ -6298,7 +6298,7 @@
     "rel": 0.318,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "cream"
    },
    {
     "hex": "463A33",
@@ -6339,7 +6339,7 @@
     "rel": 0.331,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "cream"
    },
    {
     "hex": "AE9B9B",
@@ -6483,8 +6483,8 @@
     "h": 66.9,
     "rel": 0.216,
     "neutral": false,
-    "family": "warm neutral",
-    "name": "muted warm"
+    "family": "black",
+    "name": "black"
    }
   ],
   "skin_share": 0.121,
@@ -6674,8 +6674,8 @@
     "h": 270.6,
     "rel": 0.233,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "black",
+    "name": "black"
    },
    {
     "hex": "BDBEBF",
@@ -6764,8 +6764,8 @@
     "h": 79.3,
     "rel": 0.273,
     "neutral": false,
-    "family": "warm neutral",
-    "name": "muted warm"
+    "family": "black",
+    "name": "black"
    }
   ],
   "skin_share": 0.0,
@@ -6783,8 +6783,8 @@
     "h": 270.9,
     "rel": 0.237,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "black",
+    "name": "black"
    }
   ],
   "skin_share": 0.0,
@@ -7001,8 +7001,8 @@
     "h": 31.3,
     "rel": 0.15,
     "neutral": false,
-    "family": "warm neutral",
-    "name": "muted warm"
+    "family": "black",
+    "name": "black"
    },
    {
     "hex": "5E4D4C",
@@ -7042,8 +7042,8 @@
     "h": 31.3,
     "rel": 0.15,
     "neutral": false,
-    "family": "warm neutral",
-    "name": "muted warm"
+    "family": "black",
+    "name": "black"
    }
   ],
   "skin_share": 0.216,
@@ -7102,8 +7102,8 @@
     "h": 28.7,
     "rel": 0.328,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "black",
+    "name": "off-black"
    },
    {
     "hex": "9E8467",
@@ -7184,8 +7184,8 @@
     "h": 91.8,
     "rel": 0.203,
     "neutral": false,
-    "family": "warm neutral",
-    "name": "muted warm"
+    "family": "white",
+    "name": "off-white"
    }
   ],
   "skin_share": 0.0,
@@ -7419,8 +7419,8 @@
     "h": 304.0,
     "rel": 0.088,
     "neutral": true,
-    "family": "grey",
-    "name": "dark grey"
+    "family": "purple",
+    "name": "aubergine"
    },
    {
     "hex": "535E6C",
@@ -7649,7 +7649,7 @@
     "rel": 0.225,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "cream"
    },
    {
     "hex": "F6F6F6",
@@ -7689,8 +7689,8 @@
     "h": 26.7,
     "rel": 0.393,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "black",
+    "name": "off-black"
    },
    {
     "hex": "C6B2B4",
@@ -7700,8 +7700,8 @@
     "h": 12.0,
     "rel": 0.189,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "grey",
+    "name": "light grey"
    }
   ],
   "skin_share": 0.851,
@@ -7749,8 +7749,8 @@
     "h": 278.3,
     "rel": 0.153,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "grey",
+    "name": "mid grey"
    }
   ],
   "skin_share": 0.0,
@@ -8213,8 +8213,8 @@
     "h": 85.6,
     "rel": 0.176,
     "neutral": false,
-    "family": "warm neutral",
-    "name": "muted warm"
+    "family": "black",
+    "name": "black"
    },
    {
     "hex": "4E4D49",
@@ -8255,7 +8255,7 @@
     "rel": 0.275,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "oatmeal"
    },
    {
     "hex": "9F8660",
@@ -8408,7 +8408,7 @@
     "rel": 0.201,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "taupe"
    }
   ],
   "skin_share": 0.047,
@@ -8426,8 +8426,8 @@
     "h": 258.9,
     "rel": 0.2,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "black",
+    "name": "black"
    }
   ],
   "skin_share": 0.032,
@@ -8495,7 +8495,7 @@
     "rel": 0.833,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "taupe"
    },
    {
     "hex": "85481E",
@@ -8506,7 +8506,7 @@
     "rel": 0.74,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "taupe"
    }
   ],
   "skin_share": 0.627,
@@ -8618,7 +8618,7 @@
     "rel": 0.15,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "cream"
    }
   ],
   "skin_share": 0.053,
@@ -8636,8 +8636,8 @@
     "h": 199.4,
     "rel": 0.163,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "black",
+    "name": "black"
    },
    {
     "hex": "E3E5E5",
@@ -8824,8 +8824,8 @@
     "h": 25.6,
     "rel": 0.194,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "grey",
+    "name": "dark grey"
    },
    {
     "hex": "1F1715",
@@ -8896,7 +8896,7 @@
     "rel": 0.151,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "cream"
    }
   ],
   "skin_share": 0.432,
@@ -8956,7 +8956,7 @@
     "rel": 0.833,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "taupe"
    },
    {
     "hex": "84481D",
@@ -9015,8 +9015,8 @@
     "h": 64.0,
     "rel": 0.296,
     "neutral": false,
-    "family": "warm neutral",
-    "name": "muted warm"
+    "family": "black",
+    "name": "black"
    }
   ],
   "skin_share": 0.0,
@@ -9034,8 +9034,8 @@
     "h": 56.4,
     "rel": 0.243,
     "neutral": false,
-    "family": "warm neutral",
-    "name": "muted warm"
+    "family": "black",
+    "name": "black"
    }
   ],
   "skin_share": 0.035,
@@ -9136,7 +9136,7 @@
     "rel": 0.453,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "stone"
    },
    {
     "hex": "3D5C6E",
@@ -9218,7 +9218,7 @@
     "rel": 0.199,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "oatmeal"
    },
    {
     "hex": "1B1817",
@@ -9397,8 +9397,8 @@
     "h": 38.5,
     "rel": 0.228,
     "neutral": false,
-    "family": "warm neutral",
-    "name": "muted warm"
+    "family": "black",
+    "name": "black"
    },
    {
     "hex": "362B25",
@@ -9449,8 +9449,8 @@
     "h": 39.0,
     "rel": 0.205,
     "neutral": false,
-    "family": "warm neutral",
-    "name": "muted warm"
+    "family": "black",
+    "name": "black"
    },
    {
     "hex": "473933",
@@ -9865,7 +9865,7 @@
     "rel": 0.163,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "oatmeal"
    },
    {
     "hex": "91836D",
@@ -10672,8 +10672,8 @@
     "h": 65.5,
     "rel": 0.174,
     "neutral": false,
-    "family": "warm neutral",
-    "name": "muted warm"
+    "family": "black",
+    "name": "black"
    },
    {
     "hex": "6A5744",
@@ -10844,8 +10844,8 @@
     "h": 234.2,
     "rel": 0.431,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "black",
+    "name": "black"
    }
   ],
   "skin_share": 0.0,
@@ -11040,8 +11040,8 @@
     "h": 257.2,
     "rel": 0.164,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "grey",
+    "name": "dark grey"
    },
    {
     "hex": "2C2529",
@@ -11242,8 +11242,8 @@
     "h": 124.7,
     "rel": 0.204,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "grey",
+    "name": "dark grey"
    },
    {
     "hex": "870616",
@@ -11415,7 +11415,7 @@
     "rel": 0.356,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "cream"
    },
    {
     "hex": "CEB89F",
@@ -11426,7 +11426,7 @@
     "rel": 0.196,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "oatmeal"
    },
    {
     "hex": "1E1B1D",
@@ -11455,8 +11455,8 @@
     "h": 52.3,
     "rel": 0.186,
     "neutral": false,
-    "family": "warm neutral",
-    "name": "muted warm"
+    "family": "black",
+    "name": "black"
    },
    {
     "hex": "36383E",
@@ -11587,7 +11587,7 @@
     "rel": 0.838,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "taupe"
    }
   ],
   "skin_share": 0.035,
@@ -11669,7 +11669,7 @@
     "rel": 0.21,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "cream"
    }
   ],
   "skin_share": 0.256,
@@ -11860,7 +11860,7 @@
     "rel": 0.371,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "cream"
    },
    {
     "hex": "CBB59C",
@@ -11871,7 +11871,7 @@
     "rel": 0.199,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "oatmeal"
    }
   ],
   "skin_share": 0.069,
@@ -11941,8 +11941,8 @@
     "h": 69.8,
     "rel": 0.213,
     "neutral": false,
-    "family": "warm neutral",
-    "name": "muted warm"
+    "family": "white",
+    "name": "white"
    },
    {
     "hex": "515C62",
@@ -11952,8 +11952,8 @@
     "h": 239.8,
     "rel": 0.213,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "grey",
+    "name": "mid grey"
    }
   ],
   "skin_share": 0.053,
@@ -12270,7 +12270,7 @@
     "rel": 0.538,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "stone"
    }
   ],
   "skin_share": 0.486,
@@ -12300,7 +12300,7 @@
     "rel": 0.508,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "stone"
    }
   ],
   "skin_share": 0.623,
@@ -12330,7 +12330,7 @@
     "rel": 0.343,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "cream"
    }
   ],
   "skin_share": 0.419,
@@ -12360,7 +12360,7 @@
     "rel": 0.556,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "stone"
    },
    {
     "hex": "863A1C",
@@ -12499,7 +12499,7 @@
     "rel": 0.869,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "taupe"
    },
    {
     "hex": "73542E",
@@ -12540,7 +12540,7 @@
     "rel": 0.81,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "taupe"
    },
    {
     "hex": "492C08",
@@ -12622,7 +12622,7 @@
     "rel": 0.574,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "taupe"
    },
    {
     "hex": "9B6745",
@@ -12652,7 +12652,7 @@
     "rel": 0.719,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "taupe"
    },
    {
     "hex": "A56539",
@@ -12753,7 +12753,7 @@
     "rel": 0.406,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "cream"
    },
    {
     "hex": "292627",
@@ -13212,7 +13212,7 @@
     "rel": 0.391,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "cream"
    }
   ],
   "skin_share": 0.103,
@@ -13342,8 +13342,8 @@
     "h": 181.9,
     "rel": 0.257,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "black",
+    "name": "black"
    },
    {
     "hex": "3E403E",
@@ -13484,8 +13484,8 @@
     "h": 269.2,
     "rel": 0.29,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "black",
+    "name": "off-black"
    }
   ],
   "skin_share": 0.168,
@@ -13544,8 +13544,8 @@
     "h": 110.1,
     "rel": 0.168,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "black",
+    "name": "black"
    }
   ],
   "skin_share": 0.057,
@@ -13672,8 +13672,8 @@
     "h": 126.5,
     "rel": 0.158,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "grey",
+    "name": "dark grey"
    },
    {
     "hex": "1B1E1A",
@@ -13923,8 +13923,8 @@
     "h": 338.8,
     "rel": 0.218,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "white",
+    "name": "white"
    }
   ],
   "skin_share": 0.0,
@@ -14043,8 +14043,8 @@
     "h": 306.6,
     "rel": 0.103,
     "neutral": true,
-    "family": "grey",
-    "name": "dark grey"
+    "family": "purple",
+    "name": "plum"
    },
    {
     "hex": "BCAC91",
@@ -14066,7 +14066,7 @@
     "rel": 0.166,
     "neutral": false,
     "family": "cool neutral",
-    "name": "muted cool"
+    "name": "pale grey"
    }
   ],
   "skin_share": 0.007,
@@ -14286,8 +14286,8 @@
     "h": 266.0,
     "rel": 0.176,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "grey",
+    "name": "dark grey"
    },
    {
     "hex": "F1E4D1",
@@ -14297,8 +14297,8 @@
     "h": 83.1,
     "rel": 0.404,
     "neutral": false,
-    "family": "warm neutral",
-    "name": "muted warm"
+    "family": "white",
+    "name": "off-white"
    }
   ],
   "skin_share": 0.182,
@@ -14409,8 +14409,8 @@
     "h": 152.6,
     "rel": 0.319,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "black",
+    "name": "off-black"
    }
   ],
   "skin_share": 0.082,
@@ -14439,8 +14439,8 @@
     "h": 90.6,
     "rel": 0.281,
     "neutral": false,
-    "family": "warm neutral",
-    "name": "muted warm"
+    "family": "white",
+    "name": "off-white"
    },
    {
     "hex": "4D6356",
@@ -14663,8 +14663,8 @@
     "h": 5.6,
     "rel": 0.199,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "black",
+    "name": "off-black"
    }
   ],
   "skin_share": 0.075,
@@ -14876,8 +14876,8 @@
     "h": 218.4,
     "rel": 0.186,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "grey",
+    "name": "mid grey"
    },
    {
     "hex": "1F1C1D",
@@ -14958,8 +14958,8 @@
     "h": 190.1,
     "rel": 0.371,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "black",
+    "name": "off-black"
    },
    {
     "hex": "3D7065",
@@ -15000,7 +15000,7 @@
     "rel": 0.193,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "cream"
    },
    {
     "hex": "2B2C3B",
@@ -15152,8 +15152,8 @@
     "h": 172.6,
     "rel": 0.186,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "black",
+    "name": "black"
    }
   ],
   "skin_share": 0.0,
@@ -15213,7 +15213,7 @@
     "rel": 0.246,
     "neutral": false,
     "family": "warm neutral",
-    "name": "muted warm"
+    "name": "cream"
    },
    {
     "hex": "BEAD95",
@@ -15294,8 +15294,8 @@
     "h": 29.6,
     "rel": 0.248,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "black",
+    "name": "black"
    },
    {
     "hex": "3C302E",
@@ -15507,8 +15507,8 @@
     "h": 266.7,
     "rel": 0.194,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "grey",
+    "name": "dark grey"
    },
    {
     "hex": "658EC0",
@@ -15518,8 +15518,8 @@
     "h": 269.3,
     "rel": 0.579,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "grey",
+    "name": "mid grey"
    },
    {
     "hex": "30333A",
@@ -15529,8 +15529,8 @@
     "h": 275.7,
     "rel": 0.161,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "grey",
+    "name": "dark grey"
    }
   ],
   "skin_share": 0.098,
@@ -15570,8 +15570,8 @@
     "h": 270.2,
     "rel": 0.516,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "grey",
+    "name": "mid grey"
    }
   ],
   "skin_share": 0.001,
@@ -15589,8 +15589,8 @@
     "h": 271.4,
     "rel": 0.511,
     "neutral": false,
-    "family": "cool neutral",
-    "name": "muted cool"
+    "family": "grey",
+    "name": "mid grey"
    },
    {
     "hex": "57739C",

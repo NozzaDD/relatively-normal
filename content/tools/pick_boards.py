@@ -7,6 +7,7 @@ is refused outright. Neutrals are free.
 """
 import sys, os, json, csv, collections
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, '/home/user/relatively-normal')
 from engine import colour as C
 
 ROOT = '/home/user/relatively-normal'

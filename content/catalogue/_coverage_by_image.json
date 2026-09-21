@@ -1,0 +1,898 @@
+{
+ "content/swipe/fashion shows ss27/IMG_0036.png": {
+  "n_key": 4,
+  "n_chromatic": 4,
+  "chromatic_covered": 4,
+  "score": 42.7,
+  "clothes_share": 0.813,
+  "background_name": "black"
+ },
+ "content/swipe/fashion shows ss27/IMG_0059.jpeg": {
+  "n_key": 4,
+  "n_chromatic": 3,
+  "chromatic_covered": 3,
+  "score": 34.8,
+  "clothes_share": 0.214,
+  "background_name": "black"
+ },
+ "content/swipe/fashion shows ss27/IMG_0060.jpeg": {
+  "n_key": 4,
+  "n_chromatic": 3,
+  "chromatic_covered": 3,
+  "score": 35.83,
+  "clothes_share": 0.096,
+  "background_name": "black"
+ },
+ "content/swipe/fashion shows ss27/IMG_0061.jpeg": {
+  "n_key": 4,
+  "n_chromatic": 3,
+  "chromatic_covered": 3,
+  "score": 35.24,
+  "clothes_share": 0.203,
+  "background_name": "black"
+ },
+ "content/swipe/fashion shows ss27/IMG_0150.png": {
+  "n_key": 3,
+  "n_chromatic": 1,
+  "chromatic_covered": 1,
+  "score": 17.63,
+  "clothes_share": 0.78,
+  "background_name": "white"
+ },
+ "content/swipe/fashion shows ss27/IMG_0151.jpeg": {
+  "n_key": 4,
+  "n_chromatic": 2,
+  "chromatic_covered": 2,
+  "score": 28.08,
+  "clothes_share": 0.566,
+  "background_name": "white"
+ },
+ "content/swipe/fashion shows ss27/IMG_0152.jpeg": {
+  "n_key": 1,
+  "n_chromatic": 1,
+  "chromatic_covered": 1,
+  "score": 12.77,
+  "clothes_share": 0.776,
+  "background_name": "white"
+ },
+ "content/swipe/fashion shows ss27/IMG_0153.jpeg": {
+  "n_key": 3,
+  "n_chromatic": 0,
+  "chromatic_covered": 0,
+  "score": 2.87,
+  "clothes_share": 0.71,
+  "background_name": "taupe"
+ },
+ "content/swipe/fashion shows ss27/IMG_0166.png": {
+  "n_key": 1,
+  "n_chromatic": 1,
+  "chromatic_covered": 1,
+  "score": 12.89,
+  "clothes_share": 0.617,
+  "background_name": "white"
+ },
+ "content/swipe/fashion shows ss27/IMG_0802.png": {
+  "n_key": 3,
+  "n_chromatic": 3,
+  "chromatic_covered": 3,
+  "score": 30.43,
+  "clothes_share": 0.917,
+  "background_name": "off-white"
+ },
+ "content/swipe/fashion shows ss27/IMG_0803.png": {
+  "n_key": 3,
+  "n_chromatic": 2,
+  "chromatic_covered": 2,
+  "score": 23.25,
+  "clothes_share": 0.268,
+  "background_name": "cream"
+ },
+ "content/swipe/fashion shows ss27/IMG_0804.png": {
+  "n_key": 4,
+  "n_chromatic": 2,
+  "chromatic_covered": 2,
+  "score": 22.27,
+  "clothes_share": 0.694,
+  "background_name": "oatmeal"
+ },
+ "content/swipe/fashion shows ss27/IMG_0805.png": {
+  "n_key": 3,
+  "n_chromatic": 3,
+  "chromatic_covered": 3,
+  "score": 35.91,
+  "clothes_share": 0.843,
+  "background_name": "cream"
+ },
+ "content/swipe/fashion shows ss27/IMG_0806.png": {
+  "n_key": 2,
+  "n_chromatic": 2,
+  "chromatic_covered": 2,
+  "score": 22.98,
+  "clothes_share": 0.868,
+  "background_name": "cream"
+ },
+ "content/swipe/fashion shows ss27/IMG_0807.png": {
+  "n_key": 4,
+  "n_chromatic": 4,
+  "chromatic_covered": 4,
+  "score": 42.02,
+  "clothes_share": 0.846,
+  "background_name": "cream"
+ },
+ "content/swipe/fashion shows ss27/IMG_0808.png": {
+  "n_key": 4,
+  "n_chromatic": 4,
+  "chromatic_covered": 4,
+  "score": 42.68,
+  "clothes_share": 0.444,
+  "background_name": "oatmeal"
+ },
+ "content/swipe/fashion shows ss27/IMG_0809.png": {
+  "n_key": 4,
+  "n_chromatic": 4,
+  "chromatic_covered": 4,
+  "score": 44.82,
+  "clothes_share": 0.302,
+  "background_name": "stone"
+ },
+ "content/swipe/fashion shows ss27/IMG_0811.png": {
+  "n_key": 4,
+  "n_chromatic": 2,
+  "chromatic_covered": 2,
+  "score": 25.71,
+  "clothes_share": 0.723,
+  "background_name": "tobacco"
+ },
+ "content/swipe/fashion shows ss27/IMG_0812.png": {
+  "n_key": 4,
+  "n_chromatic": 4,
+  "chromatic_covered": 4,
+  "score": 43.68,
+  "clothes_share": 0.481,
+  "background_name": "tobacco"
+ },
+ "content/swipe/fashion shows ss27/IMG_0813.png": {
+  "n_key": 1,
+  "n_chromatic": 0,
+  "chromatic_covered": 0,
+  "score": 2.95,
+  "clothes_share": 0.871,
+  "background_name": "tobacco"
+ },
+ "content/swipe/fashion shows ss27/IMG_0814.png": {
+  "n_key": 3,
+  "n_chromatic": 2,
+  "chromatic_covered": 2,
+  "score": 24.22,
+  "clothes_share": 0.771,
+  "background_name": "tan"
+ },
+ "content/swipe/fashion shows ss27/IMG_0815.png": {
+  "n_key": 4,
+  "n_chromatic": 4,
+  "chromatic_covered": 4,
+  "score": 45.18,
+  "clothes_share": 0.815,
+  "background_name": "tobacco"
+ },
+ "content/swipe/fashion shows ss27/IMG_0817.png": {
+  "n_key": 2,
+  "n_chromatic": 1,
+  "chromatic_covered": 1,
+  "score": 13.91,
+  "clothes_share": 0.43,
+  "background_name": "oatmeal"
+ },
+ "content/swipe/fashion shows ss27/IMG_0818.png": {
+  "n_key": 1,
+  "n_chromatic": 1,
+  "chromatic_covered": 1,
+  "score": 12.69,
+  "clothes_share": 0.741,
+  "background_name": "espresso"
+ },
+ "content/swipe/fashion shows ss27/IMG_0819.png": {
+  "n_key": 1,
+  "n_chromatic": 0,
+  "chromatic_covered": 0,
+  "score": 0.85,
+  "clothes_share": 0.722,
+  "background_name": "tan"
+ },
+ "content/swipe/fashion shows ss27/IMG_0820.png": {
+  "n_key": 3,
+  "n_chromatic": 1,
+  "chromatic_covered": 1,
+  "score": 11.9,
+  "clothes_share": 0.797,
+  "background_name": "oatmeal"
+ },
+ "content/swipe/fashion shows ss27/IMG_0821.png": {
+  "n_key": 4,
+  "n_chromatic": 3,
+  "chromatic_covered": 3,
+  "score": 34.34,
+  "clothes_share": 0.123,
+  "background_name": "oatmeal"
+ },
+ "content/swipe/fashion shows ss27/IMG_0822.png": {
+  "n_key": 2,
+  "n_chromatic": 0,
+  "chromatic_covered": 0,
+  "score": 5.49,
+  "clothes_share": 0.891,
+  "background_name": "tan"
+ },
+ "content/swipe/fashion shows ss27/IMG_0823.png": {
+  "n_key": 3,
+  "n_chromatic": 2,
+  "chromatic_covered": 2,
+  "score": 24.0,
+  "clothes_share": 0.831,
+  "background_name": "oatmeal"
+ },
+ "content/swipe/fashion shows ss27/IMG_0824.png": {
+  "n_key": 1,
+  "n_chromatic": 0,
+  "chromatic_covered": 0,
+  "score": 2.66,
+  "clothes_share": 0.835,
+  "background_name": "tan"
+ },
+ "content/swipe/fashion shows ss27/IMG_0825.png": {
+  "n_key": 2,
+  "n_chromatic": 1,
+  "chromatic_covered": 1,
+  "score": 10.97,
+  "clothes_share": 0.701,
+  "background_name": "oatmeal"
+ },
+ "content/swipe/fashion shows ss27/IMG_0826.png": {
+  "n_key": 2,
+  "n_chromatic": 0,
+  "chromatic_covered": 0,
+  "score": 2.09,
+  "clothes_share": 0.656,
+  "background_name": "tan"
+ },
+ "content/swipe/fashion shows ss27/IMG_0827.png": {
+  "n_key": 2,
+  "n_chromatic": 1,
+  "chromatic_covered": 1,
+  "score": 12.129999999999999,
+  "clothes_share": 0.778,
+  "background_name": "tan"
+ },
+ "content/swipe/fashion shows ss27/IMG_0828.png": {
+  "n_key": 4,
+  "n_chromatic": 2,
+  "chromatic_covered": 2,
+  "score": 22.41,
+  "clothes_share": 0.775,
+  "background_name": "tan"
+ },
+ "content/swipe/fashion shows ss27/IMG_0829.png": {
+  "n_key": 3,
+  "n_chromatic": 0,
+  "chromatic_covered": 0,
+  "score": 4.77,
+  "clothes_share": 0.927,
+  "background_name": "tan"
+ },
+ "content/swipe/fashion shows ss27/IMG_0830.png": {
+  "n_key": 2,
+  "n_chromatic": 1,
+  "chromatic_covered": 1,
+  "score": 13.71,
+  "clothes_share": 0.436,
+  "background_name": "tan"
+ },
+ "content/swipe/fashion shows ss27/IMG_0831.png": {
+  "n_key": 2,
+  "n_chromatic": 1,
+  "chromatic_covered": 1,
+  "score": 13.21,
+  "clothes_share": 0.733,
+  "background_name": "oatmeal"
+ },
+ "content/swipe/fashion shows ss27/IMG_0832.png": {
+  "n_key": 1,
+  "n_chromatic": 0,
+  "chromatic_covered": 0,
+  "score": 2.76,
+  "clothes_share": 0.715,
+  "background_name": "tan"
+ },
+ "content/swipe/fashion shows ss27/IMG_0833.png": {
+  "n_key": 2,
+  "n_chromatic": 0,
+  "chromatic_covered": 0,
+  "score": 2.19,
+  "clothes_share": 0.778,
+  "background_name": "tan"
+ },
+ "content/swipe/fashion shows ss27/IMG_0835.png": {
+  "n_key": 3,
+  "n_chromatic": 3,
+  "chromatic_covered": 3,
+  "score": 32.37,
+  "clothes_share": 0.161,
+  "background_name": "oatmeal"
+ },
+ "content/swipe/fashion shows ss27/IMG_0836.png": {
+  "n_key": 3,
+  "n_chromatic": 2,
+  "chromatic_covered": 2,
+  "score": 22.22,
+  "clothes_share": 0.174,
+  "background_name": "oatmeal"
+ },
+ "content/swipe/fashion shows ss27/IMG_0837.png": {
+  "n_key": 4,
+  "n_chromatic": 3,
+  "chromatic_covered": 3,
+  "score": 31.88,
+  "clothes_share": 0.041,
+  "background_name": "cream"
+ },
+ "content/swipe/fashion shows ss27/IMG_0838.png": {
+  "n_key": 4,
+  "n_chromatic": 4,
+  "chromatic_covered": 4,
+  "score": 41.29,
+  "clothes_share": 0.682,
+  "background_name": "oatmeal"
+ },
+ "content/swipe/fashion shows ss27/IMG_0839.png": {
+  "n_key": 4,
+  "n_chromatic": 4,
+  "chromatic_covered": 4,
+  "score": 41.47,
+  "clothes_share": 0.667,
+  "background_name": "oatmeal"
+ },
+ "content/swipe/fashion shows ss27/IMG_0840.png": {
+  "n_key": 4,
+  "n_chromatic": 3,
+  "chromatic_covered": 3,
+  "score": 36.06,
+  "clothes_share": 0.207,
+  "background_name": "off-white"
+ },
+ "content/swipe/fashion shows ss27/IMG_0841.png": {
+  "n_key": 4,
+  "n_chromatic": 3,
+  "chromatic_covered": 3,
+  "score": 34.230000000000004,
+  "clothes_share": 0.411,
+  "background_name": "cream"
+ },
+ "content/swipe/fashion shows ss27/IMG_0842.png": {
+  "n_key": 2,
+  "n_chromatic": 0,
+  "chromatic_covered": 0,
+  "score": 5.68,
+  "clothes_share": 0.816,
+  "background_name": "oatmeal"
+ },
+ "content/swipe/fashion shows ss27/IMG_0843.png": {
+  "n_key": 4,
+  "n_chromatic": 4,
+  "chromatic_covered": 4,
+  "score": 42.81,
+  "clothes_share": 0.746,
+  "background_name": "off-white"
+ },
+ "content/swipe/fashion shows ss27/IMG_0844.png": {
+  "n_key": 4,
+  "n_chromatic": 1,
+  "chromatic_covered": 1,
+  "score": 15.24,
+  "clothes_share": 0.196,
+  "background_name": "off-white"
+ },
+ "content/swipe/fashion shows ss27/IMG_0845.png": {
+  "n_key": 4,
+  "n_chromatic": 3,
+  "chromatic_covered": 3,
+  "score": 34.79,
+  "clothes_share": 0.5,
+  "background_name": "oatmeal"
+ },
+ "content/swipe/fashion shows ss27/IMG_0846.png": {
+  "n_key": 1,
+  "n_chromatic": 0,
+  "chromatic_covered": 0,
+  "score": 2.78,
+  "clothes_share": 0.572,
+  "background_name": "cream"
+ },
+ "content/swipe/fashion shows ss27/IMG_0847.png": {
+  "n_key": 4,
+  "n_chromatic": 0,
+  "chromatic_covered": 0,
+  "score": 1.84,
+  "clothes_share": 0.813,
+  "background_name": "white"
+ },
+ "content/swipe/fashion shows ss27/IMG_0848.png": {
+  "n_key": 2,
+  "n_chromatic": 2,
+  "chromatic_covered": 2,
+  "score": 23.259999999999998,
+  "clothes_share": 0.293,
+  "background_name": "white"
+ },
+ "content/swipe/fashion shows ss27/IMG_0849.png": {
+  "n_key": 3,
+  "n_chromatic": 1,
+  "chromatic_covered": 1,
+  "score": 16.44,
+  "clothes_share": 0.563,
+  "background_name": "white"
+ },
+ "content/swipe/fashion shows ss27/IMG_0850.png": {
+  "n_key": 2,
+  "n_chromatic": 0,
+  "chromatic_covered": 0,
+  "score": 5.04,
+  "clothes_share": 0.947,
+  "background_name": "cream"
+ },
+ "content/swipe/fashion shows ss27/IMG_0851.png": {
+  "n_key": 4,
+  "n_chromatic": 4,
+  "chromatic_covered": 4,
+  "score": 40.79,
+  "clothes_share": 0.795,
+  "background_name": "black"
+ },
+ "content/swipe/fashion shows ss27/IMG_0852.png": {
+  "n_key": 4,
+  "n_chromatic": 4,
+  "chromatic_covered": 4,
+  "score": 40.86,
+  "clothes_share": 0.3,
+  "background_name": "brick"
+ },
+ "content/swipe/fashion shows ss27/IMG_0853.png": {
+  "n_key": 1,
+  "n_chromatic": 1,
+  "chromatic_covered": 1,
+  "score": 12.99,
+  "clothes_share": 0.781,
+  "background_name": "brick"
+ },
+ "content/swipe/fashion shows ss27/IMG_0854.png": {
+  "n_key": 4,
+  "n_chromatic": 4,
+  "chromatic_covered": 4,
+  "score": 43.08,
+  "clothes_share": 0.787,
+  "background_name": "black"
+ },
+ "content/swipe/fashion shows ss27/IMG_0855.png": {
+  "n_key": 3,
+  "n_chromatic": 2,
+  "chromatic_covered": 2,
+  "score": 21.39,
+  "clothes_share": 0.815,
+  "background_name": "rust"
+ },
+ "content/swipe/fashion shows ss27/IMG_0856.png": {
+  "n_key": 4,
+  "n_chromatic": 4,
+  "chromatic_covered": 4,
+  "score": 40.7,
+  "clothes_share": 0.831,
+  "background_name": "rust"
+ },
+ "content/swipe/fashion shows ss27/IMG_0857.png": {
+  "n_key": 4,
+  "n_chromatic": 2,
+  "chromatic_covered": 2,
+  "score": 25.38,
+  "clothes_share": 0.81,
+  "background_name": "rust"
+ },
+ "content/swipe/fashion shows ss27/IMG_0858.png": {
+  "n_key": 4,
+  "n_chromatic": 2,
+  "chromatic_covered": 2,
+  "score": 26.23,
+  "clothes_share": 0.54,
+  "background_name": "brick"
+ },
+ "content/swipe/fashion shows ss27/IMG_0859.png": {
+  "n_key": 3,
+  "n_chromatic": 1,
+  "chromatic_covered": 1,
+  "score": 16.7,
+  "clothes_share": 0.784,
+  "background_name": "denim blue"
+ },
+ "content/swipe/fashion shows ss27/IMG_0860.png": {
+  "n_key": 4,
+  "n_chromatic": 4,
+  "chromatic_covered": 4,
+  "score": 43.06,
+  "clothes_share": 0.781,
+  "background_name": "rust"
+ },
+ "content/swipe/fashion shows ss27/IMG_0861.png": {
+  "n_key": 3,
+  "n_chromatic": 3,
+  "chromatic_covered": 3,
+  "score": 30.91,
+  "clothes_share": 0.837,
+  "background_name": "rust"
+ },
+ "content/swipe/fashion shows ss27/IMG_0862.png": {
+  "n_key": 4,
+  "n_chromatic": 2,
+  "chromatic_covered": 2,
+  "score": 24.77,
+  "clothes_share": 0.839,
+  "background_name": "dark grey"
+ },
+ "content/swipe/fashion shows ss27/IMG_0863.png": {
+  "n_key": 3,
+  "n_chromatic": 2,
+  "chromatic_covered": 2,
+  "score": 23.56,
+  "clothes_share": 0.887,
+  "background_name": "chocolate"
+ },
+ "content/swipe/fashion shows ss27/IMG_0864.png": {
+  "n_key": 4,
+  "n_chromatic": 4,
+  "chromatic_covered": 4,
+  "score": 41.43,
+  "clothes_share": 0.417,
+  "background_name": "chocolate"
+ },
+ "content/swipe/fashion shows ss27/IMG_0865.png": {
+  "n_key": 3,
+  "n_chromatic": 1,
+  "chromatic_covered": 1,
+  "score": 16.7,
+  "clothes_share": 0.134,
+  "background_name": "dark grey"
+ },
+ "content/swipe/fashion shows ss27/IMG_0866.png": {
+  "n_key": 2,
+  "n_chromatic": 0,
+  "chromatic_covered": 0,
+  "score": 4.02,
+  "clothes_share": 0.313,
+  "background_name": "light grey"
+ },
+ "content/swipe/fashion shows ss27/IMG_0868.png": {
+  "n_key": 1,
+  "n_chromatic": 1,
+  "chromatic_covered": 1,
+  "score": 12.8,
+  "clothes_share": 0.868,
+  "background_name": "light grey"
+ },
+ "content/swipe/fashion shows ss27/IMG_0869.png": {
+  "n_key": 4,
+  "n_chromatic": 1,
+  "chromatic_covered": 1,
+  "score": 15.18,
+  "clothes_share": 0.635,
+  "background_name": "tan"
+ },
+ "content/swipe/formats/IMG_0018.jpeg": {
+  "n_key": 2,
+  "n_chromatic": 2,
+  "chromatic_covered": 2,
+  "score": 20.35,
+  "clothes_share": 1.0,
+  "background_name": "mid grey"
+ },
+ "content/swipe/formats/IMG_0019.jpeg": {
+  "n_key": 3,
+  "n_chromatic": 3,
+  "chromatic_covered": 3,
+  "score": 30.87,
+  "clothes_share": 0.833,
+  "background_name": "espresso"
+ },
+ "content/swipe/formats/IMG_0033.png": {
+  "n_key": 4,
+  "n_chromatic": 4,
+  "chromatic_covered": 4,
+  "score": 41.54,
+  "clothes_share": 0.817,
+  "background_name": "petrol"
+ },
+ "content/swipe/formats/IMG_0034.png": {
+  "n_key": 4,
+  "n_chromatic": 2,
+  "chromatic_covered": 2,
+  "score": 23.4,
+  "clothes_share": 0.366,
+  "background_name": "denim blue"
+ },
+ "content/swipe/formats/IMG_0035.png": {
+  "n_key": 3,
+  "n_chromatic": 1,
+  "chromatic_covered": 1,
+  "score": 11.77,
+  "clothes_share": 0.175,
+  "background_name": "pale grey"
+ },
+ "content/swipe/formats/IMG_0036.png": {
+  "n_key": 4,
+  "n_chromatic": 4,
+  "chromatic_covered": 4,
+  "score": 42.7,
+  "clothes_share": 0.813,
+  "background_name": "black"
+ },
+ "content/swipe/formats/IMG_0059.jpeg": {
+  "n_key": 4,
+  "n_chromatic": 3,
+  "chromatic_covered": 3,
+  "score": 34.8,
+  "clothes_share": 0.214,
+  "background_name": "black"
+ },
+ "content/swipe/formats/IMG_0060.jpeg": {
+  "n_key": 4,
+  "n_chromatic": 3,
+  "chromatic_covered": 3,
+  "score": 35.83,
+  "clothes_share": 0.096,
+  "background_name": "black"
+ },
+ "content/swipe/formats/IMG_0061.jpeg": {
+  "n_key": 4,
+  "n_chromatic": 3,
+  "chromatic_covered": 3,
+  "score": 35.24,
+  "clothes_share": 0.203,
+  "background_name": "black"
+ },
+ "content/swipe/formats/IMG_0066.png": {
+  "n_key": 4,
+  "n_chromatic": 4,
+  "chromatic_covered": 4,
+  "score": 41.47,
+  "clothes_share": 0.946,
+  "background_name": "forest"
+ },
+ "content/swipe/formats/IMG_0067.png": {
+  "n_key": 3,
+  "n_chromatic": 2,
+  "chromatic_covered": 2,
+  "score": 22.73,
+  "clothes_share": 0.163,
+  "background_name": "mid grey"
+ },
+ "content/swipe/formats/IMG_0090.png": {
+  "n_key": 4,
+  "n_chromatic": 2,
+  "chromatic_covered": 2,
+  "score": 23.63,
+  "clothes_share": 0.369,
+  "background_name": "sky"
+ },
+ "content/swipe/formats/IMG_0091.png": {
+  "n_key": 4,
+  "n_chromatic": 2,
+  "chromatic_covered": 2,
+  "score": 28.72,
+  "clothes_share": 0.4,
+  "background_name": "sky"
+ },
+ "content/swipe/formats/IMG_0093.png": {
+  "n_key": 4,
+  "n_chromatic": 3,
+  "chromatic_covered": 3,
+  "score": 34.17,
+  "clothes_share": 0.69,
+  "background_name": "rust"
+ },
+ "content/swipe/formats/IMG_0130.png": {
+  "n_key": 4,
+  "n_chromatic": 2,
+  "chromatic_covered": 2,
+  "score": 23.37,
+  "clothes_share": 0.132,
+  "background_name": "black"
+ },
+ "content/swipe/formats/IMG_0135.png": {
+  "n_key": 4,
+  "n_chromatic": 4,
+  "chromatic_covered": 4,
+  "score": 44.35,
+  "clothes_share": 0.667,
+  "background_name": "cream"
+ },
+ "content/swipe/formats/IMG_0136.png": {
+  "n_key": 4,
+  "n_chromatic": 4,
+  "chromatic_covered": 4,
+  "score": 44.01,
+  "clothes_share": 0.66,
+  "background_name": "cream"
+ },
+ "content/swipe/formats/IMG_0137.png": {
+  "n_key": 4,
+  "n_chromatic": 4,
+  "chromatic_covered": 4,
+  "score": 42.24,
+  "clothes_share": 0.636,
+  "background_name": "cream"
+ },
+ "content/swipe/formats/IMG_0138.png": {
+  "n_key": 4,
+  "n_chromatic": 3,
+  "chromatic_covered": 3,
+  "score": 33.33,
+  "clothes_share": 0.287,
+  "background_name": "cream"
+ },
+ "content/swipe/formats/IMG_0139.png": {
+  "n_key": 4,
+  "n_chromatic": 3,
+  "chromatic_covered": 3,
+  "score": 33.12,
+  "clothes_share": 0.566,
+  "background_name": "cream"
+ },
+ "content/swipe/formats/IMG_0140.png": {
+  "n_key": 4,
+  "n_chromatic": 4,
+  "chromatic_covered": 4,
+  "score": 44.22,
+  "clothes_share": 0.896,
+  "background_name": "cream"
+ },
+ "content/swipe/formats/IMG_0145.png": {
+  "n_key": 4,
+  "n_chromatic": 3,
+  "chromatic_covered": 3,
+  "score": 32.01,
+  "clothes_share": 0.533,
+  "background_name": "off-black"
+ },
+ "content/swipe/formats/IMG_0146.jpeg": {
+  "n_key": 4,
+  "n_chromatic": 3,
+  "chromatic_covered": 3,
+  "score": 32.33,
+  "clothes_share": 0.867,
+  "background_name": "olive"
+ },
+ "content/swipe/formats/IMG_0147.jpeg": {
+  "n_key": 4,
+  "n_chromatic": 2,
+  "chromatic_covered": 2,
+  "score": 22.02,
+  "clothes_share": 0.561,
+  "background_name": "olive"
+ },
+ "content/swipe/formats/IMG_0166.png": {
+  "n_key": 1,
+  "n_chromatic": 1,
+  "chromatic_covered": 1,
+  "score": 12.89,
+  "clothes_share": 0.617,
+  "background_name": "white"
+ },
+ "content/swipe/formats/IMG_0485.png": {
+  "n_key": 4,
+  "n_chromatic": 3,
+  "chromatic_covered": 3,
+  "score": 33.18,
+  "clothes_share": 0.609,
+  "background_name": "black"
+ },
+ "content/swipe/formats/IMG_0486.png": {
+  "n_key": 2,
+  "n_chromatic": 0,
+  "chromatic_covered": 0,
+  "score": 3.69,
+  "clothes_share": 0.586,
+  "background_name": "oatmeal"
+ },
+ "content/swipe/formats/IMG_0487.png": {
+  "n_key": 4,
+  "n_chromatic": 3,
+  "chromatic_covered": 3,
+  "score": 32.72,
+  "clothes_share": 0.265,
+  "background_name": "off-black"
+ },
+ "content/swipe/formats/IMG_0488.png": {
+  "n_key": 4,
+  "n_chromatic": 3,
+  "chromatic_covered": 3,
+  "score": 33.99,
+  "clothes_share": 0.533,
+  "background_name": "black"
+ },
+ "content/swipe/formats/IMG_0489.png": {
+  "n_key": 4,
+  "n_chromatic": 2,
+  "chromatic_covered": 2,
+  "score": 23.67,
+  "clothes_share": 0.775,
+  "background_name": "white"
+ },
+ "content/swipe/formats/IMG_0490.png": {
+  "n_key": 4,
+  "n_chromatic": 2,
+  "chromatic_covered": 2,
+  "score": 23.88,
+  "clothes_share": 0.593,
+  "background_name": "off-black"
+ },
+ "content/swipe/products/IMG_0580.png": {
+  "n_key": 2,
+  "n_chromatic": 1,
+  "chromatic_covered": 1,
+  "score": 11.71,
+  "clothes_share": 0.83,
+  "background_name": "white"
+ },
+ "content/swipe/visuals/IMG_0066.png": {
+  "n_key": 4,
+  "n_chromatic": 4,
+  "chromatic_covered": 4,
+  "score": 41.47,
+  "clothes_share": 0.946,
+  "background_name": "forest"
+ },
+ "content/swipe/visuals/IMG_0136.png": {
+  "n_key": 4,
+  "n_chromatic": 4,
+  "chromatic_covered": 4,
+  "score": 44.01,
+  "clothes_share": 0.66,
+  "background_name": "cream"
+ },
+ "content/swipe/visuals/IMG_0137.png": {
+  "n_key": 4,
+  "n_chromatic": 4,
+  "chromatic_covered": 4,
+  "score": 42.24,
+  "clothes_share": 0.636,
+  "background_name": "cream"
+ },
+ "content/swipe/visuals/IMG_0145.png": {
+  "n_key": 4,
+  "n_chromatic": 3,
+  "chromatic_covered": 3,
+  "score": 32.01,
+  "clothes_share": 0.533,
+  "background_name": "off-black"
+ },
+ "content/swipe/visuals/IMG_0146.jpeg": {
+  "n_key": 4,
+  "n_chromatic": 3,
+  "chromatic_covered": 3,
+  "score": 32.33,
+  "clothes_share": 0.867,
+  "background_name": "olive"
+ },
+ "content/swipe/visuals/IMG_0147.jpeg": {
+  "n_key": 4,
+  "n_chromatic": 2,
+  "chromatic_covered": 2,
+  "score": 22.02,
+  "clothes_share": 0.561,
+  "background_name": "olive"
+ },
+ "content/swipe/visuals/IMG_3454.png": {
+  "n_key": 4,
+  "n_chromatic": 3,
+  "chromatic_covered": 3,
+  "score": 31.49,
+  "clothes_share": 0.66,
+  "background_name": "black"
+ }
+}
