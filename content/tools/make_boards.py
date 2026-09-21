@@ -74,16 +74,16 @@ def drop(page, im, xy, blur=14, alpha=52, off=(7, 10)):
 # --------------------------------------------------------------------- pieces
 # right-hand zone, normalised boxes, loose body order
 SLOTBOX = {
-    'layer':     (0.00, 0.00, 0.58, 0.46),
-    'top':       (0.54, 0.02, 1.00, 0.34),
-    'dress':     (0.00, 0.00, 0.58, 0.60),
-    'bottom':    (0.02, 0.42, 0.56, 0.86),
-    'bag':       (0.60, 0.36, 1.00, 0.64),
-    'shoes':     (0.52, 0.66, 0.86, 0.88),
-    'accessory': (0.80, 0.62, 1.00, 0.82),
-    'accessory2': (0.00, 0.80, 0.30, 1.00),
-    'base':      (0.60, 0.36, 1.00, 0.62),
-    'multiple':  (0.58, 0.36, 1.00, 0.68),
+    'layer':     (0.00, 0.00, 0.60, 0.42),
+    'top':       (0.56, 0.00, 1.00, 0.32),
+    'dress':     (0.00, 0.00, 0.60, 0.58),
+    'bottom':    (0.00, 0.38, 0.58, 0.84),
+    'bag':       (0.62, 0.34, 1.00, 0.62),
+    'shoes':     (0.56, 0.64, 1.00, 0.86),
+    'accessory': (0.06, 0.80, 0.52, 1.00),
+    'accessory2': (0.58, 0.86, 1.00, 1.00),
+    'base':      (0.62, 0.34, 1.00, 0.62),
+    'multiple':  (0.60, 0.34, 1.00, 0.66),
 }
 ORDER = ['layer', 'dress', 'top', 'bottom', 'bag', 'base', 'multiple', 'shoes',
          'accessory', 'accessory2']
@@ -117,8 +117,23 @@ def strip(page, box, swatches, show_hex=False):
         x += w
 
 
+SLOTBOX_WIDE = {
+    'layer':     (0.00, 0.00, 0.50, 0.56),
+    'top':       (0.54, 0.00, 1.00, 0.46),
+    'dress':     (0.00, 0.00, 0.50, 0.90),
+    'bottom':    (0.02, 0.48, 0.52, 1.00),
+    'bag':       (0.62, 0.48, 1.00, 0.80),
+    'shoes':     (0.52, 0.80, 0.86, 1.00),
+    'accessory': (0.00, 0.78, 0.28, 1.00),
+    'accessory2': (0.84, 0.76, 1.00, 1.00),
+    'base':      (0.60, 0.40, 1.00, 0.82),
+    'multiple':  (0.58, 0.40, 1.00, 0.86),
+}
+
+
 def render(spec, version='a', size=(1080, 1350), labels=False, out=None):
     W, H = size
+    boxes = SLOTBOX_WIDE if W > H else SLOTBOX
     page = Image.new('RGBA', (W, H), GROUND + (255,))
     d = ImageDraw.Draw(page)
     M = round(W * 0.055)
@@ -158,13 +173,13 @@ def render(spec, version='a', size=(1080, 1350), labels=False, out=None):
         if slot in used and slot == 'accessory':
             slot = 'accessory2'
         used.add(slot)
-        bx = SLOTBOX.get(slot, SLOTBOX['multiple'])
+        bx = boxes.get(slot, boxes['multiple'])
         box = (zone[0] + round(bx[0] * zw), zone[1] + round(bx[1] * zh),
                zone[0] + round(bx[2] * zw), zone[1] + round(bx[3] * zh))
         im = Image.open(ROOT + '/' + p['asset_path'])
         if p['asset_type'].startswith('cutout'):
             im = im.convert('RGBA')
-            im = contain(im, box, scale=p.get('scale', 1.12))
+            im = contain(im, box, scale=p.get('scale', 1.18 if W > H else 1.12))
             xy = ((box[0] + box[2] - im.width) // 2, (box[1] + box[3] - im.height) // 2)
             drop(page, im, xy)
             marks.append((xy[0] + im.width - 16, xy[1] + 8, p))

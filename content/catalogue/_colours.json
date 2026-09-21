@@ -2,82 +2,82 @@
  "B001-P001": {
   "colours": [
    {
-    "hex": "D3C2A6",
-    "share": 0.642,
-    "L": 79.1,
+    "hex": "D5C4A8",
+    "share": 0.684,
+    "L": 79.9,
     "C": 16.3,
     "h": 84.7,
-    "rel": 0.2,
+    "rel": 0.198,
     "neutral": false,
     "family": "yellow",
     "name": "butter"
    },
    {
-    "hex": "1D191A",
-    "share": 0.194,
-    "L": 9.2,
-    "C": 2.2,
-    "h": 0.5,
-    "rel": 0.073,
+    "hex": "A89779",
+    "share": 0.129,
+    "L": 63.2,
+    "C": 18.2,
+    "h": 85.2,
+    "rel": 0.268,
+    "neutral": false,
+    "family": "brown",
+    "name": "tan"
+   },
+   {
+    "hex": "0F0C0F",
+    "share": 0.117,
+    "L": 3.6,
+    "C": 1.8,
+    "h": 324.4,
+    "rel": 0.078,
     "neutral": true,
     "family": "black",
     "name": "black"
-   },
-   {
-    "hex": "131C35",
-    "share": 0.088,
-    "L": 10.7,
-    "C": 18.4,
-    "h": 286.0,
-    "rel": 0.638,
-    "neutral": false,
-    "family": "blue",
-    "name": "navy"
    }
   ],
-  "skin_share": 0.016,
-  "kept_share": 0.661,
+  "skin_share": 0.019,
+  "kept_share": 0.72,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B001-P002": {
   "colours": [
    {
-    "hex": "3E5877",
-    "share": 0.338,
-    "L": 36.6,
-    "C": 20.6,
-    "h": 268.4,
-    "rel": 0.563,
+    "hex": "1D1413",
+    "share": 0.299,
+    "L": 7.3,
+    "C": 4.9,
+    "h": 27.1,
+    "rel": 0.193,
+    "neutral": false,
+    "family": "black",
+    "name": "off-black"
+   },
+   {
+    "hex": "403432",
+    "share": 0.258,
+    "L": 22.9,
+    "C": 6.0,
+    "h": 33.3,
+    "rel": 0.11,
+    "neutral": true,
+    "family": "warm neutral",
+    "name": "taupe"
+   },
+   {
+    "hex": "304A69",
+    "share": 0.246,
+    "L": 30.7,
+    "C": 21.1,
+    "h": 269.9,
+    "rel": 0.629,
     "neutral": false,
     "family": "blue",
     "name": "denim blue"
-   },
-   {
-    "hex": "5F7A9A",
-    "share": 0.293,
-    "L": 50.3,
-    "C": 20.4,
-    "h": 266.2,
-    "rel": 0.459,
-    "neutral": false,
-    "family": "blue",
-    "name": "denim blue"
-   },
-   {
-    "hex": "1E334D",
-    "share": 0.226,
-    "L": 20.7,
-    "C": 18.5,
-    "h": 272.0,
-    "rel": 0.675,
-    "neutral": false,
-    "family": "blue",
-    "name": "navy"
    }
   ],
-  "skin_share": 0.004,
-  "kept_share": 0.679,
+  "skin_share": 0.016,
+  "kept_share": 0.736,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -125,49 +125,49 @@
  "B001-P004": {
   "colours": [
    {
-    "hex": "4E4645",
-    "share": 0.395,
-    "L": 30.5,
-    "C": 3.7,
-    "h": 30.0,
-    "rel": 0.059,
-    "neutral": true,
-    "family": "grey",
-    "name": "dark grey"
-   },
-   {
-    "hex": "201616",
-    "share": 0.297,
-    "L": 8.5,
-    "C": 5.4,
-    "h": 20.9,
-    "rel": 0.178,
+    "hex": "1E1412",
+    "share": 0.378,
+    "L": 7.4,
+    "C": 5.6,
+    "h": 32.6,
+    "rel": 0.261,
     "neutral": false,
-    "family": "black",
-    "name": "off-black"
+    "family": "brown",
+    "name": "espresso"
    },
    {
-    "hex": "7F7979",
-    "share": 0.238,
-    "L": 51.3,
-    "C": 2.4,
-    "h": 19.7,
-    "rel": 0.029,
+    "hex": "3A312F",
+    "share": 0.283,
+    "L": 21.2,
+    "C": 4.6,
+    "h": 37.3,
+    "rel": 0.086,
     "neutral": true,
-    "family": "grey",
-    "name": "mid grey"
+    "family": "warm neutral",
+    "name": "taupe"
+   },
+   {
+    "hex": "5E5755",
+    "share": 0.198,
+    "L": 37.6,
+    "C": 3.3,
+    "h": 41.8,
+    "rel": 0.043,
+    "neutral": true,
+    "family": "warm neutral",
+    "name": "taupe"
    }
   ],
-  "skin_share": 0.04,
-  "kept_share": 0.667,
-  "colour_confidence": "high",
+  "skin_share": 0.063,
+  "kept_share": 0.563,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B002-P001": {
   "colours": [
    {
     "hex": "795A5C",
-    "share": 0.687,
+    "share": 0.934,
     "L": 41.5,
     "C": 13.6,
     "h": 16.3,
@@ -175,103 +175,92 @@
     "neutral": false,
     "family": "red",
     "name": "burgundy"
-   },
-   {
-    "hex": "5E4546",
-    "share": 0.305,
-    "L": 32.0,
-    "C": 11.5,
-    "h": 18.2,
-    "rel": 0.194,
-    "neutral": false,
-    "family": "red",
-    "name": "burgundy"
    }
   ],
-  "skin_share": 0.71,
-  "kept_share": 0.228,
+  "skin_share": 0.669,
+  "kept_share": 0.279,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B003-P001": {
   "colours": [
    {
-    "hex": "B79176",
-    "share": 0.4,
-    "L": 63.0,
+    "hex": "B99478",
+    "share": 0.459,
+    "L": 64.0,
     "C": 22.4,
-    "h": 62.1,
-    "rel": 0.282,
+    "h": 63.8,
+    "rel": 0.284,
     "neutral": false,
     "family": "brown",
     "name": "tan"
    },
    {
-    "hex": "472B20",
-    "share": 0.269,
-    "L": 20.7,
-    "C": 17.0,
-    "h": 47.4,
-    "rel": 0.408,
+    "hex": "4A2E20",
+    "share": 0.233,
+    "L": 22.0,
+    "C": 18.0,
+    "h": 52.3,
+    "rel": 0.445,
     "neutral": false,
     "family": "brown",
     "name": "espresso"
    },
    {
-    "hex": "22150F",
-    "share": 0.17,
-    "L": 8.2,
-    "C": 8.2,
-    "h": 46.6,
-    "rel": 0.475,
+    "hex": "755840",
+    "share": 0.175,
+    "L": 39.8,
+    "C": 20.4,
+    "h": 65.2,
+    "rel": 0.377,
     "neutral": false,
     "family": "brown",
-    "name": "espresso"
+    "name": "tobacco"
    }
   ],
-  "skin_share": 0.954,
-  "kept_share": 0.037,
+  "skin_share": 0.942,
+  "kept_share": 0.051,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B004-P001": {
   "colours": [
    {
-    "hex": "CBC2B8",
-    "share": 0.309,
-    "L": 78.9,
-    "C": 6.3,
-    "h": 77.1,
-    "rel": 0.087,
+    "hex": "E8E4DD",
+    "share": 0.406,
+    "L": 90.7,
+    "C": 3.9,
+    "h": 88.0,
+    "rel": 0.108,
     "neutral": true,
-    "family": "warm neutral",
-    "name": "cream"
+    "family": "white",
+    "name": "white"
    },
    {
-    "hex": "CFA88A",
-    "share": 0.308,
-    "L": 71.6,
-    "C": 23.2,
-    "h": 64.4,
-    "rel": 0.308,
+    "hex": "D0AB8E",
+    "share": 0.306,
+    "L": 72.6,
+    "C": 22.1,
+    "h": 65.0,
+    "rel": 0.303,
     "neutral": false,
     "family": "brown",
     "name": "tan"
    },
    {
-    "hex": "E7E2DC",
-    "share": 0.292,
-    "L": 90.1,
-    "C": 3.6,
-    "h": 79.6,
-    "rel": 0.131,
+    "hex": "CDC5BA",
+    "share": 0.233,
+    "L": 79.9,
+    "C": 6.6,
+    "h": 82.3,
+    "rel": 0.079,
     "neutral": true,
-    "family": "white",
-    "name": "white"
+    "family": "warm neutral",
+    "name": "cream"
    }
   ],
-  "skin_share": 0.661,
-  "kept_share": 0.244,
+  "skin_share": 0.564,
+  "kept_share": 0.294,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
@@ -360,71 +349,82 @@
  "B007-P001": {
   "colours": [
    {
-    "hex": "D2D3E0",
-    "share": 0.29,
-    "L": 84.8,
-    "C": 6.8,
-    "h": 287.8,
-    "rel": 0.283,
+    "hex": "CDCDDB",
+    "share": 0.361,
+    "L": 82.8,
+    "C": 7.4,
+    "h": 290.8,
+    "rel": 0.265,
     "neutral": false,
     "family": "cool neutral",
     "name": "pale grey"
    },
    {
-    "hex": "A3A2B3",
-    "share": 0.273,
-    "L": 67.2,
-    "C": 9.4,
-    "h": 293.4,
-    "rel": 0.17,
+    "hex": "180D0C",
+    "share": 0.249,
+    "L": 4.6,
+    "C": 4.7,
+    "h": 25.1,
+    "rel": 0.277,
     "neutral": false,
-    "family": "purple",
-    "name": "lilac"
+    "family": "black",
+    "name": "off-black"
    },
    {
-    "hex": "241714",
-    "share": 0.223,
-    "L": 9.3,
-    "C": 7.6,
-    "h": 37.2,
-    "rel": 0.319,
-    "neutral": false,
-    "family": "brown",
-    "name": "espresso"
+    "hex": "898595",
+    "share": 0.24,
+    "L": 56.4,
+    "C": 9.3,
+    "h": 300.6,
+    "rel": 0.118,
+    "neutral": true,
+    "family": "grey",
+    "name": "mid grey"
    }
   ],
-  "skin_share": 0.1,
-  "kept_share": 0.567,
+  "skin_share": 0.142,
+  "kept_share": 0.653,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B007-P002": {
   "colours": [
    {
-    "hex": "DFD4D2",
-    "share": 0.718,
-    "L": 85.7,
-    "C": 4.2,
-    "h": 34.3,
-    "rel": 0.198,
+    "hex": "DED3D0",
+    "share": 0.688,
+    "L": 85.3,
+    "C": 4.3,
+    "h": 41.0,
+    "rel": 0.192,
     "neutral": false,
     "family": "warm neutral",
     "name": "cream"
    },
    {
-    "hex": "B5A293",
-    "share": 0.235,
+    "hex": "B6A292",
+    "share": 0.254,
     "L": 67.9,
-    "C": 11.2,
-    "h": 66.7,
-    "rel": 0.14,
+    "C": 11.9,
+    "h": 67.0,
+    "rel": 0.149,
     "neutral": true,
     "family": "warm neutral",
     "name": "oatmeal"
+   },
+   {
+    "hex": "2C1910",
+    "share": 0.059,
+    "L": 11.1,
+    "C": 12.7,
+    "h": 49.5,
+    "rel": 0.573,
+    "neutral": false,
+    "family": "brown",
+    "name": "espresso"
    }
   ],
-  "skin_share": 0.173,
-  "kept_share": 0.564,
+  "skin_share": 0.081,
+  "kept_share": 0.647,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -472,41 +472,41 @@
  "B008-P001": {
   "colours": [
    {
-    "hex": "242834",
-    "share": 0.717,
-    "L": 16.2,
-    "C": 8.5,
-    "h": 280.9,
-    "rel": 0.286,
+    "hex": "282B34",
+    "share": 0.425,
+    "L": 17.6,
+    "C": 6.3,
+    "h": 279.8,
+    "rel": 0.21,
     "neutral": false,
     "family": "blue",
     "name": "navy"
    },
    {
-    "hex": "7C6169",
-    "share": 0.149,
-    "L": 44.0,
-    "C": 12.3,
-    "h": 358.4,
-    "rel": 0.171,
+    "hex": "1A161B",
+    "share": 0.224,
+    "L": 7.9,
+    "C": 4.3,
+    "h": 319.4,
+    "rel": 0.101,
+    "neutral": true,
+    "family": "black",
+    "name": "off-black"
+   },
+   {
+    "hex": "7C6269",
+    "share": 0.186,
+    "L": 44.3,
+    "C": 11.7,
+    "h": 0.2,
+    "rel": 0.162,
     "neutral": false,
     "family": "grey",
     "name": "mid grey"
-   },
-   {
-    "hex": "45302D",
-    "share": 0.134,
-    "L": 22.2,
-    "C": 10.7,
-    "h": 32.1,
-    "rel": 0.205,
-    "neutral": false,
-    "family": "brown",
-    "name": "chocolate"
    }
   ],
-  "skin_share": 0.098,
-  "kept_share": 0.626,
+  "skin_share": 0.096,
+  "kept_share": 0.624,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -554,123 +554,123 @@
  "B008-P003": {
   "colours": [
    {
-    "hex": "867574",
-    "share": 0.484,
-    "L": 50.7,
-    "C": 7.1,
-    "h": 24.9,
-    "rel": 0.082,
+    "hex": "928181",
+    "share": 0.407,
+    "L": 55.5,
+    "C": 6.9,
+    "h": 20.1,
+    "rel": 0.083,
     "neutral": true,
     "family": "grey",
     "name": "mid grey"
    },
    {
-    "hex": "2E2221",
-    "share": 0.21,
-    "L": 14.6,
-    "C": 6.2,
-    "h": 27.4,
-    "rel": 0.156,
-    "neutral": false,
-    "family": "black",
-    "name": "off-black"
+    "hex": "716160",
+    "share": 0.301,
+    "L": 42.6,
+    "C": 6.9,
+    "h": 25.3,
+    "rel": 0.091,
+    "neutral": true,
+    "family": "grey",
+    "name": "mid grey"
    },
    {
-    "hex": "4A5364",
-    "share": 0.171,
-    "L": 35.1,
-    "C": 11.0,
-    "h": 273.7,
-    "rel": 0.278,
+    "hex": "2F2220",
+    "share": 0.269,
+    "L": 14.7,
+    "C": 6.9,
+    "h": 32.7,
+    "rel": 0.165,
     "neutral": false,
-    "family": "blue",
-    "name": "denim blue"
+    "family": "brown",
+    "name": "espresso"
    }
   ],
-  "skin_share": 0.275,
-  "kept_share": 0.504,
+  "skin_share": 0.335,
+  "kept_share": 0.457,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B009-P001": {
   "colours": [
    {
-    "hex": "D3C2A6",
-    "share": 0.642,
-    "L": 79.1,
+    "hex": "D5C4A8",
+    "share": 0.684,
+    "L": 79.9,
     "C": 16.3,
     "h": 84.7,
-    "rel": 0.2,
+    "rel": 0.198,
     "neutral": false,
     "family": "yellow",
     "name": "butter"
    },
    {
-    "hex": "1D191A",
-    "share": 0.194,
-    "L": 9.2,
-    "C": 2.2,
-    "h": 0.5,
-    "rel": 0.073,
+    "hex": "A89779",
+    "share": 0.129,
+    "L": 63.2,
+    "C": 18.2,
+    "h": 85.2,
+    "rel": 0.268,
+    "neutral": false,
+    "family": "brown",
+    "name": "tan"
+   },
+   {
+    "hex": "0F0C0F",
+    "share": 0.117,
+    "L": 3.6,
+    "C": 1.8,
+    "h": 324.4,
+    "rel": 0.078,
     "neutral": true,
     "family": "black",
     "name": "black"
-   },
-   {
-    "hex": "131C35",
-    "share": 0.088,
-    "L": 10.7,
-    "C": 18.4,
-    "h": 286.0,
-    "rel": 0.638,
-    "neutral": false,
-    "family": "blue",
-    "name": "navy"
    }
   ],
-  "skin_share": 0.016,
-  "kept_share": 0.661,
+  "skin_share": 0.019,
+  "kept_share": 0.72,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B009-P002": {
   "colours": [
    {
-    "hex": "3E5877",
-    "share": 0.338,
-    "L": 36.6,
-    "C": 20.6,
-    "h": 268.4,
-    "rel": 0.563,
+    "hex": "1D1413",
+    "share": 0.299,
+    "L": 7.3,
+    "C": 4.9,
+    "h": 27.1,
+    "rel": 0.193,
+    "neutral": false,
+    "family": "black",
+    "name": "off-black"
+   },
+   {
+    "hex": "403432",
+    "share": 0.258,
+    "L": 22.9,
+    "C": 6.0,
+    "h": 33.3,
+    "rel": 0.11,
+    "neutral": true,
+    "family": "warm neutral",
+    "name": "taupe"
+   },
+   {
+    "hex": "304A69",
+    "share": 0.246,
+    "L": 30.7,
+    "C": 21.1,
+    "h": 269.9,
+    "rel": 0.629,
     "neutral": false,
     "family": "blue",
     "name": "denim blue"
-   },
-   {
-    "hex": "5F7A9A",
-    "share": 0.293,
-    "L": 50.3,
-    "C": 20.4,
-    "h": 266.2,
-    "rel": 0.459,
-    "neutral": false,
-    "family": "blue",
-    "name": "denim blue"
-   },
-   {
-    "hex": "1E334D",
-    "share": 0.226,
-    "L": 20.7,
-    "C": 18.5,
-    "h": 272.0,
-    "rel": 0.675,
-    "neutral": false,
-    "family": "blue",
-    "name": "navy"
    }
   ],
-  "skin_share": 0.004,
-  "kept_share": 0.679,
+  "skin_share": 0.016,
+  "kept_share": 0.736,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -718,42 +718,42 @@
  "B009-P004": {
   "colours": [
    {
-    "hex": "4E4645",
-    "share": 0.395,
-    "L": 30.5,
-    "C": 3.7,
-    "h": 30.0,
-    "rel": 0.059,
-    "neutral": true,
-    "family": "grey",
-    "name": "dark grey"
-   },
-   {
-    "hex": "201616",
-    "share": 0.297,
-    "L": 8.5,
-    "C": 5.4,
-    "h": 20.9,
-    "rel": 0.178,
+    "hex": "1E1412",
+    "share": 0.378,
+    "L": 7.4,
+    "C": 5.6,
+    "h": 32.6,
+    "rel": 0.261,
     "neutral": false,
-    "family": "black",
-    "name": "off-black"
+    "family": "brown",
+    "name": "espresso"
    },
    {
-    "hex": "7F7979",
-    "share": 0.238,
-    "L": 51.3,
-    "C": 2.4,
-    "h": 19.7,
-    "rel": 0.029,
+    "hex": "3A312F",
+    "share": 0.283,
+    "L": 21.2,
+    "C": 4.6,
+    "h": 37.3,
+    "rel": 0.086,
     "neutral": true,
-    "family": "grey",
-    "name": "mid grey"
+    "family": "warm neutral",
+    "name": "taupe"
+   },
+   {
+    "hex": "5E5755",
+    "share": 0.198,
+    "L": 37.6,
+    "C": 3.3,
+    "h": 41.8,
+    "rel": 0.043,
+    "neutral": true,
+    "family": "warm neutral",
+    "name": "taupe"
    }
   ],
-  "skin_share": 0.04,
-  "kept_share": 0.667,
-  "colour_confidence": "high",
+  "skin_share": 0.063,
+  "kept_share": 0.563,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B010-P001": {
@@ -857,83 +857,72 @@
  "B010-P005": {
   "colours": [
    {
-    "hex": "CB1915",
-    "share": 0.609,
-    "L": 43.4,
-    "C": 81.7,
-    "h": 37.6,
-    "rel": 0.94,
-    "neutral": false,
-    "family": "orange",
-    "name": "rust"
-   },
-   {
-    "hex": "E3D0CF",
-    "share": 0.264,
-    "L": 85.0,
-    "C": 7.0,
-    "h": 24.2,
-    "rel": 0.326,
+    "hex": "E2D0CE",
+    "share": 0.568,
+    "L": 84.9,
+    "C": 6.7,
+    "h": 28.8,
+    "rel": 0.306,
     "neutral": false,
     "family": "pink",
     "name": "blush"
    },
    {
-    "hex": "3E231E",
-    "share": 0.076,
-    "L": 17.1,
-    "C": 15.1,
-    "h": 35.8,
-    "rel": 0.334,
+    "hex": "D32219",
+    "share": 0.278,
+    "L": 45.7,
+    "C": 82.4,
+    "h": 37.8,
+    "rel": 0.911,
+    "neutral": false,
+    "family": "orange",
+    "name": "rust"
+   },
+   {
+    "hex": "41251F",
+    "share": 0.086,
+    "L": 18.1,
+    "C": 15.7,
+    "h": 37.6,
+    "rel": 0.346,
     "neutral": false,
     "family": "brown",
     "name": "espresso"
    }
   ],
-  "skin_share": 0.239,
-  "kept_share": 0.436,
-  "colour_confidence": "high",
+  "skin_share": 0.361,
+  "kept_share": 0.468,
+  "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B011-P001": {
   "colours": [
    {
-    "hex": "151820",
-    "share": 0.692,
-    "L": 8.3,
-    "C": 6.1,
-    "h": 279.3,
-    "rel": 0.284,
+    "hex": "161A25",
+    "share": 0.922,
+    "L": 9.3,
+    "C": 8.3,
+    "h": 280.8,
+    "rel": 0.355,
     "neutral": false,
     "family": "blue",
     "name": "navy"
    },
    {
-    "hex": "817C6B",
-    "share": 0.125,
-    "L": 52.0,
-    "C": 10.0,
-    "h": 96.8,
-    "rel": 0.174,
+    "hex": "514F44",
+    "share": 0.056,
+    "L": 33.5,
+    "C": 6.9,
+    "h": 101.4,
+    "rel": 0.164,
     "neutral": false,
-    "family": "green",
-    "name": "olive"
-   },
-   {
-    "hex": "5B584B",
-    "share": 0.115,
-    "L": 37.3,
-    "C": 8.1,
-    "h": 99.3,
-    "rel": 0.179,
-    "neutral": false,
-    "family": "green",
-    "name": "olive"
+    "family": "warm neutral",
+    "name": "taupe"
    }
   ],
-  "skin_share": 0.068,
-  "kept_share": 0.576,
-  "colour_confidence": "high",
+  "skin_share": 0.012,
+  "kept_share": 0.642,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B011-P002": {
@@ -980,42 +969,20 @@
  "B011-P003": {
   "colours": [
    {
-    "hex": "728CAE",
-    "share": 0.579,
-    "L": 57.5,
-    "C": 20.9,
-    "h": 267.9,
-    "rel": 0.412,
+    "hex": "728DAE",
+    "share": 0.911,
+    "L": 57.7,
+    "C": 20.5,
+    "h": 266.2,
+    "rel": 0.415,
     "neutral": false,
     "family": "blue",
     "name": "steel blue"
-   },
-   {
-    "hex": "1E2B49",
-    "share": 0.274,
-    "L": 17.8,
-    "C": 20.9,
-    "h": 283.2,
-    "rel": 0.626,
-    "neutral": false,
-    "family": "blue",
-    "name": "navy"
-   },
-   {
-    "hex": "1A1C28",
-    "share": 0.11,
-    "L": 10.6,
-    "C": 8.8,
-    "h": 287.3,
-    "rel": 0.296,
-    "neutral": false,
-    "family": "blue",
-    "name": "navy"
    }
   ],
-  "skin_share": 0.022,
-  "kept_share": 0.419,
-  "colour_confidence": "high",
+  "skin_share": 0.025,
+  "kept_share": 0.466,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B011-P004": {
@@ -1040,49 +1007,49 @@
  "B011-P005": {
   "colours": [
    {
-    "hex": "15171D",
-    "share": 0.962,
-    "L": 7.8,
-    "C": 4.6,
-    "h": 279.8,
-    "rel": 0.215,
+    "hex": "1A1E26",
+    "share": 0.931,
+    "L": 11.2,
+    "C": 6.1,
+    "h": 274.7,
+    "rel": 0.28,
     "neutral": false,
-    "family": "black",
-    "name": "off-black"
+    "family": "blue",
+    "name": "navy"
    }
   ],
-  "skin_share": 0.024,
-  "kept_share": 0.376,
-  "colour_confidence": "high",
+  "skin_share": 0.026,
+  "kept_share": 0.405,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B011-P006": {
   "colours": [
    {
-    "hex": "D7D8D9",
-    "share": 0.823,
-    "L": 86.3,
+    "hex": "D5D6D7",
+    "share": 0.809,
+    "L": 85.6,
     "C": 0.6,
     "h": 255.5,
-    "rel": 0.029,
+    "rel": 0.028,
     "neutral": true,
     "family": "cool neutral",
     "name": "pale grey"
    },
    {
-    "hex": "A09688",
-    "share": 0.091,
-    "L": 62.6,
-    "C": 8.8,
-    "h": 82.0,
-    "rel": 0.129,
+    "hex": "A29686",
+    "share": 0.09,
+    "L": 62.7,
+    "C": 10.2,
+    "h": 80.6,
+    "rel": 0.149,
     "neutral": true,
     "family": "warm neutral",
     "name": "oatmeal"
    },
    {
     "hex": "1E1D1F",
-    "share": 0.064,
+    "share": 0.079,
     "L": 10.9,
     "C": 1.6,
     "h": 309.3,
@@ -1093,38 +1060,38 @@
    }
   ],
   "skin_share": 0.0,
-  "kept_share": 0.254,
-  "colour_confidence": "high",
+  "kept_share": 0.274,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B011-P007": {
   "colours": [
    {
-    "hex": "D6D1D7",
-    "share": 0.8,
-    "L": 84.4,
-    "C": 3.7,
-    "h": 319.9,
-    "rel": 0.101,
+    "hex": "E5E1E6",
+    "share": 0.867,
+    "L": 90.0,
+    "C": 3.0,
+    "h": 318.9,
+    "rel": 0.131,
     "neutral": true,
     "family": "cool neutral",
     "name": "pale grey"
    },
    {
-    "hex": "B8B2B7",
-    "share": 0.161,
-    "L": 73.2,
-    "C": 3.5,
-    "h": 329.6,
-    "rel": 0.051,
+    "hex": "A8A0A4",
+    "share": 0.09,
+    "L": 66.6,
+    "C": 3.8,
+    "h": 344.0,
+    "rel": 0.056,
     "neutral": true,
     "family": "grey",
     "name": "light grey"
    }
   ],
-  "skin_share": 0.073,
-  "kept_share": 0.669,
-  "colour_confidence": "high",
+  "skin_share": 0.123,
+  "kept_share": 0.688,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B011-P008": {
@@ -1149,42 +1116,31 @@
  "B012-P001": {
   "colours": [
    {
-    "hex": "4A3C29",
-    "share": 0.712,
-    "L": 26.3,
-    "C": 14.4,
-    "h": 77.9,
-    "rel": 0.391,
+    "hex": "51432F",
+    "share": 0.876,
+    "L": 29.3,
+    "C": 14.6,
+    "h": 79.3,
+    "rel": 0.37,
     "neutral": false,
     "family": "brown",
     "name": "chocolate"
    },
    {
-    "hex": "271E14",
-    "share": 0.17,
-    "L": 12.0,
-    "C": 8.8,
-    "h": 73.2,
-    "rel": 0.47,
+    "hex": "1D160D",
+    "share": 0.105,
+    "L": 7.8,
+    "C": 6.5,
+    "h": 73.7,
+    "rel": 0.534,
     "neutral": false,
     "family": "brown",
     "name": "espresso"
-   },
-   {
-    "hex": "63513B",
-    "share": 0.104,
-    "L": 35.7,
-    "C": 16.3,
-    "h": 75.7,
-    "rel": 0.353,
-    "neutral": false,
-    "family": "brown",
-    "name": "tobacco"
    }
   ],
-  "skin_share": 0.023,
-  "kept_share": 0.388,
-  "colour_confidence": "high",
+  "skin_share": 0.024,
+  "kept_share": 0.405,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B012-P002": {
@@ -1231,31 +1187,31 @@
  "B012-P003": {
   "colours": [
    {
-    "hex": "BECEE6",
-    "share": 0.575,
+    "hex": "BECEE7",
+    "share": 0.902,
     "L": 82.3,
-    "C": 13.7,
-    "h": 267.9,
-    "rel": 0.505,
+    "C": 14.2,
+    "h": 268.8,
+    "rel": 0.524,
     "neutral": false,
     "family": "blue",
     "name": "sky"
    },
    {
-    "hex": "0F1319",
-    "share": 0.386,
-    "L": 5.8,
-    "C": 4.5,
-    "h": 269.7,
-    "rel": 0.303,
+    "hex": "87A6C9",
+    "share": 0.052,
+    "L": 67.0,
+    "C": 21.4,
+    "h": 263.9,
+    "rel": 0.416,
     "neutral": false,
-    "family": "black",
-    "name": "off-black"
+    "family": "blue",
+    "name": "steel blue"
    }
   ],
-  "skin_share": 0.013,
-  "kept_share": 0.38,
-  "colour_confidence": "high",
+  "skin_share": 0.015,
+  "kept_share": 0.43,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B012-P004": {
@@ -1280,60 +1236,38 @@
  "B013-P001": {
   "colours": [
    {
-    "hex": "412527",
-    "share": 0.91,
-    "L": 18.3,
-    "C": 14.2,
+    "hex": "3C2123",
+    "share": 0.987,
+    "L": 16.4,
+    "C": 14.0,
     "h": 17.6,
-    "rel": 0.337,
+    "rel": 0.35,
     "neutral": false,
     "family": "red",
     "name": "oxblood"
-   },
-   {
-    "hex": "1D1919",
-    "share": 0.071,
-    "L": 9.2,
-    "C": 2.1,
-    "h": 20.0,
-    "rel": 0.067,
-    "neutral": true,
-    "family": "black",
-    "name": "black"
    }
   ],
-  "skin_share": 0.048,
-  "kept_share": 0.443,
-  "colour_confidence": "high",
+  "skin_share": 0.041,
+  "kept_share": 0.485,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B014-P001": {
   "colours": [
    {
-    "hex": "1E1B1A",
-    "share": 0.447,
-    "L": 10.1,
-    "C": 1.7,
-    "h": 45.0,
-    "rel": 0.079,
+    "hex": "2D2927",
+    "share": 0.803,
+    "L": 16.9,
+    "C": 2.4,
+    "h": 54.8,
+    "rel": 0.078,
     "neutral": true,
     "family": "black",
     "name": "black"
    },
    {
-    "hex": "3C3836",
-    "share": 0.429,
-    "L": 23.9,
-    "C": 2.3,
-    "h": 55.0,
-    "rel": 0.055,
-    "neutral": true,
-    "family": "warm neutral",
-    "name": "taupe"
-   },
-   {
     "hex": "4E2B39",
-    "share": 0.098,
+    "share": 0.151,
     "L": 22.5,
     "C": 18.4,
     "h": 354.0,
@@ -1343,211 +1277,200 @@
     "name": "oxblood"
    }
   ],
-  "skin_share": 0.05,
-  "kept_share": 0.582,
-  "colour_confidence": "high",
+  "skin_share": 0.054,
+  "kept_share": 0.719,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B015-P001": {
   "colours": [
    {
-    "hex": "2A323B",
-    "share": 0.596,
-    "L": 20.4,
-    "C": 6.9,
-    "h": 262.3,
-    "rel": 0.301,
+    "hex": "202830",
+    "share": 0.687,
+    "L": 15.7,
+    "C": 6.5,
+    "h": 259.6,
+    "rel": 0.34,
     "neutral": false,
     "family": "blue",
     "name": "navy"
    },
    {
-    "hex": "141719",
-    "share": 0.304,
-    "L": 7.5,
-    "C": 2.1,
-    "h": 246.4,
-    "rel": 0.177,
+    "hex": "111417",
+    "share": 0.286,
+    "L": 6.2,
+    "C": 2.4,
+    "h": 258.7,
+    "rel": 0.198,
     "neutral": false,
     "family": "black",
     "name": "black"
-   },
-   {
-    "hex": "42272B",
-    "share": 0.079,
-    "L": 19.2,
-    "C": 13.6,
-    "h": 11.5,
-    "rel": 0.321,
-    "neutral": false,
-    "family": "red",
-    "name": "oxblood"
    }
   ],
-  "skin_share": 0.047,
-  "kept_share": 0.665,
-  "colour_confidence": "high",
+  "skin_share": 0.025,
+  "kept_share": 0.743,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B015-P002": {
   "colours": [
    {
-    "hex": "151D30",
-    "share": 0.458,
-    "L": 10.9,
-    "C": 14.1,
-    "h": 282.0,
-    "rel": 0.547,
+    "hex": "182138",
+    "share": 0.558,
+    "L": 13.0,
+    "C": 16.7,
+    "h": 283.6,
+    "rel": 0.574,
     "neutral": false,
     "family": "blue",
     "name": "navy"
    },
    {
-    "hex": "18181C",
-    "share": 0.384,
-    "L": 8.4,
-    "C": 3.0,
-    "h": 291.2,
-    "rel": 0.095,
+    "hex": "141317",
+    "share": 0.345,
+    "L": 6.1,
+    "C": 2.8,
+    "h": 299.3,
+    "rel": 0.067,
     "neutral": true,
     "family": "black",
     "name": "black"
    },
    {
-    "hex": "322F35",
-    "share": 0.158,
-    "L": 19.9,
-    "C": 4.3,
-    "h": 309.5,
-    "rel": 0.051,
+    "hex": "322B2E",
+    "share": 0.096,
+    "L": 18.4,
+    "C": 3.9,
+    "h": 348.7,
+    "rel": 0.092,
     "neutral": true,
-    "family": "grey",
-    "name": "dark grey"
+    "family": "black",
+    "name": "black"
    }
   ],
-  "skin_share": 0.135,
-  "kept_share": 0.307,
+  "skin_share": 0.167,
+  "kept_share": 0.287,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B015-P003": {
   "colours": [
    {
-    "hex": "AB4320",
-    "share": 0.456,
-    "L": 42.4,
-    "C": 58.2,
-    "h": 45.5,
-    "rel": 0.758,
+    "hex": "B04722",
+    "share": 0.56,
+    "L": 44.0,
+    "C": 58.9,
+    "h": 46.0,
+    "rel": 0.755,
     "neutral": false,
     "family": "orange",
     "name": "rust"
    },
    {
-    "hex": "CD5F3C",
-    "share": 0.286,
-    "L": 53.5,
-    "C": 57.7,
-    "h": 44.3,
-    "rel": 0.615,
+    "hex": "D26642",
+    "share": 0.276,
+    "L": 55.7,
+    "C": 56.4,
+    "h": 44.9,
+    "rel": 0.591,
     "neutral": false,
     "family": "orange",
     "name": "terracotta"
    },
    {
-    "hex": "3D2122",
-    "share": 0.25,
-    "L": 16.5,
-    "C": 14.6,
-    "h": 20.6,
-    "rel": 0.358,
+    "hex": "3D2021",
+    "share": 0.118,
+    "L": 16.2,
+    "C": 15.1,
+    "h": 21.0,
+    "rel": 0.375,
     "neutral": false,
     "family": "red",
     "name": "oxblood"
    }
   ],
-  "skin_share": 0.029,
-  "kept_share": 0.377,
-  "colour_confidence": "high",
+  "skin_share": 0.031,
+  "kept_share": 0.404,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B015-P004": {
   "colours": [
    {
-    "hex": "D6D5D7",
-    "share": 0.627,
-    "L": 85.4,
+    "hex": "DFDEE0",
+    "share": 0.957,
+    "L": 88.6,
     "C": 1.1,
     "h": 309.1,
-    "rel": 0.039,
+    "rel": 0.05,
     "neutral": true,
     "family": "cool neutral",
     "name": "pale grey"
-   },
-   {
-    "hex": "B95934",
-    "share": 0.176,
-    "L": 49.1,
-    "C": 53.1,
-    "h": 47.1,
-    "rel": 0.642,
-    "neutral": false,
-    "family": "orange",
-    "name": "rust"
-   },
-   {
-    "hex": "5B595F",
-    "share": 0.137,
-    "L": 38.2,
-    "C": 3.8,
-    "h": 303.4,
-    "rel": 0.032,
-    "neutral": true,
-    "family": "grey",
-    "name": "mid grey"
    }
   ],
-  "skin_share": 0.082,
-  "kept_share": 0.611,
-  "colour_confidence": "high",
+  "skin_share": 0.011,
+  "kept_share": 0.71,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B015-P005": {
   "colours": [
    {
-    "hex": "251216",
-    "share": 0.918,
-    "L": 8.0,
-    "C": 10.6,
-    "h": 7.1,
-    "rel": 0.371,
+    "hex": "241215",
+    "share": 0.926,
+    "L": 7.8,
+    "C": 10.0,
+    "h": 9.8,
+    "rel": 0.351,
     "neutral": false,
     "family": "red",
     "name": "oxblood"
    }
   ],
-  "skin_share": 0.117,
-  "kept_share": 0.483,
+  "skin_share": 0.053,
+  "kept_share": 0.674,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B016-P001": {
   "colours": [
    {
-    "hex": "2F151C",
-    "share": 0.96,
-    "L": 10.7,
-    "C": 14.3,
-    "h": 4.1,
-    "rel": 0.447,
+    "hex": "341C1F",
+    "share": 0.8,
+    "L": 13.6,
+    "C": 12.7,
+    "h": 13.7,
+    "rel": 0.352,
     "neutral": false,
     "family": "red",
     "name": "oxblood"
+   },
+   {
+    "hex": "482C1A",
+    "share": 0.103,
+    "L": 21.0,
+    "C": 20.0,
+    "h": 57.6,
+    "rel": 0.553,
+    "neutral": false,
+    "family": "brown",
+    "name": "espresso"
+   },
+   {
+    "hex": "7B593D",
+    "share": 0.097,
+    "L": 40.7,
+    "C": 24.0,
+    "h": 64.5,
+    "rel": 0.433,
+    "neutral": false,
+    "family": "brown",
+    "name": "tobacco"
    }
   ],
-  "skin_share": 0.214,
-  "kept_share": 0.443,
-  "colour_confidence": "high",
+  "skin_share": 0.445,
+  "kept_share": 0.356,
+  "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B016-P002": {
@@ -1583,42 +1506,20 @@
  "B016-P003": {
   "colours": [
    {
-    "hex": "AA9382",
-    "share": 0.544,
-    "L": 62.5,
-    "C": 13.5,
-    "h": 64.4,
-    "rel": 0.176,
+    "hex": "AD9786",
+    "share": 0.938,
+    "L": 63.9,
+    "C": 13.1,
+    "h": 65.7,
+    "rel": 0.17,
     "neutral": false,
     "family": "brown",
     "name": "tan"
-   },
-   {
-    "hex": "2D2A21",
-    "share": 0.23,
-    "L": 17.1,
-    "C": 6.4,
-    "h": 94.6,
-    "rel": 0.259,
-    "neutral": false,
-    "family": "brown",
-    "name": "espresso"
-   },
-   {
-    "hex": "59513F",
-    "share": 0.145,
-    "L": 34.7,
-    "C": 11.8,
-    "h": 89.7,
-    "rel": 0.274,
-    "neutral": false,
-    "family": "green",
-    "name": "olive"
    }
   ],
-  "skin_share": 0.156,
-  "kept_share": 0.36,
-  "colour_confidence": "high",
+  "skin_share": 0.192,
+  "kept_share": 0.37,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B016-P004": {
@@ -1643,101 +1544,90 @@
  "B017-P001": {
   "colours": [
    {
-    "hex": "1B1E26",
-    "share": 0.855,
-    "L": 11.3,
-    "C": 6.0,
-    "h": 278.8,
-    "rel": 0.249,
+    "hex": "171A20",
+    "share": 0.858,
+    "L": 9.2,
+    "C": 4.6,
+    "h": 274.1,
+    "rel": 0.235,
     "neutral": false,
-    "family": "blue",
-    "name": "navy"
+    "family": "black",
+    "name": "off-black"
    },
    {
-    "hex": "472720",
-    "share": 0.141,
-    "L": 19.6,
-    "C": 18.0,
-    "h": 38.0,
-    "rel": 0.371,
+    "hex": "4C2A22",
+    "share": 0.142,
+    "L": 21.2,
+    "C": 19.1,
+    "h": 39.0,
+    "rel": 0.374,
     "neutral": false,
     "family": "brown",
     "name": "espresso"
    }
   ],
-  "skin_share": 0.084,
-  "kept_share": 0.563,
-  "colour_confidence": "high",
+  "skin_share": 0.094,
+  "kept_share": 0.602,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B018-P001": {
   "colours": [
    {
-    "hex": "1D1B21",
-    "share": 0.649,
-    "L": 10.2,
-    "C": 4.5,
-    "h": 303.8,
-    "rel": 0.073,
+    "hex": "1C1F34",
+    "share": 0.46,
+    "L": 12.4,
+    "C": 15.2,
+    "h": 290.1,
+    "rel": 0.43,
+    "neutral": false,
+    "family": "blue",
+    "name": "navy"
+   },
+   {
+    "hex": "1B1A21",
+    "share": 0.296,
+    "L": 9.7,
+    "C": 5.2,
+    "h": 297.1,
+    "rel": 0.123,
     "neutral": true,
     "family": "black",
     "name": "off-black"
    },
    {
-    "hex": "202236",
-    "share": 0.344,
-    "L": 13.9,
-    "C": 14.3,
-    "h": 290.9,
-    "rel": 0.373,
-    "neutral": false,
-    "family": "blue",
-    "name": "navy"
+    "hex": "35323E",
+    "share": 0.232,
+    "L": 21.5,
+    "C": 8.2,
+    "h": 301.1,
+    "rel": 0.109,
+    "neutral": true,
+    "family": "purple",
+    "name": "aubergine"
    }
   ],
-  "skin_share": 0.075,
-  "kept_share": 0.661,
-  "colour_confidence": "high",
+  "skin_share": 0.092,
+  "kept_share": 0.715,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B018-P002": {
   "colours": [
    {
-    "hex": "32181C",
-    "share": 0.84,
-    "L": 12.1,
-    "C": 13.9,
-    "h": 12.3,
-    "rel": 0.411,
+    "hex": "3F1E23",
+    "share": 0.967,
+    "L": 16.0,
+    "C": 17.1,
+    "h": 13.0,
+    "rel": 0.441,
     "neutral": false,
     "family": "red",
     "name": "oxblood"
-   },
-   {
-    "hex": "482635",
-    "share": 0.092,
-    "L": 20.1,
-    "C": 18.5,
-    "h": 351.6,
-    "rel": 0.418,
-    "neutral": false,
-    "family": "red",
-    "name": "oxblood"
-   },
-   {
-    "hex": "73444A",
-    "share": 0.068,
-    "L": 34.5,
-    "C": 21.7,
-    "h": 13.5,
-    "rel": 0.354,
-    "neutral": false,
-    "family": "red",
-    "name": "burgundy"
    }
   ],
-  "skin_share": 0.046,
-  "kept_share": 0.482,
+  "skin_share": 0.044,
+  "kept_share": 0.666,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -1785,101 +1675,101 @@
  "B019-P001": {
   "colours": [
    {
-    "hex": "121212",
-    "share": 0.887,
-    "L": 5.5,
-    "C": 0.0,
-    "h": 158.2,
-    "rel": 0.0,
+    "hex": "131314",
+    "share": 0.871,
+    "L": 5.9,
+    "C": 0.6,
+    "h": 290.2,
+    "rel": 0.023,
     "neutral": true,
     "family": "black",
     "name": "black"
    },
    {
-    "hex": "7D7974",
-    "share": 0.066,
-    "L": 51.0,
-    "C": 3.3,
-    "h": 80.3,
-    "rel": 0.057,
+    "hex": "2F3031",
+    "share": 0.117,
+    "L": 19.8,
+    "C": 0.8,
+    "h": 255.8,
+    "rel": 0.04,
     "neutral": true,
-    "family": "warm neutral",
-    "name": "stone"
+    "family": "grey",
+    "name": "dark grey"
    }
   ],
-  "skin_share": 0.069,
-  "kept_share": 0.511,
-  "colour_confidence": "medium",
+  "skin_share": 0.0,
+  "kept_share": 0.596,
+  "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B019-P002": {
   "colours": [
    {
-    "hex": "222129",
-    "share": 0.41,
-    "L": 13.2,
-    "C": 5.8,
-    "h": 296.4,
-    "rel": 0.124,
-    "neutral": true,
-    "family": "black",
-    "name": "off-black"
-   },
-   {
-    "hex": "6D6661",
-    "share": 0.317,
-    "L": 43.7,
-    "C": 4.2,
-    "h": 64.8,
-    "rel": 0.072,
+    "hex": "6F6862",
+    "share": 0.469,
+    "L": 44.5,
+    "C": 4.6,
+    "h": 69.9,
+    "rel": 0.083,
     "neutral": true,
     "family": "warm neutral",
     "name": "taupe"
    },
    {
-    "hex": "636D80",
-    "share": 0.186,
-    "L": 45.8,
-    "C": 11.8,
-    "h": 273.3,
-    "rel": 0.248,
+    "hex": "636C7E",
+    "share": 0.221,
+    "L": 45.5,
+    "C": 11.1,
+    "h": 274.1,
+    "rel": 0.232,
     "neutral": false,
     "family": "blue",
     "name": "denim blue"
+   },
+   {
+    "hex": "383335",
+    "share": 0.159,
+    "L": 21.8,
+    "C": 2.7,
+    "h": 350.1,
+    "rel": 0.058,
+    "neutral": true,
+    "family": "grey",
+    "name": "dark grey"
    }
   ],
-  "skin_share": 0.148,
-  "kept_share": 0.481,
+  "skin_share": 0.215,
+  "kept_share": 0.457,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B019-P003": {
   "colours": [
    {
-    "hex": "2F2F35",
-    "share": 0.928,
-    "L": 19.6,
-    "C": 4.1,
-    "h": 291.2,
-    "rel": 0.089,
+    "hex": "2E2E33",
+    "share": 0.942,
+    "L": 19.1,
+    "C": 3.4,
+    "h": 291.0,
+    "rel": 0.076,
     "neutral": true,
     "family": "grey",
     "name": "dark grey"
    },
    {
-    "hex": "18191B",
-    "share": 0.072,
-    "L": 8.7,
-    "C": 1.6,
-    "h": 272.1,
-    "rel": 0.084,
+    "hex": "17191B",
+    "share": 0.059,
+    "L": 8.6,
+    "C": 1.8,
+    "h": 256.8,
+    "rel": 0.125,
     "neutral": true,
     "family": "black",
     "name": "black"
    }
   ],
   "skin_share": 0.0,
-  "kept_share": 0.67,
+  "kept_share": 0.698,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -1887,7 +1777,7 @@
   "colours": [
    {
     "hex": "2C2D32",
-    "share": 0.541,
+    "share": 0.601,
     "L": 18.6,
     "C": 3.5,
     "h": 283.5,
@@ -1897,71 +1787,60 @@
     "name": "black"
    },
    {
-    "hex": "E3E1DA",
-    "share": 0.373,
+    "hex": "E3E1D8",
+    "share": 0.383,
     "L": 89.5,
-    "C": 3.7,
-    "h": 98.6,
-    "rel": 0.041,
+    "C": 4.7,
+    "h": 100.9,
+    "rel": 0.053,
     "neutral": true,
     "family": "warm neutral",
     "name": "cream"
-   },
-   {
-    "hex": "C5B8A3",
-    "share": 0.086,
-    "L": 75.3,
-    "C": 12.4,
-    "h": 84.8,
-    "rel": 0.158,
-    "neutral": false,
-    "family": "warm neutral",
-    "name": "oatmeal"
    }
   ],
-  "skin_share": 0.015,
-  "kept_share": 0.589,
+  "skin_share": 0.016,
+  "kept_share": 0.661,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B019-P005": {
   "colours": [
    {
-    "hex": "2C2D35",
-    "share": 0.647,
-    "L": 18.7,
-    "C": 5.5,
-    "h": 286.9,
-    "rel": 0.143,
+    "hex": "2D2E35",
+    "share": 0.577,
+    "L": 19.1,
+    "C": 4.8,
+    "h": 286.0,
+    "rel": 0.127,
     "neutral": true,
-    "family": "black",
-    "name": "off-black"
+    "family": "grey",
+    "name": "dark grey"
    },
    {
-    "hex": "312922",
-    "share": 0.13,
-    "L": 17.2,
-    "C": 6.4,
-    "h": 68.7,
-    "rel": 0.236,
+    "hex": "332922",
+    "share": 0.162,
+    "L": 17.5,
+    "C": 7.1,
+    "h": 62.4,
+    "rel": 0.246,
     "neutral": false,
     "family": "brown",
     "name": "espresso"
    },
    {
-    "hex": "5F5143",
-    "share": 0.129,
-    "L": 35.4,
-    "C": 10.9,
-    "h": 72.0,
-    "rel": 0.232,
+    "hex": "605242",
+    "share": 0.152,
+    "L": 35.8,
+    "C": 11.9,
+    "h": 75.2,
+    "rel": 0.257,
     "neutral": false,
     "family": "brown",
     "name": "tobacco"
    }
   ],
-  "skin_share": 0.101,
-  "kept_share": 0.55,
+  "skin_share": 0.112,
+  "kept_share": 0.587,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -2028,19 +1907,19 @@
  "B020-P001": {
   "colours": [
    {
-    "hex": "282728",
-    "share": 0.898,
-    "L": 15.8,
-    "C": 0.9,
-    "h": 324.6,
-    "rel": 0.017,
+    "hex": "2D2D2E",
+    "share": 0.952,
+    "L": 18.5,
+    "C": 0.7,
+    "h": 290.3,
+    "rel": 0.016,
     "neutral": true,
     "family": "black",
     "name": "black"
    }
   ],
-  "skin_share": 0.044,
-  "kept_share": 0.556,
+  "skin_share": 0.014,
+  "kept_share": 0.586,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -2066,71 +1945,71 @@
  "B020-P003": {
   "colours": [
    {
-    "hex": "1D1A16",
-    "share": 0.407,
-    "L": 9.5,
-    "C": 3.4,
-    "h": 80.5,
-    "rel": 0.233,
+    "hex": "1C1B16",
+    "share": 0.464,
+    "L": 9.7,
+    "C": 3.7,
+    "h": 100.7,
+    "rel": 0.252,
     "neutral": false,
     "family": "black",
     "name": "black"
    },
    {
-    "hex": "453D33",
-    "share": 0.253,
-    "L": 26.3,
-    "C": 7.6,
-    "h": 78.2,
-    "rel": 0.207,
+    "hex": "423D34",
+    "share": 0.228,
+    "L": 26.0,
+    "C": 6.3,
+    "h": 86.8,
+    "rel": 0.18,
     "neutral": false,
-    "family": "brown",
-    "name": "chocolate"
+    "family": "warm neutral",
+    "name": "taupe"
    },
    {
-    "hex": "776F63",
-    "share": 0.218,
-    "L": 47.2,
-    "C": 7.9,
-    "h": 83.4,
-    "rel": 0.144,
+    "hex": "746E64",
+    "share": 0.198,
+    "L": 46.7,
+    "C": 6.4,
+    "h": 86.0,
+    "rel": 0.12,
     "neutral": true,
     "family": "warm neutral",
     "name": "stone"
    }
   ],
-  "skin_share": 0.052,
-  "kept_share": 0.587,
-  "colour_confidence": "high",
+  "skin_share": 0.002,
+  "kept_share": 0.68,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B020-P004": {
   "colours": [
    {
-    "hex": "23201D",
-    "share": 0.915,
-    "L": 12.5,
-    "C": 2.7,
-    "h": 73.8,
-    "rel": 0.137,
-    "neutral": true,
+    "hex": "22201C",
+    "share": 0.889,
+    "L": 12.3,
+    "C": 3.1,
+    "h": 89.5,
+    "rel": 0.167,
+    "neutral": false,
     "family": "black",
     "name": "black"
    },
    {
-    "hex": "565454",
-    "share": 0.085,
-    "L": 35.9,
-    "C": 0.9,
-    "h": 19.5,
-    "rel": 0.013,
+    "hex": "565656",
+    "share": 0.111,
+    "L": 36.6,
+    "C": 0.0,
+    "h": 158.2,
+    "rel": 0.0,
     "neutral": true,
     "family": "grey",
     "name": "dark grey"
    }
   ],
-  "skin_share": 0.011,
-  "kept_share": 0.801,
+  "skin_share": 0.013,
+  "kept_share": 0.816,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -2219,38 +2098,38 @@
  "B021-P001": {
   "colours": [
    {
-    "hex": "46444B",
-    "share": 0.844,
-    "L": 29.3,
-    "C": 4.6,
-    "h": 301.8,
-    "rel": 0.048,
-    "neutral": true,
-    "family": "grey",
-    "name": "dark grey"
-   },
-   {
-    "hex": "262529",
-    "share": 0.156,
-    "L": 14.9,
-    "C": 2.9,
-    "h": 300.4,
-    "rel": 0.048,
+    "hex": "29292D",
+    "share": 0.859,
+    "L": 16.7,
+    "C": 2.8,
+    "h": 290.9,
+    "rel": 0.067,
     "neutral": true,
     "family": "black",
     "name": "black"
+   },
+   {
+    "hex": "4F4C4F",
+    "share": 0.141,
+    "L": 32.7,
+    "C": 2.3,
+    "h": 324.6,
+    "rel": 0.03,
+    "neutral": true,
+    "family": "grey",
+    "name": "dark grey"
    }
   ],
   "skin_share": 0.0,
-  "kept_share": 0.468,
-  "colour_confidence": "high",
+  "kept_share": 0.39,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B021-P002": {
   "colours": [
    {
     "hex": "75604A",
-    "share": 0.55,
+    "share": 0.656,
     "L": 42.2,
     "C": 16.5,
     "h": 72.3,
@@ -2260,153 +2139,153 @@
     "name": "tobacco"
    },
    {
-    "hex": "291B10",
-    "share": 0.172,
-    "L": 11.2,
-    "C": 11.1,
-    "h": 62.0,
-    "rel": 0.58,
-    "neutral": false,
-    "family": "brown",
-    "name": "espresso"
-   },
-   {
-    "hex": "4F3A25",
-    "share": 0.167,
-    "L": 26.2,
-    "C": 17.8,
-    "h": 69.4,
-    "rel": 0.459,
+    "hex": "543C23",
+    "share": 0.137,
+    "L": 27.4,
+    "C": 20.8,
+    "h": 69.7,
+    "rel": 0.521,
     "neutral": false,
     "family": "brown",
     "name": "chocolate"
+   },
+   {
+    "hex": "2C1B10",
+    "share": 0.129,
+    "L": 11.7,
+    "C": 12.5,
+    "h": 57.0,
+    "rel": 0.595,
+    "neutral": false,
+    "family": "brown",
+    "name": "espresso"
    }
   ],
-  "skin_share": 0.048,
-  "kept_share": 0.621,
-  "colour_confidence": "high",
+  "skin_share": 0.059,
+  "kept_share": 0.587,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B021-P003": {
   "colours": [
    {
-    "hex": "1A1B21",
-    "share": 0.574,
-    "L": 9.9,
-    "C": 4.5,
-    "h": 285.5,
-    "rel": 0.162,
-    "neutral": false,
+    "hex": "100F11",
+    "share": 0.3,
+    "L": 4.4,
+    "C": 1.2,
+    "h": 308.7,
+    "rel": 0.028,
+    "neutral": true,
     "family": "black",
-    "name": "off-black"
+    "name": "black"
    },
    {
-    "hex": "6A2D39",
-    "share": 0.228,
-    "L": 27.4,
-    "C": 29.1,
-    "h": 11.5,
-    "rel": 0.557,
+    "hex": "6E2E3C",
+    "share": 0.289,
+    "L": 28.4,
+    "C": 30.4,
+    "h": 10.0,
+    "rel": 0.57,
     "neutral": false,
     "family": "red",
-    "name": "oxblood"
+    "name": "burgundy"
    },
    {
-    "hex": "421A1D",
-    "share": 0.19,
-    "L": 15.4,
-    "C": 21.0,
-    "h": 20.4,
-    "rel": 0.536,
+    "hex": "4D1C24",
+    "share": 0.244,
+    "L": 18.1,
+    "C": 24.8,
+    "h": 14.8,
+    "rel": 0.598,
     "neutral": false,
     "family": "red",
     "name": "oxblood"
    }
   ],
-  "skin_share": 0.167,
-  "kept_share": 0.256,
-  "colour_confidence": "medium",
+  "skin_share": 0.246,
+  "kept_share": 0.187,
+  "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B021-P004": {
   "colours": [
    {
-    "hex": "291613",
-    "share": 0.322,
-    "L": 9.7,
-    "C": 11.0,
-    "h": 32.9,
-    "rel": 0.393,
+    "hex": "2C1C14",
+    "share": 0.329,
+    "L": 12.1,
+    "C": 10.9,
+    "h": 52.4,
+    "rel": 0.471,
     "neutral": false,
     "family": "brown",
     "name": "espresso"
    },
    {
-    "hex": "B59D91",
-    "share": 0.29,
-    "L": 66.5,
-    "C": 11.8,
-    "h": 54.2,
-    "rel": 0.152,
-    "neutral": false,
-    "family": "brown",
-    "name": "tan"
-   },
-   {
-    "hex": "E0CEC4",
-    "share": 0.248,
-    "L": 84.0,
-    "C": 8.6,
-    "h": 57.6,
-    "rel": 0.286,
+    "hex": "E2D1C8",
+    "share": 0.271,
+    "L": 85.0,
+    "C": 7.9,
+    "h": 56.3,
+    "rel": 0.291,
     "neutral": false,
     "family": "warm neutral",
     "name": "cream"
+   },
+   {
+    "hex": "B59F93",
+    "share": 0.268,
+    "L": 67.1,
+    "C": 11.1,
+    "h": 56.6,
+    "rel": 0.14,
+    "neutral": true,
+    "family": "warm neutral",
+    "name": "oatmeal"
    }
   ],
-  "skin_share": 0.444,
-  "kept_share": 0.428,
+  "skin_share": 0.483,
+  "kept_share": 0.351,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B021-P005": {
   "colours": [
    {
-    "hex": "1B0707",
-    "share": 0.469,
-    "L": 3.6,
-    "C": 8.1,
+    "hex": "1C0808",
+    "share": 0.572,
+    "L": 4.0,
+    "C": 8.4,
     "h": 19.4,
-    "rel": 0.469,
+    "rel": 0.446,
     "neutral": false,
     "family": "red",
     "name": "oxblood"
    },
    {
-    "hex": "421E19",
-    "share": 0.218,
-    "L": 16.3,
-    "C": 20.3,
-    "h": 34.1,
-    "rel": 0.45,
+    "hex": "3E1718",
+    "share": 0.26,
+    "L": 13.8,
+    "C": 21.1,
+    "h": 24.4,
+    "rel": 0.552,
     "neutral": false,
-    "family": "brown",
-    "name": "espresso"
+    "family": "red",
+    "name": "oxblood"
    },
    {
-    "hex": "A4764E",
-    "share": 0.192,
-    "L": 53.4,
-    "C": 31.9,
-    "h": 65.5,
-    "rel": 0.475,
+    "hex": "9B7048",
+    "share": 0.09,
+    "L": 50.7,
+    "C": 31.3,
+    "h": 67.1,
+    "rel": 0.492,
     "neutral": false,
     "family": "yellow",
     "name": "ochre"
    }
   ],
-  "skin_share": 0.745,
-  "kept_share": 0.166,
+  "skin_share": 0.705,
+  "kept_share": 0.195,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
@@ -2503,224 +2382,213 @@
  "B021-P009": {
   "colours": [
    {
-    "hex": "61404B",
-    "share": 0.415,
-    "L": 31.2,
-    "C": 16.2,
-    "h": 357.2,
-    "rel": 0.286,
-    "neutral": false,
-    "family": "red",
-    "name": "burgundy"
-   },
-   {
-    "hex": "341C22",
-    "share": 0.384,
-    "L": 13.7,
-    "C": 12.8,
-    "h": 4.3,
-    "rel": 0.362,
+    "hex": "321B20",
+    "share": 0.299,
+    "L": 13.0,
+    "C": 12.3,
+    "h": 6.6,
+    "rel": 0.354,
     "neutral": false,
     "family": "red",
     "name": "oxblood"
    },
    {
-    "hex": "DFCABC",
-    "share": 0.117,
-    "L": 82.7,
-    "C": 10.9,
-    "h": 62.3,
-    "rel": 0.305,
+    "hex": "674552",
+    "share": 0.279,
+    "L": 33.5,
+    "C": 16.9,
+    "h": 353.8,
+    "rel": 0.281,
     "neutral": false,
-    "family": "warm neutral",
-    "name": "cream"
+    "family": "red",
+    "name": "burgundy"
+   },
+   {
+    "hex": "7D5735",
+    "share": 0.24,
+    "L": 40.3,
+    "C": 28.4,
+    "h": 65.8,
+    "rel": 0.522,
+    "neutral": false,
+    "family": "yellow",
+    "name": "ochre"
    }
   ],
-  "skin_share": 0.446,
-  "kept_share": 0.381,
+  "skin_share": 0.351,
+  "kept_share": 0.442,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B021-P010": {
   "colours": [
    {
-    "hex": "ECE7DE",
-    "share": 0.52,
-    "L": 91.8,
-    "C": 5.0,
-    "h": 88.4,
-    "rel": 0.16,
-    "neutral": false,
+    "hex": "EBE7DE",
+    "share": 0.627,
+    "L": 91.7,
+    "C": 4.9,
+    "h": 92.4,
+    "rel": 0.12,
+    "neutral": true,
     "family": "white",
     "name": "off-white"
    },
    {
-    "hex": "B6A794",
-    "share": 0.263,
-    "L": 69.3,
-    "C": 12.0,
-    "h": 79.1,
-    "rel": 0.161,
+    "hex": "B5A793",
+    "share": 0.368,
+    "L": 69.2,
+    "C": 12.3,
+    "h": 81.9,
+    "rel": 0.167,
     "neutral": false,
     "family": "brown",
     "name": "tan"
-   },
-   {
-    "hex": "431F1D",
-    "share": 0.217,
-    "L": 16.8,
-    "C": 19.4,
-    "h": 28.5,
-    "rel": 0.447,
-    "neutral": false,
-    "family": "black",
-    "name": "off-black"
    }
   ],
-  "skin_share": 0.234,
-  "kept_share": 0.597,
-  "colour_confidence": "high",
+  "skin_share": 0.057,
+  "kept_share": 0.797,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B021-P011": {
   "colours": [
    {
-    "hex": "E5DFD5",
-    "share": 0.419,
-    "L": 89.0,
-    "C": 5.6,
-    "h": 86.8,
-    "rel": 0.133,
+    "hex": "E4DDD3",
+    "share": 0.313,
+    "L": 88.4,
+    "C": 5.8,
+    "h": 83.4,
+    "rel": 0.149,
     "neutral": true,
     "family": "warm neutral",
     "name": "cream"
    },
    {
-    "hex": "BBAF9E",
-    "share": 0.277,
-    "L": 72.0,
-    "C": 10.4,
-    "h": 82.2,
-    "rel": 0.136,
-    "neutral": true,
-    "family": "warm neutral",
-    "name": "oatmeal"
-   },
-   {
-    "hex": "3B1F1C",
-    "share": 0.157,
-    "L": 15.5,
-    "C": 15.4,
+    "hex": "3B1E1B",
+    "share": 0.272,
+    "L": 15.2,
+    "C": 16.0,
     "h": 31.0,
-    "rel": 0.361,
+    "rel": 0.38,
     "neutral": false,
     "family": "brown",
     "name": "espresso"
+   },
+   {
+    "hex": "92826D",
+    "share": 0.217,
+    "L": 55.3,
+    "C": 13.9,
+    "h": 79.2,
+    "rel": 0.222,
+    "neutral": false,
+    "family": "brown",
+    "name": "tan"
    }
   ],
-  "skin_share": 0.114,
-  "kept_share": 0.591,
+  "skin_share": 0.149,
+  "kept_share": 0.568,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B021-P012": {
   "colours": [
    {
-    "hex": "DCB3BD",
-    "share": 0.301,
-    "L": 76.8,
+    "hex": "DEB5BF",
+    "share": 0.406,
+    "L": 77.5,
     "C": 16.4,
     "h": 1.9,
-    "rel": 0.44,
+    "rel": 0.455,
     "neutral": false,
     "family": "pink",
     "name": "dusty rose"
    },
    {
-    "hex": "241317",
-    "share": 0.254,
-    "L": 8.2,
-    "C": 9.5,
-    "h": 4.9,
-    "rel": 0.331,
+    "hex": "9B6E79",
+    "share": 0.33,
+    "L": 51.3,
+    "C": 19.6,
+    "h": 3.1,
+    "rel": 0.244,
+    "neutral": false,
+    "family": "grey",
+    "name": "mid grey"
+   },
+   {
+    "hex": "4F2B2C",
+    "share": 0.226,
+    "L": 22.2,
+    "C": 18.0,
+    "h": 21.5,
+    "rel": 0.375,
     "neutral": false,
     "family": "red",
     "name": "oxblood"
-   },
-   {
-    "hex": "AA7B86",
-    "share": 0.248,
-    "L": 56.5,
-    "C": 20.0,
-    "h": 3.7,
-    "rel": 0.249,
-    "neutral": false,
-    "family": "pink",
-    "name": "dusty rose"
    }
   ],
-  "skin_share": 0.064,
-  "kept_share": 0.609,
-  "colour_confidence": "high",
+  "skin_share": 0.101,
+  "kept_share": 0.552,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B021-P013": {
   "colours": [
    {
-    "hex": "BB906E",
+    "hex": "BC916F",
     "share": 0.992,
-    "L": 63.0,
+    "L": 63.4,
     "C": 27.0,
     "h": 64.3,
-    "rel": 0.349,
+    "rel": 0.347,
     "neutral": false,
     "family": "brown",
     "name": "tan"
    }
   ],
-  "skin_share": 0.38,
-  "kept_share": 0.457,
+  "skin_share": 0.279,
+  "kept_share": 0.533,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B021-P014": {
   "colours": [
    {
-    "hex": "6E4B2C",
-    "share": 0.326,
-    "L": 35.1,
-    "C": 26.7,
-    "h": 65.3,
-    "rel": 0.539,
+    "hex": "704C2D",
+    "share": 0.362,
+    "L": 35.6,
+    "C": 27.0,
+    "h": 64.6,
+    "rel": 0.536,
     "neutral": false,
     "family": "brown",
     "name": "chocolate"
    },
    {
-    "hex": "CC9F7A",
-    "share": 0.324,
-    "L": 68.8,
-    "C": 28.3,
-    "h": 65.4,
-    "rel": 0.344,
+    "hex": "AA7B56",
+    "share": 0.302,
+    "L": 55.5,
+    "C": 30.6,
+    "h": 63.3,
+    "rel": 0.433,
     "neutral": false,
-    "family": "brown",
-    "name": "tan"
+    "family": "yellow",
+    "name": "ochre"
    },
    {
-    "hex": "9F7550",
-    "share": 0.294,
-    "L": 52.6,
-    "C": 29.3,
-    "h": 66.1,
-    "rel": 0.444,
+    "hex": "D1A37E",
+    "share": 0.278,
+    "L": 70.4,
+    "C": 28.4,
+    "h": 64.8,
+    "rel": 0.346,
     "neutral": false,
     "family": "brown",
     "name": "tan"
    }
   ],
-  "skin_share": 0.223,
-  "kept_share": 0.576,
+  "skin_share": 0.236,
+  "kept_share": 0.612,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -2739,48 +2607,48 @@
    }
   ],
   "skin_share": 0.0,
-  "kept_share": 0.737,
-  "colour_confidence": "high",
+  "kept_share": 0.795,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B021-P016": {
   "colours": [
    {
-    "hex": "C0A180",
-    "share": 0.352,
-    "L": 68.2,
-    "C": 22.4,
-    "h": 72.9,
-    "rel": 0.293,
+    "hex": "C7A888",
+    "share": 0.344,
+    "L": 70.8,
+    "C": 21.8,
+    "h": 72.3,
+    "rel": 0.275,
     "neutral": false,
     "family": "brown",
     "name": "tan"
    },
    {
-    "hex": "906E4B",
-    "share": 0.319,
-    "L": 49.0,
-    "C": 26.2,
-    "h": 70.3,
-    "rel": 0.435,
-    "neutral": false,
-    "family": "yellow",
-    "name": "ochre"
-   },
-   {
-    "hex": "E3C5A8",
-    "share": 0.298,
-    "L": 81.3,
-    "C": 19.5,
-    "h": 71.3,
-    "rel": 0.401,
+    "hex": "E5C8AB",
+    "share": 0.31,
+    "L": 82.3,
+    "C": 19.2,
+    "h": 72.3,
+    "rel": 0.414,
     "neutral": false,
     "family": "warm neutral",
     "name": "cream"
+   },
+   {
+    "hex": "987754",
+    "share": 0.277,
+    "L": 52.4,
+    "C": 25.5,
+    "h": 71.4,
+    "rel": 0.405,
+    "neutral": false,
+    "family": "brown",
+    "name": "tan"
    }
   ],
-  "skin_share": 0.06,
-  "kept_share": 0.676,
+  "skin_share": 0.071,
+  "kept_share": 0.701,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -2855,31 +2723,20 @@
  "B021-P020": {
   "colours": [
    {
-    "hex": "0E0B08",
-    "share": 0.69,
-    "L": 3.2,
-    "C": 1.5,
-    "h": 71.8,
-    "rel": 0.307,
-    "neutral": false,
-    "family": "black",
-    "name": "black"
-   },
-   {
-    "hex": "2E2927",
-    "share": 0.304,
-    "L": 17.1,
-    "C": 2.8,
-    "h": 49.1,
-    "rel": 0.084,
+    "hex": "292522",
+    "share": 0.993,
+    "L": 15.0,
+    "C": 2.9,
+    "h": 65.8,
+    "rel": 0.12,
     "neutral": true,
     "family": "black",
     "name": "black"
    }
   ],
-  "skin_share": 0.071,
-  "kept_share": 0.509,
-  "colour_confidence": "low",
+  "skin_share": 0.04,
+  "kept_share": 0.592,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B021-P021": {
@@ -2915,42 +2772,42 @@
  "B021-P022": {
   "colours": [
    {
-    "hex": "170C08",
-    "share": 0.441,
-    "L": 4.2,
-    "C": 4.7,
-    "h": 39.9,
-    "rel": 0.475,
+    "hex": "1E130D",
+    "share": 0.542,
+    "L": 7.0,
+    "C": 6.7,
+    "h": 48.8,
+    "rel": 0.478,
     "neutral": false,
     "family": "brown",
     "name": "espresso"
    },
    {
-    "hex": "2E1C14",
-    "share": 0.209,
-    "L": 12.4,
-    "C": 11.9,
-    "h": 49.7,
-    "rel": 0.483,
+    "hex": "653D1C",
+    "share": 0.193,
+    "L": 29.9,
+    "C": 30.6,
+    "h": 62.3,
+    "rel": 0.671,
     "neutral": false,
-    "family": "brown",
-    "name": "espresso"
+    "family": "warm neutral",
+    "name": "taupe"
    },
    {
-    "hex": "C99265",
-    "share": 0.2,
-    "L": 64.9,
-    "C": 35.5,
-    "h": 64.2,
-    "rel": 0.447,
+    "hex": "D59F72",
+    "share": 0.162,
+    "L": 69.6,
+    "C": 34.5,
+    "h": 65.0,
+    "rel": 0.414,
     "neutral": false,
     "family": "yellow",
     "name": "gold"
    }
   ],
-  "skin_share": 0.095,
-  "kept_share": 0.662,
-  "colour_confidence": "low",
+  "skin_share": 0.097,
+  "kept_share": 0.726,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B021-P023": {
@@ -2975,41 +2832,41 @@
  "B021-P024": {
   "colours": [
    {
-    "hex": "2C1A14",
-    "share": 0.411,
-    "L": 11.4,
+    "hex": "2D1B15",
+    "share": 0.448,
+    "L": 11.9,
     "C": 11.2,
-    "h": 44.0,
-    "rel": 0.443,
+    "h": 44.2,
+    "rel": 0.426,
     "neutral": false,
     "family": "brown",
     "name": "espresso"
    },
    {
-    "hex": "120906",
-    "share": 0.315,
-    "L": 3.0,
-    "C": 3.2,
-    "h": 41.3,
-    "rel": 0.46,
+    "hex": "130906",
+    "share": 0.281,
+    "L": 3.1,
+    "C": 3.6,
+    "h": 38.8,
+    "rel": 0.475,
     "neutral": false,
     "family": "black",
     "name": "black"
    },
    {
-    "hex": "462D27",
-    "share": 0.265,
-    "L": 21.3,
-    "C": 13.7,
-    "h": 38.8,
-    "rel": 0.266,
+    "hex": "492E28",
+    "share": 0.257,
+    "L": 22.0,
+    "C": 14.6,
+    "h": 37.8,
+    "rel": 0.268,
     "neutral": false,
     "family": "brown",
-    "name": "espresso"
+    "name": "chocolate"
    }
   ],
-  "skin_share": 0.255,
-  "kept_share": 0.517,
+  "skin_share": 0.316,
+  "kept_share": 0.594,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
@@ -4261,41 +4118,41 @@
  "B023-P012": {
   "colours": [
    {
-    "hex": "131114",
-    "share": 0.385,
-    "L": 5.3,
+    "hex": "131215",
+    "share": 0.379,
+    "L": 5.6,
     "C": 2.0,
-    "h": 314.2,
-    "rel": 0.051,
+    "h": 302.5,
+    "rel": 0.041,
     "neutral": true,
     "family": "black",
     "name": "black"
    },
    {
-    "hex": "433F3E",
-    "share": 0.3,
-    "L": 27.0,
-    "C": 1.9,
+    "hex": "302C2B",
+    "share": 0.296,
+    "L": 18.4,
+    "C": 2.1,
     "h": 39.3,
-    "rel": 0.031,
+    "rel": 0.046,
+    "neutral": true,
+    "family": "black",
+    "name": "black"
+   },
+   {
+    "hex": "484443",
+    "share": 0.257,
+    "L": 29.2,
+    "C": 1.9,
+    "h": 39.4,
+    "rel": 0.028,
     "neutral": true,
     "family": "warm neutral",
     "name": "taupe"
-   },
-   {
-    "hex": "2B2626",
-    "share": 0.255,
-    "L": 15.7,
-    "C": 2.5,
-    "h": 20.0,
-    "rel": 0.062,
-    "neutral": true,
-    "family": "black",
-    "name": "black"
    }
   ],
-  "skin_share": 0.023,
-  "kept_share": 0.612,
+  "skin_share": 0.024,
+  "kept_share": 0.646,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
@@ -4799,41 +4656,41 @@
  "B025-P001": {
   "colours": [
    {
-    "hex": "C9C9C7",
-    "share": 0.668,
-    "L": 80.9,
-    "C": 1.1,
-    "h": 110.1,
-    "rel": 0.012,
+    "hex": "CDCDCA",
+    "share": 0.68,
+    "L": 82.3,
+    "C": 1.6,
+    "h": 110.0,
+    "rel": 0.018,
     "neutral": true,
     "family": "cool neutral",
     "name": "pale grey"
    },
    {
-    "hex": "173045",
-    "share": 0.184,
-    "L": 18.9,
-    "C": 16.2,
-    "h": 262.6,
-    "rel": 0.735,
-    "neutral": false,
-    "family": "blue",
-    "name": "navy"
-   },
-   {
-    "hex": "2D1B13",
-    "share": 0.081,
-    "L": 11.9,
-    "C": 11.9,
-    "h": 49.5,
-    "rel": 0.5,
+    "hex": "2F1B12",
+    "share": 0.166,
+    "L": 12.2,
+    "C": 13.3,
+    "h": 49.4,
+    "rel": 0.546,
     "neutral": false,
     "family": "brown",
     "name": "espresso"
+   },
+   {
+    "hex": "B0ABA1",
+    "share": 0.085,
+    "L": 70.1,
+    "C": 5.8,
+    "h": 90.1,
+    "rel": 0.079,
+    "neutral": true,
+    "family": "warm neutral",
+    "name": "oatmeal"
    }
   ],
-  "skin_share": 0.064,
-  "kept_share": 0.73,
+  "skin_share": 0.092,
+  "kept_share": 0.668,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -4859,41 +4716,41 @@
  "B025-P003": {
   "colours": [
    {
-    "hex": "B57D77",
-    "share": 0.339,
-    "L": 57.9,
-    "C": 24.2,
-    "h": 29.9,
-    "rel": 0.3,
+    "hex": "AF7E71",
+    "share": 0.32,
+    "L": 57.3,
+    "C": 22.6,
+    "h": 40.3,
+    "rel": 0.249,
     "neutral": false,
-    "family": "pink",
-    "name": "dusty rose"
-   },
-   {
-    "hex": "B7AA98",
-    "share": 0.339,
-    "L": 70.2,
-    "C": 11.1,
-    "h": 81.5,
-    "rel": 0.148,
-    "neutral": true,
     "family": "warm neutral",
-    "name": "oatmeal"
+    "name": "stone"
    },
    {
-    "hex": "462717",
-    "share": 0.2,
-    "L": 19.3,
-    "C": 21.0,
-    "h": 52.6,
-    "rel": 0.584,
+    "hex": "462616",
+    "share": 0.259,
+    "L": 19.0,
+    "C": 21.6,
+    "h": 51.9,
+    "rel": 0.602,
     "neutral": false,
     "family": "brown",
     "name": "espresso"
+   },
+   {
+    "hex": "B7A794",
+    "share": 0.256,
+    "L": 69.4,
+    "C": 12.2,
+    "h": 77.5,
+    "rel": 0.162,
+    "neutral": false,
+    "family": "brown",
+    "name": "tan"
    }
   ],
-  "skin_share": 0.907,
-  "kept_share": 0.053,
+  "skin_share": 0.88,
+  "kept_share": 0.079,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
@@ -5441,30 +5298,30 @@
  "B026-P010": {
   "colours": [
    {
-    "hex": "EFECED",
-    "share": 0.677,
-    "L": 93.6,
-    "C": 1.2,
-    "h": 353.8,
-    "rel": 0.122,
+    "hex": "EFEDEE",
+    "share": 0.576,
+    "L": 93.9,
+    "C": 0.9,
+    "h": 343.7,
+    "rel": 0.084,
     "neutral": true,
     "family": "white",
     "name": "white"
    },
    {
-    "hex": "3A271E",
-    "share": 0.299,
-    "L": 17.7,
-    "C": 12.1,
-    "h": 51.5,
-    "rel": 0.361,
+    "hex": "3C2920",
+    "share": 0.402,
+    "L": 18.6,
+    "C": 12.0,
+    "h": 51.6,
+    "rel": 0.341,
     "neutral": false,
     "family": "brown",
     "name": "espresso"
    }
   ],
-  "skin_share": 0.134,
-  "kept_share": 0.403,
+  "skin_share": 0.158,
+  "kept_share": 0.459,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
@@ -5512,202 +5369,235 @@
  "B027-P001": {
   "colours": [
    {
-    "hex": "2B2523",
-    "share": 0.962,
-    "L": 15.3,
-    "C": 3.3,
-    "h": 44.8,
-    "rel": 0.102,
+    "hex": "3D2E25",
+    "share": 0.872,
+    "L": 20.4,
+    "C": 10.0,
+    "h": 57.8,
+    "rel": 0.284,
+    "neutral": false,
+    "family": "brown",
+    "name": "espresso"
+   },
+   {
+    "hex": "90847D",
+    "share": 0.077,
+    "L": 56.0,
+    "C": 6.3,
+    "h": 58.9,
+    "rel": 0.084,
     "neutral": true,
-    "family": "black",
-    "name": "black"
+    "family": "warm neutral",
+    "name": "stone"
+   },
+   {
+    "hex": "60554D",
+    "share": 0.051,
+    "L": 37.0,
+    "C": 7.0,
+    "h": 64.4,
+    "rel": 0.135,
+    "neutral": true,
+    "family": "warm neutral",
+    "name": "taupe"
    }
   ],
-  "skin_share": 0.3,
-  "kept_share": 0.475,
+  "skin_share": 0.449,
+  "kept_share": 0.362,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B027-P002": {
   "colours": [
    {
-    "hex": "352F30",
-    "share": 0.483,
-    "L": 20.1,
-    "C": 2.9,
-    "h": 6.7,
-    "rel": 0.068,
-    "neutral": true,
-    "family": "grey",
-    "name": "dark grey"
-   },
-   {
-    "hex": "1D1A1B",
-    "share": 0.435,
-    "L": 9.6,
-    "C": 1.7,
-    "h": 354.4,
-    "rel": 0.055,
+    "hex": "1F1A1A",
+    "share": 0.589,
+    "L": 9.8,
+    "C": 2.6,
+    "h": 20.2,
+    "rel": 0.081,
     "neutral": true,
     "family": "black",
     "name": "black"
    },
    {
-    "hex": "675D5A",
-    "share": 0.082,
-    "L": 40.3,
-    "C": 4.7,
-    "h": 42.7,
-    "rel": 0.059,
-    "neutral": true,
-    "family": "warm neutral",
-    "name": "taupe"
-   }
-  ],
-  "skin_share": 0.223,
-  "kept_share": 0.478,
-  "colour_confidence": "medium",
-  "colour_stability": "stable"
- },
- "B027-P003": {
-  "colours": [
-   {
-    "hex": "2D231F",
-    "share": 0.912,
-    "L": 14.7,
-    "C": 6.0,
-    "h": 48.4,
-    "rel": 0.201,
+    "hex": "41312A",
+    "share": 0.331,
+    "L": 21.9,
+    "C": 9.4,
+    "h": 50.2,
+    "rel": 0.226,
     "neutral": false,
     "family": "brown",
     "name": "espresso"
    },
    {
-    "hex": "675B58",
-    "share": 0.088,
-    "L": 39.7,
-    "C": 5.5,
-    "h": 39.2,
-    "rel": 0.067,
+    "hex": "786D67",
+    "share": 0.079,
+    "L": 46.9,
+    "C": 5.9,
+    "h": 57.0,
+    "rel": 0.087,
+    "neutral": true,
+    "family": "warm neutral",
+    "name": "stone"
+   }
+  ],
+  "skin_share": 0.327,
+  "kept_share": 0.495,
+  "colour_confidence": "low",
+  "colour_stability": "stable"
+ },
+ "B027-P003": {
+  "colours": [
+   {
+    "hex": "2E231F",
+    "share": 0.75,
+    "L": 14.9,
+    "C": 6.5,
+    "h": 46.3,
+    "rel": 0.207,
+    "neutral": false,
+    "family": "brown",
+    "name": "espresso"
+   },
+   {
+    "hex": "14110E",
+    "share": 0.147,
+    "L": 5.3,
+    "C": 2.0,
+    "h": 71.7,
+    "rel": 0.245,
+    "neutral": false,
+    "family": "black",
+    "name": "black"
+   },
+   {
+    "hex": "6E635D",
+    "share": 0.102,
+    "L": 42.8,
+    "C": 6.0,
+    "h": 56.9,
+    "rel": 0.095,
     "neutral": true,
     "family": "warm neutral",
     "name": "taupe"
    }
   ],
-  "skin_share": 0.223,
-  "kept_share": 0.566,
+  "skin_share": 0.137,
+  "kept_share": 0.543,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B027-P004": {
   "colours": [
    {
-    "hex": "705A4A",
-    "share": 0.76,
-    "L": 40.0,
-    "C": 14.2,
-    "h": 63.0,
-    "rel": 0.255,
+    "hex": "6D5948",
+    "share": 0.803,
+    "L": 39.4,
+    "C": 14.0,
+    "h": 67.2,
+    "rel": 0.266,
     "neutral": false,
     "family": "brown",
     "name": "tobacco"
    },
    {
-    "hex": "37281E",
-    "share": 0.137,
-    "L": 17.6,
-    "C": 10.7,
-    "h": 60.1,
-    "rel": 0.359,
+    "hex": "33241A",
+    "share": 0.107,
+    "L": 15.7,
+    "C": 10.9,
+    "h": 59.9,
+    "rel": 0.405,
     "neutral": false,
     "family": "brown",
     "name": "espresso"
    },
    {
-    "hex": "A59592",
-    "share": 0.103,
-    "L": 63.0,
+    "hex": "A39390",
+    "share": 0.089,
+    "L": 62.2,
     "C": 6.6,
     "h": 34.7,
-    "rel": 0.095,
+    "rel": 0.092,
     "neutral": true,
     "family": "warm neutral",
     "name": "oatmeal"
    }
   ],
-  "skin_share": 0.623,
-  "kept_share": 0.241,
+  "skin_share": 0.393,
+  "kept_share": 0.52,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B027-P005": {
   "colours": [
    {
-    "hex": "1C1918",
-    "share": 0.621,
-    "L": 9.1,
-    "C": 1.7,
-    "h": 45.0,
-    "rel": 0.089,
+    "hex": "1D1A18",
+    "share": 0.61,
+    "L": 9.5,
+    "C": 2.2,
+    "h": 62.6,
+    "rel": 0.134,
     "neutral": true,
     "family": "black",
     "name": "black"
    },
    {
-    "hex": "464442",
-    "share": 0.2,
-    "L": 29.0,
-    "C": 1.6,
-    "h": 74.8,
-    "rel": 0.039,
+    "hex": "393533",
+    "share": 0.245,
+    "L": 22.5,
+    "C": 2.3,
+    "h": 55.0,
+    "rel": 0.058,
     "neutral": true,
     "family": "warm neutral",
     "name": "taupe"
    },
    {
-    "hex": "2F1F17",
-    "share": 0.137,
-    "L": 13.5,
-    "C": 10.7,
-    "h": 52.8,
-    "rel": 0.419,
-    "neutral": false,
-    "family": "brown",
-    "name": "espresso"
+    "hex": "615E5B",
+    "share": 0.127,
+    "L": 40.1,
+    "C": 2.2,
+    "h": 74.7,
+    "rel": 0.044,
+    "neutral": true,
+    "family": "warm neutral",
+    "name": "taupe"
    }
   ],
-  "skin_share": 0.011,
-  "kept_share": 0.768,
+  "skin_share": 0.009,
+  "kept_share": 0.762,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B027-P006": {
   "colours": [
    {
-    "hex": "221816",
-    "share": 0.879,
-    "L": 9.4,
-    "C": 5.7,
-    "h": 35.7,
-    "rel": 0.228,
+    "hex": "231916",
+    "share": 0.874,
+    "L": 9.9,
+    "C": 6.0,
+    "h": 42.3,
+    "rel": 0.264,
     "neutral": false,
     "family": "brown",
     "name": "espresso"
    },
    {
-    "hex": "525050",
-    "share": 0.103,
-    "L": 34.2,
-    "C": 0.9,
-    "h": 19.5,
-    "rel": 0.014,
+    "hex": "575453",
+    "share": 0.107,
+    "L": 36.0,
+    "C": 1.4,
+    "h": 45.2,
+    "rel": 0.021,
     "neutral": true,
-    "family": "grey",
-    "name": "dark grey"
+    "family": "warm neutral",
+    "name": "taupe"
    }
   ],
-  "skin_share": 0.041,
-  "kept_share": 0.68,
+  "skin_share": 0.042,
+  "kept_share": 0.719,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -5733,41 +5623,41 @@
  "B027-P008": {
   "colours": [
    {
-    "hex": "A48C5F",
-    "share": 0.352,
-    "L": 59.4,
-    "C": 27.5,
-    "h": 84.5,
-    "rel": 0.425,
+    "hex": "B2996C",
+    "share": 0.328,
+    "L": 64.4,
+    "C": 27.2,
+    "h": 84.1,
+    "rel": 0.394,
     "neutral": false,
     "family": "brown",
     "name": "tan"
    },
    {
-    "hex": "D9C49C",
-    "share": 0.272,
-    "L": 80.0,
-    "C": 22.9,
-    "h": 86.6,
-    "rel": 0.279,
+    "hex": "DDC9A1",
+    "share": 0.296,
+    "L": 81.7,
+    "C": 22.6,
+    "h": 87.6,
+    "rel": 0.272,
     "neutral": false,
     "family": "yellow",
     "name": "butter"
    },
    {
-    "hex": "31281C",
-    "share": 0.214,
-    "L": 16.8,
-    "C": 9.7,
-    "h": 78.1,
-    "rel": 0.387,
+    "hex": "8B744C",
+    "share": 0.243,
+    "L": 50.1,
+    "C": 25.6,
+    "h": 82.7,
+    "rel": 0.449,
     "neutral": false,
-    "family": "brown",
-    "name": "espresso"
+    "family": "green",
+    "name": "olive"
    }
   ],
-  "skin_share": 0.068,
-  "kept_share": 0.638,
+  "skin_share": 0.079,
+  "kept_share": 0.627,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -5887,7 +5777,7 @@
   "colours": [
    {
     "hex": "1A1716",
-    "share": 0.502,
+    "share": 0.522,
     "L": 8.0,
     "C": 1.7,
     "h": 44.2,
@@ -5897,30 +5787,30 @@
     "name": "black"
    },
    {
-    "hex": "3A3532",
-    "share": 0.319,
-    "L": 22.6,
-    "C": 3.1,
-    "h": 59.7,
-    "rel": 0.083,
+    "hex": "3B3734",
+    "share": 0.281,
+    "L": 23.4,
+    "C": 2.7,
+    "h": 66.2,
+    "rel": 0.076,
     "neutral": true,
     "family": "warm neutral",
     "name": "taupe"
    },
    {
-    "hex": "8B8A89",
-    "share": 0.133,
-    "L": 57.5,
-    "C": 0.7,
-    "h": 75.2,
-    "rel": 0.01,
+    "hex": "8D8D8C",
+    "share": 0.139,
+    "L": 58.6,
+    "C": 0.6,
+    "h": 110.1,
+    "rel": 0.009,
     "neutral": true,
-    "family": "warm neutral",
-    "name": "stone"
+    "family": "grey",
+    "name": "mid grey"
    }
   ],
-  "skin_share": 0.11,
-  "kept_share": 0.537,
+  "skin_share": 0.107,
+  "kept_share": 0.583,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -5969,7 +5859,7 @@
   "colours": [
    {
     "hex": "1B1C1E",
-    "share": 0.629,
+    "share": 0.673,
     "L": 10.2,
     "C": 1.5,
     "h": 272.1,
@@ -5979,69 +5869,58 @@
     "name": "black"
    },
    {
-    "hex": "3A3734",
-    "share": 0.242,
-    "L": 23.3,
-    "C": 2.4,
-    "h": 74.3,
-    "rel": 0.072,
+    "hex": "383533",
+    "share": 0.258,
+    "L": 22.4,
+    "C": 1.9,
+    "h": 63.1,
+    "rel": 0.054,
     "neutral": true,
     "family": "warm neutral",
     "name": "taupe"
-   },
-   {
-    "hex": "867D6B",
-    "share": 0.068,
-    "L": 52.7,
-    "C": 11.1,
-    "h": 88.7,
-    "rel": 0.189,
-    "neutral": false,
-    "family": "brown",
-    "name": "tan"
    }
   ],
-  "skin_share": 0.032,
-  "kept_share": 0.483,
+  "skin_share": 0.008,
+  "kept_share": 0.558,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B028-P004": {
   "colours": [
    {
-    "hex": "161717",
-    "share": 0.947,
-    "L": 7.6,
-    "C": 0.5,
-    "h": 199.4,
-    "rel": 0.051,
-    "neutral": true,
-    "family": "black",
-    "name": "black"
-   }
-  ],
-  "skin_share": 0.002,
-  "kept_share": 0.644,
-  "colour_confidence": "medium",
-  "colour_stability": "stable"
- },
- "B028-P005": {
-  "colours": [
-   {
-    "hex": "191B1E",
-    "share": 0.994,
-    "L": 9.7,
-    "C": 2.4,
-    "h": 267.1,
-    "rel": 0.138,
+    "hex": "1F1F20",
+    "share": 0.991,
+    "L": 11.8,
+    "C": 0.7,
+    "h": 290.4,
+    "rel": 0.021,
     "neutral": true,
     "family": "black",
     "name": "black"
    }
   ],
   "skin_share": 0.0,
-  "kept_share": 0.741,
-  "colour_confidence": "high",
+  "kept_share": 0.68,
+  "colour_confidence": "medium",
+  "colour_stability": "stable"
+ },
+ "B028-P005": {
+  "colours": [
+   {
+    "hex": "1A1C1F",
+    "share": 0.997,
+    "L": 10.2,
+    "C": 2.4,
+    "h": 267.0,
+    "rel": 0.135,
+    "neutral": true,
+    "family": "black",
+    "name": "black"
+   }
+  ],
+  "skin_share": 0.0,
+  "kept_share": 0.761,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B028-P006": {
@@ -6088,49 +5967,60 @@
  "B028-P007": {
   "colours": [
    {
-    "hex": "2A2B2C",
-    "share": 0.992,
-    "L": 17.5,
+    "hex": "2C2D2E",
+    "share": 0.82,
+    "L": 18.4,
     "C": 0.8,
     "h": 255.9,
-    "rel": 0.043,
+    "rel": 0.042,
     "neutral": true,
     "family": "black",
     "name": "black"
+   },
+   {
+    "hex": "444445",
+    "share": 0.17,
+    "L": 28.9,
+    "C": 0.6,
+    "h": 290.3,
+    "rel": 0.011,
+    "neutral": true,
+    "family": "grey",
+    "name": "dark grey"
    }
   ],
-  "skin_share": 0.036,
-  "kept_share": 0.585,
+  "skin_share": 0.051,
+  "kept_share": 0.658,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B028-P008": {
   "colours": [
    {
-    "hex": "1A1B1B",
-    "share": 0.845,
-    "L": 9.7,
-    "C": 0.5,
-    "h": 199.3,
-    "rel": 0.043,
+    "hex": "1F1F1F",
+    "share": 0.644,
+    "L": 11.8,
+    "C": 0.0,
+    "h": 158.2,
+    "rel": 0.0,
     "neutral": true,
     "family": "black",
     "name": "black"
    },
    {
-    "hex": "424040",
-    "share": 0.142,
-    "L": 27.3,
-    "C": 0.9,
-    "h": 19.6,
-    "rel": 0.017,
+    "hex": "3B3B3B",
+    "share": 0.303,
+    "L": 24.9,
+    "C": 0.0,
+    "h": 158.2,
+    "rel": 0.0,
     "neutral": true,
     "family": "grey",
     "name": "dark grey"
    }
   ],
-  "skin_share": 0.016,
-  "kept_share": 0.708,
+  "skin_share": 0.019,
+  "kept_share": 0.688,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -6249,82 +6139,82 @@
  "B028-P012": {
   "colours": [
    {
-    "hex": "1B1712",
-    "share": 0.473,
-    "L": 8.0,
-    "C": 4.0,
-    "h": 77.0,
-    "rel": 0.32,
-    "neutral": false,
-    "family": "black",
-    "name": "black"
-   },
-   {
-    "hex": "3B2E24",
-    "share": 0.341,
-    "L": 20.1,
-    "C": 9.7,
-    "h": 64.3,
-    "rel": 0.299,
+    "hex": "1F1913",
+    "share": 0.385,
+    "L": 9.3,
+    "C": 5.4,
+    "h": 71.1,
+    "rel": 0.365,
     "neutral": false,
     "family": "brown",
     "name": "espresso"
    },
    {
-    "hex": "6B5B4C",
-    "share": 0.115,
-    "L": 39.8,
-    "C": 11.8,
-    "h": 70.3,
-    "rel": 0.227,
-    "neutral": false,
-    "family": "brown",
-    "name": "tobacco"
-   }
-  ],
-  "skin_share": 0.201,
-  "kept_share": 0.522,
-  "colour_confidence": "medium",
-  "colour_stability": "stable"
- },
- "B028-P013": {
-  "colours": [
-   {
-    "hex": "E5D4CD",
-    "share": 0.478,
-    "L": 86.1,
-    "C": 7.3,
-    "h": 49.9,
-    "rel": 0.318,
-    "neutral": false,
-    "family": "warm neutral",
-    "name": "cream"
-   },
-   {
-    "hex": "463A33",
-    "share": 0.262,
-    "L": 25.5,
-    "C": 7.5,
-    "h": 57.9,
-    "rel": 0.175,
+    "hex": "443327",
+    "share": 0.293,
+    "L": 22.8,
+    "C": 12.0,
+    "h": 61.6,
+    "rel": 0.324,
     "neutral": false,
     "family": "brown",
     "name": "chocolate"
    },
    {
-    "hex": "28201C",
-    "share": 0.154,
-    "L": 13.0,
-    "C": 5.1,
-    "h": 53.9,
-    "rel": 0.211,
+    "hex": "CEA17E",
+    "share": 0.169,
+    "L": 69.6,
+    "C": 27.4,
+    "h": 64.1,
+    "rel": 0.326,
+    "neutral": false,
+    "family": "brown",
+    "name": "tan"
+   }
+  ],
+  "skin_share": 0.392,
+  "kept_share": 0.43,
+  "colour_confidence": "low",
+  "colour_stability": "stable"
+ },
+ "B028-P013": {
+  "colours": [
+   {
+    "hex": "EFDFD9",
+    "share": 0.697,
+    "L": 89.9,
+    "C": 6.6,
+    "h": 47.7,
+    "rel": 0.425,
+    "neutral": false,
+    "family": "warm neutral",
+    "name": "cream"
+   },
+   {
+    "hex": "3A3029",
+    "share": 0.202,
+    "L": 20.7,
+    "C": 6.9,
+    "h": 62.7,
+    "rel": 0.206,
     "neutral": false,
     "family": "brown",
     "name": "espresso"
+   },
+   {
+    "hex": "7B7168",
+    "share": 0.101,
+    "L": 48.3,
+    "C": 6.8,
+    "h": 70.8,
+    "rel": 0.114,
+    "neutral": true,
+    "family": "warm neutral",
+    "name": "stone"
    }
   ],
-  "skin_share": 0.698,
-  "kept_share": 0.233,
+  "skin_share": 0.756,
+  "kept_share": 0.188,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
@@ -6413,123 +6303,123 @@
  "B029-P002": {
   "colours": [
    {
-    "hex": "564939",
-    "share": 0.372,
-    "L": 31.9,
-    "C": 11.9,
-    "h": 76.8,
-    "rel": 0.281,
+    "hex": "534636",
+    "share": 0.581,
+    "L": 30.6,
+    "C": 12.0,
+    "h": 76.7,
+    "rel": 0.291,
     "neutral": false,
     "family": "brown",
     "name": "chocolate"
    },
    {
-    "hex": "393129",
-    "share": 0.223,
-    "L": 20.9,
-    "C": 6.7,
-    "h": 72.5,
-    "rel": 0.215,
+    "hex": "221D1A",
+    "share": 0.191,
+    "L": 11.2,
+    "C": 3.4,
+    "h": 59.2,
+    "rel": 0.174,
     "neutral": false,
-    "family": "brown",
-    "name": "espresso"
+    "family": "black",
+    "name": "black"
    },
    {
-    "hex": "958169",
-    "share": 0.205,
-    "L": 55.2,
-    "C": 16.3,
-    "h": 76.5,
-    "rel": 0.258,
+    "hex": "6E604D",
+    "share": 0.149,
+    "L": 41.6,
+    "C": 13.2,
+    "h": 79.5,
+    "rel": 0.261,
     "neutral": false,
     "family": "brown",
-    "name": "tan"
+    "name": "tobacco"
    }
   ],
-  "skin_share": 0.0,
-  "kept_share": 0.625,
-  "colour_confidence": "high",
+  "skin_share": 0.001,
+  "kept_share": 0.702,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B030-P001": {
   "colours": [
    {
-    "hex": "8E7861",
-    "share": 0.364,
-    "L": 51.9,
+    "hex": "AB947C",
+    "share": 0.393,
+    "L": 62.8,
     "C": 16.6,
-    "h": 72.8,
-    "rel": 0.268,
-    "neutral": false,
-    "family": "brown",
-    "name": "tobacco"
-   },
-   {
-    "hex": "C1AC94",
-    "share": 0.262,
-    "L": 71.5,
-    "C": 15.6,
-    "h": 76.0,
-    "rel": 0.2,
+    "h": 73.2,
+    "rel": 0.232,
     "neutral": false,
     "family": "brown",
     "name": "tan"
    },
    {
-    "hex": "221D19",
-    "share": 0.191,
-    "L": 11.2,
-    "C": 4.0,
-    "h": 66.9,
-    "rel": 0.216,
+    "hex": "88725A",
+    "share": 0.335,
+    "L": 49.5,
+    "C": 17.2,
+    "h": 73.6,
+    "rel": 0.291,
     "neutral": false,
-    "family": "black",
-    "name": "black"
+    "family": "brown",
+    "name": "tobacco"
+   },
+   {
+    "hex": "D6C2AB",
+    "share": 0.136,
+    "L": 79.5,
+    "C": 14.5,
+    "h": 76.6,
+    "rel": 0.215,
+    "neutral": false,
+    "family": "yellow",
+    "name": "butter"
    }
   ],
-  "skin_share": 0.121,
-  "kept_share": 0.633,
+  "skin_share": 0.108,
+  "kept_share": 0.616,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B030-P002": {
   "colours": [
    {
-    "hex": "2F2B29",
-    "share": 0.423,
-    "L": 17.9,
-    "C": 2.4,
-    "h": 54.9,
-    "rel": 0.074,
-    "neutral": true,
-    "family": "black",
-    "name": "black"
+    "hex": "A28D74",
+    "share": 0.362,
+    "L": 59.9,
+    "C": 16.7,
+    "h": 76.4,
+    "rel": 0.248,
+    "neutral": false,
+    "family": "brown",
+    "name": "tan"
    },
    {
-    "hex": "55504C",
-    "share": 0.252,
-    "L": 34.4,
-    "C": 3.3,
-    "h": 68.1,
-    "rel": 0.07,
+    "hex": "35302D",
+    "share": 0.341,
+    "L": 20.3,
+    "C": 3.2,
+    "h": 59.7,
+    "rel": 0.092,
     "neutral": true,
     "family": "warm neutral",
     "name": "taupe"
    },
    {
-    "hex": "9F8A73",
-    "share": 0.233,
-    "L": 58.8,
-    "C": 15.8,
-    "h": 74.4,
-    "rel": 0.235,
-    "neutral": false,
-    "family": "brown",
-    "name": "tan"
+    "hex": "665E56",
+    "share": 0.152,
+    "L": 40.4,
+    "C": 6.0,
+    "h": 73.6,
+    "rel": 0.117,
+    "neutral": true,
+    "family": "warm neutral",
+    "name": "taupe"
    }
   ],
-  "skin_share": 0.07,
-  "kept_share": 0.549,
+  "skin_share": 0.084,
+  "kept_share": 0.642,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -6716,19 +6606,19 @@
  "B030-P009": {
   "colours": [
    {
-    "hex": "362D26",
-    "share": 0.56,
-    "L": 19.2,
-    "C": 6.6,
-    "h": 65.6,
-    "rel": 0.216,
+    "hex": "362E27",
+    "share": 0.622,
+    "L": 19.6,
+    "C": 6.3,
+    "h": 69.0,
+    "rel": 0.207,
     "neutral": false,
     "family": "brown",
     "name": "espresso"
    },
    {
     "hex": "1A191C",
-    "share": 0.401,
+    "share": 0.339,
     "L": 9.0,
     "C": 2.3,
     "h": 303.5,
@@ -6739,7 +6629,7 @@
    }
   ],
   "skin_share": 0.021,
-  "kept_share": 0.546,
+  "kept_share": 0.593,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -6795,60 +6685,82 @@
  "B031-P002": {
   "colours": [
    {
-    "hex": "40362F",
-    "share": 0.496,
-    "L": 23.5,
-    "C": 6.8,
-    "h": 62.9,
-    "rel": 0.181,
+    "hex": "3F332B",
+    "share": 0.486,
+    "L": 22.3,
+    "C": 8.1,
+    "h": 61.1,
+    "rel": 0.222,
     "neutral": false,
     "family": "brown",
     "name": "chocolate"
    },
    {
-    "hex": "462D28",
-    "share": 0.198,
-    "L": 21.3,
-    "C": 13.4,
-    "h": 36.3,
-    "rel": 0.249,
+    "hex": "554A41",
+    "share": 0.29,
+    "L": 32.3,
+    "C": 7.7,
+    "h": 67.4,
+    "rel": 0.167,
     "neutral": false,
     "family": "brown",
-    "name": "espresso"
+    "name": "chocolate"
    },
    {
-    "hex": "211A18",
-    "share": 0.177,
-    "L": 10.0,
-    "C": 4.0,
-    "h": 41.6,
-    "rel": 0.174,
+    "hex": "231C18",
+    "share": 0.142,
+    "L": 10.9,
+    "C": 4.8,
+    "h": 57.3,
+    "rel": 0.244,
     "neutral": false,
     "family": "brown",
     "name": "espresso"
    }
   ],
-  "skin_share": 0.146,
-  "kept_share": 0.598,
+  "skin_share": 0.174,
+  "kept_share": 0.472,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B031-P003": {
   "colours": [
    {
-    "hex": "13131C",
-    "share": 0.925,
-    "L": 6.2,
-    "C": 6.6,
-    "h": 290.9,
-    "rel": 0.228,
+    "hex": "15161F",
+    "share": 0.783,
+    "L": 7.5,
+    "C": 6.8,
+    "h": 288.4,
+    "rel": 0.247,
+    "neutral": false,
+    "family": "blue",
+    "name": "navy"
+   },
+   {
+    "hex": "A5ABB4",
+    "share": 0.083,
+    "L": 69.8,
+    "C": 5.4,
+    "h": 266.5,
+    "rel": 0.114,
+    "neutral": true,
+    "family": "grey",
+    "name": "light grey"
+   },
+   {
+    "hex": "313548",
+    "share": 0.068,
+    "L": 22.5,
+    "C": 12.8,
+    "h": 285.8,
+    "rel": 0.31,
     "neutral": false,
     "family": "blue",
     "name": "navy"
    }
   ],
-  "skin_share": 0.081,
-  "kept_share": 0.581,
+  "skin_share": 0.142,
+  "kept_share": 0.46,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -6874,41 +6786,30 @@
  "B031-P005": {
   "colours": [
    {
-    "hex": "34312C",
-    "share": 0.643,
-    "L": 20.5,
-    "C": 3.7,
-    "h": 86.0,
-    "rel": 0.126,
+    "hex": "37332E",
+    "share": 0.788,
+    "L": 21.5,
+    "C": 3.9,
+    "h": 79.4,
+    "rel": 0.125,
     "neutral": true,
     "family": "warm neutral",
     "name": "taupe"
    },
    {
-    "hex": "988671",
-    "share": 0.23,
-    "L": 57.0,
-    "C": 14.2,
-    "h": 76.3,
-    "rel": 0.219,
-    "neutral": false,
-    "family": "brown",
-    "name": "tan"
-   },
-   {
-    "hex": "4F4C47",
-    "share": 0.127,
-    "L": 32.4,
-    "C": 3.4,
-    "h": 86.5,
-    "rel": 0.083,
+    "hex": "55534E",
+    "share": 0.177,
+    "L": 35.3,
+    "C": 3.2,
+    "h": 93.8,
+    "rel": 0.074,
     "neutral": true,
     "family": "warm neutral",
     "name": "taupe"
    }
   ],
-  "skin_share": 0.089,
-  "kept_share": 0.668,
+  "skin_share": 0.155,
+  "kept_share": 0.511,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -6934,31 +6835,31 @@
  "B031-P007": {
   "colours": [
    {
-    "hex": "38160F",
-    "share": 0.74,
-    "L": 12.3,
-    "C": 20.3,
-    "h": 37.0,
-    "rel": 0.643,
+    "hex": "3A1711",
+    "share": 0.851,
+    "L": 12.9,
+    "C": 20.6,
+    "h": 35.8,
+    "rel": 0.601,
     "neutral": false,
     "family": "brown",
     "name": "espresso"
    },
    {
-    "hex": "1A181C",
-    "share": 0.229,
-    "L": 8.6,
-    "C": 3.2,
-    "h": 309.5,
-    "rel": 0.054,
-    "neutral": true,
-    "family": "black",
-    "name": "black"
+    "hex": "231B19",
+    "share": 0.103,
+    "L": 10.6,
+    "C": 4.5,
+    "h": 39.2,
+    "rel": 0.175,
+    "neutral": false,
+    "family": "brown",
+    "name": "espresso"
    }
   ],
-  "skin_share": 0.132,
-  "kept_share": 0.629,
-  "colour_confidence": "medium",
+  "skin_share": 0.278,
+  "kept_share": 0.427,
+  "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B031-P008": {
@@ -6983,72 +6884,61 @@
  "B031-P009": {
   "colours": [
    {
-    "hex": "433331",
-    "share": 0.756,
-    "L": 22.9,
-    "C": 7.9,
-    "h": 30.5,
-    "rel": 0.151,
+    "hex": "312422",
+    "share": 0.946,
+    "L": 15.6,
+    "C": 6.9,
+    "h": 32.6,
+    "rel": 0.158,
     "neutral": false,
     "family": "brown",
-    "name": "chocolate"
+    "name": "espresso"
    },
    {
-    "hex": "1A1413",
-    "share": 0.19,
-    "L": 6.9,
-    "C": 3.1,
-    "h": 31.3,
-    "rel": 0.15,
-    "neutral": false,
-    "family": "black",
-    "name": "black"
-   },
-   {
-    "hex": "5E4D4C",
-    "share": 0.054,
-    "L": 34.4,
-    "C": 7.7,
-    "h": 25.2,
-    "rel": 0.118,
+    "hex": "736160",
+    "share": 0.053,
+    "L": 42.8,
+    "C": 7.8,
+    "h": 24.8,
+    "rel": 0.103,
     "neutral": true,
     "family": "grey",
-    "name": "dark grey"
+    "name": "mid grey"
    }
   ],
-  "skin_share": 0.217,
-  "kept_share": 0.657,
-  "colour_confidence": "high",
+  "skin_share": 0.285,
+  "kept_share": 0.506,
+  "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B032-P001": {
   "colours": [
    {
-    "hex": "433331",
-    "share": 0.761,
-    "L": 22.9,
-    "C": 7.9,
-    "h": 30.5,
-    "rel": 0.151,
-    "neutral": false,
-    "family": "brown",
-    "name": "chocolate"
+    "hex": "302422",
+    "share": 0.936,
+    "L": 15.5,
+    "C": 6.4,
+    "h": 33.5,
+    "rel": 0.146,
+    "neutral": true,
+    "family": "black",
+    "name": "off-black"
    },
    {
-    "hex": "1A1413",
-    "share": 0.193,
-    "L": 6.9,
-    "C": 3.1,
-    "h": 31.3,
-    "rel": 0.15,
-    "neutral": false,
-    "family": "black",
-    "name": "black"
+    "hex": "715E5D",
+    "share": 0.064,
+    "L": 41.7,
+    "C": 8.3,
+    "h": 24.7,
+    "rel": 0.111,
+    "neutral": true,
+    "family": "grey",
+    "name": "mid grey"
    }
   ],
-  "skin_share": 0.216,
-  "kept_share": 0.658,
-  "colour_confidence": "high",
+  "skin_share": 0.288,
+  "kept_share": 0.504,
+  "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B032-P002": {
@@ -7136,41 +7026,41 @@
  "B032-P004": {
   "colours": [
    {
-    "hex": "B49A7A",
-    "share": 0.412,
-    "L": 65.1,
-    "C": 21.0,
+    "hex": "B79D7D",
+    "share": 0.425,
+    "L": 66.3,
+    "C": 20.9,
     "h": 76.7,
-    "rel": 0.291,
+    "rel": 0.286,
     "neutral": false,
     "family": "brown",
     "name": "tan"
    },
    {
-    "hex": "927859",
-    "share": 0.332,
-    "L": 52.1,
-    "C": 21.6,
-    "h": 75.1,
-    "rel": 0.353,
+    "hex": "967B5C",
+    "share": 0.316,
+    "L": 53.4,
+    "C": 21.7,
+    "h": 74.2,
+    "rel": 0.347,
     "neutral": false,
     "family": "brown",
     "name": "tan"
    },
    {
-    "hex": "5E442F",
-    "share": 0.212,
-    "L": 31.2,
-    "C": 19.0,
-    "h": 64.2,
-    "rel": 0.411,
+    "hex": "685037",
+    "share": 0.156,
+    "L": 35.9,
+    "C": 19.6,
+    "h": 70.9,
+    "rel": 0.41,
     "neutral": false,
     "family": "brown",
-    "name": "chocolate"
+    "name": "tobacco"
    }
   ],
-  "skin_share": 0.12,
-  "kept_share": 0.566,
+  "skin_share": 0.19,
+  "kept_share": 0.614,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -7401,41 +7291,19 @@
  "B034-P002": {
   "colours": [
    {
-    "hex": "241C20",
-    "share": 0.414,
-    "L": 11.3,
-    "C": 5.0,
-    "h": 345.1,
-    "rel": 0.143,
-    "neutral": true,
-    "family": "black",
-    "name": "off-black"
-   },
-   {
-    "hex": "393541",
-    "share": 0.37,
-    "L": 23.0,
-    "C": 8.2,
-    "h": 304.0,
-    "rel": 0.088,
-    "neutral": true,
-    "family": "purple",
-    "name": "aubergine"
-   },
-   {
-    "hex": "535E6C",
-    "share": 0.205,
-    "L": 39.5,
-    "C": 9.4,
-    "h": 264.9,
-    "rel": 0.26,
+    "hex": "32272C",
+    "share": 0.984,
+    "L": 17.0,
+    "C": 6.3,
+    "h": 347.9,
+    "rel": 0.154,
     "neutral": false,
-    "family": "blue",
-    "name": "denim blue"
+    "family": "red",
+    "name": "oxblood"
    }
   ],
-  "skin_share": 0.082,
-  "kept_share": 0.714,
+  "skin_share": 0.066,
+  "kept_share": 0.789,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -7491,30 +7359,30 @@
  "B035-P001": {
   "colours": [
    {
-    "hex": "101622",
-    "share": 0.843,
-    "L": 7.2,
-    "C": 9.3,
-    "h": 277.4,
-    "rel": 0.471,
+    "hex": "111724",
+    "share": 0.886,
+    "L": 7.8,
+    "C": 10.0,
+    "h": 279.2,
+    "rel": 0.476,
     "neutral": false,
     "family": "blue",
     "name": "navy"
    },
    {
-    "hex": "232C3C",
-    "share": 0.145,
-    "L": 17.8,
-    "C": 11.5,
-    "h": 274.9,
-    "rel": 0.426,
+    "hex": "273041",
+    "share": 0.1,
+    "L": 19.7,
+    "C": 12.0,
+    "h": 275.8,
+    "rel": 0.412,
     "neutral": false,
     "family": "blue",
     "name": "navy"
    }
   ],
-  "skin_share": 0.024,
-  "kept_share": 0.573,
+  "skin_share": 0.028,
+  "kept_share": 0.612,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -7985,30 +7853,30 @@
  "B037-P003": {
   "colours": [
    {
-    "hex": "22242E",
-    "share": 0.792,
-    "L": 14.4,
-    "C": 7.1,
-    "h": 285.1,
-    "rel": 0.225,
+    "hex": "23242F",
+    "share": 0.885,
+    "L": 14.5,
+    "C": 7.8,
+    "h": 289.1,
+    "rel": 0.214,
     "neutral": false,
     "family": "blue",
     "name": "navy"
    },
    {
-    "hex": "374149",
-    "share": 0.208,
-    "L": 26.9,
-    "C": 6.5,
-    "h": 252.2,
-    "rel": 0.278,
+    "hex": "384249",
+    "share": 0.094,
+    "L": 27.3,
+    "C": 6.0,
+    "h": 248.0,
+    "rel": 0.267,
     "neutral": false,
     "family": "blue",
     "name": "navy"
    }
   ],
-  "skin_share": 0.015,
-  "kept_share": 0.657,
+  "skin_share": 0.024,
+  "kept_share": 0.666,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -8053,20 +7921,20 @@
  "B037-P006": {
   "colours": [
    {
-    "hex": "141318",
-    "share": 0.982,
-    "L": 6.1,
-    "C": 3.5,
-    "h": 297.4,
-    "rel": 0.094,
+    "hex": "121216",
+    "share": 0.959,
+    "L": 5.6,
+    "C": 2.6,
+    "h": 290.2,
+    "rel": 0.095,
     "neutral": true,
     "family": "black",
     "name": "black"
    }
   ],
   "skin_share": 0.0,
-  "kept_share": 0.691,
-  "colour_confidence": "high",
+  "kept_share": 0.695,
+  "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B037-P007": {
@@ -8307,72 +8175,50 @@
  "B039-P002": {
   "colours": [
    {
-    "hex": "3E403F",
-    "share": 0.508,
-    "L": 26.9,
+    "hex": "393B3A",
+    "share": 0.864,
+    "L": 24.6,
     "C": 1.1,
     "h": 163.4,
-    "rel": 0.04,
+    "rel": 0.042,
     "neutral": true,
     "family": "grey",
     "name": "dark grey"
    },
    {
-    "hex": "212120",
-    "share": 0.492,
-    "L": 12.7,
-    "C": 0.7,
+    "hex": "181816",
+    "share": 0.136,
+    "L": 8.2,
+    "C": 1.5,
     "h": 110.0,
-    "rel": 0.036,
+    "rel": 0.114,
     "neutral": true,
     "family": "black",
     "name": "black"
    }
   ],
-  "skin_share": 0.012,
-  "kept_share": 0.676,
+  "skin_share": 0.018,
+  "kept_share": 0.773,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B039-P003": {
   "colours": [
    {
-    "hex": "231E19",
-    "share": 0.528,
-    "L": 11.7,
-    "C": 4.5,
-    "h": 72.7,
-    "rel": 0.247,
+    "hex": "1B1814",
+    "share": 0.948,
+    "L": 8.5,
+    "C": 3.3,
+    "h": 79.9,
+    "rel": 0.252,
     "neutral": false,
-    "family": "brown",
-    "name": "espresso"
-   },
-   {
-    "hex": "40352E",
-    "share": 0.356,
-    "L": 23.1,
-    "C": 7.2,
-    "h": 60.2,
-    "rel": 0.189,
-    "neutral": false,
-    "family": "brown",
-    "name": "chocolate"
-   },
-   {
-    "hex": "6B5E57",
-    "share": 0.097,
-    "L": 40.9,
-    "C": 7.1,
-    "h": 56.3,
-    "rel": 0.116,
-    "neutral": true,
-    "family": "warm neutral",
-    "name": "taupe"
+    "family": "black",
+    "name": "black"
    }
   ],
-  "skin_share": 0.045,
-  "kept_share": 0.608,
-  "colour_confidence": "high",
+  "skin_share": 0.0,
+  "kept_share": 0.704,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B039-P004": {
@@ -8419,68 +8265,68 @@
  "B039-P005": {
   "colours": [
    {
-    "hex": "0F1215",
-    "share": 0.97,
-    "L": 5.3,
-    "C": 2.2,
-    "h": 258.9,
-    "rel": 0.2,
+    "hex": "0F1114",
+    "share": 0.96,
+    "L": 5.0,
+    "C": 2.0,
+    "h": 267.8,
+    "rel": 0.151,
     "neutral": false,
     "family": "black",
     "name": "black"
    }
   ],
-  "skin_share": 0.032,
-  "kept_share": 0.682,
+  "skin_share": 0.035,
+  "kept_share": 0.757,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B039-P006": {
   "colours": [
    {
-    "hex": "0F1112",
-    "share": 0.998,
-    "L": 4.9,
-    "C": 1.0,
-    "h": 237.6,
-    "rel": 0.126,
-    "neutral": true,
+    "hex": "0E1111",
+    "share": 0.962,
+    "L": 4.8,
+    "C": 1.1,
+    "h": 199.4,
+    "rel": 0.179,
+    "neutral": false,
     "family": "black",
     "name": "black"
    }
   ],
   "skin_share": 0.0,
-  "kept_share": 0.703,
-  "colour_confidence": "medium",
+  "kept_share": 0.707,
+  "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B039-P007": {
   "colours": [
    {
-    "hex": "141516",
-    "share": 0.911,
-    "L": 6.7,
-    "C": 0.8,
-    "h": 256.5,
-    "rel": 0.066,
+    "hex": "1C1C1D",
+    "share": 0.767,
+    "L": 10.3,
+    "C": 0.7,
+    "h": 290.4,
+    "rel": 0.022,
     "neutral": true,
     "family": "black",
     "name": "black"
    },
    {
-    "hex": "4C2915",
-    "share": 0.076,
-    "L": 20.7,
-    "C": 24.5,
-    "h": 54.4,
-    "rel": 0.656,
+    "hex": "492613",
+    "share": 0.175,
+    "L": 19.4,
+    "C": 24.3,
+    "h": 53.3,
+    "rel": 0.681,
     "neutral": false,
     "family": "brown",
     "name": "espresso"
    }
   ],
-  "skin_share": 0.29,
-  "kept_share": 0.405,
+  "skin_share": 0.489,
+  "kept_share": 0.33,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
@@ -8517,41 +8363,41 @@
  "B040-P002": {
   "colours": [
    {
-    "hex": "4D4037",
-    "share": 0.343,
-    "L": 28.2,
-    "C": 8.6,
-    "h": 62.3,
-    "rel": 0.196,
+    "hex": "4E4237",
+    "share": 0.375,
+    "L": 28.9,
+    "C": 9.2,
+    "h": 69.8,
+    "rel": 0.221,
     "neutral": false,
     "family": "brown",
     "name": "chocolate"
    },
    {
-    "hex": "706155",
-    "share": 0.324,
-    "L": 42.2,
-    "C": 9.9,
-    "h": 66.6,
-    "rel": 0.177,
+    "hex": "716155",
+    "share": 0.31,
+    "L": 42.3,
+    "C": 10.2,
+    "h": 64.7,
+    "rel": 0.179,
     "neutral": false,
     "family": "brown",
     "name": "tobacco"
    },
    {
-    "hex": "231D18",
-    "share": 0.251,
-    "L": 11.3,
-    "C": 4.9,
-    "h": 67.6,
-    "rel": 0.266,
+    "hex": "261F19",
+    "share": 0.262,
+    "L": 12.4,
+    "C": 5.8,
+    "h": 68.0,
+    "rel": 0.289,
     "neutral": false,
     "family": "brown",
     "name": "espresso"
    }
   ],
-  "skin_share": 0.201,
-  "kept_share": 0.489,
+  "skin_share": 0.185,
+  "kept_share": 0.574,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -8600,7 +8446,7 @@
   "colours": [
    {
     "hex": "0E1012",
-    "share": 0.92,
+    "share": 0.905,
     "L": 4.6,
     "C": 1.4,
     "h": 257.9,
@@ -8610,19 +8456,19 @@
     "name": "black"
    },
    {
-    "hex": "E3DCD5",
-    "share": 0.062,
-    "L": 88.1,
-    "C": 4.4,
-    "h": 74.7,
-    "rel": 0.15,
+    "hex": "E4DDD5",
+    "share": 0.073,
+    "L": 88.5,
+    "C": 4.9,
+    "h": 78.1,
+    "rel": 0.154,
     "neutral": false,
     "family": "warm neutral",
     "name": "cream"
    }
   ],
-  "skin_share": 0.053,
-  "kept_share": 0.592,
+  "skin_share": 0.063,
+  "kept_share": 0.621,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
@@ -8659,19 +8505,19 @@
  "B040-P006": {
   "colours": [
    {
-    "hex": "0F1113",
-    "share": 0.952,
-    "L": 5.0,
-    "C": 1.4,
-    "h": 257.8,
-    "rel": 0.136,
+    "hex": "0F1112",
+    "share": 0.942,
+    "L": 4.9,
+    "C": 1.0,
+    "h": 237.6,
+    "rel": 0.126,
     "neutral": true,
     "family": "black",
     "name": "black"
    }
   ],
-  "skin_share": 0.039,
-  "kept_share": 0.631,
+  "skin_share": 0.044,
+  "kept_share": 0.666,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
@@ -8746,41 +8592,41 @@
  "B041-P004": {
   "colours": [
    {
-    "hex": "726660",
-    "share": 0.489,
-    "L": 44.1,
-    "C": 6.3,
-    "h": 54.5,
-    "rel": 0.094,
+    "hex": "5E534C",
+    "share": 0.367,
+    "L": 36.2,
+    "C": 6.6,
+    "h": 60.8,
+    "rel": 0.124,
     "neutral": true,
     "family": "warm neutral",
     "name": "taupe"
    },
    {
-    "hex": "3F3630",
-    "share": 0.321,
-    "L": 23.4,
-    "C": 5.9,
-    "h": 61.8,
-    "rel": 0.157,
-    "neutral": false,
-    "family": "brown",
-    "name": "chocolate"
-   },
-   {
-    "hex": "BEADA1",
-    "share": 0.175,
-    "L": 71.8,
-    "C": 9.3,
-    "h": 64.0,
-    "rel": 0.127,
+    "hex": "857872",
+    "share": 0.326,
+    "L": 51.4,
+    "C": 6.4,
+    "h": 52.5,
+    "rel": 0.083,
     "neutral": true,
     "family": "warm neutral",
-    "name": "oatmeal"
+    "name": "stone"
+   },
+   {
+    "hex": "332C28",
+    "share": 0.159,
+    "L": 18.6,
+    "C": 4.4,
+    "h": 57.8,
+    "rel": 0.137,
+    "neutral": true,
+    "family": "black",
+    "name": "off-black"
    }
   ],
-  "skin_share": 0.304,
-  "kept_share": 0.424,
+  "skin_share": 0.297,
+  "kept_share": 0.463,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
@@ -8866,41 +8712,41 @@
  "B041-P008": {
   "colours": [
    {
-    "hex": "482510",
-    "share": 0.58,
-    "L": 19.0,
-    "C": 25.3,
-    "h": 55.0,
-    "rel": 0.741,
+    "hex": "472410",
+    "share": 0.637,
+    "L": 18.5,
+    "C": 24.9,
+    "h": 54.0,
+    "rel": 0.735,
     "neutral": false,
     "family": "brown",
     "name": "espresso"
    },
    {
-    "hex": "29140B",
-    "share": 0.268,
-    "L": 9.0,
-    "C": 13.3,
-    "h": 43.3,
-    "rel": 0.662,
+    "hex": "221109",
+    "share": 0.205,
+    "L": 6.9,
+    "C": 10.1,
+    "h": 41.7,
+    "rel": 0.64,
     "neutral": false,
     "family": "brown",
     "name": "espresso"
    },
    {
-    "hex": "D3C8B2",
-    "share": 0.098,
-    "L": 80.9,
-    "C": 12.4,
-    "h": 89.2,
-    "rel": 0.151,
+    "hex": "9D7859",
+    "share": 0.102,
+    "L": 53.3,
+    "C": 24.8,
+    "h": 65.6,
+    "rel": 0.37,
     "neutral": false,
-    "family": "warm neutral",
-    "name": "cream"
+    "family": "brown",
+    "name": "tan"
    }
   ],
-  "skin_share": 0.432,
-  "kept_share": 0.349,
+  "skin_share": 0.5,
+  "kept_share": 0.321,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
@@ -9027,20 +8873,31 @@
  "B042-P004": {
   "colours": [
    {
-    "hex": "1A1512",
-    "share": 0.988,
-    "L": 7.2,
-    "C": 3.2,
-    "h": 56.4,
-    "rel": 0.243,
+    "hex": "14100D",
+    "share": 0.932,
+    "L": 5.0,
+    "C": 2.2,
+    "h": 62.6,
+    "rel": 0.266,
     "neutral": false,
     "family": "black",
     "name": "black"
+   },
+   {
+    "hex": "382F30",
+    "share": 0.057,
+    "L": 20.4,
+    "C": 4.4,
+    "h": 11.5,
+    "rel": 0.099,
+    "neutral": true,
+    "family": "grey",
+    "name": "dark grey"
    }
   ],
-  "skin_share": 0.035,
-  "kept_share": 0.523,
-  "colour_confidence": "medium",
+  "skin_share": 0.037,
+  "kept_share": 0.598,
+  "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B042-P005": {
@@ -9169,82 +9026,71 @@
  "B042-P008": {
   "colours": [
    {
-    "hex": "E6414B",
-    "share": 0.607,
-    "L": 53.1,
-    "C": 71.2,
-    "h": 27.1,
-    "rel": 0.787,
+    "hex": "E7454E",
+    "share": 0.853,
+    "L": 53.8,
+    "C": 70.0,
+    "h": 26.9,
+    "rel": 0.773,
     "neutral": false,
     "family": "red",
     "name": "brick"
    },
    {
-    "hex": "C8313C",
-    "share": 0.301,
-    "L": 45.4,
-    "C": 66.5,
-    "h": 27.5,
-    "rel": 0.825,
-    "neutral": false,
-    "family": "red",
-    "name": "brick"
-   },
-   {
-    "hex": "A13434",
-    "share": 0.054,
-    "L": 38.3,
-    "C": 51.6,
-    "h": 29.3,
-    "rel": 0.711,
+    "hex": "AF292F",
+    "share": 0.113,
+    "L": 39.4,
+    "C": 61.4,
+    "h": 29.5,
+    "rel": 0.828,
     "neutral": false,
     "family": "red",
     "name": "brick"
    }
   ],
-  "skin_share": 0.611,
-  "kept_share": 0.208,
-  "colour_confidence": "low",
+  "skin_share": 0.229,
+  "kept_share": 0.372,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B042-P009": {
   "colours": [
    {
-    "hex": "CEB8A3",
-    "share": 0.626,
-    "L": 76.1,
-    "C": 14.3,
-    "h": 71.6,
-    "rel": 0.199,
-    "neutral": false,
-    "family": "warm neutral",
-    "name": "oatmeal"
-   },
-   {
-    "hex": "1B1817",
-    "share": 0.28,
-    "L": 8.6,
-    "C": 1.8,
-    "h": 44.9,
-    "rel": 0.095,
+    "hex": "191615",
+    "share": 0.465,
+    "L": 7.5,
+    "C": 1.7,
+    "h": 43.7,
+    "rel": 0.101,
     "neutral": true,
     "family": "black",
     "name": "black"
    },
    {
-    "hex": "41342F",
-    "share": 0.094,
-    "L": 22.9,
-    "C": 7.2,
-    "h": 47.6,
-    "rel": 0.159,
+    "hex": "C9B39E",
+    "share": 0.297,
+    "L": 74.3,
+    "C": 14.3,
+    "h": 71.6,
+    "rel": 0.177,
+    "neutral": false,
+    "family": "warm neutral",
+    "name": "oatmeal"
+   },
+   {
+    "hex": "342925",
+    "share": 0.199,
+    "L": 17.7,
+    "C": 6.3,
+    "h": 46.4,
+    "rel": 0.171,
     "neutral": false,
     "family": "brown",
-    "name": "chocolate"
+    "name": "espresso"
    }
   ],
-  "skin_share": 0.14,
-  "kept_share": 0.413,
+  "skin_share": 0.231,
+  "kept_share": 0.479,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -9341,10 +9187,10 @@
  "B042-P013": {
   "colours": [
    {
-    "hex": "0C0C0D",
-    "share": 0.922,
-    "L": 3.3,
-    "C": 0.5,
+    "hex": "0B0B0C",
+    "share": 0.913,
+    "L": 3.0,
+    "C": 0.4,
     "h": 290.2,
     "rel": 0.018,
     "neutral": true,
@@ -9352,19 +9198,19 @@
     "name": "black"
    },
    {
-    "hex": "3D3B3B",
-    "share": 0.054,
-    "L": 25.1,
-    "C": 0.9,
-    "h": 19.6,
-    "rel": 0.018,
+    "hex": "3F3C3C",
+    "share": 0.057,
+    "L": 25.6,
+    "C": 1.4,
+    "h": 19.7,
+    "rel": 0.026,
     "neutral": true,
     "family": "grey",
     "name": "dark grey"
    }
   ],
-  "skin_share": 0.048,
-  "kept_share": 0.529,
+  "skin_share": 0.051,
+  "kept_share": 0.599,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
@@ -9391,7 +9237,7 @@
   "colours": [
    {
     "hex": "1A1311",
-    "share": 0.438,
+    "share": 0.432,
     "L": 6.6,
     "C": 3.7,
     "h": 38.5,
@@ -9401,30 +9247,30 @@
     "name": "black"
    },
    {
-    "hex": "362B25",
-    "share": 0.327,
-    "L": 18.6,
+    "hex": "372C26",
+    "share": 0.318,
+    "L": 19.0,
     "C": 7.0,
     "h": 55.9,
-    "rel": 0.212,
+    "rel": 0.207,
     "neutral": false,
     "family": "brown",
     "name": "espresso"
    },
    {
-    "hex": "4F433C",
-    "share": 0.23,
-    "L": 29.4,
-    "C": 7.2,
-    "h": 58.1,
-    "rel": 0.152,
+    "hex": "51443D",
+    "share": 0.243,
+    "L": 30.0,
+    "C": 7.6,
+    "h": 55.9,
+    "rel": 0.153,
     "neutral": false,
     "family": "brown",
     "name": "chocolate"
    }
   ],
-  "skin_share": 0.078,
-  "kept_share": 0.579,
+  "skin_share": 0.077,
+  "kept_share": 0.629,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -9472,71 +9318,71 @@
  "B042-P017": {
   "colours": [
    {
-    "hex": "3C3A2B",
-    "share": 0.414,
-    "L": 24.2,
+    "hex": "39392A",
+    "share": 0.481,
+    "L": 23.5,
     "C": 9.9,
-    "h": 102.3,
-    "rel": 0.294,
+    "h": 108.0,
+    "rel": 0.293,
     "neutral": false,
     "family": "green",
     "name": "olive"
    },
    {
-    "hex": "251A15",
-    "share": 0.274,
-    "L": 10.5,
-    "C": 7.2,
-    "h": 50.8,
-    "rel": 0.349,
-    "neutral": false,
-    "family": "brown",
-    "name": "espresso"
+    "hex": "181A1D",
+    "share": 0.237,
+    "L": 9.2,
+    "C": 2.4,
+    "h": 267.1,
+    "rel": 0.141,
+    "neutral": true,
+    "family": "black",
+    "name": "black"
    },
    {
-    "hex": "152535",
-    "share": 0.166,
-    "L": 14.1,
-    "C": 12.5,
-    "h": 265.2,
-    "rel": 0.634,
+    "hex": "71725D",
+    "share": 0.171,
+    "L": 47.4,
+    "C": 12.3,
+    "h": 110.5,
+    "rel": 0.22,
     "neutral": false,
-    "family": "blue",
-    "name": "navy"
+    "family": "green",
+    "name": "moss"
    }
   ],
-  "skin_share": 0.05,
-  "kept_share": 0.46,
+  "skin_share": 0.055,
+  "kept_share": 0.504,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B042-P018": {
   "colours": [
    {
-    "hex": "5D5A3F",
-    "share": 0.414,
-    "L": 37.8,
-    "C": 16.5,
-    "h": 102.6,
-    "rel": 0.357,
+    "hex": "5F5C40",
+    "share": 0.401,
+    "L": 38.7,
+    "C": 17.0,
+    "h": 102.7,
+    "rel": 0.363,
     "neutral": false,
     "family": "green",
     "name": "olive"
    },
    {
-    "hex": "726E50",
-    "share": 0.347,
-    "L": 46.1,
-    "C": 17.7,
-    "h": 101.9,
-    "rel": 0.334,
+    "hex": "747051",
+    "share": 0.35,
+    "L": 46.8,
+    "C": 18.2,
+    "h": 102.0,
+    "rel": 0.34,
     "neutral": false,
     "family": "green",
     "name": "olive"
    },
    {
     "hex": "442111",
-    "share": 0.154,
+    "share": 0.173,
     "L": 17.3,
     "C": 23.5,
     "h": 49.8,
@@ -9546,9 +9392,9 @@
     "name": "espresso"
    }
   ],
-  "skin_share": 0.04,
-  "kept_share": 0.715,
-  "colour_confidence": "high",
+  "skin_share": 0.048,
+  "kept_share": 0.735,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B042-P019": {
@@ -9674,71 +9520,60 @@
  "B042-P023": {
   "colours": [
    {
-    "hex": "0C0C0D",
-    "share": 0.868,
-    "L": 3.3,
-    "C": 0.5,
+    "hex": "0A0A0B",
+    "share": 0.953,
+    "L": 2.8,
+    "C": 0.4,
     "h": 290.2,
-    "rel": 0.018,
-    "neutral": true,
-    "family": "black",
-    "name": "black"
-   },
-   {
-    "hex": "272729",
-    "share": 0.114,
-    "L": 15.7,
-    "C": 1.4,
-    "h": 290.6,
-    "rel": 0.035,
+    "rel": 0.017,
     "neutral": true,
     "family": "black",
     "name": "black"
    }
   ],
-  "skin_share": 0.006,
-  "kept_share": 0.635,
+  "skin_share": 0.0,
+  "kept_share": 0.776,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B042-P024": {
   "colours": [
    {
-    "hex": "171616",
-    "share": 0.393,
-    "L": 7.4,
-    "C": 0.5,
-    "h": 19.4,
-    "rel": 0.017,
+    "hex": "DED2C1",
+    "share": 0.44,
+    "L": 84.7,
+    "C": 10.0,
+    "h": 82.5,
+    "rel": 0.18,
+    "neutral": false,
+    "family": "warm neutral",
+    "name": "cream"
+   },
+   {
+    "hex": "1D1C1B",
+    "share": 0.22,
+    "L": 10.3,
+    "C": 0.9,
+    "h": 74.8,
+    "rel": 0.055,
     "neutral": true,
     "family": "black",
     "name": "black"
    },
    {
-    "hex": "D9CDBB",
-    "share": 0.337,
-    "L": 82.9,
-    "C": 10.5,
-    "h": 83.7,
-    "rel": 0.146,
-    "neutral": true,
-    "family": "warm neutral",
-    "name": "cream"
-   },
-   {
-    "hex": "9A8A79",
-    "share": 0.147,
-    "L": 58.4,
-    "C": 11.7,
-    "h": 74.4,
-    "rel": 0.175,
+    "hex": "B8A997",
+    "share": 0.189,
+    "L": 70.0,
+    "C": 11.5,
+    "h": 77.9,
+    "rel": 0.152,
     "neutral": false,
     "family": "brown",
     "name": "tan"
    }
   ],
-  "skin_share": 0.033,
-  "kept_share": 0.553,
+  "skin_share": 0.043,
+  "kept_share": 0.676,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -9775,41 +9610,41 @@
  "B042-P026": {
   "colours": [
    {
-    "hex": "162535",
-    "share": 0.479,
-    "L": 14.1,
-    "C": 12.4,
-    "h": 266.5,
-    "rel": 0.612,
-    "neutral": false,
-    "family": "blue",
-    "name": "navy"
-   },
-   {
-    "hex": "97A7B8",
-    "share": 0.251,
-    "L": 67.8,
+    "hex": "7E8F9F",
+    "share": 0.365,
+    "L": 58.6,
     "C": 10.8,
-    "h": 259.5,
-    "rel": 0.214,
+    "h": 256.6,
+    "rel": 0.25,
     "neutral": false,
     "family": "blue",
     "name": "steel blue"
    },
    {
-    "hex": "4A5E71",
-    "share": 0.242,
-    "L": 39.0,
-    "C": 13.5,
-    "h": 259.2,
-    "rel": 0.409,
+    "hex": "14202E",
+    "share": 0.244,
+    "L": 11.8,
+    "C": 11.0,
+    "h": 268.0,
+    "rel": 0.57,
+    "neutral": false,
+    "family": "blue",
+    "name": "navy"
+   },
+   {
+    "hex": "44586B",
+    "share": 0.231,
+    "L": 36.5,
+    "C": 13.6,
+    "h": 259.6,
+    "rel": 0.43,
     "neutral": false,
     "family": "blue",
     "name": "denim blue"
    }
   ],
-  "skin_share": 0.048,
-  "kept_share": 0.548,
+  "skin_share": 0.065,
+  "kept_share": 0.618,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -9846,41 +9681,41 @@
  "B042-P028": {
   "colours": [
    {
-    "hex": "181718",
-    "share": 0.385,
-    "L": 7.9,
-    "C": 0.9,
-    "h": 324.6,
-    "rel": 0.024,
-    "neutral": true,
-    "family": "black",
-    "name": "black"
-   },
-   {
-    "hex": "C3B8A2",
-    "share": 0.271,
-    "L": 75.1,
+    "hex": "C5BAA4",
+    "share": 0.381,
+    "L": 75.9,
     "C": 12.6,
     "h": 89.0,
-    "rel": 0.163,
+    "rel": 0.161,
     "neutral": false,
     "family": "warm neutral",
     "name": "oatmeal"
    },
    {
-    "hex": "91836D",
-    "share": 0.205,
-    "L": 55.4,
+    "hex": "92846E",
+    "share": 0.286,
+    "L": 55.8,
     "C": 13.9,
     "h": 83.3,
-    "rel": 0.227,
+    "rel": 0.225,
     "neutral": false,
     "family": "brown",
     "name": "tan"
+   },
+   {
+    "hex": "6B5F4E",
+    "share": 0.185,
+    "L": 41.0,
+    "C": 11.7,
+    "h": 80.8,
+    "rel": 0.235,
+    "neutral": false,
+    "family": "brown",
+    "name": "tobacco"
    }
   ],
-  "skin_share": 0.038,
-  "kept_share": 0.555,
+  "skin_share": 0.052,
+  "kept_share": 0.723,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -9997,7 +9832,7 @@
   "colours": [
    {
     "hex": "0A0A0A",
-    "share": 0.944,
+    "share": 0.95,
     "L": 2.7,
     "C": 0.0,
     "h": 158.2,
@@ -10005,62 +9840,51 @@
     "neutral": true,
     "family": "black",
     "name": "black"
-   },
-   {
-    "hex": "2F2D2C",
-    "share": 0.056,
-    "L": 18.6,
-    "C": 1.2,
-    "h": 55.3,
-    "rel": 0.035,
-    "neutral": true,
-    "family": "black",
-    "name": "black"
    }
   ],
-  "skin_share": 0.009,
-  "kept_share": 0.661,
+  "skin_share": 0.0,
+  "kept_share": 0.644,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B042-P034": {
   "colours": [
    {
-    "hex": "171616",
-    "share": 0.411,
-    "L": 7.4,
-    "C": 0.5,
-    "h": 19.4,
-    "rel": 0.017,
+    "hex": "171615",
+    "share": 0.454,
+    "L": 7.3,
+    "C": 0.9,
+    "h": 74.4,
+    "rel": 0.074,
     "neutral": true,
     "family": "black",
     "name": "black"
    },
    {
-    "hex": "13253D",
-    "share": 0.354,
-    "L": 14.4,
-    "C": 17.7,
-    "h": 275.2,
-    "rel": 0.725,
+    "hex": "13263D",
+    "share": 0.3,
+    "L": 14.7,
+    "C": 17.1,
+    "h": 272.9,
+    "rel": 0.729,
     "neutral": false,
     "family": "blue",
     "name": "navy"
    },
    {
-    "hex": "465567",
-    "share": 0.144,
-    "L": 35.6,
-    "C": 12.3,
-    "h": 265.0,
-    "rel": 0.365,
+    "hex": "475768",
+    "share": 0.141,
+    "L": 36.3,
+    "C": 11.9,
+    "h": 261.7,
+    "rel": 0.367,
     "neutral": false,
     "family": "blue",
     "name": "denim blue"
    }
   ],
-  "skin_share": 0.053,
-  "kept_share": 0.515,
+  "skin_share": 0.055,
+  "kept_share": 0.571,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -10138,69 +9962,80 @@
  "B042-P037": {
   "colours": [
    {
-    "hex": "0B0B0B",
-    "share": 0.958,
-    "L": 3.0,
-    "C": 0.0,
-    "h": 158.2,
-    "rel": 0.0,
+    "hex": "0C0C0D",
+    "share": 0.935,
+    "L": 3.3,
+    "C": 0.5,
+    "h": 290.2,
+    "rel": 0.018,
     "neutral": true,
     "family": "black",
     "name": "black"
+   },
+   {
+    "hex": "38291F",
+    "share": 0.058,
+    "L": 18.0,
+    "C": 10.7,
+    "h": 60.1,
+    "rel": 0.349,
+    "neutral": false,
+    "family": "brown",
+    "name": "espresso"
    }
   ],
-  "skin_share": 0.042,
-  "kept_share": 0.514,
+  "skin_share": 0.043,
+  "kept_share": 0.586,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B042-P038": {
   "colours": [
    {
-    "hex": "0F0F10",
-    "share": 0.419,
-    "L": 4.3,
-    "C": 0.5,
-    "h": 290.2,
-    "rel": 0.02,
-    "neutral": true,
-    "family": "black",
-    "name": "black"
-   },
-   {
-    "hex": "CAC4B8",
-    "share": 0.351,
-    "L": 79.3,
-    "C": 6.8,
+    "hex": "CCC6BA",
+    "share": 0.782,
+    "L": 80.1,
+    "C": 6.7,
     "h": 90.0,
-    "rel": 0.084,
+    "rel": 0.083,
     "neutral": true,
     "family": "warm neutral",
     "name": "cream"
    },
    {
-    "hex": "302524",
-    "share": 0.13,
-    "L": 15.9,
-    "C": 5.6,
-    "h": 27.8,
-    "rel": 0.134,
+    "hex": "141314",
+    "share": 0.153,
+    "L": 6.0,
+    "C": 0.8,
+    "h": 324.4,
+    "rel": 0.023,
     "neutral": true,
     "family": "black",
-    "name": "off-black"
+    "name": "black"
+   },
+   {
+    "hex": "A09484",
+    "share": 0.065,
+    "L": 61.9,
+    "C": 10.2,
+    "h": 80.5,
+    "rel": 0.15,
+    "neutral": false,
+    "family": "brown",
+    "name": "tan"
    }
   ],
-  "skin_share": 0.021,
-  "kept_share": 0.426,
-  "colour_confidence": "low",
+  "skin_share": 0.0,
+  "kept_share": 0.451,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B042-P039": {
   "colours": [
    {
-    "hex": "E2DFD4",
-    "share": 1.0,
-    "L": 88.8,
+    "hex": "E5E2D7",
+    "share": 0.998,
+    "L": 89.8,
     "C": 5.8,
     "h": 98.8,
     "rel": 0.065,
@@ -10210,48 +10045,48 @@
    }
   ],
   "skin_share": 0.0,
-  "kept_share": 0.889,
-  "colour_confidence": "high",
+  "kept_share": 0.922,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B042-P040": {
   "colours": [
    {
-    "hex": "826E5A",
-    "share": 0.474,
-    "L": 47.8,
-    "C": 14.8,
-    "h": 71.8,
-    "rel": 0.254,
+    "hex": "8D7762",
+    "share": 0.363,
+    "L": 51.5,
+    "C": 15.6,
+    "h": 70.5,
+    "rel": 0.25,
     "neutral": false,
     "family": "brown",
     "name": "tobacco"
    },
    {
-    "hex": "101011",
-    "share": 0.272,
-    "L": 4.7,
-    "C": 0.6,
-    "h": 290.2,
-    "rel": 0.021,
-    "neutral": true,
-    "family": "black",
-    "name": "black"
+    "hex": "766452",
+    "share": 0.326,
+    "L": 43.6,
+    "C": 13.6,
+    "h": 71.8,
+    "rel": 0.249,
+    "neutral": false,
+    "family": "brown",
+    "name": "tobacco"
    },
    {
-    "hex": "C0AF98",
-    "share": 0.192,
-    "L": 72.3,
-    "C": 14.2,
-    "h": 80.4,
-    "rel": 0.185,
+    "hex": "C1AF99",
+    "share": 0.255,
+    "L": 72.4,
+    "C": 13.9,
+    "h": 78.0,
+    "rel": 0.179,
     "neutral": false,
     "family": "brown",
     "name": "tan"
    }
   ],
-  "skin_share": 0.069,
-  "kept_share": 0.518,
+  "skin_share": 0.005,
+  "kept_share": 0.676,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -10300,7 +10135,7 @@
   "colours": [
    {
     "hex": "0D0D0E",
-    "share": 0.896,
+    "share": 0.876,
     "L": 3.7,
     "C": 0.5,
     "h": 290.2,
@@ -10310,19 +10145,19 @@
     "name": "black"
    },
    {
-    "hex": "353434",
-    "share": 0.1,
-    "L": 21.8,
-    "C": 0.5,
-    "h": 19.5,
-    "rel": 0.01,
+    "hex": "373635",
+    "share": 0.118,
+    "L": 22.7,
+    "C": 0.8,
+    "h": 75.0,
+    "rel": 0.024,
     "neutral": true,
-    "family": "grey",
-    "name": "dark grey"
+    "family": "warm neutral",
+    "name": "taupe"
    }
   ],
-  "skin_share": 0.039,
-  "kept_share": 0.47,
+  "skin_share": 0.044,
+  "kept_share": 0.497,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
@@ -10359,31 +10194,31 @@
  "B043-P002": {
   "colours": [
    {
-    "hex": "DDD9D4",
-    "share": 0.397,
-    "L": 86.9,
-    "C": 3.0,
-    "h": 80.7,
-    "rel": 0.073,
+    "hex": "DFDBD7",
+    "share": 0.335,
+    "L": 87.6,
+    "C": 2.5,
+    "h": 75.0,
+    "rel": 0.081,
     "neutral": true,
     "family": "warm neutral",
     "name": "cream"
    },
    {
-    "hex": "716D6A",
-    "share": 0.28,
+    "hex": "716D69",
+    "share": 0.314,
     "L": 46.3,
-    "C": 2.4,
-    "h": 66.7,
-    "rel": 0.041,
+    "C": 2.9,
+    "h": 74.6,
+    "rel": 0.052,
     "neutral": true,
     "family": "warm neutral",
     "name": "stone"
    },
    {
-    "hex": "9B9894",
-    "share": 0.181,
-    "L": 63.0,
+    "hex": "9A9793",
+    "share": 0.211,
+    "L": 62.6,
     "C": 2.5,
     "h": 82.2,
     "rel": 0.037,
@@ -10392,49 +10227,49 @@
     "name": "oatmeal"
    }
   ],
-  "skin_share": 0.042,
-  "kept_share": 0.524,
+  "skin_share": 0.046,
+  "kept_share": 0.573,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B043-P003": {
   "colours": [
    {
-    "hex": "837F7C",
-    "share": 0.375,
-    "L": 53.4,
-    "C": 2.4,
-    "h": 66.7,
-    "rel": 0.035,
+    "hex": "85807D",
+    "share": 0.389,
+    "L": 53.9,
+    "C": 2.6,
+    "h": 60.3,
+    "rel": 0.037,
     "neutral": true,
     "family": "warm neutral",
     "name": "stone"
    },
    {
-    "hex": "64605C",
-    "share": 0.36,
-    "L": 41.0,
-    "C": 3.0,
-    "h": 74.5,
-    "rel": 0.058,
+    "hex": "645F5C",
+    "share": 0.348,
+    "L": 40.7,
+    "C": 2.8,
+    "h": 60.1,
+    "rel": 0.048,
     "neutral": true,
     "family": "warm neutral",
     "name": "taupe"
    },
    {
-    "hex": "3A3532",
-    "share": 0.142,
-    "L": 22.6,
-    "C": 3.1,
-    "h": 59.7,
-    "rel": 0.083,
+    "hex": "B4AEAB",
+    "share": 0.155,
+    "L": 71.5,
+    "C": 2.8,
+    "h": 55.3,
+    "rel": 0.045,
     "neutral": true,
     "family": "warm neutral",
-    "name": "taupe"
+    "name": "oatmeal"
    }
   ],
-  "skin_share": 0.076,
-  "kept_share": 0.565,
+  "skin_share": 0.09,
+  "kept_share": 0.544,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -10482,71 +10317,38 @@
  "B043-P005": {
   "colours": [
    {
-    "hex": "0C0C0D",
-    "share": 0.642,
-    "L": 3.3,
-    "C": 0.5,
-    "h": 290.2,
-    "rel": 0.018,
+    "hex": "0A0A0A",
+    "share": 0.946,
+    "L": 2.7,
+    "C": 0.0,
+    "h": 158.2,
+    "rel": 0.0,
     "neutral": true,
     "family": "black",
     "name": "black"
-   },
-   {
-    "hex": "2B2726",
-    "share": 0.178,
-    "L": 16.0,
-    "C": 2.1,
-    "h": 39.3,
-    "rel": 0.054,
-    "neutral": true,
-    "family": "black",
-    "name": "black"
-   },
-   {
-    "hex": "6E675D",
-    "share": 0.091,
-    "L": 44.0,
-    "C": 6.7,
-    "h": 82.5,
-    "rel": 0.129,
-    "neutral": true,
-    "family": "warm neutral",
-    "name": "taupe"
    }
   ],
-  "skin_share": 0.053,
-  "kept_share": 0.631,
+  "skin_share": 0.024,
+  "kept_share": 0.655,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B043-P006": {
   "colours": [
    {
-    "hex": "0D0D0F",
-    "share": 0.888,
-    "L": 3.7,
-    "C": 1.0,
-    "h": 290.2,
-    "rel": 0.039,
+    "hex": "0F0E10",
+    "share": 0.916,
+    "L": 4.1,
+    "C": 1.1,
+    "h": 308.6,
+    "rel": 0.029,
     "neutral": true,
     "family": "black",
     "name": "black"
-   },
-   {
-    "hex": "5B5243",
-    "share": 0.07,
-    "L": 35.3,
-    "C": 10.2,
-    "h": 84.5,
-    "rel": 0.232,
-    "neutral": false,
-    "family": "green",
-    "name": "olive"
    }
   ],
-  "skin_share": 0.056,
-  "kept_share": 0.54,
+  "skin_share": 0.089,
+  "kept_share": 0.656,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
@@ -10837,19 +10639,19 @@
  "B044-P008": {
   "colours": [
    {
-    "hex": "0C1417",
-    "share": 0.969,
-    "L": 5.8,
-    "C": 3.7,
-    "h": 234.2,
-    "rel": 0.431,
+    "hex": "0C1517",
+    "share": 0.975,
+    "L": 6.1,
+    "C": 3.8,
+    "h": 221.6,
+    "rel": 0.459,
     "neutral": false,
     "family": "black",
     "name": "black"
    }
   ],
   "skin_share": 0.0,
-  "kept_share": 0.874,
+  "kept_share": 0.873,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -11093,27 +10895,27 @@
  "B044-P018": {
   "colours": [
    {
-    "hex": "1E2024",
-    "share": 0.96,
-    "L": 12.2,
-    "C": 3.0,
-    "h": 272.8,
-    "rel": 0.141,
+    "hex": "1B1D20",
+    "share": 1.0,
+    "L": 10.7,
+    "C": 2.4,
+    "h": 267.0,
+    "rel": 0.132,
     "neutral": true,
     "family": "black",
     "name": "black"
    }
   ],
   "skin_share": 0.0,
-  "kept_share": 0.58,
-  "colour_confidence": "high",
+  "kept_share": 0.828,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B044-P019": {
   "colours": [
    {
     "hex": "101211",
-    "share": 0.932,
+    "share": 0.949,
     "L": 5.3,
     "C": 1.0,
     "h": 163.1,
@@ -11123,19 +10925,19 @@
     "name": "black"
    },
    {
-    "hex": "2B2B29",
-    "share": 0.068,
-    "L": 17.5,
-    "C": 1.4,
-    "h": 109.8,
-    "rel": 0.052,
+    "hex": "2E302E",
+    "share": 0.051,
+    "L": 19.6,
+    "C": 1.7,
+    "h": 144.3,
+    "rel": 0.049,
     "neutral": true,
-    "family": "black",
-    "name": "black"
+    "family": "grey",
+    "name": "dark grey"
    }
   ],
-  "skin_share": 0.003,
-  "kept_share": 0.788,
+  "skin_share": 0.0,
+  "kept_share": 0.837,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
@@ -11224,82 +11026,82 @@
  "B045-P002": {
   "colours": [
    {
-    "hex": "C81E31",
-    "share": 0.562,
-    "L": 43.4,
-    "C": 72.6,
-    "h": 28.8,
-    "rel": 0.92,
+    "hex": "D32638",
+    "share": 0.513,
+    "L": 46.3,
+    "C": 73.7,
+    "h": 28.1,
+    "rel": 0.896,
     "neutral": false,
     "family": "red",
     "name": "brick"
    },
    {
-    "hex": "2F3329",
-    "share": 0.257,
-    "L": 20.6,
-    "C": 7.0,
-    "h": 124.7,
-    "rel": 0.204,
+    "hex": "B10E25",
+    "share": 0.35,
+    "L": 37.5,
+    "C": 69.0,
+    "h": 29.7,
+    "rel": 0.963,
     "neutral": false,
-    "family": "grey",
-    "name": "dark grey"
+    "family": "red",
+    "name": "brick"
    },
    {
-    "hex": "870616",
-    "share": 0.159,
-    "L": 27.7,
-    "C": 57.8,
-    "h": 31.4,
-    "rel": 0.972,
+    "hex": "770611",
+    "share": 0.107,
+    "L": 24.0,
+    "C": 52.9,
+    "h": 32.3,
+    "rel": 0.963,
     "neutral": false,
     "family": "orange",
     "name": "rust"
    }
   ],
-  "skin_share": 0.027,
-  "kept_share": 0.763,
+  "skin_share": 0.006,
+  "kept_share": 0.805,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B045-P003": {
   "colours": [
    {
-    "hex": "2B2B2E",
-    "share": 0.477,
-    "L": 17.6,
-    "C": 2.1,
-    "h": 290.7,
-    "rel": 0.049,
-    "neutral": true,
-    "family": "black",
-    "name": "black"
-   },
-   {
-    "hex": "CD2133",
-    "share": 0.308,
-    "L": 44.7,
-    "C": 73.5,
-    "h": 28.8,
-    "rel": 0.912,
+    "hex": "C71E30",
+    "share": 0.559,
+    "L": 43.2,
+    "C": 72.4,
+    "h": 29.1,
+    "rel": 0.919,
     "neutral": false,
     "family": "red",
     "name": "brick"
    },
    {
-    "hex": "9C0A1D",
-    "share": 0.158,
-    "L": 32.6,
-    "C": 63.6,
-    "h": 30.7,
-    "rel": 0.966,
+    "hex": "820715",
+    "share": 0.215,
+    "L": 26.6,
+    "C": 56.0,
+    "h": 31.6,
+    "rel": 0.965,
     "neutral": false,
     "family": "orange",
     "name": "rust"
+   },
+   {
+    "hex": "222123",
+    "share": 0.201,
+    "L": 12.9,
+    "C": 1.5,
+    "h": 309.3,
+    "rel": 0.022,
+    "neutral": true,
+    "family": "black",
+    "name": "black"
    }
   ],
   "skin_share": 0.025,
-  "kept_share": 0.627,
+  "kept_share": 0.803,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -11740,82 +11542,82 @@
  "B047-P002": {
   "colours": [
    {
-    "hex": "A98341",
-    "share": 0.485,
-    "L": 57.1,
-    "C": 41.2,
-    "h": 80.2,
-    "rel": 0.647,
+    "hex": "AE8643",
+    "share": 0.529,
+    "L": 58.5,
+    "C": 42.0,
+    "h": 79.5,
+    "rel": 0.645,
     "neutral": false,
     "family": "yellow",
     "name": "ochre"
    },
    {
-    "hex": "7F5926",
-    "share": 0.403,
-    "L": 40.9,
-    "C": 36.3,
-    "h": 73.6,
-    "rel": 0.706,
+    "hex": "825B29",
+    "share": 0.372,
+    "L": 41.8,
+    "C": 36.0,
+    "h": 72.8,
+    "rel": 0.685,
     "neutral": false,
     "family": "yellow",
     "name": "ochre"
    },
    {
-    "hex": "3E2611",
-    "share": 0.091,
-    "L": 17.7,
-    "C": 20.3,
-    "h": 64.2,
-    "rel": 0.702,
+    "hex": "412611",
+    "share": 0.056,
+    "L": 18.1,
+    "C": 21.6,
+    "h": 61.2,
+    "rel": 0.709,
     "neutral": false,
     "family": "brown",
     "name": "espresso"
    }
   ],
-  "skin_share": 0.056,
-  "kept_share": 0.672,
+  "skin_share": 0.104,
+  "kept_share": 0.702,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B047-P003": {
   "colours": [
    {
-    "hex": "A98342",
-    "share": 0.471,
-    "L": 57.1,
-    "C": 40.7,
-    "h": 80.0,
-    "rel": 0.639,
+    "hex": "AD8644",
+    "share": 0.5,
+    "L": 58.4,
+    "C": 41.3,
+    "h": 79.8,
+    "rel": 0.636,
     "neutral": false,
     "family": "yellow",
     "name": "ochre"
    },
    {
-    "hex": "7F5927",
-    "share": 0.39,
-    "L": 40.9,
-    "C": 35.9,
-    "h": 73.3,
-    "rel": 0.695,
+    "hex": "825A28",
+    "share": 0.345,
+    "L": 41.6,
+    "C": 36.4,
+    "h": 72.1,
+    "rel": 0.692,
     "neutral": false,
     "family": "yellow",
     "name": "ochre"
    },
    {
-    "hex": "3F2713",
-    "share": 0.089,
-    "L": 18.2,
-    "C": 19.7,
-    "h": 63.4,
-    "rel": 0.662,
+    "hex": "DDBB9E",
+    "share": 0.08,
+    "L": 78.1,
+    "C": 20.8,
+    "h": 67.7,
+    "rel": 0.375,
     "neutral": false,
-    "family": "brown",
-    "name": "espresso"
+    "family": "warm neutral",
+    "name": "cream"
    }
   ],
-  "skin_share": 0.065,
-  "kept_share": 0.636,
+  "skin_share": 0.108,
+  "kept_share": 0.703,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -11841,195 +11643,184 @@
  "B048-P001": {
   "colours": [
    {
-    "hex": "1D1E21",
-    "share": 0.493,
-    "L": 11.3,
-    "C": 2.2,
-    "h": 278.3,
-    "rel": 0.094,
+    "hex": "1B1D20",
+    "share": 0.536,
+    "L": 10.7,
+    "C": 2.4,
+    "h": 267.0,
+    "rel": 0.132,
     "neutral": true,
     "family": "black",
     "name": "black"
    },
    {
-    "hex": "ECDCC9",
-    "share": 0.222,
-    "L": 88.6,
+    "hex": "EDDDCA",
+    "share": 0.242,
+    "L": 88.9,
     "C": 11.6,
     "h": 78.0,
-    "rel": 0.371,
+    "rel": 0.386,
     "neutral": false,
     "family": "warm neutral",
     "name": "cream"
    },
    {
-    "hex": "CBB59C",
-    "share": 0.152,
-    "L": 74.9,
+    "hex": "CDB79E",
+    "share": 0.167,
+    "L": 75.6,
     "C": 16.1,
     "h": 75.9,
-    "rel": 0.199,
+    "rel": 0.197,
     "neutral": false,
     "family": "warm neutral",
     "name": "oatmeal"
    }
   ],
-  "skin_share": 0.069,
-  "kept_share": 0.704,
+  "skin_share": 0.049,
+  "kept_share": 0.779,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B048-P002": {
   "colours": [
    {
-    "hex": "6D8194",
-    "share": 0.346,
-    "L": 53.0,
-    "C": 12.9,
-    "h": 257.8,
-    "rel": 0.318,
+    "hex": "738696",
+    "share": 0.33,
+    "L": 55.0,
+    "C": 11.3,
+    "h": 253.8,
+    "rel": 0.285,
     "neutral": false,
     "family": "blue",
-    "name": "denim blue"
+    "name": "steel blue"
    },
    {
-    "hex": "A9B4BE",
-    "share": 0.282,
-    "L": 72.8,
-    "C": 6.6,
-    "h": 254.2,
-    "rel": 0.152,
-    "neutral": false,
-    "family": "blue",
-    "name": "sky"
+    "hex": "ADB6BD",
+    "share": 0.263,
+    "L": 73.6,
+    "C": 4.9,
+    "h": 249.4,
+    "rel": 0.113,
+    "neutral": true,
+    "family": "grey",
+    "name": "light grey"
    },
    {
-    "hex": "899BAA",
-    "share": 0.261,
-    "L": 63.1,
-    "C": 10.4,
-    "h": 252.9,
-    "rel": 0.239,
+    "hex": "8D9DAB",
+    "share": 0.217,
+    "L": 63.9,
+    "C": 9.6,
+    "h": 254.1,
+    "rel": 0.214,
     "neutral": false,
     "family": "blue",
     "name": "steel blue"
    }
   ],
   "skin_share": 0.0,
-  "kept_share": 0.817,
-  "colour_confidence": "high",
+  "kept_share": 0.803,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B048-P003": {
   "colours": [
    {
-    "hex": "8D9FA7",
-    "share": 0.404,
-    "L": 64.4,
-    "C": 7.8,
-    "h": 233.8,
-    "rel": 0.207,
+    "hex": "9AABB1",
+    "share": 0.43,
+    "L": 68.9,
+    "C": 6.9,
+    "h": 227.5,
+    "rel": 0.178,
     "neutral": false,
     "family": "blue",
     "name": "steel blue"
    },
    {
-    "hex": "EEE8E3",
-    "share": 0.317,
-    "L": 92.3,
-    "C": 3.3,
-    "h": 69.8,
-    "rel": 0.213,
+    "hex": "57676E",
+    "share": 0.256,
+    "L": 42.5,
+    "C": 7.4,
+    "h": 233.8,
+    "rel": 0.268,
     "neutral": false,
-    "family": "white",
-    "name": "white"
+    "family": "blue",
+    "name": "steel blue"
    },
    {
-    "hex": "515C62",
-    "share": 0.217,
-    "L": 38.3,
-    "C": 5.6,
-    "h": 239.8,
-    "rel": 0.213,
+    "hex": "788A92",
+    "share": 0.25,
+    "L": 56.3,
+    "C": 8.0,
+    "h": 234.0,
+    "rel": 0.234,
     "neutral": false,
-    "family": "grey",
-    "name": "mid grey"
+    "family": "blue",
+    "name": "steel blue"
    }
   ],
-  "skin_share": 0.053,
-  "kept_share": 0.596,
+  "skin_share": 0.06,
+  "kept_share": 0.575,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B048-P004": {
   "colours": [
    {
-    "hex": "243E60",
-    "share": 0.502,
-    "L": 25.8,
-    "C": 23.2,
-    "h": 274.2,
-    "rel": 0.709,
+    "hex": "203A58",
+    "share": 0.873,
+    "L": 23.8,
+    "C": 21.0,
+    "h": 271.3,
+    "rel": 0.717,
     "neutral": false,
     "family": "blue",
     "name": "navy"
    },
    {
-    "hex": "36577E",
-    "share": 0.279,
-    "L": 36.2,
-    "C": 25.6,
-    "h": 270.8,
-    "rel": 0.674,
+    "hex": "405F85",
+    "share": 0.127,
+    "L": 39.5,
+    "C": 24.7,
+    "h": 270.3,
+    "rel": 0.615,
     "neutral": false,
     "family": "blue",
     "name": "denim blue"
-   },
-   {
-    "hex": "172841",
-    "share": 0.188,
-    "L": 15.9,
-    "C": 18.1,
-    "h": 276.4,
-    "rel": 0.688,
-    "neutral": false,
-    "family": "blue",
-    "name": "navy"
    }
   ],
   "skin_share": 0.0,
-  "kept_share": 0.83,
-  "colour_confidence": "high",
+  "kept_share": 0.806,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B049-P001": {
   "colours": [
    {
-    "hex": "282D3D",
-    "share": 0.741,
-    "L": 18.6,
-    "C": 11.1,
-    "h": 282.3,
-    "rel": 0.333,
+    "hex": "202230",
+    "share": 0.897,
+    "L": 13.6,
+    "C": 10.0,
+    "h": 288.2,
+    "rel": 0.293,
     "neutral": false,
     "family": "blue",
     "name": "navy"
    },
    {
-    "hex": "3D475B",
-    "share": 0.233,
-    "L": 30.0,
-    "C": 13.2,
-    "h": 275.8,
-    "rel": 0.352,
+    "hex": "3D495C",
+    "share": 0.103,
+    "L": 30.7,
+    "C": 12.8,
+    "h": 271.5,
+    "rel": 0.369,
     "neutral": false,
     "family": "blue",
     "name": "denim blue"
    }
   ],
-  "skin_share": 0.001,
-  "kept_share": 0.778,
-  "colour_confidence": "high",
+  "skin_share": 0.0,
+  "kept_share": 0.743,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B049-P002": {
@@ -12158,123 +11949,123 @@
  "B050-P002": {
   "colours": [
    {
-    "hex": "9B5D30",
-    "share": 0.411,
-    "L": 45.7,
+    "hex": "AE6F41",
+    "share": 0.423,
+    "L": 52.7,
+    "C": 41.0,
+    "h": 60.1,
+    "rel": 0.581,
+    "neutral": false,
+    "family": "yellow",
+    "name": "ochre"
+   },
+   {
+    "hex": "96592C",
+    "share": 0.412,
+    "L": 44.0,
     "C": 41.7,
-    "h": 59.4,
-    "rel": 0.653,
+    "h": 59.6,
+    "rel": 0.672,
     "neutral": false,
     "family": "yellow",
     "name": "ochre"
    },
    {
-    "hex": "BB7A4C",
-    "share": 0.337,
-    "L": 57.1,
-    "C": 40.9,
-    "h": 59.7,
-    "rel": 0.542,
+    "hex": "53200B",
+    "share": 0.123,
+    "L": 19.6,
+    "C": 33.2,
+    "h": 47.4,
+    "rel": 0.837,
     "neutral": false,
-    "family": "yellow",
-    "name": "ochre"
-   },
-   {
-    "hex": "DBA67C",
-    "share": 0.172,
-    "L": 72.1,
-    "C": 32.6,
-    "h": 64.0,
-    "rel": 0.448,
-    "neutral": false,
-    "family": "yellow",
-    "name": "gold"
+    "family": "orange",
+    "name": "rust"
    }
   ],
-  "skin_share": 0.609,
-  "kept_share": 0.207,
+  "skin_share": 0.63,
+  "kept_share": 0.244,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B050-P003": {
   "colours": [
    {
-    "hex": "AE7C55",
-    "share": 0.589,
-    "L": 56.2,
-    "C": 32.5,
-    "h": 62.9,
-    "rel": 0.453,
+    "hex": "A77C5A",
+    "share": 0.359,
+    "L": 55.5,
+    "C": 27.9,
+    "h": 63.8,
+    "rel": 0.397,
     "neutral": false,
-    "family": "yellow",
-    "name": "ochre"
+    "family": "brown",
+    "name": "tan"
    },
    {
-    "hex": "4A210F",
-    "share": 0.223,
-    "L": 18.3,
-    "C": 27.2,
-    "h": 48.9,
-    "rel": 0.752,
+    "hex": "53250C",
+    "share": 0.324,
+    "L": 20.8,
+    "C": 32.0,
+    "h": 52.3,
+    "rel": 0.83,
     "neutral": false,
     "family": "brown",
     "name": "espresso"
    },
    {
-    "hex": "BC9C83",
-    "share": 0.119,
-    "L": 66.6,
-    "C": 19.3,
-    "h": 65.1,
-    "rel": 0.241,
+    "hex": "EADAC9",
+    "share": 0.162,
+    "L": 87.9,
+    "C": 10.7,
+    "h": 75.3,
+    "rel": 0.348,
     "neutral": false,
-    "family": "brown",
-    "name": "tan"
+    "family": "warm neutral",
+    "name": "cream"
    }
   ],
-  "skin_share": 0.938,
-  "kept_share": 0.045,
+  "skin_share": 0.932,
+  "kept_share": 0.057,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B050-P004": {
   "colours": [
    {
-    "hex": "571E12",
-    "share": 0.478,
-    "L": 20.0,
-    "C": 33.4,
-    "h": 40.0,
-    "rel": 0.709,
-    "neutral": false,
-    "family": "orange",
-    "name": "rust"
-   },
-   {
-    "hex": "D8A279",
-    "share": 0.27,
-    "L": 70.7,
-    "C": 32.7,
-    "h": 62.9,
-    "rel": 0.43,
+    "hex": "DBA67D",
+    "share": 0.534,
+    "L": 72.1,
+    "C": 32.2,
+    "h": 63.5,
+    "rel": 0.45,
     "neutral": false,
     "family": "yellow",
     "name": "gold"
    },
    {
-    "hex": "B9754A",
-    "share": 0.22,
-    "L": 55.6,
-    "C": 41.2,
-    "h": 57.0,
-    "rel": 0.538,
+    "hex": "C58155",
+    "share": 0.276,
+    "L": 60.1,
+    "C": 40.7,
+    "h": 57.8,
+    "rel": 0.505,
+    "neutral": false,
+    "family": "warm neutral",
+    "name": "stone"
+   },
+   {
+    "hex": "AE6A3F",
+    "share": 0.155,
+    "L": 51.5,
+    "C": 42.1,
+    "h": 56.8,
+    "rel": 0.581,
     "neutral": false,
     "family": "warm neutral",
     "name": "stone"
    }
   ],
-  "skin_share": 0.486,
-  "kept_share": 0.392,
+  "skin_share": 0.495,
+  "kept_share": 0.391,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
@@ -12311,262 +12102,317 @@
  "B050-P006": {
   "colours": [
    {
-    "hex": "CDA688",
-    "share": 0.912,
-    "L": 70.9,
-    "C": 23.2,
+    "hex": "CCA587",
+    "share": 0.848,
+    "L": 70.5,
+    "C": 23.3,
     "h": 64.3,
-    "rel": 0.296,
+    "rel": 0.291,
     "neutral": false,
     "family": "brown",
     "name": "tan"
    },
    {
-    "hex": "E4CFBD",
-    "share": 0.088,
-    "L": 84.4,
-    "C": 12.4,
-    "h": 69.1,
-    "rel": 0.343,
+    "hex": "E1C8B3",
+    "share": 0.152,
+    "L": 82.1,
+    "C": 14.8,
+    "h": 68.2,
+    "rel": 0.351,
     "neutral": false,
     "family": "warm neutral",
     "name": "cream"
    }
   ],
-  "skin_share": 0.419,
-  "kept_share": 0.42,
-  "colour_confidence": "low",
+  "skin_share": 0.141,
+  "kept_share": 0.518,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B050-P007": {
   "colours": [
    {
-    "hex": "E3AC7F",
-    "share": 0.852,
-    "L": 74.4,
+    "hex": "E2AB7E",
+    "share": 0.859,
+    "L": 74.1,
     "C": 34.2,
     "h": 64.8,
-    "rel": 0.529,
+    "rel": 0.518,
     "neutral": false,
     "family": "yellow",
     "name": "gold"
    },
    {
-    "hex": "BE784A",
-    "share": 0.085,
-    "L": 57.0,
-    "C": 42.9,
-    "h": 57.8,
-    "rel": 0.556,
+    "hex": "B87748",
+    "share": 0.075,
+    "L": 55.9,
+    "C": 41.6,
+    "h": 60.0,
+    "rel": 0.562,
     "neutral": false,
-    "family": "warm neutral",
-    "name": "stone"
+    "family": "yellow",
+    "name": "ochre"
    },
    {
-    "hex": "863A1C",
-    "share": 0.063,
-    "L": 34.4,
-    "C": 45.4,
-    "h": 47.5,
-    "rel": 0.716,
+    "hex": "823719",
+    "share": 0.066,
+    "L": 33.0,
+    "C": 45.3,
+    "h": 47.7,
+    "rel": 0.739,
     "neutral": false,
     "family": "orange",
     "name": "rust"
    }
   ],
-  "skin_share": 0.542,
-  "kept_share": 0.245,
+  "skin_share": 0.319,
+  "kept_share": 0.376,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B050-P008": {
   "colours": [
    {
-    "hex": "DCA579",
-    "share": 0.95,
-    "L": 71.9,
-    "C": 34.1,
-    "h": 64.1,
-    "rel": 0.463,
+    "hex": "EBBD95",
+    "share": 0.836,
+    "L": 79.7,
+    "C": 28.7,
+    "h": 67.2,
+    "rel": 0.587,
     "neutral": false,
-    "family": "yellow",
-    "name": "gold"
-   }
-  ],
-  "skin_share": 0.286,
-  "kept_share": 0.484,
-  "colour_confidence": "low",
-  "colour_stability": "stable"
- },
- "B051-P001": {
-  "colours": [
+    "family": "warm neutral",
+    "name": "cream"
+   },
    {
-    "hex": "E8B68D",
-    "share": 0.944,
-    "L": 77.6,
-    "C": 30.6,
-    "h": 65.4,
-    "rel": 0.567,
-    "neutral": false,
-    "family": "yellow",
-    "name": "gold"
-   }
-  ],
-  "skin_share": 0.316,
-  "kept_share": 0.45,
-  "colour_confidence": "low",
-  "colour_stability": "stable"
- },
- "B051-P002": {
-  "colours": [
-   {
-    "hex": "E7B389",
-    "share": 0.659,
-    "L": 76.7,
-    "C": 31.7,
-    "h": 64.8,
-    "rel": 0.563,
+    "hex": "C38C61",
+    "share": 0.105,
+    "L": 62.7,
+    "C": 35.0,
+    "h": 63.0,
+    "rel": 0.447,
     "neutral": false,
     "family": "yellow",
     "name": "gold"
    },
    {
-    "hex": "CE9265",
-    "share": 0.248,
-    "L": 65.5,
-    "C": 37.2,
-    "h": 61.9,
-    "rel": 0.454,
-    "neutral": false,
-    "family": "yellow",
-    "name": "gold"
-   },
-   {
-    "hex": "9B4F2D",
-    "share": 0.069,
-    "L": 42.4,
-    "C": 44.5,
-    "h": 49.5,
-    "rel": 0.63,
+    "hex": "873719",
+    "share": 0.059,
+    "L": 33.9,
+    "C": 47.5,
+    "h": 46.8,
+    "rel": 0.747,
     "neutral": false,
     "family": "orange",
     "name": "rust"
    }
   ],
-  "skin_share": 0.547,
-  "kept_share": 0.162,
+  "skin_share": 0.206,
+  "kept_share": 0.677,
+  "colour_confidence": "medium",
+  "colour_stability": "stable"
+ },
+ "B051-P001": {
+  "colours": [
+   {
+    "hex": "ECB98D",
+    "share": 0.721,
+    "L": 78.7,
+    "C": 32.0,
+    "h": 66.6,
+    "rel": 0.62,
+    "neutral": false,
+    "family": "yellow",
+    "name": "gold"
+   },
+   {
+    "hex": "D1986A",
+    "share": 0.214,
+    "L": 67.3,
+    "C": 36.2,
+    "h": 63.9,
+    "rel": 0.442,
+    "neutral": false,
+    "family": "yellow",
+    "name": "gold"
+   },
+   {
+    "hex": "89391B",
+    "share": 0.065,
+    "L": 34.7,
+    "C": 47.3,
+    "h": 46.8,
+    "rel": 0.731,
+    "neutral": false,
+    "family": "orange",
+    "name": "rust"
+   }
+  ],
+  "skin_share": 0.201,
+  "kept_share": 0.644,
+  "colour_confidence": "medium",
+  "colour_stability": "stable"
+ },
+ "B051-P002": {
+  "colours": [
+   {
+    "hex": "DAA478",
+    "share": 0.844,
+    "L": 71.4,
+    "C": 33.8,
+    "h": 64.6,
+    "rel": 0.441,
+    "neutral": false,
+    "family": "yellow",
+    "name": "gold"
+   },
+   {
+    "hex": "BB7F51",
+    "share": 0.099,
+    "L": 58.4,
+    "C": 38.8,
+    "h": 61.9,
+    "rel": 0.518,
+    "neutral": false,
+    "family": "yellow",
+    "name": "ochre"
+   },
+   {
+    "hex": "7C3B1E",
+    "share": 0.058,
+    "L": 32.9,
+    "C": 40.0,
+    "h": 49.4,
+    "rel": 0.676,
+    "neutral": false,
+    "family": "orange",
+    "name": "rust"
+   }
+  ],
+  "skin_share": 0.347,
+  "kept_share": 0.254,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B051-P003": {
   "colours": [
    {
-    "hex": "DDA578",
-    "share": 0.939,
-    "L": 72.0,
-    "C": 34.8,
-    "h": 64.1,
-    "rel": 0.475,
+    "hex": "F0C097",
+    "share": 0.834,
+    "L": 81.0,
+    "C": 29.6,
+    "h": 66.7,
+    "rel": 0.67,
     "neutral": false,
-    "family": "yellow",
-    "name": "gold"
+    "family": "warm neutral",
+    "name": "cream"
    },
    {
-    "hex": "8F3E1D",
-    "share": 0.051,
-    "L": 36.7,
+    "hex": "863517",
+    "share": 0.085,
+    "L": 33.3,
     "C": 48.2,
-    "h": 48.0,
-    "rel": 0.733,
+    "h": 46.7,
+    "rel": 0.765,
     "neutral": false,
     "family": "orange",
     "name": "rust"
+   },
+   {
+    "hex": "BC8356",
+    "share": 0.08,
+    "L": 59.5,
+    "C": 37.0,
+    "h": 62.8,
+    "rel": 0.493,
+    "neutral": false,
+    "family": "yellow",
+    "name": "ochre"
    }
   ],
-  "skin_share": 0.22,
-  "kept_share": 0.551,
+  "skin_share": 0.168,
+  "kept_share": 0.656,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B051-P004": {
   "colours": [
    {
-    "hex": "54360B",
-    "share": 0.528,
-    "L": 25.4,
-    "C": 31.9,
-    "h": 73.0,
-    "rel": 0.869,
-    "neutral": false,
-    "family": "warm neutral",
-    "name": "taupe"
-   },
-   {
-    "hex": "73542E",
-    "share": 0.318,
-    "L": 38.2,
-    "C": 28.2,
-    "h": 73.1,
-    "rel": 0.574,
-    "neutral": false,
-    "family": "yellow",
-    "name": "ochre"
-   },
-   {
-    "hex": "2E180A",
-    "share": 0.148,
-    "L": 11.0,
-    "C": 15.6,
-    "h": 52.9,
-    "rel": 0.748,
+    "hex": "351B11",
+    "share": 0.489,
+    "L": 13.1,
+    "C": 16.8,
+    "h": 46.2,
+    "rel": 0.608,
     "neutral": false,
     "family": "brown",
     "name": "espresso"
+   },
+   {
+    "hex": "52270D",
+    "share": 0.277,
+    "L": 21.1,
+    "C": 30.9,
+    "h": 54.5,
+    "rel": 0.816,
+    "neutral": false,
+    "family": "brown",
+    "name": "espresso"
+   },
+   {
+    "hex": "AA6046",
+    "share": 0.184,
+    "L": 48.7,
+    "C": 39.1,
+    "h": 45.4,
+    "rel": 0.459,
+    "neutral": false,
+    "family": "orange",
+    "name": "rust"
    }
   ],
-  "skin_share": 0.662,
-  "kept_share": 0.243,
+  "skin_share": 0.958,
+  "kept_share": 0.031,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B052-P001": {
   "colours": [
    {
-    "hex": "634313",
-    "share": 0.542,
-    "L": 31.1,
-    "C": 34.2,
-    "h": 74.7,
-    "rel": 0.81,
+    "hex": "654619",
+    "share": 0.428,
+    "L": 32.3,
+    "C": 32.5,
+    "h": 74.9,
+    "rel": 0.75,
     "neutral": false,
     "family": "warm neutral",
     "name": "taupe"
    },
    {
-    "hex": "492C08",
-    "share": 0.233,
-    "L": 21.0,
-    "C": 28.5,
-    "h": 69.4,
-    "rel": 0.889,
-    "neutral": false,
-    "family": "brown",
-    "name": "espresso"
-   },
-   {
-    "hex": "8D6E46",
-    "share": 0.137,
-    "L": 48.6,
+    "hex": "8D6B45",
+    "share": 0.261,
+    "L": 47.8,
     "C": 27.8,
-    "h": 75.5,
-    "rel": 0.482,
+    "h": 72.0,
+    "rel": 0.477,
     "neutral": false,
     "family": "yellow",
     "name": "ochre"
+   },
+   {
+    "hex": "44230C",
+    "share": 0.193,
+    "L": 17.7,
+    "C": 25.1,
+    "h": 57.3,
+    "rel": 0.805,
+    "neutral": false,
+    "family": "brown",
+    "name": "espresso"
    }
   ],
-  "skin_share": 0.462,
-  "kept_share": 0.294,
+  "skin_share": 0.765,
+  "kept_share": 0.161,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
@@ -12614,132 +12460,132 @@
  "B052-P003": {
   "colours": [
    {
-    "hex": "814D2D",
-    "share": 0.93,
-    "L": 38.1,
-    "C": 33.7,
-    "h": 56.2,
-    "rel": 0.574,
+    "hex": "A07450",
+    "share": 0.584,
+    "L": 52.4,
+    "C": 29.6,
+    "h": 64.2,
+    "rel": 0.441,
     "neutral": false,
-    "family": "warm neutral",
-    "name": "taupe"
+    "family": "brown",
+    "name": "tan"
    },
    {
-    "hex": "9B6745",
-    "share": 0.07,
-    "L": 48.4,
-    "C": 32.4,
-    "h": 58.2,
-    "rel": 0.478,
+    "hex": "805531",
+    "share": 0.359,
+    "L": 40.1,
+    "C": 31.2,
+    "h": 63.6,
+    "rel": 0.565,
     "neutral": false,
     "family": "yellow",
     "name": "ochre"
+   },
+   {
+    "hex": "5C2E11",
+    "share": 0.057,
+    "L": 24.5,
+    "C": 32.9,
+    "h": 55.7,
+    "rel": 0.775,
+    "neutral": false,
+    "family": "warm neutral",
+    "name": "taupe"
    }
   ],
-  "skin_share": 0.0,
-  "kept_share": 0.718,
-  "colour_confidence": "high",
+  "skin_share": 0.993,
+  "kept_share": 0.005,
+  "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B052-P004": {
   "colours": [
    {
-    "hex": "83461F",
-    "share": 0.625,
-    "L": 36.6,
-    "C": 41.0,
-    "h": 56.1,
-    "rel": 0.719,
+    "hex": "783D17",
+    "share": 0.748,
+    "L": 32.7,
+    "C": 40.6,
+    "h": 55.9,
+    "rel": 0.768,
     "neutral": false,
     "family": "warm neutral",
     "name": "taupe"
    },
    {
-    "hex": "A56539",
-    "share": 0.214,
-    "L": 49.0,
-    "C": 41.4,
-    "h": 58.5,
-    "rel": 0.607,
-    "neutral": false,
-    "family": "yellow",
-    "name": "ochre"
-   },
-   {
-    "hex": "54260C",
-    "share": 0.093,
-    "L": 21.2,
-    "C": 32.3,
-    "h": 53.1,
-    "rel": 0.832,
+    "hex": "53260B",
+    "share": 0.162,
+    "L": 21.0,
+    "C": 32.1,
+    "h": 54.0,
+    "rel": 0.846,
     "neutral": false,
     "family": "brown",
     "name": "espresso"
+   },
+   {
+    "hex": "BF8151",
+    "share": 0.09,
+    "L": 59.3,
+    "C": 40.2,
+    "h": 62.0,
+    "rel": 0.531,
+    "neutral": false,
+    "family": "yellow",
+    "name": "ochre"
    }
   ],
-  "skin_share": 0.519,
-  "kept_share": 0.374,
+  "skin_share": 0.572,
+  "kept_share": 0.367,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B052-P005": {
   "colours": [
    {
-    "hex": "2E597C",
-    "share": 0.832,
-    "L": 36.3,
-    "C": 24.5,
-    "h": 262.0,
-    "rel": 0.749,
+    "hex": "2A5678",
+    "share": 0.871,
+    "L": 35.0,
+    "C": 24.1,
+    "h": 261.0,
+    "rel": 0.77,
     "neutral": false,
     "family": "blue",
     "name": "denim blue"
    },
    {
-    "hex": "5C7D97",
-    "share": 0.168,
-    "L": 50.9,
-    "C": 18.4,
-    "h": 254.9,
-    "rel": 0.486,
+    "hex": "5F7F97",
+    "share": 0.129,
+    "L": 51.7,
+    "C": 17.3,
+    "h": 252.9,
+    "rel": 0.464,
     "neutral": false,
     "family": "blue",
-    "name": "denim blue"
+    "name": "steel blue"
    }
   ],
   "skin_share": 0.0,
-  "kept_share": 0.764,
-  "colour_confidence": "high",
+  "kept_share": 0.834,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B052-P006": {
   "colours": [
    {
-    "hex": "171312",
-    "share": 0.834,
-    "L": 6.2,
-    "C": 2.0,
-    "h": 37.6,
-    "rel": 0.125,
-    "neutral": true,
+    "hex": "120E0C",
+    "share": 0.977,
+    "L": 4.2,
+    "C": 1.8,
+    "h": 51.7,
+    "rel": 0.216,
+    "neutral": false,
     "family": "black",
     "name": "black"
-   },
-   {
-    "hex": "3D281E",
-    "share": 0.095,
-    "L": 18.4,
-    "C": 13.4,
-    "h": 51.5,
-    "rel": 0.385,
-    "neutral": false,
-    "family": "brown",
-    "name": "espresso"
    }
   ],
-  "skin_share": 0.153,
-  "kept_share": 0.537,
-  "colour_confidence": "medium",
+  "skin_share": 0.034,
+  "kept_share": 0.651,
+  "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B052-P007": {
@@ -12868,41 +12714,41 @@
  "B053-P003": {
   "colours": [
    {
-    "hex": "522338",
-    "share": 0.391,
-    "L": 21.1,
-    "C": 24.9,
-    "h": 352.8,
-    "rel": 0.549,
+    "hex": "41192A",
+    "share": 0.446,
+    "L": 15.4,
+    "C": 21.7,
+    "h": 354.6,
+    "rel": 0.571,
     "neutral": false,
     "family": "red",
     "name": "oxblood"
    },
    {
-    "hex": "1A130D",
-    "share": 0.314,
-    "L": 6.5,
-    "C": 4.8,
-    "h": 63.2,
-    "rel": 0.437,
+    "hex": "261E18",
+    "share": 0.302,
+    "L": 12.0,
+    "C": 6.2,
+    "h": 64.2,
+    "rel": 0.309,
     "neutral": false,
     "family": "brown",
     "name": "espresso"
    },
    {
-    "hex": "3C3226",
-    "share": 0.258,
-    "L": 21.5,
-    "C": 9.6,
-    "h": 76.1,
-    "rel": 0.305,
+    "hex": "733953",
+    "share": 0.201,
+    "L": 32.3,
+    "C": 29.1,
+    "h": 352.0,
+    "rel": 0.493,
     "neutral": false,
-    "family": "brown",
-    "name": "espresso"
+    "family": "pink",
+    "name": "raspberry"
    }
   ],
-  "skin_share": 0.051,
-  "kept_share": 0.636,
+  "skin_share": 0.071,
+  "kept_share": 0.768,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -12939,143 +12785,132 @@
  "B053-P005": {
   "colours": [
    {
-    "hex": "27233C",
-    "share": 0.382,
-    "L": 15.3,
-    "C": 17.8,
-    "h": 299.8,
-    "rel": 0.3,
-    "neutral": false,
-    "family": "purple",
-    "name": "aubergine"
-   },
-   {
-    "hex": "191616",
-    "share": 0.38,
-    "L": 7.6,
-    "C": 1.6,
-    "h": 19.4,
-    "rel": 0.053,
+    "hex": "161314",
+    "share": 0.399,
+    "L": 6.2,
+    "C": 1.5,
+    "h": 354.6,
+    "rel": 0.059,
     "neutral": true,
     "family": "black",
     "name": "black"
    },
    {
-    "hex": "504A63",
-    "share": 0.219,
-    "L": 32.9,
-    "C": 16.0,
-    "h": 301.3,
-    "rel": 0.161,
+    "hex": "27233D",
+    "share": 0.351,
+    "L": 15.3,
+    "C": 18.4,
+    "h": 299.8,
+    "rel": 0.313,
     "neutral": false,
+    "family": "purple",
+    "name": "aubergine"
+   },
+   {
+    "hex": "4F4A60",
+    "share": 0.234,
+    "L": 32.7,
+    "C": 14.1,
+    "h": 300.6,
+    "rel": 0.147,
+    "neutral": true,
     "family": "purple",
     "name": "plum"
    }
   ],
-  "skin_share": 0.119,
-  "kept_share": 0.517,
+  "skin_share": 0.082,
+  "kept_share": 0.621,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B053-P006": {
   "colours": [
    {
-    "hex": "302F32",
-    "share": 0.586,
-    "L": 19.6,
-    "C": 2.1,
-    "h": 303.3,
-    "rel": 0.026,
-    "neutral": true,
-    "family": "grey",
-    "name": "dark grey"
-   },
-   {
-    "hex": "4A494D",
-    "share": 0.231,
-    "L": 31.2,
-    "C": 2.6,
-    "h": 300.2,
-    "rel": 0.028,
-    "neutral": true,
-    "family": "grey",
-    "name": "dark grey"
-   },
-   {
-    "hex": "19181A",
-    "share": 0.153,
-    "L": 8.4,
-    "C": 1.6,
-    "h": 309.3,
-    "rel": 0.027,
+    "hex": "2A292D",
+    "share": 0.643,
+    "L": 16.8,
+    "C": 2.8,
+    "h": 300.4,
+    "rel": 0.044,
     "neutral": true,
     "family": "black",
     "name": "black"
+   },
+   {
+    "hex": "47474B",
+    "share": 0.305,
+    "L": 30.3,
+    "C": 2.6,
+    "h": 290.6,
+    "rel": 0.044,
+    "neutral": true,
+    "family": "grey",
+    "name": "dark grey"
    }
   ],
-  "skin_share": 0.038,
-  "kept_share": 0.632,
+  "skin_share": 0.043,
+  "kept_share": 0.682,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B054-P001": {
   "colours": [
    {
-    "hex": "343437",
-    "share": 0.422,
-    "L": 21.8,
-    "C": 2.0,
-    "h": 290.6,
-    "rel": 0.042,
-    "neutral": true,
-    "family": "grey",
-    "name": "dark grey"
-   },
-   {
-    "hex": "191718",
-    "share": 0.379,
-    "L": 8.0,
-    "C": 1.3,
-    "h": 344.1,
-    "rel": 0.042,
+    "hex": "2D2B2D",
+    "share": 0.401,
+    "L": 17.8,
+    "C": 1.7,
+    "h": 324.6,
+    "rel": 0.031,
     "neutral": true,
     "family": "black",
     "name": "black"
    },
    {
-    "hex": "6C6A6F",
-    "share": 0.157,
-    "L": 45.1,
-    "C": 3.1,
-    "h": 305.7,
-    "rel": 0.029,
+    "hex": "171314",
+    "share": 0.304,
+    "L": 6.3,
+    "C": 2.0,
+    "h": 0.6,
+    "rel": 0.077,
+    "neutral": true,
+    "family": "black",
+    "name": "black"
+   },
+   {
+    "hex": "4B4A4E",
+    "share": 0.191,
+    "L": 31.7,
+    "C": 2.6,
+    "h": 300.2,
+    "rel": 0.028,
     "neutral": true,
     "family": "grey",
-    "name": "mid grey"
+    "name": "dark grey"
    }
   ],
-  "skin_share": 0.047,
-  "kept_share": 0.69,
+  "skin_share": 0.038,
+  "kept_share": 0.713,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B054-P002": {
   "colours": [
    {
-    "hex": "58585F",
-    "share": 0.979,
-    "L": 37.6,
+    "hex": "5B5A61",
+    "share": 0.969,
+    "L": 38.6,
     "C": 4.3,
-    "h": 290.9,
-    "rel": 0.063,
+    "h": 296.3,
+    "rel": 0.05,
     "neutral": true,
     "family": "grey",
-    "name": "dark grey"
+    "name": "mid grey"
    }
   ],
   "skin_share": 0.0,
-  "kept_share": 0.694,
-  "colour_confidence": "high",
+  "kept_share": 0.715,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B054-P003": {
@@ -13122,41 +12957,41 @@
  "B054-P004": {
   "colours": [
    {
-    "hex": "171616",
-    "share": 0.557,
-    "L": 7.4,
+    "hex": "181717",
+    "share": 0.584,
+    "L": 7.8,
     "C": 0.5,
     "h": 19.4,
-    "rel": 0.017,
+    "rel": 0.018,
     "neutral": true,
     "family": "black",
     "name": "black"
    },
    {
-    "hex": "383432",
-    "share": 0.251,
-    "L": 22.0,
-    "C": 2.3,
-    "h": 55.0,
-    "rel": 0.059,
+    "hex": "393635",
+    "share": 0.284,
+    "L": 22.9,
+    "C": 1.5,
+    "h": 45.2,
+    "rel": 0.032,
     "neutral": true,
     "family": "warm neutral",
     "name": "taupe"
    },
    {
-    "hex": "96775C",
-    "share": 0.106,
-    "L": 52.3,
-    "C": 21.1,
-    "h": 67.2,
-    "rel": 0.324,
+    "hex": "D4B090",
+    "share": 0.069,
+    "L": 74.2,
+    "C": 22.9,
+    "h": 68.4,
+    "rel": 0.316,
     "neutral": false,
-    "family": "brown",
-    "name": "tan"
+    "family": "warm neutral",
+    "name": "oatmeal"
    }
   ],
-  "skin_share": 0.115,
-  "kept_share": 0.596,
+  "skin_share": 0.144,
+  "kept_share": 0.636,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -13223,42 +13058,42 @@
  "B054-P007": {
   "colours": [
    {
-    "hex": "6D573B",
-    "share": 0.725,
-    "L": 38.5,
-    "C": 20.3,
-    "h": 75.9,
-    "rel": 0.418,
+    "hex": "715A3E",
+    "share": 0.714,
+    "L": 39.9,
+    "C": 20.4,
+    "h": 74.9,
+    "rel": 0.408,
     "neutral": false,
     "family": "brown",
     "name": "tobacco"
    },
    {
-    "hex": "544028",
+    "hex": "554128",
     "share": 0.168,
-    "L": 28.7,
-    "C": 18.7,
-    "h": 73.9,
-    "rel": 0.467,
+    "L": 29.1,
+    "C": 19.2,
+    "h": 74.8,
+    "rel": 0.477,
     "neutral": false,
     "family": "brown",
     "name": "chocolate"
    },
    {
-    "hex": "372613",
-    "share": 0.107,
-    "L": 16.7,
-    "C": 16.5,
-    "h": 71.1,
-    "rel": 0.636,
+    "hex": "382613",
+    "share": 0.118,
+    "L": 16.9,
+    "C": 16.9,
+    "h": 69.6,
+    "rel": 0.639,
     "neutral": false,
     "family": "brown",
     "name": "espresso"
    }
   ],
   "skin_share": 0.001,
-  "kept_share": 0.736,
-  "colour_confidence": "high",
+  "kept_share": 0.744,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B055-P001": {
@@ -13417,41 +13252,30 @@
  "B055-P005": {
   "colours": [
    {
-    "hex": "1D1820",
-    "share": 0.415,
-    "L": 9.1,
-    "C": 6.5,
-    "h": 314.1,
-    "rel": 0.126,
-    "neutral": true,
+    "hex": "241C25",
+    "share": 0.889,
+    "L": 11.5,
+    "C": 7.6,
+    "h": 322.3,
+    "rel": 0.165,
+    "neutral": false,
     "family": "black",
     "name": "off-black"
    },
    {
-    "hex": "2A374A",
-    "share": 0.36,
-    "L": 22.7,
-    "C": 13.4,
-    "h": 271.5,
-    "rel": 0.468,
+    "hex": "384253",
+    "share": 0.071,
+    "L": 27.7,
+    "C": 11.5,
+    "h": 272.7,
+    "rel": 0.348,
     "neutral": false,
     "family": "blue",
     "name": "navy"
-   },
-   {
-    "hex": "40526A",
-    "share": 0.169,
-    "L": 34.3,
-    "C": 16.1,
-    "h": 269.1,
-    "rel": 0.453,
-    "neutral": false,
-    "family": "blue",
-    "name": "denim blue"
    }
   ],
-  "skin_share": 0.074,
-  "kept_share": 0.666,
+  "skin_share": 0.12,
+  "kept_share": 0.615,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -13459,7 +13283,7 @@
   "colours": [
    {
     "hex": "121312",
-    "share": 0.943,
+    "share": 0.754,
     "L": 5.8,
     "C": 0.8,
     "h": 144.4,
@@ -13467,48 +13291,59 @@
     "neutral": true,
     "family": "black",
     "name": "black"
+   },
+   {
+    "hex": "2C2522",
+    "share": 0.184,
+    "L": 15.4,
+    "C": 4.2,
+    "h": 50.4,
+    "rel": 0.139,
+    "neutral": true,
+    "family": "black",
+    "name": "off-black"
    }
   ],
-  "skin_share": 0.113,
-  "kept_share": 0.501,
+  "skin_share": 0.123,
+  "kept_share": 0.48,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B055-P007": {
   "colours": [
    {
-    "hex": "13171D",
-    "share": 0.945,
+    "hex": "13171E",
+    "share": 0.964,
     "L": 7.6,
-    "C": 4.8,
-    "h": 269.2,
-    "rel": 0.29,
+    "C": 5.5,
+    "h": 272.6,
+    "rel": 0.309,
     "neutral": false,
-    "family": "black",
-    "name": "off-black"
+    "family": "blue",
+    "name": "navy"
    }
   ],
-  "skin_share": 0.168,
-  "kept_share": 0.427,
+  "skin_share": 0.153,
+  "kept_share": 0.516,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B055-P008": {
   "colours": [
    {
-    "hex": "38312E",
-    "share": 0.795,
+    "hex": "38312F",
+    "share": 0.798,
     "L": 21.0,
-    "C": 4.0,
-    "h": 50.6,
-    "rel": 0.099,
+    "C": 3.6,
+    "h": 41.7,
+    "rel": 0.077,
     "neutral": true,
     "family": "warm neutral",
     "name": "taupe"
    },
    {
     "hex": "171518",
-    "share": 0.205,
+    "share": 0.202,
     "L": 7.1,
     "C": 2.4,
     "h": 314.3,
@@ -13518,66 +13353,66 @@
     "name": "black"
    }
   ],
-  "skin_share": 0.058,
-  "kept_share": 0.638,
+  "skin_share": 0.053,
+  "kept_share": 0.757,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B055-P009": {
   "colours": [
    {
-    "hex": "4D453E",
-    "share": 0.851,
-    "L": 29.9,
-    "C": 5.8,
-    "h": 69.7,
-    "rel": 0.137,
+    "hex": "4F463F",
+    "share": 0.924,
+    "L": 30.4,
+    "C": 6.1,
+    "h": 66.3,
+    "rel": 0.138,
     "neutral": true,
     "family": "warm neutral",
     "name": "taupe"
    },
    {
-    "hex": "181815",
-    "share": 0.137,
-    "L": 8.1,
-    "C": 2.2,
-    "h": 110.1,
-    "rel": 0.168,
+    "hex": "26211C",
+    "share": 0.062,
+    "L": 13.1,
+    "C": 4.5,
+    "h": 72.9,
+    "rel": 0.217,
     "neutral": false,
-    "family": "black",
-    "name": "black"
+    "family": "brown",
+    "name": "espresso"
    }
   ],
-  "skin_share": 0.057,
-  "kept_share": 0.548,
+  "skin_share": 0.044,
+  "kept_share": 0.671,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B055-P010": {
   "colours": [
    {
-    "hex": "161818",
-    "share": 0.969,
-    "L": 8.0,
-    "C": 1.0,
-    "h": 199.2,
-    "rel": 0.099,
+    "hex": "151716",
+    "share": 0.977,
+    "L": 7.5,
+    "C": 1.2,
+    "h": 163.1,
+    "rel": 0.097,
     "neutral": true,
     "family": "black",
     "name": "black"
    }
   ],
-  "skin_share": 0.05,
-  "kept_share": 0.661,
+  "skin_share": 0.051,
+  "kept_share": 0.705,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B055-P011": {
   "colours": [
    {
-    "hex": "232323",
-    "share": 0.898,
-    "L": 13.7,
+    "hex": "242424",
+    "share": 0.882,
+    "L": 14.2,
     "C": 0.0,
     "h": 158.2,
     "rel": 0.0,
@@ -13586,19 +13421,19 @@
     "name": "black"
    },
    {
-    "hex": "4C4B4C",
-    "share": 0.067,
-    "L": 32.0,
-    "C": 0.8,
-    "h": 324.5,
-    "rel": 0.01,
+    "hex": "4F4F4F",
+    "share": 0.074,
+    "L": 33.6,
+    "C": 0.0,
+    "h": 158.2,
+    "rel": 0.0,
     "neutral": true,
     "family": "grey",
     "name": "dark grey"
    }
   ],
   "skin_share": 0.0,
-  "kept_share": 0.619,
+  "kept_share": 0.622,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -13624,129 +13459,107 @@
  "B055-P013": {
   "colours": [
    {
-    "hex": "392E81",
-    "share": 0.781,
-    "L": 25.0,
-    "C": 53.9,
-    "h": 302.7,
+    "hex": "3B3085",
+    "share": 0.915,
+    "L": 26.0,
+    "C": 54.9,
+    "h": 302.6,
     "rel": 0.595,
     "neutral": false,
     "family": "purple",
-    "name": "aubergine"
-   },
-   {
-    "hex": "191917",
-    "share": 0.098,
-    "L": 8.7,
-    "C": 1.5,
-    "h": 109.7,
-    "rel": 0.109,
-    "neutral": true,
-    "family": "black",
-    "name": "black"
-   },
-   {
-    "hex": "484444",
-    "share": 0.069,
-    "L": 29.2,
-    "C": 1.8,
-    "h": 19.7,
-    "rel": 0.032,
-    "neutral": true,
-    "family": "grey",
-    "name": "dark grey"
+    "name": "plum"
    }
   ],
-  "skin_share": 0.146,
-  "kept_share": 0.605,
+  "skin_share": 0.116,
+  "kept_share": 0.561,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B055-P014": {
   "colours": [
    {
-    "hex": "363A31",
-    "share": 0.892,
-    "L": 23.8,
-    "C": 6.2,
-    "h": 126.5,
-    "rel": 0.158,
+    "hex": "464B40",
+    "share": 0.909,
+    "L": 31.1,
+    "C": 7.3,
+    "h": 126.9,
+    "rel": 0.153,
     "neutral": false,
     "family": "grey",
     "name": "dark grey"
    },
    {
-    "hex": "1B1E1A",
-    "share": 0.104,
-    "L": 10.8,
-    "C": 3.3,
-    "h": 136.9,
-    "rel": 0.143,
+    "hex": "1C201C",
+    "share": 0.088,
+    "L": 11.7,
+    "C": 3.6,
+    "h": 143.9,
+    "rel": 0.129,
     "neutral": true,
     "family": "black",
     "name": "black"
    }
   ],
-  "skin_share": 0.05,
-  "kept_share": 0.602,
+  "skin_share": 0.055,
+  "kept_share": 0.666,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B056-P001": {
   "colours": [
    {
-    "hex": "20212E",
-    "share": 0.968,
-    "L": 13.2,
-    "C": 9.3,
-    "h": 290.2,
-    "rel": 0.257,
+    "hex": "252634",
+    "share": 1.0,
+    "L": 15.6,
+    "C": 9.9,
+    "h": 290.3,
+    "rel": 0.25,
     "neutral": false,
     "family": "blue",
     "name": "navy"
    }
   ],
-  "skin_share": 0.041,
-  "kept_share": 0.604,
+  "skin_share": 0.009,
+  "kept_share": 0.598,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B056-P002": {
   "colours": [
    {
-    "hex": "222425",
-    "share": 0.759,
-    "L": 14.0,
-    "C": 1.2,
-    "h": 236.2,
-    "rel": 0.083,
+    "hex": "222324",
+    "share": 0.861,
+    "L": 13.6,
+    "C": 0.9,
+    "h": 255.9,
+    "rel": 0.05,
     "neutral": true,
     "family": "black",
     "name": "black"
    },
    {
-    "hex": "333846",
-    "share": 0.21,
-    "L": 23.6,
-    "C": 9.5,
-    "h": 279.7,
-    "rel": 0.267,
+    "hex": "373B49",
+    "share": 0.099,
+    "L": 25.0,
+    "C": 9.3,
+    "h": 282.0,
+    "rel": 0.238,
     "neutral": false,
     "family": "blue",
     "name": "navy"
    }
   ],
-  "skin_share": 0.07,
-  "kept_share": 0.605,
+  "skin_share": 0.078,
+  "kept_share": 0.637,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B056-P003": {
   "colours": [
    {
-    "hex": "131313",
-    "share": 0.919,
-    "L": 5.9,
+    "hex": "202020",
+    "share": 0.951,
+    "L": 12.3,
     "C": 0.0,
     "h": 158.2,
     "rel": 0.0,
@@ -13756,8 +13569,8 @@
    }
   ],
   "skin_share": 0.0,
-  "kept_share": 0.541,
-  "colour_confidence": "low",
+  "kept_share": 0.592,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B056-P004": {
@@ -13935,30 +13748,41 @@
  "B057-P003": {
   "colours": [
    {
-    "hex": "222322",
-    "share": 0.566,
-    "L": 13.6,
-    "C": 0.9,
-    "h": 144.3,
-    "rel": 0.03,
-    "neutral": true,
-    "family": "black",
-    "name": "black"
-   },
-   {
-    "hex": "AFA8AD",
-    "share": 0.417,
-    "L": 69.6,
+    "hex": "BAB3B8",
+    "share": 0.664,
+    "L": 73.6,
     "C": 3.8,
     "h": 334.0,
-    "rel": 0.053,
+    "rel": 0.062,
     "neutral": true,
     "family": "grey",
     "name": "light grey"
+   },
+   {
+    "hex": "A29494",
+    "share": 0.199,
+    "L": 62.5,
+    "C": 5.5,
+    "h": 19.9,
+    "rel": 0.084,
+    "neutral": true,
+    "family": "grey",
+    "name": "light grey"
+   },
+   {
+    "hex": "6B5D5D",
+    "share": 0.071,
+    "L": 40.8,
+    "C": 6.0,
+    "h": 20.2,
+    "rel": 0.085,
+    "neutral": true,
+    "family": "grey",
+    "name": "mid grey"
    }
   ],
-  "skin_share": 0.074,
-  "kept_share": 0.623,
+  "skin_share": 0.117,
+  "kept_share": 0.576,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -14006,72 +13830,72 @@
  "B057-P005": {
   "colours": [
    {
-    "hex": "211F1D",
-    "share": 0.486,
-    "L": 11.9,
-    "C": 1.8,
-    "h": 74.3,
-    "rel": 0.096,
-    "neutral": true,
-    "family": "black",
-    "name": "black"
-   },
-   {
-    "hex": "564E49",
-    "share": 0.485,
-    "L": 33.8,
-    "C": 4.8,
-    "h": 60.7,
-    "rel": 0.094,
+    "hex": "534A45",
+    "share": 0.926,
+    "L": 32.2,
+    "C": 5.2,
+    "h": 57.3,
+    "rel": 0.101,
     "neutral": true,
     "family": "warm neutral",
     "name": "taupe"
+   },
+   {
+    "hex": "262321",
+    "share": 0.074,
+    "L": 14.0,
+    "C": 2.1,
+    "h": 62.9,
+    "rel": 0.088,
+    "neutral": true,
+    "family": "black",
+    "name": "black"
    }
   ],
-  "skin_share": 0.077,
-  "kept_share": 0.58,
+  "skin_share": 0.094,
+  "kept_share": 0.64,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B057-P006": {
   "colours": [
    {
-    "hex": "4E465A",
-    "share": 0.304,
-    "L": 31.2,
-    "C": 13.2,
-    "h": 306.6,
-    "rel": 0.103,
+    "hex": "D1D6D3",
+    "share": 0.453,
+    "L": 85.2,
+    "C": 2.4,
+    "h": 158.5,
+    "rel": 0.034,
     "neutral": true,
-    "family": "purple",
-    "name": "plum"
+    "family": "cool neutral",
+    "name": "pale grey"
    },
    {
-    "hex": "BCAC91",
-    "share": 0.262,
-    "L": 71.0,
-    "C": 16.1,
-    "h": 85.0,
-    "rel": 0.215,
+    "hex": "383F52",
+    "share": 0.248,
+    "L": 26.7,
+    "C": 12.6,
+    "h": 280.2,
+    "rel": 0.325,
+    "neutral": false,
+    "family": "blue",
+    "name": "navy"
+   },
+   {
+    "hex": "A68A70",
+    "share": 0.154,
+    "L": 59.4,
+    "C": 19.1,
+    "h": 69.5,
+    "rel": 0.272,
     "neutral": false,
     "family": "brown",
     "name": "tan"
-   },
-   {
-    "hex": "CDD2D9",
-    "share": 0.236,
-    "L": 84.0,
-    "C": 4.1,
-    "h": 264.6,
-    "rel": 0.166,
-    "neutral": false,
-    "family": "cool neutral",
-    "name": "pale grey"
    }
   ],
-  "skin_share": 0.007,
-  "kept_share": 0.812,
-  "colour_confidence": "high",
+  "skin_share": 0.006,
+  "kept_share": 0.868,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B058-P001": {
@@ -14309,41 +14133,41 @@
  "B059-P001": {
   "colours": [
    {
-    "hex": "3D302D",
-    "share": 0.418,
-    "L": 21.2,
-    "C": 6.8,
-    "h": 37.9,
-    "rel": 0.129,
+    "hex": "3E302D",
+    "share": 0.396,
+    "L": 21.3,
+    "C": 7.2,
+    "h": 36.8,
+    "rel": 0.134,
     "neutral": true,
     "family": "warm neutral",
     "name": "taupe"
    },
    {
-    "hex": "828686",
-    "share": 0.34,
-    "L": 55.6,
-    "C": 1.6,
-    "h": 199.2,
-    "rel": 0.047,
+    "hex": "90918F",
+    "share": 0.275,
+    "L": 60.0,
+    "C": 1.2,
+    "h": 129.0,
+    "rel": 0.015,
     "neutral": true,
     "family": "grey",
     "name": "mid grey"
    },
    {
-    "hex": "231A18",
-    "share": 0.223,
-    "L": 10.3,
-    "C": 5.1,
-    "h": 37.3,
-    "rel": 0.195,
-    "neutral": false,
-    "family": "brown",
-    "name": "espresso"
+    "hex": "717371",
+    "share": 0.169,
+    "L": 48.2,
+    "C": 1.4,
+    "h": 144.4,
+    "rel": 0.024,
+    "neutral": true,
+    "family": "grey",
+    "name": "mid grey"
    }
   ],
-  "skin_share": 0.065,
-  "kept_share": 0.681,
+  "skin_share": 0.077,
+  "kept_share": 0.702,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -14503,41 +14327,30 @@
  "B059-P006": {
   "colours": [
    {
-    "hex": "873033",
-    "share": 0.547,
-    "L": 32.9,
-    "C": 41.6,
-    "h": 25.8,
-    "rel": 0.656,
+    "hex": "7F282D",
+    "share": 0.796,
+    "L": 30.0,
+    "C": 41.8,
+    "h": 25.2,
+    "rel": 0.705,
     "neutral": false,
     "family": "orange",
     "name": "rust"
    },
    {
-    "hex": "3E485F",
-    "share": 0.169,
-    "L": 30.6,
-    "C": 15.0,
-    "h": 278.5,
-    "rel": 0.371,
+    "hex": "291B16",
+    "share": 0.138,
+    "L": 11.4,
+    "C": 8.7,
+    "h": 45.6,
+    "rel": 0.357,
     "neutral": false,
-    "family": "blue",
-    "name": "denim blue"
-   },
-   {
-    "hex": "231C1F",
-    "share": 0.146,
-    "L": 11.2,
-    "C": 4.2,
-    "h": 349.1,
-    "rel": 0.124,
-    "neutral": true,
-    "family": "black",
-    "name": "off-black"
+    "family": "brown",
+    "name": "espresso"
    }
   ],
-  "skin_share": 0.106,
-  "kept_share": 0.582,
+  "skin_share": 0.126,
+  "kept_share": 0.545,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -14563,41 +14376,41 @@
  "B059-P008": {
   "colours": [
    {
-    "hex": "B83426",
-    "share": 0.488,
-    "L": 42.4,
-    "C": 65.1,
+    "hex": "BD3829",
+    "share": 0.583,
+    "L": 44.0,
+    "C": 65.4,
     "h": 37.0,
-    "rel": 0.768,
+    "rel": 0.752,
     "neutral": false,
     "family": "orange",
     "name": "rust"
    },
    {
-    "hex": "211E26",
-    "share": 0.311,
-    "L": 11.9,
-    "C": 6.0,
-    "h": 305.5,
-    "rel": 0.082,
-    "neutral": true,
-    "family": "black",
-    "name": "off-black"
+    "hex": "271A15",
+    "share": 0.194,
+    "L": 10.7,
+    "C": 8.2,
+    "h": 47.0,
+    "rel": 0.365,
+    "neutral": false,
+    "family": "brown",
+    "name": "espresso"
    },
    {
-    "hex": "812016",
-    "share": 0.18,
-    "L": 28.8,
-    "C": 51.1,
-    "h": 37.2,
-    "rel": 0.784,
+    "hex": "892317",
+    "share": 0.172,
+    "L": 30.8,
+    "C": 53.6,
+    "h": 37.8,
+    "rel": 0.78,
     "neutral": false,
     "family": "orange",
     "name": "rust"
    }
   ],
-  "skin_share": 0.122,
-  "kept_share": 0.557,
+  "skin_share": 0.197,
+  "kept_share": 0.494,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -14634,41 +14447,41 @@
  "B060-P002": {
   "colours": [
    {
-    "hex": "463035",
-    "share": 0.41,
-    "L": 22.6,
-    "C": 10.9,
-    "h": 4.3,
-    "rel": 0.238,
+    "hex": "452F35",
+    "share": 0.497,
+    "L": 22.1,
+    "C": 11.1,
+    "h": 1.0,
+    "rel": 0.244,
     "neutral": false,
     "family": "red",
     "name": "oxblood"
    },
    {
-    "hex": "CEAD82",
-    "share": 0.336,
-    "L": 72.6,
-    "C": 27.2,
-    "h": 77.4,
-    "rel": 0.348,
-    "neutral": false,
-    "family": "brown",
-    "name": "tan"
-   },
-   {
-    "hex": "1C1214",
-    "share": 0.209,
-    "L": 6.6,
-    "C": 5.3,
-    "h": 5.6,
-    "rel": 0.199,
-    "neutral": false,
+    "hex": "1D1619",
+    "share": 0.31,
+    "L": 8.2,
+    "C": 4.3,
+    "h": 349.3,
+    "rel": 0.143,
+    "neutral": true,
     "family": "black",
     "name": "off-black"
+   },
+   {
+    "hex": "DBBB8F",
+    "share": 0.155,
+    "L": 77.6,
+    "C": 27.1,
+    "h": 78.9,
+    "rel": 0.33,
+    "neutral": false,
+    "family": "warm neutral",
+    "name": "oatmeal"
    }
   ],
-  "skin_share": 0.075,
-  "kept_share": 0.659,
+  "skin_share": 0.059,
+  "kept_share": 0.699,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -14746,41 +14559,41 @@
  "B060-P005": {
   "colours": [
    {
-    "hex": "343433",
-    "share": 0.353,
-    "L": 21.7,
-    "C": 0.7,
-    "h": 110.0,
-    "rel": 0.021,
-    "neutral": true,
-    "family": "grey",
-    "name": "dark grey"
-   },
-   {
-    "hex": "787B6E",
-    "share": 0.227,
-    "L": 51.0,
-    "C": 7.7,
-    "h": 118.5,
+    "hex": "6D7064",
+    "share": 0.42,
+    "L": 46.7,
+    "C": 7.2,
+    "h": 119.3,
     "rel": 0.122,
     "neutral": true,
     "family": "grey",
     "name": "mid grey"
    },
    {
-    "hex": "575950",
-    "share": 0.216,
-    "L": 37.4,
-    "C": 5.6,
-    "h": 118.2,
-    "rel": 0.113,
+    "hex": "3B3C39",
+    "share": 0.349,
+    "L": 25.1,
+    "C": 2.0,
+    "h": 122.8,
+    "rel": 0.051,
     "neutral": true,
     "family": "grey",
     "name": "dark grey"
+   },
+   {
+    "hex": "1B1B1A",
+    "share": 0.211,
+    "L": 9.7,
+    "C": 0.7,
+    "h": 109.9,
+    "rel": 0.048,
+    "neutral": true,
+    "family": "black",
+    "name": "black"
    }
   ],
-  "skin_share": 0.053,
-  "kept_share": 0.619,
+  "skin_share": 0.039,
+  "kept_share": 0.672,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -14869,30 +14682,41 @@
  "B061-P002": {
   "colours": [
    {
-    "hex": "677477",
-    "share": 0.53,
-    "L": 47.9,
-    "C": 5.3,
-    "h": 218.4,
-    "rel": 0.186,
+    "hex": "768488",
+    "share": 0.413,
+    "L": 54.2,
+    "C": 5.7,
+    "h": 222.6,
+    "rel": 0.182,
     "neutral": false,
     "family": "grey",
     "name": "mid grey"
    },
    {
-    "hex": "1F1C1D",
-    "share": 0.411,
-    "L": 10.6,
-    "C": 1.7,
-    "h": 354.4,
-    "rel": 0.053,
+    "hex": "4A5150",
+    "share": 0.311,
+    "L": 33.8,
+    "C": 3.0,
+    "h": 187.1,
+    "rel": 0.123,
+    "neutral": true,
+    "family": "grey",
+    "name": "dark grey"
+   },
+   {
+    "hex": "171415",
+    "share": 0.226,
+    "L": 6.7,
+    "C": 1.6,
+    "h": 354.6,
+    "rel": 0.059,
     "neutral": true,
     "family": "black",
     "name": "black"
    }
   ],
-  "skin_share": 0.038,
-  "kept_share": 0.606,
+  "skin_share": 0.043,
+  "kept_share": 0.629,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -14981,82 +14805,82 @@
  "B061-P005": {
   "colours": [
    {
-    "hex": "CA2B30",
-    "share": 0.338,
-    "L": 44.9,
-    "C": 71.4,
-    "h": 31.5,
-    "rel": 0.86,
-    "neutral": false,
-    "family": "red",
-    "name": "brick"
-   },
-   {
-    "hex": "DFD4CC",
-    "share": 0.318,
-    "L": 85.6,
+    "hex": "DED3CB",
+    "share": 0.354,
+    "L": 85.2,
     "C": 5.8,
     "h": 65.5,
-    "rel": 0.193,
+    "rel": 0.187,
     "neutral": false,
     "family": "warm neutral",
     "name": "cream"
    },
    {
-    "hex": "2B2C3B",
-    "share": 0.234,
-    "L": 18.5,
-    "C": 10.3,
-    "h": 290.4,
-    "rel": 0.239,
+    "hex": "CC2B30",
+    "share": 0.314,
+    "L": 45.3,
+    "C": 72.2,
+    "h": 31.6,
+    "rel": 0.862,
+    "neutral": false,
+    "family": "red",
+    "name": "brick"
+   },
+   {
+    "hex": "2B3043",
+    "share": 0.21,
+    "L": 20.2,
+    "C": 13.0,
+    "h": 284.4,
+    "rel": 0.351,
     "neutral": false,
     "family": "blue",
     "name": "navy"
    }
   ],
-  "skin_share": 0.064,
-  "kept_share": 0.405,
-  "colour_confidence": "high",
+  "skin_share": 0.013,
+  "kept_share": 0.686,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B062-P001": {
   "colours": [
    {
-    "hex": "BCD8F3",
-    "share": 0.567,
-    "L": 85.1,
-    "C": 16.7,
-    "h": 257.7,
-    "rel": 0.718,
+    "hex": "C0DBF5",
+    "share": 0.611,
+    "L": 86.2,
+    "C": 16.0,
+    "h": 257.5,
+    "rel": 0.746,
     "neutral": false,
     "family": "blue",
     "name": "sky"
    },
    {
-    "hex": "1E1715",
-    "share": 0.179,
-    "L": 8.5,
-    "C": 4.1,
-    "h": 40.7,
-    "rel": 0.203,
+    "hex": "16110F",
+    "share": 0.273,
+    "L": 5.5,
+    "C": 2.5,
+    "h": 46.0,
+    "rel": 0.212,
     "neutral": false,
-    "family": "brown",
-    "name": "espresso"
+    "family": "black",
+    "name": "black"
    },
    {
-    "hex": "486182",
-    "share": 0.161,
-    "L": 40.5,
-    "C": 21.3,
-    "h": 270.2,
-    "rel": 0.524,
+    "hex": "453027",
+    "share": 0.079,
+    "L": 22.0,
+    "C": 12.6,
+    "h": 49.4,
+    "rel": 0.295,
     "neutral": false,
-    "family": "blue",
-    "name": "denim blue"
+    "family": "brown",
+    "name": "chocolate"
    }
   ],
-  "skin_share": 0.078,
-  "kept_share": 0.645,
+  "skin_share": 0.165,
+  "kept_share": 0.572,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -15164,41 +14988,41 @@
  "B062-P005": {
   "colours": [
    {
-    "hex": "D64D43",
-    "share": 0.524,
-    "L": 51.9,
+    "hex": "D95045",
+    "share": 0.715,
+    "L": 52.9,
     "C": 63.6,
-    "h": 33.3,
-    "rel": 0.675,
+    "h": 33.5,
+    "rel": 0.663,
     "neutral": false,
     "family": "orange",
     "name": "terracotta"
    },
    {
-    "hex": "76634C",
-    "share": 0.237,
-    "L": 43.2,
-    "C": 16.4,
-    "h": 76.0,
-    "rel": 0.311,
-    "neutral": false,
-    "family": "brown",
-    "name": "tobacco"
-   },
-   {
-    "hex": "9E2A24",
-    "share": 0.127,
-    "L": 36.1,
-    "C": 57.1,
-    "h": 34.3,
-    "rel": 0.781,
+    "hex": "9D2822",
+    "share": 0.166,
+    "L": 35.6,
+    "C": 57.7,
+    "h": 34.5,
+    "rel": 0.794,
     "neutral": false,
     "family": "orange",
     "name": "rust"
+   },
+   {
+    "hex": "231814",
+    "share": 0.108,
+    "L": 9.5,
+    "C": 6.8,
+    "h": 45.3,
+    "rel": 0.333,
+    "neutral": false,
+    "family": "brown",
+    "name": "espresso"
    }
   ],
-  "skin_share": 0.099,
-  "kept_share": 0.547,
+  "skin_share": 0.153,
+  "kept_share": 0.477,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -15246,41 +15070,41 @@
  "B062-P007": {
   "colours": [
    {
-    "hex": "744E1C",
-    "share": 0.294,
-    "L": 36.5,
-    "C": 36.5,
-    "h": 72.4,
-    "rel": 0.762,
+    "hex": "78521D",
+    "share": 0.409,
+    "L": 38.1,
+    "C": 37.6,
+    "h": 73.7,
+    "rel": 0.769,
     "neutral": false,
     "family": "yellow",
     "name": "ochre"
    },
    {
-    "hex": "F2D6D2",
-    "share": 0.244,
-    "L": 87.8,
-    "C": 10.6,
-    "h": 31.4,
-    "rel": 0.609,
+    "hex": "EFD5CA",
+    "share": 0.346,
+    "L": 87.1,
+    "C": 11.4,
+    "h": 50.3,
+    "rel": 0.538,
     "neutral": false,
-    "family": "pink",
-    "name": "blush"
+    "family": "warm neutral",
+    "name": "cream"
    },
    {
-    "hex": "292222",
-    "share": 0.244,
-    "L": 14.0,
-    "C": 3.5,
-    "h": 20.3,
-    "rel": 0.094,
-    "neutral": true,
+    "hex": "181210",
+    "share": 0.179,
+    "L": 6.0,
+    "C": 3.0,
+    "h": 41.8,
+    "rel": 0.22,
+    "neutral": false,
     "family": "black",
     "name": "black"
    }
   ],
-  "skin_share": 0.462,
-  "kept_share": 0.247,
+  "skin_share": 0.532,
+  "kept_share": 0.257,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
@@ -15328,83 +15152,83 @@
  "B062-P009": {
   "colours": [
    {
-    "hex": "612C35",
-    "share": 0.428,
-    "L": 25.6,
-    "C": 25.7,
-    "h": 12.7,
-    "rel": 0.511,
+    "hex": "632E36",
+    "share": 0.536,
+    "L": 26.4,
+    "C": 25.6,
+    "h": 14.0,
+    "rel": 0.497,
     "neutral": false,
     "family": "red",
     "name": "oxblood"
    },
    {
-    "hex": "1A1C2A",
-    "share": 0.306,
-    "L": 10.7,
-    "C": 10.3,
-    "h": 288.6,
-    "rel": 0.328,
-    "neutral": false,
-    "family": "blue",
-    "name": "navy"
-   },
-   {
-    "hex": "A17F5E",
-    "share": 0.152,
-    "L": 55.6,
-    "C": 24.5,
-    "h": 69.6,
-    "rel": 0.366,
+    "hex": "B89571",
+    "share": 0.193,
+    "L": 64.1,
+    "C": 25.3,
+    "h": 71.4,
+    "rel": 0.344,
     "neutral": false,
     "family": "brown",
     "name": "tan"
+   },
+   {
+    "hex": "E5CDB6",
+    "share": 0.139,
+    "L": 83.8,
+    "C": 15.3,
+    "h": 71.8,
+    "rel": 0.377,
+    "neutral": false,
+    "family": "warm neutral",
+    "name": "cream"
    }
   ],
-  "skin_share": 0.252,
-  "kept_share": 0.483,
+  "skin_share": 0.293,
+  "kept_share": 0.504,
   "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B062-P010": {
   "colours": [
    {
-    "hex": "38282A",
-    "share": 0.767,
-    "L": 18.0,
-    "C": 8.0,
-    "h": 11.6,
-    "rel": 0.196,
+    "hex": "442D30",
+    "share": 0.691,
+    "L": 21.3,
+    "C": 11.4,
+    "h": 11.9,
+    "rel": 0.253,
     "neutral": false,
     "family": "red",
     "name": "oxblood"
    },
    {
-    "hex": "3A5892",
-    "share": 0.111,
-    "L": 37.8,
-    "C": 36.1,
-    "h": 282.1,
-    "rel": 0.702,
+    "hex": "3A5791",
+    "share": 0.166,
+    "L": 37.4,
+    "C": 36.2,
+    "h": 282.6,
+    "rel": 0.698,
     "neutral": false,
     "family": "blue",
     "name": "denim blue"
    },
    {
-    "hex": "AAA7A5",
-    "share": 0.07,
-    "L": 68.7,
-    "C": 1.6,
-    "h": 63.6,
-    "rel": 0.019,
+    "hex": "A8A7A3",
+    "share": 0.082,
+    "L": 68.5,
+    "C": 2.2,
+    "h": 100.1,
+    "rel": 0.031,
     "neutral": true,
     "family": "warm neutral",
     "name": "oatmeal"
    }
   ],
-  "skin_share": 0.145,
-  "kept_share": 0.378,
-  "colour_confidence": "high",
+  "skin_share": 0.038,
+  "kept_share": 0.569,
+  "colour_confidence": "medium",
   "colour_stability": "stable"
  },
  "B062-P011": {
@@ -15429,42 +15253,42 @@
  "B062-P012": {
   "colours": [
    {
-    "hex": "EAEBE8",
-    "share": 0.376,
-    "L": 92.9,
-    "C": 1.6,
-    "h": 123.0,
-    "rel": 0.019,
+    "hex": "EBECEC",
+    "share": 0.38,
+    "L": 93.3,
+    "C": 0.4,
+    "h": 199.4,
+    "rel": 0.011,
     "neutral": true,
     "family": "white",
     "name": "white"
    },
    {
-    "hex": "757E89",
-    "share": 0.269,
-    "L": 52.4,
-    "C": 7.1,
-    "h": 262.6,
-    "rel": 0.166,
+    "hex": "CFC7A7",
+    "share": 0.21,
+    "L": 80.1,
+    "C": 17.2,
+    "h": 98.2,
+    "rel": 0.211,
     "neutral": false,
-    "family": "blue",
-    "name": "steel blue"
+    "family": "yellow",
+    "name": "butter"
    },
    {
-    "hex": "C4C6B4",
-    "share": 0.242,
-    "L": 79.3,
-    "C": 9.6,
-    "h": 113.8,
-    "rel": 0.112,
+    "hex": "B9C5BE",
+    "share": 0.209,
+    "L": 78.4,
+    "C": 5.8,
+    "h": 159.0,
+    "rel": 0.087,
     "neutral": true,
     "family": "cool neutral",
     "name": "pale grey"
    }
   ],
   "skin_share": 0.0,
-  "kept_share": 0.924,
-  "colour_confidence": "medium",
+  "kept_share": 0.959,
+  "colour_confidence": "low",
   "colour_stability": "stable"
  },
  "B062-P013": {
@@ -15500,41 +15324,41 @@
  "B062-P014": {
   "colours": [
    {
-    "hex": "4D545E",
-    "share": 0.501,
-    "L": 35.5,
-    "C": 6.8,
-    "h": 266.7,
-    "rel": 0.194,
+    "hex": "4C545D",
+    "share": 0.62,
+    "L": 35.3,
+    "C": 6.4,
+    "h": 260.9,
+    "rel": 0.202,
     "neutral": false,
     "family": "grey",
     "name": "dark grey"
    },
    {
-    "hex": "658EC0",
-    "share": 0.24,
-    "L": 58.0,
-    "C": 30.4,
-    "h": 269.3,
-    "rel": 0.579,
-    "neutral": false,
-    "family": "grey",
-    "name": "mid grey"
-   },
-   {
-    "hex": "30333A",
-    "share": 0.231,
-    "L": 21.2,
-    "C": 4.9,
-    "h": 275.7,
-    "rel": 0.161,
+    "hex": "30343A",
+    "share": 0.285,
+    "L": 21.5,
+    "C": 4.4,
+    "h": 267.5,
+    "rel": 0.17,
     "neutral": false,
     "family": "grey",
     "name": "dark grey"
+   },
+   {
+    "hex": "6B96C7",
+    "share": 0.06,
+    "L": 60.8,
+    "C": 29.9,
+    "h": 267.3,
+    "rel": 0.569,
+    "neutral": false,
+    "family": "blue",
+    "name": "steel blue"
    }
   ],
-  "skin_share": 0.098,
-  "kept_share": 0.576,
+  "skin_share": 0.087,
+  "kept_share": 0.578,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },
@@ -15612,41 +15436,41 @@
  "B062-P017": {
   "colours": [
    {
-    "hex": "B1BBBC",
-    "share": 0.363,
-    "L": 75.2,
-    "C": 3.7,
-    "h": 207.6,
-    "rel": 0.09,
-    "neutral": true,
-    "family": "grey",
-    "name": "light grey"
+    "hex": "7D5924",
+    "share": 0.383,
+    "L": 40.6,
+    "C": 36.7,
+    "h": 75.5,
+    "rel": 0.725,
+    "neutral": false,
+    "family": "yellow",
+    "name": "ochre"
    },
    {
-    "hex": "7F8889",
-    "share": 0.291,
-    "L": 56.0,
-    "C": 3.5,
-    "h": 208.5,
-    "rel": 0.108,
-    "neutral": true,
-    "family": "grey",
-    "name": "mid grey"
+    "hex": "412D1C",
+    "share": 0.273,
+    "L": 20.4,
+    "C": 16.1,
+    "h": 65.1,
+    "rel": 0.495,
+    "neutral": false,
+    "family": "brown",
+    "name": "espresso"
    },
    {
-    "hex": "595B57",
-    "share": 0.26,
-    "L": 38.4,
-    "C": 2.6,
-    "h": 128.9,
-    "rel": 0.046,
-    "neutral": true,
-    "family": "grey",
-    "name": "mid grey"
+    "hex": "BD9B53",
+    "share": 0.264,
+    "L": 65.7,
+    "C": 42.2,
+    "h": 84.7,
+    "rel": 0.603,
+    "neutral": false,
+    "family": "yellow",
+    "name": "mustard"
    }
   ],
-  "skin_share": 0.057,
-  "kept_share": 0.506,
+  "skin_share": 0.221,
+  "kept_share": 0.322,
   "colour_confidence": "medium",
   "colour_stability": "stable"
  },

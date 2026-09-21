@@ -1,0 +1,7 @@
+# Assets I opened and judged unusable as a board image. The product stays in the
+# catalogue — nothing is dropped — but the board picker will not place it.
+# Re-screenshot the piece and these lines can go.
+B020-P006  the cut-out is the product-page card, not the scarf: type and a swatch chip
+B011-P006  the cut-out is a size-guide panel (XXS / XS), not the coat
+B037-P004  page text ("VIEW TH") fused to the cut-out
+B053-P005  the cut-out carries a second garment (a purple tweed coat) beside the bag

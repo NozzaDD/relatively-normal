@@ -41,9 +41,24 @@ def rel_of(hx):
     return C.relative_chroma(L, Cc, h)
 
 
+def _rejects():
+    out = set()
+    try:
+        for ln in open(ROOT + '/content/catalogue/asset-rejects.txt'):
+            if ln.strip() and not ln.startswith('#'):
+                out.add(ln.split()[0])
+    except FileNotFoundError:
+        pass
+    return out
+
+
+REJECT = _rejects()
+
+
 def usable(p):
     return (p['asset_path'] and p['asset_quality'] in ('good', 'usable')
-            and p['slot'] in NEED and p['colour1_hex'])
+            and p['slot'] in NEED and p['colour1_hex']
+            and p['product_id'] not in REJECT)
 
 
 def brings_foreign_colour(p, keylabs):
@@ -55,8 +70,36 @@ def brings_foreign_colour(p, keylabs):
     return None
 
 
+def merge_keys(cols):
+    """Two readings of the same blue are one key colour, not two.
+
+    Without this a look whose jeans and shirt differ by dE 6 lists both, one
+    piece can only be credited with one of them, and the board fails a test it
+    actually passed."""
+    out = []
+    for c in cols:
+        for m in out:
+            d = C.delta_e_2000(lab(c['hex']), lab(m['hex']))
+            L1, C1, h1 = C.lab_to_lch(lab(c['hex']))
+            L2, C2, h2 = C.lab_to_lch(lab(m['hex']))
+            dh = abs(((h1 - h2 + 180) % 360) - 180)
+            # the shadow side of a dominant colour is not a second key colour:
+            # same family, same hue, much darker, small share
+            shadow = (c['family'] == m['family'] and dh <= 25 and abs(L1 - L2) > 20
+                      and c['share'] < 0.20)
+            if d <= 10 or (c['family'] == m['family'] and d <= 16) or shadow:
+                m['share'] = round(m['share'] + c['share'], 3)
+                if c['role'] == 'dominant':
+                    m['role'] = 'dominant'
+                break
+        else:
+            out.append(dict(c))
+    out.sort(key=lambda c: -c['share'])
+    return out
+
+
 def pick_for(image, insp, prods, usage):
-    keys = [c for c in insp['colours'] if c['share'] >= 0.06]
+    keys = merge_keys([c for c in insp['colours'] if c['share'] >= 0.06])
     keylabs = [lab(c['hex']) for c in keys]
     chrom = [c for c in keys if c['rel'] > NEUTRAL_REL]
     chosen, why = {}, []
@@ -81,7 +124,11 @@ def pick_for(image, insp, prods, usage):
             if c and c['role'] == 'accent' and slot not in SMALL:
                 d += 40
             new = 1 if (c and d <= MATCH and c['hex'] not in covered) else 0
-            qual = 0 if p['asset_quality'] == 'good' else 1
+            # a tile still carries the shop page around it; a cut-out is the piece
+            qual = (0 if p['asset_quality'] == 'good' else 1) + (0 if p['asset_type'].startswith('cutout') else 2)
+            # a model shot in a small slot puts a floating head on the board
+            if slot in SMALL and p['asset_type'] == 'cutout_model':
+                qual += 1
             cands.append((-new, d, qual, p['product_id'], p, c if d <= MATCH else None))
         if not cands:
             why.append(f'{slot}: nothing in the library')
@@ -93,6 +140,17 @@ def pick_for(image, insp, prods, usage):
                             neutral_filler=(c is None))
         if c:
             covered.add(c['hex'])
+    # a key colour is carried if ANY chosen piece is within the threshold of it,
+    # not only the piece the greedy pass happened to credit with it
+    for c in keys:
+        cl = lab(c['hex'])
+        for v in chosen.values():
+            if min((C.delta_e_2000(cl, x['lab']) for x in pcolours(v['product'])), default=999) <= MATCH:
+                covered.add(c['hex'])
+                if not v['carries']:
+                    v['carries'] = c['hex']
+                    v['neutral_filler'] = False
+                break
     missing = [c for c in chrom if c['hex'] not in covered]
     return dict(keys=keys, chromatic=chrom, chosen=chosen, covered=covered,
                 missing=missing, notes=why)
