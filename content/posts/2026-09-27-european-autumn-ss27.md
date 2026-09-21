@@ -259,3 +259,204 @@ gap is enormous (camel around L\* 59, chocolate around L\* 19).
 - **`series-fashion-week-european-lens` recurs every Feb/Mar and Sep/Oct.** Should
   this post be built as a template so the February one is a fill-in rather than
   a rewrite?
+
+---
+---
+
+# DRAFT
+
+**Written 21 September 2026. Publish-ready prose — and not in your voice yet:
+`voice/` still contains only a README, so none of this has been checked against
+how you actually write.** The no-published-text rule was suspended for this
+session at your instruction; it resumes afterwards.
+
+**Scope note.** This draft is written for a general reader. It names no personal
+palette, no colouring, no wardrobe, and it reports no palette-membership or
+contrast verdict — those are tied to a profile the reader doesn't share. It uses
+only the general pairing relationships.
+
+---
+
+## Title options
+
+1. **What of these actually survives a European autumn**
+2. **Nine degrees, and a show notebook**
+3. **I went through the September shows looking for arithmetic**
+
+**Subtitle:** Four colour relationships from the autumn shows, and what each one
+costs to reproduce from clothes that already exist.
+
+---
+
+## The draft
+
+A runway look is a proposal made under lights, on a set that was built for it,
+worn by someone standing still for four seconds. Almost nothing about that
+survives contact with a Tuesday. But the *relationships* do — the reason two
+colours sat well together in a photograph is the same reason they will sit well
+together on a pavement, and that reason can be written down as a number.
+
+So this is not a trend report. It is four relationships, pulled out of four
+photographs, with the garments removed and only the colours left. Then the same
+relationship rebuilt out of things you can actually buy.
+
+One piece of housekeeping first. When I pull colours out of a runway photograph
+I take them from the clothes only — not the wall, not the floor, not the model.
+This matters more than it sounds. One of the looks below is famous for a
+particular colour pairing that, once you mask out the set, turns out not to be
+in the clothes at all.
+
+### The easy one: a cool colour against a warm one
+
+<img src="../boards/2026-09-21/board-1-a-wide.jpg" width="720">
+
+1. Double-breasted trench in virgin wool gabardine, colour *Barbera* — Aspesi
+2. Boat-neck merino knit, colour *Avio* — Aspesi
+3. Cotton gabardine skirt, colour *Beige* — Aspesi
+4. Tall riding boots — brand unknown
+5. Crinkled leather shoulder bag — COS
+6. Ribbed wool scarf — Margaret Howell
+
+The look that started this is a pale blue coat with a warm brown shoe. Opposite
+sides of the wheel — a hundred and sixty-seven degrees apart, which is as close
+to true opposition as clothes usually get.
+
+But hue opposition on its own is a costume. Saturated orange against saturated
+teal is a traffic cone. What makes this particular version calm is that both
+colours are using about the same *fraction* of the saturation available to them
+— the difference is two hundredths. Matched intensity is what stops opposition
+shouting.
+
+Rebuilt above: a blue knit at 2, a tan skirt at 3. Hue gap a hundred and
+sixty-four degrees, saturations within thirteen hundredths, and a lightness gap
+of twenty-three points to keep them legible against each other rather than
+muddy. The trench and the boot are the same colour as each other — near enough
+that the system calls them one colour — so they read as a frame rather than a
+third voice.
+
+The thing to take from this one is the second condition. Everybody knows about
+opposite colours. Far fewer people know that they have to be equally loud.
+
+### The one everybody can wear: one hue, three depths
+
+<img src="../boards/2026-09-21/board-2-a.jpg" width="480">
+
+1. *Carlotta2* cotton corduroy double-breasted jacket, colour *Taupe* — Massimo Alba
+2. V-neck wool-cashmere knit — Aspesi
+3. Cotton gabardine skirt, colour *Beige* — Aspesi
+4. Soft flat loafers with pull tab — soeur
+5. Cashmere-and-silk bandana, deep brown — Massimo Alba
+
+If opposition is the party trick, this is the thing you would actually wear on a
+Wednesday, and it is the hardest to get subtly wrong.
+
+One hue. Several depths of it. The condition is that the hues stay within about
+forty degrees of each other — which is roughly "the same colour name" — and that
+the *lightness* steps stay wide. Twenty-five points minimum. That number is the
+whole discipline. Two browns eight points apart do not read as a decision; they
+read as an accident with the laundry.
+
+On this board the knit and the jacket are three and a half degrees apart in hue
+and twenty-eight and a half points apart in lightness. The knit and the skirt are
+so close in colour — six points of difference — that they count as one colour
+worn twice, which is allowed outright and is a great deal more elegant than it
+sounds.
+
+What this one costs to reproduce: almost nothing. Every wardrobe already contains
+three browns or three greys or three blues. The work is not acquisition, it is
+arranging them so the steps are wide enough.
+
+### The quiet one nobody talks about
+
+<img src="../boards/2026-09-21/board-4-a.jpg" width="480">
+
+1. Short blouson jacket, olive — Aspesi
+2. *Virginia* virgin wool and alpaca sweater, colour *Raspberry* — Massimo Alba
+3. Wide-leg velvet trousers, cream — Aspesi
+4. Soft flat loafers with pull tab — soeur
+5. Ribbed wool scarf — Margaret Howell
+
+There is a third case, between opposition and same-family, that gets almost no
+attention: hues roughly forty to a hundred degrees apart. Faded pink against a
+dark olive. Neither opposite nor neighbourly — the awkward middle.
+
+It works under stricter conditions than either of the others. Both colours have
+to be genuinely low in saturation, and the lightness step has to be wide. On this
+board the gap is fifty-one points, which is what is holding it up.
+
+And here is the honest part. I could not find this relationship in any of the
+runway photographs I looked at. Not one. The reason is structural rather than
+mysterious: shows are lit and styled for saturation, and this particular
+relationship only exists below a certain saturation ceiling. It is a shop-floor
+relationship and a real-life relationship, and it is almost absent from the
+runway — which may be exactly why nobody writes about it.
+
+### The one where the room was doing half the work
+
+<img src="../boards/2026-09-21/board-4-b.jpg" width="480">
+
+The look that produced the board above is, at first glance, a textbook example of
+opposite colours: a gold knit against a strong teal. It is the pairing I most
+wanted to write about.
+
+Then I masked out everything that was not a garment, and the teal went with it.
+It is the set wall. The clothes are ochre, plum and a deep brick — a perfectly
+nice arrangement, and a completely different one. Half of what made that
+photograph was a colour nobody in it was wearing.
+
+This is not a complaint about the show. It is a note about what a photograph of
+clothes is. Backgrounds are chosen by someone whose job is to make the clothes
+look inevitable, and they are extremely good at it. If you have ever bought
+something that looked wrong at home, this is one of the reasons, and it is not
+your lighting.
+
+### What it costs
+
+Four relationships, and what each one actually asks of you:
+
+- **Opposite hues** — needs two colours at matched saturation. Cheap to arrange
+  if you already own both, impossible to fake if you do not.
+- **One hue, several depths** — needs nothing you do not have. Just wider steps.
+- **The quiet middle** — needs both colours to be genuinely muted, which is a
+  buying constraint rather than a styling one.
+- **One colour on a neutral ground** — needs exactly one loud thing. The most
+  forgiving of the four and the one most wardrobes are already halfway to.
+
+The gap I kept running into, building all six of these, was not a colour. It was
+a **mid-tone**. A shoe at the middle of the lightness range, a bag at the middle
+of the lightness range. Almost everything sold is very dark or very pale, and
+two very dark things next to each other go flat. If you are buying one thing this
+autumn on the strength of a relationship rather than a look, buy the middle.
+
+---
+
+## Notes that lead into this post, and follow it
+
+**Before:** board 1 and board 2 as Notes (`content/boards/2026-09-21/README.md`),
+then Note B, *tan on green should be camouflage*, which teaches the tonal rule
+the post leans on twice.
+
+**After:** board 4 and board 6 as Notes; then Note D, *two reds, one step apart*,
+which is the honest limit of the whole method and works better after the post
+than before it.
+
+---
+
+## Still open
+
+- **Title.** Option 1 is searchable and dull; option 3 is the one I would click.
+- **The house names.** Still not legible on any of the four galleries used, so no
+  house is named anywhere in the draft. If you can confirm them from your own
+  history, the piece gets stronger; if not, it stands as written.
+- **Length.** This is around 900 words. Every styling post in the swipe file is
+  longer, and most carry one image per section — this carries four images across
+  six sections, which is sparser than the convention.
+- **The product list format.** I used a numbered list keyed to numbers on the
+  board. **Nobody in 120 screenshots does this** — they use inline links in
+  running text, or a small unnumbered credit line under the collage. Our version
+  is clearer and less native. Your call, and it is the same question as the
+  swatch strip.
+- **`brands: []` in the front matter is still correct** — no house is named, and
+  the brands that appear on the boards appear in the boards, not in the post's
+  own metadata. If you want the post to carry them, the list is: `aspesi`,
+  `massimo-alba`, `lardini`.
