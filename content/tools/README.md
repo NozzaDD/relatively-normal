@@ -62,3 +62,20 @@ Two design notes worth keeping:
 - **Find the product by content, not by empty space.** The first asset pass looked
   for the largest low-edge block on the page, which on a shop page is just as
   often the margin below the photo. A third of the first tiles came out blank.
+
+## Added 21 September 2026 — the styling desk
+
+| Script | What it does |
+|---|---|
+| `build_studio.py` | builds `studio/data/` and the web-sized images the desk serves |
+| `collect_outfits.py` | reads `content/outfits/` and writes `used_in` back into the catalogue |
+
+`build_studio.py` is the only thing that writes into `studio/data/`,
+`studio/assets/`, `studio/thumbs/`, `studio/inspiration/` and `studio/fonts/`.
+Re-run it whenever the catalogue changes; `--no-images` rebuilds the JSON alone
+in a second or two.
+
+`collect_outfits.py` only ever writes the `used_in` column, and only the
+date-prefixed outfit slugs inside it — entries like `board-3` from the rebuilt
+boards are left alone, so re-running it never drops something it did not put
+there. `--check` reports without writing.

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#F3EFE7">
+<title>Styling desk</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="bar">
+  <div class="bar-group">
+    <strong class="wordmark">Styling desk</strong>
+    <button id="toggleShelf" class="ghost" title="Show or hide the shelf">Shelf</button>
+  </div>
+  <div class="bar-group grow">
+    <input id="title" class="field title-field" placeholder="Title" autocomplete="off">
+    <input id="line" class="field" placeholder="One line under it" autocomplete="off">
+  </div>
+  <div class="bar-group">
+    <button id="undo" class="ghost" title="Undo">↶</button>
+    <button id="redo" class="ghost" title="Redo">↷</button>
+    <button id="openBoard" class="ghost">Open</button>
+    <button id="newBoard" class="ghost">New</button>
+    <button id="save" class="primary">Save</button>
+  </div>
+</header>
+
+<main id="main">
+  <!-- ------------------------------------------------------------- shelf -->
+  <aside id="shelf" class="shelf">
+    <div class="shelf-tabs">
+      <button class="tab on" data-view="grid">Shelf</button>
+      <button class="tab" data-view="matrix">Matrix</button>
+      <span class="count" id="shelfCount"></span>
+    </div>
+
+    <div class="filters" id="filters">
+      <input id="search" class="field" type="search" placeholder="Search brand, piece, colour" autocomplete="off">
+      <div class="filter-row">
+        <select id="fSlot" class="field"><option value="">Any slot</option></select>
+        <select id="fFamily" class="field"><option value="">Any colour</option></select>
+      </div>
+      <div class="filter-row">
+        <select id="fWeight" class="field"><option value="">Any weight</option></select>
+        <select id="fFormality" class="field"><option value="">Any formality</option></select>
+      </div>
+      <div class="filter-row">
+        <select id="fAsset" class="field"><option value="">Any image</option></select>
+        <select id="fBrand" class="field"><option value="">Any brand</option></select>
+      </div>
+      <div class="filter-row switches">
+        <label class="switch"><input type="checkbox" id="fWeak"> Show weak images</label>
+        <label class="switch"><input type="checkbox" id="fMatch" disabled> Matches this look</label>
+        <button id="clearFilters" class="ghost small">Clear</button>
+      </div>
+    </div>
+
+    <div id="grid" class="grid" aria-label="Products"></div>
+
+    <div id="matrix" class="matrix hidden">
+      <div class="matrix-note">casual → dressy across, light → heavy down. Tap a cell to filter the shelf.</div>
+      <div id="matrixGrid" class="matrix-grid"></div>
+    </div>
+  </aside>
+
+  <!-- ------------------------------------------------------------ canvas -->
+  <section class="deck">
+    <div class="deck-bar">
+      <div class="bar-group">
+        <select id="format" class="field">
+          <option value="portrait">4:5 portrait</option>
+          <option value="landscape">wide landscape</option>
+        </select>
+        <button id="pickInspiration" class="ghost">Inspiration…</button>
+        <label class="swatch-pick" title="Background">
+          <input type="color" id="ground" value="#F3EFE7">
+        </label>
+      </div>
+      <div class="bar-group wrap">
+        <label class="switch"><input type="checkbox" id="oTitle" checked> Title</label>
+        <label class="switch"><input type="checkbox" id="oLine" checked> Line</label>
+        <label class="switch"><input type="checkbox" id="oSwatch" checked> Swatches</label>
+        <label class="switch"><input type="checkbox" id="oLabels"> Numbers</label>
+      </div>
+    </div>
+
+    <div id="stageWrap" class="stage-wrap">
+      <div id="stage" class="stage">
+        <div id="layers" class="layers"></div>
+        <div id="overlay" class="overlay"></div>
+        <div id="hint" class="hint">Drag a piece from the shelf.</div>
+      </div>
+    </div>
+
+    <div class="element-bar" id="elementBar" hidden>
+      <button data-act="back" class="ghost">Send back</button>
+      <button data-act="forward" class="ghost">Bring forward</button>
+      <button data-act="flip" class="ghost">Flip</button>
+      <button data-act="duplicate" class="ghost">Duplicate</button>
+      <button data-act="delete" class="ghost danger">Delete</button>
+    </div>
+
+    <div class="helpers">
+      <div id="slotList" class="slot-list"></div>
+      <div id="axesRead" class="axes"></div>
+    </div>
+  </section>
+</main>
+
+<!-- inspiration picker -->
+<div id="picker" class="modal hidden">
+  <div class="modal-inner">
+    <div class="modal-bar">
+      <input id="pickerSearch" class="field" type="search" placeholder="Search house, colour, story">
+      <button id="pickerNone" class="ghost">No inspiration</button>
+      <button id="pickerClose" class="ghost">Close</button>
+    </div>
+    <div id="pickerGrid" class="picker-grid"></div>
+  </div>
+</div>
+
+<input type="file" id="openFile" accept="application/json,.json" hidden>
+<div id="toast" class="toast" hidden></div>
+<div id="drag" class="drag-ghost" hidden></div>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
