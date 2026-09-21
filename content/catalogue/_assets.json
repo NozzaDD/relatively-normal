@@ -1,0 +1,3243 @@
+{
+ "B001-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B001-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 37882
+ },
+ "B001-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B001-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 193246
+ },
+ "B001-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B001-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 150584
+ },
+ "B001-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B001-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 31178
+ },
+ "B002-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B002-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 36418
+ },
+ "B003-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B003-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 24098
+ },
+ "B004-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B004-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 10798
+ },
+ "B005-P001": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B005-P001.webp",
+  "note": "crop tile; box found, 57% of page",
+  "bytes": 38470
+ },
+ "B006-P001": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B006-P001.webp",
+  "note": "crop tile; box found, 100% of page",
+  "bytes": 23014
+ },
+ "B007-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B007-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 77392
+ },
+ "B007-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B007-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 26960
+ },
+ "B007-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B007-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 111358
+ },
+ "B008-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B008-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 89250
+ },
+ "B008-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B008-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 65290
+ },
+ "B008-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B008-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 108878
+ },
+ "B009-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B009-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 37882
+ },
+ "B009-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B009-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 193246
+ },
+ "B009-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B009-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 150584
+ },
+ "B009-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B009-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 31178
+ },
+ "B010-P001": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B010-P001.webp",
+  "note": "crop tile; box fallback, 23% of page",
+  "bytes": 4766
+ },
+ "B010-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B010-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 24282
+ },
+ "B010-P003": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B010-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 5108
+ },
+ "B010-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B010-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 4454
+ },
+ "B010-P005": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B010-P005.webp",
+  "note": "1 components; box found",
+  "bytes": 7086
+ },
+ "B011-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B011-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 7504
+ },
+ "B011-P002": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B011-P002.webp",
+  "note": "crop tile; box found, 20% of page",
+  "bytes": 24962
+ },
+ "B011-P003": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B011-P003.webp",
+  "note": "2 components; box found",
+  "bytes": 15070
+ },
+ "B011-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B011-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 57218
+ },
+ "B011-P005": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B011-P005.webp",
+  "note": "2 components; box found",
+  "bytes": 12694
+ },
+ "B011-P006": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B011-P006.webp",
+  "note": "7 components; box found",
+  "bytes": 16750
+ },
+ "B011-P007": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B011-P007.webp",
+  "note": "1 components; box found",
+  "bytes": 6454
+ },
+ "B011-P008": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B011-P008.webp",
+  "note": "1 components; box found",
+  "bytes": 5890
+ },
+ "B012-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B012-P001.webp",
+  "note": "2 components; box found",
+  "bytes": 14754
+ },
+ "B012-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B012-P002.webp",
+  "note": "2 components; box found",
+  "bytes": 32338
+ },
+ "B012-P003": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B012-P003.webp",
+  "note": "2 components; box found",
+  "bytes": 13184
+ },
+ "B012-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B012-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 9506
+ },
+ "B013-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B013-P001.webp",
+  "note": "2 components; box found",
+  "bytes": 10304
+ },
+ "B014-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B014-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 6104
+ },
+ "B015-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B015-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 7102
+ },
+ "B015-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B015-P002.webp",
+  "note": "3 components; box found",
+  "bytes": 13770
+ },
+ "B015-P003": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B015-P003.webp",
+  "note": "2 components; box found",
+  "bytes": 19322
+ },
+ "B015-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B015-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 9190
+ },
+ "B015-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B015-P005.webp",
+  "note": "3 components; box found",
+  "bytes": 14684
+ },
+ "B016-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B016-P001.webp",
+  "note": "2 components; box found",
+  "bytes": 15168
+ },
+ "B016-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B016-P002.webp",
+  "note": "3 components; box found",
+  "bytes": 7956
+ },
+ "B016-P003": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B016-P003.webp",
+  "note": "2 components; box found",
+  "bytes": 22954
+ },
+ "B016-P004": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B016-P004.webp",
+  "note": "crop tile; box found, 15% of page",
+  "bytes": 8278
+ },
+ "B017-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B017-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 6246
+ },
+ "B018-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B018-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 7662
+ },
+ "B018-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B018-P002.webp",
+  "note": "2 components; box found",
+  "bytes": 29286
+ },
+ "B018-P003": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B018-P003.webp",
+  "note": "crop tile; box found, 72% of page",
+  "bytes": 22868
+ },
+ "B019-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B019-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 4748
+ },
+ "B019-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B019-P002.webp",
+  "note": "2 components; box found",
+  "bytes": 62982
+ },
+ "B019-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B019-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 5514
+ },
+ "B019-P004": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B019-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 20866
+ },
+ "B019-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B019-P005.webp",
+  "note": "1 components; box found",
+  "bytes": 81340
+ },
+ "B019-P006": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B019-P006.webp",
+  "note": "crop tile; box found, 4% of page",
+  "bytes": 11860
+ },
+ "B019-P007": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B019-P007.webp",
+  "note": "crop tile; box found, 8% of page",
+  "bytes": 30958
+ },
+ "B020-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B020-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 21822
+ },
+ "B020-P002": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B020-P002.webp",
+  "note": "crop tile; box found, 7% of page",
+  "bytes": 10050
+ },
+ "B020-P003": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B020-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 54594
+ },
+ "B020-P004": {
+  "asset_type": "cutout_model",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B020-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 10372
+ },
+ "B020-P005": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B020-P005.webp",
+  "note": "crop tile; box found, 29% of page",
+  "bytes": 78350
+ },
+ "B020-P006": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B020-P006.webp",
+  "note": "3 components; box found",
+  "bytes": 46530
+ },
+ "B021-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P001.webp",
+  "note": "2 components; box found",
+  "bytes": 38412
+ },
+ "B021-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P002.webp",
+  "note": "2 components; box found",
+  "bytes": 71254
+ },
+ "B021-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P003.webp",
+  "note": "2 components; box found",
+  "bytes": 18336
+ },
+ "B021-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 112452
+ },
+ "B021-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P005.webp",
+  "note": "2 components; box found",
+  "bytes": 32842
+ },
+ "B021-P006": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P006.webp",
+  "note": "1 components; box found",
+  "bytes": 39646
+ },
+ "B021-P007": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P007.webp",
+  "note": "crop tile; box found, 29% of page",
+  "bytes": 12958
+ },
+ "B021-P008": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P008.webp",
+  "note": "crop tile; box found, 28% of page",
+  "bytes": 73964
+ },
+ "B021-P009": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P009.webp",
+  "note": "1 components; box found",
+  "bytes": 35110
+ },
+ "B021-P010": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P010.webp",
+  "note": "1 components; box found",
+  "bytes": 25608
+ },
+ "B021-P011": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P011.webp",
+  "note": "2 components; box found",
+  "bytes": 22476
+ },
+ "B021-P012": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P012.webp",
+  "note": "1 components; box found",
+  "bytes": 126844
+ },
+ "B021-P013": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P013.webp",
+  "note": "1 components; box found",
+  "bytes": 25894
+ },
+ "B021-P014": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P014.webp",
+  "note": "1 components; box found",
+  "bytes": 17380
+ },
+ "B021-P015": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P015.webp",
+  "note": "1 components; box found",
+  "bytes": 12908
+ },
+ "B021-P016": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P016.webp",
+  "note": "1 components; box found",
+  "bytes": 16378
+ },
+ "B021-P017": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P017.webp",
+  "note": "1 components; box found",
+  "bytes": 36216
+ },
+ "B021-P018": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P018.webp",
+  "note": "1 components; box found",
+  "bytes": 161242
+ },
+ "B021-P019": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P019.webp",
+  "note": "1 components; box found",
+  "bytes": 118284
+ },
+ "B021-P020": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P020.webp",
+  "note": "1 components; box found",
+  "bytes": 17620
+ },
+ "B021-P021": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P021.webp",
+  "note": "1 components; box found",
+  "bytes": 81516
+ },
+ "B021-P022": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P022.webp",
+  "note": "1 components; box found",
+  "bytes": 17142
+ },
+ "B021-P023": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P023.webp",
+  "note": "1 components; box found",
+  "bytes": 94528
+ },
+ "B021-P024": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P024.webp",
+  "note": "1 components; box found",
+  "bytes": 16296
+ },
+ "B021-P025": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P025.webp",
+  "note": "1 components; box found",
+  "bytes": 90244
+ },
+ "B021-P026": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B021-P026.webp",
+  "note": "crop tile; box found, 4% of page",
+  "bytes": 10580
+ },
+ "B021-P027": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P027.webp",
+  "note": "1 components; box found",
+  "bytes": 15124
+ },
+ "B022-P001": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B022-P001.webp",
+  "note": "crop tile; box found, 6% of page",
+  "bytes": 24396
+ },
+ "B022-P002": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B022-P002.webp",
+  "note": "crop tile; box found, 5% of page",
+  "bytes": 37998
+ },
+ "B022-P003": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B022-P003.webp",
+  "note": "crop tile; box found, 5% of page",
+  "bytes": 3940
+ },
+ "B022-P004": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B022-P004.webp",
+  "note": "crop tile; box found, 6% of page",
+  "bytes": 31716
+ },
+ "B022-P005": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B022-P005.webp",
+  "note": "crop tile; box found, 6% of page",
+  "bytes": 23638
+ },
+ "B022-P006": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B022-P006.webp",
+  "note": "crop tile; box found, 9% of page",
+  "bytes": 19054
+ },
+ "B022-P007": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B022-P007.webp",
+  "note": "crop tile; box found, 5% of page",
+  "bytes": 40736
+ },
+ "B022-P008": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B022-P008.webp",
+  "note": "crop tile; box found, 6% of page",
+  "bytes": 16650
+ },
+ "B022-P009": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B022-P009.webp",
+  "note": "crop tile; box found, 7% of page",
+  "bytes": 14678
+ },
+ "B022-P010": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B022-P010.webp",
+  "note": "crop tile; box found, 6% of page",
+  "bytes": 7744
+ },
+ "B022-P011": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B022-P011.webp",
+  "note": "crop tile; box found, 7% of page",
+  "bytes": 11124
+ },
+ "B022-P012": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B022-P012.webp",
+  "note": "crop tile; box found, 7% of page",
+  "bytes": 45764
+ },
+ "B022-P013": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B022-P013.webp",
+  "note": "crop tile; box fallback, 23% of page",
+  "bytes": 48186
+ },
+ "B022-P014": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B022-P014.webp",
+  "note": "crop tile; box found, 4% of page",
+  "bytes": 10130
+ },
+ "B022-P015": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B022-P015.webp",
+  "note": "crop tile; box fallback, 19% of page",
+  "bytes": 57078
+ },
+ "B022-P016": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B022-P016.webp",
+  "note": "crop tile; box fallback, 13% of page",
+  "bytes": 35158
+ },
+ "B022-P017": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B022-P017.webp",
+  "note": "crop tile; box fallback, 16% of page",
+  "bytes": 42634
+ },
+ "B022-P018": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B022-P018.webp",
+  "note": "crop tile; box found, 3% of page",
+  "bytes": 8446
+ },
+ "B022-P019": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B022-P019.webp",
+  "note": "crop tile; box found, 3% of page",
+  "bytes": 9902
+ },
+ "B022-P020": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B022-P020.webp",
+  "note": "crop tile; box fallback, 19% of page",
+  "bytes": 41354
+ },
+ "B022-P021": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B022-P021.webp",
+  "note": "crop tile; box fallback, 20% of page",
+  "bytes": 58326
+ },
+ "B022-P022": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B022-P022.webp",
+  "note": "crop tile; box found, 31% of page",
+  "bytes": 57990
+ },
+ "B023-P001": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B023-P001.webp",
+  "note": "crop tile; box found, 26% of page",
+  "bytes": 95178
+ },
+ "B023-P002": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B023-P002.webp",
+  "note": "crop tile; box found, 25% of page",
+  "bytes": 41602
+ },
+ "B023-P003": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B023-P003.webp",
+  "note": "crop tile; box found, 52% of page",
+  "bytes": 48646
+ },
+ "B023-P004": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B023-P004.webp",
+  "note": "crop tile; box found, 24% of page",
+  "bytes": 22178
+ },
+ "B023-P005": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B023-P005.webp",
+  "note": "crop tile; box fallback, 15% of page",
+  "bytes": 43070
+ },
+ "B023-P006": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B023-P006.webp",
+  "note": "crop tile; box found, 84% of page",
+  "bytes": 57818
+ },
+ "B023-P007": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B023-P007.webp",
+  "note": "crop tile; box found, 55% of page",
+  "bytes": 50866
+ },
+ "B023-P008": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B023-P008.webp",
+  "note": "crop tile; box found, 86% of page",
+  "bytes": 45322
+ },
+ "B023-P009": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B023-P009.webp",
+  "note": "crop tile; box found, 27% of page",
+  "bytes": 69168
+ },
+ "B023-P010": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B023-P010.webp",
+  "note": "crop tile; box found, 38% of page",
+  "bytes": 61102
+ },
+ "B023-P011": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B023-P011.webp",
+  "note": "crop tile; box found, 81% of page",
+  "bytes": 94320
+ },
+ "B023-P012": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B023-P012.webp",
+  "note": "1 components; box found",
+  "bytes": 89568
+ },
+ "B023-P013": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B023-P013.webp",
+  "note": "1 components; box found",
+  "bytes": 52132
+ },
+ "B023-P014": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B023-P014.webp",
+  "note": "crop tile; box found, 26% of page",
+  "bytes": 70786
+ },
+ "B023-P015": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B023-P015.webp",
+  "note": "crop tile; box found, 36% of page",
+  "bytes": 94312
+ },
+ "B023-P016": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B023-P016.webp",
+  "note": "crop tile; box found, 13% of page",
+  "bytes": 37684
+ },
+ "B023-P017": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B023-P017.webp",
+  "note": "crop tile; box found, 39% of page",
+  "bytes": 73528
+ },
+ "B024-P001": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B024-P001.webp",
+  "note": "crop tile; box found, 27% of page",
+  "bytes": 58070
+ },
+ "B024-P002": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B024-P002.webp",
+  "note": "crop tile; box found, 26% of page",
+  "bytes": 57122
+ },
+ "B024-P003": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B024-P003.webp",
+  "note": "crop tile; box found, 26% of page",
+  "bytes": 56094
+ },
+ "B024-P004": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B024-P004.webp",
+  "note": "crop tile; box found, 13% of page",
+  "bytes": 34154
+ },
+ "B024-P005": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B024-P005.webp",
+  "note": "crop tile; box found, 38% of page",
+  "bytes": 51662
+ },
+ "B024-P006": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B024-P006.webp",
+  "note": "crop tile; box found, 13% of page",
+  "bytes": 40832
+ },
+ "B024-P007": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B024-P007.webp",
+  "note": "crop tile; box found, 7% of page",
+  "bytes": 7998
+ },
+ "B024-P008": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B024-P008.webp",
+  "note": "crop tile; box found, 7% of page",
+  "bytes": 20682
+ },
+ "B024-P009": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B024-P009.webp",
+  "note": "crop tile; box found, 7% of page",
+  "bytes": 8454
+ },
+ "B025-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B025-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 27816
+ },
+ "B025-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B025-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 19452
+ },
+ "B025-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B025-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 34982
+ },
+ "B025-P004": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B025-P004.webp",
+  "note": "crop tile; box found, 5% of page",
+  "bytes": 34798
+ },
+ "B025-P005": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B025-P005.webp",
+  "note": "crop tile; box found, 5% of page",
+  "bytes": 28942
+ },
+ "B025-P006": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B025-P006.webp",
+  "note": "crop tile; box found, 4% of page",
+  "bytes": 4682
+ },
+ "B025-P007": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B025-P007.webp",
+  "note": "crop tile; box found, 5% of page",
+  "bytes": 8638
+ },
+ "B025-P008": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B025-P008.webp",
+  "note": "1 components; box found",
+  "bytes": 58888
+ },
+ "B026-P001": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B026-P001.webp",
+  "note": "crop tile; box found, 26% of page",
+  "bytes": 27760
+ },
+ "B026-P002": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B026-P002.webp",
+  "note": "crop tile; box found, 20% of page",
+  "bytes": 68334
+ },
+ "B026-P003": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B026-P003.webp",
+  "note": "crop tile; box found, 20% of page",
+  "bytes": 37660
+ },
+ "B026-P004": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B026-P004.webp",
+  "note": "crop tile; box found, 31% of page",
+  "bytes": 46962
+ },
+ "B026-P005": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B026-P005.webp",
+  "note": "crop tile; box found, 27% of page",
+  "bytes": 95846
+ },
+ "B026-P006": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B026-P006.webp",
+  "note": "crop tile; box found, 20% of page",
+  "bytes": 101472
+ },
+ "B026-P007": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B026-P007.webp",
+  "note": "crop tile; box found, 14% of page",
+  "bytes": 34248
+ },
+ "B026-P008": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B026-P008.webp",
+  "note": "crop tile; box found, 28% of page",
+  "bytes": 29578
+ },
+ "B026-P009": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B026-P009.webp",
+  "note": "2 components; box found",
+  "bytes": 29438
+ },
+ "B026-P010": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B026-P010.webp",
+  "note": "2 components; box found",
+  "bytes": 17914
+ },
+ "B026-P011": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B026-P011.webp",
+  "note": "crop tile; box found, 100% of page",
+  "bytes": 36470
+ },
+ "B027-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B027-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 23942
+ },
+ "B027-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B027-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 16604
+ },
+ "B027-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B027-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 41434
+ },
+ "B027-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B027-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 53030
+ },
+ "B027-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B027-P005.webp",
+  "note": "1 components; box found",
+  "bytes": 33040
+ },
+ "B027-P006": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B027-P006.webp",
+  "note": "1 components; box found",
+  "bytes": 23012
+ },
+ "B027-P007": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B027-P007.webp",
+  "note": "1 components; box found",
+  "bytes": 189646
+ },
+ "B027-P008": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B027-P008.webp",
+  "note": "1 components; box found",
+  "bytes": 67006
+ },
+ "B027-P009": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B027-P009.webp",
+  "note": "crop tile; box found, 100% of page",
+  "bytes": 41534
+ },
+ "B027-P010": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B027-P010.webp",
+  "note": "crop tile; box found, 100% of page",
+  "bytes": 34888
+ },
+ "B027-P011": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B027-P011.webp",
+  "note": "crop tile; box found, 100% of page",
+  "bytes": 40446
+ },
+ "B028-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B028-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 56060
+ },
+ "B028-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B028-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 58040
+ },
+ "B028-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B028-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 24586
+ },
+ "B028-P004": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B028-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 24896
+ },
+ "B028-P005": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B028-P005.webp",
+  "note": "1 components; box found",
+  "bytes": 27704
+ },
+ "B028-P006": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B028-P006.webp",
+  "note": "crop tile; box found, 100% of page",
+  "bytes": 36358
+ },
+ "B028-P007": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B028-P007.webp",
+  "note": "1 components; box found",
+  "bytes": 39194
+ },
+ "B028-P008": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B028-P008.webp",
+  "note": "1 components; box found",
+  "bytes": 101006
+ },
+ "B028-P009": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B028-P009.webp",
+  "note": "1 components; box found",
+  "bytes": 196760
+ },
+ "B028-P010": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B028-P010.webp",
+  "note": "crop tile; box found, 94% of page",
+  "bytes": 30632
+ },
+ "B028-P011": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B028-P011.webp",
+  "note": "crop tile; box found, 24% of page",
+  "bytes": 17404
+ },
+ "B028-P012": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B028-P012.webp",
+  "note": "1 components; box found",
+  "bytes": 138876
+ },
+ "B028-P013": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B028-P013.webp",
+  "note": "1 components; box found",
+  "bytes": 38118
+ },
+ "B028-P014": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B028-P014.webp",
+  "note": "1 components; box found",
+  "bytes": 37000
+ },
+ "B029-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B029-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 74838
+ },
+ "B029-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B029-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 41686
+ },
+ "B030-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B030-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 53734
+ },
+ "B030-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B030-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 23028
+ },
+ "B030-P003": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B030-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 216986
+ },
+ "B030-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B030-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 167550
+ },
+ "B030-P005": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B030-P005.webp",
+  "note": "crop tile; box found, 100% of page",
+  "bytes": 29320
+ },
+ "B030-P006": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B030-P006.webp",
+  "note": "crop tile; box found, 100% of page",
+  "bytes": 39102
+ },
+ "B030-P007": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B030-P007.webp",
+  "note": "crop tile; box found, 10% of page",
+  "bytes": 10334
+ },
+ "B030-P008": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B030-P008.webp",
+  "note": "1 components; box found",
+  "bytes": 12548
+ },
+ "B030-P009": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B030-P009.webp",
+  "note": "1 components; box found",
+  "bytes": 19014
+ },
+ "B030-P010": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B030-P010.webp",
+  "note": "1 components; box found",
+  "bytes": 45746
+ },
+ "B031-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B031-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 19220
+ },
+ "B031-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B031-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 80820
+ },
+ "B031-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B031-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 34852
+ },
+ "B031-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B031-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 37290
+ },
+ "B031-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B031-P005.webp",
+  "note": "1 components; box found",
+  "bytes": 72836
+ },
+ "B031-P006": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B031-P006.webp",
+  "note": "1 components; box found",
+  "bytes": 70016
+ },
+ "B031-P007": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B031-P007.webp",
+  "note": "1 components; box found",
+  "bytes": 30742
+ },
+ "B031-P008": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B031-P008.webp",
+  "note": "1 components; box found",
+  "bytes": 34280
+ },
+ "B031-P009": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B031-P009.webp",
+  "note": "1 components; box found",
+  "bytes": 99676
+ },
+ "B032-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B032-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 97696
+ },
+ "B032-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B032-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 97370
+ },
+ "B032-P003": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B032-P003.webp",
+  "note": "crop tile; box found, 16% of page",
+  "bytes": 51590
+ },
+ "B032-P004": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B032-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 71760
+ },
+ "B033-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B033-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 73422
+ },
+ "B033-P002": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B033-P002.webp",
+  "note": "crop tile; box found, 14% of page",
+  "bytes": 31718
+ },
+ "B033-P003": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B033-P003.webp",
+  "note": "crop tile; box found, 9% of page",
+  "bytes": 33552
+ },
+ "B033-P004": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B033-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 31000
+ },
+ "B033-P005": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B033-P005.webp",
+  "note": "crop tile; box found, 24% of page",
+  "bytes": 25938
+ },
+ "B034-P001": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B034-P001.webp",
+  "note": "crop tile; box found, 13% of page",
+  "bytes": 34542
+ },
+ "B034-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B034-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 87960
+ },
+ "B034-P003": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B034-P003.webp",
+  "note": "crop tile; box found, 9% of page",
+  "bytes": 15668
+ },
+ "B034-P004": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B034-P004.webp",
+  "note": "crop tile; box found, 9% of page",
+  "bytes": 22780
+ },
+ "B035-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B035-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 27408
+ },
+ "B035-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B035-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 18356
+ },
+ "B035-P003": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B035-P003.webp",
+  "note": "1 components; box fallback",
+  "bytes": 1284
+ },
+ "B035-P004": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B035-P004.webp",
+  "note": "crop tile; box fallback, 41% of page",
+  "bytes": 13186
+ },
+ "B036-P001": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B036-P001.webp",
+  "note": "crop tile; box found, 12% of page",
+  "bytes": 32894
+ },
+ "B036-P002": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B036-P002.webp",
+  "note": "crop tile; box found, 9% of page",
+  "bytes": 5682
+ },
+ "B036-P003": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B036-P003.webp",
+  "note": "crop tile; box found, 11% of page",
+  "bytes": 22242
+ },
+ "B036-P004": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B036-P004.webp",
+  "note": "crop tile; box found, 15% of page",
+  "bytes": 35060
+ },
+ "B036-P005": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B036-P005.webp",
+  "note": "crop tile; box found, 9% of page",
+  "bytes": 7422
+ },
+ "B036-P006": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B036-P006.webp",
+  "note": "crop tile; box found, 11% of page",
+  "bytes": 28144
+ },
+ "B036-P007": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B036-P007.webp",
+  "note": "crop tile; box found, 59% of page",
+  "bytes": 45868
+ },
+ "B036-P008": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B036-P008.webp",
+  "note": "crop tile; box found, 57% of page",
+  "bytes": 32748
+ },
+ "B036-P009": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B036-P009.webp",
+  "note": "crop tile; box found, 56% of page",
+  "bytes": 62386
+ },
+ "B037-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B037-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 61488
+ },
+ "B037-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B037-P002.webp",
+  "note": "2 components; box found",
+  "bytes": 27368
+ },
+ "B037-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B037-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 6092
+ },
+ "B037-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B037-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 17776
+ },
+ "B037-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B037-P005.webp",
+  "note": "4 components; box found",
+  "bytes": 31936
+ },
+ "B037-P006": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B037-P006.webp",
+  "note": "1 components; box found",
+  "bytes": 17628
+ },
+ "B037-P007": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B037-P007.webp",
+  "note": "3 components; box found",
+  "bytes": 48984
+ },
+ "B037-P008": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B037-P008.webp",
+  "note": "2 components; box found",
+  "bytes": 64888
+ },
+ "B037-P009": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B037-P009.webp",
+  "note": "1 components; box found",
+  "bytes": 153820
+ },
+ "B038-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B038-P001.webp",
+  "note": "4 components; box found",
+  "bytes": 44148
+ },
+ "B038-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B038-P002.webp",
+  "note": "2 components; box found",
+  "bytes": 17174
+ },
+ "B039-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B039-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 16894
+ },
+ "B039-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B039-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 8280
+ },
+ "B039-P003": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B039-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 9290
+ },
+ "B039-P004": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B039-P004.webp",
+  "note": "crop tile; box found, 9% of page",
+  "bytes": 26268
+ },
+ "B039-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B039-P005.webp",
+  "note": "1 components; box found",
+  "bytes": 11644
+ },
+ "B039-P006": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B039-P006.webp",
+  "note": "1 components; box found",
+  "bytes": 13774
+ },
+ "B039-P007": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B039-P007.webp",
+  "note": "1 components; box found",
+  "bytes": 19654
+ },
+ "B040-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B040-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 148414
+ },
+ "B040-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B040-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 29124
+ },
+ "B040-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B040-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 98020
+ },
+ "B040-P004": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B040-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 13358
+ },
+ "B040-P005": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B040-P005.webp",
+  "note": "1 components; box found",
+  "bytes": 33116
+ },
+ "B040-P006": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B040-P006.webp",
+  "note": "1 components; box found",
+  "bytes": 15500
+ },
+ "B041-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B041-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 18766
+ },
+ "B041-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B041-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 18890
+ },
+ "B041-P003": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B041-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 47914
+ },
+ "B041-P004": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B041-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 30630
+ },
+ "B041-P005": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B041-P005.webp",
+  "note": "1 components; box found",
+  "bytes": 155296
+ },
+ "B041-P006": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B041-P006.webp",
+  "note": "1 components; box found",
+  "bytes": 17830
+ },
+ "B041-P007": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B041-P007.webp",
+  "note": "1 components; box found",
+  "bytes": 28164
+ },
+ "B041-P008": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B041-P008.webp",
+  "note": "1 components; box found",
+  "bytes": 80590
+ },
+ "B041-P009": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B041-P009.webp",
+  "note": "1 components; box found",
+  "bytes": 127814
+ },
+ "B042-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 120622
+ },
+ "B042-P002": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P002.webp",
+  "note": "crop tile; box found, 16% of page",
+  "bytes": 21166
+ },
+ "B042-P003": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 69776
+ },
+ "B042-P004": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 16974
+ },
+ "B042-P005": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P005.webp",
+  "note": "crop tile; box found, 47% of page",
+  "bytes": 114994
+ },
+ "B042-P006": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P006.webp",
+  "note": "crop tile; box found, 47% of page",
+  "bytes": 153674
+ },
+ "B042-P007": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P007.webp",
+  "note": "crop tile; box found, 47% of page",
+  "bytes": 134368
+ },
+ "B042-P008": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P008.webp",
+  "note": "1 components; box found",
+  "bytes": 40732
+ },
+ "B042-P009": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P009.webp",
+  "note": "1 components; box found",
+  "bytes": 22482
+ },
+ "B042-P010": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B042-P010.webp",
+  "note": "1 components; box found",
+  "bytes": 4112
+ },
+ "B042-P011": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P011.webp",
+  "note": "1 components; box found",
+  "bytes": 13698
+ },
+ "B042-P012": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P012.webp",
+  "note": "crop tile; box found, 32% of page",
+  "bytes": 19988
+ },
+ "B042-P013": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P013.webp",
+  "note": "1 components; box found",
+  "bytes": 22782
+ },
+ "B042-P014": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P014.webp",
+  "note": "1 components; box found",
+  "bytes": 5228
+ },
+ "B042-P015": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P015.webp",
+  "note": "1 components; box found",
+  "bytes": 45302
+ },
+ "B042-P016": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P016.webp",
+  "note": "1 components; box found",
+  "bytes": 128954
+ },
+ "B042-P017": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P017.webp",
+  "note": "1 components; box found",
+  "bytes": 38492
+ },
+ "B042-P018": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P018.webp",
+  "note": "1 components; box found",
+  "bytes": 49912
+ },
+ "B042-P019": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P019.webp",
+  "note": "crop tile; box found, 18% of page",
+  "bytes": 30076
+ },
+ "B042-P020": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P020.webp",
+  "note": "1 components; box found",
+  "bytes": 48054
+ },
+ "B042-P021": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P021.webp",
+  "note": "1 components; box found",
+  "bytes": 14058
+ },
+ "B042-P022": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P022.webp",
+  "note": "1 components; box found",
+  "bytes": 72678
+ },
+ "B042-P023": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P023.webp",
+  "note": "1 components; box found",
+  "bytes": 78736
+ },
+ "B042-P024": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P024.webp",
+  "note": "1 components; box found",
+  "bytes": 34426
+ },
+ "B042-P025": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P025.webp",
+  "note": "1 components; box found",
+  "bytes": 136508
+ },
+ "B042-P026": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P026.webp",
+  "note": "1 components; box found",
+  "bytes": 49794
+ },
+ "B042-P027": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P027.webp",
+  "note": "1 components; box found",
+  "bytes": 223878
+ },
+ "B042-P028": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P028.webp",
+  "note": "1 components; box found",
+  "bytes": 40354
+ },
+ "B042-P029": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P029.webp",
+  "note": "1 components; box found",
+  "bytes": 213498
+ },
+ "B042-P030": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P030.webp",
+  "note": "1 components; box found",
+  "bytes": 16968
+ },
+ "B042-P031": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P031.webp",
+  "note": "1 components; box found",
+  "bytes": 6752
+ },
+ "B042-P032": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P032.webp",
+  "note": "1 components; box found",
+  "bytes": 16164
+ },
+ "B042-P033": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P033.webp",
+  "note": "1 components; box found",
+  "bytes": 14896
+ },
+ "B042-P034": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P034.webp",
+  "note": "1 components; box found",
+  "bytes": 39724
+ },
+ "B042-P035": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P035.webp",
+  "note": "1 components; box found",
+  "bytes": 66090
+ },
+ "B042-P036": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P036.webp",
+  "note": "crop tile; box found, 19% of page",
+  "bytes": 24884
+ },
+ "B042-P037": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P037.webp",
+  "note": "1 components; box found",
+  "bytes": 14412
+ },
+ "B042-P038": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P038.webp",
+  "note": "1 components; box found",
+  "bytes": 13074
+ },
+ "B042-P039": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P039.webp",
+  "note": "1 components; box found",
+  "bytes": 11644
+ },
+ "B042-P040": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P040.webp",
+  "note": "1 components; box found",
+  "bytes": 19752
+ },
+ "B042-P041": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P041.webp",
+  "note": "1 components; box found",
+  "bytes": 11008
+ },
+ "B042-P042": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P042.webp",
+  "note": "1 components; box found",
+  "bytes": 49004
+ },
+ "B043-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B043-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 342702
+ },
+ "B043-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B043-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 45280
+ },
+ "B043-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B043-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 143728
+ },
+ "B043-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B043-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 69622
+ },
+ "B043-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B043-P005.webp",
+  "note": "1 components; box found",
+  "bytes": 47948
+ },
+ "B043-P006": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B043-P006.webp",
+  "note": "1 components; box found",
+  "bytes": 16754
+ },
+ "B043-P007": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B043-P007.webp",
+  "note": "crop tile; box fallback, 12% of page",
+  "bytes": 34530
+ },
+ "B044-P001": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B044-P001.webp",
+  "note": "crop tile; box found, 11% of page",
+  "bytes": 81984
+ },
+ "B044-P002": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B044-P002.webp",
+  "note": "crop tile; box found, 7% of page",
+  "bytes": 20124
+ },
+ "B044-P003": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B044-P003.webp",
+  "note": "crop tile; box fallback, 13% of page",
+  "bytes": 28172
+ },
+ "B044-P004": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B044-P004.webp",
+  "note": "crop tile; box found, 8% of page",
+  "bytes": 10776
+ },
+ "B044-P005": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B044-P005.webp",
+  "note": "crop tile; box found, 94% of page",
+  "bytes": 29710
+ },
+ "B044-P006": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B044-P006.webp",
+  "note": "crop tile; box found, 27% of page",
+  "bytes": 96042
+ },
+ "B044-P007": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B044-P007.webp",
+  "note": "crop tile; box found, 15% of page",
+  "bytes": 24402
+ },
+ "B044-P008": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B044-P008.webp",
+  "note": "1 components; box found",
+  "bytes": 26880
+ },
+ "B044-P009": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B044-P009.webp",
+  "note": "crop tile; box fallback, 36% of page",
+  "bytes": 17180
+ },
+ "B044-P010": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B044-P010.webp",
+  "note": "crop tile; box found, 9% of page",
+  "bytes": 55880
+ },
+ "B044-P011": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B044-P011.webp",
+  "note": "crop tile; box found, 13% of page",
+  "bytes": 77812
+ },
+ "B044-P012": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B044-P012.webp",
+  "note": "crop tile; box found, 14% of page",
+  "bytes": 13892
+ },
+ "B044-P013": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B044-P013.webp",
+  "note": "crop tile; box found, 12% of page",
+  "bytes": 117516
+ },
+ "B044-P014": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B044-P014.webp",
+  "note": "crop tile; box found, 11% of page",
+  "bytes": 8836
+ },
+ "B044-P015": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B044-P015.webp",
+  "note": "crop tile; box found, 27% of page",
+  "bytes": 24526
+ },
+ "B044-P016": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B044-P016.webp",
+  "note": "crop tile; box fallback, 14% of page",
+  "bytes": 7046
+ },
+ "B044-P017": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B044-P017.webp",
+  "note": "crop tile; box found, 14% of page",
+  "bytes": 103324
+ },
+ "B044-P018": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B044-P018.webp",
+  "note": "1 components; box found",
+  "bytes": 6778
+ },
+ "B044-P019": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B044-P019.webp",
+  "note": "1 components; box found",
+  "bytes": 19514
+ },
+ "B044-P020": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B044-P020.webp",
+  "note": "crop tile; box found, 12% of page",
+  "bytes": 38380
+ },
+ "B045-P001": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B045-P001.webp",
+  "note": "crop tile; box found, 12% of page",
+  "bytes": 30046
+ },
+ "B045-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B045-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 39604
+ },
+ "B045-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B045-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 34062
+ },
+ "B045-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B045-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 36268
+ },
+ "B046-P001": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B046-P001.webp",
+  "note": "crop tile; box found, 7% of page",
+  "bytes": 67734
+ },
+ "B046-P002": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B046-P002.webp",
+  "note": "crop tile; box found, 10% of page",
+  "bytes": 114570
+ },
+ "B046-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B046-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 35300
+ },
+ "B046-P004": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B046-P004.webp",
+  "note": "crop tile; box found, 14% of page",
+  "bytes": 53366
+ },
+ "B046-P005": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B046-P005.webp",
+  "note": "crop tile; box found, 9% of page",
+  "bytes": 10266
+ },
+ "B046-P006": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B046-P006.webp",
+  "note": "crop tile; box found, 10% of page",
+  "bytes": 17696
+ },
+ "B046-P007": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B046-P007.webp",
+  "note": "crop tile; box fallback, 14% of page",
+  "bytes": 4548
+ },
+ "B046-P008": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B046-P008.webp",
+  "note": "crop tile; box found, 25% of page",
+  "bytes": 29802
+ },
+ "B046-P009": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B046-P009.webp",
+  "note": "crop tile; box fallback, 15% of page",
+  "bytes": 17454
+ },
+ "B046-P010": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B046-P010.webp",
+  "note": "crop tile; box found, 19% of page",
+  "bytes": 18964
+ },
+ "B046-P011": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B046-P011.webp",
+  "note": "crop tile; box found, 13% of page",
+  "bytes": 77626
+ },
+ "B047-P001": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B047-P001.webp",
+  "note": "crop tile; box found, 9% of page",
+  "bytes": 45152
+ },
+ "B047-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B047-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 30706
+ },
+ "B047-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B047-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 29518
+ },
+ "B047-P004": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B047-P004.webp",
+  "note": "crop tile; box found, 12% of page",
+  "bytes": 42860
+ },
+ "B048-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B048-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 22524
+ },
+ "B048-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B048-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 111564
+ },
+ "B048-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B048-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 54194
+ },
+ "B048-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B048-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 110842
+ },
+ "B049-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B049-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 96672
+ },
+ "B049-P002": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B049-P002.webp",
+  "note": "crop tile; box found, 28% of page",
+  "bytes": 34152
+ },
+ "B049-P003": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B049-P003.webp",
+  "note": "crop tile; box found, 9% of page",
+  "bytes": 23552
+ },
+ "B050-P001": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B050-P001.webp",
+  "note": "crop tile; box fallback, 21% of page",
+  "bytes": 24882
+ },
+ "B050-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B050-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 52820
+ },
+ "B050-P003": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B050-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 125226
+ },
+ "B050-P004": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B050-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 77348
+ },
+ "B050-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B050-P005.webp",
+  "note": "1 components; box found",
+  "bytes": 101042
+ },
+ "B050-P006": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B050-P006.webp",
+  "note": "1 components; box found",
+  "bytes": 118224
+ },
+ "B050-P007": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B050-P007.webp",
+  "note": "1 components; box found",
+  "bytes": 52898
+ },
+ "B050-P008": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B050-P008.webp",
+  "note": "1 components; box found",
+  "bytes": 110536
+ },
+ "B051-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B051-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 96820
+ },
+ "B051-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B051-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 40428
+ },
+ "B051-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B051-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 141976
+ },
+ "B051-P004": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B051-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 113696
+ },
+ "B052-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B052-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 41092
+ },
+ "B052-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B052-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 213742
+ },
+ "B052-P003": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B052-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 35966
+ },
+ "B052-P004": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B052-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 30990
+ },
+ "B052-P005": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B052-P005.webp",
+  "note": "1 components; box found",
+  "bytes": 117364
+ },
+ "B052-P006": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B052-P006.webp",
+  "note": "1 components; box found",
+  "bytes": 31988
+ },
+ "B052-P007": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B052-P007.webp",
+  "note": "crop tile; box found, 28% of page",
+  "bytes": 146086
+ },
+ "B053-P001": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B053-P001.webp",
+  "note": "crop tile; box fallback, 36% of page",
+  "bytes": 30386
+ },
+ "B053-P002": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B053-P002.webp",
+  "note": "crop tile; box found, 24% of page",
+  "bytes": 55458
+ },
+ "B053-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B053-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 45936
+ },
+ "B053-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B053-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 11690
+ },
+ "B053-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B053-P005.webp",
+  "note": "1 components; box found",
+  "bytes": 98720
+ },
+ "B053-P006": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B053-P006.webp",
+  "note": "1 components; box found",
+  "bytes": 28058
+ },
+ "B054-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B054-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 47632
+ },
+ "B054-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B054-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 54908
+ },
+ "B054-P003": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B054-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 16226
+ },
+ "B054-P004": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B054-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 17422
+ },
+ "B054-P005": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B054-P005.webp",
+  "note": "1 components; box found",
+  "bytes": 13474
+ },
+ "B054-P006": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B054-P006.webp",
+  "note": "1 components; box found",
+  "bytes": 22526
+ },
+ "B054-P007": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B054-P007.webp",
+  "note": "1 components; box found",
+  "bytes": 35258
+ },
+ "B055-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B055-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 19648
+ },
+ "B055-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B055-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 93136
+ },
+ "B055-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B055-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 64286
+ },
+ "B055-P004": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B055-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 59778
+ },
+ "B055-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B055-P005.webp",
+  "note": "1 components; box found",
+  "bytes": 39074
+ },
+ "B055-P006": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B055-P006.webp",
+  "note": "1 components; box found",
+  "bytes": 13800
+ },
+ "B055-P007": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B055-P007.webp",
+  "note": "1 components; box found",
+  "bytes": 26020
+ },
+ "B055-P008": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B055-P008.webp",
+  "note": "1 components; box found",
+  "bytes": 43370
+ },
+ "B055-P009": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B055-P009.webp",
+  "note": "1 components; box found",
+  "bytes": 32580
+ },
+ "B055-P010": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B055-P010.webp",
+  "note": "1 components; box found",
+  "bytes": 13730
+ },
+ "B055-P011": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B055-P011.webp",
+  "note": "1 components; box found",
+  "bytes": 10610
+ },
+ "B055-P012": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B055-P012.webp",
+  "note": "1 components; box found",
+  "bytes": 48106
+ },
+ "B055-P013": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B055-P013.webp",
+  "note": "1 components; box found",
+  "bytes": 26184
+ },
+ "B055-P014": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B055-P014.webp",
+  "note": "1 components; box found",
+  "bytes": 24004
+ },
+ "B056-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B056-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 30290
+ },
+ "B056-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B056-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 36858
+ },
+ "B056-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B056-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 11464
+ },
+ "B056-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B056-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 20038
+ },
+ "B056-P005": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B056-P005.webp",
+  "note": "crop tile; box found, 20% of page",
+  "bytes": 14448
+ },
+ "B056-P006": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B056-P006.webp",
+  "note": "crop tile; box found, 6% of page",
+  "bytes": 17980
+ },
+ "B057-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B057-P001.webp",
+  "note": "4 components; box found",
+  "bytes": 14670
+ },
+ "B057-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B057-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 21962
+ },
+ "B057-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B057-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 43478
+ },
+ "B057-P004": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B057-P004.webp",
+  "note": "crop tile; box found, 24% of page",
+  "bytes": 70600
+ },
+ "B057-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B057-P005.webp",
+  "note": "1 components; box found",
+  "bytes": 18026
+ },
+ "B057-P006": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B057-P006.webp",
+  "note": "1 components; box found",
+  "bytes": 18394
+ },
+ "B058-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B058-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 21684
+ },
+ "B058-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B058-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 31996
+ },
+ "B058-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B058-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 24030
+ },
+ "B058-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B058-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 10896
+ },
+ "B058-P005": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B058-P005.webp",
+  "note": "1 components; box found",
+  "bytes": 37524
+ },
+ "B058-P006": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B058-P006.webp",
+  "note": "1 components; box found",
+  "bytes": 39070
+ },
+ "B058-P007": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B058-P007.webp",
+  "note": "1 components; box found",
+  "bytes": 43596
+ },
+ "B059-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B059-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 10278
+ },
+ "B059-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B059-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 35180
+ },
+ "B059-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B059-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 38810
+ },
+ "B059-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B059-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 22264
+ },
+ "B059-P005": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B059-P005.webp",
+  "note": "1 components; box found",
+  "bytes": 24414
+ },
+ "B059-P006": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B059-P006.webp",
+  "note": "1 components; box found",
+  "bytes": 57346
+ },
+ "B059-P007": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B059-P007.webp",
+  "note": "1 components; box found",
+  "bytes": 21930
+ },
+ "B059-P008": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B059-P008.webp",
+  "note": "1 components; box found",
+  "bytes": 58788
+ },
+ "B060-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B060-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 16322
+ },
+ "B060-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B060-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 30434
+ },
+ "B060-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B060-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 28104
+ },
+ "B060-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B060-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 17652
+ },
+ "B060-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B060-P005.webp",
+  "note": "1 components; box found",
+  "bytes": 23106
+ },
+ "B060-P006": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B060-P006.webp",
+  "note": "1 components; box found",
+  "bytes": 46576
+ },
+ "B061-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B061-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 92206
+ },
+ "B061-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B061-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 26790
+ },
+ "B061-P003": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B061-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 38354
+ },
+ "B061-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B061-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 20418
+ },
+ "B061-P005": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B061-P005.webp",
+  "note": "2 components; box found",
+  "bytes": 21610
+ },
+ "B062-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 43492
+ },
+ "B062-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 53932
+ },
+ "B062-P003": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 36154
+ },
+ "B062-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B062-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 2664
+ },
+ "B062-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P005.webp",
+  "note": "1 components; box found",
+  "bytes": 34582
+ },
+ "B062-P006": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P006.webp",
+  "note": "1 components; box found",
+  "bytes": 24056
+ },
+ "B062-P007": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P007.webp",
+  "note": "2 components; box found",
+  "bytes": 33100
+ },
+ "B062-P008": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P008.webp",
+  "note": "1 components; box found",
+  "bytes": 46388
+ },
+ "B062-P009": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P009.webp",
+  "note": "1 components; box found",
+  "bytes": 53244
+ },
+ "B062-P010": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P010.webp",
+  "note": "2 components; box found",
+  "bytes": 25120
+ },
+ "B062-P011": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P011.webp",
+  "note": "1 components; box found",
+  "bytes": 10084
+ },
+ "B062-P012": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P012.webp",
+  "note": "1 components; box found",
+  "bytes": 14448
+ },
+ "B062-P013": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P013.webp",
+  "note": "1 components; box found",
+  "bytes": 15384
+ },
+ "B062-P014": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P014.webp",
+  "note": "1 components; box found",
+  "bytes": 32260
+ },
+ "B062-P015": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P015.webp",
+  "note": "1 components; box found",
+  "bytes": 45698
+ },
+ "B062-P016": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P016.webp",
+  "note": "1 components; box found",
+  "bytes": 35660
+ },
+ "B062-P017": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P017.webp",
+  "note": "1 components; box found",
+  "bytes": 25860
+ },
+ "B062-P018": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P018.webp",
+  "note": "crop tile; box found, 22% of page",
+  "bytes": 22806
+ },
+ "B062-P019": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P019.webp",
+  "note": "crop tile; box found, 21% of page",
+  "bytes": 40394
+ },
+ "B062-P020": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P020.webp",
+  "note": "crop tile; box found, 21% of page",
+  "bytes": 47726
+ },
+ "B062-P021": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P021.webp",
+  "note": "crop tile; box found, 17% of page",
+  "bytes": 23894
+ }
+}

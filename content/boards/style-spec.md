@@ -209,3 +209,39 @@ more explanatory and less atmospheric than anything in the swipe file. That is a
 deliberate difference — the whole proposition is saying *why*, and none of these
 writers do. It also means the boards will not look like theirs, which is the
 point.
+
+### B5. Three kinds of image on one board
+
+The first set of boards had one kind of image on them: a cut-out. The catalogue
+built on 21 September has three, because a screenshot of a listing grid will
+never cut out cleanly and throwing it away would have thrown away most of the
+library. So the spec has to say how a flat cut-out, an on-model cut-out and a
+crop tile sit together without the board looking like two boards.
+
+| | Flat cut-out | On-model cut-out | Crop tile |
+|---|---|---|---|
+| What it is | garment on transparency, no page behind it | a person, background removed, cropped to the part that shows the piece | a rectangular crop of the shop page, no UI and no text |
+| Frame | **none** | **none** | white mat 7px, 1px warm keyline `#D6CDBF`, square corners |
+| Placement | free, overlapping its neighbours by 5–15% | free, but never overlapped *by* a smaller piece — a face behind a shoe reads as an accident | on the grid, edges aligned to the tile beside it |
+| Shadow | from the alpha shape only, 14px blur, ~20% opacity, offset down-right | same | none — the mat is the separation |
+| Scale | as on a body: a coat is the tallest thing on the board, an earring the smallest | as on a body | its box, cover-cropped, biased 42% from the top so the garment is not beheaded |
+
+Three rules hold the mix together:
+
+1. **One border in the whole board.** The inspiration photograph and every crop
+   tile share the same mat and keyline. Cut-outs have no border at all. So the
+   eye reads *framed things* as the flat layer and *unframed things* as the
+   objects on top of it, and the board has a front and a back.
+2. **Never draw a box behind a cut-out.** No grey card, no white rectangle, no
+   rounded panel. If a cut-out needs separating from the ground, it gets a
+   softer shadow, not a shape. A rectangle behind a cut-out is the tell that a
+   board was assembled by a machine.
+3. **Tiles align, cut-outs overlap.** Tiles sit on the same invisible grid as
+   the inspiration image — left edges and top edges line up. Cut-outs ignore the
+   grid and are allowed to cross a tile's edge, which is what stops the board
+   reading as a contact sheet.
+
+**Swatch strip.** Only colours the pieces on that board actually carry, ordered
+dominant → accent, chip width proportional to share. No hex, no name, no number
+on the Notes version. The board never prints a rule name, a hue gap, a ΔE, a
+chroma or an L\* — those live in the review table in the README and nowhere else.
