@@ -6,8 +6,9 @@ products.csv and inspiration.csv with the slugs of the boards each piece
 appears on, so a week's content can be filtered, validated, and later refreshed
 from the catalogue.
 
-It only ever writes `used_in`. Nothing else in the catalogue is touched, and
-nothing in content/outfits/ is modified.
+It only ever writes `used_in`, and `used_in` holds nothing but desk outfits.
+Nothing else in the catalogue is touched, and nothing in content/outfits/ is
+modified.
 
   python3 content/tools/collect_outfits.py [--check]
 """
@@ -61,12 +62,11 @@ OUTFIT_SLUG = re.compile(r'^\d{4}-\d{2}-\d{2}-')
 
 
 def write_used(path, key_fn, table, check):
-    """Rewrites only the slugs this script manages.
+    """`used_in` is exactly the set of desk outfits a row appears in.
 
-    `used_in` also carries entries from before the desk existed — the six
-    rebuilt boards are filed as `board-1`…`board-6`. Those are left alone; only
-    date-prefixed outfit slugs are removed and re-added, so re-running never
-    quietly drops something it did not put there."""
+    Only boards saved from the desk count. The six machine-composed boards
+    from before the desk (`board-1`…`board-6`) were removed from the column on
+    22 September 2026 and are not brought back."""
     rows = list(csv.DictReader(open(path)))
     if not rows:
         return 0, 0
@@ -75,8 +75,7 @@ def write_used(path, key_fn, table, check):
         fields.append('used_in')
     changed = 0
     for r in rows:
-        keep = [x for x in (r.get('used_in') or '').split(';') if x and not OUTFIT_SLUG.match(x)]
-        want = ';'.join(sorted(set(keep) | table.get(key_fn(r), set())))
+        want = ';'.join(sorted(table.get(key_fn(r), set())))
         if (r.get('used_in') or '') != want:
             changed += 1
             r['used_in'] = want

@@ -92,6 +92,11 @@ export function buildInfo(board, productsById, inspById, { date = new Date() } =
       product_url: p.product_url || '',
       product_url_confidence: p.product_url_confidence || '',
       image_source: p.image_source || '',
+      // a recoloured piece is not the brand's photo of that colour — say so
+      colour_simulated: !!p.recoloured,
+      recolour_source: p.recolour_source || '',
+      image_variant: el.variant || 'cutout',
+      image_crop: el.crop ? el.crop.map(round4) : null,
       placement: {
         x: round4(el.x), y: round4(el.y), w: round4(el.w),
         rotation: el.rot || 0, flip: !!el.flip, layer: el.z, aspect: round4(el.aspect),
@@ -105,7 +110,8 @@ export function buildInfo(board, productsById, inspById, { date = new Date() } =
     title: board.title || '',
     line: board.line || '',
     format: board.format,
-    canvas: { width: f.exportW, height: f.exportH, ground: board.ground },
+    canvas: { width: f.exportW, height: f.exportH, ground: board.ground,
+      frame: board.frame || null },
     date: isoDate(date),
     slug: dateSlug(board.title, date),
     elements_shown: {
@@ -146,9 +152,16 @@ export function buildMarkdown(info) {
   for (const p of info.pieces) {
     const price = [p.currency, p.price].filter(Boolean).join(' ');
     const link = p.product_url ? `[link](${p.product_url})` : '';
-    L.push(`| ${p.label} | ${p.brand} | ${p.product_name || p.garment_type} | ${p.colour_name} | ${price} | ${link} |`);
+    const colour = p.colour_simulated ? `${p.colour_name} (colour simulated)` : p.colour_name;
+    L.push(`| ${p.label} | ${p.brand} | ${p.product_name || p.garment_type} | ${colour} | ${price} | ${link} |`);
   }
   L.push('');
+  const simulated = info.pieces.filter((p) => p.colour_simulated);
+  if (simulated.length) {
+    L.push('**Colour simulated:** ' + simulated.map((p) => `${p.label}`).join(', ')
+      + ' — recoloured from the brand\'s photo of another colour, not the brand\'s photo of this one. '
+      + 'Disclose it, or swap in the real photo before publishing.', '');
+  }
   const missing = info.pieces.filter((p) => !p.brand || p.brand_confidence === 'guessed');
   if (missing.length) {
     L.push('**Confirm before publishing:** ' + missing

@@ -7,7 +7,7 @@
 //   share a white mat and a thin warm keyline; cut-outs have no border at all
 //   and no box behind them, only a shadow taken from their own alpha.
 
-import { GROUND, KEYLINE, INK, stacked, elementBox, labelOrder, swatchStrip } from './model.js';
+import { GROUND, KEYLINE, INK, DEFAULT_FRAME, stacked, elementBox, labelOrder, swatchStrip } from './model.js';
 
 export const metrics = (W, H) => ({
   margin: Math.round(W * 0.055),
@@ -19,29 +19,59 @@ export const metrics = (W, H) => ({
   shadow: Math.round(W * 0.013),
 });
 
-export function isTile(kind, assetType) {
-  return kind === 'inspiration' || assetType === 'tile';
+/** Framed: the inspiration image, a page tile, or any crop box of a full photo. */
+export function isTile(kind, assetType, variant) {
+  return kind === 'inspiration' || assetType === 'tile' || (!!variant && variant !== 'cutout');
 }
 
-function drawImageEl(ctx, img, el, W, H, m, framed) {
+function roundedRect(ctx, x, y, w, h, r) {
+  ctx.beginPath();
+  if (r <= 0) { ctx.rect(x, y, w, h); return; }
+  const rr = Math.min(r, w / 2, h / 2);
+  ctx.moveTo(x + rr, y);
+  ctx.arcTo(x + w, y, x + w, y + h, rr);
+  ctx.arcTo(x + w, y + h, x, y + h, rr);
+  ctx.arcTo(x, y + h, x, y, rr);
+  ctx.arcTo(x, y, x + w, y, rr);
+  ctx.closePath();
+}
+
+/** The part of the source image to draw: all of it, or the element's crop. */
+function sourceRect(img, el) {
+  const iw = img.naturalWidth || img.width, ih = img.naturalHeight || img.height;
+  const [x, y, w, h] = el.crop || [0, 0, 1, 1];
+  return [x * iw, y * ih, w * iw, h * ih];
+}
+
+function drawImageEl(ctx, img, el, W, H, m, framed, frame) {
   const b = elementBox(el, W, H);
+  const src = sourceRect(img, el);
   ctx.save();
   ctx.translate(b.cx, b.cy);
   if (el.rot) ctx.rotate((el.rot * Math.PI) / 180);
   if (el.flip) ctx.scale(-1, 1);
   if (framed) {
-    ctx.fillStyle = '#ffffff';
-    ctx.fillRect(-b.w / 2, -b.h / 2, b.w, b.h);
-    ctx.drawImage(img, -b.w / 2 + m.mat, -b.h / 2 + m.mat, b.w - m.mat * 2, b.h - m.mat * 2);
-    ctx.lineWidth = Math.max(1, W / 1400);
-    ctx.strokeStyle = KEYLINE;
-    ctx.strokeRect(-b.w / 2, -b.h / 2, b.w, b.h);
+    const f = frame || DEFAULT_FRAME;
+    const mat = f.mat ? m.mat : 0;
+    const radius = (f.radius || 0) * (W / 1080);
+    roundedRect(ctx, -b.w / 2, -b.h / 2, b.w, b.h, radius);
+    if (f.mat) { ctx.fillStyle = '#ffffff'; ctx.fill(); }
+    ctx.save();
+    ctx.clip();
+    ctx.drawImage(img, ...src, -b.w / 2 + mat, -b.h / 2 + mat, b.w - mat * 2, b.h - mat * 2);
+    ctx.restore();
+    if (f.border) {
+      ctx.lineWidth = Math.max(1, W / 1400);
+      ctx.strokeStyle = KEYLINE;
+      roundedRect(ctx, -b.w / 2, -b.h / 2, b.w, b.h, radius);
+      ctx.stroke();
+    }
   } else {
     ctx.shadowColor = 'rgba(58,50,42,0.22)';
     ctx.shadowBlur = m.shadow;
     ctx.shadowOffsetX = m.shadow * 0.45;
     ctx.shadowOffsetY = m.shadow * 0.65;
-    ctx.drawImage(img, -b.w / 2, -b.h / 2, b.w, b.h);
+    ctx.drawImage(img, ...src, -b.w / 2, -b.h / 2, b.w, b.h);
   }
   ctx.restore();
 }
@@ -74,7 +104,7 @@ export function drawBoard(ctx, board, productsById, images, W, H) {
     const img = images[el.uid];
     if (!img) continue;
     const p = el.kind === 'product' ? productsById[el.product_id] : null;
-    drawImageEl(ctx, img, el, W, H, m, isTile(el.kind, p?.asset_type));
+    drawImageEl(ctx, img, el, W, H, m, isTile(el.kind, p?.asset_type, el.variant), board.frame);
   }
 
   if (board.showSwatches) {

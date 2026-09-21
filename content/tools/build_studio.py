@@ -51,16 +51,29 @@ def colours_of(r):
 def image_source(r):
     """Where the picture came from. The desk prints this into the info file, so
     it has to say what is true and nothing more."""
+    if n(r.get('recoloured')) == 'yes':
+        return "colour simulated: recoloured from the brand's photo of another colour"
     if n(r['asset_type']).startswith('cutout') or n(r['asset_type']) == 'tile':
         return 'brand product shot, screenshotted from the shop page'
     return 'unknown'
 
 
-def build_products(rows):
+def parse_box(v):
+    try:
+        b = [float(x) for x in n(v).split(',')]
+        return b if len(b) == 4 else None
+    except ValueError:
+        return None
+
+
+def build_products(rows, review):
     out = []
     for r in rows:
         if not n(r['asset_path']):
             continue
+        rv = review.get(r['product_id']) or {}
+        clean = (n(r['asset_type']) == 'cutout_flat' and n(r['asset_quality']) == 'good')
+        has_full = bool(rv.get('w')) and 'error' not in rv
         out.append(dict(
             product_id=r['product_id'],
             slot=n(r['slot']),
@@ -86,8 +99,24 @@ def build_products(rows):
             image_source=image_source(r),
             shop=n(r['shop']),
             used_in=[x for x in n(r['used_in']).split(';') if x],
+            # review: a clean flat cut-out needs no decision; everything else
+            # gets a full photo and two boxes to choose from
+            clean=clean,
+            full=dict(path=f"full/{r['product_id']}.jpg", w=rv['w'], h=rv['h']) if has_full else None,
+            boxes=dict(item=rv['item'], person=rv['person']) if has_full else None,
+            choice=n(r.get('asset_choice')) or None,
+            custom_box=parse_box(r.get('asset_box')),
+            hidden=n(r.get('shelf')) == 'hidden',
+            recoloured=n(r.get('recoloured')) == 'yes',
+            recolour_source=n(r.get('recolour_source')),
         ))
     return out
+
+
+def crop_box(im, box):
+    W, H = im.size
+    x, y, w, h = box
+    return im.crop((int(x * W), int(y * H), int((x + w) * W), int((y + h) * H)))
 
 
 def insp_colours(r):
@@ -132,24 +161,31 @@ def build_inspiration(rows):
     return out
 
 
-def copy_assets(products):
-    src_dir = CAT + '/assets'
-    a_dir, t_dir = STUDIO + '/assets', STUDIO + '/thumbs'
-    os.makedirs(a_dir, exist_ok=True)
-    os.makedirs(t_dir, exist_ok=True)
-    keep = set()
+def copy_assets(products, rows_by_id):
+    a_dir, t_dir, f_dir = STUDIO + '/assets', STUDIO + '/thumbs', STUDIO + '/full'
+    for d in (a_dir, t_dir, f_dir):
+        os.makedirs(d, exist_ok=True)
+    keep, keep_full = set(), set()
     for p in products:
         pid = p['product_id']
         keep.add(pid + '.webp')
-        src = f'{src_dir}/{pid}.webp'
+        src = ROOT + '/' + rows_by_id[pid]['asset_path']
         shutil.copyfile(src, f'{a_dir}/{pid}.webp')
-        with Image.open(src) as im:
-            t = im.convert('RGBA')
+        if p['full']:
+            keep_full.add(pid + '.jpg')
+            shutil.copyfile(f"{CAT}/review/{pid}.jpg", f"{f_dir}/{pid}.jpg")
+        # the thumb shows what the shelf will place: the chosen crop, or the cut-out
+        box = None
+        if p['full'] and p['choice'] in ('item', 'person', 'full', 'custom'):
+            box = (p['custom_box'] if p['choice'] == 'custom' else
+                   [0, 0, 1, 1] if p['choice'] == 'full' else p['boxes'][p['choice']])
+        with Image.open(f"{CAT}/review/{pid}.jpg" if box else src) as im:
+            t = crop_box(im.convert('RGB'), box) if box else im.convert('RGBA')
             t.thumbnail((THUMB, THUMB), Image.LANCZOS)
             t.save(f'{t_dir}/{pid}.webp', 'WEBP', quality=80, method=5)
-    for d in (a_dir, t_dir):                    # drop anything the catalogue lost
+    for d, k in ((a_dir, keep), (t_dir, keep), (f_dir, keep_full)):   # drop what the catalogue lost
         for f in os.listdir(d):
-            if f not in keep:
+            if f not in k:
                 os.remove(os.path.join(d, f))
 
 
@@ -194,7 +230,11 @@ def main():
 
     prod_rows = list(csv.DictReader(open(CAT + '/products.csv')))
     insp_rows = list(csv.DictReader(open(CAT + '/inspiration.csv')))
-    products = build_products(prod_rows)
+    try:
+        review = json.load(open(CAT + '/_review_boxes.json'))
+    except (FileNotFoundError, json.JSONDecodeError):
+        review = {}
+    products = build_products(prod_rows, review)
     inspiration = build_inspiration(insp_rows)
 
     os.makedirs(DATA, exist_ok=True)
@@ -203,19 +243,23 @@ def main():
                 slots=sorted({p['slot'] for p in products if p['slot']}),
                 families=sorted({c['family'] for p in products for c in p['colours'] if c['family']}),
                 brands=sorted({p['brand'] for p in products if p['brand']}),
-                asset_types=sorted({p['asset_type'] for p in products}))
+                asset_types=sorted({p['asset_type'] for p in products}),
+                clean=sum(1 for p in products if p['clean']),
+                with_full=sum(1 for p in products if p['full']),
+                hidden=sum(1 for p in products if p['hidden']),
+                recoloured=sum(1 for p in products if p['recoloured']))
     json.dump(products, open(DATA + '/products.json', 'w'), separators=(',', ':'))
     json.dump(inspiration, open(DATA + '/inspiration.json', 'w'), separators=(',', ':'))
     json.dump(meta, open(DATA + '/meta.json', 'w'), indent=1)
 
     if not a.no_images:
-        copy_assets(products)
+        copy_assets(products, {r['product_id']: r for r in prod_rows})
         copy_inspiration(inspiration)
         copy_fonts()
 
     print('products %d  inspiration %d' % (len(products), len(inspiration)))
     total = 0
-    for sub in ('data', 'assets', 'thumbs', 'inspiration', 'fonts', 'js'):
+    for sub in ('data', 'assets', 'thumbs', 'full', 'inspiration', 'fonts', 'js'):
         p = f'{STUDIO}/{sub}'
         if os.path.isdir(p):
             s = folder_size(p)

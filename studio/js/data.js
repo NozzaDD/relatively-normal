@@ -23,6 +23,7 @@ export function createStaticSource(base = '.') {
     },
     assetUrl: (p) => url(p.asset),
     thumbUrl: (p) => url(p.thumb),
+    fullUrl: (p) => (p.full ? url(p.full.path) : url(p.asset)),
     inspirationUrl: (i) => url(i.image),
     inspirationThumbUrl: (i) => url(i.thumb),
   };
@@ -35,6 +36,7 @@ export function createMemorySource(catalogue, urls = {}) {
     async load() { return catalogue; },
     assetUrl: urls.assetUrl || ((p) => p.asset),
     thumbUrl: urls.thumbUrl || ((p) => p.thumb),
+    fullUrl: urls.fullUrl || ((p) => (p.full ? p.full.path : p.asset)),
     inspirationUrl: urls.inspirationUrl || ((i) => i.image),
     inspirationThumbUrl: urls.inspirationThumbUrl || ((i) => i.thumb),
   };
@@ -58,13 +60,43 @@ export const FORMALITY_LABELS = { 1: 'casual', 2: 'easy', 3: 'smart', 4: 'dressy
 
 export const emptyFilters = () => ({
   slot: '', family: '', weight: '', formality: '', assetType: '', brand: '',
-  search: '', showWeak: false,
+  search: '', showUnreviewed: false,
 });
 
-export function filterProducts(products, f) {
+/**
+ * What the stylist decided about a product's image, if anything: the choice
+ * made in the browser first, then the one filed in the catalogue.
+ */
+export function effectiveChoice(p, local) {
+  const l = local && local[p.product_id];
+  if (l && (l.hidden || l.choice)) return l;
+  if (p.hidden) return { hidden: true };
+  if (p.choice) return { choice: p.choice, box: p.custom_box };
+  return null;
+}
+
+/**
+ * The gate. By default the shelf shows clean flat cut-outs plus everything
+ * that has been reviewed; unreviewed pieces wait in Review until asked for.
+ * A hidden product never shows, and a product without a full photo cannot be
+ * reviewed, so its cut-out is what there is.
+ */
+export function onShelf(p, local, showUnreviewed) {
+  const c = effectiveChoice(p, local);
+  if (c?.hidden) return false;
+  if (p.clean || (c && c.choice)) return true;
+  return !!showUnreviewed;
+}
+
+export function isReviewed(p, local) {
+  const c = effectiveChoice(p, local);
+  return !!(c && (c.hidden || c.choice));
+}
+
+export function filterProducts(products, f, local) {
   const q = (f.search || '').trim().toLowerCase();
   return products.filter((p) => {
-    if (!f.showWeak && p.asset_quality === 'weak') return false;
+    if (!onShelf(p, local, f.showUnreviewed)) return false;
     if (f.slot && p.slot !== f.slot) return false;
     if (f.assetType && p.asset_type !== f.assetType) return false;
     if (f.brand && p.brand !== f.brand) return false;

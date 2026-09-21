@@ -13,6 +13,11 @@ export const GROUND = '#F3EFE7';      // style-spec.md part B4
 export const KEYLINE = '#D6CDBF';
 export const INK = '#221F1C';
 export const SLOTS = ['layer', 'top', 'bottom', 'shoes', 'bag', 'accessory'];
+export const SLOT_ORDER = ['layer', 'top', 'bottom', 'dress', 'shoes', 'bag', 'accessory'];
+
+// How framed things — the inspiration image, crop boxes, page tiles — are
+// drawn. One setting for the whole board, never baked into a file.
+export const DEFAULT_FRAME = { border: true, radius: 0, mat: true };
 
 let seq = 0;
 export const uid = () => `e${Date.now().toString(36)}${(seq++).toString(36)}`;
@@ -29,6 +34,7 @@ export function createBoard(format = 'portrait') {
     showSwatches: true,
     showLabels: false,
     inspiration: null,
+    frame: { ...DEFAULT_FRAME },
     elements: [],
   };
 }
@@ -42,7 +48,7 @@ export function addElement(board, el) {
   const z = board.elements.reduce((m, e) => Math.max(m, e.z), 0) + 1;
   const next = {
     uid: uid(), kind: 'product', x: 0.5, y: 0.5, w: 0.3, rot: 0, flip: false,
-    aspect: 1, z, ...el,
+    aspect: 1, z, variant: 'cutout', crop: null, ...el,
   };
   board.elements.push(next);
   return next;
@@ -75,6 +81,24 @@ export function sendBack(board, uid) {
 }
 
 export const stacked = (board) => [...board.elements].sort((a, b) => a.z - b.z);
+
+/**
+ * Where an image sits inside a box that shows only `crop` of it.
+ * crop is [x, y, w, h] as fractions of the full image. Returns the image's
+ * size and offset as fractions of the box, for CSS and for canvas alike.
+ */
+export function cropLayout(crop) {
+  const [x, y, w, h] = crop || [0, 0, 1, 1];
+  return { imgW: 1 / w, imgH: 1 / h, left: -x / w, top: -y / h };
+}
+
+/** Aspect (w/h) of what an element shows: the crop of the full image, or the asset. */
+export function shownAspect(product, variant, crop) {
+  if (variant && variant !== 'cutout' && product?.full && crop) {
+    return (crop[2] * product.full.w) / (crop[3] * product.full.h);
+  }
+  return null;
+}
 
 /** Product elements in the order their numbered labels run. */
 export function labelOrder(board) {

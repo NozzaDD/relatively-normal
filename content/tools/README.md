@@ -36,7 +36,7 @@ deleted or re-encoded.
 | `asset_quality.py` | marks an asset weak when it is mostly skin and hair, or a rectangle |
 | `inspiration_colours.py` | clothes-only colours for the inspiration images |
 | `build_inspiration.py` | writes `inspiration.csv` |
-| `coverage.py` | writes `coverage.csv` — which product can carry which colour in which slot |
+| `coverage_map.py` | writes `coverage.csv` — which product can carry which colour in which slot |
 | `pick_boards.py` | chooses the pieces for a board and runs the acceptance test |
 | `make_boards.py` | renders a board to style-spec part B4 and B5 |
 | `build_boards.py` | the six board specs, and the renders |
@@ -50,7 +50,7 @@ deleted or re-encoded.
 Order to re-run the whole thing from the index: `cluster_products.py` →
 `make_assets.py` → `crop_figures.py` → `extract_colours.py` → `asset_quality.py`
 → `build_products.py` → `inspiration_colours.py` → `build_inspiration.py` →
-`coverage.py` → `build_boards.py` → `note_visuals.py` → `slot_sheets.py` →
+`coverage_map.py` → `build_boards.py` → `note_visuals.py` → `slot_sheets.py` →
 `brand_questions.py` → `catalogue_readme.py` → `boards_readme.py` →
 `mark_used.py`.
 
@@ -79,3 +79,25 @@ in a second or two.
 date-prefixed outfit slugs inside it — entries like `board-3` from the rebuilt
 boards are left alone, so re-running it never drops something it did not put
 there. `--check` reports without writing.
+
+## Added 22 September 2026 — review, variants, the shelf gate
+
+| Script | What it does |
+|---|---|
+| `build_review_images.py` | one full photo (no page UI, ≤ 1200 px) and two boxes — item, person — for every product that is not a clean flat cut-out |
+| `uniqlo_variants.py` | recolours a UNIQLO flat lay once per colour read off the all-colours picture; writes `_variants.json` and one contact sheet per style |
+
+`build_products.py` now merges the variants as rows (`recoloured = yes`,
+`recolour_source`), hides the other UNIQLO images of a recoloured style
+(`shelf = hidden`), applies `content/catalogue/asset-choices.json` from the
+desk (`asset_choice`, `asset_box`, `shelf`), and keeps `validated` and
+`used_in` across rebuilds. `build_studio.py` copies the full photos to
+`studio/full/` and makes each thumbnail from the chosen crop.
+
+`coverage.py` was renamed `coverage_map.py`: it shadowed the `coverage`
+package that numba, and so rembg, imports.
+
+Order to re-run: `cluster_products.py` → `make_assets.py` → `crop_figures.py`
+→ `extract_colours.py` → `asset_quality.py` → `build_review_images.py` →
+`uniqlo_variants.py` → `build_products.py` → `inspiration_colours.py` →
+`build_inspiration.py` → `coverage_map.py` → `build_studio.py`.

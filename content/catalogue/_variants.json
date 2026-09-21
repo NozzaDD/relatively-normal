@@ -1,0 +1,424 @@
+{
+ "variants": [
+  {
+   "product_id": "B059-P005-dark-grey",
+   "source": "B059-P005",
+   "style": "merino-crew-neck-jumper",
+   "garment_type": "merino crew neck jumper",
+   "slot": "top",
+   "colour": {
+    "hex": "2D2F31",
+    "family": "grey",
+    "name": "dark grey",
+    "share": 0.211,
+    "L": 19.4,
+    "C": 1.5,
+    "h": 246.6,
+    "rel": 0.08,
+    "neutral": true
+   },
+   "colour_name_text": "",
+   "asset_path": "content/catalogue/variants/B059-P005-dark-grey.webp",
+   "recoloured_share": 0.989,
+   "delta_e_to_source": 13.9
+  },
+  {
+   "product_id": "B059-P005-forest",
+   "source": "B059-P005",
+   "style": "merino-crew-neck-jumper",
+   "garment_type": "merino crew neck jumper",
+   "slot": "top",
+   "colour": {
+    "hex": "485F52",
+    "family": "green",
+    "name": "forest",
+    "share": 0.077,
+    "L": 38.1,
+    "C": 12.8,
+    "h": 157.6,
+    "rel": 0.326,
+    "neutral": false
+   },
+   "colour_name_text": "",
+   "asset_path": "content/catalogue/variants/B059-P005-forest.webp",
+   "recoloured_share": 0.989,
+   "delta_e_to_source": 22.8
+  },
+  {
+   "product_id": "B059-P005-black",
+   "source": "B059-P005",
+   "style": "merino-crew-neck-jumper",
+   "garment_type": "merino crew neck jumper",
+   "slot": "top",
+   "colour": {
+    "hex": "16110E",
+    "family": "black",
+    "name": "black",
+    "share": 0.074,
+    "L": 5.3,
+    "C": 3.0,
+    "h": 51.0,
+    "rel": 0.272,
+    "neutral": false
+   },
+   "colour_name_text": "",
+   "asset_path": "content/catalogue/variants/B059-P005-black.webp",
+   "recoloured_share": 0.989,
+   "delta_e_to_source": 17.7
+  },
+  {
+   "product_id": "B062-P011-black",
+   "source": "B062-P011",
+   "style": "cropped-fitted-tee",
+   "garment_type": "short-sleeve cropped fitted t-shirt",
+   "slot": "top",
+   "colour": {
+    "hex": "1E1E1F",
+    "family": "black",
+    "name": "black",
+    "share": 0.359,
+    "L": 11.3,
+    "C": 0.9,
+    "h": 298.0,
+    "rel": 0.021,
+    "neutral": true
+   },
+   "colour_name_text": "",
+   "asset_path": "content/catalogue/variants/B062-P011-black.webp",
+   "recoloured_share": 0.985,
+   "delta_e_to_source": 16.3
+  },
+  {
+   "product_id": "B062-P011-denim-blue",
+   "source": "B062-P011",
+   "style": "cropped-fitted-tee",
+   "garment_type": "short-sleeve cropped fitted t-shirt",
+   "slot": "top",
+   "colour": {
+    "hex": "3E5D9B",
+    "family": "blue",
+    "name": "denim blue",
+    "share": 0.071,
+    "L": 39.9,
+    "C": 38.4,
+    "h": 282.7,
+    "rel": 0.701,
+    "neutral": false
+   },
+   "colour_name_text": "",
+   "asset_path": "content/catalogue/variants/B062-P011-denim-blue.webp",
+   "recoloured_share": 0.985,
+   "delta_e_to_source": 29.1
+  },
+  {
+   "product_id": "B062-P011-navy",
+   "source": "B062-P011",
+   "style": "cropped-fitted-tee",
+   "garment_type": "short-sleeve cropped fitted t-shirt",
+   "slot": "top",
+   "colour": {
+    "hex": "292F41",
+    "family": "blue",
+    "name": "navy",
+    "share": 0.07,
+    "L": 19.6,
+    "C": 12.7,
+    "h": 283.3,
+    "rel": 0.365,
+    "neutral": false
+   },
+   "colour_name_text": "",
+   "asset_path": "content/catalogue/variants/B062-P011-navy.webp",
+   "recoloured_share": 0.985,
+   "delta_e_to_source": 17.9
+  },
+  {
+   "product_id": "B062-P016-dark-grey",
+   "source": "B062-P016",
+   "style": "crew-neck-sweatshirt",
+   "garment_type": "crew neck sweatshirt",
+   "slot": "top",
+   "colour": {
+    "hex": "3D393B",
+    "family": "grey",
+    "name": "dark grey",
+    "share": 0.485,
+    "L": 24.6,
+    "C": 1.8,
+    "h": 355.2,
+    "rel": 0.044,
+    "neutral": true
+   },
+   "colour_name_text": "",
+   "asset_path": "content/catalogue/variants/B062-P016-dark-grey.webp",
+   "recoloured_share": 0.973,
+   "delta_e_to_source": 33.2
+  },
+  {
+   "product_id": "B062-P016-black",
+   "source": "B062-P016",
+   "style": "crew-neck-sweatshirt",
+   "garment_type": "crew neck sweatshirt",
+   "slot": "top",
+   "colour": {
+    "hex": "1A1718",
+    "family": "black",
+    "name": "black",
+    "share": 0.114,
+    "L": 8.1,
+    "C": 1.8,
+    "h": 346.9,
+    "rel": 0.06,
+    "neutral": true
+   },
+   "colour_name_text": "",
+   "asset_path": "content/catalogue/variants/B062-P016-black.webp",
+   "recoloured_share": 0.973,
+   "delta_e_to_source": 42.1
+  },
+  {
+   "product_id": "B062-P016-cream",
+   "source": "B062-P016",
+   "style": "crew-neck-sweatshirt",
+   "garment_type": "crew neck sweatshirt",
+   "slot": "top",
+   "colour": {
+    "hex": "D9D3CB",
+    "family": "warm neutral",
+    "name": "cream",
+    "share": 0.095,
+    "L": 84.9,
+    "C": 5.0,
+    "h": 87.5,
+    "rel": 0.088,
+    "neutral": true
+   },
+   "colour_name_text": "",
+   "asset_path": "content/catalogue/variants/B062-P016-cream.webp",
+   "recoloured_share": 0.973,
+   "delta_e_to_source": 30.8
+  },
+  {
+   "product_id": "B062-P016-rust",
+   "source": "B062-P016",
+   "style": "crew-neck-sweatshirt",
+   "garment_type": "crew neck sweatshirt",
+   "slot": "top",
+   "colour": {
+    "hex": "CF4630",
+    "family": "orange",
+    "name": "rust",
+    "share": 0.043,
+    "L": 49.4,
+    "C": 67.9,
+    "h": 38.5,
+    "rel": 0.7,
+    "neutral": false
+   },
+   "colour_name_text": "",
+   "asset_path": "content/catalogue/variants/B062-P016-rust.webp",
+   "recoloured_share": 0.973,
+   "delta_e_to_source": 41.5
+  },
+  {
+   "product_id": "B062-P016-forest",
+   "source": "B062-P016",
+   "style": "crew-neck-sweatshirt",
+   "garment_type": "crew neck sweatshirt",
+   "slot": "top",
+   "colour": {
+    "hex": "2E3C2F",
+    "family": "green",
+    "name": "forest",
+    "share": 0.039,
+    "L": 23.6,
+    "C": 10.6,
+    "h": 144.8,
+    "rel": 0.292,
+    "neutral": false
+   },
+   "colour_name_text": "",
+   "asset_path": "content/catalogue/variants/B062-P016-forest.webp",
+   "recoloured_share": 0.973,
+   "delta_e_to_source": 37.9
+  },
+  {
+   "product_id": "B062-P016-navy",
+   "source": "B062-P016",
+   "style": "crew-neck-sweatshirt",
+   "garment_type": "crew neck sweatshirt",
+   "slot": "top",
+   "colour": {
+    "hex": "262D3F",
+    "family": "blue",
+    "name": "navy",
+    "share": 0.038,
+    "L": 18.4,
+    "C": 12.7,
+    "h": 280.4,
+    "rel": 0.397,
+    "neutral": false
+   },
+   "colour_name_text": "",
+   "asset_path": "content/catalogue/variants/B062-P016-navy.webp",
+   "recoloured_share": 0.973,
+   "delta_e_to_source": 33.5
+  },
+  {
+   "product_id": "B062-P016-oatmeal",
+   "source": "B062-P016",
+   "style": "crew-neck-sweatshirt",
+   "garment_type": "crew neck sweatshirt",
+   "slot": "top",
+   "colour": {
+    "hex": "B0A89C",
+    "family": "warm neutral",
+    "name": "oatmeal",
+    "share": 0.035,
+    "L": 69.1,
+    "C": 7.1,
+    "h": 83.5,
+    "rel": 0.099,
+    "neutral": true
+   },
+   "colour_name_text": "",
+   "asset_path": "content/catalogue/variants/B062-P016-oatmeal.webp",
+   "recoloured_share": 0.973,
+   "delta_e_to_source": 25.6
+  }
+ ],
+ "report": {
+  "merino-crew-neck-jumper": {
+   "source": "B059-P005",
+   "colours_picture": "B059-P004",
+   "colours": [
+    [
+     "espresso",
+     0.461
+    ],
+    [
+     "dark grey",
+     0.211
+    ],
+    [
+     "off-white",
+     0.108
+    ],
+    [
+     "forest",
+     0.077
+    ],
+    [
+     "black",
+     0.074
+    ]
+   ],
+   "variants": [
+    "B059-P005-dark-grey",
+    "B059-P005-forest",
+    "B059-P005-black"
+   ],
+   "source_lab": [
+    29.7,
+    5.7,
+    9.4
+   ]
+  },
+  "cropped-fitted-tee": {
+   "source": "B062-P011",
+   "colours_picture": "B062-P010",
+   "colours": [
+    [
+     "black",
+     0.359
+    ],
+    [
+     "espresso",
+     0.3
+    ],
+    [
+     "oxblood",
+     0.167
+    ],
+    [
+     "denim blue",
+     0.071
+    ],
+    [
+     "navy",
+     0.07
+    ]
+   ],
+   "variants": [
+    "B062-P011-black",
+    "B062-P011-denim-blue",
+    "B062-P011-navy"
+   ],
+   "source_lab": [
+    25.1,
+    12.2,
+    6.9
+   ]
+  },
+  "crew-neck-sweatshirt": {
+   "source": "B062-P016",
+   "colours_picture": "B062-P015",
+   "colours": [
+    [
+     "dark grey",
+     0.485
+    ],
+    [
+     "denim blue",
+     0.116
+    ],
+    [
+     "black",
+     0.114
+    ],
+    [
+     "cream",
+     0.095
+    ],
+    [
+     "rust",
+     0.043
+    ],
+    [
+     "forest",
+     0.039
+    ],
+    [
+     "navy",
+     0.038
+    ],
+    [
+     "oatmeal",
+     0.035
+    ]
+   ],
+   "variants": [
+    "B062-P016-dark-grey",
+    "B062-P016-black",
+    "B062-P016-cream",
+    "B062-P016-rust",
+    "B062-P016-forest",
+    "B062-P016-navy",
+    "B062-P016-oatmeal"
+   ],
+   "source_lab": [
+    56.4,
+    0.6,
+    -26.7
+   ]
+  }
+ },
+ "dropped": {
+  "B059-P005-espresso": "the source's own colour (dE 6.8): the real photo is B059-P005",
+  "B059-P005-off-white": "dark brown to off-white: the lightness jump leaves speckle and looks fake",
+  "hooded-henley-tee": "the catalogue's cut-out of B062-P004 is a sliver of the hood, not the garment, so the style has no clean source",
+  "B062-P011-espresso": "the source's own colour (dE 5.0): the real photo is B062-P011",
+  "B062-P011-oxblood": "the source's own colour (dE 8.9): the real photo is B062-P011",
+  "B062-P016-denim-blue": "the source's own colour (dE 0.5): the real photo is B062-P016"
+ }
+}
