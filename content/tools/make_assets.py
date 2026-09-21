@@ -105,34 +105,40 @@ def fit(im, maxside=MAXSIDE):
 
 
 def tile(page, box, ratio=4 / 5):
-    """Clean 4:5 tile centred on the photo region, inset to drop any UI edge."""
+    """A 4:5 tile that GROWS the product box out to ratio rather than cutting
+    into it. Clipping a shoe or a sleeve to make the aspect work is exactly the
+    fault the boards are being rebuilt to fix, so where the page runs out the
+    tile is padded with the page's own backdrop colour instead."""
     x0, y0, x1, y1 = box
-    w, h = x1 - x0, y1 - y0
-    ins = 0.035
-    x0, y0 = x0 + int(w * ins), y0 + int(h * ins)
-    x1, y1 = x1 - int(w * ins), y1 - int(h * ins)
     w, h = x1 - x0, y1 - y0
     if w <= 0 or h <= 0:
         return None
     if w / h > ratio:
-        nw = int(h * ratio)
-        cx = (x0 + x1) // 2
-        x0, x1 = cx - nw // 2, cx + nw // 2
+        nh = int(w / ratio); nw = w
     else:
-        nh = int(w / ratio)
-        cy = y0 + int(h * 0.42)                    # bias up: garments sit high
-        y0, y1 = max(0, cy - nh // 2), max(0, cy - nh // 2) + nh
-        if y1 > page.size[1]:
-            y1 = page.size[1]; y0 = max(0, y1 - nh)
-    return page.crop((max(0, x0), max(0, y0), min(page.size[0], x1), min(page.size[1], y1)))
+        nw = int(h * ratio); nh = h
+    cx, cy = (x0 + x1) // 2, (y0 + y1) // 2
+    bx0, by0 = cx - nw // 2, cy - nh // 2
+    pw, ph = page.size
+    out = Image.new('RGB', (nw, nh), imglib.backdrop_rgb(page.crop(box)))
+    sx0, sy0 = max(0, bx0), max(0, by0)
+    sx1, sy1 = min(pw, bx0 + nw), min(ph, by0 + nh)
+    if sx1 <= sx0 or sy1 <= sy0:
+        return None
+    out.paste(page.crop((sx0, sy0, sx1, sy1)), (sx0 - bx0, sy0 - by0))
+    return out
 
 
 def build(product, shot_type):
-    """-> dict(asset_type, asset_quality, file, note)"""
+    """-> dict(asset_type, asset_quality, image, note)"""
     src = ROOT + '/' + product['images'][0]
     with Image.open(src) as im0:
-        page = im0.convert('RGB').crop(imglib.trim_chrome(im0.convert('RGB')))
-    box = photo_region(page)
+        page = im0.convert('RGB')
+        page = page.crop(imglib.trim_chrome(page))
+    box = imglib.product_box(page)
+    found = box is not None
+    if not found:
+        box = photo_region(page)
     crop = page.crop(box)
     want_cut = shot_type in ('flat packshot', 'ghost mannequin', 'on model', 'detail')
     if want_cut and min(crop.size) >= 100:
@@ -141,15 +147,18 @@ def build(product, shot_type):
             ok, why = cutout_ok(cut, fit(crop, 1400).size)
             if ok:
                 kind = 'cutout_flat' if shot_type in ('flat packshot', 'ghost mannequin') else 'cutout_model'
-                q = 'good' if (nb <= 4 and min(cut.size) >= 220) else 'usable'
-                return dict(asset_type=kind, asset_quality=q, image=fit(cut), note=f'{nb} components')
+                q = 'good' if (found and nb <= 4 and min(cut.size) >= 220) else 'usable'
+                return dict(asset_type=kind, asset_quality=q, image=fit(cut),
+                            note=f'{nb} components; box {"found" if found else "fallback"}')
         except Exception as e:
             why = f'{type(e).__name__}'
     t = tile(page, box)
     if t is None or min(t.size) < 80:
         t = page
-    return dict(asset_type='tile', asset_quality='usable' if min(t.size) >= 300 else 'weak',
-                image=fit(t), note='crop tile: cut-out not clean or not applicable')
+    area = (box[2] - box[0]) * (box[3] - box[1]) / (page.size[0] * page.size[1])
+    q = 'good' if (found and 0.05 <= area <= 0.85) else ('usable' if found else 'weak')
+    return dict(asset_type='tile', asset_quality=q, image=fit(t),
+                note='crop tile; box %s, %.0f%% of page' % ('found' if found else 'fallback', area * 100))
 
 
 def main(shotmap_path):

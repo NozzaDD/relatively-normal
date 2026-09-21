@@ -210,3 +210,69 @@ def cutout(im, max_side=1200, alpha_cut=200, blob_rel=0.06):
     if bb:
         out = out.crop(bb)
     return out, nblobs
+
+
+def product_box(im, pad=0.04, min_area=0.02):
+    """Bounding box of the biggest non-page-coloured thing that is not text.
+
+    The first cut of this looked for the largest *low-edge* block, which on a
+    shop page is just as often the empty margin below the photo: a third of the
+    first tiles came out as blank white. Content is the better signal — take the
+    page's modal colour as its background, keep what differs from it, drop the
+    cells that are dense enough to be type, and use the largest remaining blob.
+    """
+    from collections import deque, Counter
+    w0, h0 = im.size
+    s = im.convert('RGB').resize((200, max(1, round(200 * h0 / w0))), Image.BILINEAR)
+    W, H = s.size
+    px = list(s.getdata())
+    q = [(r >> 4, g >> 4, b >> 4) for r, g, b in px]
+    bg = Counter(q).most_common(1)[0][0]
+    bgr = tuple(v * 16 + 8 for v in bg)
+
+    # type is high-frequency; a garment is not. one cell = 4x4 px at this scale
+    e = s.convert('L').filter(ImageFilter.FIND_EDGES)
+    ep = list(e.getdata())
+    cw, chh = (W + 3) // 4, (H + 3) // 4
+    cell = [0.0] * (cw * chh)
+    for i, v in enumerate(ep):
+        cell[(i // W // 4) * cw + (i % W) // 4] += v
+    vals = sorted(cell)
+    texty = vals[int(len(vals) * 0.97)] * 0.75 if vals else 1e9
+
+    mask = bytearray(W * H)
+    for i, (r, g, b) in enumerate(px):
+        if (abs(r - bgr[0]) + abs(g - bgr[1]) + abs(b - bgr[2])) > 40:
+            if cell[(i // W // 4) * cw + (i % W) // 4] < texty:
+                mask[i] = 1
+
+    seen = bytearray(W * H)
+    blobs = []
+    for i in range(W * H):
+        if not mask[i] or seen[i]:
+            continue
+        dq = deque([i]); seen[i] = 1
+        x0 = x1 = i % W; y0 = y1 = i // W; n = 0
+        while dq:
+            j = dq.popleft(); n += 1
+            x, y = j % W, j // W
+            if x < x0: x0 = x
+            if x > x1: x1 = x
+            if y < y0: y0 = y
+            if y > y1: y1 = y
+            for k, ok in ((j - 1, x > 0), (j + 1, x < W - 1), (j - W, y > 0), (j + W, y < H - 1)):
+                if ok and mask[k] and not seen[k]:
+                    seen[k] = 1; dq.append(k)
+        blobs.append((n, x0, y0, x1, y1))
+    # a browser toolbar is a big dark contiguous strip and will otherwise win on
+    # area, so anything too short or too narrow to be a garment photo is dropped
+    blobs = [b for b in blobs
+             if (b[4] - b[2] + 1) >= 0.15 * H and (b[3] - b[1] + 1) >= 0.10 * W]
+    blobs.sort(reverse=True)
+    if not blobs or blobs[0][0] < min_area * W * H:
+        return None
+    _, x0, y0, x1, y1 = blobs[0]
+    dx, dy = (x1 - x0 + 1) * pad, (y1 - y0 + 1) * pad
+    sx, sy = w0 / W, h0 / H
+    return (max(0, int((x0 - dx) * sx)), max(0, int((y0 - dy) * sy)),
+            min(w0, int((x1 + 1 + dx) * sx)), min(h0, int((y1 + 1 + dy) * sy)))
