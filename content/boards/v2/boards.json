@@ -1,0 +1,721 @@
+{
+ "board-1": {
+  "n": 1,
+  "source_image": "content/swipe/fashion shows ss27/IMG_0843.png",
+  "inspiration": "content/boards/v2/inspiration/board-1.jpg",
+  "title": "Rust twice, and nothing else bright",
+  "line": "One colour at two weights, with brown underneath it.",
+  "keys": [
+   {
+    "sits": "middle",
+    "sits_y": 0.34,
+    "hex": "A53B29",
+    "share": 0.903,
+    "family": "orange",
+    "name": "rust",
+    "L": 40.1,
+    "C": 54.6,
+    "h": 38.5,
+    "rel": 0.658,
+    "neutral": false,
+    "role": "dominant"
+   },
+   {
+    "sits": "lower",
+    "sits_y": 0.74,
+    "hex": "210D0A",
+    "share": 0.067,
+    "family": "brown",
+    "name": "espresso",
+    "L": 5.7,
+    "C": 10.3,
+    "h": 26.8,
+    "rel": 0.52,
+    "neutral": false,
+    "role": "accent"
+   }
+  ],
+  "pieces": [
+   {
+    "slot": "layer",
+    "product_id": "B015-P003",
+    "delta_e": 6.0,
+    "carries": "A53B29",
+    "filler": false,
+    "asset_path": "content/catalogue/assets/B015-P003.webp",
+    "asset_type": "cutout_model"
+   },
+   {
+    "slot": "top",
+    "product_id": "B062-P005",
+    "delta_e": 4.6,
+    "carries": "A53B29",
+    "filler": false,
+    "asset_path": "content/catalogue/assets/B062-P005.webp",
+    "asset_type": "cutout_model"
+   },
+   {
+    "slot": "bottom",
+    "product_id": "B050-P002",
+    "delta_e": 13.0,
+    "carries": "",
+    "filler": true,
+    "asset_path": "content/catalogue/assets/B050-P002.webp",
+    "asset_type": "cutout_model"
+   },
+   {
+    "slot": "shoes",
+    "product_id": "B001-P004",
+    "delta_e": 4.8,
+    "carries": "210D0A",
+    "filler": false,
+    "asset_path": "content/catalogue/assets/B001-P004.webp",
+    "asset_type": "cutout_model"
+   },
+   {
+    "slot": "bag",
+    "product_id": "B043-P006",
+    "delta_e": 10.4,
+    "carries": "210D0A",
+    "filler": false,
+    "asset_path": "content/catalogue/assets/B043-P006.webp",
+    "asset_type": "cutout_model"
+   },
+   {
+    "slot": "accessory",
+    "product_id": "B031-P001",
+    "delta_e": 12.7,
+    "carries": "",
+    "filler": true,
+    "asset_path": "content/catalogue/assets/B031-P001.webp",
+    "asset_type": "cutout_flat"
+   }
+  ],
+  "swatches": [
+   {
+    "hex": "1E1412",
+    "share": 2.532,
+    "name": "espresso"
+   },
+   {
+    "hex": "D26642",
+    "share": 0.991,
+    "name": "terracotta"
+   },
+   {
+    "hex": "B04722",
+    "share": 0.972,
+    "name": "rust"
+   },
+   {
+    "hex": "AE6F41",
+    "share": 0.423,
+    "name": "ochre"
+   }
+  ]
+ },
+ "board-2": {
+  "n": 2,
+  "source_image": "content/swipe/fashion shows ss27/IMG_0861.png",
+  "inspiration": "content/boards/v2/inspiration/board-2.jpg",
+  "title": "Pale on pale, one warm thing",
+  "line": "Everything quiet except the boots.",
+  "keys": [
+   {
+    "sits": "middle",
+    "sits_y": 0.44,
+    "hex": "C9C0D0",
+    "share": 0.797,
+    "family": "purple",
+    "name": "lilac",
+    "L": 78.9,
+    "C": 9.2,
+    "h": 311.5,
+    "rel": 0.215,
+    "neutral": false,
+    "role": "dominant"
+   },
+   {
+    "sits": "middle",
+    "sits_y": 0.6,
+    "hex": "591A19",
+    "share": 0.127,
+    "family": "orange",
+    "name": "rust",
+    "L": 19.8,
+    "C": 33.3,
+    "h": 30.0,
+    "rel": 0.694,
+    "neutral": false,
+    "role": "accent"
+   }
+  ],
+  "pieces": [
+   {
+    "slot": "layer",
+    "product_id": "B058-P005",
+    "delta_e": 10.6,
+    "carries": "C9C0D0",
+    "filler": false,
+    "asset_path": "content/catalogue/assets/B058-P005.webp",
+    "asset_type": "cutout_flat"
+   },
+   {
+    "slot": "top",
+    "product_id": "B007-P001",
+    "delta_e": 5.0,
+    "carries": "C9C0D0",
+    "filler": false,
+    "asset_path": "content/catalogue/assets/B007-P001.webp",
+    "asset_type": "cutout_model"
+   },
+   {
+    "slot": "bottom",
+    "product_id": "B007-P002",
+    "delta_e": 9.7,
+    "carries": "C9C0D0",
+    "filler": false,
+    "asset_path": "content/catalogue/assets/B007-P002.webp",
+    "asset_type": "cutout_model"
+   },
+   {
+    "slot": "shoes",
+    "product_id": "B055-P001",
+    "delta_e": 8.2,
+    "carries": "591A19",
+    "filler": false,
+    "asset_path": "content/catalogue/assets/B055-P001.webp",
+    "asset_type": "cutout_flat"
+   },
+   {
+    "slot": "bag",
+    "product_id": "B056-P004",
+    "delta_e": 21.9,
+    "carries": "",
+    "filler": true,
+    "asset_path": "content/catalogue/assets/B056-P004.webp",
+    "asset_type": "cutout_flat"
+   },
+   {
+    "slot": "accessory",
+    "product_id": "B037-P008",
+    "delta_e": 19.6,
+    "carries": "",
+    "filler": true,
+    "asset_path": "content/catalogue/assets/B037-P008.webp",
+    "asset_type": "cutout_flat"
+   }
+  ],
+  "swatches": [
+   {
+    "hex": "BBBBB9",
+    "share": 1.969,
+    "name": "light grey"
+   },
+   {
+    "hex": "4C2B22",
+    "share": 0.857,
+    "name": "espresso"
+   },
+   {
+    "hex": "8E8E8A",
+    "share": 0.541,
+    "name": "stone"
+   },
+   {
+    "hex": "B6A292",
+    "share": 0.254,
+    "name": "oatmeal"
+   }
+  ]
+ },
+ "board-3": {
+  "n": 3,
+  "source_image": "content/swipe/fashion shows ss27/IMG_0814.png",
+  "inspiration": "content/boards/v2/inspiration/board-3.jpg",
+  "title": "Ochre over black",
+  "line": "The jacket does the talking and everything under it stays quiet.",
+  "keys": [
+   {
+    "sits": "middle",
+    "sits_y": 0.6,
+    "hex": "171514",
+    "share": 0.506,
+    "family": "black",
+    "name": "black",
+    "L": 6.9,
+    "C": 1.2,
+    "h": 54.1,
+    "rel": 0.09,
+    "neutral": true,
+    "role": "dominant"
+   },
+   {
+    "sits": "upper",
+    "sits_y": 0.24,
+    "hex": "A5672D",
+    "share": 0.353,
+    "family": "yellow",
+    "name": "ochre",
+    "L": 49.4,
+    "C": 46.3,
+    "h": 64.7,
+    "rel": 0.726,
+    "neutral": false,
+    "role": "secondary"
+   },
+   {
+    "sits": "middle",
+    "sits_y": 0.6,
+    "hex": "504737",
+    "share": 0.076,
+    "family": "green",
+    "name": "olive",
+    "L": 30.6,
+    "C": 11.1,
+    "h": 85.3,
+    "rel": 0.277,
+    "neutral": false,
+    "role": "secondary"
+   }
+  ],
+  "pieces": [
+   {
+    "slot": "layer",
+    "product_id": "B021-P019",
+    "delta_e": 0.7,
+    "carries": "171514",
+    "filler": false,
+    "asset_path": "content/catalogue/assets/B021-P019.webp",
+    "asset_type": "cutout_flat"
+   },
+   {
+    "slot": "top",
+    "product_id": "B031-P006",
+    "delta_e": 5.2,
+    "carries": "504737",
+    "filler": false,
+    "asset_path": "content/catalogue/assets/B031-P006.webp",
+    "asset_type": "cutout_flat"
+   },
+   {
+    "slot": "bottom",
+    "product_id": "B050-P002",
+    "delta_e": 4.5,
+    "carries": "A5672D",
+    "filler": false,
+    "asset_path": "content/catalogue/assets/B050-P002.webp",
+    "asset_type": "cutout_model"
+   },
+   {
+    "slot": "shoes",
+    "product_id": "B039-P003",
+    "delta_e": 2.3,
+    "carries": "171514",
+    "filler": false,
+    "asset_path": "content/catalogue/assets/B039-P003.webp",
+    "asset_type": "cutout_model"
+   },
+   {
+    "slot": "bag",
+    "product_id": "B056-P004",
+    "delta_e": 1.8,
+    "carries": "171514",
+    "filler": false,
+    "asset_path": "content/catalogue/assets/B056-P004.webp",
+    "asset_type": "cutout_flat"
+   },
+   {
+    "slot": "accessory",
+    "product_id": "B055-P003",
+    "delta_e": 4.3,
+    "carries": "171514",
+    "filler": false,
+    "asset_path": "content/catalogue/assets/B055-P003.webp",
+    "asset_type": "cutout_model"
+   }
+  ],
+  "swatches": [
+   {
+    "hex": "171515",
+    "share": 3.0839999999999996,
+    "name": "black"
+   },
+   {
+    "hex": "48443E",
+    "share": 1.404,
+    "name": "taupe"
+   },
+   {
+    "hex": "AE6F41",
+    "share": 0.835,
+    "name": "ochre"
+   }
+  ],
+  "numbered": [
+   "B021-P019",
+   "B031-P006",
+   "B050-P002",
+   "B056-P004",
+   "B039-P003",
+   "B055-P003"
+  ]
+ },
+ "board-4": {
+  "n": 4,
+  "source_image": "content/swipe/fashion shows ss27/IMG_0802.png",
+  "inspiration": "content/boards/v2/inspiration/board-4.jpg",
+  "title": "Brick, and nothing else loud",
+  "line": "One strong colour and three quiet ones underneath.",
+  "keys": [
+   {
+    "sits": "middle",
+    "sits_y": 0.47,
+    "hex": "C94342",
+    "share": 0.837,
+    "family": "red",
+    "name": "brick",
+    "L": 48.0,
+    "C": 61.1,
+    "h": 29.9,
+    "rel": 0.711,
+    "neutral": false,
+    "role": "dominant"
+   },
+   {
+    "sits": "middle",
+    "sits_y": 0.62,
+    "hex": "831D1E",
+    "share": 0.106,
+    "family": "orange",
+    "name": "rust",
+    "L": 28.9,
+    "C": 50.2,
+    "h": 31.6,
+    "rel": 0.82,
+    "neutral": false,
+    "role": "accent"
+   }
+  ],
+  "pieces": [
+   {
+    "slot": "layer",
+    "product_id": "B015-P003",
+    "delta_e": 10.9,
+    "carries": "C94342",
+    "filler": false,
+    "asset_path": "content/catalogue/assets/B015-P003.webp",
+    "asset_type": "cutout_model"
+   },
+   {
+    "slot": "top",
+    "product_id": "B045-P002",
+    "delta_e": 3.7,
+    "carries": "C94342",
+    "filler": false,
+    "asset_path": "content/catalogue/assets/B045-P002.webp",
+    "asset_type": "cutout_model"
+   },
+   {
+    "slot": "bottom",
+    "product_id": "B015-P004",
+    "delta_e": 41.3,
+    "carries": "",
+    "filler": true,
+    "asset_path": "content/catalogue/assets/B015-P004.webp",
+    "asset_type": "cutout_model"
+   },
+   {
+    "slot": "shoes",
+    "product_id": "B055-P001",
+    "delta_e": 14.0,
+    "carries": "",
+    "filler": true,
+    "asset_path": "content/catalogue/assets/B055-P001.webp",
+    "asset_type": "cutout_flat"
+   },
+   {
+    "slot": "bag",
+    "product_id": "B053-P004",
+    "delta_e": 26.6,
+    "carries": "",
+    "filler": true,
+    "asset_path": "content/catalogue/assets/B053-P004.webp",
+    "asset_type": "cutout_flat"
+   },
+   {
+    "slot": "accessory",
+    "product_id": "B037-P009",
+    "delta_e": 24.6,
+    "carries": "",
+    "filler": true,
+    "asset_path": "content/catalogue/assets/B037-P009.webp",
+    "asset_type": "cutout_flat"
+   }
+  ],
+  "swatches": [
+   {
+    "hex": "D32638",
+    "share": 0.863,
+    "name": "brick"
+   },
+   {
+    "hex": "4C2B22",
+    "share": 0.857,
+    "name": "espresso"
+   },
+   {
+    "hex": "B04722",
+    "share": 0.56,
+    "name": "rust"
+   },
+   {
+    "hex": "D26642",
+    "share": 0.276,
+    "name": "terracotta"
+   }
+  ]
+ },
+ "board-5": {
+  "n": 5,
+  "source_image": "content/swipe/fashion shows ss27/IMG_0805.png",
+  "inspiration": "content/boards/v2/inspiration/board-5.jpg",
+  "title": "Black, and one thing that isn't",
+  "line": "Black head to toe is easy. The green wrap is the reason to look.",
+  "keys": [
+   {
+    "sits": "lower",
+    "sits_y": 0.71,
+    "hex": "17170E",
+    "share": 0.864,
+    "family": "black",
+    "name": "off-black",
+    "L": 7.5,
+    "C": 5.5,
+    "h": 110.2,
+    "rel": 0.469,
+    "neutral": false,
+    "role": "dominant"
+   },
+   {
+    "sits": "lower",
+    "sits_y": 0.75,
+    "hex": "464532",
+    "share": 0.087,
+    "family": "green",
+    "name": "olive",
+    "L": 28.9,
+    "C": 12.1,
+    "h": 105.5,
+    "rel": 0.313,
+    "neutral": false,
+    "role": "accent"
+   }
+  ],
+  "pieces": [
+   {
+    "slot": "layer",
+    "product_id": "B055-P010",
+    "delta_e": 4.4,
+    "carries": "17170E",
+    "filler": false,
+    "asset_path": "content/catalogue/assets/B055-P010.webp",
+    "asset_type": "cutout_model"
+   },
+   {
+    "slot": "top",
+    "product_id": "B055-P006",
+    "delta_e": 4.6,
+    "carries": "17170E",
+    "filler": false,
+    "asset_path": "content/catalogue/assets/B055-P006.webp",
+    "asset_type": "cutout_model"
+   },
+   {
+    "slot": "bottom",
+    "product_id": "B020-P003",
+    "delta_e": 2.5,
+    "carries": "17170E",
+    "filler": false,
+    "asset_path": "content/catalogue/assets/B020-P003.webp",
+    "asset_type": "cutout_model"
+   },
+   {
+    "slot": "shoes",
+    "product_id": "B039-P003",
+    "delta_e": 3.9,
+    "carries": "17170E",
+    "filler": false,
+    "asset_path": "content/catalogue/assets/B039-P003.webp",
+    "asset_type": "cutout_model"
+   },
+   {
+    "slot": "bag",
+    "product_id": "B043-P005",
+    "delta_e": 6.0,
+    "carries": "17170E",
+    "filler": false,
+    "asset_path": "content/catalogue/assets/B043-P005.webp",
+    "asset_type": "cutout_model"
+   },
+   {
+    "slot": "accessory",
+    "product_id": "B037-P009",
+    "delta_e": 11.1,
+    "carries": "464532",
+    "filler": false,
+    "asset_path": "content/catalogue/assets/B037-P009.webp",
+    "asset_type": "cutout_flat"
+   }
+  ],
+  "swatches": [
+   {
+    "hex": "151716",
+    "share": 4.0889999999999995,
+    "name": "black"
+   },
+   {
+    "hex": "6D6A6C",
+    "share": 0.654,
+    "name": "mid grey"
+   }
+  ]
+ },
+ "board-6": {
+  "n": 6,
+  "source_image": "content/swipe/formats/IMG_0093.png",
+  "inspiration": "content/boards/v2/inspiration/board-6.jpg",
+  "title": "Cream, with brown underneath",
+  "line": "Cream on top, brown below, nothing else.",
+  "keys": [
+   {
+    "sits": "upper",
+    "sits_y": 0.28,
+    "hex": "DED8D6",
+    "share": 0.685,
+    "family": "warm neutral",
+    "name": "cream",
+    "L": 86.7,
+    "C": 2.4,
+    "h": 45.3,
+    "rel": 0.116,
+    "neutral": true,
+    "role": "dominant"
+   },
+   {
+    "sits": "lower",
+    "sits_y": 0.79,
+    "hex": "705E4B",
+    "share": 0.22,
+    "family": "brown",
+    "name": "tobacco",
+    "L": 41.2,
+    "C": 14.2,
+    "h": 72.9,
+    "rel": 0.274,
+    "neutral": false,
+    "role": "secondary"
+   },
+   {
+    "sits": "lower",
+    "sits_y": 0.77,
+    "hex": "251113",
+    "share": 0.095,
+    "family": "red",
+    "name": "oxblood",
+    "L": 7.6,
+    "C": 11.1,
+    "h": 14.6,
+    "rel": 0.388,
+    "neutral": false,
+    "role": "accent"
+   }
+  ],
+  "pieces": [
+   {
+    "slot": "layer",
+    "product_id": "B021-P002",
+    "delta_e": 1.7,
+    "carries": "705E4B",
+    "filler": false,
+    "asset_path": "content/catalogue/assets/B021-P002.webp",
+    "asset_type": "cutout_model"
+   },
+   {
+    "slot": "top",
+    "product_id": "B010-P003",
+    "delta_e": 3.3,
+    "carries": "DED8D6",
+    "filler": false,
+    "asset_path": "content/catalogue/assets/B010-P003.webp",
+    "asset_type": "cutout_flat"
+   },
+   {
+    "slot": "bottom",
+    "product_id": "B042-P041",
+    "delta_e": 0.9,
+    "carries": "705E4B",
+    "filler": false,
+    "asset_path": "content/catalogue/assets/B042-P041.webp",
+    "asset_type": "cutout_model"
+   },
+   {
+    "slot": "shoes",
+    "product_id": "B001-P004",
+    "delta_e": 6.0,
+    "carries": "251113",
+    "filler": false,
+    "asset_path": "content/catalogue/assets/B001-P004.webp",
+    "asset_type": "cutout_model"
+   },
+   {
+    "slot": "bag",
+    "product_id": "B043-P006",
+    "delta_e": 11.4,
+    "carries": "251113",
+    "filler": false,
+    "asset_path": "content/catalogue/assets/B043-P006.webp",
+    "asset_type": "cutout_model"
+   },
+   {
+    "slot": "accessory",
+    "product_id": "B021-P009",
+    "delta_e": 3.8,
+    "carries": "251113",
+    "filler": false,
+    "asset_path": "content/catalogue/assets/B021-P009.webp",
+    "asset_type": "cutout_model"
+   }
+  ],
+  "swatches": [
+   {
+    "hex": "1E1412",
+    "share": 1.876,
+    "name": "espresso"
+   },
+   {
+    "hex": "75604A",
+    "share": 1.162,
+    "name": "tobacco"
+   },
+   {
+    "hex": "E8E4DF",
+    "share": 0.983,
+    "name": "white"
+   },
+   {
+    "hex": "674552",
+    "share": 0.279,
+    "name": "burgundy"
+   }
+  ],
+  "numbered": [
+   "B021-P002",
+   "B010-P003",
+   "B042-P041",
+   "B043-P006",
+   "B001-P004",
+   "B021-P009"
+  ]
+ }
+}

@@ -1,0 +1,3869 @@
+{
+ "B001-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B001-P001.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 26368,
+  "skin_share": 0.076,
+  "alpha_fill": 0.738
+ },
+ "B001-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B001-P002.webp",
+  "note": "1 components; box found; cropped to the shoes band of a whole figure",
+  "bytes": 47094,
+  "skin_share": 0.414,
+  "alpha_fill": 0.754
+ },
+ "B001-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B001-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 150584,
+  "skin_share": 0.264,
+  "alpha_fill": 0.628
+ },
+ "B001-P004": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B001-P004.webp",
+  "note": "1 components; box found; cropped to the shoes band of a whole figure",
+  "bytes": 6456,
+  "skin_share": 0.649,
+  "alpha_fill": 0.601
+ },
+ "B002-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B002-P001.webp",
+  "note": "1 components; box found; cropped to the base band of a whole figure; 89% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 18406,
+  "skin_share": 0.889,
+  "alpha_fill": 0.848
+ },
+ "B003-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B003-P001.webp",
+  "note": "1 components; box found; cropped to the base band of a whole figure; 93% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 10006,
+  "skin_share": 0.931,
+  "alpha_fill": 0.877
+ },
+ "B004-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B004-P001.webp",
+  "note": "1 components; box found; cropped to the base band of a whole figure",
+  "bytes": 5458,
+  "skin_share": 0.543,
+  "alpha_fill": 0.674
+ },
+ "B005-P001": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B005-P001.webp",
+  "note": "crop tile; box found, 57% of page",
+  "bytes": 38470
+ },
+ "B006-P001": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B006-P001.webp",
+  "note": "crop tile; box found, 100% of page",
+  "bytes": 23014
+ },
+ "B007-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B007-P001.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 39552,
+  "skin_share": 0.248,
+  "alpha_fill": 0.764
+ },
+ "B007-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B007-P002.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 11820,
+  "skin_share": 0.145,
+  "alpha_fill": 0.709
+ },
+ "B007-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B007-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 111358,
+  "skin_share": 0.454,
+  "alpha_fill": 0.512
+ },
+ "B008-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B008-P001.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 74348,
+  "skin_share": 0.185,
+  "alpha_fill": 0.693
+ },
+ "B008-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B008-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 65290,
+  "skin_share": 0.336,
+  "alpha_fill": 0.48
+ },
+ "B008-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B008-P003.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 78848,
+  "skin_share": 0.418,
+  "alpha_fill": 0.691
+ },
+ "B009-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B009-P001.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 26368,
+  "skin_share": 0.076,
+  "alpha_fill": 0.738
+ },
+ "B009-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B009-P002.webp",
+  "note": "1 components; box found; cropped to the shoes band of a whole figure",
+  "bytes": 47094,
+  "skin_share": 0.414,
+  "alpha_fill": 0.754
+ },
+ "B009-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B009-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 150584,
+  "skin_share": 0.264,
+  "alpha_fill": 0.628
+ },
+ "B009-P004": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B009-P004.webp",
+  "note": "1 components; box found; cropped to the shoes band of a whole figure",
+  "bytes": 6456,
+  "skin_share": 0.649,
+  "alpha_fill": 0.601
+ },
+ "B010-P001": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B010-P001.webp",
+  "note": "crop tile; box fallback, 23% of page",
+  "bytes": 4766
+ },
+ "B010-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B010-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 24282,
+  "skin_share": 0.177,
+  "alpha_fill": 0.591
+ },
+ "B010-P003": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B010-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 5108,
+  "skin_share": 0.0,
+  "alpha_fill": 0.741
+ },
+ "B010-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B010-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 4454,
+  "skin_share": 0.0,
+  "alpha_fill": 0.714
+ },
+ "B010-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B010-P005.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 3888,
+  "skin_share": 0.45,
+  "alpha_fill": 0.731
+ },
+ "B011-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B011-P001.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 2954,
+  "skin_share": 0.014,
+  "alpha_fill": 0.649
+ },
+ "B011-P002": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B011-P002.webp",
+  "note": "crop tile; box found, 20% of page",
+  "bytes": 24962
+ },
+ "B011-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B011-P003.webp",
+  "note": "2 components; box found; cropped to the top band of a whole figure",
+  "bytes": 6718,
+  "skin_share": 0.047,
+  "alpha_fill": 0.482
+ },
+ "B011-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B011-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 57218,
+  "skin_share": 0.0,
+  "alpha_fill": 0.771
+ },
+ "B011-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B011-P005.webp",
+  "note": "2 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 10010,
+  "skin_share": 0.037,
+  "alpha_fill": 0.421
+ },
+ "B011-P006": {
+  "asset_type": "cutout_model",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B011-P006.webp",
+  "note": "7 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 15142,
+  "skin_share": 0.0,
+  "alpha_fill": 0.283
+ },
+ "B011-P007": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B011-P007.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 4098,
+  "skin_share": 0.145,
+  "alpha_fill": 0.784
+ },
+ "B011-P008": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B011-P008.webp",
+  "note": "1 components; box found",
+  "bytes": 5890,
+  "skin_share": 0.0,
+  "alpha_fill": 0.747
+ },
+ "B012-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B012-P001.webp",
+  "note": "2 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 11726,
+  "skin_share": 0.052,
+  "alpha_fill": 0.421
+ },
+ "B012-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B012-P002.webp",
+  "note": "2 components; box found",
+  "bytes": 32338,
+  "skin_share": 0.0,
+  "alpha_fill": 0.621
+ },
+ "B012-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B012-P003.webp",
+  "note": "2 components; box found; cropped to the top band of a whole figure",
+  "bytes": 5998,
+  "skin_share": 0.026,
+  "alpha_fill": 0.44
+ },
+ "B012-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B012-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 9506,
+  "skin_share": 0.0,
+  "alpha_fill": 0.735
+ },
+ "B013-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B013-P001.webp",
+  "note": "2 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 8110,
+  "skin_share": 0.071,
+  "alpha_fill": 0.512
+ },
+ "B014-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B014-P001.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 3588,
+  "skin_share": 0.26,
+  "alpha_fill": 0.761
+ },
+ "B015-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B015-P001.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 3540,
+  "skin_share": 0.046,
+  "alpha_fill": 0.762
+ },
+ "B015-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B015-P002.webp",
+  "note": "3 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 7484,
+  "skin_share": 0.182,
+  "alpha_fill": 0.354
+ },
+ "B015-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B015-P003.webp",
+  "note": "2 components; box found; cropped to the layer band of a whole figure; re-cut to the dominant blob (a second product had fused to it)",
+  "bytes": 16124,
+  "skin_share": 0.045,
+  "alpha_fill": 0.423
+ },
+ "B015-P004": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B015-P004.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 3444,
+  "skin_share": 0.017,
+  "alpha_fill": 0.718
+ },
+ "B015-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B015-P005.webp",
+  "note": "3 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 8334,
+  "skin_share": 0.158,
+  "alpha_fill": 0.718
+ },
+ "B016-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B016-P001.webp",
+  "note": "2 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 11218,
+  "skin_share": 0.591,
+  "alpha_fill": 0.651
+ },
+ "B016-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B016-P002.webp",
+  "note": "3 components; box found",
+  "bytes": 7956,
+  "skin_share": 0.405,
+  "alpha_fill": 0.482
+ },
+ "B016-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B016-P003.webp",
+  "note": "2 components; box found; cropped to the top band of a whole figure",
+  "bytes": 13214,
+  "skin_share": 0.562,
+  "alpha_fill": 0.462
+ },
+ "B016-P004": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B016-P004.webp",
+  "note": "crop tile; box found, 15% of page",
+  "bytes": 8278
+ },
+ "B017-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B017-P001.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 5060,
+  "skin_share": 0.142,
+  "alpha_fill": 0.671
+ },
+ "B018-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B018-P001.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 3646,
+  "skin_share": 0.135,
+  "alpha_fill": 0.787
+ },
+ "B018-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B018-P002.webp",
+  "note": "2 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 24554,
+  "skin_share": 0.137,
+  "alpha_fill": 0.702
+ },
+ "B018-P003": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B018-P003.webp",
+  "note": "crop tile; box found, 72% of page",
+  "bytes": 22868
+ },
+ "B019-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B019-P001.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 1788,
+  "skin_share": 0.0,
+  "alpha_fill": 0.596
+ },
+ "B019-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B019-P002.webp",
+  "note": "2 components; box found; cropped to the accessory band of a whole figure",
+  "bytes": 26018,
+  "skin_share": 0.267,
+  "alpha_fill": 0.584
+ },
+ "B019-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B019-P003.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 4038,
+  "skin_share": 0.0,
+  "alpha_fill": 0.7
+ },
+ "B019-P004": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B019-P004.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 15338,
+  "skin_share": 0.016,
+  "alpha_fill": 0.678
+ },
+ "B019-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B019-P005.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 75080,
+  "skin_share": 0.205,
+  "alpha_fill": 0.667
+ },
+ "B019-P006": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B019-P006.webp",
+  "note": "crop tile; box found, 4% of page",
+  "bytes": 11860
+ },
+ "B019-P007": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B019-P007.webp",
+  "note": "crop tile; box found, 8% of page",
+  "bytes": 30958
+ },
+ "B020-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B020-P001.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 9800,
+  "skin_share": 0.013,
+  "alpha_fill": 0.599
+ },
+ "B020-P002": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B020-P002.webp",
+  "note": "crop tile; box found, 7% of page",
+  "bytes": 10050
+ },
+ "B020-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B020-P003.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 30110,
+  "skin_share": 0.077,
+  "alpha_fill": 0.685
+ },
+ "B020-P004": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B020-P004.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 3140,
+  "skin_share": 0.085,
+  "alpha_fill": 0.832
+ },
+ "B020-P005": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B020-P005.webp",
+  "note": "crop tile; box found, 29% of page",
+  "bytes": 78350
+ },
+ "B020-P006": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B020-P006.webp",
+  "note": "3 components; box found",
+  "bytes": 46530,
+  "skin_share": 0.0,
+  "alpha_fill": 0.429
+ },
+ "B021-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P001.webp",
+  "note": "2 components; box found; cropped to the accessory band of a whole figure",
+  "bytes": 12240,
+  "skin_share": 0.016,
+  "alpha_fill": 0.395
+ },
+ "B021-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P002.webp",
+  "note": "2 components; box found; cropped to the layer band of a whole figure; re-cut to the dominant blob (a second product had fused to it)",
+  "bytes": 49264,
+  "skin_share": 0.093,
+  "alpha_fill": 0.63
+ },
+ "B021-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P003.webp",
+  "note": "2 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 8412,
+  "skin_share": 0.269,
+  "alpha_fill": 0.254
+ },
+ "B021-P004": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P004.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 51092,
+  "skin_share": 0.595,
+  "alpha_fill": 0.681
+ },
+ "B021-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B021-P005.webp",
+  "note": "2 components; box found; cropped to the top band of a whole figure; 81% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 15028,
+  "skin_share": 0.812,
+  "alpha_fill": 0.67
+ },
+ "B021-P006": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P006.webp",
+  "note": "1 components; box found",
+  "bytes": 39646,
+  "skin_share": 0.001,
+  "alpha_fill": 0.802
+ },
+ "B021-P007": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P007.webp",
+  "note": "crop tile; box found, 29% of page",
+  "bytes": 12958
+ },
+ "B021-P008": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P008.webp",
+  "note": "crop tile; box found, 28% of page",
+  "bytes": 73964
+ },
+ "B021-P009": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P009.webp",
+  "note": "1 components; box found; cropped to the accessory band of a whole figure",
+  "bytes": 11736,
+  "skin_share": 0.338,
+  "alpha_fill": 0.682
+ },
+ "B021-P010": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P010.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 9198,
+  "skin_share": 0.059,
+  "alpha_fill": 0.848
+ },
+ "B021-P011": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P011.webp",
+  "note": "2 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 14144,
+  "skin_share": 0.184,
+  "alpha_fill": 0.677
+ },
+ "B021-P012": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P012.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 72120,
+  "skin_share": 0.138,
+  "alpha_fill": 0.617
+ },
+ "B021-P013": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P013.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 20240,
+  "skin_share": 0.452,
+  "alpha_fill": 0.743
+ },
+ "B021-P014": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P014.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 13866,
+  "skin_share": 0.483,
+  "alpha_fill": 0.808
+ },
+ "B021-P015": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P015.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 7936,
+  "skin_share": 0.003,
+  "alpha_fill": 0.8
+ },
+ "B021-P016": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P016.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 13418,
+  "skin_share": 0.126,
+  "alpha_fill": 0.762
+ },
+ "B021-P017": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P017.webp",
+  "note": "1 components; box found",
+  "bytes": 36216,
+  "skin_share": 0.001,
+  "alpha_fill": 0.774
+ },
+ "B021-P018": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P018.webp",
+  "note": "1 components; box found",
+  "bytes": 161242,
+  "skin_share": 0.004,
+  "alpha_fill": 0.678
+ },
+ "B021-P019": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P019.webp",
+  "note": "1 components; box found",
+  "bytes": 118284,
+  "skin_share": 0.4,
+  "alpha_fill": 0.727
+ },
+ "B021-P020": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P020.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 12396,
+  "skin_share": 0.496,
+  "alpha_fill": 0.621
+ },
+ "B021-P021": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P021.webp",
+  "note": "1 components; box found",
+  "bytes": 81516,
+  "skin_share": 0.003,
+  "alpha_fill": 0.676
+ },
+ "B021-P022": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P022.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 13816,
+  "skin_share": 0.532,
+  "alpha_fill": 0.809
+ },
+ "B021-P023": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P023.webp",
+  "note": "1 components; box found",
+  "bytes": 94528,
+  "skin_share": 0.061,
+  "alpha_fill": 0.869
+ },
+ "B021-P024": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P024.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 8944,
+  "skin_share": 0.642,
+  "alpha_fill": 0.872
+ },
+ "B021-P025": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P025.webp",
+  "note": "1 components; box found",
+  "bytes": 90244,
+  "skin_share": 0.015,
+  "alpha_fill": 0.739
+ },
+ "B021-P026": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B021-P026.webp",
+  "note": "crop tile; box found, 4% of page",
+  "bytes": 10580
+ },
+ "B021-P027": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P027.webp",
+  "note": "1 components; box found",
+  "bytes": 15124,
+  "skin_share": 0.024,
+  "alpha_fill": 0.809
+ },
+ "B022-P001": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B022-P001.webp",
+  "note": "crop tile; box found, 6% of page",
+  "bytes": 24396
+ },
+ "B022-P002": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B022-P002.webp",
+  "note": "crop tile; box found, 5% of page",
+  "bytes": 37998
+ },
+ "B022-P003": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B022-P003.webp",
+  "note": "crop tile; box found, 5% of page",
+  "bytes": 3940
+ },
+ "B022-P004": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B022-P004.webp",
+  "note": "crop tile; box found, 6% of page",
+  "bytes": 31716
+ },
+ "B022-P005": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B022-P005.webp",
+  "note": "crop tile; box found, 6% of page",
+  "bytes": 23638
+ },
+ "B022-P006": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B022-P006.webp",
+  "note": "crop tile; box found, 9% of page",
+  "bytes": 19054
+ },
+ "B022-P007": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B022-P007.webp",
+  "note": "crop tile; box found, 5% of page",
+  "bytes": 40736
+ },
+ "B022-P008": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B022-P008.webp",
+  "note": "crop tile; box found, 6% of page",
+  "bytes": 16650
+ },
+ "B022-P009": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B022-P009.webp",
+  "note": "crop tile; box found, 7% of page",
+  "bytes": 14678
+ },
+ "B022-P010": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B022-P010.webp",
+  "note": "crop tile; box found, 6% of page",
+  "bytes": 7744
+ },
+ "B022-P011": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B022-P011.webp",
+  "note": "crop tile; box found, 7% of page",
+  "bytes": 11124
+ },
+ "B022-P012": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B022-P012.webp",
+  "note": "crop tile; box found, 7% of page",
+  "bytes": 45764
+ },
+ "B022-P013": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B022-P013.webp",
+  "note": "crop tile; box fallback, 23% of page",
+  "bytes": 48186
+ },
+ "B022-P014": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B022-P014.webp",
+  "note": "crop tile; box found, 4% of page",
+  "bytes": 10130
+ },
+ "B022-P015": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B022-P015.webp",
+  "note": "crop tile; box fallback, 19% of page",
+  "bytes": 57078
+ },
+ "B022-P016": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B022-P016.webp",
+  "note": "crop tile; box fallback, 13% of page",
+  "bytes": 35158
+ },
+ "B022-P017": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B022-P017.webp",
+  "note": "crop tile; box fallback, 16% of page",
+  "bytes": 42634
+ },
+ "B022-P018": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B022-P018.webp",
+  "note": "crop tile; box found, 3% of page",
+  "bytes": 8446
+ },
+ "B022-P019": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B022-P019.webp",
+  "note": "crop tile; box found, 3% of page",
+  "bytes": 9902
+ },
+ "B022-P020": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B022-P020.webp",
+  "note": "crop tile; box fallback, 19% of page",
+  "bytes": 41354
+ },
+ "B022-P021": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B022-P021.webp",
+  "note": "crop tile; box fallback, 20% of page",
+  "bytes": 58326
+ },
+ "B022-P022": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B022-P022.webp",
+  "note": "crop tile; box found, 31% of page",
+  "bytes": 57990
+ },
+ "B023-P001": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B023-P001.webp",
+  "note": "crop tile; box found, 26% of page",
+  "bytes": 95178
+ },
+ "B023-P002": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B023-P002.webp",
+  "note": "crop tile; box found, 25% of page",
+  "bytes": 41602
+ },
+ "B023-P003": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B023-P003.webp",
+  "note": "crop tile; box found, 52% of page",
+  "bytes": 48646
+ },
+ "B023-P004": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B023-P004.webp",
+  "note": "crop tile; box found, 24% of page",
+  "bytes": 22178
+ },
+ "B023-P005": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B023-P005.webp",
+  "note": "crop tile; box fallback, 15% of page",
+  "bytes": 43070
+ },
+ "B023-P006": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B023-P006.webp",
+  "note": "crop tile; box found, 84% of page",
+  "bytes": 57818
+ },
+ "B023-P007": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B023-P007.webp",
+  "note": "crop tile; box found, 55% of page",
+  "bytes": 50866
+ },
+ "B023-P008": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B023-P008.webp",
+  "note": "crop tile; box found, 86% of page",
+  "bytes": 45322
+ },
+ "B023-P009": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B023-P009.webp",
+  "note": "crop tile; box found, 27% of page",
+  "bytes": 69168
+ },
+ "B023-P010": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B023-P010.webp",
+  "note": "crop tile; box found, 38% of page",
+  "bytes": 61102
+ },
+ "B023-P011": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B023-P011.webp",
+  "note": "crop tile; box found, 81% of page",
+  "bytes": 94320
+ },
+ "B023-P012": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B023-P012.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 79724,
+  "skin_share": 0.431,
+  "alpha_fill": 0.668
+ },
+ "B023-P013": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B023-P013.webp",
+  "note": "1 components; box found",
+  "bytes": 52132,
+  "skin_share": 0.353,
+  "alpha_fill": 0.555
+ },
+ "B023-P014": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B023-P014.webp",
+  "note": "crop tile; box found, 26% of page",
+  "bytes": 70786
+ },
+ "B023-P015": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B023-P015.webp",
+  "note": "crop tile; box found, 36% of page",
+  "bytes": 94312
+ },
+ "B023-P016": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B023-P016.webp",
+  "note": "crop tile; box found, 13% of page",
+  "bytes": 37684
+ },
+ "B023-P017": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B023-P017.webp",
+  "note": "crop tile; box found, 39% of page",
+  "bytes": 73528
+ },
+ "B024-P001": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B024-P001.webp",
+  "note": "crop tile; box found, 27% of page",
+  "bytes": 58070
+ },
+ "B024-P002": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B024-P002.webp",
+  "note": "crop tile; box found, 26% of page",
+  "bytes": 57122
+ },
+ "B024-P003": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B024-P003.webp",
+  "note": "crop tile; box found, 26% of page",
+  "bytes": 56094
+ },
+ "B024-P004": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B024-P004.webp",
+  "note": "crop tile; box found, 13% of page",
+  "bytes": 34154
+ },
+ "B024-P005": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B024-P005.webp",
+  "note": "crop tile; box found, 38% of page",
+  "bytes": 51662
+ },
+ "B024-P006": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B024-P006.webp",
+  "note": "crop tile; box found, 13% of page",
+  "bytes": 40832
+ },
+ "B024-P007": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B024-P007.webp",
+  "note": "crop tile; box found, 7% of page",
+  "bytes": 7998
+ },
+ "B024-P008": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B024-P008.webp",
+  "note": "crop tile; box found, 7% of page",
+  "bytes": 20682
+ },
+ "B024-P009": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B024-P009.webp",
+  "note": "crop tile; box found, 7% of page",
+  "bytes": 8454
+ },
+ "B025-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B025-P001.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 12732,
+  "skin_share": 0.192,
+  "alpha_fill": 0.739
+ },
+ "B025-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B025-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 19452,
+  "skin_share": 0.0,
+  "alpha_fill": 0.807
+ },
+ "B025-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B025-P003.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure; 93% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 18368,
+  "skin_share": 0.926,
+  "alpha_fill": 0.656
+ },
+ "B025-P004": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B025-P004.webp",
+  "note": "crop tile; box found, 5% of page",
+  "bytes": 34798
+ },
+ "B025-P005": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B025-P005.webp",
+  "note": "crop tile; box found, 5% of page",
+  "bytes": 28942
+ },
+ "B025-P006": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B025-P006.webp",
+  "note": "crop tile; box found, 4% of page",
+  "bytes": 4682
+ },
+ "B025-P007": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B025-P007.webp",
+  "note": "crop tile; box found, 5% of page",
+  "bytes": 8638
+ },
+ "B025-P008": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B025-P008.webp",
+  "note": "1 components; box found; 99% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 58888,
+  "skin_share": 0.989,
+  "alpha_fill": 0.645
+ },
+ "B026-P001": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B026-P001.webp",
+  "note": "crop tile; box found, 26% of page",
+  "bytes": 27760
+ },
+ "B026-P002": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B026-P002.webp",
+  "note": "crop tile; box found, 20% of page",
+  "bytes": 68334
+ },
+ "B026-P003": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B026-P003.webp",
+  "note": "crop tile; box found, 20% of page",
+  "bytes": 37660
+ },
+ "B026-P004": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B026-P004.webp",
+  "note": "crop tile; box found, 31% of page",
+  "bytes": 46962
+ },
+ "B026-P005": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B026-P005.webp",
+  "note": "crop tile; box found, 27% of page",
+  "bytes": 95846
+ },
+ "B026-P006": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B026-P006.webp",
+  "note": "crop tile; box found, 20% of page",
+  "bytes": 101472
+ },
+ "B026-P007": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B026-P007.webp",
+  "note": "crop tile; box found, 14% of page",
+  "bytes": 34248
+ },
+ "B026-P008": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B026-P008.webp",
+  "note": "crop tile; box found, 28% of page",
+  "bytes": 29578
+ },
+ "B026-P009": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B026-P009.webp",
+  "note": "2 components; box found",
+  "bytes": 29438,
+  "skin_share": 0.332,
+  "alpha_fill": 0.473
+ },
+ "B026-P010": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B026-P010.webp",
+  "note": "2 components; box found; cropped to the top band of a whole figure",
+  "bytes": 7812,
+  "skin_share": 0.361,
+  "alpha_fill": 0.55
+ },
+ "B026-P011": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B026-P011.webp",
+  "note": "crop tile; box found, 100% of page",
+  "bytes": 36470
+ },
+ "B027-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B027-P001.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure; 86% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 10312,
+  "skin_share": 0.864,
+  "alpha_fill": 0.66
+ },
+ "B027-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B027-P002.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure; 74% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 9192,
+  "skin_share": 0.742,
+  "alpha_fill": 0.739
+ },
+ "B027-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B027-P003.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure; 73% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 18080,
+  "skin_share": 0.727,
+  "alpha_fill": 0.632
+ },
+ "B027-P004": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B027-P004.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 26996,
+  "skin_share": 0.285,
+  "alpha_fill": 0.859
+ },
+ "B027-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B027-P005.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 26740,
+  "skin_share": 0.245,
+  "alpha_fill": 0.773
+ },
+ "B027-P006": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B027-P006.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 18120,
+  "skin_share": 0.485,
+  "alpha_fill": 0.759
+ },
+ "B027-P007": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B027-P007.webp",
+  "note": "1 components; box found",
+  "bytes": 189646,
+  "skin_share": 0.0,
+  "alpha_fill": 0.694
+ },
+ "B027-P008": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B027-P008.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 56340,
+  "skin_share": 0.09,
+  "alpha_fill": 0.685
+ },
+ "B027-P009": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B027-P009.webp",
+  "note": "crop tile; box found, 100% of page",
+  "bytes": 41534
+ },
+ "B027-P010": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B027-P010.webp",
+  "note": "crop tile; box found, 100% of page",
+  "bytes": 34888
+ },
+ "B027-P011": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B027-P011.webp",
+  "note": "crop tile; box found, 100% of page",
+  "bytes": 40446
+ },
+ "B028-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B028-P001.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 45700,
+  "skin_share": 0.494,
+  "alpha_fill": 0.656
+ },
+ "B028-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B028-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 58040,
+  "skin_share": 0.418,
+  "alpha_fill": 0.535
+ },
+ "B028-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B028-P003.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 16348,
+  "skin_share": 0.164,
+  "alpha_fill": 0.569
+ },
+ "B028-P004": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B028-P004.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 17190,
+  "skin_share": 0.167,
+  "alpha_fill": 0.684
+ },
+ "B028-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B028-P005.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 17070,
+  "skin_share": 0.0,
+  "alpha_fill": 0.764
+ },
+ "B028-P006": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B028-P006.webp",
+  "note": "crop tile; box found, 100% of page",
+  "bytes": 36358
+ },
+ "B028-P007": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B028-P007.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 31728,
+  "skin_share": 0.123,
+  "alpha_fill": 0.696
+ },
+ "B028-P008": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B028-P008.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 54498,
+  "skin_share": 0.059,
+  "alpha_fill": 0.703
+ },
+ "B028-P009": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B028-P009.webp",
+  "note": "1 components; box found",
+  "bytes": 196760,
+  "skin_share": 0.001,
+  "alpha_fill": 0.785
+ },
+ "B028-P010": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B028-P010.webp",
+  "note": "crop tile; box found, 94% of page",
+  "bytes": 30632
+ },
+ "B028-P011": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B028-P011.webp",
+  "note": "crop tile; box found, 24% of page",
+  "bytes": 17404
+ },
+ "B028-P012": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B028-P012.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 51494,
+  "skin_share": 0.532,
+  "alpha_fill": 0.71
+ },
+ "B028-P013": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B028-P013.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure; 78% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 17590,
+  "skin_share": 0.778,
+  "alpha_fill": 0.774
+ },
+ "B028-P014": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B028-P014.webp",
+  "note": "1 components; box found; 98% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 37000,
+  "skin_share": 0.979,
+  "alpha_fill": 0.807
+ },
+ "B029-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B029-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 74838,
+  "skin_share": 0.058,
+  "alpha_fill": 0.814
+ },
+ "B029-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B029-P002.webp",
+  "note": "1 components; box found; cropped to the shoes band of a whole figure",
+  "bytes": 6834,
+  "skin_share": 0.116,
+  "alpha_fill": 0.706
+ },
+ "B030-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B030-P001.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 28264,
+  "skin_share": 0.238,
+  "alpha_fill": 0.694
+ },
+ "B030-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B030-P002.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 15304,
+  "skin_share": 0.236,
+  "alpha_fill": 0.706
+ },
+ "B030-P003": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B030-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 216986,
+  "skin_share": 0.009,
+  "alpha_fill": 0.743
+ },
+ "B030-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B030-P004.webp",
+  "note": "1 components; box found; 74% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 167550,
+  "skin_share": 0.745,
+  "alpha_fill": 0.765
+ },
+ "B030-P005": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B030-P005.webp",
+  "note": "crop tile; box found, 100% of page",
+  "bytes": 29320
+ },
+ "B030-P006": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B030-P006.webp",
+  "note": "crop tile; box found, 100% of page",
+  "bytes": 39102
+ },
+ "B030-P007": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B030-P007.webp",
+  "note": "crop tile; box found, 10% of page",
+  "bytes": 10334
+ },
+ "B030-P008": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B030-P008.webp",
+  "note": "1 components; box found",
+  "bytes": 12548,
+  "skin_share": 0.0,
+  "alpha_fill": 0.812
+ },
+ "B030-P009": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B030-P009.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 15330,
+  "skin_share": 0.493,
+  "alpha_fill": 0.611
+ },
+ "B030-P010": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B030-P010.webp",
+  "note": "1 components; box found",
+  "bytes": 45746,
+  "skin_share": 0.274,
+  "alpha_fill": 0.825
+ },
+ "B031-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B031-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 19220,
+  "skin_share": 0.001,
+  "alpha_fill": 0.489
+ },
+ "B031-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B031-P002.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure; 85% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 37486,
+  "skin_share": 0.849,
+  "alpha_fill": 0.574
+ },
+ "B031-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B031-P003.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 15956,
+  "skin_share": 0.2,
+  "alpha_fill": 0.538
+ },
+ "B031-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B031-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 37290,
+  "skin_share": 0.0,
+  "alpha_fill": 0.785
+ },
+ "B031-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B031-P005.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 34310,
+  "skin_share": 0.579,
+  "alpha_fill": 0.607
+ },
+ "B031-P006": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B031-P006.webp",
+  "note": "1 components; box found",
+  "bytes": 70016,
+  "skin_share": 0.155,
+  "alpha_fill": 0.736
+ },
+ "B031-P007": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B031-P007.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 14254,
+  "skin_share": 0.357,
+  "alpha_fill": 0.594
+ },
+ "B031-P008": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B031-P008.webp",
+  "note": "1 components; box found",
+  "bytes": 34280,
+  "skin_share": 0.173,
+  "alpha_fill": 0.732
+ },
+ "B031-P009": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B031-P009.webp",
+  "note": "1 components; box found; cropped to the accessory band of a whole figure; 92% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 33282,
+  "skin_share": 0.92,
+  "alpha_fill": 0.71
+ },
+ "B032-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B032-P001.webp",
+  "note": "1 components; box found; cropped to the accessory band of a whole figure; 94% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 33614,
+  "skin_share": 0.938,
+  "alpha_fill": 0.71
+ },
+ "B032-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B032-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 97370,
+  "skin_share": 0.594,
+  "alpha_fill": 0.746
+ },
+ "B032-P003": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B032-P003.webp",
+  "note": "crop tile; box found, 16% of page",
+  "bytes": 51590
+ },
+ "B032-P004": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B032-P004.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 41968,
+  "skin_share": 0.197,
+  "alpha_fill": 0.764
+ },
+ "B033-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B033-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 73422,
+  "skin_share": 0.0,
+  "alpha_fill": 0.71
+ },
+ "B033-P002": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B033-P002.webp",
+  "note": "crop tile; box found, 14% of page",
+  "bytes": 31718
+ },
+ "B033-P003": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B033-P003.webp",
+  "note": "crop tile; box found, 9% of page",
+  "bytes": 33552
+ },
+ "B033-P004": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B033-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 31000,
+  "skin_share": 0.074,
+  "alpha_fill": 0.64
+ },
+ "B033-P005": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B033-P005.webp",
+  "note": "crop tile; box found, 24% of page",
+  "bytes": 25938
+ },
+ "B034-P001": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B034-P001.webp",
+  "note": "crop tile; box found, 13% of page",
+  "bytes": 34542
+ },
+ "B034-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B034-P002.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 24976,
+  "skin_share": 0.423,
+  "alpha_fill": 0.846
+ },
+ "B034-P003": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B034-P003.webp",
+  "note": "crop tile; box found, 9% of page",
+  "bytes": 15668
+ },
+ "B034-P004": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B034-P004.webp",
+  "note": "crop tile; box found, 9% of page",
+  "bytes": 22780
+ },
+ "B035-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B035-P001.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 21730,
+  "skin_share": 0.033,
+  "alpha_fill": 0.636
+ },
+ "B035-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B035-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 18356,
+  "skin_share": 0.0,
+  "alpha_fill": 0.663
+ },
+ "B035-P003": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B035-P003.webp",
+  "note": "1 components; box fallback; rectangular (94% of its own box) \u2014 a page panel, not a piece",
+  "bytes": 1284,
+  "skin_share": 0.0,
+  "alpha_fill": 0.944
+ },
+ "B035-P004": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B035-P004.webp",
+  "note": "crop tile; box fallback, 41% of page",
+  "bytes": 13186
+ },
+ "B036-P001": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B036-P001.webp",
+  "note": "crop tile; box found, 12% of page",
+  "bytes": 32894
+ },
+ "B036-P002": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B036-P002.webp",
+  "note": "crop tile; box found, 9% of page",
+  "bytes": 5682
+ },
+ "B036-P003": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B036-P003.webp",
+  "note": "crop tile; box found, 11% of page",
+  "bytes": 22242
+ },
+ "B036-P004": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B036-P004.webp",
+  "note": "crop tile; box found, 15% of page",
+  "bytes": 35060
+ },
+ "B036-P005": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B036-P005.webp",
+  "note": "crop tile; box found, 9% of page",
+  "bytes": 7422
+ },
+ "B036-P006": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B036-P006.webp",
+  "note": "crop tile; box found, 11% of page",
+  "bytes": 28144
+ },
+ "B036-P007": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B036-P007.webp",
+  "note": "crop tile; box found, 59% of page",
+  "bytes": 45868
+ },
+ "B036-P008": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B036-P008.webp",
+  "note": "crop tile; box found, 57% of page",
+  "bytes": 32748
+ },
+ "B036-P009": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B036-P009.webp",
+  "note": "crop tile; box found, 56% of page",
+  "bytes": 62386
+ },
+ "B037-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B037-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 61488,
+  "skin_share": 0.0,
+  "alpha_fill": 0.692
+ },
+ "B037-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B037-P002.webp",
+  "note": "2 components; box found",
+  "bytes": 27368,
+  "skin_share": 0.028,
+  "alpha_fill": 0.5
+ },
+ "B037-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B037-P003.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 3082,
+  "skin_share": 0.027,
+  "alpha_fill": 0.682
+ },
+ "B037-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B037-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 17776,
+  "skin_share": 0.111,
+  "alpha_fill": 0.43
+ },
+ "B037-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B037-P005.webp",
+  "note": "4 components; box found",
+  "bytes": 31936,
+  "skin_share": 0.126,
+  "alpha_fill": 0.454
+ },
+ "B037-P006": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B037-P006.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 12336,
+  "skin_share": 0.0,
+  "alpha_fill": 0.698
+ },
+ "B037-P007": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B037-P007.webp",
+  "note": "3 components; box found",
+  "bytes": 48984,
+  "skin_share": 0.062,
+  "alpha_fill": 0.531
+ },
+ "B037-P008": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B037-P008.webp",
+  "note": "2 components; box found",
+  "bytes": 64888,
+  "skin_share": 0.054,
+  "alpha_fill": 0.52
+ },
+ "B037-P009": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B037-P009.webp",
+  "note": "1 components; box found",
+  "bytes": 153820,
+  "skin_share": 0.199,
+  "alpha_fill": 0.57
+ },
+ "B038-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B038-P001.webp",
+  "note": "4 components; box found",
+  "bytes": 44148,
+  "skin_share": 0.057,
+  "alpha_fill": 0.367
+ },
+ "B038-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B038-P002.webp",
+  "note": "2 components; box found",
+  "bytes": 17174,
+  "skin_share": 0.078,
+  "alpha_fill": 0.324
+ },
+ "B039-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B039-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 16894,
+  "skin_share": 0.0,
+  "alpha_fill": 0.799
+ },
+ "B039-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B039-P002.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 6040,
+  "skin_share": 0.02,
+  "alpha_fill": 0.787
+ },
+ "B039-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B039-P003.webp",
+  "note": "1 components; box found; cropped to the shoes band of a whole figure",
+  "bytes": 1740,
+  "skin_share": 0.63,
+  "alpha_fill": 0.704
+ },
+ "B039-P004": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B039-P004.webp",
+  "note": "crop tile; box found, 9% of page",
+  "bytes": 26268
+ },
+ "B039-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B039-P005.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 9168,
+  "skin_share": 0.132,
+  "alpha_fill": 0.79
+ },
+ "B039-P006": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B039-P006.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 10332,
+  "skin_share": 0.0,
+  "alpha_fill": 0.711
+ },
+ "B039-P007": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B039-P007.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 15316,
+  "skin_share": 0.588,
+  "alpha_fill": 0.649
+ },
+ "B040-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B040-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 148414,
+  "skin_share": 0.643,
+  "alpha_fill": 0.681
+ },
+ "B040-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B040-P002.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 25804,
+  "skin_share": 0.586,
+  "alpha_fill": 0.71
+ },
+ "B040-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B040-P003.webp",
+  "note": "1 components; box found; 76% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 98020,
+  "skin_share": 0.764,
+  "alpha_fill": 0.714
+ },
+ "B040-P004": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B040-P004.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 10870,
+  "skin_share": 0.126,
+  "alpha_fill": 0.669
+ },
+ "B040-P005": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B040-P005.webp",
+  "note": "1 components; box found",
+  "bytes": 33116,
+  "skin_share": 0.0,
+  "alpha_fill": 0.689
+ },
+ "B040-P006": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B040-P006.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 13578,
+  "skin_share": 0.065,
+  "alpha_fill": 0.702
+ },
+ "B041-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B041-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 18766,
+  "skin_share": 0.118,
+  "alpha_fill": 0.762
+ },
+ "B041-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B041-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 18890,
+  "skin_share": 0.183,
+  "alpha_fill": 0.576
+ },
+ "B041-P003": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B041-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 47914,
+  "skin_share": 0.003,
+  "alpha_fill": 0.882
+ },
+ "B041-P004": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B041-P004.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 25476,
+  "skin_share": 0.456,
+  "alpha_fill": 0.667
+ },
+ "B041-P005": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B041-P005.webp",
+  "note": "1 components; box found",
+  "bytes": 155296,
+  "skin_share": 0.0,
+  "alpha_fill": 0.666
+ },
+ "B041-P006": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B041-P006.webp",
+  "note": "1 components; box found; 95% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 17830,
+  "skin_share": 0.953,
+  "alpha_fill": 0.598
+ },
+ "B041-P007": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B041-P007.webp",
+  "note": "1 components; box found; 97% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 28164,
+  "skin_share": 0.968,
+  "alpha_fill": 0.801
+ },
+ "B041-P008": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B041-P008.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 37868,
+  "skin_share": 0.575,
+  "alpha_fill": 0.645
+ },
+ "B041-P009": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B041-P009.webp",
+  "note": "1 components; box found",
+  "bytes": 127814,
+  "skin_share": 0.098,
+  "alpha_fill": 0.581
+ },
+ "B042-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B042-P001.webp",
+  "note": "1 components; box found; 71% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 120622,
+  "skin_share": 0.708,
+  "alpha_fill": 0.655
+ },
+ "B042-P002": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P002.webp",
+  "note": "crop tile; box found, 16% of page",
+  "bytes": 21166
+ },
+ "B042-P003": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B042-P003.webp",
+  "note": "1 components; box found; 86% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 69776,
+  "skin_share": 0.861,
+  "alpha_fill": 0.818
+ },
+ "B042-P004": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P004.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 14074,
+  "skin_share": 0.442,
+  "alpha_fill": 0.628
+ },
+ "B042-P005": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P005.webp",
+  "note": "crop tile; box found, 47% of page",
+  "bytes": 114994
+ },
+ "B042-P006": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P006.webp",
+  "note": "crop tile; box found, 47% of page",
+  "bytes": 153674
+ },
+ "B042-P007": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P007.webp",
+  "note": "crop tile; box found, 47% of page",
+  "bytes": 134368
+ },
+ "B042-P008": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P008.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 19646,
+  "skin_share": 0.23,
+  "alpha_fill": 0.486
+ },
+ "B042-P009": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P009.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 16336,
+  "skin_share": 0.534,
+  "alpha_fill": 0.627
+ },
+ "B042-P010": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B042-P010.webp",
+  "note": "1 components; box found; 68% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 4112,
+  "skin_share": 0.684,
+  "alpha_fill": 0.563
+ },
+ "B042-P011": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P011.webp",
+  "note": "1 components; box found",
+  "bytes": 13698,
+  "skin_share": 0.29,
+  "alpha_fill": 0.685
+ },
+ "B042-P012": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P012.webp",
+  "note": "crop tile; box found, 32% of page",
+  "bytes": 19988
+ },
+ "B042-P013": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P013.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 19392,
+  "skin_share": 0.075,
+  "alpha_fill": 0.636
+ },
+ "B042-P014": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P014.webp",
+  "note": "1 components; box found",
+  "bytes": 5228,
+  "skin_share": 0.0,
+  "alpha_fill": 0.871
+ },
+ "B042-P015": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B042-P015.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure; 95% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 37100,
+  "skin_share": 0.953,
+  "alpha_fill": 0.688
+ },
+ "B042-P016": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B042-P016.webp",
+  "note": "1 components; box found; 96% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 128954,
+  "skin_share": 0.963,
+  "alpha_fill": 0.697
+ },
+ "B042-P017": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P017.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 29218,
+  "skin_share": 0.127,
+  "alpha_fill": 0.538
+ },
+ "B042-P018": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P018.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 40278,
+  "skin_share": 0.043,
+  "alpha_fill": 0.774
+ },
+ "B042-P019": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P019.webp",
+  "note": "crop tile; box found, 18% of page",
+  "bytes": 30076
+ },
+ "B042-P020": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P020.webp",
+  "note": "1 components; box found",
+  "bytes": 48054,
+  "skin_share": 0.0,
+  "alpha_fill": 0.835
+ },
+ "B042-P021": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P021.webp",
+  "note": "1 components; box found",
+  "bytes": 14058,
+  "skin_share": 0.172,
+  "alpha_fill": 0.473
+ },
+ "B042-P022": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P022.webp",
+  "note": "1 components; box found",
+  "bytes": 72678,
+  "skin_share": 0.001,
+  "alpha_fill": 0.891
+ },
+ "B042-P023": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P023.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 46798,
+  "skin_share": 0.0,
+  "alpha_fill": 0.778
+ },
+ "B042-P024": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P024.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 23676,
+  "skin_share": 0.184,
+  "alpha_fill": 0.71
+ },
+ "B042-P025": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P025.webp",
+  "note": "1 components; box found",
+  "bytes": 136508,
+  "skin_share": 0.0,
+  "alpha_fill": 0.72
+ },
+ "B042-P026": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P026.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 28042,
+  "skin_share": 0.073,
+  "alpha_fill": 0.666
+ },
+ "B042-P027": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P027.webp",
+  "note": "1 components; box found",
+  "bytes": 223878,
+  "skin_share": 0.0,
+  "alpha_fill": 0.722
+ },
+ "B042-P028": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P028.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 31614,
+  "skin_share": 0.093,
+  "alpha_fill": 0.765
+ },
+ "B042-P029": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P029.webp",
+  "note": "1 components; box found",
+  "bytes": 213498,
+  "skin_share": 0.0,
+  "alpha_fill": 0.7
+ },
+ "B042-P030": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P030.webp",
+  "note": "1 components; box found",
+  "bytes": 16968,
+  "skin_share": 0.145,
+  "alpha_fill": 0.779
+ },
+ "B042-P031": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P031.webp",
+  "note": "1 components; box found",
+  "bytes": 6752,
+  "skin_share": 0.0,
+  "alpha_fill": 0.864
+ },
+ "B042-P032": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P032.webp",
+  "note": "1 components; box found",
+  "bytes": 16164,
+  "skin_share": 0.124,
+  "alpha_fill": 0.8
+ },
+ "B042-P033": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P033.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 7136,
+  "skin_share": 0.0,
+  "alpha_fill": 0.65
+ },
+ "B042-P034": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P034.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 32262,
+  "skin_share": 0.127,
+  "alpha_fill": 0.612
+ },
+ "B042-P035": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P035.webp",
+  "note": "1 components; box found",
+  "bytes": 66090,
+  "skin_share": 0.003,
+  "alpha_fill": 0.745
+ },
+ "B042-P036": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P036.webp",
+  "note": "crop tile; box found, 19% of page",
+  "bytes": 24884
+ },
+ "B042-P037": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P037.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 10810,
+  "skin_share": 0.081,
+  "alpha_fill": 0.619
+ },
+ "B042-P038": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P038.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 5216,
+  "skin_share": 0.012,
+  "alpha_fill": 0.456
+ },
+ "B042-P039": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B042-P039.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure; rectangular (93% of its own box) \u2014 a page panel, not a piece",
+  "bytes": 5908,
+  "skin_share": 0.0,
+  "alpha_fill": 0.927
+ },
+ "B042-P040": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P040.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 8010,
+  "skin_share": 0.006,
+  "alpha_fill": 0.687
+ },
+ "B042-P041": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P041.webp",
+  "note": "1 components; box found",
+  "bytes": 11008,
+  "skin_share": 0.037,
+  "alpha_fill": 0.706
+ },
+ "B042-P042": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P042.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 45738,
+  "skin_share": 0.233,
+  "alpha_fill": 0.525
+ },
+ "B043-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B043-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 342702,
+  "skin_share": 0.0,
+  "alpha_fill": 0.723
+ },
+ "B043-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B043-P002.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 41354,
+  "skin_share": 0.086,
+  "alpha_fill": 0.609
+ },
+ "B043-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B043-P003.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 107868,
+  "skin_share": 0.207,
+  "alpha_fill": 0.601
+ },
+ "B043-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B043-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 69622,
+  "skin_share": 0.0,
+  "alpha_fill": 0.747
+ },
+ "B043-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B043-P005.webp",
+  "note": "1 components; box found; cropped to the bag band of a whole figure",
+  "bytes": 15392,
+  "skin_share": 0.037,
+  "alpha_fill": 0.675
+ },
+ "B043-P006": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B043-P006.webp",
+  "note": "1 components; box found; cropped to the bag band of a whole figure",
+  "bytes": 10742,
+  "skin_share": 0.117,
+  "alpha_fill": 0.724
+ },
+ "B043-P007": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B043-P007.webp",
+  "note": "crop tile; box fallback, 12% of page",
+  "bytes": 34530
+ },
+ "B044-P001": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B044-P001.webp",
+  "note": "crop tile; box found, 11% of page",
+  "bytes": 81984
+ },
+ "B044-P002": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B044-P002.webp",
+  "note": "crop tile; box found, 7% of page",
+  "bytes": 20124
+ },
+ "B044-P003": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B044-P003.webp",
+  "note": "crop tile; box fallback, 13% of page",
+  "bytes": 28172
+ },
+ "B044-P004": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B044-P004.webp",
+  "note": "crop tile; box found, 8% of page",
+  "bytes": 10776
+ },
+ "B044-P005": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B044-P005.webp",
+  "note": "crop tile; box found, 94% of page",
+  "bytes": 29710
+ },
+ "B044-P006": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B044-P006.webp",
+  "note": "crop tile; box found, 27% of page",
+  "bytes": 96042
+ },
+ "B044-P007": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B044-P007.webp",
+  "note": "crop tile; box found, 15% of page",
+  "bytes": 24402
+ },
+ "B044-P008": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B044-P008.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 13840,
+  "skin_share": 0.0,
+  "alpha_fill": 0.879
+ },
+ "B044-P009": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B044-P009.webp",
+  "note": "crop tile; box fallback, 36% of page",
+  "bytes": 17180
+ },
+ "B044-P010": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B044-P010.webp",
+  "note": "crop tile; box found, 9% of page",
+  "bytes": 55880
+ },
+ "B044-P011": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B044-P011.webp",
+  "note": "crop tile; box found, 13% of page",
+  "bytes": 77812
+ },
+ "B044-P012": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B044-P012.webp",
+  "note": "crop tile; box found, 14% of page",
+  "bytes": 13892
+ },
+ "B044-P013": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B044-P013.webp",
+  "note": "crop tile; box found, 12% of page",
+  "bytes": 117516
+ },
+ "B044-P014": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B044-P014.webp",
+  "note": "crop tile; box found, 11% of page",
+  "bytes": 8836
+ },
+ "B044-P015": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B044-P015.webp",
+  "note": "crop tile; box found, 27% of page",
+  "bytes": 24526
+ },
+ "B044-P016": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B044-P016.webp",
+  "note": "crop tile; box fallback, 14% of page",
+  "bytes": 7046
+ },
+ "B044-P017": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B044-P017.webp",
+  "note": "crop tile; box found, 14% of page",
+  "bytes": 103324
+ },
+ "B044-P018": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B044-P018.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 2584,
+  "skin_share": 0.0,
+  "alpha_fill": 0.834
+ },
+ "B044-P019": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B044-P019.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 5414,
+  "skin_share": 0.0,
+  "alpha_fill": 0.844
+ },
+ "B044-P020": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B044-P020.webp",
+  "note": "crop tile; box found, 12% of page",
+  "bytes": 38380
+ },
+ "B045-P001": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B045-P001.webp",
+  "note": "crop tile; box found, 12% of page",
+  "bytes": 30046
+ },
+ "B045-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B045-P002.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 18108,
+  "skin_share": 0.005,
+  "alpha_fill": 0.812
+ },
+ "B045-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B045-P003.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 17880,
+  "skin_share": 0.03,
+  "alpha_fill": 0.826
+ },
+ "B045-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B045-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 36268,
+  "skin_share": 0.0,
+  "alpha_fill": 0.819
+ },
+ "B046-P001": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B046-P001.webp",
+  "note": "crop tile; box found, 7% of page",
+  "bytes": 67734
+ },
+ "B046-P002": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B046-P002.webp",
+  "note": "crop tile; box found, 10% of page",
+  "bytes": 114570
+ },
+ "B046-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B046-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 35300,
+  "skin_share": 0.046,
+  "alpha_fill": 0.71
+ },
+ "B046-P004": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B046-P004.webp",
+  "note": "crop tile; box found, 14% of page",
+  "bytes": 53366
+ },
+ "B046-P005": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B046-P005.webp",
+  "note": "crop tile; box found, 9% of page",
+  "bytes": 10266
+ },
+ "B046-P006": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B046-P006.webp",
+  "note": "crop tile; box found, 10% of page",
+  "bytes": 17696
+ },
+ "B046-P007": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B046-P007.webp",
+  "note": "crop tile; box fallback, 14% of page",
+  "bytes": 4548
+ },
+ "B046-P008": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B046-P008.webp",
+  "note": "crop tile; box found, 25% of page",
+  "bytes": 29802
+ },
+ "B046-P009": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B046-P009.webp",
+  "note": "crop tile; box fallback, 15% of page",
+  "bytes": 17454
+ },
+ "B046-P010": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B046-P010.webp",
+  "note": "crop tile; box found, 19% of page",
+  "bytes": 18964
+ },
+ "B046-P011": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B046-P011.webp",
+  "note": "crop tile; box found, 13% of page",
+  "bytes": 77626
+ },
+ "B047-P001": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B047-P001.webp",
+  "note": "crop tile; box found, 9% of page",
+  "bytes": 45152
+ },
+ "B047-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B047-P002.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 15240,
+  "skin_share": 0.078,
+  "alpha_fill": 0.788
+ },
+ "B047-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B047-P003.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 14338,
+  "skin_share": 0.113,
+  "alpha_fill": 0.792
+ },
+ "B047-P004": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B047-P004.webp",
+  "note": "crop tile; box found, 12% of page",
+  "bytes": 42860
+ },
+ "B048-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B048-P001.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 16778,
+  "skin_share": 0.062,
+  "alpha_fill": 0.825
+ },
+ "B048-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B048-P002.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 53104,
+  "skin_share": 0.0,
+  "alpha_fill": 0.812
+ },
+ "B048-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B048-P003.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 33836,
+  "skin_share": 0.065,
+  "alpha_fill": 0.621
+ },
+ "B048-P004": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B048-P004.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 52528,
+  "skin_share": 0.0,
+  "alpha_fill": 0.816
+ },
+ "B049-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B049-P001.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 38532,
+  "skin_share": 0.001,
+  "alpha_fill": 0.751
+ },
+ "B049-P002": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B049-P002.webp",
+  "note": "crop tile; box found, 28% of page",
+  "bytes": 34152
+ },
+ "B049-P003": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B049-P003.webp",
+  "note": "crop tile; box found, 9% of page",
+  "bytes": 23552
+ },
+ "B050-P001": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B050-P001.webp",
+  "note": "crop tile; box fallback, 21% of page",
+  "bytes": 24882
+ },
+ "B050-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B050-P002.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 40976,
+  "skin_share": 0.649,
+  "alpha_fill": 0.663
+ },
+ "B050-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B050-P003.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure; 95% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 90614,
+  "skin_share": 0.946,
+  "alpha_fill": 0.835
+ },
+ "B050-P004": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B050-P004.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure; 69% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 28588,
+  "skin_share": 0.687,
+  "alpha_fill": 0.777
+ },
+ "B050-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B050-P005.webp",
+  "note": "1 components; box found; 71% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 101042,
+  "skin_share": 0.71,
+  "alpha_fill": 0.742
+ },
+ "B050-P006": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B050-P006.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 47822,
+  "skin_share": 0.312,
+  "alpha_fill": 0.607
+ },
+ "B050-P007": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B050-P007.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 32348,
+  "skin_share": 0.357,
+  "alpha_fill": 0.556
+ },
+ "B050-P008": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B050-P008.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 69778,
+  "skin_share": 0.22,
+  "alpha_fill": 0.855
+ },
+ "B051-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B051-P001.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 60676,
+  "skin_share": 0.217,
+  "alpha_fill": 0.811
+ },
+ "B051-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B051-P002.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 27560,
+  "skin_share": 0.286,
+  "alpha_fill": 0.394
+ },
+ "B051-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B051-P003.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 81458,
+  "skin_share": 0.211,
+  "alpha_fill": 0.792
+ },
+ "B051-P004": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B051-P004.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure; 96% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 57546,
+  "skin_share": 0.964,
+  "alpha_fill": 0.746
+ },
+ "B052-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B052-P001.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 24194,
+  "skin_share": 0.517,
+  "alpha_fill": 0.688
+ },
+ "B052-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B052-P002.webp",
+  "note": "1 components; box found; 100% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 213742,
+  "skin_share": 0.996,
+  "alpha_fill": 0.614
+ },
+ "B052-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B052-P003.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure; 100% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 19312,
+  "skin_share": 0.998,
+  "alpha_fill": 0.812
+ },
+ "B052-P004": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B052-P004.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure; 69% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 12628,
+  "skin_share": 0.692,
+  "alpha_fill": 0.863
+ },
+ "B052-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B052-P005.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 70542,
+  "skin_share": 0.0,
+  "alpha_fill": 0.84
+ },
+ "B052-P006": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B052-P006.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure; 84% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 9972,
+  "skin_share": 0.837,
+  "alpha_fill": 0.681
+ },
+ "B052-P007": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B052-P007.webp",
+  "note": "crop tile; box found, 28% of page",
+  "bytes": 146086
+ },
+ "B053-P001": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B053-P001.webp",
+  "note": "crop tile; box fallback, 36% of page",
+  "bytes": 30386
+ },
+ "B053-P002": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B053-P002.webp",
+  "note": "crop tile; box found, 24% of page",
+  "bytes": 55458
+ },
+ "B053-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B053-P003.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 21778,
+  "skin_share": 0.146,
+  "alpha_fill": 0.832
+ },
+ "B053-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B053-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 11690,
+  "skin_share": 0.001,
+  "alpha_fill": 0.773
+ },
+ "B053-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B053-P005.webp",
+  "note": "1 components; box found; cropped to the bag band of a whole figure; re-cut to the dominant blob (a second product had fused to it)",
+  "bytes": 59508,
+  "skin_share": 0.109,
+  "alpha_fill": 0.678
+ },
+ "B053-P006": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B053-P006.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 23110,
+  "skin_share": 0.171,
+  "alpha_fill": 0.717
+ },
+ "B054-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B054-P001.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 37308,
+  "skin_share": 0.304,
+  "alpha_fill": 0.745
+ },
+ "B054-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B054-P002.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 44178,
+  "skin_share": 0.0,
+  "alpha_fill": 0.718
+ },
+ "B054-P003": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B054-P003.webp",
+  "note": "1 components; box found; 71% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 16226,
+  "skin_share": 0.707,
+  "alpha_fill": 0.689
+ },
+ "B054-P004": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B054-P004.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 12038,
+  "skin_share": 0.211,
+  "alpha_fill": 0.749
+ },
+ "B054-P005": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B054-P005.webp",
+  "note": "1 components; box found",
+  "bytes": 13474,
+  "skin_share": 0.0,
+  "alpha_fill": 0.774
+ },
+ "B054-P006": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B054-P006.webp",
+  "note": "1 components; box found",
+  "bytes": 22526,
+  "skin_share": 0.093,
+  "alpha_fill": 0.686
+ },
+ "B054-P007": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B054-P007.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 27206,
+  "skin_share": 0.004,
+  "alpha_fill": 0.749
+ },
+ "B055-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B055-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 19648,
+  "skin_share": 0.24,
+  "alpha_fill": 0.634
+ },
+ "B055-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B055-P002.webp",
+  "note": "1 components; box found; 72% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 93136,
+  "skin_share": 0.72,
+  "alpha_fill": 0.918
+ },
+ "B055-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B055-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 64286,
+  "skin_share": 0.077,
+  "alpha_fill": 0.67
+ },
+ "B055-P004": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B055-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 59778,
+  "skin_share": 0.101,
+  "alpha_fill": 0.511
+ },
+ "B055-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B055-P005.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 15298,
+  "skin_share": 0.144,
+  "alpha_fill": 0.702
+ },
+ "B055-P006": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B055-P006.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 6988,
+  "skin_share": 0.236,
+  "alpha_fill": 0.552
+ },
+ "B055-P007": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B055-P007.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 22930,
+  "skin_share": 0.157,
+  "alpha_fill": 0.616
+ },
+ "B055-P008": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B055-P008.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 38174,
+  "skin_share": 0.49,
+  "alpha_fill": 0.805
+ },
+ "B055-P009": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B055-P009.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 25398,
+  "skin_share": 0.567,
+  "alpha_fill": 0.708
+ },
+ "B055-P010": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B055-P010.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 9410,
+  "skin_share": 0.061,
+  "alpha_fill": 0.749
+ },
+ "B055-P011": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B055-P011.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 8404,
+  "skin_share": 0.0,
+  "alpha_fill": 0.628
+ },
+ "B055-P012": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B055-P012.webp",
+  "note": "1 components; box found",
+  "bytes": 48106,
+  "skin_share": 0.098,
+  "alpha_fill": 0.868
+ },
+ "B055-P013": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B055-P013.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 11292,
+  "skin_share": 0.134,
+  "alpha_fill": 0.637
+ },
+ "B055-P014": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B055-P014.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 20000,
+  "skin_share": 0.06,
+  "alpha_fill": 0.713
+ },
+ "B056-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B056-P001.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 15136,
+  "skin_share": 0.01,
+  "alpha_fill": 0.611
+ },
+ "B056-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B056-P002.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 26118,
+  "skin_share": 0.086,
+  "alpha_fill": 0.697
+ },
+ "B056-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B056-P003.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 8424,
+  "skin_share": 0.0,
+  "alpha_fill": 0.6
+ },
+ "B056-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B056-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 20038,
+  "skin_share": 0.0,
+  "alpha_fill": 0.585
+ },
+ "B056-P005": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B056-P005.webp",
+  "note": "crop tile; box found, 20% of page",
+  "bytes": 14448
+ },
+ "B056-P006": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B056-P006.webp",
+  "note": "crop tile; box found, 6% of page",
+  "bytes": 17980
+ },
+ "B057-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B057-P001.webp",
+  "note": "4 components; box found",
+  "bytes": 14670,
+  "skin_share": 0.254,
+  "alpha_fill": 0.571
+ },
+ "B057-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B057-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 21962,
+  "skin_share": 0.0,
+  "alpha_fill": 0.743
+ },
+ "B057-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B057-P003.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 28948,
+  "skin_share": 0.136,
+  "alpha_fill": 0.656
+ },
+ "B057-P004": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B057-P004.webp",
+  "note": "crop tile; box found, 24% of page",
+  "bytes": 70600
+ },
+ "B057-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B057-P005.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure; 70% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 8134,
+  "skin_share": 0.705,
+  "alpha_fill": 0.712
+ },
+ "B057-P006": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B057-P006.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 8922,
+  "skin_share": 0.004,
+  "alpha_fill": 0.876
+ },
+ "B058-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B058-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 21684,
+  "skin_share": 0.0,
+  "alpha_fill": 0.608
+ },
+ "B058-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B058-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 31996,
+  "skin_share": 0.14,
+  "alpha_fill": 0.779
+ },
+ "B058-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B058-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 24030,
+  "skin_share": 0.207,
+  "alpha_fill": 0.698
+ },
+ "B058-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B058-P004.webp",
+  "note": "1 components; box found; 98% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 10896,
+  "skin_share": 0.976,
+  "alpha_fill": 0.774
+ },
+ "B058-P005": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B058-P005.webp",
+  "note": "1 components; box found",
+  "bytes": 37524,
+  "skin_share": 0.002,
+  "alpha_fill": 0.713
+ },
+ "B058-P006": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B058-P006.webp",
+  "note": "1 components; box found",
+  "bytes": 39070,
+  "skin_share": 0.238,
+  "alpha_fill": 0.598
+ },
+ "B058-P007": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B058-P007.webp",
+  "note": "1 components; box found",
+  "bytes": 43596,
+  "skin_share": 0.183,
+  "alpha_fill": 0.826
+ },
+ "B059-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B059-P001.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 8522,
+  "skin_share": 0.526,
+  "alpha_fill": 0.767
+ },
+ "B059-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B059-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 35180,
+  "skin_share": 0.0,
+  "alpha_fill": 0.729
+ },
+ "B059-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B059-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 38810,
+  "skin_share": 0.157,
+  "alpha_fill": 0.588
+ },
+ "B059-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B059-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 22264,
+  "skin_share": 0.593,
+  "alpha_fill": 0.851
+ },
+ "B059-P005": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B059-P005.webp",
+  "note": "1 components; box found; 98% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 24414,
+  "skin_share": 0.977,
+  "alpha_fill": 0.807
+ },
+ "B059-P006": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B059-P006.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 24450,
+  "skin_share": 0.214,
+  "alpha_fill": 0.627
+ },
+ "B059-P007": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B059-P007.webp",
+  "note": "1 components; box found",
+  "bytes": 21930,
+  "skin_share": 0.002,
+  "alpha_fill": 0.789
+ },
+ "B059-P008": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B059-P008.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 25450,
+  "skin_share": 0.322,
+  "alpha_fill": 0.617
+ },
+ "B060-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B060-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 16322,
+  "skin_share": 0.079,
+  "alpha_fill": 0.564
+ },
+ "B060-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B060-P002.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 24920,
+  "skin_share": 0.307,
+  "alpha_fill": 0.747
+ },
+ "B060-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B060-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 28104,
+  "skin_share": 0.087,
+  "alpha_fill": 0.595
+ },
+ "B060-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B060-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 17652,
+  "skin_share": 0.007,
+  "alpha_fill": 0.617
+ },
+ "B060-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B060-P005.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 18890,
+  "skin_share": 0.068,
+  "alpha_fill": 0.703
+ },
+ "B060-P006": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B060-P006.webp",
+  "note": "1 components; box found",
+  "bytes": 46576,
+  "skin_share": 0.113,
+  "alpha_fill": 0.697
+ },
+ "B061-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B061-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 92206,
+  "skin_share": 0.035,
+  "alpha_fill": 0.871
+ },
+ "B061-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B061-P002.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 23144,
+  "skin_share": 0.127,
+  "alpha_fill": 0.66
+ },
+ "B061-P003": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B061-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 38354,
+  "skin_share": 0.159,
+  "alpha_fill": 0.834
+ },
+ "B061-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B061-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 20418,
+  "skin_share": 0.205,
+  "alpha_fill": 0.643
+ },
+ "B061-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B061-P005.webp",
+  "note": "2 components; box found; cropped to the top band of a whole figure",
+  "bytes": 15760,
+  "skin_share": 0.011,
+  "alpha_fill": 0.697
+ },
+ "B062-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P001.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 18494,
+  "skin_share": 0.366,
+  "alpha_fill": 0.687
+ },
+ "B062-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 53932,
+  "skin_share": 0.208,
+  "alpha_fill": 0.574
+ },
+ "B062-P003": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 36154,
+  "skin_share": 0.115,
+  "alpha_fill": 0.681
+ },
+ "B062-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P004.webp",
+  "note": "1 components; box found",
+  "bytes": 2664,
+  "skin_share": 0.292,
+  "alpha_fill": 0.793
+ },
+ "B062-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P005.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 14432,
+  "skin_share": 0.23,
+  "alpha_fill": 0.567
+ },
+ "B062-P006": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P006.webp",
+  "note": "1 components; box found",
+  "bytes": 24056,
+  "skin_share": 0.0,
+  "alpha_fill": 0.671
+ },
+ "B062-P007": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P007.webp",
+  "note": "2 components; box found; cropped to the base band of a whole figure",
+  "bytes": 16302,
+  "skin_share": 0.504,
+  "alpha_fill": 0.552
+ },
+ "B062-P008": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B062-P008.webp",
+  "note": "1 components; box found; 67% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 46388,
+  "skin_share": 0.673,
+  "alpha_fill": 0.907
+ },
+ "B062-P009": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P009.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 28412,
+  "skin_share": 0.374,
+  "alpha_fill": 0.717
+ },
+ "B062-P010": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P010.webp",
+  "note": "2 components; box found; cropped to the top band of a whole figure",
+  "bytes": 13192,
+  "skin_share": 0.223,
+  "alpha_fill": 0.597
+ },
+ "B062-P011": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B062-P011.webp",
+  "note": "1 components; box found; 73% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 10084,
+  "skin_share": 0.731,
+  "alpha_fill": 0.704
+ },
+ "B062-P012": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B062-P012.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure; rectangular (96% of its own box) \u2014 a page panel, not a piece",
+  "bytes": 6446,
+  "skin_share": 0.0,
+  "alpha_fill": 0.962
+ },
+ "B062-P013": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P013.webp",
+  "note": "1 components; box found",
+  "bytes": 15384,
+  "skin_share": 0.0,
+  "alpha_fill": 0.75
+ },
+ "B062-P014": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P014.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 26404,
+  "skin_share": 0.099,
+  "alpha_fill": 0.64
+ },
+ "B062-P015": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P015.webp",
+  "note": "1 components; box found",
+  "bytes": 45698,
+  "skin_share": 0.051,
+  "alpha_fill": 0.893
+ },
+ "B062-P016": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P016.webp",
+  "note": "1 components; box found",
+  "bytes": 35660,
+  "skin_share": 0.0,
+  "alpha_fill": 0.809
+ },
+ "B062-P017": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P017.webp",
+  "note": "1 components; box found; cropped to the shoes band of a whole figure",
+  "bytes": 5220,
+  "skin_share": 0.243,
+  "alpha_fill": 0.417
+ },
+ "B062-P018": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P018.webp",
+  "note": "crop tile; box found, 22% of page",
+  "bytes": 22806
+ },
+ "B062-P019": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P019.webp",
+  "note": "crop tile; box found, 21% of page",
+  "bytes": 40394
+ },
+ "B062-P020": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P020.webp",
+  "note": "crop tile; box found, 21% of page",
+  "bytes": 47726
+ },
+ "B062-P021": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P021.webp",
+  "note": "crop tile; box found, 17% of page",
+  "bytes": 23894
+ }
+}

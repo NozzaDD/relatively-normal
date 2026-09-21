@@ -1,0 +1,577 @@
+{
+ "B007-P003": {
+  "n": 2,
+  "spread": 4.69,
+  "stability": "stable"
+ },
+ "B008-P003": {
+  "n": 2,
+  "spread": 3.98,
+  "stability": "stable"
+ },
+ "B010-P001": {
+  "n": 3,
+  "spread": 3.88,
+  "stability": "stable"
+ },
+ "B010-P003": {
+  "n": 2,
+  "spread": 6.02,
+  "stability": "unstable"
+ },
+ "B010-P005": {
+  "n": 5,
+  "spread": 4.54,
+  "stability": "stable"
+ },
+ "B011-P005": {
+  "n": 2,
+  "spread": 2.81,
+  "stability": "stable"
+ },
+ "B012-P003": {
+  "n": 3,
+  "spread": 0.32,
+  "stability": "stable"
+ },
+ "B013-P001": {
+  "n": 4,
+  "spread": 3.31,
+  "stability": "stable"
+ },
+ "B014-P001": {
+  "n": 4,
+  "spread": 1.09,
+  "stability": "stable"
+ },
+ "B015-P001": {
+  "n": 3,
+  "spread": 3.58,
+  "stability": "stable"
+ },
+ "B016-P001": {
+  "n": 2,
+  "spread": 0.17,
+  "stability": "stable"
+ },
+ "B017-P001": {
+  "n": 4,
+  "spread": 5.97,
+  "stability": "unstable"
+ },
+ "B018-P001": {
+  "n": 4,
+  "spread": 3.51,
+  "stability": "stable"
+ },
+ "B019-P001": {
+  "n": 3,
+  "spread": 2.97,
+  "stability": "stable"
+ },
+ "B019-P004": {
+  "n": 2,
+  "spread": 0.64,
+  "stability": "stable"
+ },
+ "B019-P006": {
+  "n": 2,
+  "spread": 3.79,
+  "stability": "stable"
+ },
+ "B020-P002": {
+  "n": 2,
+  "spread": 0.37,
+  "stability": "stable"
+ },
+ "B020-P006": {
+  "n": 2,
+  "spread": 0.03,
+  "stability": "stable"
+ },
+ "B021-P001": {
+  "n": 3,
+  "spread": 0.35,
+  "stability": "stable"
+ },
+ "B021-P002": {
+  "n": 3,
+  "spread": 1.24,
+  "stability": "stable"
+ },
+ "B021-P005": {
+  "n": 2,
+  "spread": 1.49,
+  "stability": "stable"
+ },
+ "B021-P006": {
+  "n": 2,
+  "spread": 3.2,
+  "stability": "stable"
+ },
+ "B021-P008": {
+  "n": 2,
+  "spread": 0.32,
+  "stability": "stable"
+ },
+ "B021-P011": {
+  "n": 4,
+  "spread": 1.29,
+  "stability": "stable"
+ },
+ "B021-P015": {
+  "n": 2,
+  "spread": 7.11,
+  "stability": "unstable"
+ },
+ "B023-P009": {
+  "n": 2,
+  "spread": 1.73,
+  "stability": "stable"
+ },
+ "B023-P013": {
+  "n": 3,
+  "spread": 5.91,
+  "stability": "unstable"
+ },
+ "B023-P015": {
+  "n": 2,
+  "spread": 0.39,
+  "stability": "stable"
+ },
+ "B024-P005": {
+  "n": 2,
+  "spread": 0.46,
+  "stability": "stable"
+ },
+ "B025-P001": {
+  "n": 3,
+  "spread": 0.15,
+  "stability": "stable"
+ },
+ "B025-P003": {
+  "n": 2,
+  "spread": 0.22,
+  "stability": "stable"
+ },
+ "B025-P006": {
+  "n": 2,
+  "spread": 0.25,
+  "stability": "stable"
+ },
+ "B025-P007": {
+  "n": 3,
+  "spread": 0.59,
+  "stability": "stable"
+ },
+ "B025-P008": {
+  "n": 2,
+  "spread": 1.47,
+  "stability": "stable"
+ },
+ "B026-P001": {
+  "n": 3,
+  "spread": 1.71,
+  "stability": "stable"
+ },
+ "B027-P004": {
+  "n": 2,
+  "spread": 0.27,
+  "stability": "stable"
+ },
+ "B027-P008": {
+  "n": 2,
+  "spread": 0.91,
+  "stability": "stable"
+ },
+ "B027-P009": {
+  "n": 2,
+  "spread": 0.33,
+  "stability": "stable"
+ },
+ "B028-P002": {
+  "n": 2,
+  "spread": 0.54,
+  "stability": "stable"
+ },
+ "B028-P009": {
+  "n": 2,
+  "spread": 0.44,
+  "stability": "stable"
+ },
+ "B028-P010": {
+  "n": 4,
+  "spread": 1.26,
+  "stability": "stable"
+ },
+ "B028-P012": {
+  "n": 2,
+  "spread": 0.77,
+  "stability": "stable"
+ },
+ "B029-P002": {
+  "n": 2,
+  "spread": 0.01,
+  "stability": "stable"
+ },
+ "B030-P007": {
+  "n": 4,
+  "spread": 5.03,
+  "stability": "unstable"
+ },
+ "B031-P001": {
+  "n": 3,
+  "spread": 1.81,
+  "stability": "stable"
+ },
+ "B031-P002": {
+  "n": 4,
+  "spread": 2.39,
+  "stability": "stable"
+ },
+ "B032-P001": {
+  "n": 3,
+  "spread": 2.22,
+  "stability": "stable"
+ },
+ "B032-P003": {
+  "n": 2,
+  "spread": 0.3,
+  "stability": "stable"
+ },
+ "B033-P002": {
+  "n": 2,
+  "spread": 0.61,
+  "stability": "stable"
+ },
+ "B035-P004": {
+  "n": 2,
+  "spread": 1.2,
+  "stability": "stable"
+ },
+ "B036-P009": {
+  "n": 2,
+  "spread": 29.56,
+  "stability": "unstable"
+ },
+ "B037-P003": {
+  "n": 2,
+  "spread": 1.74,
+  "stability": "stable"
+ },
+ "B037-P004": {
+  "n": 2,
+  "spread": 1.46,
+  "stability": "stable"
+ },
+ "B037-P006": {
+  "n": 2,
+  "spread": 0.13,
+  "stability": "stable"
+ },
+ "B037-P007": {
+  "n": 2,
+  "spread": 1.94,
+  "stability": "stable"
+ },
+ "B038-P001": {
+  "n": 2,
+  "spread": 0.32,
+  "stability": "stable"
+ },
+ "B039-P004": {
+  "n": 2,
+  "spread": 1.49,
+  "stability": "stable"
+ },
+ "B040-P003": {
+  "n": 2,
+  "spread": 2.51,
+  "stability": "stable"
+ },
+ "B040-P004": {
+  "n": 2,
+  "spread": 0.11,
+  "stability": "stable"
+ },
+ "B042-P007": {
+  "n": 2,
+  "spread": 3.48,
+  "stability": "stable"
+ },
+ "B042-P009": {
+  "n": 2,
+  "spread": 0.37,
+  "stability": "stable"
+ },
+ "B042-P014": {
+  "n": 2,
+  "spread": 1.24,
+  "stability": "stable"
+ },
+ "B042-P019": {
+  "n": 2,
+  "spread": 0.58,
+  "stability": "stable"
+ },
+ "B042-P030": {
+  "n": 2,
+  "spread": 2.74,
+  "stability": "stable"
+ },
+ "B042-P032": {
+  "n": 2,
+  "spread": 0.88,
+  "stability": "stable"
+ },
+ "B042-P036": {
+  "n": 2,
+  "spread": 0.51,
+  "stability": "stable"
+ },
+ "B042-P037": {
+  "n": 5,
+  "spread": 3.34,
+  "stability": "stable"
+ },
+ "B043-P003": {
+  "n": 2,
+  "spread": 4.26,
+  "stability": "stable"
+ },
+ "B043-P004": {
+  "n": 4,
+  "spread": 1.02,
+  "stability": "stable"
+ },
+ "B043-P007": {
+  "n": 2,
+  "spread": 1.42,
+  "stability": "stable"
+ },
+ "B044-P002": {
+  "n": 2,
+  "spread": 0.24,
+  "stability": "stable"
+ },
+ "B044-P004": {
+  "n": 2,
+  "spread": 1.31,
+  "stability": "stable"
+ },
+ "B044-P005": {
+  "n": 3,
+  "spread": 0.15,
+  "stability": "stable"
+ },
+ "B044-P010": {
+  "n": 2,
+  "spread": 0.8,
+  "stability": "stable"
+ },
+ "B044-P014": {
+  "n": 2,
+  "spread": 0.88,
+  "stability": "stable"
+ },
+ "B044-P020": {
+  "n": 2,
+  "spread": 0.44,
+  "stability": "stable"
+ },
+ "B045-P001": {
+  "n": 4,
+  "spread": 1.2,
+  "stability": "stable"
+ },
+ "B046-P001": {
+  "n": 2,
+  "spread": 0.29,
+  "stability": "stable"
+ },
+ "B046-P007": {
+  "n": 2,
+  "spread": 0.51,
+  "stability": "stable"
+ },
+ "B047-P001": {
+  "n": 2,
+  "spread": 0.35,
+  "stability": "stable"
+ },
+ "B048-P001": {
+  "n": 2,
+  "spread": 0.39,
+  "stability": "stable"
+ },
+ "B049-P001": {
+  "n": 3,
+  "spread": 0.24,
+  "stability": "stable"
+ },
+ "B049-P003": {
+  "n": 4,
+  "spread": 0.55,
+  "stability": "stable"
+ },
+ "B050-P001": {
+  "n": 5,
+  "spread": 0.04,
+  "stability": "stable"
+ },
+ "B051-P002": {
+  "n": 2,
+  "spread": 12.13,
+  "stability": "unstable"
+ },
+ "B053-P001": {
+  "n": 3,
+  "spread": 0.26,
+  "stability": "stable"
+ },
+ "B053-P002": {
+  "n": 2,
+  "spread": 0.98,
+  "stability": "stable"
+ },
+ "B053-P003": {
+  "n": 3,
+  "spread": 3.66,
+  "stability": "stable"
+ },
+ "B054-P005": {
+  "n": 4,
+  "spread": 2.29,
+  "stability": "stable"
+ },
+ "B055-P003": {
+  "n": 5,
+  "spread": 0.56,
+  "stability": "stable"
+ },
+ "B055-P004": {
+  "n": 3,
+  "spread": 4.04,
+  "stability": "stable"
+ },
+ "B055-P012": {
+  "n": 2,
+  "spread": 1.88,
+  "stability": "stable"
+ },
+ "B055-P014": {
+  "n": 2,
+  "spread": 0.47,
+  "stability": "stable"
+ },
+ "B056-P004": {
+  "n": 4,
+  "spread": 3.12,
+  "stability": "stable"
+ },
+ "B057-P001": {
+  "n": 2,
+  "spread": 20.15,
+  "stability": "unstable"
+ },
+ "B057-P003": {
+  "n": 4,
+  "spread": 22.18,
+  "stability": "unstable"
+ },
+ "B057-P005": {
+  "n": 2,
+  "spread": 7.9,
+  "stability": "unstable"
+ },
+ "B057-P006": {
+  "n": 2,
+  "spread": 0.75,
+  "stability": "stable"
+ },
+ "B058-P001": {
+  "n": 2,
+  "spread": 1.61,
+  "stability": "stable"
+ },
+ "B058-P006": {
+  "n": 2,
+  "spread": 0.73,
+  "stability": "stable"
+ },
+ "B058-P007": {
+  "n": 2,
+  "spread": 2.8,
+  "stability": "stable"
+ },
+ "B059-P006": {
+  "n": 2,
+  "spread": 0.94,
+  "stability": "stable"
+ },
+ "B059-P008": {
+  "n": 2,
+  "spread": 0.51,
+  "stability": "stable"
+ },
+ "B060-P002": {
+  "n": 2,
+  "spread": 1.41,
+  "stability": "stable"
+ },
+ "B061-P001": {
+  "n": 2,
+  "spread": 0.35,
+  "stability": "stable"
+ },
+ "B061-P002": {
+  "n": 2,
+  "spread": 0.26,
+  "stability": "stable"
+ },
+ "B061-P003": {
+  "n": 2,
+  "spread": 0.56,
+  "stability": "stable"
+ },
+ "B061-P004": {
+  "n": 2,
+  "spread": 0.27,
+  "stability": "stable"
+ },
+ "B061-P005": {
+  "n": 2,
+  "spread": 1.0,
+  "stability": "stable"
+ },
+ "B062-P001": {
+  "n": 2,
+  "spread": 2.43,
+  "stability": "stable"
+ },
+ "B062-P005": {
+  "n": 2,
+  "spread": 0.68,
+  "stability": "stable"
+ },
+ "B062-P008": {
+  "n": 2,
+  "spread": 2.15,
+  "stability": "stable"
+ },
+ "B062-P011": {
+  "n": 2,
+  "spread": 2.0,
+  "stability": "stable"
+ },
+ "B062-P012": {
+  "n": 3,
+  "spread": 1.58,
+  "stability": "stable"
+ },
+ "B062-P014": {
+  "n": 2,
+  "spread": 0.36,
+  "stability": "stable"
+ }
+}
