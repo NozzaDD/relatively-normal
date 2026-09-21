@@ -57,8 +57,8 @@ the engine uses, its neutral flag, a family and a plain name from a closed list.
 
 | Family | Products |
 |---|---|
-| black | 133 |
-| brown | 75 |
+| black | 129 |
+| brown | 79 |
 | warm neutral | 75 |
 | blue | 49 |
 | grey | 34 |
@@ -241,3 +241,34 @@ leaves anything validated alone, and refreshes names, brands and links for
 everything else from the catalogue. Every board and every Note references a
 `product_id`, so a correction made once flows to all of them.
 
+
+## The by-eye check
+
+Sixty products, sampled across every colour family, looked at on two contact
+sheets against their recorded name. Counted strictly:
+
+| | Products | Share |
+|---|---|---|
+| The name is right | 37 | 62% |
+| Arguable — the right family, a neighbouring name (cream called white, brick called rust, oatmeal called tan) | 12 | 20% |
+| Wrong | 11 | 18% |
+
+The eleven wrong ones fall into four groups, and they are worth knowing because
+they tell you which rows to distrust:
+
+1. **Page screenshots with no cut-out.** On a listing or detail page the largest
+   thing is often the page itself or a second garment, and that is what gets
+   read. Every one of these has `asset_type` `tile` and a `colour_confidence` of
+   `low` or `medium`.
+2. **Skin.** A close-up of hands or a face-and-shoulder crop reads as `rust` or
+   `espresso`. The skin mask switches itself off when masking would leave
+   nothing, which is right for a tan coat and wrong for a photograph of hands.
+3. **Very dark browns called black.** Partly fixed — a warm hue with real chroma
+   below L\* 19 is now `espresso` rather than `black` — but a dark brown that has
+   lost its chroma to a shadow still reads black.
+4. **Pale warm against pale cool.** `cream` and `white`, `oatmeal` and `tan`,
+   sit close enough that a single reading can fall either side. This is most of
+   the arguable column.
+
+Every one of these is visible in the row itself: they are the rows with a tile
+asset, a low colour confidence, or a dominant share under about 45%.

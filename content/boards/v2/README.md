@@ -13,7 +13,7 @@ of it appears on the image itself.
 
 | Board | Title | Key colours | Result |
 |---|---|---|---|
-| 1 | Rust twice, and nothing else bright | rust, off-black | passes |
+| 1 | Rust twice, and nothing else bright | rust, espresso | passes |
 | 2 | Pale on pale, one warm thing | lilac, rust | passes |
 | 3 | Ochre over black | black, ochre, olive | passes |
 | 4 | Brick, and nothing else loud | brick, rust | passes |
@@ -36,7 +36,7 @@ Notes size 1080×1350, JPEG under 1 MB.
 | Test | Result | Detail |
 |---|---|---|
 | every key colour carried | pass | all carried |
-| an accent stays an accent | pass | off-black on shoes, bag |
+| an accent stays an accent | pass | espresso on shoes, bag |
 | no foreign chromatic colour | pass | refused at selection; neutrals free |
 | all components present | pass | layer, top, bottom, shoes, bag, accessory |
 | neutral fillers declared | pass | bottom, accessory |

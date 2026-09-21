@@ -64,6 +64,11 @@ def _in_hue(h, lo, hi):
 
 def _neutral_name(L, Cc, h):
     if L <= 19:
+        # a dark brown is not black. By eye, 6 of 60 sampled products came back
+        # black when the garment was plainly a very dark brown, so a warm hue with
+        # real chroma keeps its family down here too.
+        if Cc >= 6 and _in_hue(h, 25, 105):
+            return ('brown', 'espresso')
         return ('black', 'black' if Cc < 4 else 'off-black')
     if L >= 90:
         return ('white', 'white' if Cc < 4 else 'off-white')

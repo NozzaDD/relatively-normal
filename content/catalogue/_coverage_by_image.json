@@ -3,7 +3,7 @@
   "n_key": 4,
   "n_chromatic": 4,
   "chromatic_covered": 4,
-  "score": 42.7,
+  "score": 42.75,
   "clothes_share": 0.813,
   "background_name": "black"
  },
@@ -11,7 +11,7 @@
   "n_key": 4,
   "n_chromatic": 3,
   "chromatic_covered": 3,
-  "score": 34.8,
+  "score": 34.72,
   "clothes_share": 0.214,
   "background_name": "black"
  },
@@ -19,7 +19,7 @@
   "n_key": 4,
   "n_chromatic": 3,
   "chromatic_covered": 3,
-  "score": 35.83,
+  "score": 35.7,
   "clothes_share": 0.096,
   "background_name": "black"
  },
@@ -27,7 +27,7 @@
   "n_key": 4,
   "n_chromatic": 3,
   "chromatic_covered": 3,
-  "score": 35.24,
+  "score": 35.28,
   "clothes_share": 0.203,
   "background_name": "black"
  },
@@ -35,7 +35,7 @@
   "n_key": 3,
   "n_chromatic": 1,
   "chromatic_covered": 1,
-  "score": 17.63,
+  "score": 17.27,
   "clothes_share": 0.78,
   "background_name": "white"
  },
@@ -43,7 +43,7 @@
   "n_key": 4,
   "n_chromatic": 2,
   "chromatic_covered": 2,
-  "score": 28.08,
+  "score": 27.81,
   "clothes_share": 0.566,
   "background_name": "white"
  },
@@ -51,7 +51,7 @@
   "n_key": 1,
   "n_chromatic": 1,
   "chromatic_covered": 1,
-  "score": 12.77,
+  "score": 12.59,
   "clothes_share": 0.776,
   "background_name": "white"
  },
@@ -59,7 +59,7 @@
   "n_key": 3,
   "n_chromatic": 0,
   "chromatic_covered": 0,
-  "score": 2.87,
+  "score": 2.82,
   "clothes_share": 0.71,
   "background_name": "taupe"
  },
@@ -67,7 +67,7 @@
   "n_key": 1,
   "n_chromatic": 1,
   "chromatic_covered": 1,
-  "score": 12.89,
+  "score": 12.76,
   "clothes_share": 0.617,
   "background_name": "white"
  },
@@ -83,7 +83,7 @@
   "n_key": 3,
   "n_chromatic": 2,
   "chromatic_covered": 2,
-  "score": 23.25,
+  "score": 23.259999999999998,
   "clothes_share": 0.268,
   "background_name": "cream"
  },
@@ -91,7 +91,7 @@
   "n_key": 4,
   "n_chromatic": 2,
   "chromatic_covered": 2,
-  "score": 22.27,
+  "score": 22.28,
   "clothes_share": 0.694,
   "background_name": "oatmeal"
  },
@@ -99,7 +99,7 @@
   "n_key": 3,
   "n_chromatic": 3,
   "chromatic_covered": 3,
-  "score": 35.91,
+  "score": 35.56,
   "clothes_share": 0.843,
   "background_name": "cream"
  },
@@ -107,7 +107,7 @@
   "n_key": 2,
   "n_chromatic": 2,
   "chromatic_covered": 2,
-  "score": 22.98,
+  "score": 22.83,
   "clothes_share": 0.868,
   "background_name": "cream"
  },
@@ -115,7 +115,7 @@
   "n_key": 4,
   "n_chromatic": 4,
   "chromatic_covered": 4,
-  "score": 42.02,
+  "score": 42.13,
   "clothes_share": 0.846,
   "background_name": "cream"
  },
@@ -123,7 +123,7 @@
   "n_key": 4,
   "n_chromatic": 4,
   "chromatic_covered": 4,
-  "score": 42.68,
+  "score": 42.75,
   "clothes_share": 0.444,
   "background_name": "oatmeal"
  },
@@ -131,7 +131,7 @@
   "n_key": 4,
   "n_chromatic": 4,
   "chromatic_covered": 4,
-  "score": 44.82,
+  "score": 44.79,
   "clothes_share": 0.302,
   "background_name": "stone"
  },
@@ -139,7 +139,7 @@
   "n_key": 4,
   "n_chromatic": 2,
   "chromatic_covered": 2,
-  "score": 25.71,
+  "score": 25.490000000000002,
   "clothes_share": 0.723,
   "background_name": "tobacco"
  },
@@ -147,7 +147,7 @@
   "n_key": 4,
   "n_chromatic": 4,
   "chromatic_covered": 4,
-  "score": 43.68,
+  "score": 43.59,
   "clothes_share": 0.481,
   "background_name": "tobacco"
  },
@@ -155,7 +155,7 @@
   "n_key": 1,
   "n_chromatic": 0,
   "chromatic_covered": 0,
-  "score": 2.95,
+  "score": 2.81,
   "clothes_share": 0.871,
   "background_name": "tobacco"
  },
@@ -163,7 +163,7 @@
   "n_key": 3,
   "n_chromatic": 2,
   "chromatic_covered": 2,
-  "score": 24.22,
+  "score": 24.11,
   "clothes_share": 0.771,
   "background_name": "tan"
  },
@@ -171,7 +171,7 @@
   "n_key": 4,
   "n_chromatic": 4,
   "chromatic_covered": 4,
-  "score": 45.18,
+  "score": 45.09,
   "clothes_share": 0.815,
   "background_name": "tobacco"
  },
@@ -179,7 +179,7 @@
   "n_key": 2,
   "n_chromatic": 1,
   "chromatic_covered": 1,
-  "score": 13.91,
+  "score": 13.72,
   "clothes_share": 0.43,
   "background_name": "oatmeal"
  },
@@ -187,7 +187,7 @@
   "n_key": 1,
   "n_chromatic": 1,
   "chromatic_covered": 1,
-  "score": 12.69,
+  "score": 12.52,
   "clothes_share": 0.741,
   "background_name": "espresso"
  },
@@ -195,7 +195,7 @@
   "n_key": 1,
   "n_chromatic": 0,
   "chromatic_covered": 0,
-  "score": 0.85,
+  "score": 0.86,
   "clothes_share": 0.722,
   "background_name": "tan"
  },
@@ -203,7 +203,7 @@
   "n_key": 3,
   "n_chromatic": 1,
   "chromatic_covered": 1,
-  "score": 11.9,
+  "score": 11.870000000000001,
   "clothes_share": 0.797,
   "background_name": "oatmeal"
  },
@@ -211,7 +211,7 @@
   "n_key": 4,
   "n_chromatic": 3,
   "chromatic_covered": 3,
-  "score": 34.34,
+  "score": 34.38,
   "clothes_share": 0.123,
   "background_name": "oatmeal"
  },
@@ -219,7 +219,7 @@
   "n_key": 2,
   "n_chromatic": 0,
   "chromatic_covered": 0,
-  "score": 5.49,
+  "score": 5.19,
   "clothes_share": 0.891,
   "background_name": "tan"
  },
@@ -227,7 +227,7 @@
   "n_key": 3,
   "n_chromatic": 2,
   "chromatic_covered": 2,
-  "score": 24.0,
+  "score": 23.79,
   "clothes_share": 0.831,
   "background_name": "oatmeal"
  },
@@ -235,7 +235,7 @@
   "n_key": 1,
   "n_chromatic": 0,
   "chromatic_covered": 0,
-  "score": 2.66,
+  "score": 2.48,
   "clothes_share": 0.835,
   "background_name": "tan"
  },
@@ -243,7 +243,7 @@
   "n_key": 2,
   "n_chromatic": 1,
   "chromatic_covered": 1,
-  "score": 10.97,
+  "score": 10.94,
   "clothes_share": 0.701,
   "background_name": "oatmeal"
  },
@@ -251,7 +251,7 @@
   "n_key": 2,
   "n_chromatic": 0,
   "chromatic_covered": 0,
-  "score": 2.09,
+  "score": 2.11,
   "clothes_share": 0.656,
   "background_name": "tan"
  },
@@ -267,7 +267,7 @@
   "n_key": 4,
   "n_chromatic": 2,
   "chromatic_covered": 2,
-  "score": 22.41,
+  "score": 22.4,
   "clothes_share": 0.775,
   "background_name": "tan"
  },
@@ -275,7 +275,7 @@
   "n_key": 3,
   "n_chromatic": 0,
   "chromatic_covered": 0,
-  "score": 4.77,
+  "score": 4.66,
   "clothes_share": 0.927,
   "background_name": "tan"
  },
@@ -283,7 +283,7 @@
   "n_key": 2,
   "n_chromatic": 1,
   "chromatic_covered": 1,
-  "score": 13.71,
+  "score": 13.629999999999999,
   "clothes_share": 0.436,
   "background_name": "tan"
  },
@@ -291,7 +291,7 @@
   "n_key": 2,
   "n_chromatic": 1,
   "chromatic_covered": 1,
-  "score": 13.21,
+  "score": 13.09,
   "clothes_share": 0.733,
   "background_name": "oatmeal"
  },
@@ -299,7 +299,7 @@
   "n_key": 1,
   "n_chromatic": 0,
   "chromatic_covered": 0,
-  "score": 2.76,
+  "score": 2.58,
   "clothes_share": 0.715,
   "background_name": "tan"
  },
@@ -307,7 +307,7 @@
   "n_key": 2,
   "n_chromatic": 0,
   "chromatic_covered": 0,
-  "score": 2.19,
+  "score": 2.2,
   "clothes_share": 0.778,
   "background_name": "tan"
  },
@@ -315,7 +315,7 @@
   "n_key": 3,
   "n_chromatic": 3,
   "chromatic_covered": 3,
-  "score": 32.37,
+  "score": 32.42,
   "clothes_share": 0.161,
   "background_name": "oatmeal"
  },
@@ -323,7 +323,7 @@
   "n_key": 3,
   "n_chromatic": 2,
   "chromatic_covered": 2,
-  "score": 22.22,
+  "score": 22.15,
   "clothes_share": 0.174,
   "background_name": "oatmeal"
  },
@@ -331,7 +331,7 @@
   "n_key": 4,
   "n_chromatic": 3,
   "chromatic_covered": 3,
-  "score": 31.88,
+  "score": 31.89,
   "clothes_share": 0.041,
   "background_name": "cream"
  },
@@ -339,7 +339,7 @@
   "n_key": 4,
   "n_chromatic": 4,
   "chromatic_covered": 4,
-  "score": 41.29,
+  "score": 41.3,
   "clothes_share": 0.682,
   "background_name": "oatmeal"
  },
@@ -347,7 +347,7 @@
   "n_key": 4,
   "n_chromatic": 4,
   "chromatic_covered": 4,
-  "score": 41.47,
+  "score": 41.45,
   "clothes_share": 0.667,
   "background_name": "oatmeal"
  },
@@ -355,7 +355,7 @@
   "n_key": 4,
   "n_chromatic": 3,
   "chromatic_covered": 3,
-  "score": 36.06,
+  "score": 36.0,
   "clothes_share": 0.207,
   "background_name": "off-white"
  },
@@ -363,7 +363,7 @@
   "n_key": 4,
   "n_chromatic": 3,
   "chromatic_covered": 3,
-  "score": 34.230000000000004,
+  "score": 34.13,
   "clothes_share": 0.411,
   "background_name": "cream"
  },
@@ -371,7 +371,7 @@
   "n_key": 2,
   "n_chromatic": 0,
   "chromatic_covered": 0,
-  "score": 5.68,
+  "score": 5.33,
   "clothes_share": 0.816,
   "background_name": "oatmeal"
  },
@@ -379,7 +379,7 @@
   "n_key": 4,
   "n_chromatic": 4,
   "chromatic_covered": 4,
-  "score": 42.81,
+  "score": 42.72,
   "clothes_share": 0.746,
   "background_name": "off-white"
  },
@@ -387,7 +387,7 @@
   "n_key": 4,
   "n_chromatic": 1,
   "chromatic_covered": 1,
-  "score": 15.24,
+  "score": 15.120000000000001,
   "clothes_share": 0.196,
   "background_name": "off-white"
  },
@@ -395,7 +395,7 @@
   "n_key": 4,
   "n_chromatic": 3,
   "chromatic_covered": 3,
-  "score": 34.79,
+  "score": 34.769999999999996,
   "clothes_share": 0.5,
   "background_name": "oatmeal"
  },
@@ -403,7 +403,7 @@
   "n_key": 1,
   "n_chromatic": 0,
   "chromatic_covered": 0,
-  "score": 2.78,
+  "score": 2.63,
   "clothes_share": 0.572,
   "background_name": "cream"
  },
@@ -411,7 +411,7 @@
   "n_key": 4,
   "n_chromatic": 0,
   "chromatic_covered": 0,
-  "score": 1.84,
+  "score": 1.78,
   "clothes_share": 0.813,
   "background_name": "white"
  },
@@ -419,7 +419,7 @@
   "n_key": 2,
   "n_chromatic": 2,
   "chromatic_covered": 2,
-  "score": 23.259999999999998,
+  "score": 23.03,
   "clothes_share": 0.293,
   "background_name": "white"
  },
@@ -427,7 +427,7 @@
   "n_key": 3,
   "n_chromatic": 1,
   "chromatic_covered": 1,
-  "score": 16.44,
+  "score": 16.17,
   "clothes_share": 0.563,
   "background_name": "white"
  },
@@ -435,7 +435,7 @@
   "n_key": 2,
   "n_chromatic": 0,
   "chromatic_covered": 0,
-  "score": 5.04,
+  "score": 4.78,
   "clothes_share": 0.947,
   "background_name": "cream"
  },
@@ -443,7 +443,7 @@
   "n_key": 4,
   "n_chromatic": 4,
   "chromatic_covered": 4,
-  "score": 40.79,
+  "score": 40.75,
   "clothes_share": 0.795,
   "background_name": "black"
  },
@@ -451,7 +451,7 @@
   "n_key": 4,
   "n_chromatic": 4,
   "chromatic_covered": 4,
-  "score": 40.86,
+  "score": 40.93,
   "clothes_share": 0.3,
   "background_name": "brick"
  },
@@ -459,7 +459,7 @@
   "n_key": 1,
   "n_chromatic": 1,
   "chromatic_covered": 1,
-  "score": 12.99,
+  "score": 12.83,
   "clothes_share": 0.781,
   "background_name": "brick"
  },
@@ -467,7 +467,7 @@
   "n_key": 4,
   "n_chromatic": 4,
   "chromatic_covered": 4,
-  "score": 43.08,
+  "score": 42.89,
   "clothes_share": 0.787,
   "background_name": "black"
  },
@@ -475,7 +475,7 @@
   "n_key": 3,
   "n_chromatic": 2,
   "chromatic_covered": 2,
-  "score": 21.39,
+  "score": 21.42,
   "clothes_share": 0.815,
   "background_name": "rust"
  },
@@ -483,7 +483,7 @@
   "n_key": 4,
   "n_chromatic": 4,
   "chromatic_covered": 4,
-  "score": 40.7,
+  "score": 40.79,
   "clothes_share": 0.831,
   "background_name": "rust"
  },
@@ -491,7 +491,7 @@
   "n_key": 4,
   "n_chromatic": 2,
   "chromatic_covered": 2,
-  "score": 25.38,
+  "score": 25.2,
   "clothes_share": 0.81,
   "background_name": "rust"
  },
@@ -499,7 +499,7 @@
   "n_key": 4,
   "n_chromatic": 2,
   "chromatic_covered": 2,
-  "score": 26.23,
+  "score": 26.13,
   "clothes_share": 0.54,
   "background_name": "brick"
  },
@@ -507,7 +507,7 @@
   "n_key": 3,
   "n_chromatic": 1,
   "chromatic_covered": 1,
-  "score": 16.7,
+  "score": 16.31,
   "clothes_share": 0.784,
   "background_name": "denim blue"
  },
@@ -515,7 +515,7 @@
   "n_key": 4,
   "n_chromatic": 4,
   "chromatic_covered": 4,
-  "score": 43.06,
+  "score": 42.96,
   "clothes_share": 0.781,
   "background_name": "rust"
  },
@@ -523,7 +523,7 @@
   "n_key": 3,
   "n_chromatic": 3,
   "chromatic_covered": 3,
-  "score": 30.91,
+  "score": 30.92,
   "clothes_share": 0.837,
   "background_name": "rust"
  },
@@ -531,7 +531,7 @@
   "n_key": 4,
   "n_chromatic": 2,
   "chromatic_covered": 2,
-  "score": 24.77,
+  "score": 24.68,
   "clothes_share": 0.839,
   "background_name": "dark grey"
  },
@@ -539,7 +539,7 @@
   "n_key": 3,
   "n_chromatic": 2,
   "chromatic_covered": 2,
-  "score": 23.56,
+  "score": 23.44,
   "clothes_share": 0.887,
   "background_name": "chocolate"
  },
@@ -547,7 +547,7 @@
   "n_key": 4,
   "n_chromatic": 4,
   "chromatic_covered": 4,
-  "score": 41.43,
+  "score": 41.4,
   "clothes_share": 0.417,
   "background_name": "chocolate"
  },
@@ -555,7 +555,7 @@
   "n_key": 3,
   "n_chromatic": 1,
   "chromatic_covered": 1,
-  "score": 16.7,
+  "score": 16.42,
   "clothes_share": 0.134,
   "background_name": "dark grey"
  },
@@ -563,7 +563,7 @@
   "n_key": 2,
   "n_chromatic": 0,
   "chromatic_covered": 0,
-  "score": 4.02,
+  "score": 3.86,
   "clothes_share": 0.313,
   "background_name": "light grey"
  },
@@ -571,7 +571,7 @@
   "n_key": 1,
   "n_chromatic": 1,
   "chromatic_covered": 1,
-  "score": 12.8,
+  "score": 12.61,
   "clothes_share": 0.868,
   "background_name": "light grey"
  },
@@ -579,7 +579,7 @@
   "n_key": 4,
   "n_chromatic": 1,
   "chromatic_covered": 1,
-  "score": 15.18,
+  "score": 14.969999999999999,
   "clothes_share": 0.635,
   "background_name": "tan"
  },
@@ -587,7 +587,7 @@
   "n_key": 2,
   "n_chromatic": 2,
   "chromatic_covered": 2,
-  "score": 20.35,
+  "score": 20.26,
   "clothes_share": 1.0,
   "background_name": "mid grey"
  },
@@ -595,7 +595,7 @@
   "n_key": 3,
   "n_chromatic": 3,
   "chromatic_covered": 3,
-  "score": 30.87,
+  "score": 30.89,
   "clothes_share": 0.833,
   "background_name": "espresso"
  },
@@ -603,7 +603,7 @@
   "n_key": 4,
   "n_chromatic": 4,
   "chromatic_covered": 4,
-  "score": 41.54,
+  "score": 41.57,
   "clothes_share": 0.817,
   "background_name": "petrol"
  },
@@ -611,7 +611,7 @@
   "n_key": 4,
   "n_chromatic": 2,
   "chromatic_covered": 2,
-  "score": 23.4,
+  "score": 23.21,
   "clothes_share": 0.366,
   "background_name": "denim blue"
  },
@@ -619,7 +619,7 @@
   "n_key": 3,
   "n_chromatic": 1,
   "chromatic_covered": 1,
-  "score": 11.77,
+  "score": 11.75,
   "clothes_share": 0.175,
   "background_name": "pale grey"
  },
@@ -627,7 +627,7 @@
   "n_key": 4,
   "n_chromatic": 4,
   "chromatic_covered": 4,
-  "score": 42.7,
+  "score": 42.75,
   "clothes_share": 0.813,
   "background_name": "black"
  },
@@ -635,7 +635,7 @@
   "n_key": 4,
   "n_chromatic": 3,
   "chromatic_covered": 3,
-  "score": 34.8,
+  "score": 34.72,
   "clothes_share": 0.214,
   "background_name": "black"
  },
@@ -643,7 +643,7 @@
   "n_key": 4,
   "n_chromatic": 3,
   "chromatic_covered": 3,
-  "score": 35.83,
+  "score": 35.7,
   "clothes_share": 0.096,
   "background_name": "black"
  },
@@ -651,7 +651,7 @@
   "n_key": 4,
   "n_chromatic": 3,
   "chromatic_covered": 3,
-  "score": 35.24,
+  "score": 35.28,
   "clothes_share": 0.203,
   "background_name": "black"
  },
@@ -659,7 +659,7 @@
   "n_key": 4,
   "n_chromatic": 4,
   "chromatic_covered": 4,
-  "score": 41.47,
+  "score": 41.51,
   "clothes_share": 0.946,
   "background_name": "forest"
  },
@@ -667,7 +667,7 @@
   "n_key": 3,
   "n_chromatic": 2,
   "chromatic_covered": 2,
-  "score": 22.73,
+  "score": 22.56,
   "clothes_share": 0.163,
   "background_name": "mid grey"
  },
@@ -675,7 +675,7 @@
   "n_key": 4,
   "n_chromatic": 2,
   "chromatic_covered": 2,
-  "score": 23.63,
+  "score": 23.59,
   "clothes_share": 0.369,
   "background_name": "sky"
  },
@@ -683,7 +683,7 @@
   "n_key": 4,
   "n_chromatic": 2,
   "chromatic_covered": 2,
-  "score": 28.72,
+  "score": 28.46,
   "clothes_share": 0.4,
   "background_name": "sky"
  },
@@ -691,7 +691,7 @@
   "n_key": 4,
   "n_chromatic": 3,
   "chromatic_covered": 3,
-  "score": 34.17,
+  "score": 34.14,
   "clothes_share": 0.69,
   "background_name": "rust"
  },
@@ -699,7 +699,7 @@
   "n_key": 4,
   "n_chromatic": 2,
   "chromatic_covered": 2,
-  "score": 23.37,
+  "score": 23.35,
   "clothes_share": 0.132,
   "background_name": "black"
  },
@@ -707,7 +707,7 @@
   "n_key": 4,
   "n_chromatic": 4,
   "chromatic_covered": 4,
-  "score": 44.35,
+  "score": 44.33,
   "clothes_share": 0.667,
   "background_name": "cream"
  },
@@ -715,7 +715,7 @@
   "n_key": 4,
   "n_chromatic": 4,
   "chromatic_covered": 4,
-  "score": 44.01,
+  "score": 44.08,
   "clothes_share": 0.66,
   "background_name": "cream"
  },
@@ -723,7 +723,7 @@
   "n_key": 4,
   "n_chromatic": 4,
   "chromatic_covered": 4,
-  "score": 42.24,
+  "score": 42.32,
   "clothes_share": 0.636,
   "background_name": "cream"
  },
@@ -731,7 +731,7 @@
   "n_key": 4,
   "n_chromatic": 3,
   "chromatic_covered": 3,
-  "score": 33.33,
+  "score": 33.29,
   "clothes_share": 0.287,
   "background_name": "cream"
  },
@@ -739,7 +739,7 @@
   "n_key": 4,
   "n_chromatic": 3,
   "chromatic_covered": 3,
-  "score": 33.12,
+  "score": 33.18,
   "clothes_share": 0.566,
   "background_name": "cream"
  },
@@ -747,7 +747,7 @@
   "n_key": 4,
   "n_chromatic": 4,
   "chromatic_covered": 4,
-  "score": 44.22,
+  "score": 43.84,
   "clothes_share": 0.896,
   "background_name": "cream"
  },
@@ -755,7 +755,7 @@
   "n_key": 4,
   "n_chromatic": 3,
   "chromatic_covered": 3,
-  "score": 32.01,
+  "score": 32.08,
   "clothes_share": 0.533,
   "background_name": "off-black"
  },
@@ -763,7 +763,7 @@
   "n_key": 4,
   "n_chromatic": 3,
   "chromatic_covered": 3,
-  "score": 32.33,
+  "score": 32.25,
   "clothes_share": 0.867,
   "background_name": "olive"
  },
@@ -771,7 +771,7 @@
   "n_key": 4,
   "n_chromatic": 2,
   "chromatic_covered": 2,
-  "score": 22.02,
+  "score": 22.09,
   "clothes_share": 0.561,
   "background_name": "olive"
  },
@@ -779,7 +779,7 @@
   "n_key": 1,
   "n_chromatic": 1,
   "chromatic_covered": 1,
-  "score": 12.89,
+  "score": 12.76,
   "clothes_share": 0.617,
   "background_name": "white"
  },
@@ -787,7 +787,7 @@
   "n_key": 4,
   "n_chromatic": 3,
   "chromatic_covered": 3,
-  "score": 33.18,
+  "score": 33.28,
   "clothes_share": 0.609,
   "background_name": "black"
  },
@@ -795,7 +795,7 @@
   "n_key": 2,
   "n_chromatic": 0,
   "chromatic_covered": 0,
-  "score": 3.69,
+  "score": 3.53,
   "clothes_share": 0.586,
   "background_name": "oatmeal"
  },
@@ -803,7 +803,7 @@
   "n_key": 4,
   "n_chromatic": 3,
   "chromatic_covered": 3,
-  "score": 32.72,
+  "score": 32.68,
   "clothes_share": 0.265,
   "background_name": "off-black"
  },
@@ -811,7 +811,7 @@
   "n_key": 4,
   "n_chromatic": 3,
   "chromatic_covered": 3,
-  "score": 33.99,
+  "score": 34.019999999999996,
   "clothes_share": 0.533,
   "background_name": "black"
  },
@@ -819,7 +819,7 @@
   "n_key": 4,
   "n_chromatic": 2,
   "chromatic_covered": 2,
-  "score": 23.67,
+  "score": 23.740000000000002,
   "clothes_share": 0.775,
   "background_name": "white"
  },
@@ -827,7 +827,7 @@
   "n_key": 4,
   "n_chromatic": 2,
   "chromatic_covered": 2,
-  "score": 23.88,
+  "score": 23.83,
   "clothes_share": 0.593,
   "background_name": "off-black"
  },
@@ -835,7 +835,7 @@
   "n_key": 2,
   "n_chromatic": 1,
   "chromatic_covered": 1,
-  "score": 11.71,
+  "score": 11.67,
   "clothes_share": 0.83,
   "background_name": "white"
  },
@@ -843,7 +843,7 @@
   "n_key": 4,
   "n_chromatic": 4,
   "chromatic_covered": 4,
-  "score": 41.47,
+  "score": 41.51,
   "clothes_share": 0.946,
   "background_name": "forest"
  },
@@ -851,7 +851,7 @@
   "n_key": 4,
   "n_chromatic": 4,
   "chromatic_covered": 4,
-  "score": 44.01,
+  "score": 44.08,
   "clothes_share": 0.66,
   "background_name": "cream"
  },
@@ -859,7 +859,7 @@
   "n_key": 4,
   "n_chromatic": 4,
   "chromatic_covered": 4,
-  "score": 42.24,
+  "score": 42.32,
   "clothes_share": 0.636,
   "background_name": "cream"
  },
@@ -867,7 +867,7 @@
   "n_key": 4,
   "n_chromatic": 3,
   "chromatic_covered": 3,
-  "score": 32.01,
+  "score": 32.08,
   "clothes_share": 0.533,
   "background_name": "off-black"
  },
@@ -875,7 +875,7 @@
   "n_key": 4,
   "n_chromatic": 3,
   "chromatic_covered": 3,
-  "score": 32.33,
+  "score": 32.25,
   "clothes_share": 0.867,
   "background_name": "olive"
  },
@@ -883,7 +883,7 @@
   "n_key": 4,
   "n_chromatic": 2,
   "chromatic_covered": 2,
-  "score": 22.02,
+  "score": 22.09,
   "clothes_share": 0.561,
   "background_name": "olive"
  },
@@ -891,7 +891,7 @@
   "n_key": 4,
   "n_chromatic": 3,
   "chromatic_covered": 3,
-  "score": 31.49,
+  "score": 31.45,
   "clothes_share": 0.66,
   "background_name": "black"
  }
