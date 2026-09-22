@@ -1,10 +1,10 @@
 """One sheet per slot, for looking at the whole catalogue on an iPad."""
 import sys, os, csv, collections
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, '/home/user/relatively-normal')
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 from contact_sheet import sheet
 
-ROOT = '/home/user/relatively-normal'
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 OUT = ROOT + '/content/catalogue/sheets'
 FAM_ORDER = ['black', 'grey', 'cool neutral', 'white', 'warm neutral', 'brown',
              'red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink']

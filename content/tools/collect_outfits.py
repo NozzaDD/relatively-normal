@@ -14,7 +14,7 @@ modified.
 """
 import os, sys, csv, json, glob, argparse, collections
 
-ROOT = '/home/user/relatively-normal'
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 CAT = ROOT + '/content/catalogue'
 OUT = ROOT + '/content/outfits'
 

@@ -2,7 +2,7 @@
 import csv, json, glob, os, re, sys, collections
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-ROOT = '/home/user/relatively-normal'
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 CAT = ROOT + '/content/catalogue'
 FIELDS = ['product_id', 'batch_id', 'shop', 'shop_type', 'slot', 'garment_type',
           'material_visible', 'pattern', 'weight', 'formality', 'shot_type',

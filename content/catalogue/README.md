@@ -9,11 +9,11 @@ unpriced or unlabelled — missing information is recorded as missing.
 | | |
 |---|---|
 | Product images in the index | 636 |
-| Products (distinct pieces) | 463 |
+| Products (distinct pieces) | 476 |
 | Shop batches | 62 |
-| Products with a usable image | 463 |
+| Products with a usable image | 476 |
 | Inspiration images read for colour | 112 |
-| Size added to the repository | 22.6 MB catalogue, 4.8 MB boards |
+| Size added to the repository | 72.4 MB catalogue, 4.8 MB boards |
 
 **Files.** `products.csv` one row per product · `inspiration.csv` one row per
 inspiration image · `coverage.csv` which products can carry which colour in which
@@ -37,11 +37,11 @@ not the brand, so those rows stay `input needed` however obvious the piece looks
 
 | Field | given | looked up | guessed | input needed |
 |---|---|---|---|---|
-| brand | 350 | 0 | 32 | 81 |
-| product_name | 215 | 0 | 0 | 248 |
-| material | 118 | 0 | 0 | 345 |
-| price | 218 | 0 | 0 | 245 |
-| product_url | 0 | 0 | 0 | 463 |
+| brand | 363 | 0 | 32 | 81 |
+| product_name | 228 | 0 | 0 | 248 |
+| material | 124 | 0 | 0 | 352 |
+| price | 231 | 0 | 0 | 245 |
+| product_url | 0 | 0 | 0 | 476 |
 
 **Product URLs are all `input needed`.** Shop sites are blocked from the
 environment this ran in: every HTTPS request to a brand domain came back 403 at
@@ -57,17 +57,17 @@ the engine uses, its neutral flag, a family and a plain name from a closed list.
 
 | Family | Products |
 |---|---|
-| black | 129 |
+| black | 132 |
 | brown | 79 |
-| warm neutral | 75 |
-| blue | 49 |
-| grey | 34 |
+| warm neutral | 77 |
+| blue | 52 |
+| grey | 36 |
 | red | 25 |
 | yellow | 21 |
 | white | 20 |
 | cool neutral | 12 |
-| orange | 8 |
-| green | 7 |
+| orange | 9 |
+| green | 9 |
 | pink | 2 |
 | purple | 2 |
 
@@ -85,7 +85,7 @@ pale blue is filed under `blue` and carries the neutral flag separately.
 | colour_confidence | Products |
 |---|---|
 | high | 65 |
-| medium | 285 |
+| medium | 298 |
 | low | 113 |
 
 `low` means one of: the piece was only ever photographed on a model, the mask left
@@ -104,13 +104,13 @@ readings disagree by a median of 1.1, a 90th percentile of 4.5 and a worst case 
 
 | Asset type | Count | |
 |---|---|---|
-| flat cut-out | 86 | packshot, background removed |
+| flat cut-out | 99 | packshot, background removed |
 | on-model cut-out | 227 | person removed from the page, then cropped to the band where the piece sits |
 | crop tile | 150 | a clean rectangle of the page, no UI and no text |
 
 | Quality | Count |
 |---|---|
-| good | 385 |
+| good | 398 |
 | usable | 21 |
 | weak | 57 |
 
@@ -128,7 +128,7 @@ image, its three colours, the product id, the brand and a confidence mark
 
 <img src="sheets/multiple.jpg" width="760">
 
-**top — 119 products**
+**top — 132 products**
 
 <img src="sheets/top.jpg" width="760">
 
@@ -241,34 +241,3 @@ leaves anything validated alone, and refreshes names, brands and links for
 everything else from the catalogue. Every board and every Note references a
 `product_id`, so a correction made once flows to all of them.
 
-
-## The by-eye check
-
-Sixty products, sampled across every colour family, looked at on two contact
-sheets against their recorded name. Counted strictly:
-
-| | Products | Share |
-|---|---|---|
-| The name is right | 37 | 62% |
-| Arguable — the right family, a neighbouring name (cream called white, brick called rust, oatmeal called tan) | 12 | 20% |
-| Wrong | 11 | 18% |
-
-The eleven wrong ones fall into four groups, and they are worth knowing because
-they tell you which rows to distrust:
-
-1. **Page screenshots with no cut-out.** On a listing or detail page the largest
-   thing is often the page itself or a second garment, and that is what gets
-   read. Every one of these has `asset_type` `tile` and a `colour_confidence` of
-   `low` or `medium`.
-2. **Skin.** A close-up of hands or a face-and-shoulder crop reads as `rust` or
-   `espresso`. The skin mask switches itself off when masking would leave
-   nothing, which is right for a tan coat and wrong for a photograph of hands.
-3. **Very dark browns called black.** Partly fixed — a warm hue with real chroma
-   below L\* 19 is now `espresso` rather than `black` — but a dark brown that has
-   lost its chroma to a shadow still reads black.
-4. **Pale warm against pale cool.** `cream` and `white`, `oatmeal` and `tan`,
-   sit close enough that a single reading can fall either side. This is most of
-   the arguable column.
-
-Every one of these is visible in the row itself: they are the rows with a tile
-asset, a low colour confidence, or a dominant share under about 45%.

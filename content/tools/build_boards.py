@@ -1,13 +1,13 @@
 """Build the six boards: specs from the picker, images from the catalogue."""
 import sys, os, json, csv, collections
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, '/home/user/relatively-normal')
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 from PIL import Image
 from engine import colour as C
 import inspiration_colours as I
 import make_boards
 
-ROOT = '/home/user/relatively-normal'
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 OUT = ROOT + '/content/boards/v2'
 
 # the owner writes the words; these are drafts, labelled "not my voice yet"

@@ -1,5 +1,6 @@
 import csv, collections, json, os
-ROOT='/home/user/relatively-normal'
+import os
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 rows=list(csv.DictReader(open(ROOT+'/content/catalogue/products.csv')))
 insp=list(csv.DictReader(open(ROOT+'/content/catalogue/inspiration.csv')))
 st=json.load(open(ROOT+'/content/catalogue/_stability.json'))

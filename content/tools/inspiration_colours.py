@@ -13,7 +13,7 @@ from colour_names import classify
 from engine.matcher import extract_colours
 from engine import colour as C
 
-ROOT = '/home/user/relatively-normal'
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 TOL = 13.0
 
 

@@ -7,11 +7,11 @@ tall enough to be a whole figure is cropped to the band where its own slot sits.
 """
 import sys, os, json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, '/home/user/relatively-normal')
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 import csv
 from PIL import Image
 
-ROOT = '/home/user/relatively-normal'
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 FIGURE = 1.55                    # alpha bbox h/w above this is a person, not a packshot
 BAND = {'layer': (0.00, 0.80), 'dress': (0.00, 1.00), 'top': (0.04, 0.56),
         'base': (0.04, 0.56), 'bottom': (0.42, 1.00), 'shoes': (0.74, 1.00),

@@ -12,7 +12,7 @@ import imglib
 from engine.matcher import extract_colours
 from engine import colour as C
 
-ROOT = '/home/user/relatively-normal'
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 CAT = ROOT + '/content/catalogue'
 UNSTABLE = 5.0
 

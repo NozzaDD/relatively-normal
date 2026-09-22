@@ -18,7 +18,7 @@ Writes
 """
 import sys, os, json, csv, collections
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, '/home/user/relatively-normal')
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 import numpy as np
 from PIL import Image
 from scipy.cluster.vq import kmeans2
@@ -28,7 +28,7 @@ from make_assets import photo_region, fit
 from contact_sheet import sheet
 from engine import colour as EC
 
-ROOT = '/home/user/relatively-normal'
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 CAT = ROOT + '/content/catalogue'
 OUT = CAT + '/variants'
 

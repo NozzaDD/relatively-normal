@@ -13,7 +13,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from PIL import Image, ImageFilter, ImageChops
 import imglib
 
-ROOT = '/home/user/relatively-normal'
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 ASSETS = ROOT + '/content/catalogue/assets'
 MAXSIDE = 1200
 
