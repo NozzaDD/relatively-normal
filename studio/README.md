@@ -43,11 +43,16 @@ and in the export. Choices apply at once in the browser; **Export choices**
 hands over `asset-choices.json`, which goes in `content/catalogue/` for the
 build script to read.
 
-**Adjust box** opens every screenshot of the product (page UI trimmed), best
-first: arrows or the filmstrip move between them, the counter reads *2 of 5*,
-and **Use this one** starts the product's box on that image, prefilled with
-its item box. **Add box** draws further boxes on the same image; each gets a
-slot from the buttons and an optional colour name, and each becomes its own
+**Adjust box** opens every *version* of the product, not just every screenshot:
+its cut-out, and for each screenshot the whole cut-out, the item box, the
+person box and the whole photo. Arrows or the filmstrip move between them and
+the counter counts them all. Whichever you pick, the whole uncropped image is
+shown with that version's box on it, so a crop that cut too much can be
+widened as well as tightened; a cut-out is shown on the board's own off-white,
+and a box drawn on one keeps its transparency. **Use this one** takes the
+version whole. Nothing is drawn over the picture except boxes and their
+handles — the labels sit in the header. **Add box** draws further boxes on the
+same image; each gets a slot from the buttons and an optional colour name, and each becomes its own
 product — the parent's id plus a suffix (`B062-P018-S1`), the parent's batch,
 shop and brand with confidence inherited and never upgraded, your slot and
 colour name, and a runtime crop of that box as its image. The new piece is on
@@ -55,7 +60,12 @@ the shelf at once; its colours are read from the box region by the build
 script at the next rebuild. The parent stays in the catalogue and you decide
 whether it is hidden or also on the shelf. Where a page is plainly a listing
 grid, **Suggested boxes** offers the detected cells to accept, adjust or delete
-one by one.
+one by one. Each Review card says how many photos the product has, and
+**More than one photo** narrows the list to those.
+
+**If the trim changes**, boxes already drawn are moved onto the new crop rather
+than thrown away — in `content/catalogue/asset-choices.json` by
+`migrate_trim.py`, and in this browser's own storage when the desk next loads.
 
 **Pull in Working Copy before saving an export.** A push of
 `asset-choices.json` to `main` makes GitHub rebuild the shelf and commit the

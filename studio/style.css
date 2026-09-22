@@ -245,7 +245,11 @@ button.on { background: var(--accent); color: #fff; border-color: var(--accent);
 .rcard { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 8px; }
 .rcard.decided { border-color: var(--accent); }
 .rcard.hidden-card { opacity: .5; }
-.rhead { font-size: 12px; color: var(--muted); margin-bottom: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.rhead { font-size: 12px; color: var(--muted); margin-bottom: 6px; display: flex; gap: 6px; align-items: baseline; }
+.rhead .rwho { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+/* the photo count never gets ellipsised away: it is what the filter sorts on */
+.rhead .rphotos { flex: 0 0 auto; margin-left: auto; }
+.rhead .rphotos.many { color: var(--ink); font-weight: 600; }
 .versions { display: flex; gap: 6px; overflow-x: auto; }
 .version { flex: 0 0 auto; width: 76px; padding: 2px; border: 2px solid transparent; border-radius: 8px; background: none; min-height: 0; display: flex; flex-direction: column; align-items: center; gap: 3px; }
 .version.chosen { border-color: #3a7bd5; }
@@ -256,9 +260,12 @@ button.on { background: var(--accent); color: #fff; border-color: var(--accent);
 
 .adjust-inner { max-width: 720px; }
 .adjust-wrap { position: relative; overflow: auto; max-height: 76vh; touch-action: none; user-select: none; -webkit-user-select: none; }
+/* a cut-out is shown on the board's own off-white, never on white or a checker */
+.adjust-wrap.on-ground { background: var(--ground); }
+.adj-version { font-size: 13px; font-weight: 600; }
+.adj-sel { font-size: 12px; color: #fff; background: #3a7bd5; border-radius: 999px; padding: 2px 9px; }
 .adjust-wrap img { display: block; width: 100%; height: auto; }
 .adjust-box { position: absolute; border: 2px solid rgba(58,123,213,.75); pointer-events: none; }
-.adjust-box .bl { position: absolute; left: 0; top: 0; font-size: 11px; line-height: 1; padding: 2px 5px; background: rgba(58,123,213,.85); color: #fff; border-radius: 0 0 6px 0; white-space: nowrap; }
 .adjust-box.sel { border-color: #3a7bd5; box-shadow: 0 0 0 9999px rgba(30,26,22,.35); }
 .adjust-box.sel::after { content: ""; position: absolute; right: -9px; bottom: -9px; width: 18px; height: 18px; background: #3a7bd5; border-radius: 50%; }
 .adjust-box.main { border-style: solid; }
@@ -270,14 +277,14 @@ button.on { background: var(--accent); color: #fff; border-color: var(--accent);
 .adjust-wrap { max-height: 58vh; }
 .adj-strip { display: flex; gap: 6px; padding: 6px 10px; overflow-x: auto; border-bottom: 1px solid var(--line); }
 .adj-strip:empty { display: none; }
-.adj-strip img { height: 54px; width: auto; border: 2px solid transparent; border-radius: 6px; cursor: pointer; }
+.adj-strip img { height: 54px; width: auto; border: 2px solid transparent; border-radius: 6px; cursor: pointer; background: var(--ground); }
 .adj-strip img.on { border-color: #3a7bd5; }
 .adj-panel { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; padding: 8px 10px; border-top: 1px solid var(--line); font-size: 13px; min-height: 48px; }
 .adj-panel .field { min-height: 34px; padding: 4px 8px; font-size: 13px; width: 140px; }
 .adj-panel .slots { display: flex; gap: 4px; flex-wrap: wrap; }
 .adj-panel .slots button { min-height: 32px; padding: 3px 8px; font-size: 12px; border-radius: 999px; }
 .adj-panel .slots button.on { background: var(--accent); color: #fff; border-color: var(--accent); }
-.adj-panel .hint { color: var(--muted); }
+.adj-panel .adj-hint { color: var(--muted); }   /* never .hint: that one is absolute */
 .cell .cropwrap { position: relative; width: 100%; height: calc(100% - 18px); overflow: hidden; }
 .cell .cropwrap img { position: absolute; max-width: none; }
 

@@ -253,9 +253,14 @@ await page.evaluate(() => { localStorage.removeItem('rn.studio.choices.v1'); });
 await page.reload();
 await page.waitForFunction(() => window.__studio?.products?.length > 0, null, { timeout: 20000 });
 await page.waitForTimeout(300);
-const multi = await page.evaluate(() => {
-  const p = window.__studio.products.find((x) => !x.clean && x.images && x.images.length >= 3);
-  return p ? { pid: p.product_id, n: p.images.length, item1: p.images[1].item } : null;
+const multi = await page.evaluate(async () => {
+  const { productVersions } = await import('./js/data.js');
+  const p = window.__studio.products.find((x) => !x.clean && x.images && x.images.length >= 3
+    && x.images[1] && x.images[1].item);
+  if (!p) return null;
+  const v = productVersions(p);
+  return { pid: p.product_id, n: p.images.length, vers: v.length, item1: p.images[1].item,
+    itemIdx1: v.findIndex((x) => x.kind === 'item' && x.image === 1) };
 });
 ok('products with several screenshots carry them all', !!multi && multi.n >= 3, JSON.stringify(multi));
 await page.evaluate(() => window.__studio.setView('review'));
@@ -268,10 +273,14 @@ await page.evaluate((pid) => {
 await page.waitForTimeout(500);
 const adj1 = await page.evaluate(() => ({ counter: document.getElementById('adjCounter').textContent,
   strip: document.querySelectorAll('#adjStrip img').length, prevOff: document.getElementById('adjPrev').disabled }));
-ok('the counter reads 1 of n and the filmstrip shows every image', adj1.counter === `1 of ${multi.n}` && adj1.strip === multi.n && adj1.prevOff, JSON.stringify(adj1));
+ok('the counter reads 1 of n and the filmstrip shows every version', adj1.counter === `1 of ${multi.vers}`
+  && adj1.strip === multi.vers && adj1.prevOff, JSON.stringify(adj1));
 await page.click('#adjNext');
 await page.waitForTimeout(300);
-ok('the arrow moves to the next image', (await page.$eval('#adjCounter', (e) => e.textContent)) === `2 of ${multi.n}`);
+ok('the arrow moves to the next version', (await page.$eval('#adjCounter', (e) => e.textContent)) === `2 of ${multi.vers}`);
+// walk on to the item box of the second screenshot
+for (let i = 1; i < multi.itemIdx1; i++) await page.click('#adjNext');
+await page.waitForTimeout(300);
 await page.click('#adjUseImage');
 await page.waitForTimeout(200);
 const useOne = await page.evaluate(() => {
@@ -305,6 +314,15 @@ await page.evaluate((pid) => {
 }, target);
 await page.waitForTimeout(500);
 if (gridPid) {
+  // the cut-out opens first; the cells belong to the screenshot, so step to it
+  const sugIdx = await page.evaluate(async (pid) => {
+    const { productVersions } = await import('./js/data.js');
+    const p = window.__studio.productsById[pid];
+    const i = p.images.findIndex((e) => e.suggested && e.suggested.length >= 4);
+    return productVersions(p).findIndex((v) => v.base === 'photo' && v.image === i);
+  }, gridPid);
+  for (let i = 0; i < sugIdx; i++) await page.click('#adjNext');
+  await page.waitForTimeout(300);
   await page.click('#adjSuggest');
   await page.waitForTimeout(200);
   const nsug = await page.$$eval('.adjust-box.split', (e) => e.length);
@@ -349,6 +367,138 @@ ok('export choices carries the splits', Object.values(file2.choices).some((c) =>
 await page.evaluate(() => window.__studio.setView('grid'));
 const exp2 = await page.evaluate(async () => { const c = await window.__studio.renderCanvas(); return [c.width, c.height]; });
 ok('export renders with a cut piece on the board', exp2[0] === 2160);
+
+console.log('\n11. every version, nothing over the photo');
+await page.evaluate(() => { localStorage.removeItem('rn.studio.choices.v1'); });
+await page.reload();
+await page.waitForFunction(() => window.__studio?.products?.length > 0, null, { timeout: 20000 });
+await page.evaluate(() => window.__studio.setView('review'));
+await page.waitForTimeout(500);
+const wp = await page.evaluate(async () => {
+  const { productVersions } = await import('./js/data.js');
+  const p = window.__studio.products.find((x) => !x.clean && x.images && x.images.some((e) => e.whole));
+  return p ? { pid: p.product_id, n: productVersions(p).length, photos: p.images.length } : null;
+});
+ok('products carry whole cut-outs', !!wp, JSON.stringify(wp));
+ok('a one-photo product now has five versions, not one', wp.n >= 5, JSON.stringify(wp));
+await page.evaluate((pid) => {
+  const c = document.querySelector(`#reviewCards .rcard[data-pid="${pid}"]`);
+  c.scrollIntoView(); c.querySelector('.racts button').click();
+}, wp.pid);
+await page.waitForTimeout(600);
+const adj = await page.evaluate(() => ({
+  counter: document.getElementById('adjCounter').textContent,
+  version: document.getElementById('adjVersion').textContent,
+  strip: document.querySelectorAll('#adjStrip img').length,
+  overPhoto: [...document.querySelectorAll('#adjustWrap .adjust-box')].some((b) => b.textContent.trim()),
+  // nothing else may land on the picture either: .hint is absolute, so a
+  // label reusing that class floats over it
+  strayOverPhoto: (() => {
+    const w = document.getElementById('adjustWrap').getBoundingClientRect();
+    return [...document.querySelectorAll('#adjust *')].filter((n) => !n.children.length
+      && (n.textContent || '').trim() && !n.closest('#adjustWrap') && !n.closest('.adj-strip'))
+      .some((n) => { const r = n.getBoundingClientRect();
+        return r.bottom > w.top && r.top < w.bottom && r.right > w.left && r.left < w.right; });
+  })(),
+  labelHidden: document.getElementById('adjSelLabel').hidden,
+}));
+ok('the counter counts every version', adj.counter === `1 of ${wp.n}`, JSON.stringify(adj));
+ok('the filmstrip holds every version', adj.strip === wp.n, String(adj.strip));
+ok('the version is named in the header', adj.version.length > 0, adj.version);
+ok('nothing is drawn over the photo', adj.overPhoto === false && adj.strayOverPhoto === false, JSON.stringify(adj));
+// step to a whole cut-out and take it
+const wholeIdx = await page.evaluate(async (pid) => {
+  const { productVersions } = await import('./js/data.js');
+  return productVersions(window.__studio.productsById[pid]).findIndex((v) => v.kind === 'whole');
+}, wp.pid);
+for (let i = 0; i < wholeIdx; i++) await page.click('#adjNext');
+await page.waitForTimeout(400);
+const onWhole = await page.evaluate(() => ({
+  version: document.getElementById('adjVersion').textContent,
+  ground: document.getElementById('adjustWrap').classList.contains('on-ground'),
+  src: document.querySelector('#adjustWrap img').getAttribute('src'),
+}));
+ok('a whole cut-out is shown on the off-white ground', onWhole.ground && /whole\.webp$/.test(onWhole.src), JSON.stringify(onWhole));
+await page.click('#adjUseImage');
+await page.waitForTimeout(200);
+ok('taking it whole marks a box over all of it and names it in the header',
+  await page.evaluate(() => !document.getElementById('adjSelLabel').hidden
+    && document.getElementById('adjSelLabel').textContent === 'this product'));
+await page.click('#adjustUse');
+await page.waitForTimeout(400);
+const wc = await page.evaluate((pid) => window.__studio.choices[pid], wp.pid);
+ok('the choice is the whole cut-out', wc.choice === 'whole' && wc.base === 'whole', JSON.stringify(wc));
+const wplace = await page.evaluate(async (pid) => {
+  const el = await window.__studio.placeProduct(pid, 0.5, 0.5);
+  const d = document.querySelector(`[data-uid="${el.uid}"]`);
+  return { base: el.base, variant: el.variant, framed: d.classList.contains('tile'),
+    src: d.querySelector('img').getAttribute('src') };
+}, wp.pid);
+ok('placing it uses the cut-out and keeps its transparency',
+  wplace.base === 'whole' && !wplace.framed && /whole\.webp$/.test(wplace.src), JSON.stringify(wplace));
+const winfo = await page.evaluate(() => window.__studio.buildInfo().pieces.at(-1));
+ok('the info file records the base', winfo.image_base === 'whole');
+
+console.log('\n12. widening a crop, photo counts, the multi filter');
+await page.evaluate(() => window.__studio.setView('review'));
+await page.waitForTimeout(300);
+const heads = await page.$$eval('#reviewCards .rhead .rphotos', (e) => e.slice(0, 5).map((x) => x.textContent));
+ok('every card says how many photos', heads.length === 5 && heads.every((h) => /^\d+ photos?$/.test(h)), heads[0]);
+const nBefore = await page.$$eval('#reviewCards .rcard', (e) => e.length);
+await page.check('#rMulti');
+await page.waitForTimeout(300);
+const nAfter = await page.$$eval('#reviewCards .rcard', (e) => e.length);
+const multiCount = await page.evaluate(() => window.__studio.products.filter((p) => !p.clean && p.full && !p.parent_id && (p.images || []).length > 1).length);
+ok('"more than one photo" narrows to those', nAfter === multiCount && nAfter < nBefore, `${nBefore} → ${nAfter} (expect ${multiCount})`);
+await page.uncheck('#rMulti');
+await page.waitForTimeout(200);
+// widen a box beyond the crop it started from: the stylist must be able to
+// take back what a box cut off, not only tighten it
+const widen = await page.evaluate(async () => {
+  const { productVersions } = await import('./js/data.js');
+  for (const p of window.__studio.products) {
+    if (p.clean || p.parent_id || !(p.images || []).length) continue;
+    const v = productVersions(p);
+    const i = v.findIndex((x) => x.base === 'photo' && x.kind !== 'full'
+      && (p.images[x.image] || {})[x.kind] && p.images[x.image][x.kind][3] < 0.9);
+    if (i >= 0) return { pid: p.product_id, idx: i };
+  }
+  return null;
+});
+ok('there is a crop to widen', !!widen, JSON.stringify(widen));
+if (widen) {
+  await page.evaluate((pid) => {
+    const c = document.querySelector(`#reviewCards .rcard[data-pid="${pid}"]`);
+    c.scrollIntoView(); c.querySelector('.racts button').click();
+  }, widen.pid);
+  await page.waitForTimeout(500);
+  for (let i = 0; i < widen.idx; i++) await page.click('#adjNext');
+  await page.waitForTimeout(300);
+  await page.click('#adjUseImage');
+  await page.waitForTimeout(200);
+  const h0 = await page.$eval('.adjust-box.main', (b) => parseFloat(b.style.height));
+  // take the bottom-right handle and pull it down past where the box stopped
+  const h1 = await page.evaluate(() => {
+    const wrap = document.getElementById('adjustWrap');
+    const img = wrap.querySelector('img');
+    const b = document.querySelector('.adjust-box.main');
+    const fx = parseFloat(b.style.left) / 100 + parseFloat(b.style.width) / 100;
+    const fy = parseFloat(b.style.top) / 100 + parseFloat(b.style.height) / 100;
+    const at = (x, y) => {
+      const r = img.getBoundingClientRect();
+      return { clientX: r.left + x * r.width, clientY: r.top + y * r.height };
+    };
+    const ev = (type, x, y) => wrap.dispatchEvent(new PointerEvent(type,
+      { bubbles: true, cancelable: true, pointerId: 1, ...at(x, y) }));
+    wrap.scrollTop = Math.max(0, fy * img.clientHeight - wrap.clientHeight / 2);
+    ev('pointerdown', fx - 0.005, fy - 0.005);
+    ev('pointermove', fx, Math.min(1, fy + 0.2));
+    ev('pointerup', fx, Math.min(1, fy + 0.2));
+    return parseFloat(document.querySelector('.adjust-box.main').style.height);
+  });
+  ok('a crop that cut too much can be widened', h1 > h0 + 2, `${h0}% -> ${h1}%`);
+  await page.click('#adjustCancel');
+}
 
 console.log(`\n${pass} passed, ${fail} failed`);
 if (errors.length) console.log('page errors:\n  ' + errors.slice(0, 6).join('\n  '));

@@ -24,6 +24,7 @@ export function createStaticSource(base = '.') {
     assetUrl: (p) => url(p.asset),
     thumbUrl: (p) => url(p.thumb),
     fullUrl: (p, idx = 0) => { const e = imageEntry(p, idx); return url(e ? e.path : p.asset); },
+    wholeUrl: (p, idx = 0) => { const e = imageEntry(p, idx); return e && e.whole ? url(e.whole.path) : null; },
     inspirationUrl: (i) => url(i.image),
     inspirationThumbUrl: (i) => url(i.thumb),
   };
@@ -37,6 +38,7 @@ export function createMemorySource(catalogue, urls = {}) {
     assetUrl: urls.assetUrl || ((p) => p.asset),
     thumbUrl: urls.thumbUrl || ((p) => p.thumb),
     fullUrl: urls.fullUrl || ((p, idx = 0) => { const e = imageEntry(p, idx); return e ? e.path : p.asset; }),
+    wholeUrl: urls.wholeUrl || ((p, idx = 0) => { const e = imageEntry(p, idx); return e && e.whole ? e.whole.path : null; }),
     inspirationUrl: urls.inspirationUrl || ((i) => i.image),
     inspirationThumbUrl: urls.inspirationThumbUrl || ((i) => i.thumb),
   };
@@ -47,6 +49,28 @@ export function imageEntry(p, idx = 0) {
   if (p.images && p.images[idx]) return p.images[idx];
   if (idx === 0 && p.full) return { path: p.full.path, w: p.full.w, h: p.full.h, ...(p.boxes || {}) };
   return null;
+}
+
+/**
+ * Every version of a product the stylist can choose between: its cut-out, and
+ * for each screenshot the item box, the person box, the whole photo and the
+ * whole cut-out. `base` says which image a box is drawn on — the photo, or the
+ * cut-out, where a box keeps the transparency.
+ */
+export function productVersions(p) {
+  const out = [];
+  if (p.asset && p.asset_type !== 'crop') {
+    out.push({ kind: 'cutout', image: 0, base: 'asset', label: 'cut-out' });
+  }
+  const imgs = (p.images && p.images.length) ? p.images : (imageEntry(p, 0) ? [imageEntry(p, 0)] : []);
+  imgs.forEach((e, i) => {
+    const n = imgs.length > 1 ? ` ${i + 1}` : '';
+    if (e.whole) out.push({ kind: 'whole', image: i, base: 'whole', label: `whole cut-out${n}` });
+    if (e.item) out.push({ kind: 'item', image: i, base: 'photo', label: `item box${n}` });
+    if (e.person) out.push({ kind: 'person', image: i, base: 'photo', label: `person box${n}` });
+    out.push({ kind: 'full', image: i, base: 'photo', label: `full photo${n}` });
+  });
+  return out;
 }
 
 /** A stable id for the n-th box cut out of a product's image. */
@@ -70,13 +94,16 @@ export function derivedProducts(products, choices) {
       if (byId[id] || !sp.box) continue;
       const img = imageEntry(parent, sp.image || 0);
       if (!img) continue;
+      const base = sp.base || 'photo';
+      const src = base === 'whole' && img.whole ? img.whole : img;
       out.push({
         product_id: id, parent_id: pid, local: true,
         slot: sp.slot || parent.slot || '', garment_type: parent.garment_type || '',
         pattern: '', weight: parent.weight ?? null, formality: parent.formality ?? null,
         colours: [], colour_confidence: '', colour_stability: '',
         colour_name_text: sp.colour_name || '',
-        asset: img.path, thumb: null, asset_type: 'crop', asset_quality: 'good',
+        asset: src.path, thumb: null, asset_type: 'crop', asset_quality: 'good',
+        base,
         brand: parent.brand || '', brand_confidence: parent.brand_confidence || '',
         brand_role: parent.brand_role || '',
         product_name: '', product_name_confidence: 'input needed',
@@ -84,7 +111,7 @@ export function derivedProducts(products, choices) {
         price: '', price_confidence: 'input needed',
         product_url: '', product_url_confidence: 'input needed',
         image_source: parent.image_source || '', shop: parent.shop || '', used_in: [],
-        clean: false, full: { path: img.path, w: img.w, h: img.h }, boxes: null,
+        clean: false, full: { path: src.path, w: src.w, h: src.h }, boxes: null,
         images: parent.images || null, image: sp.image || 0,
         choice: 'custom', custom_box: sp.box, hidden: false,
         recoloured: false, recolour_source: '',

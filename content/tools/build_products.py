@@ -22,7 +22,7 @@ FIELDS = ['product_id', 'batch_id', 'shop', 'shop_type', 'slot', 'garment_type',
           # the desk's review decisions and the recoloured variants
           'shelf', 'asset_choice', 'asset_box', 'recoloured', 'recolour_source',
           # a piece the stylist cut out of another product's screenshot
-          'parent_id', 'asset_image']
+          'parent_id', 'asset_image', 'asset_base']
 
 
 def read_rows():
@@ -122,7 +122,8 @@ def variant_rows(base_by_id):
                  colour_name_text=x.get('colour_name_text', ''),
                  notes=f"recoloured from {x['source']} in CIELAB; colour simulated, not the brand's photo",
                  validated='', used_in='', shelf='', asset_choice='', asset_box='',
-                 recoloured='yes', recolour_source=x['source'], parent_id='', asset_image='')
+                 recoloured='yes', recolour_source=x['source'], parent_id='', asset_image='',
+                 asset_base='')
         out.append(d)
     # the other UNIQLO images of a recoloured style leave the shelf, replaced by the variants
     for style, rep in v.get('report', {}).items():
@@ -158,6 +159,8 @@ def split_rows(choices, by_id, review):
             entry = imgs[idx] if idx < len(imgs) and imgs[idx] else None
             if not entry or 'error' in entry:
                 continue
+            base = sp.get('base', 'photo')
+            src_entry = entry.get('whole') if base == 'whole' and entry.get('whole') else entry
             box = [float(v) for v in sp['box']]
             d = dict(parent)
             rid = f"{pid}-S{sp['n']}"
@@ -171,7 +174,8 @@ def split_rows(choices, by_id, review):
                      product_url='', product_url_confidence='input needed',
                      shot_type='crop of ' + parent['shot_type'], complete_in_frame='',
                      asset_type='crop', asset_quality='good',
-                     asset_path='content/catalogue/' + entry['path'], asset_image=idx,
+                     asset_path='content/catalogue/' + src_entry['path'], asset_image=idx,
+                     asset_base=base,
                      asset_choice='custom', asset_box=','.join(f'{v:.4f}' for v in box),
                      shelf='', recoloured='', recolour_source='',
                      notes=f'cut by hand from {pid} image {idx}', validated='', used_in='')
@@ -181,11 +185,12 @@ def split_rows(choices, by_id, review):
             for k in ('colour1_L', 'colour1_C', 'colour1_h', 'colour1_rel_chroma', 'colour1_neutral'):
                 d[k] = ''
             try:
-                with Image.open(CAT + '/' + entry['path']) as im:
+                with Image.open(CAT + '/' + src_entry['path']) as im:
                     W, H = im.size
-                    crop = im.convert('RGB').crop((int(box[0] * W), int(box[1] * H),
-                                                   int((box[0] + box[2]) * W), int((box[1] + box[3]) * H)))
-                cols, skin, kept = X.colours_for_image(crop, is_cutout=False)
+                    mode = 'RGBA' if base == 'whole' else 'RGB'
+                    crop = im.convert(mode).crop((int(box[0] * W), int(box[1] * H),
+                                                  int((box[0] + box[2]) * W), int((box[1] + box[3]) * H)))
+                cols, skin, kept = X.colours_for_image(crop, is_cutout=(base == 'whole'))
                 for i, c in enumerate(cols[:3], 1):
                     fam, nm, L, Cc, h, rel, nt = classify(c['hex'])
                     d[f'colour{i}_hex'] = c['hex']; d[f'colour{i}_share'] = round(c['share'], 3)
@@ -265,12 +270,14 @@ def main():
             validated=keep.get(pid, {}).get('validated', ''),
             used_in=keep.get(pid, {}).get('used_in', ''),
             shelf='', asset_choice='', asset_box='', recoloured='', recolour_source='',
-            parent_id='', asset_image='')
+            parent_id='', asset_image='', asset_base='')
         ch = choices.get(pid)
         if ch:
             d['asset_choice'] = ch.get('choice', '')
             d['asset_box'] = ','.join(str(v) for v in ch['box']) if ch.get('box') else ''
-            d['asset_image'] = ch.get('image', 0) if ch.get('choice') in ('custom', 'item', 'person', 'full') else ''
+            if ch.get('choice') in ('custom', 'item', 'person', 'full', 'whole'):
+                d['asset_image'] = ch.get('image', 0)
+                d['asset_base'] = ch.get('base', 'photo')
             if ch.get('hidden'):
                 d['shelf'] = 'hidden'
         for i, col in enumerate(cl[:3], 1):

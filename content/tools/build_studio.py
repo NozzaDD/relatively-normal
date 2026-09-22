@@ -71,10 +71,14 @@ def image_list(rv, sources):
     for i, e in enumerate(rv.get('images') or []):
         if not e or 'error' in e:
             continue
-        out.append(dict(path='full/' + os.path.basename(e['path']), w=e['w'], h=e['h'],
-                        item=e.get('item'), person=e.get('person'),
-                        suggested=e.get('suggested') or [],
-                        source=sources[i] if i < len(sources) else ''))
+        d = dict(path='full/' + os.path.basename(e['path']), w=e['w'], h=e['h'],
+                 item=e.get('item'), person=e.get('person'),
+                 suggested=e.get('suggested') or [],
+                 source=sources[i] if i < len(sources) else '')
+        if e.get('whole'):
+            d['whole'] = dict(path='full/' + os.path.basename(e['whole']['path']),
+                              w=e['whole']['w'], h=e['whole']['h'])
+        out.append(d)
     return out
 
 
@@ -126,6 +130,7 @@ def build_products(rows, review):
             parent_id=n(r.get('parent_id')),
             choice=n(r.get('asset_choice')) or None,
             custom_box=parse_box(r.get('asset_box')),
+            base=n(r.get('asset_base')) or 'photo',
             hidden=n(r.get('shelf')) == 'hidden',
             recoloured=n(r.get('recoloured')) == 'yes',
             recolour_source=n(r.get('recolour_source')),
@@ -193,18 +198,34 @@ def copy_assets(products, rows_by_id):
             keep.add(pid + '.webp')
             shutil.copyfile(src, f'{a_dir}/{pid}.webp')
         for e in p['images'] or []:
-            name = os.path.basename(e['path'])
-            keep_full.add(name)
-            shutil.copyfile(f"{CAT}/review/{name}", f"{f_dir}/{name}")
+            for src_name in [os.path.basename(e['path'])] + \
+                    ([os.path.basename(e['whole']['path'])] if e.get('whole') else []):
+                keep_full.add(src_name)
+                dst = f'{f_dir}/{src_name}'
+                src_f = f'{CAT}/review/{src_name}'
+                # incremental: only copy what is new or has changed
+                if not os.path.exists(dst) or os.path.getsize(dst) != os.path.getsize(src_f):
+                    shutil.copyfile(src_f, dst)
         # the thumb shows what the shelf will place: the chosen crop, or the cut-out
-        box = None
-        if p['full'] and p['choice'] in ('item', 'person', 'full', 'custom'):
-            box = (p['custom_box'] if p['choice'] == 'custom' else
-                   [0, 0, 1, 1] if p['choice'] == 'full' else
-                   (p['images'][p['image']] if p['images'] and p['image'] < len(p['images']) else p['boxes'])[p['choice']])
+        box, base_path = None, None
+        entry = (p['images'][p['image']] if p['images'] and p['image'] < len(p['images']) else None)
+        if p['full'] and p['choice'] in ('item', 'person', 'full', 'custom', 'whole'):
+            if p['choice'] == 'whole':
+                box = [0, 0, 1, 1]
+            elif p['choice'] == 'custom':
+                box = p['custom_box']
+            elif p['choice'] == 'full':
+                box = [0, 0, 1, 1]
+            else:
+                box = (entry or p['boxes'] or {}).get(p['choice'])
+            if p.get('base') == 'whole' and entry and entry.get('whole'):
+                base_path = f"{ROOT}/studio/{entry['whole']['path']}"
+            else:
+                base_path = f"{ROOT}/studio/{p['full']['path']}"
         keep.add(pid + '.webp')
-        with Image.open(f"{ROOT}/studio/{p['full']['path']}" if box else src) as im:
-            t = crop_box(im.convert('RGB'), box) if box else im.convert('RGBA')
+        with Image.open(base_path if box else src) as im:
+            mode = 'RGBA' if (p.get('base') in ('whole', 'asset') or not box) else 'RGB'
+            t = crop_box(im.convert(mode), box) if box else im.convert('RGBA')
             t.thumbnail((THUMB, THUMB), Image.LANCZOS)
             t.save(f'{t_dir}/{pid}.webp', 'WEBP', quality=80, method=5)
     for d, k in ((a_dir, keep), (t_dir, keep), (f_dir, keep_full)):   # drop what the catalogue lost
@@ -276,7 +297,8 @@ def main():
                 hidden=sum(1 for p in products if p['hidden']),
                 recoloured=sum(1 for p in products if p['recoloured']),
                 derived=sum(1 for p in products if p['parent_id']),
-                images=sum(len(p['images'] or []) for p in products if not p['parent_id']))
+                images=sum(len(p['images'] or []) for p in products if not p['parent_id']),
+                whole_cutouts=sum(1 for p in products for e in (p['images'] or []) if e.get('whole')))
     json.dump(products, open(DATA + '/products.json', 'w'), separators=(',', ':'))
     json.dump(inspiration, open(DATA + '/inspiration.json', 'w'), separators=(',', ':'))
     json.dump(meta, open(DATA + '/meta.json', 'w'), indent=1)

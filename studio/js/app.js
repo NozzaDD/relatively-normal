@@ -10,7 +10,8 @@ import * as M from './model.js';
 import { metrics, isTile } from './render.js';
 import { rankByLook } from './colour.js';
 import * as X from './export.js';
-import { createReview, loadChoices, saveChoices, choicesFile, choiceBox, applyCrop } from './review.js';
+import { createReview, loadChoices, saveChoices, choicesFile, choiceBox, choiceBase,
+  applyCrop, migrateChoices } from './review.js';
 
 const $ = (id) => document.getElementById(id);
 const STORE = 'rn.studio.board.v2';
@@ -45,6 +46,11 @@ async function init() {
   S.productsById = indexById(S.products);
   S.inspById = indexInspiration(S.inspiration);
   S.choices = loadChoices();
+  try {
+    const mig = await fetch('data/trim-migration.json').then((r) => (r.ok ? r.json() : null));
+    const moved = migrateChoices(S.choices, mig);
+    if (moved) { saveChoices(S.choices); toast(`Moved ${moved} box(es) onto the new trim.`, 4000); }
+  } catch (e) { /* no migration file: nothing to move */ }
   loadSettings();
   buildFilterOptions(cat.meta);
   refreshDerived();
@@ -163,7 +169,9 @@ function renderShelf() {
       // no thumbnail file yet: show the crop straight from the screenshot
       const wrap = document.createElement('div');
       wrap.className = 'cropwrap';
-      img.src = S.source.fullUrl(p, p.image || 0);
+      img.src = p.base === 'whole' ? (S.source.wholeUrl(p, p.image || 0) || S.source.fullUrl(p, p.image || 0))
+        : S.source.fullUrl(p, p.image || 0);
+      // p.full already points at whichever image the box was drawn on
       img.onload = () => applyCrop(img, p.custom_box || [0, 0, 1, 1], cell.clientWidth, cell.clientHeight - 18, p.full.w, p.full.h);
       wrap.appendChild(img);
       cell.appendChild(wrap);
@@ -288,7 +296,7 @@ function renderBoard() {
   for (const el of M.stacked(S.board)) {
     const p = el.kind === 'product' ? S.productsById[el.product_id] : null;
     const insp = el.kind === 'inspiration' ? S.inspById[el.inspiration_id] : null;
-    const framed = isTile(el.kind, p?.asset_type, el.variant);
+    const framed = isTile(el.kind, p?.asset_type, el.variant, el.base);
     const d = document.createElement('div');
     d.className = `el ${framed ? 'tile' : 'cut'}${S.selected === el.uid ? ' sel' : ''}`;
     d.dataset.uid = el.uid;
@@ -307,7 +315,7 @@ function renderBoard() {
       const wrap = document.createElement('div');
       wrap.className = 'cropwrap';
       const l = M.cropLayout(el.crop);
-      img.src = S.source.fullUrl(p, el.image || 0);
+      img.src = X.elementUrl(S.source, p, el);
       img.style.width = `${l.imgW * 100}%`;
       img.style.height = `${l.imgH * 100}%`;
       img.style.left = `${l.left * 100}%`;
@@ -428,8 +436,17 @@ function placement(p) {
   const c = effectiveChoice(p, S.choices);
   const box = choiceBox(p, c);
   const image = (c && c.image) || p.image || 0;
-  if (box) return { variant: c.choice, crop: box, image, aspect: M.shownAspect(p, c.choice, box, image) };
-  return { variant: 'cutout', crop: null, image: 0, aspect: null };
+  const base = c ? choiceBase(c) : 'photo';
+  if (box) {
+    return { variant: c.choice, crop: box, image, base,
+      aspect: M.shownAspect(p, c.choice, box, image, base) };
+  }
+  // a whole cut-out with no box is placed as it is, like the catalogue's own
+  if (c && c.choice === 'whole') {
+    return { variant: 'whole', crop: [0, 0, 1, 1], image, base: 'whole',
+      aspect: M.shownAspect(p, 'whole', [0, 0, 1, 1], image, 'whole') };
+  }
+  return { variant: 'cutout', crop: null, image: 0, base: 'photo', aspect: null };
 }
 
 async function placeProduct(pid, x, y) {
@@ -441,6 +458,7 @@ async function placeProduct(pid, x, y) {
   const el = M.addElement(S.board, {
     kind: 'product', product_id: pid, x: clamp01(x), y: clamp01(y),
     w: defaultWidth(p.slot), aspect, variant: pl.variant, crop: pl.crop, image: pl.image,
+    base: pl.base,
   });
   renderBoard();
   return el;
@@ -720,7 +738,7 @@ async function openInfo(text) {
     M.addElement(b, { kind: 'product', product_id: p.product_id, x: pl.x ?? 0.5, y: pl.y ?? 0.5,
       w: pl.w ?? 0.3, rot: pl.rotation || 0, flip: !!pl.flip, z: pl.layer ?? 1,
       aspect: pl.aspect || 1, variant: p.image_variant || 'cutout', crop: p.image_crop || null,
-      image: p.image_index || 0 });
+      image: p.image_index || 0, base: p.image_base || 'photo' });
   }
   S.board = b;
   S.selected = null;

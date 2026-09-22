@@ -7,6 +7,14 @@
 import { FORMATS, dateSlug, labelOrder, swatchStrip } from './model.js';
 import { drawBoard } from './render.js';
 
+/** The picture an element shows: its asset, a screenshot, or a whole cut-out. */
+export function elementUrl(source, p, el) {
+  if (!el.crop) return source.assetUrl(p);
+  if (el.base === 'whole') return source.wholeUrl(p, el.image || 0) || source.assetUrl(p);
+  if (el.base === 'asset') return source.assetUrl(p);
+  return source.fullUrl(p, el.image || 0);
+}
+
 export function loadImage(src) {
   return new Promise((resolve, reject) => {
     const img = new Image();
@@ -27,8 +35,9 @@ export async function loadBoardImages(board, source, productsById, inspById) {
         if (i) out[el.uid] = await loadImage(source.inspirationUrl(i));
       } else {
         const p = productsById[el.product_id];
-        // a crop is drawn from the screenshot it was drawn on, never from the cut-out
-        if (p) out[el.uid] = await loadImage(el.crop ? source.fullUrl(p, el.image || 0) : source.assetUrl(p));
+        // a crop is drawn from the image it was drawn on: a screenshot, or a
+        // whole cut-out, which keeps its transparency
+        if (p) out[el.uid] = await loadImage(elementUrl(source, p, el));
       }
     } catch (e) { /* a missing image just does not draw */ }
   }));
@@ -99,6 +108,7 @@ export function buildInfo(board, productsById, inspById, { date = new Date() } =
       image_variant: el.variant || 'cutout',
       image_crop: el.crop ? el.crop.map(round4) : null,
       image_index: el.image || 0,
+      image_base: el.base || 'photo',
       // a piece cut out of another product's screenshot carries its parent
       parent_id: p.parent_id || '',
       source_image: (p.images && p.images[el.image || 0] && p.images[el.image || 0].source) || '',

@@ -193,5 +193,53 @@ ok('markdown leaves an unknown link empty', /\| 2 \|  \| loafers \| navy \|  \| 
     && f.choices['B062-P018'].splits[0].slot === 'shoes' && f.choices['B062-P018'].splits[0].colour_name === 'tan');
   ok('shownAspect uses the chosen image', Math.abs(M.shownAspect(parent, 'custom', [0, 0, 0.5, 0.5], 1) - 0.8) < 1e-9);
 }
-console.log(`\nafter 23 Sept: ${pass} passed, ${fail} failed`);
+
+// ------------------------------------------------------------- 24 Sept additions
+{
+  const { productVersions, imageEntry } = await import('../js/data.js');
+  const { choiceBox, choiceBase, baseSize, remapBox, migrateChoices } = await import('../js/review.js');
+  console.log('\nevery version');
+  const img0 = { path: 'full/X.jpg', w: 1000, h: 2000, item: [0, 0.5, 1, 0.5], person: [0, 0, 1, 1],
+    whole: { path: 'full/X-whole.webp', w: 500, h: 1500 }, suggested: [] };
+  const img1 = { path: 'full/X-1.jpg', w: 800, h: 800, item: [0.1, 0.1, 0.5, 0.5], person: [0, 0, 1, 1],
+    whole: { path: 'full/X-1-whole.webp', w: 400, h: 600 }, suggested: [] };
+  const P = { product_id: 'X', asset: 'assets/X.webp', asset_type: 'cutout_model', slot: 'top',
+    full: { path: img0.path, w: img0.w, h: img0.h }, images: [img0, img1], boxes: null };
+  const v = productVersions(P);
+  ok('one cut-out plus four versions per screenshot', v.length === 1 + 4 + 4, String(v.length));
+  ok('the cut-out comes first', v[0].kind === 'cutout' && v[0].base === 'asset');
+  ok('each screenshot brings a whole cut-out', v.filter((x) => x.kind === 'whole').length === 2);
+  ok('versions are labelled per screenshot', v.some((x) => x.label === 'item box 2'), v.map((x) => x.label).join(','));
+  ok('a listing grid with no whole cut-out just has fewer versions',
+    productVersions({ ...P, images: [{ ...img0, whole: undefined }] }).length === 4);
+  ok('a cut piece offers no asset version', productVersions({ ...P, asset_type: 'crop' })[0].kind !== 'cutout');
+
+  console.log('\nboxes and their base');
+  eq('the item box comes from its own screenshot', choiceBox(P, { choice: 'item', image: 1 }), img1.item);
+  ok('the cut-out has no box', choiceBox(P, { choice: 'cutout' }) === null);
+  ok('a whole cut-out has no box', choiceBox(P, { choice: 'whole', image: 0 }) === null);
+  eq('a custom box is kept as drawn', choiceBox(P, { choice: 'custom', box: [0.2, 0.2, 0.3, 0.3] }), [0.2, 0.2, 0.3, 0.3]);
+  ok('base defaults to the photo', choiceBase({ choice: 'custom' }) === 'photo');
+  ok('a box drawn on a cut-out keeps that base', choiceBase({ choice: 'custom', base: 'whole' }) === 'whole');
+  ok('the whole version is its own base', choiceBase({ choice: 'whole' }) === 'whole');
+  eq('base size follows the base', baseSize(P, { choice: 'custom', base: 'whole', image: 1 }), { w: 400, h: 600 });
+  eq('…and the photo otherwise', baseSize(P, { choice: 'custom', image: 1 }), { w: 800, h: 800 });
+  ok('aspect uses the cut-out when the box is on one',
+    Math.abs(M.shownAspect(P, 'custom', [0, 0, 1, 0.5], 1, 'whole') - (400 / 300)) < 1e-9);
+
+  console.log('\nmoving boxes onto a new trim');
+  // the old crop was the top half of a 1000×1000 original; the new one is all of it
+  eq('a box moves to the same pixels', remapBox([0, 0, 1, 1], [0, 0, 1000, 500, 1000, 1000], [0, 0, 1000, 1000, 1000, 1000]),
+    [0, 0, 1, 0.5]);
+  ok('a box that falls outside is dropped', remapBox([0, 0, 1, 1], [0, 0, 100, 100, 1000, 1000], [500, 500, 100, 100, 1000, 1000]) === null);
+  const ch = { X: { choice: 'custom', box: [0, 0, 1, 1], image: 0,
+    splits: [{ n: 1, image: 0, box: [0, 0, 1, 1] }] } };
+  const mig = { trim_version: 2, products: { X: { 0: { prev: [0, 0, 1000, 500, 1000, 1000], now: [0, 0, 1000, 1000, 1000, 1000] } } } };
+  const n = migrateChoices(ch, mig);
+  ok('both the product box and its splits move', n === 2 && ch.X.box[3] === 0.5 && ch.X.splits[0].box[3] === 0.5, JSON.stringify(ch.X));
+  ok('and are marked so they never move twice', ch.X.trim === 2 && migrateChoices(ch, mig) === 0);
+  ok('a box on a cut-out is left alone', migrateChoices({ Y: { choice: 'custom', base: 'whole', box: [0, 0, 1, 1] } },
+    { trim_version: 2, products: { Y: { 0: { prev: [0, 0, 10, 10, 10, 10], now: [0, 0, 5, 5, 10, 10] } } } }) === 0);
+}
+console.log(`\nafter 24 Sept: ${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);
