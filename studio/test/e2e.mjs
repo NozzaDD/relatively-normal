@@ -50,7 +50,14 @@ const counts = await page.evaluate(() => ({
 }));
 ok('products loaded', counts.products >= 463, JSON.stringify(counts));
 ok('inspiration loaded', counts.inspiration === 112, JSON.stringify(counts));
-ok('only clean cut-outs on the shelf by default', counts.cells > 50 && counts.cells < 120,
+// the gate is the measurement flat_lays.py makes, so the shelf is exactly the
+// products the data marks clean — not a hand-set range that drifts
+const cleanCount = await page.evaluate(() =>
+  window.__studio.products.filter((p) => p.clean && !p.hidden).length);
+ok('only measured-clean cut-outs on the shelf by default',
+  counts.cells === cleanCount && cleanCount > 0, `${counts.cells} cells, ${cleanCount} clean`);
+ok('the shelf is a real slice of the catalogue, not all of it',
+  counts.cells < counts.products / 2,
   `${counts.cells} cells`);
 ok('no page errors on load', errors.length === 0, errors.join(' | '));
 
@@ -266,6 +273,15 @@ ok('reopen restores placement', Math.abs(round.reopenedX - round.firstX) < 0.000
 ok('reopen restores the title and toggles', round.title.startsWith('Rust twice') && round.labels === true);
 
 console.log('\n12. autosave');
+// wait for the save to have landed before reloading: autosave runs off the
+// render, so reloading straight away raced it and failed here about one run in
+// three, which reads as a broken board rather than a fast test
+await page.waitForFunction(() => {
+  try {
+    const b = JSON.parse(localStorage.getItem('rn.studio.board.v2') || '{}');
+    return (b.elements || []).length > 0;
+  } catch (e) { return false; }
+}, null, { timeout: 5000 });
 await page.reload();
 await page.waitForFunction(() => window.__studio?.products?.length > 0, null, { timeout: 15000 });
 const restored = await page.evaluate(() => window.__studio.board.elements.length);

@@ -1,5 +1,5 @@
 """Fold the viewing rows + batch clustering + colour extraction into products.csv."""
-import csv, json, glob, os, re, sys, collections
+import csv, json, glob, os, re, sys, collections, unicodedata
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -22,7 +22,9 @@ FIELDS = ['product_id', 'batch_id', 'shop', 'shop_type', 'slot', 'garment_type',
           # the desk's review decisions and the recoloured variants
           'shelf', 'asset_choice', 'asset_box', 'recoloured', 'recolour_source',
           # a piece the stylist cut out of another product's screenshot
-          'parent_id', 'asset_image', 'asset_base']
+          'parent_id', 'asset_image', 'asset_base',
+          # where a brand that was not printed on the page came from
+          'brand_evidence']
 
 
 def read_rows():
@@ -44,10 +46,35 @@ def none(v):
     return '' if (v or '').strip().upper() in ('NONE', '', '-') else v.strip()
 
 
+def url_bars():
+    """Safari's address bar, read per screenshot by url_bar.py."""
+    try:
+        return json.load(open(CAT + '/_url_bars.json'))
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {'images': {}, 'batches': {}}
+
+
 def shop_of(batch_rows):
     """One shop per batch: the most common legible shop string."""
     c = collections.Counter(none(r['shop_text']).lower() for r in batch_rows if none(r['shop_text']))
     return c.most_common(1)[0][0] if c else ''
+
+
+def shop_for_product(images, bid, bars):
+    """The shop, from this product's own address bars first.
+
+    Per product, not per batch, because batches do span shops: the clustering
+    reads layout, and two shops with the same layout run together. Sixteen
+    batches disagree with themselves about the domain, so a batch majority
+    would file the minority under the wrong shop. The batch is the fallback,
+    the viewing pass the fallback after that.
+    """
+    c = collections.Counter(bars['images'].get(i, {}).get('domain', '') for i in images)
+    c.pop('', None)
+    if c:
+        return c.most_common(1)[0][0], 'own'
+    b = bars['batches'].get(bid, {}).get('domain', '')
+    return (b, 'batch') if b else ('', '')
 
 
 def shop_kind(batch_rows, shop):
@@ -80,7 +107,37 @@ def brand_roles():
 
 
 def norm(s):
-    return re.sub(r'[^a-z0-9]', '', (s or '').lower())
+    """A name squashed for comparison, accents folded: sezane.com is sézane."""
+    t = unicodedata.normalize('NFKD', (s or '').lower())
+    return re.sub(r'[^a-z0-9]', '', ''.join(c for c in t if not unicodedata.combining(c)))
+
+
+REGION = re.compile(r'^(de|ch|uk|fr|it|us|eu|at|nl|be|es|se|dk|jp)\.')
+
+
+def domain_label(domain):
+    """The shop's own name inside a domain: de.maxmara.com -> maxmara."""
+    return norm(REGION.sub('', (domain or '').lower()).split('.')[0])
+
+
+def canonical_brands():
+    """{squashed name: the name as the catalogue writes it}.
+
+    Only names the repository already holds: the brands/ files, and every
+    brand the viewing pass actually read off a page. A domain whose label is
+    not one of them yields no brand at all — inventing a label out of a domain
+    is exactly the invention CLAUDE.md forbids.
+    """
+    out = {}
+    for f in sorted(glob.glob(ROOT + '/brands/*.yaml')):
+        m = re.search(r'^name:\s*(.+)$', open(f).read(), re.M)
+        if m:
+            out[norm(m.group(1))] = m.group(1).strip().lower()
+    for r in read_rows().values():
+        b = none(r.get('brand_text', ''))
+        if b:
+            out.setdefault(norm(b), b.lower())
+    return out
 
 
 def load_json(path, default):
@@ -220,6 +277,8 @@ def main():
     for b in bat:
         if b['product_id'] in rows:
             by_batch[b['batch_id']].append(rows[b['product_id']])
+    bars = url_bars()
+    brand_names = canonical_brands()
     shops = {bid: shop_of(rs) for bid, rs in by_batch.items()}
     kinds = {bid: shop_kind(rs, shops[bid]) for bid, rs in by_batch.items()}
 
@@ -230,17 +289,34 @@ def main():
         a = assets.get(pid, {})
         c = cols.get(pid, {})
         cl = c.get('colours', [])
-        shop = shops.get(b['batch_id'], '')
+        domain, where = shop_for_product(b['images'], b['batch_id'], bars)
+        shop = domain or shops.get(b['batch_id'], '')
         kind = kinds.get(b['batch_id'], 'unknown')
+        label = brand_names.get(domain_label(domain)) if domain else None
+        if label:
+            # the domain is a brand the repository already holds, so the shop
+            # is that brand's own: this is what tells a label's site apart from
+            # a retailer's, and it works where no brand is printed on the page
+            kind = 'mono-brand'
+        elif domain:
+            kind = shop_kind(by_batch[b['batch_id']], domain)
 
         brand = none(r.get('brand_text', ''))
         bconf = 'given' if brand else ''
+        eviden = ''
         if not brand and kind == 'mono-brand':
             # the only guess allowed: another image in this batch named the shop
             # and every legible brand in it was that shop's own
             cands = {none(x['brand_text']) for x in by_batch[b['batch_id']] if none(x['brand_text'])}
             if len(cands) == 1:
                 brand, bconf = cands.pop(), 'guessed'
+        if not brand and label:
+            # a mono-brand shop's own domain names its own label. A domain is
+            # strong evidence but it is still not the page saying the brand, so
+            # it is never `given` — CLAUDE.md hard rule 2. A retailer's domain
+            # matches no filed brand and so sets the shop and nothing else.
+            brand, bconf = label, 'guessed'
+            eviden = 'URL bar, %s' % domain
         if not brand:
             bconf = 'input needed'
         name = none(r.get('product_name_text', ''))
@@ -255,7 +331,7 @@ def main():
             weight=r.get('weight', ''), formality=r.get('formality', ''),
             shot_type=r.get('shot_type', ''), complete_in_frame=r.get('complete_in_frame', ''),
             n_images=len(b['images']), image_paths=';'.join(b['images']),
-            brand=brand, brand_confidence=bconf,
+            brand=brand, brand_confidence=bconf, brand_evidence=eviden,
             brand_role=roles.get(norm(brand), 'not filed') if brand else 'not filed',
             product_name=name, product_name_confidence='given' if name else 'input needed',
             material=comp, material_confidence='given' if comp else 'input needed',

@@ -38,6 +38,21 @@ deleted or re-encoded.
 | `build_inspiration.py` | writes `inspiration.csv` |
 | `coverage_map.py` | writes `coverage.csv` — which product can carry which colour in which slot |
 | `pick_boards.py` | chooses the pieces for a board and runs the acceptance test |
+
+## Added 22 September 2026 — the URL bar and the flat lays
+
+| Script | What it does |
+|---|---|
+| `url_bar.py` | reads Safari's address bar off each screenshot and writes `_url_bars.json`. The bar's text is set larger than a tab title, which is how the page you are looking at is told from the tabs behind it. |
+| `flat_lays.py` | finds packshots on a plain backdrop, paints the shop's badges out with the backdrop's own colour, cuts them again, and rates the result by measurement: one connected piece, clear of the frame, no text inside. Writes `_flat_lays.json`; the shelf gate reads it. |
+
+- The backdrop is read from the four **corners**, not a ring around the photo:
+  a packshot is cropped close, so a ring runs through the garment's shoulders.
+- The frame test is made on the uncropped cut. A cut-out trimmed to its own
+  bounding box touches its own edges by construction, so measuring after the
+  crop says "touches the frame" about everything.
+- A word sitting **on** the garment is left alone. Painting it out first would
+  answer the "no text inside it" question by cheating, and would damage a print.
 | `make_boards.py` | renders a board to style-spec part B4 and B5 |
 | `build_boards.py` | the six board specs, and the renders |
 | `note_visuals.py` | re-renders the four made visuals without engine numbers |
