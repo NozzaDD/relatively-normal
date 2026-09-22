@@ -33,6 +33,7 @@ const S = {
   shown: [],
   taps: 0,
   review: null,
+  shelfPicture: {},                       // per product: which picture the shelf shows
 };
 window.__studio = S;                      // the test harness reaches in here
 
@@ -162,8 +163,14 @@ function renderShelf() {
     const img = document.createElement('img');
     img.loading = 'lazy';
     img.alt = p.garment_type || p.product_id;
-    if (p.thumb) {
+    const pics = X_pictures(p);
+    const shown = S.shelfPicture[p.product_id];
+    if (p.thumb && shown === undefined) {
       img.src = S.source.thumbUrl(p);
+      cell.appendChild(img);
+    } else if (shown !== undefined) {
+      // the stylist has flipped this one to another of its pictures
+      img.src = S.source.wholeUrl(p, shown) || S.source.fullUrl(p, shown);
       cell.appendChild(img);
     } else {
       // no thumbnail file yet: show the crop straight from the screenshot
@@ -185,6 +192,14 @@ function renderShelf() {
     const flag = p.recoloured ? 'simulated' : p.local ? 'new' : p.parent_id ? 'cut'
       : (!p.clean && !isReviewed(p, S.choices)) ? 'unreviewed'
       : p.asset_quality === 'weak' ? 'weak' : '';
+    if (pics.length > 1) {
+      const b = document.createElement('button');
+      b.className = 'pic-flip';
+      b.dataset.pic = p.product_id;
+      b.title = 'Show another picture of this product';
+      b.textContent = `${(shown ?? p.primary ?? 0) + 1}/${pics.length}`;
+      cell.appendChild(b);
+    }
     if (flag) {
       const w = document.createElement('span');
       w.className = 'weak'; w.textContent = flag;
@@ -386,6 +401,7 @@ function renderBoard() {
 
   renderHelpers();
   $('elementBar').hidden = !S.selected;
+  showPictureButton(S.selected);
   autosave();
 }
 
@@ -432,6 +448,35 @@ async function aspectOf(src) {
 }
 
 /** What the shelf places for a product: its cut-out, or the crop she chose. */
+/**
+ * Show a piece with another of its pictures, keeping where it sits and how big
+ * it is. A product page that held a flat lay and a shot on the model is two
+ * pictures of one thing; which one belongs on the board is a styling decision,
+ * not a cataloguing one.
+ */
+function nextPicture(el) {
+  const p = S.productsById[el.product_id];
+  const pics = X_pictures(p);
+  if (!pics.length) return;
+  const at = pics.findIndex((q) => q.i === (el.image || 0));
+  const next = pics[(at + 1 + pics.length) % pics.length];
+  el.image = next.i;
+  el.base = next.entry.whole ? 'whole' : 'photo';
+  el.variant = next.entry.whole ? 'whole' : 'full';
+  el.crop = [0, 0, 1, 1];
+  const a = M.shownAspect(p, el.variant, el.crop, el.image, el.base);
+  if (a) el.aspect = a;                    // the width the stylist set is kept
+}
+
+function showPictureButton(uid) {
+  const el = uid ? M.byId(S.board, uid) : null;
+  $('elPicture').hidden = !(el && el.kind === 'product'
+    && X_pictures(S.productsById[el.product_id]).length > 1);
+}
+
+const X_pictures = (p) => (p && p.images && p.images.length > 1
+  ? p.images.map((e, i) => ({ i, type: e.type || 'whole page', entry: e })) : []);
+
 function placement(p) {
   const c = effectiveChoice(p, S.choices);
   const box = choiceBox(p, c);
@@ -666,6 +711,7 @@ function setSelection(uid) {
   const d = uid && layers.querySelector(`[data-uid="${uid}"]`);
   if (d) { d.classList.add('sel'); addHandles(d, uid); }
   $('elementBar').hidden = !uid;
+  showPictureButton(uid);
 }
 
 // ------------------------------------------------------------------- save
@@ -848,9 +894,23 @@ function wire() {
     if (act === 'forward') M.bringForward(S.board, S.selected);
     if (act === 'back') M.sendBack(S.board, S.selected);
     if (act === 'flip' && el) el.flip = !el.flip;
+    if (act === 'picture' && el) nextPicture(el);
     if (act === 'duplicate') { const d = M.duplicateElement(S.board, S.selected); if (d) S.selected = d.uid; }
     if (act === 'delete') { M.removeElement(S.board, S.selected); S.selected = null; }
     renderBoard();
+  });
+
+  $('grid').addEventListener('click', (ev) => {
+    const b = ev.target.closest('[data-pic]');
+    if (!b) return;
+    ev.stopPropagation();
+    const p = S.productsById[b.dataset.pic];
+    if (!p) return;
+    const pics = X_pictures(p);
+    if (!pics.length) return;
+    const at = pics.findIndex((q) => q.i === (S.shelfPicture[p.product_id] ?? p.primary ?? 0));
+    S.shelfPicture[p.product_id] = pics[(at + 1 + pics.length) % pics.length].i;
+    renderShelf();
   });
 
   $('title').addEventListener('input', (e) => { S.board.title = e.target.value; renderBoard(); });

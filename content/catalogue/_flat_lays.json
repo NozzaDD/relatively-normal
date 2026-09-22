@@ -211,8 +211,9 @@
   "edge_pixels": 604,
   "words_inside": 0,
   "cutout_skin": 0.0,
-  "clean": false,
-  "why": "touches the frame"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B010-P001-2p0.jpg"
  },
  "B010-P002": {
   "flat": false,
@@ -235,34 +236,37 @@
   "why": "backdrop not plain"
  },
  "B010-P004": {
-  "flat": false,
+  "flat": true,
   "lum": 39.8,
   "sd": 54.1,
   "spread": 18.5,
   "skin": 0.0007,
   "shot": "flat packshot",
-  "clean": false,
-  "why": "backdrop not plain"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B010-P004p2.jpg"
  },
  "B010-P005": {
-  "flat": false,
+  "flat": true,
   "lum": 39.8,
   "sd": 66.9,
   "spread": 204.5,
   "skin": 0.0257,
   "shot": "flat packshot",
-  "clean": false,
-  "why": "backdrop not plain"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B010-P005-3p0.jpg"
  },
  "B011-P001": {
-  "flat": false,
+  "flat": true,
   "lum": 36.7,
   "sd": 79.4,
   "spread": 218.3,
   "skin": 0.0063,
   "shot": "flat packshot",
-  "clean": false,
-  "why": "backdrop not plain"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B011-P001p0.jpg"
  },
  "B011-P002": {
   "flat": false,
@@ -275,14 +279,15 @@
   "why": "backdrop not plain"
  },
  "B011-P003": {
-  "flat": false,
+  "flat": true,
   "lum": 36.7,
   "sd": 79.4,
   "spread": 218.3,
   "skin": 0.0041,
   "shot": "flat packshot",
-  "clean": false,
-  "why": "backdrop not plain"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B011-P003p0.jpg"
  },
  "B011-P004": {
   "flat": true,
@@ -301,14 +306,15 @@
   "recut": true
  },
  "B011-P005": {
-  "flat": false,
+  "flat": true,
   "lum": 36.7,
   "sd": 79.4,
   "spread": 218.3,
   "skin": 0.0057,
   "shot": "flat packshot",
-  "clean": false,
-  "why": "backdrop not plain"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B011-P005p0.jpg"
  },
  "B011-P006": {
   "flat": false,
@@ -341,14 +347,15 @@
   "why": "backdrop not plain"
  },
  "B012-P001": {
-  "flat": false,
+  "flat": true,
   "lum": 37.2,
   "sd": 79.2,
   "spread": 217.8,
   "skin": 0.0041,
   "shot": "flat packshot",
-  "clean": false,
-  "why": "backdrop not plain"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B012-P001p0.jpg"
  },
  "B012-P002": {
   "flat": false,
@@ -361,14 +368,15 @@
   "why": "backdrop not plain"
  },
  "B012-P003": {
-  "flat": false,
+  "flat": true,
   "lum": 36.7,
   "sd": 79.4,
   "spread": 218.3,
   "skin": 0.0022,
   "shot": "flat packshot",
-  "clean": false,
-  "why": "backdrop not plain"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B012-P003-1p0.jpg"
  },
  "B012-P004": {
   "flat": false,
@@ -381,34 +389,37 @@
   "why": "backdrop not plain"
  },
  "B013-P001": {
-  "flat": false,
+  "flat": true,
   "lum": 39.8,
   "sd": 66.9,
   "spread": 204.5,
   "skin": 0.0069,
   "shot": "flat packshot",
-  "clean": false,
-  "why": "backdrop not plain"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B013-P001p0.jpg"
  },
  "B014-P001": {
-  "flat": false,
+  "flat": true,
   "lum": 39.8,
   "sd": 66.9,
   "spread": 204.5,
   "skin": 0.0035,
   "shot": "flat packshot",
-  "clean": false,
-  "why": "backdrop not plain"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B014-P001-2p0.jpg"
  },
  "B015-P001": {
-  "flat": false,
+  "flat": true,
   "lum": 36.7,
   "sd": 79.4,
   "spread": 218.3,
   "skin": 0.0057,
   "shot": "flat packshot",
-  "clean": false,
-  "why": "backdrop not plain"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B015-P001-2p0.jpg"
  },
  "B015-P002": {
   "flat": false,
@@ -451,14 +462,15 @@
   "why": "backdrop not plain"
  },
  "B016-P001": {
-  "flat": false,
+  "flat": true,
   "lum": 36.7,
   "sd": 79.4,
   "spread": 218.3,
   "skin": 0.0491,
   "shot": "flat packshot",
-  "clean": false,
-  "why": "backdrop not plain"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B016-P001p0.jpg"
  },
  "B016-P002": {
   "flat": false,
@@ -491,24 +503,26 @@
   "why": "backdrop not plain"
  },
  "B017-P001": {
-  "flat": false,
+  "flat": true,
   "lum": 36.7,
   "sd": 79.4,
   "spread": 218.3,
   "skin": 0.0154,
   "shot": "flat packshot",
-  "clean": false,
-  "why": "backdrop not plain"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B017-P001-1p0.jpg"
  },
  "B018-P001": {
-  "flat": false,
+  "flat": true,
   "lum": 39.8,
   "sd": 66.9,
   "spread": 206.7,
   "skin": 0.0034,
   "shot": "flat packshot",
-  "clean": false,
-  "why": "backdrop not plain"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B018-P001p3.jpg"
  },
  "B018-P002": {
   "flat": false,
@@ -531,14 +545,15 @@
   "why": "backdrop not plain"
  },
  "B019-P001": {
-  "flat": false,
+  "flat": true,
   "lum": 39.8,
   "sd": 66.9,
   "spread": 204.6,
   "skin": 0.0031,
   "shot": "flat packshot",
-  "clean": false,
-  "why": "backdrop not plain"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B019-P001-2p0.jpg"
  },
  "B019-P002": {
   "flat": false,
@@ -662,34 +677,37 @@
   "why": "backdrop not plain"
  },
  "B020-P006": {
-  "flat": false,
+  "flat": true,
   "lum": 130.5,
   "sd": 93.4,
   "spread": 103.6,
   "skin": 0.0,
   "shot": "flat packshot",
-  "clean": false,
-  "why": "backdrop not plain"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B020-P006-1p0.jpg"
  },
  "B021-P001": {
-  "flat": false,
+  "flat": true,
   "lum": 29.9,
   "sd": 61.6,
   "spread": 208.6,
   "skin": 0.0,
   "shot": "flat packshot",
-  "clean": false,
-  "why": "backdrop not plain"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B021-P001p0.jpg"
  },
  "B021-P002": {
-  "flat": false,
+  "flat": true,
   "lum": 58.8,
   "sd": 53.9,
   "spread": 177.1,
   "skin": 0.0224,
   "shot": "flat packshot",
-  "clean": false,
-  "why": "backdrop not plain"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B021-P002p0.jpg"
  },
  "B021-P003": {
   "flat": false,
@@ -752,14 +770,15 @@
   "why": "backdrop not plain"
  },
  "B021-P009": {
-  "flat": false,
+  "flat": true,
   "lum": 78.8,
   "sd": 45.2,
   "spread": 155.4,
   "skin": 0.1025,
   "shot": "flat packshot",
-  "clean": false,
-  "why": "backdrop not plain"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B021-P009p0.jpg"
  },
  "B021-P010": {
   "flat": false,
@@ -1304,14 +1323,15 @@
   "why": "backdrop not plain"
  },
  "B023-P013": {
-  "flat": false,
+  "flat": true,
   "lum": 220.9,
   "sd": 69.5,
   "spread": 20.5,
   "skin": 0.0099,
   "shot": "on model",
-  "clean": false,
-  "why": "backdrop not plain"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B023-P013-1p1.jpg"
  },
  "B023-P014": {
   "flat": false,
@@ -2487,14 +2507,15 @@
   "why": "backdrop not plain"
  },
  "B037-P005": {
-  "flat": false,
+  "flat": true,
   "lum": 197.2,
   "sd": 63.4,
   "spread": 32.5,
   "skin": 0.02,
   "shot": "on model",
-  "clean": false,
-  "why": "backdrop not plain"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B037-P005p2.jpg"
  },
  "B037-P006": {
   "flat": true,
@@ -2549,14 +2570,15 @@
   "recut": true
  },
  "B038-P001": {
-  "flat": false,
+  "flat": true,
   "lum": 186.0,
   "sd": 71.2,
   "spread": 46.8,
   "skin": 0.0055,
   "shot": "on model",
-  "clean": false,
-  "why": "backdrop not plain"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B038-P001-1p1.jpg"
  },
  "B038-P002": {
   "flat": false,
@@ -2681,14 +2703,15 @@
   "why": "backdrop not plain"
  },
  "B040-P004": {
-  "flat": false,
+  "flat": true,
   "lum": 102.5,
   "sd": 121.9,
   "spread": 71.8,
   "skin": 0.0148,
   "shot": "on model",
-  "clean": false,
-  "why": "backdrop not plain"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B040-P004-1p0.jpg"
  },
  "B040-P005": {
   "flat": true,
@@ -3586,14 +3609,15 @@
   "why": "backdrop not plain"
  },
  "B045-P004": {
-  "flat": false,
+  "flat": true,
   "lum": 178.3,
   "sd": 98.5,
   "spread": 66.5,
   "skin": 0.0,
   "shot": "flat packshot",
-  "clean": false,
-  "why": "backdrop not plain"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B045-P004p4.jpg"
  },
  "B046-P001": {
   "flat": false,
@@ -4229,14 +4253,15 @@
   "why": "backdrop not plain"
  },
  "B055-P006": {
-  "flat": false,
+  "flat": true,
   "lum": 129.0,
   "sd": 61.9,
   "spread": 121.2,
   "skin": 0.0239,
   "shot": "on model",
-  "clean": false,
-  "why": "backdrop not plain"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B055-P006p1.jpg"
  },
  "B055-P007": {
   "flat": false,
@@ -4299,14 +4324,15 @@
   "why": "backdrop not plain"
  },
  "B055-P013": {
-  "flat": false,
+  "flat": true,
   "lum": 135.0,
   "sd": 58.0,
   "spread": 115.2,
   "skin": 0.0239,
   "shot": "on model",
-  "clean": false,
-  "why": "backdrop not plain"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B055-P013p1.jpg"
  },
  "B055-P014": {
   "flat": false,
@@ -4384,14 +4410,15 @@
   "why": "backdrop not plain"
  },
  "B057-P001": {
-  "flat": false,
+  "flat": true,
   "lum": 194.2,
   "sd": 67.5,
   "spread": 54.9,
   "skin": 0.0774,
   "shot": "on model",
-  "clean": false,
-  "why": "backdrop not plain"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B057-P001p1.jpg"
  },
  "B057-P002": {
   "flat": true,
@@ -4410,14 +4437,15 @@
   "recut": true
  },
  "B057-P003": {
-  "flat": false,
+  "flat": true,
   "lum": 229.7,
   "sd": 6.7,
   "spread": 24.1,
   "skin": 0.0329,
   "shot": "on model",
-  "clean": false,
-  "why": "backdrop not plain"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B057-P003-3p1.jpg"
  },
  "B057-P004": {
   "flat": false,
@@ -4430,24 +4458,26 @@
   "why": "backdrop not plain"
  },
  "B057-P005": {
-  "flat": false,
+  "flat": true,
   "lum": 160.6,
   "sd": 46.6,
   "spread": 84.4,
   "skin": 0.0118,
   "shot": "on model",
-  "clean": false,
-  "why": "backdrop not plain"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B057-P005-1p1.jpg"
  },
  "B057-P006": {
-  "flat": false,
+  "flat": true,
   "lum": 178.9,
   "sd": 101.7,
   "spread": 76.1,
   "skin": 0.0505,
   "shot": "flat packshot",
-  "clean": false,
-  "why": "backdrop not plain"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B057-P006p1.jpg"
  },
  "B058-P001": {
   "flat": false,
@@ -4522,14 +4552,15 @@
   "why": "skin in the frame"
  },
  "B058-P007": {
-  "flat": false,
+  "flat": true,
   "lum": 241.9,
   "sd": 20.2,
   "spread": 4.3,
   "skin": 0.1523,
   "shot": "flat packshot",
-  "clean": false,
-  "why": "backdrop not plain"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B058-P007-1p0.jpg"
  },
  "B059-P001": {
   "flat": false,
@@ -4739,14 +4770,15 @@
   "why": "backdrop not plain"
  },
  "B062-P001": {
-  "flat": false,
+  "flat": true,
   "lum": 244.0,
   "sd": 10.5,
   "spread": 9.2,
   "skin": 0.0359,
   "shot": "on model",
-  "clean": false,
-  "why": "skin in the frame"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B062-P001-1p0.jpg"
  },
  "B062-P002": {
   "flat": false,
@@ -4855,14 +4887,15 @@
   "why": "skin in the frame"
  },
  "B062-P012": {
-  "flat": false,
+  "flat": true,
   "lum": 194.4,
   "sd": 108.5,
   "spread": 60.6,
   "skin": 0.014,
   "shot": "flat packshot",
-  "clean": false,
-  "why": "backdrop not plain"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B062-P012-1p3.jpg"
  },
  "B062-P013": {
   "flat": false,
@@ -4885,14 +4918,15 @@
   "why": "backdrop not plain"
  },
  "B062-P015": {
-  "flat": false,
+  "flat": true,
   "lum": 239.9,
   "sd": 27.9,
   "spread": 7.0,
   "skin": 0.001,
   "shot": "on model",
-  "clean": false,
-  "why": "backdrop not plain"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B062-P015p0.jpg"
  },
  "B062-P016": {
   "flat": true,

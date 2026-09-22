@@ -38,6 +38,23 @@ Everything else waits in the Review tab until you decide; **Show unreviewed**
 brings it all in for a look. A recoloured variant is on the shelf exactly when
 its source is. New products from a later ingest follow the same rule.
 
+A screenshot that held two photographs stacked on the page — the flat packshot
+above, the same garment on a model below — is now **two pictures of one
+product**, each labelled by what it is. The shelf shows the primary picture,
+which is the flat lay wherever there is one, and the colours are read from it.
+**Other picture** on a selected piece, or the badge on a shelf cell, switches to
+another picture and keeps where the piece sits and how big it is; the info file
+records which was used.
+
+A **listing grid** is a page of a dozen products, so each of its cells is now a
+product of its own, derived from the grid, with the cell's own photograph,
+cut-out and colours, and whatever its caption gave: name, section, price, fit
+label. The brand is the grid's shop at `guessed`. Cells go to Review, never
+straight to the shelf, grouped under the grid they came from with **Accept all
+cells** to take a whole grid in one tap. A cell that matches a product already
+filed by brand, slot and colour is flagged *twin?* — flagged, never merged. The
+grid itself is hidden once its cells exist.
+
 Review shows each waiting product four ways — the cut-out, a box around the
 item, a box around the whole person, the full photo — and you tap the one you
 want. **Adjust box** lets you draw your own rectangle on the full photo.

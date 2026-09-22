@@ -64,13 +64,23 @@ export function productVersions(p) {
   }
   const imgs = (p.images && p.images.length) ? p.images : (imageEntry(p, 0) ? [imageEntry(p, 0)] : []);
   imgs.forEach((e, i) => {
+    // the picture's own type leads the label: a product page that held a flat
+    // lay and a shot on the model is two pictures now, and which is which is
+    // the thing worth knowing at a glance
+    const t = e.type && e.type !== 'whole page' ? `${e.type} · ` : '';
     const n = imgs.length > 1 ? ` ${i + 1}` : '';
-    if (e.whole) out.push({ kind: 'whole', image: i, base: 'whole', label: `whole cut-out${n}` });
-    if (e.item) out.push({ kind: 'item', image: i, base: 'photo', label: `item box${n}` });
-    if (e.person) out.push({ kind: 'person', image: i, base: 'photo', label: `person box${n}` });
-    out.push({ kind: 'full', image: i, base: 'photo', label: `full photo${n}` });
+    if (e.whole) out.push({ kind: 'whole', image: i, base: 'whole', label: `${t}whole cut-out${n}` });
+    if (e.item) out.push({ kind: 'item', image: i, base: 'photo', label: `${t}item box${n}` });
+    if (e.person) out.push({ kind: 'person', image: i, base: 'photo', label: `${t}person box${n}` });
+    out.push({ kind: 'full', image: i, base: 'photo', label: `${t}full photo${n}` });
   });
   return out;
+}
+
+/** The pictures a piece can be switched between: one per picture of the product. */
+export function productPictures(p) {
+  const imgs = (p.images || []).map((e, i) => ({ i, type: e.type || 'whole page', entry: e }));
+  return imgs.length > 1 ? imgs : [];
 }
 
 /** A stable id for the n-th box cut out of a product's image. */
