@@ -50,17 +50,25 @@ jobs:
         run: pip install -r content/tools/requirements-build.txt
 
       - name: Apply the choices and rebuild the shelf
-        # build_products.py reads asset-choices.json: chosen versions, hidden
-        # products, and every drawn box becomes a row with colours read from
-        # the box. build_studio.py rebuilds studio/data and the thumbnails;
-        # the inspiration images are skipped because they need content/swipe.
+        # migrate_trim.py moves any box drawn under an older trim onto the
+        # current one. build_products.py then reads asset-choices.json: chosen
+        # versions, hidden products, and every drawn box becomes a row with
+        # colours read from the box. build_studio.py rebuilds studio/data and
+        # copies only the images that are new or have changed; the inspiration
+        # images are skipped because they need content/swipe.
+        #
+        # No model cache: this run never touches rembg. The cut-outs are made
+        # by build_review_images.py, which needs the original screenshots and
+        # so only ever runs on a machine that has content/swipe.
         run: |
+          python3 content/tools/migrate_trim.py
           python3 content/tools/build_products.py
           python3 content/tools/build_studio.py --skip-inspiration
 
       - name: Commit the result, if anything changed
         run: |
-          git add -A content/catalogue/products.csv content/catalogue/inspiration.csv studio
+          git add -A content/catalogue/products.csv content/catalogue/inspiration.csv \
+            content/catalogue/asset-choices.json studio
           if git diff --cached --quiet; then
             echo "Nothing changed."
             exit 0

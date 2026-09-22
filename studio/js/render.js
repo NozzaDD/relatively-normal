@@ -19,9 +19,14 @@ export const metrics = (W, H) => ({
   shadow: Math.round(W * 0.013),
 });
 
-/** Framed: the inspiration image, a page tile, or any crop box of a full photo. */
-export function isTile(kind, assetType, variant) {
-  return kind === 'inspiration' || assetType === 'tile' || (!!variant && variant !== 'cutout');
+/**
+ * Framed: the inspiration image, a page tile, or a box drawn on a photograph.
+ * A box drawn on a cut-out keeps its transparency, so it is not framed.
+ */
+export function isTile(kind, assetType, variant, base) {
+  if (kind === 'inspiration') return true;
+  if (base === 'whole' || base === 'asset') return false;
+  return assetType === 'tile' || (!!variant && variant !== 'cutout');
 }
 
 function roundedRect(ctx, x, y, w, h, r) {
@@ -104,7 +109,7 @@ export function drawBoard(ctx, board, productsById, images, W, H) {
     const img = images[el.uid];
     if (!img) continue;
     const p = el.kind === 'product' ? productsById[el.product_id] : null;
-    drawImageEl(ctx, img, el, W, H, m, isTile(el.kind, p?.asset_type, el.variant), board.frame);
+    drawImageEl(ctx, img, el, W, H, m, isTile(el.kind, p?.asset_type, el.variant, el.base), board.frame);
   }
 
   if (board.showSwatches) {

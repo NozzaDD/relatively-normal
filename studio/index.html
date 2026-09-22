@@ -73,6 +73,9 @@
         <button id="exportChoices" class="ghost small">Export choices</button>
       </div>
       <div id="reviewSlots" class="chips"></div>
+      <div class="chips">
+        <label class="switch"><input type="checkbox" id="rMulti"> More than one photo</label>
+      </div>
       <div id="reviewCards" class="rcards"></div>
     </div>
   </aside>
@@ -151,9 +154,11 @@
 <div id="adjust" class="modal hidden">
   <div class="modal-inner adjust-inner">
     <div class="modal-bar adjust-bar">
-      <button id="adjPrev" class="ghost" title="Previous image">◀</button>
+      <button id="adjPrev" class="ghost" title="Previous version">◀</button>
       <span id="adjCounter" class="count">1 of 1</span>
-      <button id="adjNext" class="ghost" title="Next image">▶</button>
+      <button id="adjNext" class="ghost" title="Next version">▶</button>
+      <span id="adjVersion" class="adj-version"></span>
+      <span id="adjSelLabel" class="adj-sel" hidden></span>
       <button id="adjUseImage" class="ghost">Use this one</button>
       <button id="adjAddBox" class="ghost">Add box</button>
       <button id="adjSuggest" class="ghost" hidden>Suggested boxes</button>
