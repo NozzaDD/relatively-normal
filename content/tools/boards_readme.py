@@ -1,9 +1,9 @@
 """The review page for content/boards/v2 — one section per board."""
 import sys, os, json, csv, urllib.parse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, '/home/user/relatively-normal')
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
-ROOT = '/home/user/relatively-normal'
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 OUT = ROOT + '/content/boards/v2'
 NEED = ['layer', 'top', 'bottom', 'shoes', 'bag', 'accessory']
 SMALL = {'shoes', 'bag', 'accessory'}

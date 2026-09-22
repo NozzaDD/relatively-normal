@@ -13,7 +13,7 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 FONTS = os.path.join(HERE, '..', 'boards', 'fonts')
-ROOT = '/home/user/relatively-normal'
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 GROUND = (243, 239, 231)
 KEYLINE = (214, 205, 191)

@@ -8,12 +8,12 @@ like a debug print.
 """
 import sys, os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, '/home/user/relatively-normal')
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 from PIL import Image, ImageDraw
 import make_boards as MB
 import inspiration_colours as I
 
-ROOT = '/home/user/relatively-normal'
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 OUT = ROOT + '/content/boards/v2'
 W, H = 1080, 1350
 GROUND = MB.GROUND

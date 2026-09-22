@@ -57,6 +57,12 @@ whether it is hidden or also on the shelf. Where a page is plainly a listing
 grid, **Suggested boxes** offers the detected cells to accept, adjust or delete
 one by one.
 
+**Pull in Working Copy before saving an export.** A push of
+`asset-choices.json` to `main` makes GitHub rebuild the shelf and commit the
+result back as *Apply shelf choices (auto)*; pulling first keeps your next
+commit on top of it. A failed rebuild commits nothing — see it under the
+repository's **Actions** tab, workflow *Apply shelf choices*.
+
 **Frame…** on the canvas bar is one setting for every framed image on the
 board — the inspiration image, page tiles and every box: thin border, white
 mat, corner radius. It is saved with the board and remembered for the next.

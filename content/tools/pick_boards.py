@@ -7,10 +7,10 @@ is refused outright. Neutrals are free.
 """
 import sys, os, json, csv, collections
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, '/home/user/relatively-normal')
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 from engine import colour as C
 
-ROOT = '/home/user/relatively-normal'
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 CAT = ROOT + '/content/catalogue'
 MATCH, NEAR = 12.0, 20.0
 NEUTRAL_REL = 0.15

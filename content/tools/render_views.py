@@ -9,7 +9,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from PIL import Image
 import imglib
 
-ROOT = '/home/user/relatively-normal'
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 def main(outdir, width=980):

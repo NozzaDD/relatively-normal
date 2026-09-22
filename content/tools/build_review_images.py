@@ -17,13 +17,13 @@ detection is unsure. Nothing here touches the originals or the existing assets.
 """
 import sys, os, json, csv, collections
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, '/home/user/relatively-normal')
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 from PIL import Image
 import imglib
 from make_assets import photo_region, fit
 from crop_figures import BAND, FIGURE
 
-ROOT = '/home/user/relatively-normal'
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 CAT = ROOT + '/content/catalogue'
 OUT = CAT + '/review'
 MAXSIDE = 1200

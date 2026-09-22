@@ -5,15 +5,14 @@ screenshots: this script turns them into two JSON files and a set of web-sized
 images inside studio/, which is the only folder that gets deployed. Re-run it
 after the catalogue changes and the desk refreshes with it.
 
-  python3 content/tools/build_studio.py [--no-images]
+  python3 content/tools/build_studio.py [--no-images] [--skip-inspiration]
 """
 import sys, os, csv, json, shutil, collections, argparse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, '/home/user/relatively-normal')
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 from PIL import Image
 
-ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) \
-    if False else '/home/user/relatively-normal'
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 CAT = ROOT + '/content/catalogue'
 STUDIO = ROOT + '/studio'
 DATA = STUDIO + '/data'
@@ -251,6 +250,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--no-images', action='store_true',
                     help='rebuild the JSON only, leave the copied images alone')
+    ap.add_argument('--skip-inspiration', action='store_true',
+                    help='rebuild assets, thumbs and full photos but not the inspiration '
+                         'images, which need the original screenshots in content/swipe/')
     a = ap.parse_args()
 
     prod_rows = list(csv.DictReader(open(CAT + '/products.csv')))
@@ -281,7 +283,8 @@ def main():
 
     if not a.no_images:
         copy_assets(products, {r['product_id']: r for r in prod_rows})
-        copy_inspiration(inspiration)
+        if not a.skip_inspiration:
+            copy_inspiration(inspiration)
         copy_fonts()
 
     print('products %d  inspiration %d' % (len(products), len(inspiration)))

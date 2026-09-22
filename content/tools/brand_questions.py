@@ -1,10 +1,10 @@
 """One question per batch where the brand is not legible — not one per product."""
 import sys, os, csv, collections, json, urllib.parse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, '/home/user/relatively-normal')
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 from PIL import Image
 
-ROOT = '/home/user/relatively-normal'
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 CAT = ROOT + '/content/catalogue'
 THUMBS = CAT + '/brand-questions'
 

@@ -1,9 +1,9 @@
 """inspiration.csv — one row per inspiration image, clothes-only."""
 import sys, os, json, csv
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, '/home/user/relatively-normal')
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
-ROOT = '/home/user/relatively-normal'
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 CAT = ROOT + '/content/catalogue'
 F = ['path', 'folder', 'house', 'house_confidence',
      'colour1_hex', 'colour1_name', 'colour1_family', 'colour1_share', 'colour1_role', 'colour1_sits',
