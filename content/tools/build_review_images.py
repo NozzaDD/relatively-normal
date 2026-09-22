@@ -43,7 +43,23 @@ OUT = CAT + '/review'
 MAXSIDE = 1200
 
 
-def needs_review(a):
+def flat_verdicts():
+    """flat_lays.py's measured verdicts, where it has run."""
+    try:
+        return json.load(open(CAT + '/_flat_lays.json'))
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+
+
+def needs_review(a, pid=None, flats=None):
+    """Everything but a measured-clean flat lay.
+
+    The gate used to be the old asset_quality rule of thumb. It is now the
+    measurement flat_lays.py makes, so that a product the desk will show in
+    Review always has the review copy Review needs to draw on.
+    """
+    if flats is not None and pid is not None and pid in flats:
+        return not flats[pid].get('clean')
     return not (a.get('asset_type') == 'cutout_flat' and a.get('asset_quality') == 'good')
 
 
@@ -320,7 +336,8 @@ def main():
         out = json.load(open(CAT + '/_review_boxes.json'))
     except (FileNotFoundError, json.JSONDecodeError):
         out = {}
-    pids = [pid for pid, a in sorted(A.items()) if needs_review(a)]
+    flats = flat_verdicts()
+    pids = [pid for pid, a in sorted(A.items()) if needs_review(a, pid, flats)]
     # one entry per screenshot; the first may already exist from an earlier run
     def done(pid, i):
         rec = out.get(pid, {})

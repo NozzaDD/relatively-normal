@@ -68,19 +68,24 @@
   "ULLA JOHNSON",
   "UNIQLO",
   "diot\u012bma",
+  "lemaire",
   "massimo alba",
-  "soeur"
+  "rachel comey",
+  "soeur",
+  "studio nicholson",
+  "toteme",
+  "ulla johnson"
  ],
  "asset_types": [
   "cutout_flat",
   "cutout_model",
   "tile"
  ],
- "clean": 86,
- "with_full": 390,
+ "clean": 48,
+ "with_full": 436,
  "hidden": 5,
  "recoloured": 13,
  "derived": 0,
- "images": 541,
- "whole_cutouts": 347
+ "images": 605,
+ "whole_cutouts": 410
 }

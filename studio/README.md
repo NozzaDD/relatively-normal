@@ -29,10 +29,14 @@ only ever calls `load()`, `assetUrl()`, `thumbUrl()`, `inspirationUrl()` and
 
 ## The shelf, the gate and Review
 
-A product is on the shelf by default when it is a **clean flat cut-out** of
-good quality, or when you have **reviewed** it. Everything else waits in the
-Review tab until you decide; **Show unreviewed** brings it all in for a look.
-New products from a later ingest follow the same rule.
+A product is on the shelf by default when its cut-out has been **measured
+clean**, or when you have **reviewed** it. Measured clean means all of this, on
+a packshot with a plain backdrop and nobody in it: the cut-out is one connected
+piece, it does not touch the photograph's edge, and OCR finds no page text left
+inside it. Nothing is judged by eye or by the old good/usable/weak rating.
+Everything else waits in the Review tab until you decide; **Show unreviewed**
+brings it all in for a look. A recoloured variant is on the shelf exactly when
+its source is. New products from a later ingest follow the same rule.
 
 Review shows each waiting product four ways — the cut-out, a box around the
 item, a box around the whole person, the full photo — and you tap the one you

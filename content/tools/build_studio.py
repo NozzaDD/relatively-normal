@@ -82,15 +82,30 @@ def image_list(rv, sources):
     return out
 
 
+def load_flats():
+    """flat_lays.py's verdicts: {product_id: {clean, why, ...}}."""
+    try:
+        return json.load(open(CAT + '/_flat_lays.json'))
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+
+
 def build_products(rows, review):
     out = []
+    flats = load_flats()
     by_id = {r['product_id']: r for r in rows}
     for r in rows:
         if not n(r['asset_path']):
             continue
         parent = by_id.get(n(r.get('parent_id'))) if n(r.get('parent_id')) else None
         rv = review.get(parent['product_id'] if parent else r['product_id']) or {}
-        clean = (n(r['asset_type']) == 'cutout_flat' and n(r['asset_quality']) == 'good')
+        # The shelf gate, measured rather than guessed: a packshot on a plain
+        # backdrop whose re-cut is one piece, clear of the frame and with no
+        # text left in it. Anything else is a decision for a person, so it
+        # stays in Review. A recoloured variant inherits its source's verdict,
+        # since it is that same cut-out in another colour.
+        src = n(r.get('recolour_source')) or r['product_id']
+        clean = bool((flats.get(src) or {}).get('clean'))
         has_full = bool(rv.get('w')) and 'error' not in rv
         images = image_list(rv, (parent or r)['image_paths'].split(';'))
         idx = int(n(r.get('asset_image')) or 0)

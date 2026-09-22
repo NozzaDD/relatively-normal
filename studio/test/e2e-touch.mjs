@@ -231,7 +231,15 @@ if (simId) {
   await page.evaluate(async (id) => { await window.__studio.placeProduct(id, 0.6, 0.6); }, simId);
   const md = await page.evaluate(async () => { const { buildMarkdown } = await import('./js/export.js'); return buildMarkdown(window.__studio.buildInfo()); });
   ok('the piece list says colour simulated', md.includes('(colour simulated)') && md.includes('**Colour simulated:**'));
-  ok('the variant is on the shelf as a clean cut-out', await page.evaluate((id) => window.__studio.products.find((p) => p.product_id === id).clean, simId));
+  // a variant is its source's cut-out in another colour, so it is on the shelf
+  // exactly when the source is — the measured verdict is inherited, not re-made
+  const vClean = await page.evaluate(() => {
+    const by = window.__studio.productsById;
+    return window.__studio.products.filter((p) => p.recoloured)
+      .map((p) => [p.product_id, p.clean, !!(by[p.recolour_source] || {}).clean]);
+  });
+  ok('a variant is on the shelf exactly when its source is',
+    vClean.length > 0 && vClean.every(([, c, s]) => c === s), JSON.stringify(vClean.slice(0, 3)));
   ok('the replaced UNIQLO images are hidden', await page.evaluate(() => window.__studio.products.some((p) => p.hidden && p.brand === 'UNIQLO')));
 }
 
