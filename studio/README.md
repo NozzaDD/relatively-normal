@@ -49,7 +49,12 @@ person box and the whole photo. Arrows or the filmstrip move between them and
 the counter counts them all. Whichever you pick, the whole uncropped image is
 shown with that version's box on it, so a crop that cut too much can be
 widened as well as tightened; a cut-out is shown on the board's own off-white,
-and a box drawn on one keeps its transparency. **Use this one** takes the
+and a box drawn on one keeps its transparency. A selected box has eight
+handles — four corners, four edges — and each grabs from 44 px away, so a
+handle sitting on the picture's own edge is still catchable. Pinch to zoom and
+move two fingers to pan; the boxes scale with the picture, and **fit** in the
+bar puts it back. While a handle is moving, a loupe follows the finger with the
+box's size in the picture's own pixels. **Use this one** takes the
 version whole. Nothing is drawn over the picture except boxes and their
 handles — the labels sit in the header. **Add box** draws further boxes on the
 same image; each gets a slot from the buttons and an optional colour name, and each becomes its own

@@ -53,10 +53,10 @@ const count = (sel) => page.$$eval(sel, (e) => e.length);
 const pieces = () => page.evaluate(() => window.__studio.board.elements.filter((e) => e.kind === 'product').length);
 
 await page.goto(`${base}/index.html`);
-await page.waitForFunction(() => window.__studio?.products?.length > 0, null, { timeout: 20000 });
+await page.waitForFunction(() => window.__studio?.products?.length > 0 && window.__studio.review, null, { timeout: 20000 });
 await page.evaluate(() => { localStorage.clear(); });
 await page.reload();
-await page.waitForFunction(() => window.__studio?.products?.length > 0, null, { timeout: 20000 });
+await page.waitForFunction(() => window.__studio?.products?.length > 0 && window.__studio.review, null, { timeout: 20000 });
 await page.waitForTimeout(400);
 
 console.log('\n1. the gate and the category bar');
@@ -251,7 +251,7 @@ ok('with its crop and frame', Array.isArray(round.crop) && round.frame === 22);
 console.log('\n9. adjust box on any image');
 await page.evaluate(() => { localStorage.removeItem('rn.studio.choices.v1'); });
 await page.reload();
-await page.waitForFunction(() => window.__studio?.products?.length > 0, null, { timeout: 20000 });
+await page.waitForFunction(() => window.__studio?.products?.length > 0 && window.__studio.review, null, { timeout: 20000 });
 await page.waitForTimeout(300);
 const multi = await page.evaluate(async () => {
   const { productVersions } = await import('./js/data.js');
@@ -371,7 +371,7 @@ ok('export renders with a cut piece on the board', exp2[0] === 2160);
 console.log('\n11. every version, nothing over the photo');
 await page.evaluate(() => { localStorage.removeItem('rn.studio.choices.v1'); });
 await page.reload();
-await page.waitForFunction(() => window.__studio?.products?.length > 0, null, { timeout: 20000 });
+await page.waitForFunction(() => window.__studio?.products?.length > 0 && window.__studio.review, null, { timeout: 20000 });
 await page.evaluate(() => window.__studio.setView('review'));
 await page.waitForTimeout(500);
 const wp = await page.evaluate(async () => {
@@ -472,7 +472,7 @@ if (widen) {
     c.scrollIntoView(); c.querySelector('.racts button').click();
   }, widen.pid);
   await page.waitForTimeout(500);
-  for (let i = 0; i < widen.idx; i++) await page.click('#adjNext');
+  await page.click(`#adjStrip img:nth-child(${widen.idx + 1})`);
   await page.waitForTimeout(300);
   await page.click('#adjUseImage');
   await page.waitForTimeout(200);
@@ -499,6 +499,166 @@ if (widen) {
   ok('a crop that cut too much can be widened', h1 > h0 + 2, `${h0}% -> ${h1}%`);
   await page.click('#adjustCancel');
 }
+
+
+console.log('\n13. resize handles and precision');
+// two fingers, for pinch and two-finger pan
+async function twoFinger(a0, b0, a1, b1, steps = 10) {
+  await cdp.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [
+    { x: a0[0], y: a0[1], id: 1 }, { x: b0[0], y: b0[1], id: 2 }] });
+  for (let s = 1; s <= steps; s++) {
+    const k = s / steps;
+    await cdp.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [
+      { x: a0[0] + (a1[0] - a0[0]) * k, y: a0[1] + (a1[1] - a0[1]) * k, id: 1 },
+      { x: b0[0] + (b1[0] - b0[0]) * k, y: b0[1] + (b1[1] - b0[1]) * k, id: 2 }] });
+  }
+  await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+}
+const geom = () => page.evaluate(() => {
+  const st = document.getElementById('adjStage');
+  const b = document.querySelector('.adjust-box.sel') || document.querySelector('.adjust-box');
+  const r = st.getBoundingClientRect();
+  const f = (s) => parseFloat(s) / 100;
+  return { stage: { x: r.left, y: r.top, w: r.width, h: r.height },
+    rect: b ? [f(b.style.left), f(b.style.top), f(b.style.width), f(b.style.height)] : null,
+    boxes: document.querySelectorAll('.adjust-box').length,
+    handles: document.querySelectorAll('.adjust-handle').length };
+});
+const handlePoint = (g, name) => {
+  const hx = name === 'n' || name === 's' ? 0.5 : name.includes('w') ? 0 : name.includes('e') ? 1 : 0.5;
+  const hy = name === 'w' || name === 'e' ? 0.5 : name.includes('n') ? 0 : 1;
+  return [g.stage.x + (g.rect[0] + g.rect[2] * hx) * g.stage.w,
+    g.stage.y + (g.rect[1] + g.rect[3] * hy) * g.stage.h];
+};
+await page.evaluate(() => { localStorage.removeItem('rn.studio.choices.v1'); });
+await page.reload();
+await page.waitForFunction(() => window.__studio?.products?.length > 0 && window.__studio.review,
+  null, { timeout: 20000 });
+await page.evaluate(() => window.__studio.setView('review'));
+await page.waitForTimeout(500);
+const rp = await page.evaluate(async () => {
+  const { productVersions } = await import('./js/data.js');
+  const p = window.__studio.products.find((x) => !x.clean && !x.parent_id && (x.images || []).length);
+  return { pid: p.product_id, full: productVersions(p).findIndex((v) => v.kind === 'full') };
+});
+await page.evaluate((pid) => {
+  const c = document.querySelector(`#reviewCards .rcard[data-pid="${pid}"]`);
+  c.scrollIntoView(); c.querySelector('.racts button').click();
+}, rp.pid);
+await page.waitForTimeout(700);
+await page.click(`#adjStrip img:nth-child(${rp.full + 1})`);
+await page.waitForTimeout(500);
+await page.click('#adjUseImage');
+await page.waitForTimeout(300);
+
+const g0 = await geom();
+ok('the box is painted on the picture, not the scrolling wrapper', g0.stage.h > 0
+  && Math.abs(g0.rect[3] * g0.stage.h - g0.stage.h) < 2, JSON.stringify(g0.rect));
+ok('a selected box has eight handles', g0.handles === 8, String(g0.handles));
+// nothing is on top of them
+const covered = await page.evaluate(() => {
+  const st = document.getElementById('adjStage');
+  const b = document.querySelector('.adjust-box.sel');
+  const r = st.getBoundingClientRect(), f = (s) => parseFloat(s) / 100;
+  const rect = [f(b.style.left), f(b.style.top), f(b.style.width), f(b.style.height)];
+  const bad = [];
+  for (const h of document.querySelectorAll('.adjust-handle')) {
+    const hr = h.getBoundingClientRect();
+    const el = document.elementFromPoint(hr.left + hr.width / 2, hr.top + hr.height / 2);
+    if (el && !el.closest('#adjustWrap')) bad.push(h.dataset.handle + ':' + (el.id || el.className));
+  }
+  return { bad, rect };
+});
+ok('nothing covers the handles', covered.bad.length === 0, covered.bad.join(' '));
+
+// every one of the eight, on a box that touches all four edges of the picture
+const EDGES = { nw: [0, 1], n: [1], ne: [0, 1], w: [0], e: [0], sw: [0, 1], s: [1], se: [0, 1] };
+const pulls = { nw: [40, 40], n: [0, 40], ne: [-40, 40], w: [40, 0], e: [-40, 0],
+  sw: [40, -40], s: [0, -40], se: [-40, -40] };
+let handlesOk = 0, moved = [];
+for (const name of ['nw', 'n', 'ne', 'w', 'e', 'sw', 's', 'se']) {
+  await page.click('#adjUseImage');            // back to the whole picture each time
+  await page.waitForTimeout(150);
+  const g = await geom();
+  const [hx, hy] = handlePoint(g, name);
+  const [dx, dy] = pulls[name];
+  await touch([[hx, hy], [hx + dx, hy + dy]], { steps: 8 });
+  await page.waitForTimeout(150);
+  const after = (await geom()).rect;
+  const wantW = dx !== 0, wantH = dy !== 0;
+  const gotW = Math.abs(after[2] - g.rect[2]) > 0.01;
+  const gotH = Math.abs(after[3] - g.rect[3]) > 0.01;
+  // the far side must not have travelled: a handle resizes, it never moves the box
+  const farX = name.includes('w') ? Math.abs((after[0] + after[2]) - (g.rect[0] + g.rect[2]))
+    : Math.abs(after[0] - g.rect[0]);
+  const farY = name.includes('n') ? Math.abs((after[1] + after[3]) - (g.rect[1] + g.rect[3]))
+    : Math.abs(after[1] - g.rect[1]);
+  if (gotW === wantW && gotH === wantH && farX < 0.01 && farY < 0.01) handlesOk++;
+  else moved.push(`${name} ${JSON.stringify(g.rect)}->${JSON.stringify(after)}`);
+}
+ok('all eight handles resize, from a box on the picture\'s own edges', handlesOk === 8, moved.join(' | '));
+
+// drawing a new box still works
+await page.click('#adjAddBox');
+const gd = await geom();
+await touch([[gd.stage.x + gd.stage.w * 0.3, gd.stage.y + gd.stage.h * 0.3],
+  [gd.stage.x + gd.stage.w * 0.6, gd.stage.y + gd.stage.h * 0.6]], { steps: 8 });
+await page.waitForTimeout(200);
+const gnew = await geom();
+ok('a new box is drawn where the finger went', gnew.boxes === 2
+  && Math.abs(gnew.rect[2] - 0.3) < 0.05 && Math.abs(gnew.rect[3] - 0.3) < 0.05, JSON.stringify(gnew.rect));
+
+// moving that box: both edges travel together
+const gm = await geom();
+const mid = [gm.stage.x + (gm.rect[0] + gm.rect[2] / 2) * gm.stage.w,
+  gm.stage.y + (gm.rect[1] + gm.rect[3] / 2) * gm.stage.h];
+await touch([mid, [mid[0] + 30, mid[1] + 30]], { steps: 8 });
+await page.waitForTimeout(200);
+const gmv = await geom();
+ok('a drag inside a box moves it and keeps its size',
+  Math.abs(gmv.rect[2] - gm.rect[2]) < 0.005 && Math.abs(gmv.rect[3] - gm.rect[3]) < 0.005
+  && gmv.rect[0] > gm.rect[0] + 0.01, `${JSON.stringify(gm.rect)} -> ${JSON.stringify(gmv.rect)}`);
+
+// pinch to zoom, then the same handles again
+const gz = await geom();
+const cx = gz.stage.x + gz.stage.w / 2, cy = gz.stage.y + Math.min(gz.stage.h, 400) / 2;
+await twoFinger([cx - 40, cy], [cx + 40, cy], [cx - 130, cy], [cx + 130, cy], 12);
+await page.waitForTimeout(300);
+const zoom = await page.evaluate(() => document.getElementById('adjZoom').textContent);
+const gzz = await geom();
+ok('pinch zooms the picture in', gzz.stage.w > gz.stage.w * 1.4, `${Math.round(gz.stage.w)} -> ${Math.round(gzz.stage.w)} (${zoom})`);
+ok('the boxes scale with it', gzz.boxes === 2 && Math.abs(gzz.rect[2] - gmv.rect[2]) < 0.005,
+  JSON.stringify([gmv.rect, gzz.rect]));
+// zoomed in, the corner may be off the screen: pan to it the way a finger would
+await page.evaluate(() => {
+  const w = document.getElementById('adjustWrap');
+  const st = document.getElementById('adjStage');
+  const b = document.querySelector('.adjust-box.sel');
+  const f = (v) => parseFloat(v) / 100;
+  const x = (f(b.style.left) + f(b.style.width)) * st.offsetWidth;
+  const y = (f(b.style.top) + f(b.style.height)) * st.offsetHeight;
+  w.scrollLeft = x - w.clientWidth / 2;
+  w.scrollTop = y - w.clientHeight / 2;
+});
+await page.waitForTimeout(150);
+const gh = await geom();
+const [zx, zy] = handlePoint(gh, 'se');
+const before13 = gh.rect.slice();
+await touch([[zx, zy], [zx - 60, zy - 60]], { steps: 8 });
+await page.waitForTimeout(200);
+const gha = (await geom()).rect;
+ok('a handle still resizes once zoomed in', gha[2] < before13[2] - 0.005 && gha[3] < before13[3] - 0.005
+  && Math.abs(gha[0] - before13[0]) < 0.005, `${JSON.stringify(before13)} -> ${JSON.stringify(gha)}`);
+// and the drag follows the finger one to one
+const px = 60 / gh.stage.w, py = 60 / gh.stage.h;
+ok('dragging follows the finger exactly, with no snapping',
+  Math.abs((before13[2] - gha[2]) - px) < 0.006 && Math.abs((before13[3] - gha[3]) - py) < 0.006,
+  `asked ${px.toFixed(4)}/${py.toFixed(4)}, got ${(before13[2] - gha[2]).toFixed(4)}/${(before13[3] - gha[3]).toFixed(4)}`);
+await page.evaluate(() => document.getElementById('adjZoom').click());
+await page.waitForTimeout(200);
+ok('the zoom button goes back to fit', (await page.evaluate(() => document.getElementById('adjZoom').textContent)) === 'fit');
+await page.screenshot({ path: '/tmp/claude-0/shot-handles.png' });
+await page.click('#adjustCancel');
 
 console.log(`\n${pass} passed, ${fail} failed`);
 if (errors.length) console.log('page errors:\n  ' + errors.slice(0, 6).join('\n  '));
