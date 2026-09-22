@@ -48,7 +48,7 @@ export function addElement(board, el) {
   const z = board.elements.reduce((m, e) => Math.max(m, e.z), 0) + 1;
   const next = {
     uid: uid(), kind: 'product', x: 0.5, y: 0.5, w: 0.3, rot: 0, flip: false,
-    aspect: 1, z, variant: 'cutout', crop: null, ...el,
+    aspect: 1, z, variant: 'cutout', crop: null, image: 0, ...el,
   };
   board.elements.push(next);
   return next;
@@ -93,11 +93,11 @@ export function cropLayout(crop) {
 }
 
 /** Aspect (w/h) of what an element shows: the crop of the full image, or the asset. */
-export function shownAspect(product, variant, crop) {
-  if (variant && variant !== 'cutout' && product?.full && crop) {
-    return (crop[2] * product.full.w) / (crop[3] * product.full.h);
-  }
-  return null;
+export function shownAspect(product, variant, crop, image = 0) {
+  if (!variant || variant === 'cutout' || !crop) return null;
+  const e = (product?.images && product.images[image]) || (image === 0 ? product?.full : null);
+  if (!e) return null;
+  return (crop[2] * e.w) / (crop[3] * e.h);
 }
 
 /** Product elements in the order their numbered labels run. */

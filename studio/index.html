@@ -147,15 +147,23 @@
   </div>
 </div>
 
-<!-- draw your own box -->
+<!-- draw your own boxes, on any of the product's screenshots -->
 <div id="adjust" class="modal hidden">
   <div class="modal-inner adjust-inner">
-    <div class="modal-bar">
-      <span class="count">Drag a rectangle. Drag inside it to move, its bottom-right corner to resize.</span>
-      <button id="adjustUse" class="primary">Use this box</button>
+    <div class="modal-bar adjust-bar">
+      <button id="adjPrev" class="ghost" title="Previous image">◀</button>
+      <span id="adjCounter" class="count">1 of 1</span>
+      <button id="adjNext" class="ghost" title="Next image">▶</button>
+      <button id="adjUseImage" class="ghost">Use this one</button>
+      <button id="adjAddBox" class="ghost">Add box</button>
+      <button id="adjSuggest" class="ghost" hidden>Suggested boxes</button>
+      <span class="grow"></span>
+      <button id="adjustUse" class="primary">Done</button>
       <button id="adjustCancel" class="ghost">Cancel</button>
     </div>
+    <div id="adjStrip" class="adj-strip"></div>
     <div id="adjustWrap" class="adjust-wrap"></div>
+    <div id="adjPanel" class="adj-panel"></div>
   </div>
 </div>
 

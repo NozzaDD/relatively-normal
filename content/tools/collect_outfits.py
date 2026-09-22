@@ -44,6 +44,8 @@ def used_maps(infos):
         for p in info.get('pieces', []):
             if p.get('product_id'):
                 prod[p['product_id']].add(slug)
+            if p.get('parent_id'):                 # the screenshot it was cut from, too
+                prod[p['parent_id']].add(slug)
         i = info.get('inspiration') or {}
         if i.get('inspiration_id'):
             insp[i['inspiration_id']].add(slug)

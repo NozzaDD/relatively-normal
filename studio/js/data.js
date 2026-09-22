@@ -23,7 +23,7 @@ export function createStaticSource(base = '.') {
     },
     assetUrl: (p) => url(p.asset),
     thumbUrl: (p) => url(p.thumb),
-    fullUrl: (p) => (p.full ? url(p.full.path) : url(p.asset)),
+    fullUrl: (p, idx = 0) => { const e = imageEntry(p, idx); return url(e ? e.path : p.asset); },
     inspirationUrl: (i) => url(i.image),
     inspirationThumbUrl: (i) => url(i.thumb),
   };
@@ -36,10 +36,62 @@ export function createMemorySource(catalogue, urls = {}) {
     async load() { return catalogue; },
     assetUrl: urls.assetUrl || ((p) => p.asset),
     thumbUrl: urls.thumbUrl || ((p) => p.thumb),
-    fullUrl: urls.fullUrl || ((p) => (p.full ? p.full.path : p.asset)),
+    fullUrl: urls.fullUrl || ((p, idx = 0) => { const e = imageEntry(p, idx); return e ? e.path : p.asset; }),
     inspirationUrl: urls.inspirationUrl || ((i) => i.image),
     inspirationThumbUrl: urls.inspirationThumbUrl || ((i) => i.thumb),
   };
+}
+
+/** One of a product's screenshots: index 0 is the best one, the "full" image. */
+export function imageEntry(p, idx = 0) {
+  if (p.images && p.images[idx]) return p.images[idx];
+  if (idx === 0 && p.full) return { path: p.full.path, w: p.full.w, h: p.full.h, ...(p.boxes || {}) };
+  return null;
+}
+
+/** A stable id for the n-th box cut out of a product's image. */
+export const splitId = (pid, n) => `${pid}-S${n}`;
+
+/**
+ * Products the stylist cut out of another product's image, as the desk sees
+ * them before a rebuild: a runtime crop with the parent's brand and batch,
+ * the slot and colour name she gave, and no colour fields yet. Once the build
+ * script has made the row, the catalogue's version wins and this one steps
+ * aside.
+ */
+export function derivedProducts(products, choices) {
+  const byId = indexById(products);
+  const out = [];
+  for (const [pid, c] of Object.entries(choices || {})) {
+    const parent = byId[pid];
+    if (!parent || !Array.isArray(c.splits)) continue;
+    for (const sp of c.splits) {
+      const id = splitId(pid, sp.n);
+      if (byId[id] || !sp.box) continue;
+      const img = imageEntry(parent, sp.image || 0);
+      if (!img) continue;
+      out.push({
+        product_id: id, parent_id: pid, local: true,
+        slot: sp.slot || parent.slot || '', garment_type: parent.garment_type || '',
+        pattern: '', weight: parent.weight ?? null, formality: parent.formality ?? null,
+        colours: [], colour_confidence: '', colour_stability: '',
+        colour_name_text: sp.colour_name || '',
+        asset: img.path, thumb: null, asset_type: 'crop', asset_quality: 'good',
+        brand: parent.brand || '', brand_confidence: parent.brand_confidence || '',
+        brand_role: parent.brand_role || '',
+        product_name: '', product_name_confidence: 'input needed',
+        material: '', material_confidence: 'input needed',
+        price: '', price_confidence: 'input needed',
+        product_url: '', product_url_confidence: 'input needed',
+        image_source: parent.image_source || '', shop: parent.shop || '', used_in: [],
+        clean: false, full: { path: img.path, w: img.w, h: img.h }, boxes: null,
+        images: parent.images || null, image: sp.image || 0,
+        choice: 'custom', custom_box: sp.box, hidden: false,
+        recoloured: false, recolour_source: '',
+      });
+    }
+  }
+  return out;
 }
 
 export function indexById(products) {

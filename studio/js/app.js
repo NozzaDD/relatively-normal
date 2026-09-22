@@ -4,13 +4,13 @@
 // The machine sorts, suggests and renders. It never places anything.
 
 import { createStaticSource, indexById, indexInspiration, emptyFilters,
-  filterProducts, onShelf, effectiveChoice, isReviewed,
+  filterProducts, onShelf, effectiveChoice, isReviewed, derivedProducts,
   WEIGHT_LABELS, FORMALITY_LABELS } from './data.js';
 import * as M from './model.js';
 import { metrics, isTile } from './render.js';
 import { rankByLook } from './colour.js';
 import * as X from './export.js';
-import { createReview, loadChoices, saveChoices, choicesFile, choiceBox } from './review.js';
+import { createReview, loadChoices, saveChoices, choicesFile, choiceBox, applyCrop } from './review.js';
 
 const $ = (id) => document.getElementById(id);
 const STORE = 'rn.studio.board.v2';
@@ -47,10 +47,11 @@ async function init() {
   S.choices = loadChoices();
   loadSettings();
   buildFilterOptions(cat.meta);
+  refreshDerived();
   restore();
   S.review = createReview({
     source: S.source, choices: S.choices, products: () => S.products, toast,
-    onChange: () => { renderSlotBar(); renderShelf(); renderReviewBadge(); },
+    onChange: () => { refreshDerived(); renderSlotBar(); renderShelf(); renderReviewBadge(); },
   });
   wire();
   renderSlotBar();
@@ -59,6 +60,13 @@ async function init() {
   renderReviewBadge();
   layoutStage();
   renderBoard();
+}
+
+/** Pieces cut out of other products' images appear on the shelf at once. */
+function refreshDerived() {
+  S.products = S.products.filter((p) => !p.local);
+  S.products.push(...derivedProducts(S.products, S.choices));
+  S.productsById = indexById(S.products);
 }
 
 // --------------------------------------------------------------- filters UI
@@ -147,16 +155,27 @@ function renderShelf() {
     cell.dataset.pid = p.product_id;
     const img = document.createElement('img');
     img.loading = 'lazy';
-    img.src = S.source.thumbUrl(p);
     img.alt = p.garment_type || p.product_id;
-    cell.appendChild(img);
+    if (p.thumb) {
+      img.src = S.source.thumbUrl(p);
+      cell.appendChild(img);
+    } else {
+      // no thumbnail file yet: show the crop straight from the screenshot
+      const wrap = document.createElement('div');
+      wrap.className = 'cropwrap';
+      img.src = S.source.fullUrl(p, p.image || 0);
+      img.onload = () => applyCrop(img, p.custom_box || [0, 0, 1, 1], cell.clientWidth, cell.clientHeight - 18, p.full.w, p.full.h);
+      wrap.appendChild(img);
+      cell.appendChild(wrap);
+    }
     if (p.colour_confidence === 'low') {
       const d = document.createElement('span');
       d.className = 'dot';
       d.title = 'colour read with low confidence';
       cell.appendChild(d);
     }
-    const flag = p.recoloured ? 'simulated' : (!p.clean && !isReviewed(p, S.choices)) ? 'unreviewed'
+    const flag = p.recoloured ? 'simulated' : p.local ? 'new' : p.parent_id ? 'cut'
+      : (!p.clean && !isReviewed(p, S.choices)) ? 'unreviewed'
       : p.asset_quality === 'weak' ? 'weak' : '';
     if (flag) {
       const w = document.createElement('span');
@@ -288,7 +307,7 @@ function renderBoard() {
       const wrap = document.createElement('div');
       wrap.className = 'cropwrap';
       const l = M.cropLayout(el.crop);
-      img.src = S.source.fullUrl(p);
+      img.src = S.source.fullUrl(p, el.image || 0);
       img.style.width = `${l.imgW * 100}%`;
       img.style.height = `${l.imgH * 100}%`;
       img.style.left = `${l.left * 100}%`;
@@ -408,8 +427,9 @@ async function aspectOf(src) {
 function placement(p) {
   const c = effectiveChoice(p, S.choices);
   const box = choiceBox(p, c);
-  if (box) return { variant: c.choice, crop: box, aspect: M.shownAspect(p, c.choice, box) };
-  return { variant: 'cutout', crop: null, aspect: null };
+  const image = (c && c.image) || p.image || 0;
+  if (box) return { variant: c.choice, crop: box, image, aspect: M.shownAspect(p, c.choice, box, image) };
+  return { variant: 'cutout', crop: null, image: 0, aspect: null };
 }
 
 async function placeProduct(pid, x, y) {
@@ -420,7 +440,7 @@ async function placeProduct(pid, x, y) {
   const aspect = pl.aspect || await aspectOf(S.source.thumbUrl(p));
   const el = M.addElement(S.board, {
     kind: 'product', product_id: pid, x: clamp01(x), y: clamp01(y),
-    w: defaultWidth(p.slot), aspect, variant: pl.variant, crop: pl.crop,
+    w: defaultWidth(p.slot), aspect, variant: pl.variant, crop: pl.crop, image: pl.image,
   });
   renderBoard();
   return el;
@@ -699,7 +719,8 @@ async function openInfo(text) {
     const pl = p.placement || {};
     M.addElement(b, { kind: 'product', product_id: p.product_id, x: pl.x ?? 0.5, y: pl.y ?? 0.5,
       w: pl.w ?? 0.3, rot: pl.rotation || 0, flip: !!pl.flip, z: pl.layer ?? 1,
-      aspect: pl.aspect || 1, variant: p.image_variant || 'cutout', crop: p.image_crop || null });
+      aspect: pl.aspect || 1, variant: p.image_variant || 'cutout', crop: p.image_crop || null,
+      image: p.image_index || 0 });
   }
   S.board = b;
   S.selected = null;
