@@ -258,23 +258,46 @@ button.on { background: var(--accent); color: #fff; border-color: var(--accent);
 .vframe img.contain { width: 100%; height: 100%; object-fit: contain; }
 .racts { display: flex; gap: 6px; margin-top: 6px; flex-wrap: wrap; }
 
-.adjust-inner { max-width: 720px; }
-.adjust-wrap { position: relative; overflow: auto; max-height: 76vh; touch-action: none; user-select: none; -webkit-user-select: none; }
+/* a definite height, so the picture area is what is left over and the stage
+   can be sized to fit it */
+.adjust-inner { max-width: min(1100px, 96vw); height: 90vh; }
+/* the padding is not decoration: a handle sits 22 px outside the picture,
+   and without room for it the one on an edge falls outside the scroller
+   and the panel below catches the touch instead */
+.adjust-wrap { position: relative; overflow: auto; padding: 26px; touch-action: none;
+  user-select: none; -webkit-user-select: none; }
 /* a cut-out is shown on the board's own off-white, never on white or a checker */
 .adjust-wrap.on-ground { background: var(--ground); }
 .adj-version { font-size: 13px; font-weight: 600; }
 .adj-sel { font-size: 12px; color: #fff; background: #3a7bd5; border-radius: 999px; padding: 2px 9px; }
+/* the picture and its boxes are one element: a box is a percentage of THIS,
+   which is exactly the picture, however the wrapper is scrolled or zoomed */
+.adjust-stage { position: relative; margin: 0 auto; }
 .adjust-wrap img { display: block; width: 100%; height: auto; }
 .adjust-box { position: absolute; border: 2px solid rgba(58,123,213,.75); pointer-events: none; }
 .adjust-box.sel { border-color: #3a7bd5; box-shadow: 0 0 0 9999px rgba(30,26,22,.35); }
-.adjust-box.sel::after { content: ""; position: absolute; right: -9px; bottom: -9px; width: 18px; height: 18px; background: #3a7bd5; border-radius: 50%; }
+/* eight handles; the grab area is 44 px and lives in the hit test, not here */
+.adjust-handle { position: absolute; width: 18px; height: 18px; margin: -10px 0 0 -10px;
+  background: #fff; border: 2px solid #3a7bd5; border-radius: 50%; pointer-events: none;
+  box-shadow: 0 1px 3px rgba(30,26,22,.45); }
+.adj-loupe { position: fixed; z-index: 50; width: 120px; height: 120px; border-radius: 50%;
+  border: 2px solid #fff; box-shadow: 0 2px 10px rgba(30,26,22,.5); pointer-events: none;
+  background-repeat: no-repeat; background-color: var(--ground); }
+.adj-loupe[hidden] { display: none; }
+.adj-loupe::before, .adj-loupe::after { content: ""; position: absolute; background: rgba(58,123,213,.9); }
+.adj-loupe::before { left: 50%; top: 40%; width: 1px; height: 20%; }
+.adj-loupe::after { top: 50%; left: 40%; height: 1px; width: 20%; }
+.adj-loupe span { position: absolute; left: 50%; top: 124px; transform: translateX(-50%);
+  background: rgba(30,26,22,.85); color: #fff; font-size: 12px; padding: 2px 8px;
+  border-radius: 999px; white-space: nowrap; }
 .adjust-box.main { border-style: solid; }
 .adjust-box.split { border-style: dashed; }
 .adjust-bar { flex-wrap: wrap; }
 .adjust-bar .grow { flex: 1 1 auto; }
 .adjust-bar button { min-height: 36px; padding: 6px 10px; font-size: 13px; }
 .adjust-bar button.on { background: var(--accent); color: #fff; border-color: var(--accent); }
-.adjust-wrap { max-height: 58vh; }
+/* as large as the screen allows: the picture takes what the bars do not */
+.adjust-wrap { flex: 1 1 auto; max-height: none; min-height: 200px; }
 .adj-strip { display: flex; gap: 6px; padding: 6px 10px; overflow-x: auto; border-bottom: 1px solid var(--line); }
 .adj-strip:empty { display: none; }
 .adj-strip img { height: 54px; width: auto; border: 2px solid transparent; border-radius: 6px; cursor: pointer; background: var(--ground); }

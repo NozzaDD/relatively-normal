@@ -294,6 +294,10 @@ export function createReview(api) {
       sel: null,
       arm: false,
       drag: null,
+      undo: null,
+      zoom: 1,
+      pointers: new Map(),
+      pinch: null,
     };
     // open on the version she is already using
     if (eff && eff.choice) {
@@ -306,6 +310,7 @@ export function createReview(api) {
       }
     }
     let img = null;
+    let stage = null;
     const V = () => vers[st.cur];
     const sameBase = (v, o) => v.base === (o.base || 'photo') && (v.base === 'asset' || v.image === (o.image || 0));
 
@@ -327,14 +332,44 @@ export function createReview(api) {
     const versionUrl = (v) => (v.base === 'asset' ? api.source.assetUrl(p)
       : v.base === 'whole' ? api.source.wholeUrl(p, v.image) : api.source.fullUrl(p, v.image));
 
+    // ---------------------------------------------------------------- the stage
+    //
+    // The picture and the boxes live in one element, sized in pixels. That is
+    // the whole of the geometry: a box is a percentage of the stage, and the
+    // stage IS the picture, so what is drawn and what is pointed at are the
+    // same rectangle. (They were not before: boxes were percentages of the
+    // scrolling wrapper, whose height is the visible strip, not the picture's,
+    // so on any picture taller than the wrapper every box was painted short
+    // and the resize corner sat nowhere near the corner you could see.)
+    const PAD = 26;                 // room for a handle that hangs off the picture
+    function baseWidth() {
+      const cw = wrap.clientWidth - PAD * 2, ch = wrap.clientHeight - PAD * 2;
+      const nw = img && img.naturalWidth ? img.naturalWidth : 3;
+      const nh = img && img.naturalHeight ? img.naturalHeight : 4;
+      if (!cw || !ch) return cw || 320;
+      return Math.max(80, Math.min(cw, ch * (nw / nh)));   // the whole picture, as large as it fits
+    }
+    function layout(zoom) {
+      if (zoom !== undefined) st.zoom = Math.max(1, Math.min(8, zoom));
+      if (stage) stage.style.width = `${Math.round(baseWidth() * st.zoom)}px`;
+      $('adjZoom').textContent = st.zoom > 1.01 ? `${st.zoom.toFixed(1)}×` : 'fit';
+    }
+
     function showImage() {
       const v = V();
       wrap.replaceChildren();
       wrap.classList.toggle('on-ground', v.base !== 'photo');
+      stage = document.createElement('div');
+      stage.className = 'adjust-stage';
+      stage.id = 'adjStage';
       img = document.createElement('img');
       img.src = versionUrl(v);
       img.draggable = false;
-      wrap.appendChild(img);
+      img.addEventListener('load', () => { layout(); paintBoxes(); });
+      stage.appendChild(img);
+      wrap.appendChild(stage);
+      st.zoom = 1;
+      layout();
       $('adjCounter').textContent = `${st.cur + 1} of ${vers.length}`;
       $('adjVersion').textContent = v.label;
       $('adjPrev').disabled = st.cur === 0;
@@ -359,16 +394,34 @@ export function createReview(api) {
 
     function paint() { paintBoxes(); panel(); }
 
+    // corners first, then edges: on a small box the targets overlap and the
+    // corner is what the finger means
+    const HANDLES = [['nw', 0, 0], ['ne', 1, 0], ['sw', 0, 1], ['se', 1, 1],
+      ['n', 0.5, 0], ['s', 0.5, 1], ['w', 0, 0.5], ['e', 1, 0.5]];
+    const GRAB = 22;              // half of a 44 px target, and it reaches outside the box
+    const MINSIDE = 0.004;
+
     function paintBoxes() {
-      wrap.querySelectorAll('.adjust-box').forEach((d) => d.remove());
+      if (!stage) return;
+      stage.querySelectorAll('.adjust-box').forEach((d) => d.remove());
       const sel = selected();
       for (const b of boxesOn()) {
         const d = document.createElement('div');
         d.className = `adjust-box ${b.kind}`;
-        if (sel && sel.kind === b.kind && (b.kind === 'main' || sel.i === b.i)) d.classList.add('sel');
+        const isSel = sel && sel.kind === b.kind && (b.kind === 'main' || sel.i === b.i);
+        if (isSel) d.classList.add('sel');
         d.style.left = `${b.rect[0] * 100}%`; d.style.top = `${b.rect[1] * 100}%`;
         d.style.width = `${b.rect[2] * 100}%`; d.style.height = `${b.rect[3] * 100}%`;
-        wrap.appendChild(d);                 // no label: nothing over the photo
+        if (isSel) {
+          for (const [name, hx, hy] of HANDLES) {
+            const h = document.createElement('i');
+            h.className = `adjust-handle h-${name}`;
+            h.dataset.handle = name;
+            h.style.left = `${hx * 100}%`; h.style.top = `${hy * 100}%`;
+            d.appendChild(h);                 // above the box's own dimming shadow
+          }
+        }
+        stage.appendChild(d);                 // no label: nothing over the photo
       }
       const sl = $('adjSelLabel');
       sl.textContent = !sel ? '' : sel.kind === 'main' ? 'this product'
@@ -387,7 +440,7 @@ export function createReview(api) {
         return;
       }
       if (sel.kind === 'main') {
-        hint('This product\'s own image. Drag its corner to widen or tighten it.');
+        hint('This product\'s own image. Drag any handle to widen or tighten it; pinch to zoom in first.');
       } else {
         const x = sel.s;
         const slots = document.createElement('div');
@@ -417,31 +470,131 @@ export function createReview(api) {
       pn.appendChild(del);
     }
 
+    // ------------------------------------------------- the loupe, while dragging
+    const loupe = $('adjLoupe');
+    function showLoupe(cx, cy, x, y) {
+      if (!stage) return;
+      const r = stage.getBoundingClientRect();
+      const M = 2.5;
+      loupe.style.backgroundImage = `url("${img.getAttribute('src')}")`;
+      loupe.style.backgroundSize = `${r.width * M}px ${r.height * M}px`;
+      loupe.style.backgroundPosition = `${60 - x * r.width * M}px ${60 - y * r.height * M}px`;
+      const near = cx < 200 && cy < 220;
+      loupe.style.left = `${cx + (near ? 24 : -144)}px`;
+      loupe.style.top = `${Math.max(8, cy - 148)}px`;
+      const w = img.naturalWidth || 0, h = img.naturalHeight || 0;
+      const sel = selected();
+      $('adjNumbers').textContent = sel
+        ? `${Math.round(sel.rect[2] * w)} × ${Math.round(sel.rect[3] * h)} px` : '';
+      loupe.hidden = false;
+    }
+    const hideLoupe = () => { loupe.hidden = true; };
+
+    // --------------------------------------------------------- pointers
     const pt = (ev) => {
-      const r = img.getBoundingClientRect();
+      const r = stage.getBoundingClientRect();
       return [Math.min(1, Math.max(0, (ev.clientX - r.left) / r.width)),
         Math.min(1, Math.max(0, (ev.clientY - r.top) / r.height))];
     };
-    const hit = (x, y) => boxesOn().reverse()
+    // 1. a handle of a box — tested in screen pixels, so it reaches outside the
+    //    box and a handle on the picture's own edge is still grabbable
+    const handleAt = (cx, cy, rect) => {
+      const r = stage.getBoundingClientRect();
+      for (const [name, hx, hy] of HANDLES) {
+        const px = r.left + (rect[0] + rect[2] * hx) * r.width;
+        const py = r.top + (rect[1] + rect[3] * hy) * r.height;
+        if (Math.abs(cx - px) <= GRAB && Math.abs(cy - py) <= GRAB) return name;
+      }
+      return null;
+    };
+    // 2. inside a box
+    const inside = (x, y) => boxesOn().reverse()
       .find((b) => x >= b.rect[0] && x <= b.rect[0] + b.rect[2] && y >= b.rect[1] && y <= b.rect[1] + b.rect[3]) || null;
+
+    const clamp01 = (v) => Math.min(1, Math.max(0, v));
+    function resized(name, x, y, r0) {
+      let [x0, y0] = r0;
+      let x1 = x0 + r0[2], y1 = y0 + r0[3];
+      if (name.includes('w')) x0 = x;
+      if (name.includes('e')) x1 = x;
+      if (name.includes('n')) y0 = y;
+      if (name.includes('s')) y1 = y;
+      const a = clamp01(Math.min(x0, x1)), b = clamp01(Math.max(x0, x1));
+      const c = clamp01(Math.min(y0, y1)), d = clamp01(Math.max(y0, y1));
+      return [a, c, Math.max(MINSIDE, b - a), Math.max(MINSIDE, d - c)];
+    }
+    const setRect = (target, r) => { for (let i = 0; i < 4; i++) target[i] = r[i]; };
+
+    // Two fingers always mean zoom and pan, never an edit. The second finger
+    // lands a moment after the first, which has already begun a box, so the
+    // first finger's work is put back before the pinch starts.
+    function revertTouch() {
+      const u = st.undo;
+      st.undo = null;
+      if (!u) return;
+      st.main = u.main;
+      st.splits.length = u.splits;
+      if (u.target && u.rect) setRect(u.target, u.rect);
+      st.sel = u.sel;
+      paint();
+    }
+    function startPinch() {
+      revertTouch();
+      const [[ax, ay], [bx, by]] = [...st.pointers.values()];
+      const r = stage.getBoundingClientRect();
+      const mx = (ax + bx) / 2, my = (ay + by) / 2;
+      st.pinch = { d: Math.hypot(bx - ax, by - ay), zoom: st.zoom,
+        fx: (mx - r.left) / r.width, fy: (my - r.top) / r.height };
+    }
+    function movePinch() {
+      if (!st.pinch || st.pointers.size < 2) return;
+      const [[ax, ay], [bx, by]] = [...st.pointers.values()];
+      const d = Math.hypot(bx - ax, by - ay);
+      const mx = (ax + bx) / 2, my = (ay + by) / 2;
+      layout(st.pinch.d > 8 ? st.pinch.zoom * (d / st.pinch.d) : st.zoom);
+      // the picture point the fingers started on stays under the fingers: that
+      // is the zoom, and moving the fingers together is the pan
+      const r = stage.getBoundingClientRect();
+      wrap.scrollLeft += (r.left + st.pinch.fx * r.width) - mx;
+      wrap.scrollTop += (r.top + st.pinch.fy * r.height) - my;
+      paintBoxes();
+    }
 
     wrap.onpointerdown = (ev) => {
       ev.preventDefault();
+      // the first finger of a gesture clears whatever the last one left behind:
+      // a touch released off the wrapper never reports back, and one stale id
+      // would make the next single-finger drag look like a pinch
+      if (ev.isPrimary !== false) { st.pointers.clear(); st.pinch = null; }
+      st.pointers.set(ev.pointerId, [ev.clientX, ev.clientY]);
+      if (st.pointers.size === 2) { st.drag = null; hideLoupe(); startPinch(); return; }
+      if (st.pointers.size > 2) return;
       const [x, y] = pt(ev);
-      const h = st.arm ? null : hit(x, y);
-      const v = V();
+      const sel = selected();
+      const wasSel = st.sel, wasMain = st.main, wasSplits = st.splits.length;
+      // the hit test, in order: a handle, then inside a box, then a new box
+      let h = null, on = null;
+      if (!st.arm && sel) { h = handleAt(ev.clientX, ev.clientY, sel.rect); if (h) on = sel; }
+      if (!h && !st.arm) {
+        for (const b of boxesOn().reverse()) {
+          const n = handleAt(ev.clientX, ev.clientY, b.rect);
+          if (n) { h = n; on = b; break; }
+        }
+      }
+      if (!h && !st.arm) on = inside(x, y);
+      if (on) st.sel = on.kind === 'main' ? { kind: 'main' } : { kind: 'split', i: on.i };
+      const r = on ? on.rect : null;
+      const covers = r && r[2] > 0.99 && r[3] > 0.99;
       if (h) {
-        st.sel = h.kind === 'main' ? { kind: 'main' } : { kind: 'split', i: h.i };
-        const r = h.rect;
-        const nearCorner = Math.abs(x - (r[0] + r[2])) < 0.06 && Math.abs(y - (r[1] + r[3])) < 0.06;
-        const whole = r[2] > 0.95 && r[3] > 0.95;
-        st.drag = whole && !nearCorner ? { mode: 'new', x0: x, y0: y } : nearCorner
-          ? { mode: 'resize', rect: r } : { mode: 'move', rect: r, dx: x - r[0], dy: y - r[1] };
+        st.drag = { mode: 'resize', rect: r, handle: h };
+      } else if (on && !covers) {
+        st.drag = { mode: 'move', rect: r, dx: x - r[0], dy: y - r[1] };
       } else {
         st.drag = { mode: 'new', x0: x, y0: y };
       }
       if (st.drag.mode === 'new') {
-        const rect = [x, y, 0.001, 0.001];
+        const rect = [x, y, MINSIDE, MINSIDE];
+        const v = V();
         if (!st.main || (!sameBase(v, st.main) && !st.arm && !boxesOn().length)) {
           st.main = { image: v.image, base: v.base === 'asset' ? 'asset' : v.base, rect };
           st.sel = { kind: 'main' };
@@ -454,25 +607,41 @@ export function createReview(api) {
         st.arm = false;
         $('adjAddBox').classList.remove('on');
       }
+      st.undo = { sel: wasSel, main: wasMain, splits: wasSplits,
+        rect: st.drag.mode === 'new' ? null : [...st.drag.rect], target: st.drag.rect };
       try { wrap.setPointerCapture(ev.pointerId); } catch (e) { /* pointer already gone */ }
       paint();
+      if (st.drag.mode === 'resize') showLoupe(ev.clientX, ev.clientY, x, y);
     };
     wrap.onpointermove = (ev) => {
+      if (st.pointers.has(ev.pointerId)) st.pointers.set(ev.pointerId, [ev.clientX, ev.clientY]);
+      if (st.pinch) { movePinch(); return; }
       const d = st.drag;
       if (!d) return;
-      const [x, y] = pt(ev);
+      const [x, y] = pt(ev);              // one to one with the finger, no snapping
       const r = d.rect;
       if (d.mode === 'move') {
         r[0] = Math.min(1 - r[2], Math.max(0, x - d.dx)); r[1] = Math.min(1 - r[3], Math.max(0, y - d.dy));
       } else if (d.mode === 'resize') {
-        r[2] = Math.max(0.03, x - r[0]); r[3] = Math.max(0.03, y - r[1]);
+        setRect(r, resized(d.handle, x, y, r));
       } else {
         r[0] = Math.min(d.x0, x); r[1] = Math.min(d.y0, y);
-        r[2] = Math.max(0.03, Math.abs(x - d.x0)); r[3] = Math.max(0.03, Math.abs(y - d.y0));
+        r[2] = Math.max(MINSIDE, Math.abs(x - d.x0)); r[3] = Math.max(MINSIDE, Math.abs(y - d.y0));
       }
       paintBoxes();
+      if (d.mode === 'resize') showLoupe(ev.clientX, ev.clientY, x, y); else hideLoupe();
     };
-    wrap.onpointerup = () => { st.drag = null; };
+    const letGo = (ev) => {
+      st.pointers.delete(ev.pointerId);
+      if (st.pointers.size < 2) st.pinch = null;
+      if (!st.pointers.size) { st.drag = null; st.undo = null; hideLoupe(); }
+    };
+    wrap.onpointerup = letGo;
+    wrap.onpointercancel = letGo;
+    wrap.onlostpointercapture = letGo;
+    window.addEventListener('pointerup', letGo);      // a finger let go off the picture
+    $('adjZoom').onclick = () => { layout(st.zoom > 1.01 ? 1 : 2.5); paintBoxes(); };
+    window.addEventListener('resize', () => { if (!m.classList.contains('hidden')) { layout(); paintBoxes(); } });
 
     const go = (d) => { const n = st.cur + d; if (n >= 0 && n < vers.length) { st.cur = n; st.sel = null; showImage(); } };
     $('adjPrev').onclick = () => go(-1);
