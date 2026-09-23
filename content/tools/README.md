@@ -131,3 +131,20 @@ row per box: `{parent}-S{n}`, with `parent_id`, `asset_type = crop`,
 gave, batch, shop and brand from the parent (confidence inherited, never
 upgraded), and colours read from the box region by `extract_colours`. The
 `used_in` collector marks both the cut piece and its parent.
+
+## Added 22 September 2026 — panels and listing-grid cells
+
+| Script | What it does |
+|---|---|
+| `panels.py` | splits a product-page screenshot into its separate photographs, classifies each (flat lay, on-model, detail, text, other), cuts each on its own and rates the flat lays. A product whose flat-lay panel measures clean gets that panel as its cut-out and leaves Review. Writes `_panels.json`. |
+| `grid_cells.py` | every cell of a listing grid as a product of its own: the cell's photograph, a cut-out, and the name, section, price and fit label read off its caption. Fills the lattice in from the cells the detector found, so a grid of nine no longer yields four. Writes `_grid_cells.json`. |
+
+- A gutter is read from a line's **own evenness**, not from one page-wide
+  backdrop colour: two panels often sit on two different whites, and the band
+  between them is the line that matters.
+- The cut runs through the **middle** of a gutter. A panel that begins where
+  the backdrop stops has the garment against its frame from the first row, and
+  the "clear of the frame" measurement then rejects every panel there is.
+- A panel is classified by what is in it, not by its backdrop: once the page is
+  split the panel IS the photograph, so the corner test reads the garment's own
+  shoulders and calls a good packshot "other".

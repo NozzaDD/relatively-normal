@@ -109,6 +109,8 @@ export function buildInfo(board, productsById, inspById, { date = new Date() } =
       image_crop: el.crop ? el.crop.map(round4) : null,
       image_index: el.image || 0,
       image_base: el.base || 'photo',
+      // which of the product's pictures this piece shows, for reopening
+      image_type: ((p.images || [])[el.image || 0] || {}).type || '',
       // a piece cut out of another product's screenshot carries its parent
       parent_id: p.parent_id || '',
       source_image: (p.images && p.images[el.image || 0] && p.images[el.image || 0].source) || '',

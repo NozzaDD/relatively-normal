@@ -159,7 +159,13 @@ const rv = await page.evaluate(() => ({
 ok('review lists every product that needs a decision', rv.cards > 300, JSON.stringify(rv));
 ok('a card shows four versions', rv.versions === 4, String(rv.versions));
 const decided0 = Number((rv.progress.match(/^(\d+) of/) || [])[1]);
-ok('progress counts only what is filed as decided', decided0 >= 0 && decided0 < 10, rv.progress);
+// with nothing chosen in this browser, the only products already decided are
+// the ones the catalogue itself settled: a listing grid that has been cut into
+// cells is hidden, and so is a UNIQLO image a recoloured variant replaced
+const settled = await page.evaluate(() => window.__studio.products.filter(
+  (p) => !p.clean && p.full && !p.parent_id && p.hidden).length);
+ok('progress counts only what is filed as decided', decided0 === settled,
+  `${rv.progress} — ${settled} settled by the catalogue`);
 await page.click('#reviewCards .rcard .version[data-kind="item"]');
 await page.waitForTimeout(150);
 const afterChoice = await page.evaluate((pid) => ({
@@ -667,6 +673,96 @@ await page.waitForTimeout(200);
 ok('the zoom button goes back to fit', (await page.evaluate(() => document.getElementById('adjZoom').textContent)) === 'fit');
 await page.screenshot({ path: '/tmp/claude-0/shot-handles.png' });
 await page.click('#adjustCancel');
+
+
+console.log('\n14. panels, other picture, listing-grid cells');
+await page.evaluate(() => { localStorage.removeItem('rn.studio.choices.v1'); });
+await page.reload();
+await page.waitForFunction(() => window.__studio?.products?.length > 0 && window.__studio.review,
+  null, { timeout: 20000 });
+const pan = await page.evaluate(() => {
+  const ps = window.__studio.products;
+  const typed = ps.filter((p) => (p.images || []).some((e) => e.type && e.type !== 'whole page'));
+  const both = typed.filter((p) => (p.images || []).some((e) => e.type === 'flat lay')
+    && (p.images || []).some((e) => e.type === 'on-model'));
+  const flatPrimary = both.filter((p) => (p.images[p.primary] || {}).type === 'flat lay');
+  return { typed: typed.length, both: both.length, flatPrimary: flatPrimary.length,
+    pid: both.length ? both[0].product_id : null };
+});
+ok('pictures carry the type of photograph they are', pan.typed > 50, JSON.stringify(pan));
+ok('some products have both a flat lay and a shot on the model', pan.both > 20, JSON.stringify(pan));
+ok('the flat lay is the primary picture wherever there is one',
+  pan.flatPrimary === pan.both, JSON.stringify(pan));
+const vlab = await page.evaluate(async (pid) => {
+  const { productVersions } = await import('./js/data.js');
+  return productVersions(window.__studio.productsById[pid]).map((v) => v.label);
+}, pan.pid);
+ok('the filmstrip names each picture by type',
+  vlab.some((l) => l.startsWith('flat lay · ')) && vlab.some((l) => l.startsWith('on-model · ')),
+  vlab.slice(0, 5).join(' | '));
+
+// "other picture" keeps where the piece sits and how wide it is
+const swap = await page.evaluate(async (pid) => {
+  const S = window.__studio;
+  S.board = (await import('./js/model.js')).createBoard('portrait');
+  const el = await S.placeProduct(pid, 0.42, 0.6);
+  el.w = 0.33;
+  const before = { x: el.x, y: el.y, w: el.w, image: el.image };
+  S.selected = el.uid;
+  S.renderBoard();
+  document.querySelector('#elementBar [data-act="picture"]').click();
+  const now = S.board.elements.find((e) => e.uid === el.uid);
+  return { before, after: { x: now.x, y: now.y, w: now.w, image: now.image },
+    hidden: document.getElementById('elPicture').hidden,
+    type: (S.productsById[pid].images[now.image] || {}).type };
+}, pan.pid);
+ok('"other picture" is offered where there is another picture', swap.hidden === false);
+ok('it changes the picture and keeps the place and the size',
+  swap.after.image !== swap.before.image && swap.after.x === swap.before.x
+  && swap.after.w === swap.before.w, JSON.stringify(swap));
+const pinfo = await page.evaluate(() => window.__studio.buildInfo().pieces.at(-1));
+ok('the info file records which picture was used',
+  pinfo.image_index === swap.after.image && typeof pinfo.image_type === 'string',
+  JSON.stringify({ i: pinfo.image_index, t: pinfo.image_type }));
+
+// listing-grid cells, grouped under the grid they came from
+const cells = await page.evaluate(() => {
+  const ps = window.__studio.products;
+  const c = ps.filter((p) => /-C\d+$/.test(p.product_id));
+  const parents = new Set(c.map((p) => p.parent_id));
+  return { cells: c.length, parents: parents.size,
+    named: c.filter((p) => p.product_name).length,
+    priced: c.filter((p) => p.price).length,
+    twins: c.filter((p) => p.duplicate_of).length,
+    guessed: c.filter((p) => p.brand_confidence === 'guessed').length,
+    given: c.filter((p) => p.brand_confidence === 'given').length,
+    onShelf: c.filter((p) => p.clean).length,
+    parentHidden: [...parents].every((id) => (ps.find((q) => q.product_id === id) || {}).hidden) };
+});
+ok('every cell became a product of its own', cells.cells > 300 && cells.parents > 30, JSON.stringify(cells));
+ok('cells go to Review, never straight to the shelf', cells.onShelf === 0, String(cells.onShelf));
+ok('a cell brand is guessed from the grid, never given',
+  cells.given === 0 && cells.guessed > cells.cells * 0.8, JSON.stringify(cells));
+ok('likely twins are flagged, not merged', cells.twins > 0, String(cells.twins));
+ok('the grid itself is hidden once its cells exist', cells.parentHidden === true);
+await page.evaluate(() => window.__studio.setView('review'));
+await page.waitForTimeout(600);
+const grp = await page.evaluate(() => {
+  const g = document.querySelector('#reviewCards .cellgroup');
+  return g ? { picks: g.querySelectorAll('.cellpick').length,
+    accept: !![...g.querySelectorAll('button')].find((b) => b.textContent === 'Accept all cells') } : null;
+});
+ok('Review groups the cells under their grid, with one tap for all', !!grp && grp.picks > 0 && grp.accept,
+  JSON.stringify(grp));
+const took = await page.evaluate(() => {
+  const g = document.querySelector('#reviewCards .cellgroup');
+  const n = g.querySelectorAll('.cellpick').length;
+  [...g.querySelectorAll('button')].find((b) => b.textContent === 'Accept all cells').click();
+  const after = document.querySelector('#reviewCards .cellgroup');
+  return { n, chosen: after ? after.querySelectorAll('.cellpick.chosen').length : -1 };
+});
+ok('"accept all cells" takes the whole grid in one tap', took.chosen === took.n, JSON.stringify(took));
+
 
 console.log(`\n${pass} passed, ${fail} failed`);
 if (errors.length) console.log('page errors:\n  ' + errors.slice(0, 6).join('\n  '));

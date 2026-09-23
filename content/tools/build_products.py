@@ -194,6 +194,106 @@ def variant_rows(base_by_id):
     return out, hide
 
 
+def grid_rows(by_id, review):
+    """One row per cell of a listing grid.
+
+    A listing grid is a screenshot of a dozen products; each cell is one of
+    them. The cell's own photograph, its own cut-out and its own colours make
+    the row; the caption gives the name, the section and the price, each with
+    its own confidence. The brand is the grid's shop and is only ever
+    `guessed` — the caption names the product, not the label.
+
+    These go to Review, never straight to the shelf: a cell read off a page is
+    a suggestion, and the person decides.
+    """
+    from PIL import Image
+    import extract_colours as X
+    from colour_names import classify as colour_classify
+    cells = load_json(CAT + '/_grid_cells.json', {})
+    out = []
+    for key, rec in sorted(cells.items()):
+        pid, idx = key.split('#')[0], int(key.split('#')[1])
+        parent = by_id.get(pid)
+        if not parent:
+            continue
+        for j, c in enumerate(rec.get('cells') or []):
+            d = dict(parent)
+            rid = f'{pid}-C{j}'
+            asset = c.get('cut') or c.get('path')
+            cap_slot = c.get('slot') or ''
+            brand = parent.get('brand', '')
+            d.update(product_id=rid, parent_id=pid, n_images=1,
+                     image_paths=(parent['image_paths'].split(';') + [''] * 9)[idx],
+                     slot=cap_slot, garment_type=c.get('name', '') or parent.get('garment_type', ''),
+                     shot_type='cell of a listing grid', complete_in_frame='',
+                     asset_type='cutout_flat' if c.get('cut') else 'tile',
+                     asset_quality='good', asset_path='content/catalogue/' + asset,
+                     asset_image=idx, asset_base='photo', asset_choice='', asset_box='',
+                     shelf='', recoloured='', recolour_source='',
+                     brand=brand,
+                     brand_confidence='guessed' if brand else 'input needed',
+                     brand_evidence='listing grid caption' if brand else '',
+                     product_name=c.get('name', ''),
+                     product_name_confidence='given' if c.get('name') else 'input needed',
+                     price=(c.get('currency', '') + ' ' + c.get('price', '')).strip(),
+                     price_confidence='given' if c.get('price') else 'input needed',
+                     material='', material_confidence='input needed',
+                     product_url='', product_url_confidence='input needed',
+                     colour_name_text='',
+                     notes='cell %d of the listing grid %s%s%s' % (
+                         j + 1, pid,
+                         '; section "%s"' % c['category'] if c.get('category') else '',
+                         '; label "%s"' % c['label'] if c.get('label') else ''),
+                     validated='', used_in='')
+            for i in (1, 2, 3):
+                for k in ('hex', 'share', 'family', 'name'):
+                    d[f'colour{i}_{k}'] = ''
+            for k in ('colour1_L', 'colour1_C', 'colour1_h', 'colour1_rel_chroma', 'colour1_neutral'):
+                d[k] = ''
+            try:
+                with Image.open(CAT + '/' + asset) as im:
+                    crop = im.convert('RGBA' if c.get('cut') else 'RGB')
+                cols, skin, kept = X.colours_for_image(crop, is_cutout=bool(c.get('cut')))
+                for i, col in enumerate(cols[:3], 1):
+                    fam, nm, L, Cc, h, rel, nt = colour_classify(col['hex'])
+                    d[f'colour{i}_hex'] = col['hex']; d[f'colour{i}_share'] = round(col['share'], 3)
+                    d[f'colour{i}_family'] = fam; d[f'colour{i}_name'] = nm
+                    if i == 1:
+                        d.update(colour1_L=round(L, 1), colour1_C=round(Cc, 1), colour1_h=round(h, 1),
+                                 colour1_rel_chroma=round(rel, 3), colour1_neutral=nt)
+                d['colour_confidence'] = X.confidence('tile', cols, skin, kept)
+                d['colour_stability'] = 'stable'
+            except Exception as e:
+                d['colour_confidence'] = 'low'
+                d['notes'] += '; colour read failed: %s' % type(e).__name__
+            out.append(d)
+    return out
+
+
+def flag_twins(cells, existing):
+    """Mark a cell that looks like a product already in the catalogue.
+
+    Brand, slot and first colour name the same. Nothing is merged and nothing
+    is dropped: the row says which product it resembles and the person decides.
+    """
+    seen = collections.defaultdict(list)
+    for r in existing:
+        if r.get('parent_id'):
+            continue
+        seen[(norm(r.get('brand')), r.get('slot'), r.get('colour1_name'))].append(r['product_id'])
+    n = 0
+    for c in cells:
+        k = (norm(c.get('brand')), c.get('slot'), c.get('colour1_name'))
+        if not k[0] or not k[1] or not k[2]:
+            continue
+        twins = seen.get(k)
+        if twins:
+            c['notes'] += '; looks like ' + ', '.join(twins[:3])
+            c['validated'] = 'possible duplicate'
+            n += 1
+    return n
+
+
 def split_rows(choices, by_id, review):
     """Rows for the boxes the stylist drew on other products' screenshots.
 
@@ -380,6 +480,21 @@ def main():
         d['used_in'] = keep.get(d['product_id'], {}).get('used_in', '')
         d['validated'] = keep.get(d['product_id'], {}).get('validated', '')
     out.extend(splits)
+    cells = grid_rows(by_id, review)
+    twins = flag_twins(cells, out)
+    for d in cells:
+        d['used_in'] = keep.get(d['product_id'], {}).get('used_in', '')
+        if keep.get(d['product_id'], {}).get('validated'):
+            d['validated'] = keep[d['product_id']]['validated']
+    # the grid itself leaves the shelf once its cells exist: it is a page, not
+    # a product, and every garment on it now has a row of its own
+    parents = {d['parent_id'] for d in cells}
+    for pid in parents:
+        if pid in by_id:
+            by_id[pid]['shelf'] = 'hidden'
+            by_id[pid]['notes'] = (by_id[pid]['notes'] + '; cut into %d cells'
+                                   % sum(1 for d in cells if d['parent_id'] == pid)).strip('; ')
+    out.extend(cells)
 
     os.makedirs(CAT, exist_ok=True)
     with open(CAT + '/products.csv', 'w', newline='') as f:
@@ -387,6 +502,8 @@ def main():
         w.writeheader()
         w.writerows(out)
     print(len(out), 'products ->', CAT + '/products.csv')
+    print('grid cells:', len(cells), 'from', len(parents), 'grids;',
+          twins, 'flagged as possible duplicates')
     print('variants merged:', len(variants), ' splits:', len(splits),
           ' hidden:', sum(1 for d in out if d['shelf'] == 'hidden'),
           ' choices applied:', sum(1 for d in out if d['asset_choice']))

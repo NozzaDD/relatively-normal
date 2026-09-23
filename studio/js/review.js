@@ -152,6 +152,16 @@ export function createReview(api) {
     return list.filter((p) => !p.clean && p.full && !p.parent_id);
   }
 
+  /** The cells cut out of a listing grid, by the grid they came from. */
+  function cellsByParent(list) {
+    const by = {};
+    for (const p of list) {
+      if (!p.parent_id || !/-C\d+$/.test(p.product_id)) continue;
+      (by[p.parent_id] = by[p.parent_id] || []).push(p);
+    }
+    return by;
+  }
+
   function render() {
     const all = pending(api.products());
     let list = state.slot ? all.filter((p) => p.slot === state.slot) : all;
@@ -172,9 +182,70 @@ export function createReview(api) {
     }
     const cards = $('reviewCards');
     cards.replaceChildren();
+    const cells = cellsByParent(api.products());
     const todo = list.filter((p) => !isReviewed(p, api.choices));
     const doneList = list.filter((p) => isReviewed(p, api.choices));
-    for (const p of [...todo, ...doneList]) cards.appendChild(card(p));
+    for (const p of [...todo, ...doneList]) {
+      cards.appendChild(card(p));
+      const mine = cells[p.product_id];
+      if (mine && mine.length) cards.appendChild(cellGroup(p, mine));
+    }
+  }
+
+  /**
+   * A listing grid's cells, under the grid they were cut from. One tap takes
+   * the whole grid: a shop's page of twelve is twelve decisions otherwise, and
+   * they are the same decision twelve times.
+   */
+  function cellGroup(parent, cells) {
+    const wrap = document.createElement('div');
+    wrap.className = 'cellgroup';
+    const head = document.createElement('div');
+    head.className = 'rhead';
+    const left = cells.filter((c) => !isReviewed(c, api.choices)).length;
+    const who = document.createElement('span');
+    who.className = 'rwho';
+    who.textContent = `${cells.length} cell${cells.length === 1 ? '' : 's'} cut from this grid`
+      + (left ? `, ${left} still to decide` : ', all decided');
+    head.appendChild(who);
+    const all = document.createElement('button');
+    all.className = 'ghost small';
+    all.textContent = 'Accept all cells';
+    all.addEventListener('click', () => {
+      for (const c of cells) api.choices[c.product_id] = { ...(api.choices[c.product_id] || {}), choice: 'cutout' };
+      saveChoices(api.choices); api.onChange(); render();
+    });
+    head.appendChild(all);
+    wrap.appendChild(head);
+    const row = document.createElement('div');
+    row.className = 'cells';
+    for (const c of cells) {
+      const b = document.createElement('button');
+      b.className = 'cellpick' + (isReviewed(c, api.choices) ? ' chosen' : '');
+      const im = document.createElement('img');
+      im.loading = 'lazy';
+      im.src = api.source.assetUrl(c);
+      b.appendChild(im);
+      const t = document.createElement('span');
+      t.textContent = [c.slot || '—', c.price].filter(Boolean).join(' · ');
+      b.appendChild(t);
+      if (c.validated === 'possible duplicate') {
+        const d = document.createElement('i');
+        d.className = 'twin';
+        d.textContent = 'twin?';
+        b.appendChild(d);
+      }
+      b.title = [c.product_name, c.price].filter(Boolean).join(' — ') || c.product_id;
+      b.addEventListener('click', () => {
+        const had = isReviewed(c, api.choices);
+        if (had) delete api.choices[c.product_id];
+        else api.choices[c.product_id] = { choice: 'cutout' };
+        saveChoices(api.choices); api.onChange(); render();
+      });
+      row.appendChild(b);
+    }
+    wrap.appendChild(row);
+    return wrap;
   }
 
   function version(p, kind, label) {

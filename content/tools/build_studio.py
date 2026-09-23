@@ -65,21 +65,59 @@ def parse_box(v):
         return None
 
 
-def image_list(rv, sources):
-    """Every screenshot of a product as the desk sees it: path, size, boxes, cells."""
+def load_panels():
+    """panels.py's verdicts: {"PID#i": {split, panels: [...]}}."""
+    try:
+        return json.load(open(CAT + '/_panels.json'))
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+
+
+def image_list(rv, sources, pid='', panels=None, shot=''):
+    """Every PICTURE of a product as the desk sees it.
+
+    A picture used to be a screenshot. Where a screenshot turned out to hold
+    two or three photographs stacked on the page, its panels take its place and
+    each carries its own type, so the filmstrip says what it is looking at and
+    the shelf can take the flat lay rather than the whole page.
+    """
+    panels = panels or {}
     out = []
     for i, e in enumerate(rv.get('images') or []):
         if not e or 'error' in e:
             continue
+        src = sources[i] if i < len(sources) else ''
+        sp = panels.get(f'{pid}#{i}') or {}
+        if sp.get('split'):
+            for j, pn in enumerate(sp['panels']):
+                d = dict(path='full/' + os.path.basename(pn['path']), w=pn['w'], h=pn['h'],
+                         item=None, person=None, suggested=[], source=src,
+                         type=pn['type'], panel_of=i, panel_box=pn['box'])
+                if pn.get('cut'):
+                    with Image.open(CAT + '/' + pn['cut']) as im:
+                        d['whole'] = dict(path='full/' + os.path.basename(pn['cut']),
+                                          w=im.width, h=im.height)
+                out.append(d)
+            continue
         d = dict(path='full/' + os.path.basename(e['path']), w=e['w'], h=e['h'],
                  item=e.get('item'), person=e.get('person'),
                  suggested=e.get('suggested') or [],
-                 source=sources[i] if i < len(sources) else '')
+                 source=src, type='listing grid' if shot == 'listing grid' else 'whole page',
+                 panel_of=i, panel_box=[0, 0, 1, 1])
         if e.get('whole'):
             d['whole'] = dict(path='full/' + os.path.basename(e['whole']['path']),
                               w=e['whole']['w'], h=e['whole']['h'])
         out.append(d)
     return out
+
+
+def primary_picture(images):
+    """The picture the shelf shows: flat lay first, the person wearing it next."""
+    for want in ('flat lay', 'on-model', 'whole page'):
+        for i, e in enumerate(images):
+            if e.get('type') == want:
+                return i
+    return 0
 
 
 def load_flats():
@@ -93,6 +131,7 @@ def load_flats():
 def build_products(rows, review):
     out = []
     flats = load_flats()
+    panels = load_panels()
     by_id = {r['product_id']: r for r in rows}
     for r in rows:
         if not n(r['asset_path']):
@@ -107,11 +146,15 @@ def build_products(rows, review):
         src = n(r.get('recolour_source')) or r['product_id']
         clean = bool((flats.get(src) or {}).get('clean'))
         has_full = bool(rv.get('w')) and 'error' not in rv
-        images = image_list(rv, (parent or r)['image_paths'].split(';'))
+        images = image_list(rv, (parent or r)['image_paths'].split(';'),
+                            (parent or r)['product_id'], panels, n(r.get('shot_type')))
         idx = int(n(r.get('asset_image')) or 0)
         entry = images[idx] if idx < len(images) else (images[0] if images else None)
         out.append(dict(
             product_id=r['product_id'],
+            primary=primary_picture(images),
+            # a cell that looks like a product already filed; never merged
+            duplicate_of=n(r.get('validated')) == 'possible duplicate',
             slot=n(r['slot']),
             garment_type=n(r['garment_type']),
             pattern=n(r['pattern']),
@@ -211,7 +254,11 @@ def copy_assets(products, rows_by_id):
         src = ROOT + '/' + rows_by_id[pid]['asset_path']
         if p['asset_type'] != 'crop':                      # a crop has no asset of its own
             keep.add(pid + '.webp')
-            shutil.copyfile(src, f'{a_dir}/{pid}.webp')
+            if src.lower().endswith('.webp'):
+                shutil.copyfile(src, f'{a_dir}/{pid}.webp')
+            else:                                          # a grid cell's own photograph
+                with Image.open(src) as im:
+                    im.convert('RGBA').save(f'{a_dir}/{pid}.webp', 'WEBP', quality=88, method=5)
         for e in p['images'] or []:
             for src_name in [os.path.basename(e['path'])] + \
                     ([os.path.basename(e['whole']['path'])] if e.get('whole') else []):
