@@ -101,6 +101,8 @@ export function buildInfo(board, productsById, inspById, { date = new Date() } =
       price_confidence: p.price_confidence || '',
       product_url: p.product_url || '',
       product_url_confidence: p.product_url_confidence || '',
+      shop_product_id: p.shop_product_id || '',
+      shop_product_id_confidence: p.shop_product_id_confidence || '',
       image_source: p.image_source || '',
       // a recoloured piece is not the brand's photo of that colour — say so
       colour_simulated: !!p.recoloured,

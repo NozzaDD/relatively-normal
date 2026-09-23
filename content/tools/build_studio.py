@@ -205,6 +205,8 @@ def build_products(rows, review):
             hidden=n(r.get('shelf')) == 'hidden',
             recoloured=n(r.get('recoloured')) == 'yes',
             recolour_source=n(r.get('recolour_source')),
+            shop_product_id=n(r.get('shop_product_id')),
+            shop_product_id_confidence=n(r.get('shop_product_id_confidence')),
         ))
     return out
 

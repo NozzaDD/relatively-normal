@@ -27,7 +27,10 @@ FIELDS = ['product_id', 'batch_id', 'shop', 'shop_type', 'slot', 'garment_type',
           'brand_evidence',
           # given = the stylist set it on the desk; inherited = from the product
           # this row was split out of; guessed = from a listing-grid caption
-          'slot_confidence']
+          'slot_confidence',
+          # the shop's own product number, which names the style: UNIQLO prints
+          # it under Description ("Product ID: 485303")
+          'shop_product_id', 'shop_product_id_confidence']
 
 
 def read_rows():
@@ -163,8 +166,67 @@ def kept_columns():
     return keep
 
 
+def apply_pages(by_id):
+    """What uniqlo_pages.py read off each UNIQLO screenshot's buy panel.
+
+    The name, the selected colour ("03 GREY") and the price are legible on the
+    page, so they are `given` and replace what the viewing pass typed. The row
+    is read from its first screenshot; where its screenshots show different
+    products — the clustering put two pages in one row — the note says so.
+
+    The product ID sits under Description, so only some screenshots reach it.
+    On a row's own screenshot it is `given`. A row whose screenshots stop above
+    it takes the ID from another screenshot of the same name at `guessed`,
+    with the screenshot that shows it as evidence: the ID is what identifies
+    the style, and a matching name is the inference.
+    """
+    pages = load_json(CAT + '/_uniqlo_pages.json', {})
+    if not pages:
+        return 0
+    ids, id_from = {}, {}
+    for p, rec in pages.items():
+        if rec.get('product_id') and rec.get('name'):
+            ids[rec['name']] = rec['product_id']
+            id_from[rec['name']] = os.path.basename(p)
+    n = 0
+    for d in by_id.values():
+        imgs = [x for x in (d.get('image_paths') or '').split(';') if x in pages]
+        if not imgs:
+            continue
+        recs = [pages[x] for x in imgs]
+        rec = recs[0]
+        if not rec.get('name'):
+            continue
+        n += 1
+        d['product_name'], d['product_name_confidence'] = rec['name'], 'given'
+        if rec.get('price'):
+            d['price'], d['price_confidence'] = rec['price'], 'given'
+        if rec.get('colour_no'):
+            d['colour_name_text'] = f"{rec['colour_no']} {rec['colour']}"
+        own = next((r['product_id'] for r in recs if r.get('product_id')), '')
+        if own:
+            d['shop_product_id'], d['shop_product_id_confidence'] = own, 'given'
+        elif rec['name'] in ids:
+            d['shop_product_id'], d['shop_product_id_confidence'] = ids[rec['name']], 'guessed'
+            d['notes'] = (d['notes'] + f"; product ID read on {id_from[rec['name']]}, "
+                          "a screenshot of the same name").strip('; ')
+        else:
+            d['shop_product_id_confidence'] = 'input needed'
+        names = sorted({r['name'] for r in recs if r.get('name')})
+        if len(names) > 1:
+            d['notes'] = (d['notes'] + '; its screenshots show different products: '
+                          + ' / '.join(names) + ' — name and price are from the first').strip('; ')
+    return n
+
+
 def variant_rows(base_by_id):
-    """Recoloured UNIQLO variants from uniqlo_variants.py, as full product rows."""
+    """UNIQLO colour variants from uniqlo_variants.py, as full product rows.
+
+    One row per swatch circle on the style's page. Most are the style's flat
+    lay recoloured to the swatch — recoloured = yes, colour simulated. A few
+    are a real photograph of that colour, cut from the all-colours picture
+    where the garment lay alone; those are the brand's own photo and are not
+    marked simulated."""
     v = load_json(CAT + '/_variants.json', {})
     out, hide = [], {}
     for x in v.get('variants', []):
@@ -173,29 +235,43 @@ def variant_rows(base_by_id):
             continue
         d = dict(src)
         c = x['colour']
-        d.update(product_id=x['product_id'], n_images=0, image_paths='',
+        real = x.get('real')
+        note = (f"cut from the all-colours photo {os.path.basename(x['real_from'])}, the brand's own "
+                f"photo of this colour; swatch {x['swatch']} of the style {x['style']}"
+                if real else
+                f"recoloured from {x['source']} to swatch {x['swatch']} of the style {x['style']} in CIELAB; "
+                "colour simulated, not the brand's photo")
+        d.update(product_id=x['product_id'], n_images=0,
+                 product_name=x['style'], product_name_confidence='given',
+                 price=x.get('price') or src['price'],
+                 price_confidence='given' if x.get('price') else src['price_confidence'],
+                 slot=x['slot'], garment_type=x['garment_type'],
+                 slot_confidence=x.get('slot_confidence') or src.get('slot_confidence', ''),
+                 image_paths=x['real_from'] if real else '',
                  colour1_hex=c['hex'], colour1_share=c['share'], colour1_L=c['L'],
                  colour1_C=c['C'], colour1_h=c['h'], colour1_rel_chroma=c['rel'],
                  colour1_neutral=c['neutral'], colour1_family=c['family'], colour1_name=c['name'],
                  colour2_hex='', colour2_share='', colour2_family='', colour2_name='',
                  colour3_hex='', colour3_share='', colour3_family='', colour3_name='',
-                 colour_confidence='medium', colour_stability='stable',
+                 colour_confidence='high' if not real else 'medium', colour_stability='stable',
                  asset_type='cutout_flat', asset_path=x['asset_path'], asset_quality='good',
+                 # only the selected colour's name is printed on the page
                  colour_name_text=x.get('colour_name_text', ''),
-                 notes=f"recoloured from {x['source']} in CIELAB; colour simulated, not the brand's photo",
-                 validated='', used_in='', shelf='', asset_choice='', asset_box='',
-                 recoloured='yes', recolour_source=x['source'], parent_id='', asset_image='',
-                 asset_base='')
+                 notes=note, validated='', used_in='', shelf='', asset_choice='', asset_box='',
+                 recoloured='' if real else 'yes', recolour_source=x['source'],
+                 parent_id='', asset_image='', asset_base='')
         out.append(d)
-    # the other UNIQLO images of a recoloured style leave the shelf, replaced by the variants
+    # the other screenshots of a style that has variants leave the shelf: every
+    # colour now has a row of its own. A row is hidden only when all of its
+    # screenshots belong to that one style, so a row the clustering filled from
+    # two pages stays where it is.
+    sources = {x['source'] for x in v.get('variants', [])}
     for style, rep in v.get('report', {}).items():
-        src = base_by_id.get(rep['source'])
-        if not src:
-            continue
+        imgs = set(rep.get('images', []))
         for pid, r in base_by_id.items():
-            if (pid != rep['source'] and r['brand'] == src['brand']
-                    and r['garment_type'] == src['garment_type']):
-                hide[pid] = f"replaced by variants of {rep['source']}"
+            mine = [x for x in (r.get('image_paths') or '').split(';') if x]
+            if pid not in sources and mine and set(mine) <= imgs:
+                hide[pid] = f"replaced by the colour variants of {rep['source']}"
     return out, hide
 
 
@@ -479,6 +555,8 @@ def main():
         out.append(d)
 
     by_id = {d['product_id']: d for d in out}
+    read = apply_pages(by_id)
+    print('UNIQLO rows read off the page:', read)
     variants, hide = variant_rows(by_id)
     for pid, why in hide.items():
         by_id[pid]['shelf'] = 'hidden'
