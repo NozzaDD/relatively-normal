@@ -9,6 +9,10 @@ cleanly from the page — usually four of nine. Those four are enough to say
 where the lattice is: the column centres, the row centres and the cell pitch
 all follow, and the missing cells are the lattice positions that hold content.
 
+Since 24 September this is the FALLBACK. Grid pages are read by eye
+(read_grids.py), and a screenshot whose cells were read is left alone here:
+its entry in _grid_cells.json carries `source: "eye"` and is never rewritten.
+
   python3 content/tools/grid_cells.py [--limit N] [--all]
 
 Writes content/catalogue/_grid_cells.json and one JPEG and cut-out per cell into
@@ -214,9 +218,13 @@ def main():
     review = json.load(open(CAT + '/_review_boxes.json'))
     rows = {r['product_id']: r for r in csv.DictReader(open(CAT + '/products.csv'))}
     try:
-        out = {} if args.redo else json.load(open(DEST))
+        out = json.load(open(DEST))
     except (FileNotFoundError, json.JSONDecodeError):
         out = {}
+    # a full run redoes the geometric cells only: a page read by eye
+    # (read_grids.py) keeps what the reader saw
+    if args.redo:
+        out = {k: v for k, v in out.items() if v.get('source') == 'eye'}
     # a page the viewing pass typed as a listing grid but where the strict
     # detector found no cells gets the relaxed one — for new or changed
     # products only (incremental.py), so no reviewed grid grows new cells
@@ -242,7 +250,7 @@ def main():
             continue
         for i, e in enumerate(rec.get('images') or []):
             if e and e.get('suggested') and f'{pid}#{i}' not in out:
-                jobs.append((pid, i, e))
+                jobs.append((pid, i, e))     # keys read by eye are in `out` already
     if args.limit:
         jobs = jobs[:args.limit]
     print(f'{len(jobs)} grids to cut, {len(out)} already done', flush=True)

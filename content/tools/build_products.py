@@ -397,7 +397,6 @@ def variant_rows(base_by_id):
     return out, hide
 
 
-UNIQUE_CELL_IDS_FROM = 75
 SHOP_SCOPED_GUESS_FROM = 75
 
 
@@ -425,36 +424,45 @@ def grid_rows(by_id, review):
             continue
         for j, c in enumerate(rec.get('cells') or []):
             d = dict(parent)
-            # a grid row with several screenshots numbered every screenshot's
-            # cells from C0, so two cells shared an ID. From batch 75 on the
-            # screenshot is in the ID; earlier IDs are left as filed, because
-            # the owner's choices and outfits point at them.
-            rid = f'{pid}-C{j}' if idx == 0 or int(pid[1:4]) < UNIQUE_CELL_IDS_FROM \
-                else f'{pid}-I{idx}-C{j}'
+            # every screenshot of a grid row numbers its own cells, so two
+            # cells never share an ID (the first screenshot keeps the plain
+            # -C{j} form the desk's cell test knows)
+            rid = f'{pid}-C{j}' if idx == 0 else f'{pid}-I{idx}-C{j}'
             asset = c.get('cut') or c.get('path')
             cap_slot = c.get('slot') or ''
             brand = parent.get('brand', '')
+            eye = c.get('source') == 'eye'
+            # a multi-brand retailer's grid names several brands across its
+            # tiles; the page's list says nothing about which tile is whose
+            multi = parent.get('shop_type') == 'multi-brand' or ';' in brand
+            if multi:
+                brand = ''
             d.update(product_id=rid, parent_id=pid, n_images=1,
                      image_paths=(parent['image_paths'].split(';') + [''] * 9)[idx],
                      slot=cap_slot, slot_confidence='guessed' if cap_slot else '',
-                     garment_type=c.get('name', '') or parent.get('garment_type', ''),
-                     shot_type='cell of a listing grid', complete_in_frame='',
+                     garment_type=c.get('garment') or c.get('name', '') or parent.get('garment_type', ''),
+                     shot_type='cell of a listing grid', complete_in_frame='yes' if eye else '',
                      asset_type='cutout_flat' if c.get('cut') else 'tile',
                      asset_quality='good', asset_path='content/catalogue/' + asset,
                      asset_image=idx, asset_base='photo', asset_choice='', asset_box='',
                      shelf='', recoloured='', recolour_source='',
+                     # the brand is the grid's shop, at the confidence the grid
+                     # row itself has: a mono-brand shop's own domain is the
+                     # same evidence for every tile on the page
                      brand=brand,
-                     brand_confidence='guessed' if brand else 'input needed',
-                     brand_evidence='listing grid caption' if brand else '',
+                     brand_confidence=(parent.get('brand_confidence') or 'guessed') if brand else 'input needed',
+                     brand_evidence=(parent.get('brand_evidence') or 'listing grid page') if brand else '',
                      product_name=c.get('name', ''),
                      product_name_confidence='given' if c.get('name') else 'input needed',
                      price=(c.get('currency', '') + ' ' + c.get('price', '')).strip(),
                      price_confidence='given' if c.get('price') else 'input needed',
                      material='', material_confidence='input needed',
                      product_url='', product_url_confidence='input needed',
-                     colour_name_text='',
-                     notes='cell %d of the listing grid %s%s%s' % (
+                     colour_name_text=c.get('colour_name', ''),
+                     notes='cell %d of the listing grid %s%s%s%s%s' % (
                          j + 1, pid,
+                         '; read by eye' if eye else '',
+                         '; multi-brand page, the brand is not read per tile' if multi else '',
                          '; section "%s"' % c['category'] if c.get('category') else '',
                          '; label "%s"' % c['label'] if c.get('label') else ''),
                      validated='', used_in='')

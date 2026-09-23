@@ -88,10 +88,13 @@ there is no one-sided stretch.
 
 A **listing grid** is a page of a dozen products, so each of its cells is now a
 product of its own, derived from the grid, with the cell's own photograph,
-cut-out and colours, and whatever its caption gave: name, section, price, fit
-label. The brand is the grid's shop at `guessed`. Cells go to Review, never
-straight to the shelf, grouped under the grid they came from with **Accept all
-cells** to take a whole grid in one tap. A cell that matches a product already
+cut-out and colours, and whatever its caption gave: name, price, colour name,
+what the garment is. The cells are read off the page by eye
+(`content/tools/read_grids.py`), not found by geometry; the brand is the
+grid's shop at the grid's own confidence. A cell whose cut-out measures clean
+— one piece, clear of the frame, no text, nobody wearing it — is on the shelf
+like any clean flat lay; the rest wait in Review grouped under the grid they
+came from, with **Accept all cells** to take a whole grid in one tap. A cell that matches a product already
 filed by brand, slot and colour is flagged *twin?* — flagged, never merged. The
 grid itself is hidden once its cells exist.
 

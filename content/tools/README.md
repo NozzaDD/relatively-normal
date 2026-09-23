@@ -292,3 +292,41 @@ The owner's decision, 23 September evening: **only the two teal recolours stay**
 both OCEAN GREEN. The other twelve show their own flat lay, unrecoloured. For a
 new ingest `same_product.py` is run to find pairs, and `--preview` at most; a
 recolour is applied only when the owner has looked at the preview and said yes.
+
+## Added 24 September 2026 — grid pages read by eye
+
+| Script | What it does |
+|---|---|
+| `read_grids.py --render DIR` | every listing-grid screenshot's review copy with a pixel ruler drawn round it (numbers every 100 px, ticks every 50, faint lines every 100), for a reader to open |
+| `read_grids.py --ingest DIR` | takes the readers' JSON (one per screenshot: per tile the photograph's rectangle in page pixels, the name, price and currency, the colour name where the caption gives one, what the garment is; tiles cut off at the page edge counted, not listed), snaps each rectangle to the garment's own bounds plus a margin, cuts the cell and its cut-out into `review/`, measures the cut the way `flat_lays.py` does and writes the verdict into `_flat_lays.json` under the cell's ID, which is what the shelf gate reads. Writes the cells into `_grid_cells.json` under the same keys as the geometric pass, marked `source: "eye"`; the geometric records it replaced are kept in `_grid_cells_geometry.json` and the per-page counts in `_grid_cells_compare.json`. A cell the owner has decided on is never replaced. |
+
+- **Geometry is the fallback now, not the way.** The lattice detector in
+  `build_review_images.py` / `grid_cells.py` found nothing on plain four-tile
+  pages (B079-P004, B080-P008, B080-P009, B080-P012, B081-P001) and half the
+  tiles on most others; the readers found 1,005 whole tiles on 254 pages
+  where geometry had 756, with a name on 95% and a price on 95% of them
+  (geometry: 69% and 19%). `grid_cells.py` still runs for a grid screenshot
+  no reader has covered.
+- **The snap only tidies.** It works inside the reader's box padded 1.5%, so
+  a neighbouring tile cannot join the mask; runs of rows thinner than a
+  twelfth of the box are labels and swatch dots and are dropped; the topmost
+  photo-sized run is the picture; and a 7% margin round the garment's bounds
+  keeps it clear of its own frame, clamped to the reader's box so it never
+  takes in the caption.
+- **A reader who measured on the ruled canvas** rather than the page is off
+  by the 40 px margin; boxes that run past the page's edge give it away and
+  the page is shifted back (59 of 263 pages).
+- **Cell IDs:** every screenshot of a grid row numbers its own cells,
+  `{pid}-C{j}` for the first screenshot and `{pid}-I{n}-C{j}` after it, so no
+  two cells share an ID any more (93 did).
+- **A cell's brand** is the grid's shop at the grid row's own confidence, not
+  a flat `guessed`; its colour name, where the caption printed one, is in
+  `colour_name_text`; the reader's garment word is its `garment_type` and
+  decides its slot before the caption does.
+- **The skin test bites tan leather.** 353 cut-outs measured "someone is
+  wearing it" and most are tan and brown loafers, boots and bags: the skin
+  band overlaps warm leather (CLAUDE.md hard rule 6, `imglib.is_skin`). They
+  wait in Review under their grid rather than going to the shelf unseen.
+
+Order: `read_grids.py --render` → readers → `read_grids.py --ingest` →
+`build_products.py` → `shelf_checks.py` → `build_studio.py`.

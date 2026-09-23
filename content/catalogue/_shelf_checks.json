@@ -433,17 +433,30 @@
     "struct": 0.0
    }
   },
-  "B022-P021-C1": {
+  "B023-P003-C0": {
    "cause": "already in the catalogue",
    "cluster": [
-    "B022-P021-C0",
-    "B022-P021-C1"
+    "B023-P002-C0",
+    "B023-P003-C0"
    ],
-   "keeper": "B022-P021-C0",
+   "keeper": "B023-P002-C0",
    "measured": {
-    "de": 0.14,
-    "iou": 0.983,
-    "struct": 0.32
+    "de": 0.05,
+    "iou": 0.998,
+    "struct": 0.11
+   }
+  },
+  "B023-P003-C1": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B023-P002-C1",
+    "B023-P003-C1"
+   ],
+   "keeper": "B023-P002-C1",
+   "measured": {
+    "de": 0.03,
+    "iou": 0.997,
+    "struct": 0.08
    }
   },
   "B023-P003-C2": {
@@ -454,9 +467,9 @@
    ],
    "keeper": "B023-P002-C2",
    "measured": {
-    "de": 0.3,
-    "iou": 0.988,
-    "struct": 1.57
+    "de": 0.08,
+    "iou": 0.992,
+    "struct": 0.31
    }
   },
   "B023-P003-C3": {
@@ -467,35 +480,100 @@
    ],
    "keeper": "B023-P002-C3",
    "measured": {
-    "de": 0.12,
-    "iou": 0.996,
-    "struct": 0.41
+    "de": 0.1,
+    "iou": 0.999,
+    "struct": 0.1
    }
   },
-  "B023-P003-C6": {
+  "B023-P003-C4": {
    "cause": "already in the catalogue",
    "cluster": [
-    "B023-P002-C6",
-    "B023-P003-C6"
+    "B023-P002-C4",
+    "B023-P003-C4"
    ],
-   "keeper": "B023-P002-C6",
+   "keeper": "B023-P002-C4",
    "measured": {
-    "de": 0.2,
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.14
+   }
+  },
+  "B023-P003-C5": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B023-P002-C5",
+    "B023-P003-C5"
+   ],
+   "keeper": "B023-P002-C5",
+   "measured": {
+    "de": 0.13,
     "iou": 0.992,
-    "struct": 0.36
+    "struct": 0.47
    }
   },
-  "B023-P003-C7": {
+  "B023-P008-C0": {
    "cause": "already in the catalogue",
    "cluster": [
-    "B023-P002-C7",
-    "B023-P003-C7"
+    "B023-P007-C0",
+    "B023-P008-C0"
    ],
-   "keeper": "B023-P002-C7",
+   "keeper": "B023-P007-C0",
    "measured": {
-    "de": 0.12,
-    "iou": 0.995,
-    "struct": 0.48
+    "de": 0.03,
+    "iou": 1.0,
+    "struct": 0.06
+   }
+  },
+  "B023-P008-C1": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B023-P007-C1",
+    "B023-P008-C1"
+   ],
+   "keeper": "B023-P007-C1",
+   "measured": {
+    "de": 0.02,
+    "iou": 0.989,
+    "struct": 0.22
+   }
+  },
+  "B024-P005-I1-C0": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B024-P005-C3",
+    "B024-P005-I1-C0"
+   ],
+   "keeper": "B024-P005-C3",
+   "measured": {
+    "de": 0.0,
+    "iou": 0.998,
+    "struct": 0.08
+   }
+  },
+  "B024-P005-I1-C1": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B024-P005-C4",
+    "B024-P005-I1-C1"
+   ],
+   "keeper": "B024-P005-C4",
+   "measured": {
+    "de": 0.1,
+    "iou": 0.992,
+    "struct": 0.42
+   }
+  },
+  "B024-P005-I1-C2": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B024-P005-C5",
+    "B024-P005-I1-C2"
+   ],
+   "keeper": "B024-P005-C5",
+   "measured": {
+    "de": 0.15,
+    "iou": 0.992,
+    "struct": 0.29
    }
   },
   "B025-P001-V2": {
@@ -524,6 +602,19 @@
     "struct": 0.0
    }
   },
+  "B025-P006-I1-C0": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B025-P006-C3",
+    "B025-P006-I1-C0"
+   ],
+   "keeper": "B025-P006-C3",
+   "measured": {
+    "de": 2.14,
+    "iou": 0.966,
+    "struct": 1.21
+   }
+  },
   "B025-P008-V2": {
    "cause": "colourway split",
    "cluster": [
@@ -535,6 +626,19 @@
     "de": 0.0,
     "iou": 1.0,
     "struct": 0.0
+   }
+  },
+  "B030-P007-C4": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B030-P007-C4",
+    "B031-P001"
+   ],
+   "keeper": "B031-P001",
+   "measured": {
+    "de": 0.02,
+    "iou": 0.999,
+    "struct": 0.15
    }
   },
   "B031-P002-V2": {
@@ -578,6 +682,32 @@
     "struct": 0.25
    }
   },
+  "B036-P002-C0": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B036-P001-C0",
+    "B036-P002-C0"
+   ],
+   "keeper": "B036-P001-C0",
+   "measured": {
+    "de": 0.18,
+    "iou": 0.998,
+    "struct": 0.2
+   }
+  },
+  "B036-P009-I1-C0": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B036-P009-C0",
+    "B036-P009-I1-C0"
+   ],
+   "keeper": "B036-P009-C0",
+   "measured": {
+    "de": 0.06,
+    "iou": 1.0,
+    "struct": 0.06
+   }
+  },
   "B037-P006-V2": {
    "cause": "colourway split",
    "cluster": [
@@ -591,6 +721,19 @@
     "struct": 0.0
    }
   },
+  "B042-P014": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B042-P012-C1",
+    "B042-P014"
+   ],
+   "keeper": "B042-P012-C1",
+   "measured": {
+    "de": 0.0,
+    "iou": 0.998,
+    "struct": 0.35
+   }
+  },
   "B042-P032-V2": {
    "cause": "colourway split",
    "cluster": [
@@ -602,6 +745,19 @@
     "de": 0.0,
     "iou": 1.0,
     "struct": 0.0
+   }
+  },
+  "B042-P035": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B042-P035",
+    "B042-P036-C0"
+   ],
+   "keeper": "B042-P036-C0",
+   "measured": {
+    "de": 0.32,
+    "iou": 0.98,
+    "struct": 0.39
    }
   },
   "B042-P037-V2": {
@@ -645,6 +801,45 @@
     "struct": 0.0
    }
   },
+  "B044-P005-I1-C2": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B044-P005-C0",
+    "B044-P005-I1-C2"
+   ],
+   "keeper": "B044-P005-C0",
+   "measured": {
+    "de": 0.0,
+    "iou": 0.996,
+    "struct": 0.15
+   }
+  },
+  "B044-P005-I1-C3": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B044-P005-C1",
+    "B044-P005-I1-C3"
+   ],
+   "keeper": "B044-P005-C1",
+   "measured": {
+    "de": 0.0,
+    "iou": 0.999,
+    "struct": 0.18
+   }
+  },
+  "B044-P007-C0": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B044-P006-C0",
+    "B044-P007-C0"
+   ],
+   "keeper": "B044-P006-C0",
+   "measured": {
+    "de": 0.01,
+    "iou": 0.997,
+    "struct": 0.09
+   }
+  },
   "B044-P010-V2": {
    "cause": "colourway split",
    "cluster": [
@@ -656,32 +851,6 @@
     "de": 0.0,
     "iou": 1.0,
     "struct": 0.0
-   }
-  },
-  "B044-P020-C6": {
-   "cause": "already in the catalogue",
-   "cluster": [
-    "B044-P020-C5",
-    "B044-P020-C6"
-   ],
-   "keeper": "B044-P020-C5",
-   "measured": {
-    "de": 0.29,
-    "iou": 0.982,
-    "struct": 0.7
-   }
-  },
-  "B047-P004-C1": {
-   "cause": "already in the catalogue",
-   "cluster": [
-    "B047-P004-C0",
-    "B047-P004-C1"
-   ],
-   "keeper": "B047-P004-C0",
-   "measured": {
-    "de": 0.02,
-    "iou": 0.989,
-    "struct": 0.22
    }
   },
   "B053-P001-V2": {
@@ -861,6 +1030,32 @@
     "struct": 0.21
    }
   },
+  "B063-P005-C0": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B063-P001-C0",
+    "B063-P005-C0"
+   ],
+   "keeper": "B063-P001-C0",
+   "measured": {
+    "de": 0.01,
+    "iou": 1.0,
+    "struct": 0.06
+   }
+  },
+  "B063-P005-C1": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B063-P001-C1",
+    "B063-P005-C1"
+   ],
+   "keeper": "B063-P001-C1",
+   "measured": {
+    "de": 0.0,
+    "iou": 0.999,
+    "struct": 0.07
+   }
+  },
   "B068-P001": {
    "cause": "already in the catalogue",
    "cluster": [
@@ -882,22 +1077,167 @@
    ],
    "keeper": "B078-P007-C1",
    "measured": {
-    "de": 0.5,
-    "iou": 0.988,
-    "struct": 0.53
+    "de": 0.28,
+    "iou": 0.992,
+    "struct": 0.16
    }
   },
-  "B079-P002-I1-C0": {
+  "B078-P008-C1": {
    "cause": "already in the catalogue",
    "cluster": [
-    "B079-P002-I1-C0",
-    "B079-P002-I1-C1"
+    "B078-P007-C2",
+    "B078-P008-C1"
    ],
-   "keeper": "B079-P002-I1-C1",
+   "keeper": "B078-P007-C2",
    "measured": {
-    "de": 0.04,
-    "iou": 0.984,
-    "struct": 0.4
+    "de": 0.02,
+    "iou": 0.998,
+    "struct": 0.09
+   }
+  },
+  "B078-P008-C2": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B078-P007-C4",
+    "B078-P008-C2"
+   ],
+   "keeper": "B078-P007-C4",
+   "measured": {
+    "de": 0.02,
+    "iou": 0.991,
+    "struct": 0.33
+   }
+  },
+  "B078-P008-C3": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B078-P007-C5",
+    "B078-P008-C3"
+   ],
+   "keeper": "B078-P007-C5",
+   "measured": {
+    "de": 0.01,
+    "iou": 1.0,
+    "struct": 0.04
+   }
+  },
+  "B078-P010-C1": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B078-P009-C0",
+    "B078-P010-C1"
+   ],
+   "keeper": "B078-P009-C0",
+   "measured": {
+    "de": 0.02,
+    "iou": 0.986,
+    "struct": 0.2
+   }
+  },
+  "B078-P010-C2": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B078-P009-C1",
+    "B078-P010-C2"
+   ],
+   "keeper": "B078-P009-C1",
+   "measured": {
+    "de": 0.08,
+    "iou": 1.0,
+    "struct": 0.18
+   }
+  },
+  "B078-P010-C4": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B078-P009-C3",
+    "B078-P010-C4"
+   ],
+   "keeper": "B078-P009-C3",
+   "measured": {
+    "de": 0.12,
+    "iou": 0.993,
+    "struct": 0.43
+   }
+  },
+  "B078-P010-C5": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B078-P009-C4",
+    "B078-P010-C5"
+   ],
+   "keeper": "B078-P009-C4",
+   "measured": {
+    "de": 0.17,
+    "iou": 0.996,
+    "struct": 0.2
+   }
+  },
+  "B080-P002-I2-C0": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B080-P002-I1-C0",
+    "B080-P002-I2-C0"
+   ],
+   "keeper": "B080-P002-I1-C0",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B080-P002-I2-C1": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B080-P002-I1-C1",
+    "B080-P002-I2-C1"
+   ],
+   "keeper": "B080-P002-I1-C1",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B080-P002-I2-C3": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B080-P002-I1-C3",
+    "B080-P002-I2-C3",
+    "B080-P002-I3-C1"
+   ],
+   "keeper": "B080-P002-I1-C3",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B080-P002-I3-C0": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B080-P002-I2-C2",
+    "B080-P002-I3-C0"
+   ],
+   "keeper": "B080-P002-I2-C2",
+   "measured": {
+    "de": 0.09,
+    "iou": 0.991,
+    "struct": 0.37
+   }
+  },
+  "B080-P002-I3-C1": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B080-P002-I1-C3",
+    "B080-P002-I2-C3",
+    "B080-P002-I3-C1"
+   ],
+   "keeper": "B080-P002-I1-C3",
+   "measured": {
+    "de": 0.09,
+    "iou": 1.0,
+    "struct": 0.15
    }
   },
   "B082-P002": {
@@ -916,14 +1256,14 @@
   "B090-P008-I1-C2": {
    "cause": "already in the catalogue",
    "cluster": [
-    "B090-P008-I1-C1",
+    "B090-P004-C1",
     "B090-P008-I1-C2"
    ],
-   "keeper": "B090-P008-I1-C1",
+   "keeper": "B090-P004-C1",
    "measured": {
-    "de": 0.08,
-    "iou": 0.994,
-    "struct": 0.25
+    "de": 0.04,
+    "iou": 0.992,
+    "struct": 0.23
    }
   }
  },
@@ -931,7 +1271,7 @@
   "B006-P001-C1": {
    "group": "B006-P001",
    "why": [
-    "pieces: the cut-out is 4 separate pieces",
+    "pieces: the cut-out is 7 separate pieces",
     "colour regions: 3 separate colour regions and no skin \u2014 a fan of colourways"
    ]
   },
@@ -972,238 +1312,16 @@
     "colour regions: 3 separate colour regions and no skin \u2014 a fan of colourways"
    ]
   },
-  "B016-P004": {
-   "group": "B016-P004",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B018-P003": {
-   "group": "B018-P003",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B019-P006": {
-   "group": "B019-P006",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B019-P007": {
-   "group": "B019-P007",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B020-P005": {
-   "group": "B020-P005",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B021-P007": {
-   "group": "B021-P007",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B021-P008": {
-   "group": "B021-P008",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B022-P001": {
-   "group": "B022-P001",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B022-P004": {
-   "group": "B022-P004",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B022-P005": {
-   "group": "B022-P005",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B022-P007": {
-   "group": "B022-P007",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B022-P012": {
-   "group": "B022-P012",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
   "B022-P013-C0": {
    "group": "B022-P013",
    "why": [
-    "pieces: the cut-out is 6 separate pieces"
-   ]
-  },
-  "B022-P015-C0": {
-   "group": "B022-P015",
-   "why": [
-    "pieces: the cut-out is 4 separate pieces"
-   ]
-  },
-  "B022-P015-C1": {
-   "group": "B022-P015",
-   "why": [
     "pieces: the cut-out is 2 separate pieces"
    ]
   },
-  "B023-P001-C6": {
-   "group": "B023-P001",
+  "B022-P015-C3": {
+   "group": "B022-P015",
    "why": [
     "pieces: the cut-out is 2 separate pieces"
-   ]
-  },
-  "B023-P007": {
-   "group": "B023-P007",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B023-P008": {
-   "group": "B023-P008",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B023-P009": {
-   "group": "B023-P009",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B023-P010": {
-   "group": "B023-P010",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B023-P011": {
-   "group": "B023-P011",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B023-P014": {
-   "group": "B023-P014",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B023-P015": {
-   "group": "B023-P015",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B023-P017": {
-   "group": "B023-P017",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B024-P001": {
-   "group": "B024-P001",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B024-P002": {
-   "group": "B024-P002",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B024-P003": {
-   "group": "B024-P003",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B024-P004": {
-   "group": "B024-P004",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B024-P005": {
-   "group": "B024-P005",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B024-P006": {
-   "group": "B024-P006",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B024-P007": {
-   "group": "B024-P007",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B025-P007-C7": {
-   "group": "B025-P007",
-   "why": [
-    "pieces: the cut-out is 5 separate pieces"
-   ]
-  },
-  "B026-P002": {
-   "group": "B026-P002",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B026-P003": {
-   "group": "B026-P003",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B026-P004": {
-   "group": "B026-P004",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B026-P005": {
-   "group": "B026-P005",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B026-P006": {
-   "group": "B026-P006",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B026-P007": {
-   "group": "B026-P007",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B026-P008": {
-   "group": "B026-P008",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
    ]
   },
   "B026-P009": {
@@ -1212,148 +1330,10 @@
     "pieces: the cut-out is 2 separate pieces"
    ]
   },
-  "B026-P011": {
-   "group": "B026-P011",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B027-P009": {
-   "group": "B027-P009",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B027-P010": {
-   "group": "B027-P010",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B027-P011": {
-   "group": "B027-P011",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B028-P006": {
-   "group": "B028-P006",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B028-P010": {
-   "group": "B028-P010",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B028-P011": {
-   "group": "B028-P011",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B030-P005": {
-   "group": "B030-P005",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B030-P006": {
-   "group": "B030-P006",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B032-P003": {
-   "group": "B032-P003",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B033-P002": {
-   "group": "B033-P002",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B033-P003": {
-   "group": "B033-P003",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B033-P005": {
-   "group": "B033-P005",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B034-P001": {
-   "group": "B034-P001",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B034-P003": {
-   "group": "B034-P003",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B034-P004": {
-   "group": "B034-P004",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B036-P001": {
-   "group": "B036-P001",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B036-P002": {
-   "group": "B036-P002",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B036-P003": {
-   "group": "B036-P003",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B036-P005": {
+  "B036-P005-C0": {
    "group": "B036-P005",
    "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B036-P006": {
-   "group": "B036-P006",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B036-P007": {
-   "group": "B036-P007",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B036-P008": {
-   "group": "B036-P008",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B036-P009": {
-   "group": "B036-P009",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
+    "colour regions: 4 separate colour regions and no skin \u2014 a fan of colourways"
    ]
   },
   "B037-P002": {
@@ -1374,112 +1354,28 @@
     "pieces: the cut-out is 2 separate pieces"
    ]
   },
-  "B042-P002": {
-   "group": "B042-P002",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B042-P005": {
-   "group": "B042-P005",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B042-P006": {
-   "group": "B042-P006",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B042-P007": {
-   "group": "B042-P007",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B042-P012": {
-   "group": "B042-P012",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B042-P019": {
-   "group": "B042-P019",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B042-P036": {
-   "group": "B042-P036",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B044-P001": {
-   "group": "B044-P001",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B044-P006": {
-   "group": "B044-P006",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B044-P007": {
-   "group": "B044-P007",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
   "B044-P009": {
    "group": "B044-P009",
    "why": [
     "grid page: the picture is a listing-grid page of several products"
    ]
   },
-  "B044-P011": {
-   "group": "B044-P011",
+  "B044-P020-C5": {
+   "group": "B044-P020",
    "why": [
-    "grid page: the picture is a listing-grid page of several products"
+    "colour regions: 3 separate colour regions and no skin \u2014 a fan of colourways"
    ]
   },
-  "B044-P012": {
-   "group": "B044-P012",
+  "B045-P001-I1-C4": {
+   "group": "B045-P001",
    "why": [
-    "grid page: the picture is a listing-grid page of several products"
+    "colour regions: 3 separate colour regions and no skin \u2014 a fan of colourways"
    ]
   },
-  "B044-P013": {
-   "group": "B044-P013",
+  "B045-P001-I2-C4": {
+   "group": "B045-P001",
    "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B044-P014": {
-   "group": "B044-P014",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B044-P015": {
-   "group": "B044-P015",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B044-P016": {
-   "group": "B044-P016",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B044-P017": {
-   "group": "B044-P017",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
+    "colour regions: 3 separate colour regions and no skin \u2014 a fan of colourways"
    ]
   },
   "B045-P004": {
@@ -1488,88 +1384,10 @@
     "colour regions: 3 separate colour regions and no skin \u2014 a fan of colourways"
    ]
   },
-  "B046-P001": {
-   "group": "B046-P001",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B046-P002": {
-   "group": "B046-P002",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B046-P004": {
-   "group": "B046-P004",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B046-P005": {
-   "group": "B046-P005",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B046-P006": {
-   "group": "B046-P006",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B046-P007-C0": {
-   "group": "B046-P007",
+  "B046-P010-C3": {
+   "group": "B046-P010",
    "why": [
     "pieces: the cut-out is 2 separate pieces"
-   ]
-  },
-  "B046-P008": {
-   "group": "B046-P008",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B047-P001": {
-   "group": "B047-P001",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B049-P002": {
-   "group": "B049-P002",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B052-P007": {
-   "group": "B052-P007",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B053-P002": {
-   "group": "B053-P002",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B056-P005": {
-   "group": "B056-P005",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B056-P006": {
-   "group": "B056-P006",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B057-P004": {
-   "group": "B057-P004",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
    ]
   },
   "B062-P001": {
@@ -1584,74 +1402,8 @@
     "colour regions: 3 separate colour regions and no skin \u2014 a fan of colourways"
    ]
   },
-  "B062-P018": {
-   "group": "B062-P018",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B062-P019": {
-   "group": "B062-P019",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B062-P020": {
-   "group": "B062-P020",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B063-P001": {
-   "group": "B063-P001",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
   "B063-P002": {
    "group": "B063-P002",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B063-P004": {
-   "group": "B063-P004",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B063-P005": {
-   "group": "B063-P005",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B063-P006": {
-   "group": "B063-P006",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B064-P001": {
-   "group": "B064-P001",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B064-P003": {
-   "group": "B064-P003",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B065-P001": {
-   "group": "B065-P001",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B065-P004": {
-   "group": "B065-P004",
    "why": [
     "grid page: the picture is a listing-grid page of several products"
    ]
@@ -1660,12 +1412,6 @@
    "group": "B065-P006",
    "why": [
     "colour regions: 3 separate colour regions and no skin \u2014 a fan of colourways"
-   ]
-  },
-  "B066-P001": {
-   "group": "B066-P001",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
    ]
   },
   "B070-P011": {
@@ -1684,12 +1430,6 @@
    "group": "B070-P014",
    "why": [
     "pieces: the cut-out is 2 separate pieces"
-   ]
-  },
-  "B071-P004": {
-   "group": "B071-P004",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
    ]
   },
   "B073-P006": {
@@ -1712,96 +1452,6 @@
   },
   "B077-P005": {
    "group": "B077-P005",
-   "why": [
-    "pieces: the cut-out is 2 separate pieces"
-   ]
-  },
-  "B079-P002-C0": {
-   "group": "B079-P002",
-   "why": [
-    "pieces: the cut-out is 2 separate pieces"
-   ]
-  },
-  "B079-P003-C2": {
-   "group": "B079-P003",
-   "why": [
-    "pieces: the cut-out is 2 separate pieces"
-   ]
-  },
-  "B079-P003-C4": {
-   "group": "B079-P003",
-   "why": [
-    "pieces: the cut-out is 2 separate pieces"
-   ]
-  },
-  "B079-P004": {
-   "group": "B079-P004",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B080-P002-I3-C3": {
-   "group": "B080-P002",
-   "why": [
-    "pieces: the cut-out is 2 separate pieces"
-   ]
-  },
-  "B080-P004-C0": {
-   "group": "B080-P004",
-   "why": [
-    "pieces: the cut-out is 2 separate pieces"
-   ]
-  },
-  "B080-P005-C1": {
-   "group": "B080-P005",
-   "why": [
-    "pieces: the cut-out is 2 separate pieces"
-   ]
-  },
-  "B080-P006-C3": {
-   "group": "B080-P006",
-   "why": [
-    "pieces: the cut-out is 2 separate pieces"
-   ]
-  },
-  "B080-P008": {
-   "group": "B080-P008",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B080-P009": {
-   "group": "B080-P009",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B080-P012": {
-   "group": "B080-P012",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B081-P001": {
-   "group": "B081-P001",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B090-P004-C1": {
-   "group": "B090-P004",
-   "why": [
-    "pieces: the cut-out is 2 separate pieces"
-   ]
-  },
-  "B090-P004-I1-C5": {
-   "group": "B090-P004",
-   "why": [
-    "pieces: the cut-out is 2 separate pieces"
-   ]
-  },
-  "B090-P008-I2-C4": {
-   "group": "B090-P008",
    "why": [
     "pieces: the cut-out is 2 separate pieces"
    ]
