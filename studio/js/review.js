@@ -7,7 +7,8 @@
 // build script. Nothing here deletes anything.
 
 import { cropLayout, SLOT_ORDER } from './model.js';
-import { isReviewed, effectiveChoice, imageEntry, splitId, productVersions } from './data.js';
+import { isReviewed, effectiveChoice, imageEntry, splitId, productVersions,
+  SLOT_PICK } from './data.js';
 
 /** Every screenshot of a product the desk can draw on, best first. */
 export function productImages(p) {
@@ -85,6 +86,7 @@ export function choicesFile(choices) {
       slot: s.slot || '', colour_name: s.colour_name || '',
       ...(s.base && s.base !== 'photo' ? { base: s.base } : {}) }));
     if (splits.length) e = { ...(e || {}), splits };
+    if (c.slot) e = { ...(e || {}), slot: c.slot };
     if (e) out[pid] = e;
   }
   return { kind: 'relatively-normal.asset-choices', version: 1,
@@ -146,10 +148,19 @@ export function applyCrop(img, crop, boxW, boxH, fullW, fullH) {
 // ---------------------------------------------------------------- the tab
 export function createReview(api) {
   // api: { source, products(), choices, onChange(), toast() }
-  const state = { slot: '', multi: false, adjusting: null };
+  const state = { slot: '', multi: false, noSlot: false, checkSlot: false,
+    cellSel: null, adjusting: null };
 
   function pending(list) {
     return list.filter((p) => !p.clean && p.full && !p.parent_id);
+  }
+
+  /** Does this product match whichever slot filters are on? */
+  function matchesSlotFilters(p) {
+    if (state.noSlot && p.slot) return false;
+    if (state.checkSlot && !['inherited', 'guessed'].includes(p.slot_confidence)) return false;
+    if (state.slot && p.slot !== state.slot) return false;
+    return true;
   }
 
   /** The cells cut out of a listing grid, by the grid they came from. */
@@ -166,6 +177,11 @@ export function createReview(api) {
     const all = pending(api.products());
     let list = state.slot ? all.filter((p) => p.slot === state.slot) : all;
     if (state.multi) list = list.filter((p) => productImages(p).length > 1);
+    if (state.noSlot) list = list.filter((p) => !p.slot);
+    // the rows whose slot came from somewhere that might be wrong about it:
+    // a listing-grid caption, or the product this one was split out of
+    if (state.checkSlot) list = list.filter((p) => p.slot_confidence === 'inherited'
+      || p.slot_confidence === 'guessed');
     const done = list.filter((p) => isReviewed(p, api.choices)).length;
     const later = list.filter((p) => api.choices[p.product_id]?.later && !isReviewed(p, api.choices)).length;
     $('reviewProgress').textContent = `${done} of ${list.length} decided${later ? `, ${later} for later` : ''}`;
@@ -183,12 +199,24 @@ export function createReview(api) {
     const cards = $('reviewCards');
     cards.replaceChildren();
     const cells = cellsByParent(api.products());
+    // A slot filter is about products, and a grid's cells are products even
+    // though the grid itself is one row: keep a grid whose cells match, or the
+    // filter that finds the missing slots would find nothing, because every
+    // grid is filed as `multiple`.
+    if (state.noSlot || state.checkSlot) {
+      const have = new Set(list.map((p) => p.product_id));
+      for (const p of all) {
+        if (have.has(p.product_id)) continue;
+        if ((cells[p.product_id] || []).some((c) => matchesSlotFilters(c))) list.push(p);
+      }
+    }
     const todo = list.filter((p) => !isReviewed(p, api.choices));
     const doneList = list.filter((p) => isReviewed(p, api.choices));
     for (const p of [...todo, ...doneList]) {
       cards.appendChild(card(p));
       const mine = cells[p.product_id];
-      if (mine && mine.length) cards.appendChild(cellGroup(p, mine));
+      const g = mine && mine.length ? cellGroup(p, mine) : null;
+      if (g) cards.appendChild(g);
     }
   }
 
@@ -197,7 +225,11 @@ export function createReview(api) {
    * the whole grid: a shop's page of twelve is twelve decisions otherwise, and
    * they are the same decision twelve times.
    */
-  function cellGroup(parent, cells) {
+  function cellGroup(parent, all) {
+    // the slot filters reach the cells too: they are where the missing slots are
+    const cells = (state.noSlot || state.checkSlot || state.slot)
+      ? all.filter(matchesSlotFilters) : all;
+    if (!cells.length) return null;
     const wrap = document.createElement('div');
     wrap.className = 'cellgroup';
     const head = document.createElement('div');
@@ -208,14 +240,14 @@ export function createReview(api) {
     who.textContent = `${cells.length} cell${cells.length === 1 ? '' : 's'} cut from this grid`
       + (left ? `, ${left} still to decide` : ', all decided');
     head.appendChild(who);
-    const all = document.createElement('button');
-    all.className = 'ghost small';
-    all.textContent = 'Accept all cells';
-    all.addEventListener('click', () => {
+    const takeAll = document.createElement('button');
+    takeAll.className = 'ghost small';
+    takeAll.textContent = 'Accept all cells';
+    takeAll.addEventListener('click', () => {
       for (const c of cells) api.choices[c.product_id] = { ...(api.choices[c.product_id] || {}), choice: 'cutout' };
       saveChoices(api.choices); api.onChange(); render();
     });
-    head.appendChild(all);
+    head.appendChild(takeAll);
     wrap.appendChild(head);
     const row = document.createElement('div');
     row.className = 'cells';
@@ -226,15 +258,22 @@ export function createReview(api) {
       im.loading = 'lazy';
       im.src = api.source.assetUrl(c);
       b.appendChild(im);
-      const t = document.createElement('span');
-      t.textContent = [c.slot || '—', c.price].filter(Boolean).join(' · ');
-      b.appendChild(t);
+      const t = document.createElement('button');
+      t.className = 'cellslot' + (state.cellSel === c.product_id ? ' on' : '');
+      t.textContent = [c.slot || 'set slot', c.price].filter(Boolean).join(' · ');
+      t.title = 'Set this cell\'s slot';
+      t.addEventListener('click', (ev) => {
+        ev.stopPropagation();
+        state.cellSel = state.cellSel === c.product_id ? null : c.product_id;
+        render();
+      });
       if (c.validated === 'possible duplicate') {
         const d = document.createElement('i');
         d.className = 'twin';
         d.textContent = 'twin?';
         b.appendChild(d);
       }
+      b.appendChild(t);
       b.title = [c.product_name, c.price].filter(Boolean).join(' — ') || c.product_id;
       b.addEventListener('click', () => {
         const had = isReviewed(c, api.choices);
@@ -245,7 +284,42 @@ export function createReview(api) {
       row.appendChild(b);
     }
     wrap.appendChild(row);
+    const chosen = cells.find((c) => c.product_id === state.cellSel);
+    if (chosen) wrap.appendChild(slotRow(chosen, `${chosen.product_id} · `
+      + (chosen.product_name || 'this cell')));
     return wrap;
+  }
+
+  /** The eight slots, as buttons, for one product. */
+  function slotRow(p, label) {
+    const slots = document.createElement('div');
+    slots.className = 'rslots';
+    if (label) {
+      const l = document.createElement('span');
+      l.className = 'slotfor';
+      l.textContent = label;
+      slots.appendChild(l);
+    }
+    if (p.slot_confidence === 'inherited' || p.slot_confidence === 'guessed') {
+      const w = document.createElement('i');
+      w.className = 'slotwarn';
+      w.textContent = p.slot_confidence === 'inherited' ? 'slot inherited' : 'slot from a caption';
+      slots.appendChild(w);
+    }
+    for (const slot of SLOT_PICK) {
+      const b = document.createElement('button');
+      b.className = 'ghost small' + (p.slot === slot ? ' on' : '');
+      b.textContent = slot;
+      b.addEventListener('click', () => {
+        const cur = api.choices[p.product_id] || {};
+        api.choices[p.product_id] = { ...cur, slot: cur.slot === slot ? '' : slot };
+        saveChoices(api.choices);
+        api.onChange();
+        render();
+      });
+      slots.appendChild(b);
+    }
+    return slots;
   }
 
   function version(p, kind, label) {
@@ -318,6 +392,7 @@ export function createReview(api) {
       row.appendChild(t);
     }
     el.appendChild(row);
+    el.appendChild(slotRow(p, ''));
     const acts = document.createElement('div');
     acts.className = 'racts';
     const mk = (label, cls, fn) => {
@@ -778,10 +853,12 @@ export function createReview(api) {
     showImage();
   }
 
-  document.getElementById('rMulti').addEventListener('change', (ev) => {
-    state.multi = ev.target.checked;
-    render();
-  });
+  for (const [id, key] of [['rMulti', 'multi'], ['rNoSlot', 'noSlot'], ['rCheckSlot', 'checkSlot']]) {
+    document.getElementById(id).addEventListener('change', (ev) => {
+      state[key] = ev.target.checked;
+      render();
+    });
+  }
 
   return { render, state };
 }
