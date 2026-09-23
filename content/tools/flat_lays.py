@@ -16,7 +16,10 @@ which was a rule of thumb about skin and rectangles:
 All three, and the product goes on the shelf without Review. Any one of them
 missing and it stays in Review, where a person looks at it.
 
-  python3 content/tools/flat_lays.py [--limit N]
+  python3 content/tools/flat_lays.py [--limit N] [--all]
+
+Only new or changed products are looked at (incremental.py); --all (or --redo)
+looks at every one again, reviewed ones included.
 
 Writes content/catalogue/_flat_lays.json and, for every product it re-cuts,
 content/catalogue/assets/{pid}.webp. It reads the review copies, never the
@@ -252,20 +255,30 @@ def measure(cut):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--limit', type=int, default=0)
-    ap.add_argument('--redo', action='store_true')
+    ap.add_argument('--all', action='store_true',
+                    help='process every product, including ones already reviewed; '
+                         'without it only new or changed products are looked at')
+    ap.add_argument('--redo', dest='all', action='store_true', help='same as --all')
     args = ap.parse_args()
     import csv
+    import incremental as INC
     rows = list(csv.DictReader(open(CAT + '/products.csv')))
     assets = json.load(open(CAT + '/_assets.json'))
     batches = {b['product_id']: b for b in json.load(open(CAT + '/batches.json'))}
     try:
-        out = {} if args.redo else json.load(open(OUT))
+        out = json.load(open(OUT))
     except (FileNotFoundError, json.JSONDecodeError):
         out = {}
-    todo = [r for r in rows if not r.get('parent_id') and not r.get('recoloured')
-            and r['product_id'] in assets and r['product_id'] not in out]
+    # new or changed products only, unless --all: a product the owner has
+    # reviewed keeps its cut-out and its verdict exactly as they are
+    cands = [r['product_id'] for r in rows if not r.get('parent_id') and not r.get('recoloured')
+             and r['product_id'] in assets]
+    pids, fp = INC.select('flat_lays', cands, args.all)
+    INC.report('flat_lays', pids, cands, args.all)
     if args.limit:
-        todo = todo[:args.limit]
+        pids = pids[:args.limit]
+    mine = set(pids)
+    todo = [r for r in rows if r['product_id'] in mine]
     print(f'{len(todo)} products to look at, {len(out)} already done', flush=True)
     for k, r in enumerate(todo, 1):
         pid = r['product_id']
@@ -313,10 +326,11 @@ def main():
     json.dump(out, open(OUT, 'w'), indent=1)
     # the asset record follows the measurement: a re-cut flat lay IS a flat
     # cut-out, whatever the old rule of thumb called it, and every product
-    # carries the verdict and the reason with it
+    # carries the verdict and the reason with it — for the products looked at
+    # in this run only, so a re-run never appends a second note to a reviewed one
     for pid, v in out.items():
         a = assets.get(pid)
-        if not a:
+        if not a or pid not in mine:
             continue
         if v.get('recut'):
             a['asset_type'] = 'cutout_flat'
@@ -325,6 +339,7 @@ def main():
             a['bytes'] = os.path.getsize(f'{CAT}/assets/{pid}.webp')
         a['measured'] = 'clean' if v.get('clean') else (v.get('why') or 'not measured')
     json.dump(assets, open(CAT + '/_assets.json', 'w'), indent=1)
+    INC.mark('flat_lays', pids, fp)
     flat = [v for v in out.values() if v.get('flat')]
     clean = [v for v in out.values() if v.get('clean')]
     print(f'flat lays re-cut: {len(flat)} of {len(out)};  clean by measurement: {len(clean)}')

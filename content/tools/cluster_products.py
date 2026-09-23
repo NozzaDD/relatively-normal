@@ -117,6 +117,29 @@ def products(bat, sig, main_max=10, colour_max=26):
     return out
 
 
+def copies(paths):
+    """path -> the image elsewhere in content/swipe that it is a byte-for-byte
+    copy of. Only files of the same size are read."""
+    import hashlib
+    swipe = ROOT + '/content/swipe'
+    by_size = collections.defaultdict(list)
+    for root, _, fs in os.walk(swipe):
+        for f in fs:
+            q = os.path.join(root, f)
+            by_size[os.path.getsize(q)].append(os.path.relpath(q, ROOT))
+    h = lambda rel: hashlib.sha1(open(ROOT + '/' + rel, 'rb').read()).hexdigest()  # noqa: E731
+    out = {}
+    for p in paths:
+        others = [q for q in by_size[os.path.getsize(ROOT + '/' + p)]
+                  if q != p and q not in paths and not re.search(r'-\d+\.\w+$', q)]
+        hp = h(p) if others else None
+        for q in others:
+            if h(q) == hp:
+                out[p] = q
+                break
+    return out
+
+
 def append(extra=()):
     """Cluster screenshots that no batch holds yet into NEW batches after the
     last one, leaving every existing batch and product ID as it is.
@@ -136,6 +159,13 @@ def append(extra=()):
            if re.match(r'IMG_\d+\.(png|jpe?g)$', f, re.I)]
     new = [p for p in new if p not in idx and p not in have] + [p for p in extra if p not in have]
     new = sorted(set(new), key=seq)
+    # a byte-identical copy of an image already filed — IMG_1337.png is the
+    # same file as fashion shows ss27/IMG_1337.png — is not a new product.
+    # The "IMG_1271-2.png" exports are skipped by the name filter above.
+    same = copies(new)
+    if same:
+        print('skipped as copies of a filed image:', ', '.join(f'{os.path.basename(a)} = {b}' for a, b in same.items()))
+        new = [p for p in new if p not in same]
     print('new product images:', len(new))
     if not new:
         return

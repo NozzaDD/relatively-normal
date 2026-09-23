@@ -246,11 +246,49 @@ and run the steps above again) → `extract_colours.py --new` →
 
 Two decisions the owner made on 23 September, so the next run does not ask again:
 
-- **Model colour wherever there is one.** A row that holds a flat lay and a
-  model photo of the same product in the same colour shows the flat lay
-  recoloured to the colour measured on the model — no threshold
-  (`same_product.py --apply 0`), and no unrecoloured copy is kept. A product
-  shown only side by side keeps its flat lay's own colour.
+- ~~**Model colour wherever there is one.**~~ Superseded the same evening,
+  below: of the fourteen recolours this made, the owner kept two.
 - **Variant sheets in layout A** — one row per variant: swatch, variant,
   number, real or simulated, dE. Both variant scripts write their sheets
   through `variant_sheets.write('rows')`.
+
+## Added 23 September 2026 (evening) — incremental by default, the teal recolours
+
+**Reviewed material is never re-run by default.** `panels.py`, `flat_lays.py`,
+`asset_quality.py` and `crop_figures.py` only look at products that are new or
+whose screenshots have changed since they last processed them; `grid_cells.py`
+only gives the relaxed grid detector to new or changed grids, and it already
+skipped every grid screenshot it had cut. What each tool has processed is kept in
+`content/catalogue/_processed.json` by `incremental.py`: per tool, per product, a
+fingerprint of the product's screenshots (paths and byte sizes, from
+`batches.json`). A merge that adds a screenshot to a row changes its fingerprint,
+so that row is looked at again; nothing else is.
+
+- **Full run:** add `--all` — `python3 content/tools/panels.py --all`, and the
+  same for `flat_lays.py`, `asset_quality.py`, `crop_figures.py`,
+  `grid_cells.py`. `--redo` still works and means the same. A full run re-cuts,
+  re-rates and re-measures reviewed products: that is what it is for, and why
+  it is never the default.
+- `python3 content/tools/incremental.py` prints, per tool, how many products
+  it has processed and how many are new or changed.
+- The baseline was stamped on 23 September from the 664 products then filed
+  (`incremental.py --stamp-all`). Do not stamp again over an ingest in
+  progress: it would mark unprocessed products as done.
+- `make_assets.py --new` and `extract_colours.py --new` were already
+  incremental; `build_review_images.py` and `url_bar.py` only do screenshots
+  they have not done.
+
+Other changes in this run:
+
+| Script | What changed |
+|---|---|
+| `cluster_products.py --append` | skips a screenshot that is a byte-for-byte copy of an image already filed elsewhere in `content/swipe/` (IMG_1337 is a fashion-show picture). The `IMG_nnnn-2.png` exports are identical copies and were already skipped by name. |
+| `same_product.py` | `DROPPED` lists the twelve Colorful Standard rows the owner sent back to their own flat lay; `--apply` never recolours them again. A run with `--from` keeps every group from earlier batches exactly as it was, and `--preview` stores its result as `recolour_preview`, never touching an approved `recolour`. |
+| `build_review_images.grid_cells(strict=False)` | for a page the viewing pass typed as a listing grid: two alike blobs side by side are enough. Used by `grid_cells.py` only where the strict detector found nothing. |
+| `build_products.py` | a cell of a grid row with several screenshots is `{pid}-I{n}-C{j}` from batch 75 on. Before, every screenshot numbered its cells from C0, so two cells shared an ID; the IDs filed before batch 75 are left as they are. |
+
+The owner's decision, 23 September evening: **only the two teal recolours stay**
+— B068-P045 (Oversized Merino Wool Crew) and B068-P077 (Merino Wool Turtleneck),
+both OCEAN GREEN. The other twelve show their own flat lay, unrecoloured. For a
+new ingest `same_product.py` is run to find pairs, and `--preview` at most; a
+recolour is applied only when the owner has looked at the preview and said yes.

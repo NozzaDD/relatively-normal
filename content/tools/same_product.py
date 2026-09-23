@@ -200,9 +200,14 @@ def main():
     if (a.preview is not None or a.apply is not None) and os.path.exists(CAT + '/_same_product.json'):
         # the groups are merged already: measure again on the merged rows' own
         # pictures, which is what the shelf will show
-        res = remeasure(json.load(open(CAT + '/_same_product.json')), batches)
+        allres = json.load(open(CAT + '/_same_product.json'))
+        new = lambda r: min(int(m['pid'][1:4]) for m in r['members']) >= a.first  # noqa: E731
+        # only the groups from --from on are measured and recoloured again;
+        # earlier ones, and the recolours the owner kept, stay as they are
+        res = remeasure([r for r in allres if new(r)], batches)
         recolour(res, a.apply if a.apply is not None else a.preview, write=a.apply is not None)
-        json.dump(res, open(CAT + '/_same_product.json', 'w'), indent=1, default=float)
+        json.dump([r for r in allres if not new(r)] + res, open(CAT + '/_same_product.json', 'w'),
+                  indent=1, default=float)
         sheet(res)
         return
     view = viewing()
@@ -278,7 +283,14 @@ def main():
                   'SAME' if same else 'NOT SAME', f'dE flat/model {pair_de}', '; '.join(why), flush=True)
     if a.preview is not None or a.apply is not None:
         recolour(res, a.apply if a.apply is not None else a.preview, write=a.apply is not None)
-    json.dump(res, open(CAT + '/_same_product.json', 'w'), indent=1, default=float)
+    # groups from batches before --from are kept exactly as they were: a run
+    # over a new ingest must not drop the recolours the owner approved
+    try:
+        before = [r for r in json.load(open(CAT + '/_same_product.json'))
+                  if min(int(m['pid'][1:4]) for m in r['members']) < a.first]
+    except (FileNotFoundError, json.JSONDecodeError):
+        before = []
+    json.dump(before + res, open(CAT + '/_same_product.json', 'w'), indent=1, default=float)
     sheet(res)
     if a.merge:
         merge(batches, res)
@@ -343,14 +355,25 @@ def remeasure(res, batches):
     return res
 
 
+# The owner looked at the 23 September recolours and kept only the two teal
+# ones (OCEAN GREEN, crew and turtleneck); the other twelve rows show their
+# own flat lay again. A pair listed here is never recoloured, whatever the
+# threshold: re-running --apply must not bring them back.
+DROPPED = {'B068-P027', 'B068-P029', 'B068-P033', 'B068-P047', 'B068-P056', 'B068-P058',
+           'B068-P063', 'B068-P075', 'B068-P080', 'B068-P082', 'B068-P084', 'B068-P087'}
+
+
 def recolour(res, threshold, write):
     """The flat lay recoloured to the colour on the model, for every pair whose
     measured gap is above the threshold. The model photo carries the true
     colour; the flat lay carries the shape. Marked simulated: it is our
     picture, not the brand's."""
     cells = []
+    # an applied run replaces the last one's choice; a preview is stored beside
+    # it as `recolour_preview` and never touches what the owner has approved
+    key = 'recolour' if write else 'recolour_preview'
     for r in res:
-        r.pop('recolour', None)          # a run replaces the last one's choice
+        r.pop(key, None)
     for r in res:
         if not r['same'] or r['flat_model_de'] is None or r['flat_model_de'] <= threshold:
             continue
@@ -358,15 +381,18 @@ def recolour(res, threshold, write):
         # the owner's rule, and the two photos there come from one shoot
         if all(m['layout'] == 'side-by-side' for m in r['members']):
             continue
+        if r.get('row', r['flat']) in DROPPED:
+            continue
         by = {m['pid']: m for m in r['members']}
         f, m = by[r['flat']], by[r['model']]
         src = Image.open(f['flat']).convert('RGBA')
         src_lab, _ = UV.garment_lab(src)
         out, share = UV.recolour(src, src_lab, np.array(m['model_lab']))
-        path = f"{UV.OUT}/{r.get('row', r['flat'])}-mc.webp"
+        path = f"{UV.OUT}/{r.get('row', r['flat'])}-mc.webp" if write else \
+            f"{__import__('tempfile').gettempdir()}/{r.get('row', r['flat'])}-mc-preview.webp"
         out.save(path, 'WEBP', quality=88, method=5)
         glab, _ = UV.garment_lab(out)
-        r['recolour'] = dict(asset_path=os.path.relpath(path, ROOT), source=r.get('row', r['flat']),
+        r[key] = dict(asset_path=os.path.relpath(path, ROOT), source=r.get('row', r['flat']),
                              recolour_source=';'.join([f['image'], m['image']]),
                              target_lab=m['model_lab'], recoloured_share=round(share, 3),
                              result_to_model_de=round(UV.de(glab, m['model_lab']), 1),
@@ -374,7 +400,7 @@ def recolour(res, threshold, write):
         cells += [dict(path=f['flat'], label=f"{r['flat']} flat lay\nIMG_{f['image'][-8:-4]}"),
                   dict(path=m['model'], label=f"{r['model']} model\nIMG_{m['image'][-8:-4]}"),
                   dict(path=path, label=f"recoloured to the model\ndE {r['flat_model_de']} -> "
-                                        f"{r['recolour']['result_to_model_de']}")]
+                                        f"{r[key]['result_to_model_de']}")]
     from contact_sheet import sheet as grid
     out = CAT + '/sheets/same-product-recolour-preview.jpg'
     grid(cells, out, cols=6, cell=220, label_h=40,

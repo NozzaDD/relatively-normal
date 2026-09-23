@@ -11854,5 +11854,4769 @@
   ],
   "found": 6,
   "lattice": 6
+ },
+ "B076-P003#0": {
+  "cells": [
+   {
+    "box": [
+     0.0252,
+     0.7725,
+     0.472,
+     0.2425
+    ],
+    "path": "review/B076-P003c0.jpg",
+    "w": 396,
+    "h": 290,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B076-P003c0-cut.webp",
+    "cut_skin": 0.1526,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.5029,
+     0.7725,
+     0.5032,
+     0.2425
+    ],
+    "path": "review/B076-P003c1.jpg",
+    "w": 423,
+    "h": 290,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B076-P003c1-cut.webp",
+    "cut_skin": 0.1763,
+    "slot": ""
+   }
+  ],
+  "found": 2,
+  "lattice": 2
+ },
+ "B078-P004#0": {
+  "cells": [
+   {
+    "box": [
+     0.0206,
+     0.2881,
+     0.2789,
+     0.0956
+    ],
+    "path": "review/B078-P004c0.jpg",
+    "w": 235,
+    "h": 115,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "RLINWAY",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P004c0-cut.webp",
+    "cut_skin": 0.4159,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.3406,
+     0.2913,
+     0.2789,
+     0.0925
+    ],
+    "path": "review/B078-P004c1.jpg",
+    "w": 235,
+    "h": 111,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "DIINWAYV",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P004c1-cut.webp",
+    "cut_skin": 0.0329,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.6606,
+     0.2913,
+     0.2789,
+     0.0925
+    ],
+    "path": "review/B078-P004c2.jpg",
+    "w": 235,
+    "h": 111,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "NCW COLI ECC TION",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P004c2-cut.webp",
+    "cut_skin": 0.0201,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.0206,
+     0.6787,
+     0.2789,
+     0.0956
+    ],
+    "path": "review/B078-P004c3.jpg",
+    "w": 235,
+    "h": 115,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "NEW COLLECTION",
+    "cut": "review/B078-P004c3-cut.webp",
+    "cut_skin": 0.0191,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.3406,
+     0.6787,
+     0.2789,
+     0.0956
+    ],
+    "path": "review/B078-P004c4.jpg",
+    "w": 235,
+    "h": 115,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "NEW COLLECTION",
+    "cut": "review/B078-P004c4-cut.webp",
+    "cut_skin": 0.2808,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.6606,
+     0.6787,
+     0.2789,
+     0.0925
+    ],
+    "path": "review/B078-P004c5.jpg",
+    "w": 235,
+    "h": 111,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "AICI CALI CATINAL",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P004c5-cut.webp",
+    "cut_skin": 0.0229,
+    "slot": ""
+   }
+  ],
+  "found": 6,
+  "lattice": 6
+ },
+ "B078-P005#0": {
+  "cells": [
+   {
+    "box": [
+     0.065,
+     0.2756,
+     0.2744,
+     0.0925
+    ],
+    "path": "review/B078-P005c0.jpg",
+    "w": 232,
+    "h": 111,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "NEW COLIECCTION",
+    "cut": "review/B078-P005c0-cut.webp",
+    "cut_skin": 0.0162,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.3806,
+     0.2725,
+     0.2789,
+     0.0956
+    ],
+    "path": "review/B078-P005c1.jpg",
+    "w": 235,
+    "h": 114,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "RLINWAY",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P005c1-cut.webp",
+    "cut_skin": 0.7574,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.7006,
+     0.2725,
+     0.2789,
+     0.0956
+    ],
+    "path": "review/B078-P005c2.jpg",
+    "w": 235,
+    "h": 114,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "RLINWAY",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P005c2-cut.webp",
+    "cut_skin": 0.0285,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.0561,
+     0.6694,
+     0.2833,
+     0.0862
+    ],
+    "path": "review/B078-P005c3.jpg",
+    "w": 239,
+    "h": 103,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P005c3-cut.webp",
+    "cut_skin": 0.2017,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.3806,
+     0.6506,
+     0.2789,
+     0.1081
+    ],
+    "path": "review/B078-P005c4.jpg",
+    "w": 235,
+    "h": 130,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "NEW COLLECTION",
+    "cut": "review/B078-P005c4-cut.webp",
+    "cut_skin": 0.2187,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.6961,
+     0.6694,
+     0.2833,
+     0.0894
+    ],
+    "path": "review/B078-P005c5.jpg",
+    "w": 239,
+    "h": 107,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "NEW COLI ECC TION",
+    "cut": "review/B078-P005c5-cut.webp",
+    "cut_skin": 0.0164,
+    "slot": ""
+   }
+  ],
+  "found": 6,
+  "lattice": 6
+ },
+ "B078-P006#0": {
+  "cells": [
+   {
+    "box": [
+     0.0206,
+     0.2319,
+     0.2789,
+     0.1206
+    ],
+    "path": "review/B078-P006c0.jpg",
+    "w": 235,
+    "h": 145,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "NEW COLLECTION",
+    "cut": "review/B078-P006c0-cut.webp",
+    "cut_skin": 0.7148,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.0206,
+     0.2553,
+     0.2789,
+     0.0925
+    ],
+    "path": "review/B078-P006c1.jpg",
+    "w": 235,
+    "h": 111,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P006c1-cut.webp",
+    "cut_skin": 0.7273,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.3406,
+     0.2631,
+     0.2789,
+     0.0894
+    ],
+    "path": "review/B078-P006c2.jpg",
+    "w": 235,
+    "h": 108,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "NCW COLI CC TION",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P006c2-cut.webp",
+    "cut_skin": 0.0389,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.6561,
+     0.26,
+     0.2789,
+     0.0894
+    ],
+    "path": "review/B078-P006c3.jpg",
+    "w": 235,
+    "h": 107,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P006c3-cut.webp",
+    "cut_skin": 0.0429,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.0206,
+     0.6475,
+     0.2789,
+     0.0925
+    ],
+    "path": "review/B078-P006c4.jpg",
+    "w": 235,
+    "h": 111,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "AAi isla l nafare in Ci1ada",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P006c4-cut.webp",
+    "cut_skin": 0.0269,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.3361,
+     0.6506,
+     0.2833,
+     0.0894
+    ],
+    "path": "review/B078-P006c5.jpg",
+    "w": 239,
+    "h": 108,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Asssla i natare im Alanna",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P006c5-cut.webp",
+    "cut_skin": 0.0101,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.6606,
+     0.6444,
+     0.2789,
+     0.0956
+    ],
+    "path": "review/B078-P006c6.jpg",
+    "w": 235,
+    "h": 115,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "NEW COLLECTION",
+    "cut": "review/B078-P006c6-cut.webp",
+    "cut_skin": 0.0394,
+    "slot": ""
+   }
+  ],
+  "found": 6,
+  "lattice": 7
+ },
+ "B078-P007#0": {
+  "cells": [
+   {
+    "box": [
+     0.0161,
+     0.2545,
+     0.2833,
+     0.1144
+    ],
+    "path": "review/B078-P007c0.jpg",
+    "w": 239,
+    "h": 137,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "T Timeless Loafers in Leather \u00a9)",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P007c0-cut.webp",
+    "cut_skin": 0.3058,
+    "slot": "shoes"
+   },
+   {
+    "box": [
+     0.3406,
+     0.2537,
+     0.2789,
+     0.1144
+    ],
+    "path": "review/B078-P007c1.jpg",
+    "w": 235,
+    "h": 137,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Loafers in Leather",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P007c1-cut.webp",
+    "cut_skin": 0.218,
+    "slot": "shoes"
+   },
+   {
+    "box": [
+     0.6561,
+     0.2537,
+     0.2833,
+     0.1175
+    ],
+    "path": "review/B078-P007c2.jpg",
+    "w": 239,
+    "h": 141,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Loafers in Leather",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P007c2-cut.webp",
+    "cut_skin": 0.0012,
+    "slot": "shoes"
+   },
+   {
+    "box": [
+     0.0161,
+     0.7412,
+     0.2833,
+     0.0894
+    ],
+    "path": "review/B078-P007c3.jpg",
+    "w": 239,
+    "h": 107,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Mi atalliiIXAtacCarmincclinatare: (64>",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P007c3-cut.webp",
+    "cut_skin": 0.0454,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.3406,
+     0.7444,
+     0.2744,
+     0.0862
+    ],
+    "path": "review/B078-P007c4.jpg",
+    "w": 232,
+    "h": 103,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "(A ex tis Bo PPK RAS GR aR NE ees: (te",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P007c4-cut.webp",
+    "cut_skin": 0.0119,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.6561,
+     0.7295,
+     0.2833,
+     0.1144
+    ],
+    "path": "review/B078-P007c5.jpg",
+    "w": 239,
+    "h": 137,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "Metal Dots Gommino Loafers \u00a9",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P007c5-cut.webp",
+    "cut_skin": 0.1351,
+    "slot": "shoes"
+   }
+  ],
+  "found": 4,
+  "lattice": 6
+ },
+ "B078-P008#0": {
+  "cells": [
+   {
+    "box": [
+     0.0606,
+     0.2506,
+     0.2789,
+     0.1175
+    ],
+    "path": "review/B078-P008c0.jpg",
+    "w": 234,
+    "h": 141,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Loafers in Leather",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P008c0-cut.webp",
+    "cut_skin": 0.1968,
+    "slot": "shoes"
+   },
+   {
+    "box": [
+     0.3806,
+     0.2506,
+     0.2789,
+     0.1175
+    ],
+    "path": "review/B078-P008c1.jpg",
+    "w": 235,
+    "h": 141,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Loafers in Leather",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P008c1-cut.webp",
+    "cut_skin": 0.0007,
+    "slot": "shoes"
+   },
+   {
+    "box": [
+     0.3806,
+     0.7209,
+     0.2789,
+     0.1175
+    ],
+    "path": "review/B078-P008c2.jpg",
+    "w": 235,
+    "h": 141,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "Metal Dots Gommino Loafers \u00a9",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P008c2-cut.webp",
+    "cut_skin": 0.1808,
+    "slot": "shoes"
+   },
+   {
+    "box": [
+     0.7006,
+     0.7162,
+     0.2789,
+     0.1144
+    ],
+    "path": "review/B078-P008c3.jpg",
+    "w": 235,
+    "h": 137,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "NEW COLLECTION",
+    "cut": "review/B078-P008c3-cut.webp",
+    "cut_skin": 0.2674,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.0606,
+     0.7412,
+     0.2789,
+     0.0894
+    ],
+    "path": "review/B078-P008c4.jpg",
+    "w": 234,
+    "h": 107,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Metal Dote Gammino | oafere CD)",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P008c4-cut.webp",
+    "cut_skin": 0.0138,
+    "slot": ""
+   }
+  ],
+  "found": 4,
+  "lattice": 5
+ },
+ "B078-P009#0": {
+  "cells": [
+   {
+    "box": [
+     0.0606,
+     0.2194,
+     0.2789,
+     0.0894
+    ],
+    "path": "review/B078-P009c0.jpg",
+    "w": 235,
+    "h": 107,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "7 SRS OREN Pty TEEN PEST Sky _ PERN poe laa",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P009c0-cut.webp",
+    "cut_skin": 0.156,
+    "slot": "top"
+   },
+   {
+    "box": [
+     0.3806,
+     0.2225,
+     0.2789,
+     0.0862
+    ],
+    "path": "review/B078-P009c1.jpg",
+    "w": 235,
+    "h": 103,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P009c1-cut.webp",
+    "cut_skin": 0.0019,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.7006,
+     0.2225,
+     0.2789,
+     0.0862
+    ],
+    "path": "review/B078-P009c2.jpg",
+    "w": 235,
+    "h": 103,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P009c2-cut.webp",
+    "cut_skin": 0.0056,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.0606,
+     0.7475,
+     0.2789,
+     0.1081
+    ],
+    "path": "review/B078-P009c3.jpg",
+    "w": 235,
+    "h": 129,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "NEW COLLECTION",
+    "cut": "review/B078-P009c3-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.3806,
+     0.7538,
+     0.2789,
+     0.1019
+    ],
+    "path": "review/B078-P009c4.jpg",
+    "w": 235,
+    "h": 122,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "NEW COLLECTION",
+    "cut": "review/B078-P009c4-cut.webp",
+    "cut_skin": 0.8767,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.7006,
+     0.7538,
+     0.2789,
+     0.1019
+    ],
+    "path": "review/B078-P009c5.jpg",
+    "w": 235,
+    "h": 122,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Tod's T-Marathon Sneakerseitte CD",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P009c5-cut.webp",
+    "cut_skin": 0.2174,
+    "slot": "shoes"
+   }
+  ],
+  "found": 6,
+  "lattice": 6
+ },
+ "B078-P010#0": {
+  "cells": [
+   {
+    "box": [
+     0.0207,
+     0.2444,
+     0.2755,
+     0.1175
+    ],
+    "path": "review/B078-P010c0.jpg",
+    "w": 231,
+    "h": 141,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "NEW COLLECTION",
+    "cut": "review/B078-P010c0-cut.webp",
+    "cut_skin": 0.048,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.3377,
+     0.2694,
+     0.28,
+     0.0894
+    ],
+    "path": "review/B078-P010c1.jpg",
+    "w": 235,
+    "h": 107,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Fk eT Oa Pa) Yep ee Ie Cy",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P010c1-cut.webp",
+    "cut_skin": 0.1512,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.6591,
+     0.2725,
+     0.28,
+     0.0862
+    ],
+    "path": "review/B078-P010c2.jpg",
+    "w": 235,
+    "h": 103,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P010c2-cut.webp",
+    "cut_skin": 0.0022,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.0207,
+     0.7975,
+     0.28,
+     0.105
+    ],
+    "path": "review/B078-P010c3.jpg",
+    "w": 235,
+    "h": 126,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "RUNWAY",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P010c3-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.3421,
+     0.7975,
+     0.2755,
+     0.105
+    ],
+    "path": "review/B078-P010c4.jpg",
+    "w": 231,
+    "h": 126,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "NEW COLLECTION",
+    "cut": "review/B078-P010c4-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.6591,
+     0.8006,
+     0.28,
+     0.1019
+    ],
+    "path": "review/B078-P010c5.jpg",
+    "w": 235,
+    "h": 123,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "NEW COLLECTION",
+    "cut": "review/B078-P010c5-cut.webp",
+    "cut_skin": 0.7994,
+    "slot": ""
+   }
+  ],
+  "found": 6,
+  "lattice": 6
+ },
+ "B078-P011#0": {
+  "cells": [
+   {
+    "box": [
+     0.6606,
+     0.3631,
+     0.2789,
+     0.1206
+    ],
+    "path": "review/B078-P011c0.jpg",
+    "w": 235,
+    "h": 145,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "NEW COLLECTION",
+    "cut": "review/B078-P011c0-cut.webp",
+    "cut_skin": 0.2145,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.0206,
+     0.3912,
+     0.2744,
+     0.0894
+    ],
+    "path": "review/B078-P011c1.jpg",
+    "w": 231,
+    "h": 107,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "maauh\\e ee",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P011c1-cut.webp",
+    "cut_skin": 0.0034,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.3406,
+     0.3944,
+     0.2789,
+     0.0862
+    ],
+    "path": "review/B078-P011c2.jpg",
+    "w": 235,
+    "h": 103,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P011c2-cut.webp",
+    "cut_skin": 0.0078,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.6595,
+     0.3876,
+     0.2789,
+     0.0894
+    ],
+    "path": "review/B078-P011c3.jpg",
+    "w": 236,
+    "h": 107,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P011c3-cut.webp",
+    "cut_skin": 0.2446,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.3406,
+     0.7819,
+     0.2789,
+     0.0894
+    ],
+    "path": "review/B078-P011c4.jpg",
+    "w": 235,
+    "h": 107,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Ramminn | nafare in | aathar Cy",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P011c4-cut.webp",
+    "cut_skin": 0.1633,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.0206,
+     0.785,
+     0.2744,
+     0.0862
+    ],
+    "path": "review/B078-P011c5.jpg",
+    "w": 231,
+    "h": 103,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "PNR ONC EK, SNH Ta Pe Lea PRET ates",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P011c5-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.3406,
+     0.7829,
+     0.2789,
+     0.0894
+    ],
+    "path": "review/B078-P011c6.jpg",
+    "w": 235,
+    "h": 107,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "Ramminna | nafare in | aathar (7%)",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P011c6-cut.webp",
+    "cut_skin": 0.1808,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.6606,
+     0.785,
+     0.2744,
+     0.0862
+    ],
+    "path": "review/B078-P011c7.jpg",
+    "w": 232,
+    "h": 103,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "YEG ee EGY eT POE lata Peery Rea",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P011c7-cut.webp",
+    "cut_skin": 0.1299,
+    "slot": ""
+   }
+  ],
+  "found": 6,
+  "lattice": 8
+ },
+ "B078-P012#0": {
+  "cells": [
+   {
+    "box": [
+     0.6961,
+     0.2881,
+     0.2833,
+     0.1206
+    ],
+    "path": "review/B078-P012c0.jpg",
+    "w": 238,
+    "h": 145,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Boat Gommino Loafers in Q",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P012c0-cut.webp",
+    "cut_skin": 0.4478,
+    "slot": "shoes"
+   },
+   {
+    "box": [
+     0.0606,
+     0.3162,
+     0.2789,
+     0.0925
+    ],
+    "path": "review/B078-P012c1.jpg",
+    "w": 234,
+    "h": 111,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Raat Qamminn | nafere in \u2018en",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P012c1-cut.webp",
+    "cut_skin": 0.0249,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.3806,
+     0.3194,
+     0.2789,
+     0.0894
+    ],
+    "path": "review/B078-P012c2.jpg",
+    "w": 235,
+    "h": 107,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Raat RaAamminna i naftare in",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P012c2-cut.webp",
+    "cut_skin": 0.1734,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.0606,
+     0.7037,
+     0.2789,
+     0.0925
+    ],
+    "path": "review/B078-P012c3.jpg",
+    "w": 234,
+    "h": 111,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "NEW COLLECTION",
+    "cut": "review/B078-P012c3-cut.webp",
+    "cut_skin": 0.0536,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.3761,
+     0.7037,
+     0.2833,
+     0.0925
+    ],
+    "path": "review/B078-P012c4.jpg",
+    "w": 239,
+    "h": 111,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "NEW COLLECTION",
+    "cut": "review/B078-P012c4-cut.webp",
+    "cut_skin": 0.0015,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.7006,
+     0.7037,
+     0.2789,
+     0.0925
+    ],
+    "path": "review/B078-P012c5.jpg",
+    "w": 235,
+    "h": 111,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "NEW COLLECTION",
+    "cut": "review/B078-P012c5-cut.webp",
+    "cut_skin": 0.0298,
+    "slot": ""
+   }
+  ],
+  "found": 6,
+  "lattice": 6
+ },
+ "B078-P013#0": {
+  "cells": [
+   {
+    "box": [
+     0.0609,
+     0.36,
+     0.2755,
+     0.0894
+    ],
+    "path": "review/B078-P013c0.jpg",
+    "w": 231,
+    "h": 107,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Citvye QGamminn | naferc in",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P013c0-cut.webp",
+    "cut_skin": 0.0093,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.3823,
+     0.3569,
+     0.2755,
+     0.0894
+    ],
+    "path": "review/B078-P013c1.jpg",
+    "w": 231,
+    "h": 107,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "ARAL) PAPTIAL!",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P013c1-cut.webp",
+    "cut_skin": 0.0763,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.6993,
+     0.36,
+     0.28,
+     0.0894
+    ],
+    "path": "review/B078-P013c2.jpg",
+    "w": 235,
+    "h": 107,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "NEW COLI ECTION",
+    "cut": "review/B078-P013c2-cut.webp",
+    "cut_skin": 0.0395,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.0609,
+     0.7444,
+     0.28,
+     0.0894
+    ],
+    "path": "review/B078-P013c3.jpg",
+    "w": 235,
+    "h": 107,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "NO Were Pay CNS",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P013c3-cut.webp",
+    "cut_skin": 0.0466,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.3823,
+     0.7412,
+     0.2755,
+     0.0956
+    ],
+    "path": "review/B078-P013c4.jpg",
+    "w": 231,
+    "h": 115,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "City Gommino Loafers in (GB",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P013c4-cut.webp",
+    "cut_skin": 0.0059,
+    "slot": "shoes"
+   },
+   {
+    "box": [
+     0.6993,
+     0.7475,
+     0.28,
+     0.0862
+    ],
+    "path": "review/B078-P013c5.jpg",
+    "w": 235,
+    "h": 103,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B078-P013c5-cut.webp",
+    "cut_skin": 0.0076,
+    "slot": ""
+   }
+  ],
+  "found": 6,
+  "lattice": 6
+ },
+ "B079-P002#0": {
+  "cells": [
+   {
+    "box": [
+     0.1317,
+     0.1006,
+     0.3278,
+     0.3237
+    ],
+    "path": "review/B079-P002c0.jpg",
+    "w": 276,
+    "h": 389,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "The High Vamp Ballet in Red",
+    "category": "",
+    "price": "443.00",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B079-P002c0-cut.webp",
+    "cut_skin": 0.0256,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.4917,
+     0.1412,
+     0.3989,
+     0.2425
+    ],
+    "path": "review/B079-P002c1.jpg",
+    "w": 337,
+    "h": 291,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "The Bike Boot in Black",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B079-P002c1-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "shoes"
+   },
+   {
+    "box": [
+     0.0872,
+     0.6069,
+     0.3989,
+     0.2612
+    ],
+    "path": "review/B079-P002c2.jpg",
+    "w": 337,
+    "h": 313,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "\u2018The Bike Boot in Cuoio",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B079-P002c2-cut.webp",
+    "cut_skin": 0.5468,
+    "slot": "shoes"
+   },
+   {
+    "box": [
+     0.4917,
+     0.6131,
+     0.4033,
+     0.2987
+    ],
+    "path": "review/B079-P002c3.jpg",
+    "w": 341,
+    "h": 359,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "35 36 37 38 39 40H 4",
+    "category": "",
+    "price": "753.00",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B079-P002c3-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   }
+  ],
+  "found": 4,
+  "lattice": 4
+ },
+ "B079-P002#1": {
+  "cells": [
+   {
+    "box": [
+     0.0872,
+     0.085,
+     0.39,
+     0.2644
+    ],
+    "path": "review/B079-P002-1c0.jpg",
+    "w": 329,
+    "h": 317,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "The Judd Boot in Cigaro",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B079-P002-1c0-cut.webp",
+    "cut_skin": 0.0007,
+    "slot": "shoes"
+   },
+   {
+    "box": [
+     0.0872,
+     0.0804,
+     0.39,
+     0.3206
+    ],
+    "path": "review/B079-P002-1c1.jpg",
+    "w": 329,
+    "h": 385,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "The Judd Boot in Cigaro",
+    "category": "",
+    "price": "753.00",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B079-P002-1c1-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "shoes"
+   },
+   {
+    "box": [
+     0.4917,
+     0.0944,
+     0.4211,
+     0.3394
+    ],
+    "path": "review/B079-P002-1c2.jpg",
+    "w": 356,
+    "h": 407,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "BELG SATIEE S208 BED NEE OUCUIL",
+    "category": "",
+    "price": "694.00",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B079-P002-1c2-cut.webp",
+    "cut_skin": 0.0419,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.0872,
+     0.5506,
+     0.39,
+     0.3206
+    ],
+    "path": "review/B079-P002-1c3.jpg",
+    "w": 329,
+    "h": 385,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "The George Slipper in Cuoio",
+    "category": "",
+    "price": "539.00",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B079-P002-1c3-cut.webp",
+    "cut_skin": 0.8481,
+    "slot": "base"
+   },
+   {
+    "box": [
+     0.5361,
+     0.5506,
+     0.3367,
+     0.3206
+    ],
+    "path": "review/B079-P002-1c4.jpg",
+    "w": 284,
+    "h": 385,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "The High Vamp Ballet in Black",
+    "category": "",
+    "price": "443.00",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B079-P002-1c4-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   }
+  ],
+  "found": 3,
+  "lattice": 5
+ },
+ "B079-P002#2": {
+  "cells": [
+   {
+    "box": [
+     0.1072,
+     0.124,
+     0.4033,
+     0.1425
+    ],
+    "path": "review/B079-P002-2c0.jpg",
+    "w": 340,
+    "h": 171,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B079-P002-2c0-cut.webp",
+    "cut_skin": 0.0005,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.1183,
+     0.1225,
+     0.3589,
+     0.1425
+    ],
+    "path": "review/B079-P002-2c1.jpg",
+    "w": 303,
+    "h": 171,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B079-P002-2c1-cut.webp",
+    "cut_skin": 0.0025,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.4961,
+     0.1287,
+     0.4122,
+     0.1362
+    ],
+    "path": "review/B079-P002-2c2.jpg",
+    "w": 348,
+    "h": 163,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B079-P002-2c2-cut.webp",
+    "cut_skin": 0.1724,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.1183,
+     0.5912,
+     0.4033,
+     0.1925
+    ],
+    "path": "review/B079-P002-2c3.jpg",
+    "w": 341,
+    "h": 231,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B079-P002-2c3-cut.webp",
+    "cut_skin": 0.106,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.5005,
+     0.6162,
+     0.4033,
+     0.1425
+    ],
+    "path": "review/B079-P002-2c4.jpg",
+    "w": 340,
+    "h": 171,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B079-P002-2c4-cut.webp",
+    "cut_skin": 0.0003,
+    "slot": ""
+   }
+  ],
+  "found": 3,
+  "lattice": 5
+ },
+ "B079-P003#0": {
+  "cells": [
+   {
+    "box": [
+     0.5583,
+     0.0725,
+     0.2789,
+     0.3113
+    ],
+    "path": "review/B079-P003c0.jpg",
+    "w": 235,
+    "h": 373,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "The Trap Pump in Oxblood",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B079-P003c0-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "shoes"
+   },
+   {
+    "box": [
+     0.1183,
+     0.0975,
+     0.3589,
+     0.1862
+    ],
+    "path": "review/B079-P003c1.jpg",
+    "w": 303,
+    "h": 223,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B079-P003c1-cut.webp",
+    "cut_skin": 0.1137,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.0828,
+     0.4819,
+     0.3678,
+     0.4456
+    ],
+    "path": "review/B079-P003c2.jpg",
+    "w": 311,
+    "h": 535,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "A Se att eR ee ee",
+    "category": "",
+    "price": "501.00",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B079-P003c2-cut.webp",
+    "cut_skin": 0.7249,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.0983,
+     0.5357,
+     0.3678,
+     0.3738
+    ],
+    "path": "review/B079-P003c3.jpg",
+    "w": 311,
+    "h": 449,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "The Penny Loafer in Taupe Suede",
+    "category": "",
+    "price": "501.00",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B079-P003c3-cut.webp",
+    "cut_skin": 0.5789,
+    "slot": "shoes"
+   },
+   {
+    "box": [
+     0.4917,
+     0.5537,
+     0.4033,
+     0.3738
+    ],
+    "path": "review/B079-P003c4.jpg",
+    "w": 341,
+    "h": 449,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "526.00",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B079-P003c4-cut.webp",
+    "cut_skin": 0.4307,
+    "slot": ""
+   }
+  ],
+  "found": 4,
+  "lattice": 5
+ },
+ "B080-P001#0": {
+  "cells": [
+   {
+    "box": [
+     0.1583,
+     0.5506,
+     0.15,
+     0.2769
+    ],
+    "path": "review/B080-P001c0.jpg",
+    "w": 127,
+    "h": 332,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "The Trap Pum",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P001c0-cut.webp",
+    "cut_skin": 0.0031,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.2783,
+     0.5506,
+     0.15,
+     0.2769
+    ],
+    "path": "review/B080-P001c1.jpg",
+    "w": 127,
+    "h": 332,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "p Pump in Navy",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P001c1-cut.webp",
+    "cut_skin": 0.0009,
+    "slot": "shoes"
+   },
+   {
+    "box": [
+     0.5672,
+     0.5506,
+     0.1411,
+     0.2769
+    ],
+    "path": "review/B080-P001c2.jpg",
+    "w": 119,
+    "h": 332,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "The \u2018Trap Pumy",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P001c2-cut.webp",
+    "cut_skin": 0.2152,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.6872,
+     0.5506,
+     0.15,
+     0.2769
+    ],
+    "path": "review/B080-P001c3.jpg",
+    "w": 127,
+    "h": 332,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Pump in Hot Pink",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P001c3-cut.webp",
+    "cut_skin": 0.2045,
+    "slot": "shoes"
+   }
+  ],
+  "found": 4,
+  "lattice": 4
+ },
+ "B080-P001#1": {
+  "cells": [
+   {
+    "box": [
+     0.0872,
+     0.135,
+     0.4167,
+     0.1206
+    ],
+    "path": "review/B080-P001-1c0.jpg",
+    "w": 352,
+    "h": 144,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P001-1c0-cut.webp",
+    "cut_skin": 0.8683,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.4961,
+     0.135,
+     0.4167,
+     0.1269
+    ],
+    "path": "review/B080-P001-1c1.jpg",
+    "w": 352,
+    "h": 152,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P001-1c1-cut.webp",
+    "cut_skin": 0.0134,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.105,
+     0.6288,
+     0.3811,
+     0.1175
+    ],
+    "path": "review/B080-P001-1c2.jpg",
+    "w": 322,
+    "h": 141,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P001-1c2-cut.webp",
+    "cut_skin": 0.0853,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.5183,
+     0.6162,
+     0.3722,
+     0.1269
+    ],
+    "path": "review/B080-P001-1c3.jpg",
+    "w": 314,
+    "h": 152,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P001-1c3-cut.webp",
+    "cut_skin": 0.1429,
+    "slot": ""
+   }
+  ],
+  "found": 4,
+  "lattice": 4
+ },
+ "B080-P001#2": {
+  "cells": [
+   {
+    "box": [
+     0.1406,
+     0.1444,
+     0.2567,
+     0.0831
+    ],
+    "path": "review/B080-P001-2c0.jpg",
+    "w": 217,
+    "h": 100,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P001-2c0-cut.webp",
+    "cut_skin": 0.0571,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.4961,
+     0.1381,
+     0.3944,
+     0.13
+    ],
+    "path": "review/B080-P001-2c1.jpg",
+    "w": 333,
+    "h": 156,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P001-2c1-cut.webp",
+    "cut_skin": 0.6534,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.0961,
+     0.6319,
+     0.3989,
+     0.1269
+    ],
+    "path": "review/B080-P001-2c2.jpg",
+    "w": 336,
+    "h": 152,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P001-2c2-cut.webp",
+    "cut_skin": 0.803,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.4961,
+     0.6412,
+     0.3944,
+     0.1113
+    ],
+    "path": "review/B080-P001-2c3.jpg",
+    "w": 333,
+    "h": 133,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P001-2c3-cut.webp",
+    "cut_skin": 0.1692,
+    "slot": ""
+   }
+  ],
+  "found": 4,
+  "lattice": 4
+ },
+ "B080-P002#0": {
+  "cells": [
+   {
+    "box": [
+     0.1006,
+     0.1194,
+     0.3856,
+     0.13
+    ],
+    "path": "review/B080-P002c0.jpg",
+    "w": 326,
+    "h": 156,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P002c0-cut.webp",
+    "cut_skin": 0.7789,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.505,
+     0.1225,
+     0.3944,
+     0.1331
+    ],
+    "path": "review/B080-P002c1.jpg",
+    "w": 333,
+    "h": 159,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P002c1-cut.webp",
+    "cut_skin": 0.001,
+    "slot": ""
+   }
+  ],
+  "found": 2,
+  "lattice": 2
+ },
+ "B080-P002#1": {
+  "cells": [
+   {
+    "box": [
+     0.0872,
+     0.1069,
+     0.3944,
+     0.1394
+    ],
+    "path": "review/B080-P002-1c0.jpg",
+    "w": 333,
+    "h": 167,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P002-1c0-cut.webp",
+    "cut_skin": 0.3102,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.4917,
+     0.11,
+     0.3944,
+     0.1394
+    ],
+    "path": "review/B080-P002-1c1.jpg",
+    "w": 333,
+    "h": 167,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P002-1c1-cut.webp",
+    "cut_skin": 0.6289,
+    "slot": ""
+   }
+  ],
+  "found": 2,
+  "lattice": 2
+ },
+ "B080-P002#2": {
+  "cells": [
+   {
+    "box": [
+     0.0872,
+     0.1069,
+     0.3944,
+     0.1394
+    ],
+    "path": "review/B080-P002-2c0.jpg",
+    "w": 333,
+    "h": 167,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P002-2c0-cut.webp",
+    "cut_skin": 0.3102,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.4917,
+     0.11,
+     0.3944,
+     0.1394
+    ],
+    "path": "review/B080-P002-2c1.jpg",
+    "w": 333,
+    "h": 167,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P002-2c1-cut.webp",
+    "cut_skin": 0.6289,
+    "slot": ""
+   }
+  ],
+  "found": 2,
+  "lattice": 2
+ },
+ "B080-P002#3": {
+  "cells": [
+   {
+    "box": [
+     0.0828,
+     0.1444,
+     0.4256,
+     0.2331
+    ],
+    "path": "review/B080-P002-3c0.jpg",
+    "w": 360,
+    "h": 280,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "The Penny Loafer in Brown Croc",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P002-3c0-cut.webp",
+    "cut_skin": 0.5704,
+    "slot": "shoes"
+   },
+   {
+    "box": [
+     0.5406,
+     0.085,
+     0.3056,
+     0.3237
+    ],
+    "path": "review/B080-P002-3c1.jpg",
+    "w": 258,
+    "h": 388,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "The Penny Loafer in Oxblood Croc",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P002-3c1-cut.webp",
+    "cut_skin": 0.0752,
+    "slot": "shoes"
+   },
+   {
+    "box": [
+     0.0872,
+     0.635,
+     0.4167,
+     0.2394
+    ],
+    "path": "review/B080-P002-3c2.jpg",
+    "w": 352,
+    "h": 287,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "\u2018The Penny Loafer in Grey Croc",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P002-3c2-cut.webp",
+    "cut_skin": 0.024,
+    "slot": "shoes"
+   },
+   {
+    "box": [
+     0.4917,
+     0.6381,
+     0.4211,
+     0.1925
+    ],
+    "path": "review/B080-P002-3c3.jpg",
+    "w": 356,
+    "h": 231,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P002-3c3-cut.webp",
+    "cut_skin": 0.0029,
+    "slot": ""
+   }
+  ],
+  "found": 4,
+  "lattice": 4
+ },
+ "B080-P003#0": {
+  "cells": [
+   {
+    "box": [
+     0.005,
+     0.074,
+     0.1633,
+     0.2987
+    ],
+    "path": "review/B080-P003c0.jpg",
+    "w": 138,
+    "h": 359,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P003c0-cut.webp",
+    "cut_skin": 0.14,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.1472,
+     0.074,
+     0.1633,
+     0.2987
+    ],
+    "path": "review/B080-P003c1.jpg",
+    "w": 138,
+    "h": 359,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "The Suing Theor",
+    "category": "",
+    "price": "463",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B080-P003c1-cut.webp",
+    "cut_skin": 0.0926,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.2828,
+     0.074,
+     0.1633,
+     0.2987
+    ],
+    "path": "review/B080-P003c2.jpg",
+    "w": 138,
+    "h": 359,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "Theory in Camel",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P003c2-cut.webp",
+    "cut_skin": 0.1253,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.834,
+     0.074,
+     0.1633,
+     0.2987
+    ],
+    "path": "review/B080-P003c3.jpg",
+    "w": 138,
+    "h": 359,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P003c3-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.5494,
+     0.0756,
+     0.1633,
+     0.2956
+    ],
+    "path": "review/B080-P003c4.jpg",
+    "w": 138,
+    "h": 355,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "36 365 37 325 38 385",
+    "category": "",
+    "price": "64",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B080-P003c4-cut.webp",
+    "cut_skin": 0.3594,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.6917,
+     0.0756,
+     0.1633,
+     0.2956
+    ],
+    "path": "review/B080-P003c5.jpg",
+    "w": 138,
+    "h": 355,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "385 39 39.5 40 +65 41",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P003c5-cut.webp",
+    "cut_skin": 0.3487,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.1539,
+     0.5631,
+     0.15,
+     0.2987
+    ],
+    "path": "review/B080-P003c6.jpg",
+    "w": 127,
+    "h": 359,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "The Kitty Point He",
+    "category": "",
+    "price": "64",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B080-P003c6-cut.webp",
+    "cut_skin": 0.1741,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.2872,
+     0.5631,
+     0.1544,
+     0.2987
+    ],
+    "path": "review/B080-P003c7.jpg",
+    "w": 130,
+    "h": 359,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "| Heel in Tan Zebra",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P003c7-cut.webp",
+    "cut_skin": 0.1842,
+    "slot": "base"
+   },
+   {
+    "box": [
+     0.5494,
+     0.5631,
+     0.1633,
+     0.2987
+    ],
+    "path": "review/B080-P003c8.jpg",
+    "w": 138,
+    "h": 359,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "The Kit Slide",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P003c8-cut.webp",
+    "cut_skin": 0.4976,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.6917,
+     0.5631,
+     0.1633,
+     0.2987
+    ],
+    "path": "review/B080-P003c9.jpg",
+    "w": 138,
+    "h": 359,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "ide in Camel",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P003c9-cut.webp",
+    "cut_skin": 0.7411,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.834,
+     0.5631,
+     0.1633,
+     0.2987
+    ],
+    "path": "review/B080-P003c10.jpg",
+    "w": 138,
+    "h": 359,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P003c10-cut.webp",
+    "cut_skin": 0.703,
+    "slot": ""
+   }
+  ],
+  "found": 4,
+  "lattice": 11
+ },
+ "B080-P004#0": {
+  "cells": [
+   {
+    "box": [
+     0.1272,
+     0.5694,
+     0.3056,
+     0.355
+    ],
+    "path": "review/B080-P004c0.jpg",
+    "w": 258,
+    "h": 426,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "The Jutti Slipper in Bare",
+    "category": "",
+    "price": "419.00",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B080-P004c0-cut.webp",
+    "cut_skin": 0.6209,
+    "slot": "base"
+   },
+   {
+    "box": [
+     0.4917,
+     0.6756,
+     0.4211,
+     0.2331
+    ],
+    "path": "review/B080-P004c1.jpg",
+    "w": 356,
+    "h": 280,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "The Kitty Point in Ponyhair Zebra",
+    "category": "",
+    "price": "631.00",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B080-P004c1-cut.webp",
+    "cut_skin": 0.0096,
+    "slot": "base"
+   }
+  ],
+  "found": 2,
+  "lattice": 2
+ },
+ "B080-P005#0": {
+  "cells": [
+   {
+    "box": [
+     0.105,
+     0.1819,
+     0.39,
+     0.13
+    ],
+    "path": "review/B080-P005c0.jpg",
+    "w": 329,
+    "h": 156,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P005c0-cut.webp",
+    "cut_skin": 0.0013,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.5094,
+     0.1726,
+     0.3944,
+     0.1487
+    ],
+    "path": "review/B080-P005c1.jpg",
+    "w": 333,
+    "h": 178,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P005c1-cut.webp",
+    "cut_skin": 0.0004,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.5094,
+     0.6288,
+     0.3944,
+     0.1644
+    ],
+    "path": "review/B080-P005c2.jpg",
+    "w": 333,
+    "h": 197,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P005c2-cut.webp",
+    "cut_skin": 0.0886,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.1006,
+     0.6475,
+     0.3944,
+     0.1487
+    ],
+    "path": "review/B080-P005c3.jpg",
+    "w": 333,
+    "h": 178,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P005c3-cut.webp",
+    "cut_skin": 0.0819,
+    "slot": ""
+   }
+  ],
+  "found": 3,
+  "lattice": 4
+ },
+ "B080-P006#0": {
+  "cells": [
+   {
+    "box": [
+     0.0229,
+     0.1139,
+     0.2041,
+     0.1394
+    ],
+    "path": "review/B080-P006c0.jpg",
+    "w": 171,
+    "h": 167,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "SARCONI BLACK LEATHER KNEE",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P006c0-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.2763,
+     0.1139,
+     0.2041,
+     0.1394
+    ],
+    "path": "review/B080-P006c1.jpg",
+    "w": 172,
+    "h": 167,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "SARCONI CANNELLA LEATHER",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P006c1-cut.webp",
+    "cut_skin": 0.9659,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.5252,
+     0.1225,
+     0.1996,
+     0.13
+    ],
+    "path": "review/B080-P006c2.jpg",
+    "w": 168,
+    "h": 156,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P006c2-cut.webp",
+    "cut_skin": 0.899,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.7841,
+     0.1069,
+     0.1952,
+     0.1456
+    ],
+    "path": "review/B080-P006c3.jpg",
+    "w": 164,
+    "h": 175,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "MIOLA BLACK LEATHER ANKLE",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P006c3-cut.webp",
+    "cut_skin": 0.0137,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.5207,
+     0.41,
+     0.2041,
+     0.1644
+    ],
+    "path": "review/B080-P006c4.jpg",
+    "w": 172,
+    "h": 198,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "SERONE WALNUT SUEDE STRETC!",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P006c4-cut.webp",
+    "cut_skin": 0.0236,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.7707,
+     0.41,
+     0.2086,
+     0.1644
+    ],
+    "path": "review/B080-P006c5.jpg",
+    "w": 175,
+    "h": 198,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "CERONE PELTRO SUEDE STRETCH",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P006c5-cut.webp",
+    "cut_skin": 0.0049,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.0252,
+     0.4537,
+     0.2041,
+     0.1175
+    ],
+    "path": "review/B080-P006c6.jpg",
+    "w": 171,
+    "h": 141,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P006c6-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.2752,
+     0.4537,
+     0.2086,
+     0.1175
+    ],
+    "path": "review/B080-P006c7.jpg",
+    "w": 175,
+    "h": 141,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P006c7-cut.webp",
+    "cut_skin": 0.0162,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.0207,
+     0.735,
+     0.2041,
+     0.1613
+    ],
+    "path": "review/B080-P006c8.jpg",
+    "w": 172,
+    "h": 193,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "CERONE BLACK SUEDE STRETCH",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P006c8-cut.webp",
+    "cut_skin": 0.0037,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.2752,
+     0.7569,
+     0.2041,
+     0.1394
+    ],
+    "path": "review/B080-P006c9.jpg",
+    "w": 172,
+    "h": 167,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "PRAIA \\AJAINILIT CLIEME ANIVIE",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P006c9-cut.webp",
+    "cut_skin": 0.0829,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.5207,
+     0.76,
+     0.2086,
+     0.1362
+    ],
+    "path": "review/B080-P006c10.jpg",
+    "w": 176,
+    "h": 163,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "DPB AIA BLACY RIADDA ARIVILE",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P006c10-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.7752,
+     0.7819,
+     0.2086,
+     0.1144
+    ],
+    "path": "review/B080-P006c11.jpg",
+    "w": 176,
+    "h": 137,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P006c11-cut.webp",
+    "cut_skin": 0.1985,
+    "slot": ""
+   }
+  ],
+  "found": 10,
+  "lattice": 12
+ },
+ "B080-P007#0": {
+  "cells": [
+   {
+    "box": [
+     0.0207,
+     0.0538,
+     0.2041,
+     0.1613
+    ],
+    "path": "review/B080-P007c0.jpg",
+    "w": 172,
+    "h": 194,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "CERONE BLACK SUEDE STRETCH",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P007c0-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.2752,
+     0.0756,
+     0.2041,
+     0.1394
+    ],
+    "path": "review/B080-P007c1.jpg",
+    "w": 172,
+    "h": 168,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "PRAIA WAINILIT CLICME ANIVIE",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P007c1-cut.webp",
+    "cut_skin": 0.2379,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.5207,
+     0.0788,
+     0.2086,
+     0.1362
+    ],
+    "path": "review/B080-P007c2.jpg",
+    "w": 176,
+    "h": 163,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "RS TA REACT a ER LT Ae",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P007c2-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.7707,
+     0.1006,
+     0.213,
+     0.1144
+    ],
+    "path": "review/B080-P007c3.jpg",
+    "w": 179,
+    "h": 138,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P007c3-cut.webp",
+    "cut_skin": 0.1531,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.0207,
+     0.4225,
+     0.213,
+     0.1144
+    ],
+    "path": "review/B080-P007c4.jpg",
+    "w": 179,
+    "h": 137,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P007c4-cut.webp",
+    "cut_skin": 0.0022,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.2729,
+     0.4116,
+     0.2086,
+     0.1362
+    ],
+    "path": "review/B080-P007c5.jpg",
+    "w": 175,
+    "h": 164,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "LAURIA BLACK NAPPA SLIP-INS",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P007c5-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "base"
+   },
+   {
+    "box": [
+     0.5207,
+     0.4116,
+     0.2086,
+     0.1362
+    ],
+    "path": "review/B080-P007c6.jpg",
+    "w": 176,
+    "h": 164,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "LAURIA PELTRO SUEDE SLIP-INS",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P007c6-cut.webp",
+    "cut_skin": 0.017,
+    "slot": "base"
+   },
+   {
+    "box": [
+     0.7729,
+     0.4116,
+     0.2086,
+     0.1362
+    ],
+    "path": "review/B080-P007c7.jpg",
+    "w": 175,
+    "h": 164,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "LAURIA LINEN NAPPA SLIP-INS",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P007c7-cut.webp",
+    "cut_skin": 0.0064,
+    "slot": "base"
+   },
+   {
+    "box": [
+     0.0207,
+     0.7452,
+     0.2086,
+     0.1362
+    ],
+    "path": "review/B080-P007c8.jpg",
+    "w": 175,
+    "h": 163,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "AIROLA CANNELLA PRINTED MINI",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P007c8-cut.webp",
+    "cut_skin": 0.012,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.2729,
+     0.7452,
+     0.2086,
+     0.1362
+    ],
+    "path": "review/B080-P007c9.jpg",
+    "w": 175,
+    "h": 163,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "AIROLA BLACK NAPPA LOAFERS",
+    "category": "",
+    "price": "46000",
+    "currency": "EUR",
+    "label": "",
+    "cut": "review/B080-P007c9-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "shoes"
+   },
+   {
+    "box": [
+     0.5207,
+     0.7452,
+     0.2086,
+     0.1362
+    ],
+    "path": "review/B080-P007c10.jpg",
+    "w": 176,
+    "h": 163,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "AIROLA WALNUT SUEDE LOAFERS",
+    "category": "",
+    "price": "46000",
+    "currency": "EUR",
+    "label": "",
+    "cut": "review/B080-P007c10-cut.webp",
+    "cut_skin": 0.0666,
+    "slot": "shoes"
+   },
+   {
+    "box": [
+     0.7729,
+     0.7452,
+     0.2086,
+     0.1362
+    ],
+    "path": "review/B080-P007c11.jpg",
+    "w": 175,
+    "h": 163,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "AIROLA MUSCHIO SUEDE",
+    "category": "",
+    "price": "464000",
+    "currency": "EUR",
+    "label": "",
+    "cut": "review/B080-P007c11-cut.webp",
+    "cut_skin": 0.0007,
+    "slot": ""
+   }
+  ],
+  "found": 5,
+  "lattice": 12
+ },
+ "B080-P010#0": {
+  "cells": [
+   {
+    "box": [
+     0.0163,
+     0.7288,
+     0.2175,
+     0.1362
+    ],
+    "path": "review/B080-P010c0.jpg",
+    "w": 183,
+    "h": 164,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "TRINO BLACK LEATHER ANKLE",
+    "category": "BOOTS",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P010c0-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "shoes"
+   },
+   {
+    "box": [
+     0.5162,
+     0.7006,
+     0.2175,
+     0.1644
+    ],
+    "path": "review/B080-P010c1.jpg",
+    "w": 183,
+    "h": 198,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "SIRONE BLACK LEATHER BOOTS",
+    "category": "",
+    "price": "760,00",
+    "currency": "EUR",
+    "label": "",
+    "cut": "review/B080-P010c1-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "shoes"
+   },
+   {
+    "box": [
+     0.7707,
+     0.7412,
+     0.222,
+     0.1269
+    ],
+    "path": "review/B080-P010c2.jpg",
+    "w": 186,
+    "h": 152,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "BORMIO UNIQUE COW PRINT",
+    "category": "BOOT",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P010c2-cut.webp",
+    "cut_skin": 0.1227,
+    "slot": "shoes"
+   }
+  ],
+  "found": 3,
+  "lattice": 3
+ },
+ "B080-P011#0": {
+  "cells": [
+   {
+    "box": [
+     0.2841,
+     0.1631,
+     0.1773,
+     0.1894
+    ],
+    "path": "review/B080-P011c0.jpg",
+    "w": 149,
+    "h": 228,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "ERBANIA BLACK RUBBER BOC",
+    "category": "",
+    "price": "260,00",
+    "currency": "EUR",
+    "label": "",
+    "cut": "review/B080-P011c0-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.0163,
+     0.2288,
+     0.2264,
+     0.1269
+    ],
+    "path": "review/B080-P011c1.jpg",
+    "w": 190,
+    "h": 152,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "BORMIO BLACK PONY BOOT",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P011c1-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "shoes"
+   },
+   {
+    "box": [
+     0.5252,
+     0.2194,
+     0.2086,
+     0.1331
+    ],
+    "path": "review/B080-P011c2.jpg",
+    "w": 175,
+    "h": 160,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "-ELTRE WALNUT LEATHER BOOTS",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P011c2-cut.webp",
+    "cut_skin": 0.0633,
+    "slot": "shoes"
+   },
+   {
+    "box": [
+     0.7752,
+     0.2194,
+     0.2086,
+     0.1331
+    ],
+    "path": "review/B080-P011c3.jpg",
+    "w": 175,
+    "h": 160,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "FELTRE BLACK LEATHER BOOTS",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P011c3-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "shoes"
+   },
+   {
+    "box": [
+     0.0252,
+     0.5381,
+     0.2086,
+     0.1331
+    ],
+    "path": "review/B080-P011c4.jpg",
+    "w": 175,
+    "h": 160,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "TAVENNA CIPRIA KITTEN HEELS",
+    "category": "",
+    "price": "530,00",
+    "currency": "EUR",
+    "label": "",
+    "cut": "review/B080-P011c4-cut.webp",
+    "cut_skin": 0.0293,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.2796,
+     0.5569,
+     0.213,
+     0.0956
+    ],
+    "path": "review/B080-P011c5.jpg",
+    "w": 179,
+    "h": 115,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "ZIANO CIPRIA HEELED SANDALS",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P011c5-cut.webp",
+    "cut_skin": 0.0051,
+    "slot": "shoes"
+   },
+   {
+    "box": [
+     0.5252,
+     0.5381,
+     0.2086,
+     0.1331
+    ],
+    "path": "review/B080-P011c6.jpg",
+    "w": 175,
+    "h": 160,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "ELLA CIPRIA SUEDE BALLET FLATS",
+    "category": "",
+    "price": "390,00",
+    "currency": "EUR",
+    "label": "",
+    "cut": "review/B080-P011c6-cut.webp",
+    "cut_skin": 0.1033,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.7752,
+     0.5381,
+     0.2086,
+     0.1331
+    ],
+    "path": "review/B080-P011c7.jpg",
+    "w": 175,
+    "h": 160,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "FORCOLA CANNELLA PRINTED",
+    "category": "",
+    "price": "430,00",
+    "currency": "EUR",
+    "label": "",
+    "cut": "review/B080-P011c7-cut.webp",
+    "cut_skin": 0.6364,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.0252,
+     0.8624,
+     0.2086,
+     0.1331
+    ],
+    "path": "review/B080-P011c8.jpg",
+    "w": 175,
+    "h": 160,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P011c8-cut.webp",
+    "cut_skin": 0.3889,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.2751,
+     0.8624,
+     0.2086,
+     0.1331
+    ],
+    "path": "review/B080-P011c9.jpg",
+    "w": 175,
+    "h": 160,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P011c9-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.5252,
+     0.8624,
+     0.2086,
+     0.1331
+    ],
+    "path": "review/B080-P011c10.jpg",
+    "w": 175,
+    "h": 160,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P011c10-cut.webp",
+    "cut_skin": 0.6976,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.7752,
+     0.8624,
+     0.2086,
+     0.1331
+    ],
+    "path": "review/B080-P011c11.jpg",
+    "w": 175,
+    "h": 160,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P011c11-cut.webp",
+    "cut_skin": 0.1583,
+    "slot": ""
+   }
+  ],
+  "found": 5,
+  "lattice": 12
+ },
+ "B080-P013#0": {
+  "cells": [
+   {
+    "box": [
+     0.0252,
+     0.3006,
+     0.4407,
+     0.3019
+    ],
+    "path": "review/B080-P013c0.jpg",
+    "w": 370,
+    "h": 363,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "OFT GRANDMA SHOULDER BAG_off white cracked",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P013c0-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "bag"
+   },
+   {
+    "box": [
+     0.5252,
+     0.3725,
+     0.4452,
+     0.23
+    ],
+    "path": "review/B080-P013c1.jpg",
+    "w": 374,
+    "h": 276,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "SOFT GRANDMA SHOULDER BAG_butter washed nappa",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P013c1-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "bag"
+   },
+   {
+    "box": [
+     0.0296,
+     0.8037,
+     0.4363,
+     0.2112
+    ],
+    "path": "review/B080-P013c2.jpg",
+    "w": 367,
+    "h": 253,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P013c2-cut.webp",
+    "cut_skin": 0.0046,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.5341,
+     0.81,
+     0.4318,
+     0.205
+    ],
+    "path": "review/B080-P013c3.jpg",
+    "w": 363,
+    "h": 246,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P013c3-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   }
+  ],
+  "found": 4,
+  "lattice": 4
+ },
+ "B080-P014#0": {
+  "cells": [
+   {
+    "box": [
+     0.0206,
+     0.0975,
+     0.4522,
+     0.2987
+    ],
+    "path": "review/B080-P014c0.jpg",
+    "w": 382,
+    "h": 358,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "3OFT GRANDMA SHOULDER BAG_vintage camel washed nappa",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P014c0-cut.webp",
+    "cut_skin": 0.0029,
+    "slot": "bag"
+   },
+   {
+    "box": [
+     0.5272,
+     0.1037,
+     0.4433,
+     0.2925
+    ],
+    "path": "review/B080-P014c1.jpg",
+    "w": 375,
+    "h": 351,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "OFT GRANDMA SHOULDER BAG_black washed nappa",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P014c1-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "bag"
+   },
+   {
+    "box": [
+     0.025,
+     0.6006,
+     0.4433,
+     0.305
+    ],
+    "path": "review/B080-P014c2.jpg",
+    "w": 374,
+    "h": 366,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "OFT GRANDMA SHOULDER BAG_ dark olive suede",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P014c2-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "bag"
+   },
+   {
+    "box": [
+     0.5272,
+     0.6006,
+     0.4433,
+     0.305
+    ],
+    "path": "review/B080-P014c3.jpg",
+    "w": 375,
+    "h": 366,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "OFT GRANDMA SHOULDER BAG_ash brown suede",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P014c3-cut.webp",
+    "cut_skin": 0.1717,
+    "slot": "bag"
+   }
+  ],
+  "found": 4,
+  "lattice": 4
+ },
+ "B080-P014#1": {
+  "cells": [
+   {
+    "box": [
+     0.0198,
+     0.1069,
+     0.4604,
+     0.3144
+    ],
+    "path": "review/B080-P014-1c0.jpg",
+    "w": 396,
+    "h": 377,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "JUMPLING STUD_butter washed nappa",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P014-1c0-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.5241,
+     0.1037,
+     0.4604,
+     0.3175
+    ],
+    "path": "review/B080-P014-1c1.jpg",
+    "w": 397,
+    "h": 381,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "XUMPLING STUD_vintage camel washed nappa",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P014-1c1-cut.webp",
+    "cut_skin": 0.0864,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.0198,
+     0.6225,
+     0.4604,
+     0.3144
+    ],
+    "path": "review/B080-P014-1c2.jpg",
+    "w": 396,
+    "h": 377,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P014-1c2-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.5241,
+     0.6256,
+     0.4517,
+     0.3113
+    ],
+    "path": "review/B080-P014-1c3.jpg",
+    "w": 390,
+    "h": 374,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B080-P014-1c3-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   }
+  ],
+  "found": 4,
+  "lattice": 4
+ },
+ "B081-P002#0": {
+  "cells": [
+   {
+    "box": [
+     0.0893,
+     0.3912,
+     0.3126,
+     0.3331
+    ],
+    "path": "review/B081-P002c0.jpg",
+    "w": 270,
+    "h": 400,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": ": plain",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B081-P002c0-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.5937,
+     0.3912,
+     0.3126,
+     0.33
+    ],
+    "path": "review/B081-P002c1.jpg",
+    "w": 269,
+    "h": 396,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "plain",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B081-P002c1-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   }
+  ],
+  "found": 2,
+  "lattice": 2
+ },
+ "B081-P002#1": {
+  "cells": [
+   {
+    "box": [
+     0.1145,
+     0.4506,
+     0.2621,
+     0.1487
+    ],
+    "path": "review/B081-P002-1c0.jpg",
+    "w": 220,
+    "h": 179,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B081-P002-1c0-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.6189,
+     0.4725,
+     0.2621,
+     0.1269
+    ],
+    "path": "review/B081-P002-1c1.jpg",
+    "w": 221,
+    "h": 152,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B081-P002-1c1-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   }
+  ],
+  "found": 2,
+  "lattice": 2
+ },
+ "B082-P001#0": {
+  "cells": [
+   {
+    "box": [
+     0.1183,
+     0.2694,
+     0.2344,
+     0.1175
+    ],
+    "path": "review/B082-P001c0.jpg",
+    "w": 199,
+    "h": 141,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B082-P001c0-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.6206,
+     0.2506,
+     0.2611,
+     0.1362
+    ],
+    "path": "review/B082-P001c1.jpg",
+    "w": 221,
+    "h": 164,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B082-P001c1-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   }
+  ],
+  "found": 2,
+  "lattice": 2
+ },
+ "B082-P001#1": {
+  "cells": [
+   {
+    "box": [
+     0.6028,
+     0.1256,
+     0.3056,
+     0.2456
+    ],
+    "path": "review/B082-P001-1c0.jpg",
+    "w": 258,
+    "h": 295,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "{OULDER_silver crinkle",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B082-P001-1c0-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.1006,
+     0.2069,
+     0.3056,
+     0.1644
+    ],
+    "path": "review/B082-P001-1c1.jpg",
+    "w": 258,
+    "h": 197,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "PT ee ee ee ee",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B082-P001-1c1-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.1006,
+     0.6319,
+     0.31,
+     0.2456
+    ],
+    "path": "review/B082-P001-1c2.jpg",
+    "w": 261,
+    "h": 295,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "JOULDER_chili crinkle",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B082-P001-1c2-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.6028,
+     0.6319,
+     0.3056,
+     0.2425
+    ],
+    "path": "review/B082-P001-1c3.jpg",
+    "w": 258,
+    "h": 291,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "{OULDER_black crinkle",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B082-P001-1c3-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   }
+  ],
+  "found": 4,
+  "lattice": 4
+ },
+ "B082-P001#2": {
+  "cells": [
+   {
+    "box": [
+     0.105,
+     0.1725,
+     0.2967,
+     0.1862
+    ],
+    "path": "review/B082-P001-2c0.jpg",
+    "w": 251,
+    "h": 224,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "OULDER_custard semi veg",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B082-P001-2c0-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.6072,
+     0.1131,
+     0.3011,
+     0.2456
+    ],
+    "path": "review/B082-P001-2c1.jpg",
+    "w": 254,
+    "h": 295,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "OULDER_saddle brown pull-up",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B082-P001-2c1-cut.webp",
+    "cut_skin": 0.4092,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.105,
+     0.6225,
+     0.3011,
+     0.2425
+    ],
+    "path": "review/B082-P001-2c2.jpg",
+    "w": 255,
+    "h": 291,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "OULDER_washed brown pull-up",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B082-P001-2c2-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.6072,
+     0.6194,
+     0.2922,
+     0.2456
+    ],
+    "path": "review/B082-P001-2c3.jpg",
+    "w": 246,
+    "h": 295,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "OULDER_black pull-up",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B082-P001-2c3-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   }
+  ],
+  "found": 4,
+  "lattice": 4
+ },
+ "B090-P003#0": {
+  "cells": [
+   {
+    "box": [
+     0.1094,
+     0.4131,
+     0.3233,
+     0.2644
+    ],
+    "path": "review/B090-P003c0.jpg",
+    "w": 273,
+    "h": 318,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "ura\u2122 Drawstring Tote",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B090-P003c0-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "bag"
+   },
+   {
+    "box": [
+     0.5539,
+     0.3506,
+     0.4033,
+     0.3331
+    ],
+    "path": "review/B090-P003c1.jpg",
+    "w": 340,
+    "h": 400,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Ella natuura\u2122 Drawstring Tote",
+    "category": "TO BAG",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B090-P003c1-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "bag"
+   }
+  ],
+  "found": 2,
+  "lattice": 2
+ },
+ "B090-P003#2": {
+  "cells": [
+   {
+    "box": [
+     0.0653,
+     0.3381,
+     0.3834,
+     0.3644
+    ],
+    "path": "review/B090-P003-2c0.jpg",
+    "w": 358,
+    "h": 438,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "0% off applied at checkout",
+    "category": ") BAG",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B090-P003-2c0-cut.webp",
+    "cut_skin": 0.0214,
+    "slot": "bag"
+   },
+   {
+    "box": [
+     0.5553,
+     0.3412,
+     0.3914,
+     0.3612
+    ],
+    "path": "review/B090-P003-2c1.jpg",
+    "w": 365,
+    "h": 433,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "30% off applied at checkout",
+    "category": "\"Oo BAG",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B090-P003-2c1-cut.webp",
+    "cut_skin": 0.0019,
+    "slot": "bag"
+   }
+  ],
+  "found": 2,
+  "lattice": 2
+ },
+ "B090-P004#0": {
+  "cells": [
+   {
+    "box": [
+     0.1234,
+     0.8912,
+     0.2354,
+     0.1237
+    ],
+    "path": "review/B090-P004c0.jpg",
+    "w": 198,
+    "h": 148,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B090-P004c0-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.6412,
+     0.8944,
+     0.3738,
+     0.1206
+    ],
+    "path": "review/B090-P004c1.jpg",
+    "w": 314,
+    "h": 144,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B090-P004c1-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   }
+  ],
+  "found": 2,
+  "lattice": 2
+ },
+ "B090-P004#1": {
+  "cells": [
+   {
+    "box": [
+     0.0609,
+     0.0726,
+     0.338,
+     0.2644
+    ],
+    "path": "review/B090-P004-1c0.jpg",
+    "w": 284,
+    "h": 317,
+    "inferred": true,
+    "badges_painted": 3,
+    "name": "BAG",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B090-P004-1c0-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "bag"
+   },
+   {
+    "box": [
+     0.6223,
+     0.0726,
+     0.338,
+     0.2644
+    ],
+    "path": "review/B090-P004-1c1.jpg",
+    "w": 284,
+    "h": 317,
+    "inferred": true,
+    "badges_painted": 2,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B090-P004-1c1-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.0609,
+     0.4319,
+     0.338,
+     0.2644
+    ],
+    "path": "review/B090-P004-1c2.jpg",
+    "w": 284,
+    "h": 317,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "3ucket Bag",
+    "category": "> BAG",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B090-P004-1c2-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "bag"
+   },
+   {
+    "box": [
+     0.5743,
+     0.4319,
+     0.3336,
+     0.2644
+    ],
+    "path": "review/B090-P004-1c3.jpg",
+    "w": 280,
+    "h": 317,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "cket Bag",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B090-P004-1c3-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "bag"
+   },
+   {
+    "box": [
+     0.6223,
+     0.4319,
+     0.338,
+     0.2644
+    ],
+    "path": "review/B090-P004-1c4.jpg",
+    "w": 284,
+    "h": 317,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B090-P004-1c4-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.668,
+     0.8319,
+     0.347,
+     0.1831
+    ],
+    "path": "review/B090-P004-1c5.jpg",
+    "w": 291,
+    "h": 219,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B090-P004-1c5-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   }
+  ],
+  "found": 3,
+  "lattice": 6
+ },
+ "B090-P005#0": {
+  "cells": [
+   {
+    "box": [
+     0.0609,
+     0.1006,
+     0.338,
+     0.1144
+    ],
+    "path": "review/B090-P005c0.jpg",
+    "w": 284,
+    "h": 138,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "3ucket Bag",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B090-P005c0-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "bag"
+   },
+   {
+    "box": [
+     0.5743,
+     0.1037,
+     0.3336,
+     0.1081
+    ],
+    "path": "review/B090-P005c1.jpg",
+    "w": 281,
+    "h": 130,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "cket Bag",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B090-P005c1-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "bag"
+   }
+  ],
+  "found": 2,
+  "lattice": 2
+ },
+ "B090-P008#0": {
+  "cells": [
+   {
+    "box": [
+     0.043,
+     0.4069,
+     0.3961,
+     0.2644
+    ],
+    "path": "review/B090-P008c0.jpg",
+    "w": 333,
+    "h": 317,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "ll Leather Tote",
+    "category": "> TO BAG",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B090-P008c0-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "bag"
+   },
+   {
+    "box": [
+     0.5609,
+     0.3881,
+     0.4184,
+     0.28
+    ],
+    "path": "review/B090-P008c1.jpg",
+    "w": 352,
+    "h": 336,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Romy Croc-Embossed Tote",
+    "category": "0 BAG",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B090-P008c1-cut.webp",
+    "cut_skin": 0.0006,
+    "slot": "bag"
+   }
+  ],
+  "found": 2,
+  "lattice": 2
+ },
+ "B090-P008#1": {
+  "cells": [
+   {
+    "box": [
+     0.0828,
+     0.1694,
+     0.3322,
+     0.2612
+    ],
+    "path": "review/B090-P008-1c0.jpg",
+    "w": 280,
+    "h": 313,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "ressed Bucket Bag",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B090-P008-1c0-cut.webp",
+    "cut_skin": 0.0076,
+    "slot": "bag"
+   },
+   {
+    "box": [
+     0.5784,
+     0.1687,
+     0.3322,
+     0.2612
+    ],
+    "path": "review/B090-P008-1c1.jpg",
+    "w": 280,
+    "h": 313,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": ">de Bucket Bag",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B090-P008-1c1-cut.webp",
+    "cut_skin": 0.0003,
+    "slot": "bag"
+   },
+   {
+    "box": [
+     0.585,
+     0.1663,
+     0.3322,
+     0.2644
+    ],
+    "path": "review/B090-P008-1c2.jpg",
+    "w": 280,
+    "h": 317,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "ie Bucket Bag",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B090-P008-1c2-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "bag"
+   },
+   {
+    "box": [
+     0.0739,
+     0.6913,
+     0.3322,
+     0.2612
+    ],
+    "path": "review/B090-P008-1c3.jpg",
+    "w": 280,
+    "h": 314,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "ede Bucket Bag",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B090-P008-1c3-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "bag"
+   },
+   {
+    "box": [
+     0.5806,
+     0.6944,
+     0.3144,
+     0.2581
+    ],
+    "path": "review/B090-P008-1c4.jpg",
+    "w": 265,
+    "h": 310,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "ket Bag",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B090-P008-1c4-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "bag"
+   }
+  ],
+  "found": 4,
+  "lattice": 5
+ },
+ "B090-P008#2": {
+  "cells": [
+   {
+    "box": [
+     0.1077,
+     0.1085,
+     0.3113,
+     0.1862
+    ],
+    "path": "review/B090-P008-2c0.jpg",
+    "w": 262,
+    "h": 223,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B090-P008-2c0-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.6133,
+     0.1085,
+     0.3113,
+     0.1862
+    ],
+    "path": "review/B090-P008-2c1.jpg",
+    "w": 262,
+    "h": 223,
+    "inferred": true,
+    "badges_painted": 1,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B090-P008-2c1-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.0788,
+     0.4756,
+     0.3113,
+     0.1706
+    ],
+    "path": "review/B090-P008-2c2.jpg",
+    "w": 262,
+    "h": 205,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "lim Top Handle Bag",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B090-P008-2c2-cut.webp",
+    "cut_skin": 0.0001,
+    "slot": "top"
+   },
+   {
+    "box": [
+     0.5787,
+     0.4756,
+     0.3202,
+     0.1737
+    ],
+    "path": "review/B090-P008-2c3.jpg",
+    "w": 269,
+    "h": 209,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "\u00bbde Slim Top Handle Bag",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B090-P008-2c3-cut.webp",
+    "cut_skin": 0.0314,
+    "slot": "top"
+   },
+   {
+    "box": [
+     0.2171,
+     0.8287,
+     0.1505,
+     0.1862
+    ],
+    "path": "review/B090-P008-2c4.jpg",
+    "w": 127,
+    "h": 223,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B090-P008-2c4-cut.webp",
+    "cut_skin": 0.2581,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.7216,
+     0.8287,
+     0.155,
+     0.1862
+    ],
+    "path": "review/B090-P008-2c5.jpg",
+    "w": 131,
+    "h": 223,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B090-P008-2c5-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   }
+  ],
+  "found": 4,
+  "lattice": 6
  }
 }

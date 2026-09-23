@@ -3,6 +3,9 @@
 Background removal on a detail shot happily returns a model's head, and a head
 is not a bag. Any cut-out that is mostly skin and hair is marked weak so the
 board picker will not use it; the row stays in the catalogue with the reason.
+
+Only new or changed products are rated (see incremental.py); `--all` re-rates
+every one.
 """
 import sys, os, json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -67,11 +70,17 @@ def base_quality(a):
 
 
 def main():
+    import incremental as INC
     A = json.load(open(ROOT + '/content/catalogue/_assets.json'))
+    # new or changed products only, unless --all: a product the owner has
+    # reviewed keeps the rating it was reviewed with
+    cands = [pid for pid, a in sorted(A.items())
+             if a.get('asset_path') and a['asset_type'].startswith('cutout')]
+    todo, fp = INC.select('asset_quality', cands)
+    INC.report('asset_quality', todo, cands)
     n = 0
-    for pid, a in sorted(A.items()):
-        if not a.get('asset_path') or not a['asset_type'].startswith('cutout'):
-            continue
+    for pid in todo:
+        a = A[pid]
         s = skin_share(ROOT + '/' + a['asset_path'])
         fill = alpha_fill(ROOT + '/' + a['asset_path'])
         a['alpha_fill'] = round(fill, 3)
@@ -88,6 +97,7 @@ def main():
             a['note'] += '; rectangular (%d%% of its own box) — a page panel, not a piece' % round(fill * 100)
             n += 1
     json.dump(A, open(ROOT + '/content/catalogue/_assets.json', 'w'), indent=1)
+    INC.mark('asset_quality', todo, fp)
     print('marked weak:', n)
 
 

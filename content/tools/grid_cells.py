@@ -9,7 +9,7 @@ cleanly from the page — usually four of nine. Those four are enough to say
 where the lattice is: the column centres, the row centres and the cell pitch
 all follow, and the missing cells are the lattice positions that hold content.
 
-  python3 content/tools/grid_cells.py [--limit N] [--redo]
+  python3 content/tools/grid_cells.py [--limit N] [--all]
 
 Writes content/catalogue/_grid_cells.json and one JPEG and cut-out per cell into
 content/catalogue/review/. Originals are never touched, and the grid's own
@@ -206,7 +206,9 @@ def slot_from(text):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--limit', type=int, default=0)
-    ap.add_argument('--redo', action='store_true')
+    ap.add_argument('--redo', action='store_true',
+                    help='cut every grid again, including reviewed ones')
+    ap.add_argument('--all', dest='redo', action='store_true', help='same as --redo')
     args = ap.parse_args()
     import csv
     review = json.load(open(CAT + '/_review_boxes.json'))
@@ -215,6 +217,25 @@ def main():
         out = {} if args.redo else json.load(open(DEST))
     except (FileNotFoundError, json.JSONDecodeError):
         out = {}
+    # a page the viewing pass typed as a listing grid but where the strict
+    # detector found no cells gets the relaxed one — for new or changed
+    # products only (incremental.py), so no reviewed grid grows new cells
+    import incremental as INC
+    import build_review_images as BR
+    grids = [pid for pid in sorted(review) if rows.get(pid, {}).get('shot_type') == 'listing grid']
+    fresh, fp = INC.select('grid_cells', grids, args.redo)
+    relaxed = 0
+    for pid in fresh:
+        for e in review[pid].get('images') or []:
+            if e and 'error' not in e and not e.get('suggested') and os.path.exists(f"{CAT}/{e['path']}"):
+                with Image.open(f"{CAT}/{e['path']}") as f:
+                    e['suggested'] = BR.grid_cells(f, min_cells=2, strict=False)
+                if e['suggested']:
+                    e['suggested_by'] = 'relaxed: typed a listing grid by the viewing pass'
+                    relaxed += 1
+    if relaxed:
+        json.dump(review, open(CAT + '/_review_boxes.json', 'w'), indent=1)
+    print('grid screenshots given cells by the relaxed detector:', relaxed)
     jobs = []
     for pid, rec in sorted(review.items()):
         if rows.get(pid, {}).get('shot_type') != 'listing grid':
@@ -271,6 +292,8 @@ def main():
             json.dump(out, open(DEST, 'w'), indent=1)
             print(f'  {k}/{len(jobs)}', flush=True)
     json.dump(out, open(DEST, 'w'), indent=1)
+    if not args.limit:
+        INC.mark('grid_cells', fresh, fp)
     cells = [c for v in out.values() for c in v.get('cells', [])]
     print(f'grids: {len(out)}; cells: {len(cells)} '
           f'({sum(1 for c in cells if c.get("inferred"))} filled in from the lattice)')
