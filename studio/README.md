@@ -46,6 +46,40 @@ which is the flat lay wherever there is one, and the colours are read from it.
 another picture and keeps where the piece sits and how big it is; the info file
 records which was used.
 
+**One picture, one garment.** Clean is not the same as single: a fan of five
+colourways laid over each other is one connected piece, clear of the frame, with
+no text in it. `content/tools/shelf_checks.py` measures the shelf picture of every
+row and marks it `several` when it is a listing-grid page, a style's all-colours
+photo, a cut-out in three or more separate pieces (two, where a pair is not the
+garment), or three or more separate colour regions with no skin in the picture.
+Those rows are off the shelf and back in Review — taking one whole no longer
+counts as a decision; a box you draw does — and **Several garments** in Review
+groups them under the row that owns the picture, whose card has Add box.
+
+**Duplicates** are marked, never deleted. The same script compares rows of the
+same brand and slot by the picture itself — silhouette, lightness structure and
+the garment's median colour (dE2000 ≤ 3) — because a colourway split that copied
+its parent's picture carries colour fields that disagree with it. One row in each
+group is the keeper (a real photo over a recolour, then the cleaner cut, then the
+one with a name and a price); the others carry `duplicate_of` and
+`duplicate_cause` and are hidden from the shelf. **Duplicates** in Review shows
+each beside its keeper; **Not a duplicate** puts one back and travels in
+`asset-choices.json` as `not_duplicate`.
+
+**The tile is what a tap places.** Both read `shelfView()` in `data.js`: the
+picture picked with the badge, else your choice (this browser's, then the
+catalogue's), else the cut-out. The built thumbnail is shown only while it is a
+picture of that same view; a choice made since the last rebuild is cut live from
+the picture itself.
+
+**Proportions come from pixels.** A piece's aspect is measured on the decoded
+image it shows (`pixelAspect()` in `model.js`) when it is placed, when Other
+picture switches it, when a saved board or an opened file loads, and again at
+export, where the drawing takes the size from the pixels it draws. Stored picture
+sizes and thumbnails are never trusted for it. A framed picture keeps its own
+proportions inside the mat. Resizing changes the width and the height together;
+there is no one-sided stretch.
+
 A **listing grid** is a page of a dozen products, so each of its cells is now a
 product of its own, derived from the grid, with the cell's own photograph,
 cut-out and colours, and whatever its caption gave: name, section, price, fit
@@ -129,7 +163,10 @@ mat, corner radius. It is saved with the board and remembered for the next.
 
 - A vertical swipe on the shelf scrolls it.
 - A tap adds the piece to the middle of the canvas, each new one a little
-  further along.
+  further along. One gesture adds one piece: only the first finger counts,
+  the gesture's id is spent the moment it places, and the placement happens
+  in the same turn as the finger lifting, never after an image has loaded.
+  The picture badge on a tile only switches pictures.
 - A long press (about 300 ms) or a mostly sideways drag picks the piece up;
   it lands where you let go.
 - On the canvas, two fingers on the selected piece resize and rotate it. The
@@ -160,6 +197,10 @@ node studio/test/e2e.mjs         # headless Chromium, mouse: load, filter, drag,
 node studio/test/e2e-touch.mjs   # headless Chromium, iPad touch profile via CDP: swipe, tap,
                                  # long press, sideways drag, pinch, categories, review, frame,
                                  # adjust on any image, multi-box split
+node studio/test/e2e-fixes.mjs   # iPad touch profile: proportions of a tall narrow and a
+                                 # wide piece in the model, on the canvas and in the PNG;
+                                 # one gesture = one piece; tile = placement; several
+                                 # garments and duplicates in Review
 ```
 
 Playwright's WebKit is not installable in this environment (the browser

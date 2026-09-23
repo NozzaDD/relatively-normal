@@ -5,13 +5,13 @@
 
 import { createStaticSource, indexById, indexInspiration, emptyFilters,
   filterProducts, onShelf, effectiveChoice, isReviewed, derivedProducts,
-  WEIGHT_LABELS, FORMALITY_LABELS, isDetail, applySlots, SLOT_PICK } from './data.js';
+  WEIGHT_LABELS, FORMALITY_LABELS, isDetail, applySlots, SLOT_PICK, shelfView, sameView,
+  isSeveral } from './data.js';
 import * as M from './model.js';
-import { metrics, isTile } from './render.js';
+import { metrics, isTile, matOf } from './render.js';
 import { rankByLook } from './colour.js';
 import * as X from './export.js';
-import { createReview, loadChoices, saveChoices, choicesFile, choiceBox, choiceBase,
-  applyCrop, migrateChoices } from './review.js';
+import { createReview, loadChoices, saveChoices, choicesFile, applyCrop, migrateChoices } from './review.js';
 
 const $ = (id) => document.getElementById(id);
 const STORE = 'rn.studio.board.v2';
@@ -168,21 +168,23 @@ function renderShelf() {
     img.alt = p.garment_type || p.product_id;
     const pics = X_pictures(p);
     const shown = S.shelfPicture[p.product_id];
-    if (p.thumb && shown === undefined) {
+    // The tile shows exactly what a tap places: both read shelfView. The built
+    // thumbnail is used only while it is a picture of that same view.
+    const view = shelfView(p, S.choices, shown);
+    img.dataset.view = JSON.stringify(view);
+    if (p.thumb && sameView(view, shelfView(p, null))) {
       img.src = S.source.thumbUrl(p);
       cell.appendChild(img);
-    } else if (shown !== undefined) {
-      // the stylist has flipped this one to another of its pictures
-      img.src = S.source.wholeUrl(p, shown) || S.source.fullUrl(p, shown);
+    } else if (!view.crop) {
+      img.src = X.elementUrl(S.source, p, view);
       cell.appendChild(img);
     } else {
-      // no thumbnail file yet: show the crop straight from the screenshot
+      // a crop the thumbnail does not show yet: cut it from the picture itself
       const wrap = document.createElement('div');
       wrap.className = 'cropwrap';
-      img.src = p.base === 'whole' ? (S.source.wholeUrl(p, p.image || 0) || S.source.fullUrl(p, p.image || 0))
-        : S.source.fullUrl(p, p.image || 0);
-      // p.full already points at whichever image the box was drawn on
-      img.onload = () => applyCrop(img, p.custom_box || [0, 0, 1, 1], cell.clientWidth, cell.clientHeight - 18, p.full.w, p.full.h);
+      img.src = X.elementUrl(S.source, p, view);
+      img.onload = () => applyCrop(img, view.crop, cell.clientWidth, cell.clientHeight - 18,
+        img.naturalWidth, img.naturalHeight);
       wrap.appendChild(img);
       cell.appendChild(wrap);
     }
@@ -200,7 +202,9 @@ function renderShelf() {
       b.className = 'pic-flip';
       b.dataset.pic = p.product_id;
       b.title = 'Show another picture of this product';
-      b.textContent = `${(shown ?? p.primary ?? 0) + 1}/${pics.length}`;
+      // 1 is the shelf's own picture; the others are the product's pictures
+      const k = shown === undefined ? 0 : pics.findIndex((q) => q.i === shown) + 1;
+      b.textContent = `${k + 1}/${pics.length + 1}`;
       cell.appendChild(b);
     }
     if (flag) {
@@ -219,7 +223,8 @@ function renderShelf() {
 }
 
 function renderReviewBadge() {
-  const pending = S.products.filter((p) => !p.clean && p.full && !isReviewed(p, S.choices)).length;
+  const pending = S.products.filter((p) => (!p.clean || isSeveral(p, S.choices)) && p.full
+    && !p.parent_id && !isReviewed(p, S.choices)).length;
   $('reviewBadge').textContent = pending ? String(pending) : '';
 }
 
@@ -321,13 +326,16 @@ function renderBoard() {
     d.style.left = `${el.x * 100}%`;
     d.style.top = `${el.y * 100}%`;
     d.style.width = `${el.w * 100}%`;
-    d.style.aspectRatio = String(el.aspect || 1);
+    d.style.aspectRatio = boxRatio(el, W, framed, m);
     d.style.zIndex = String(el.z);
     d.style.transform = `translate(-50%,-50%) rotate(${el.rot || 0}deg) scaleX(${el.flip ? -1 : 1})`;
     if (framed) frameStyles(d, m);
     const img = document.createElement('img');
     img.alt = '';
     img.draggable = false;
+    // the proportions come from the pixels: once the picture is in, its own
+    // size corrects whatever aspect the element carried
+    img.addEventListener('load', () => syncAspect(el, img, d));
     if (el.crop && p) {
       // a crop of the full photo: the image sits inside a clipping box
       const wrap = document.createElement('div');
@@ -409,6 +417,37 @@ function renderBoard() {
   autosave();
 }
 
+/** CSS aspect-ratio of an element's box: its picture's, plus the mat when framed. */
+function boxRatio(el, W, framed, m) {
+  const b = M.elementBox(el, W, W, matOf(framed, S.board.frame, m));
+  return `${b.w} / ${b.h}`;
+}
+
+/**
+ * Make an element's aspect the aspect of the picture it shows, measured on the
+ * loaded image. Placing, Other picture, a restored board and an opened file
+ * all pass through here, so no stored number can stretch a piece.
+ */
+function syncAspect(el, img, d) {
+  const a = M.pixelAspect(img.naturalWidth, img.naturalHeight, el.crop);
+  if (!a || Math.abs(a - (el.aspect || 1)) / a < 0.002) return;
+  el.aspect = a;
+  const st = $('stage');
+  const p = el.kind === 'product' ? S.productsById[el.product_id] : null;
+  const framed = isTile(el.kind, p?.asset_type, el.variant, el.base);
+  if (d && d.isConnected) d.style.aspectRatio = boxRatio(el, st.clientWidth, framed, metrics(st.clientWidth, st.clientHeight));
+  autosave();
+}
+
+/** Give every element the aspect of its decoded image (the export path). */
+function syncAspects(images) {
+  for (const el of S.board.elements) {
+    const img = images[el.uid];
+    const a = img && M.pixelAspect(img.naturalWidth || img.width, img.naturalHeight || img.height, el.crop);
+    if (a) el.aspect = a;
+  }
+}
+
 function addHandles(d, uid) {
   for (const k of ['resize', 'rotate']) {
     const h = document.createElement('div');
@@ -451,25 +490,25 @@ async function aspectOf(src) {
   } catch (e) { return 1; }
 }
 
-/** What the shelf places for a product: its cut-out, or the crop she chose. */
 /**
  * Show a piece with another of its pictures, keeping where it sits and how big
  * it is. A product page that held a flat lay and a shot on the model is two
  * pictures of one thing; which one belongs on the board is a styling decision,
- * not a cataloguing one.
+ * not a cataloguing one. The cycle is the shelf badge's: the shelf's own
+ * picture first, then each picture of the product.
  */
 function nextPicture(el) {
   const p = S.productsById[el.product_id];
   const pics = X_pictures(p);
   if (!pics.length) return;
-  const at = pics.findIndex((q) => q.i === (el.image || 0));
-  const next = pics[(at + 1 + pics.length) % pics.length];
-  el.image = next.i;
-  el.base = next.entry.whole ? 'whole' : 'photo';
-  el.variant = next.entry.whole ? 'whole' : 'full';
-  el.crop = [0, 0, 1, 1];
-  const a = M.shownAspect(p, el.variant, el.crop, el.image, el.base);
-  if (a) el.aspect = a;                    // the width the stylist set is kept
+  const at = el.variant === 'cutout' || el.picture === undefined ? 0
+    : pics.findIndex((q) => q.i === el.picture) + 1;
+  const k = (at + 1) % (pics.length + 1);
+  const view = k === 0 ? shelfView(p, S.choices) : shelfView(p, S.choices, pics[k - 1].i);
+  Object.assign(el, view, { picture: k === 0 ? undefined : pics[k - 1].i });
+  // the width the stylist set is kept; the height follows the new picture's
+  // pixels as soon as it has loaded (syncAspect)
+  el.aspect = M.shownAspect(p, el.variant, el.crop, el.image, el.base) || el.aspect;
 }
 
 /**
@@ -513,50 +552,53 @@ function renderPieceSlots() {
 function showPictureButton(uid) {
   const el = uid ? M.byId(S.board, uid) : null;
   $('elPicture').hidden = !(el && el.kind === 'product'
-    && X_pictures(S.productsById[el.product_id]).length > 1);
+    && X_pictures(S.productsById[el.product_id]).length > 0);
 }
 
+// Every picture of a product except fabric close-ups and page text, when
+// there is more than one of them to switch between.
 const X_pictures = (p) => {
-  const all = (p && p.images) || [];
-  const keep = all.map((e, i) => ({ i, type: e.type || 'whole page', entry: e }))
+  const keep = ((p && p.images) || []).map((e, i) => ({ i, type: e.type || 'whole page', entry: e }))
     .filter((x) => !isDetail(x.entry));
   return keep.length > 1 ? keep : [];
 };
 
+/** What a tap places: exactly what the tile shows (shelfView, one reading). */
 function placement(p) {
-  const c = effectiveChoice(p, S.choices);
-  const box = choiceBox(p, c);
-  const image = (c && c.image) || p.image || 0;
-  const base = c ? choiceBase(c) : 'photo';
-  if (box) {
-    return { variant: c.choice, crop: box, image, base,
-      aspect: M.shownAspect(p, c.choice, box, image, base) };
-  }
-  // a whole cut-out with no box is placed as it is, like the catalogue's own
-  if (c && c.choice === 'whole') {
-    return { variant: 'whole', crop: [0, 0, 1, 1], image, base: 'whole',
-      aspect: M.shownAspect(p, 'whole', [0, 0, 1, 1], image, 'whole') };
-  }
-  return { variant: 'cutout', crop: null, image: 0, base: 'photo', aspect: null };
+  return shelfView(p, S.choices, S.shelfPicture[p.product_id]);
 }
 
-async function placeProduct(pid, x, y) {
+/** The aspect of the tile's picture, if the tile has it decoded. A first guess. */
+function tileAspect(pid, view) {
+  const img = document.querySelector(`#grid .cell[data-pid="${CSS.escape(pid)}"] img`);
+  if (!img || !img.naturalWidth || img.dataset.view !== JSON.stringify(view)) return null;
+  return M.pixelAspect(img.naturalWidth, img.naturalHeight, img.closest('.cropwrap') ? view.crop : null);
+}
+
+/**
+ * Place a piece. Synchronous: the piece is on the board in the same turn as
+ * the gesture that asked for it, so nothing can arrive while a placement is
+ * still waiting on an image. Its aspect starts as the best number to hand and
+ * is then set from the pixels of the picture it shows (syncAspect).
+ */
+function placeProduct(pid, x, y) {
   const p = S.productsById[pid];
-  if (!p) return;
+  if (!p) return null;
   M.commit(S.history, S.board);
   const pl = placement(p);
-  const aspect = pl.aspect || await aspectOf(S.source.thumbUrl(p));
+  const aspect = tileAspect(pid, pl) || M.shownAspect(p, pl.variant, pl.crop, pl.image, pl.base) || 1;
+  const pic = S.shelfPicture[pid];
   const el = M.addElement(S.board, {
     kind: 'product', product_id: pid, x: clamp01(x), y: clamp01(y),
     w: defaultWidth(p.slot), aspect, variant: pl.variant, crop: pl.crop, image: pl.image,
-    base: pl.base,
+    base: pl.base, ...(pic !== undefined ? { picture: pic } : {}),
   });
   renderBoard();
   return el;
 }
 
 /** A tap adds the piece to the middle, each new one a little further along. */
-async function placeByTap(pid) {
+function placeByTap(pid) {
   const k = S.taps++ % 6;
   return placeProduct(pid, 0.5 + (k - 2.5) * 0.035, 0.5 + (k - 2.5) * 0.03);
 }
@@ -593,13 +635,24 @@ function stagePoint(ev) {
 
 // The shelf: a vertical swipe scrolls (the browser's pan-y), a tap adds to the
 // middle, a long press or a mostly sideways drag picks the piece up.
+//
+// One gesture places at most one piece. A gesture is one primary pointer from
+// down to up; it carries an id, and the id is spent the moment it places.
+// A second finger, a repeated up, a move storm or the picture badge cannot
+// place anything.
+let gestureSeq = 0;
+const spent = new Set();
+
 function onShelfDown(ev) {
+  if (!ev.isPrimary) return;                    // a second finger or a palm
+  if (ev.target.closest('[data-pic]')) return;  // the badge switches pictures, it never places
   const cell = ev.target.closest('.cell');
   if (!cell) return;
   const pid = cell.dataset.pid;
   if (!S.productsById[pid]) return;
+  if (drag && drag.type === 'shelf') endShelfGesture();   // a gesture that never ended
   drag = { type: 'shelf', pid, cell, x0: ev.clientX, y0: ev.clientY, lifted: false,
-    pointerId: ev.pointerId, timer: 0 };
+    pointerId: ev.pointerId, timer: 0, gid: ++gestureSeq };
   drag.timer = setTimeout(() => { if (drag && drag.type === 'shelf' && !drag.lifted) lift(ev); }, LONG_PRESS_MS);
 }
 
@@ -622,7 +675,7 @@ function lift(ev) {
 }
 
 function onShelfMove(ev) {
-  if (!drag || drag.type !== 'shelf') return;
+  if (!drag || drag.type !== 'shelf' || ev.pointerId !== drag.pointerId) return;
   if (!drag.lifted) {
     const dx = ev.clientX - drag.x0, dy = ev.clientY - drag.y0;
     if (Math.abs(dx) > SIDEWAYS_PX && Math.abs(dx) > Math.abs(dy) * 1.2) lift(ev);
@@ -635,30 +688,33 @@ function onShelfMove(ev) {
   g.style.top = `${ev.clientY}px`;
 }
 
-async function onShelfUp(ev) {
-  if (!drag || drag.type !== 'shelf') return;
+function endShelfGesture() {
   const d = drag;
   drag = null;
   clearTimeout(d.timer);
   d.cell.classList.remove('lifting');
   $('drag').hidden = true;
+  return d;
+}
+
+function onShelfUp(ev) {
+  if (!drag || drag.type !== 'shelf' || ev.pointerId !== drag.pointerId) return;
+  const d = endShelfGesture();
+  if (spent.has(d.gid)) return;
   if (d.lifted) {
     const r = $('stage').getBoundingClientRect();
     const inside = ev.clientX >= r.left && ev.clientX <= r.right
       && ev.clientY >= r.top && ev.clientY <= r.bottom;
-    if (inside) await placeProduct(d.pid, (ev.clientX - r.left) / r.width, (ev.clientY - r.top) / r.height);
+    if (inside) { spent.add(d.gid); placeProduct(d.pid, (ev.clientX - r.left) / r.width, (ev.clientY - r.top) / r.height); }
   } else if (!d.scrolling) {
-    await placeByTap(d.pid);
+    spent.add(d.gid);
+    placeByTap(d.pid);
   }
 }
 
-function onShelfCancel() {
-  if (drag && drag.type === 'shelf') {           // the browser took the swipe: a scroll
-    clearTimeout(drag.timer);
-    drag.cell.classList.remove('lifting');
-    drag = null;
-    $('drag').hidden = true;
-  }
+function onShelfCancel(ev) {
+  // the browser took the swipe: a scroll
+  if (drag && drag.type === 'shelf' && (!ev || ev.pointerId === drag.pointerId)) endShelfGesture();
 }
 
 function onStageDown(ev) {
@@ -731,6 +787,11 @@ function applyElementStyle(el) {
   d.style.top = `${el.y * 100}%`;
   d.style.width = `${el.w * 100}%`;
   d.style.transform = `translate(-50%,-50%) rotate(${el.rot || 0}deg) scaleX(${el.flip ? -1 : 1})`;
+  // the mat is a fixed width, so a framed box's ratio moves as it is resized
+  const st = $('stage');
+  const p = el.kind === 'product' ? S.productsById[el.product_id] : null;
+  d.style.aspectRatio = boxRatio(el, st.clientWidth, isTile(el.kind, p?.asset_type, el.variant, el.base),
+    metrics(st.clientWidth, st.clientHeight));
 }
 
 function onStageUp(ev) {
@@ -769,9 +830,10 @@ async function save() {
   btn.textContent = 'Saving…';
   try {
     const date = new Date();
+    const images = await X.loadBoardImages(S.board, S.source, S.productsById, S.inspById);
+    syncAspects(images);                 // the info file records what is drawn
     const info = X.buildInfo(S.board, S.productsById, S.inspById, { date });
     const name = info.slug;
-    const images = await X.loadBoardImages(S.board, S.source, S.productsById, S.inspById);
     const canvas = await X.renderBoardCanvas(S.board, S.productsById, images, 1);
     let png = await X.canvasToBlob(canvas, 'image/png');
     try {
@@ -959,8 +1021,12 @@ function wire() {
     if (!p) return;
     const pics = X_pictures(p);
     if (!pics.length) return;
-    const at = pics.findIndex((q) => q.i === (S.shelfPicture[p.product_id] ?? p.primary ?? 0));
-    S.shelfPicture[p.product_id] = pics[(at + 1 + pics.length) % pics.length].i;
+    // the shelf's own picture, then each picture in turn, then back
+    const cur = S.shelfPicture[p.product_id];
+    const at = cur === undefined ? 0 : pics.findIndex((q) => q.i === cur) + 1;
+    const k = (at + 1) % (pics.length + 1);
+    if (k === 0) delete S.shelfPicture[p.product_id];
+    else S.shelfPicture[p.product_id] = pics[k - 1].i;
     renderShelf();
   });
 
@@ -1097,7 +1163,9 @@ function toast(msg, ms = 2600) {
 Object.assign(S, { placeProduct, placeByTap, placeInspiration, renderShelf, renderBoard, save, openInfo,
   setSlot, setView, exportChoices, saveChoices: () => saveChoices(S.choices),
   buildInfo: () => X.buildInfo(S.board, S.productsById, S.inspById),
+  placement, nextPicture,
   renderCanvas: async () => {
     const images = await X.loadBoardImages(S.board, S.source, S.productsById, S.inspById);
+    syncAspects(images);
     return X.renderBoardCanvas(S.board, S.productsById, images, 1);
   } });

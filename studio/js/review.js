@@ -8,7 +8,7 @@
 
 import { cropLayout, SLOT_ORDER } from './model.js';
 import { isReviewed, effectiveChoice, imageEntry, splitId, productVersions,
-  SLOT_PICK } from './data.js';
+  SLOT_PICK, choiceBox, choiceBase, isSeveral, isDuplicate } from './data.js';
 
 /** Every screenshot of a product the desk can draw on, best first. */
 export function productImages(p) {
@@ -87,32 +87,16 @@ export function choicesFile(choices) {
       ...(s.base && s.base !== 'photo' ? { base: s.base } : {}) }));
     if (splits.length) e = { ...(e || {}), splits };
     if (c.slot) e = { ...(e || {}), slot: c.slot };
+    if (c.notDuplicate) e = { ...(e || {}), not_duplicate: true };
     if (e) out[pid] = e;
   }
   return { kind: 'relatively-normal.asset-choices', version: 1,
     exported: new Date().toISOString().slice(0, 10), choices: out };
 }
 
-/**
- * The box a choice means, as [x, y, w, h] of its base image — or null when the
- * version is a whole image with no crop (the cut-out, or a whole cut-out).
- */
-export function choiceBox(p, c) {
-  if (!c || !c.choice || c.choice === 'cutout' || c.choice === 'whole') return null;
-  const e = imageEntry(p, c.image || 0) || p.full;
-  if (!e) return null;
-  if (c.choice === 'full') return [0, 0, 1, 1];
-  if (c.choice === 'custom') return c.box || null;
-  return e[c.choice] || p.boxes?.[c.choice] || null;
-}
-
-/** Which image a choice is drawn on: the photo, the whole cut-out, or the asset. */
-export function choiceBase(c) {
-  if (!c || !c.choice) return 'asset';
-  if (c.choice === 'cutout') return 'asset';
-  if (c.choice === 'whole') return 'whole';
-  return c.base === 'whole' ? 'whole' : 'photo';
-}
+// choiceBox and choiceBase live in data.js now, next to shelfView, which the
+// shelf tile and the canvas both read.
+export { choiceBox, choiceBase };
 
 /** The URL of a choice's base image. */
 export function baseUrl(source, p, c) {
@@ -149,10 +133,119 @@ export function applyCrop(img, crop, boxW, boxH, fullW, fullH) {
 export function createReview(api) {
   // api: { source, products(), choices, onChange(), toast() }
   const state = { slot: '', multi: false, noSlot: false, checkSlot: false,
-    cellSel: null, adjusting: null };
+    several: false, dups: false, cellSel: null, adjusting: null };
 
   function pending(list) {
-    return list.filter((p) => !p.clean && p.full && !p.parent_id);
+    // a clean cut-out of several garments is back here: clean is not single
+    return list.filter((p) => (!p.clean || isSeveral(p, api.choices)) && p.full && !p.parent_id);
+  }
+
+  /** A small picture of a row, with a caption, for the grouped views. */
+  function tile(p, caption, cls = '') {
+    const b = document.createElement('div');
+    b.className = 'cellpick ' + cls;
+    const im = document.createElement('img');
+    im.loading = 'lazy';
+    im.src = p.thumb ? api.source.thumbUrl(p) : api.source.assetUrl(p);
+    b.appendChild(im);
+    const t = document.createElement('span');
+    t.className = 'cellcap';
+    t.textContent = caption;
+    b.appendChild(t);
+    b.title = `${p.product_id} · ${[p.brand, p.product_name, p.price].filter(Boolean).join(' · ')}`;
+    return b;
+  }
+
+  /**
+   * Several garments in one picture, grouped under the row that owns the
+   * picture — the grid, or the product a split or a recolour came from — so a
+   * whole group is cut up once, with Add box on that row's card.
+   */
+  function renderSeveral() {
+    const all = api.products();
+    const byId = Object.fromEntries(all.map((p) => [p.product_id, p]));
+    const rows = all.filter((p) => p.several && p.several.length && !p.hidden);
+    const groups = {};
+    for (const p of rows) (groups[p.several_group || p.product_id] ||= []).push(p);
+    const left = rows.filter((p) => isSeveral(p, api.choices) && !isReviewed(p, api.choices)).length;
+    $('reviewProgress').textContent = `${rows.length} rows show several garments in one picture, ${left} still to cut`;
+    $('reviewSlots').replaceChildren();
+    const cards = $('reviewCards');
+    cards.replaceChildren();
+    for (const [g, members] of Object.entries(groups)) {
+      const root = byId[g];
+      if (root && root.full) cards.appendChild(card(root));
+      const wrap = document.createElement('div');
+      wrap.className = 'cellgroup several';
+      wrap.dataset.group = g;
+      const head = document.createElement('div');
+      head.className = 'rhead';
+      const who = document.createElement('span');
+      who.className = 'rwho';
+      who.textContent = `${members.length} row${members.length === 1 ? '' : 's'} with this picture of several garments`
+        + (root && root.full ? ' — cut them with Add box on the card above' : '');
+      head.appendChild(who);
+      wrap.appendChild(head);
+      const row = document.createElement('div');
+      row.className = 'cells';
+      for (const p of members) {
+        const t = tile(p, `${p.product_id} · ${p.several.map((w) => w.split(':')[0]).join(', ')}`,
+          isSeveral(p, api.choices) ? '' : 'chosen');
+        t.dataset.pid = p.product_id;
+        row.appendChild(t);
+      }
+      wrap.appendChild(row);
+      const why = document.createElement('div');
+      why.className = 'why';
+      why.textContent = [...new Set(members.flatMap((p) => p.several))].join(' · ');
+      wrap.appendChild(why);
+      cards.appendChild(wrap);
+    }
+  }
+
+  /**
+   * Duplicates beside their keepers. Nothing was deleted: a duplicate is only
+   * hidden from the shelf, and "Not a duplicate" puts it back.
+   */
+  function renderDuplicates() {
+    const all = api.products();
+    const byId = Object.fromEntries(all.map((p) => [p.product_id, p]));
+    const rows = all.filter((p) => p.duplicate_of);
+    const released = rows.filter((p) => !isDuplicate(p, api.choices)).length;
+    $('reviewProgress').textContent = `${rows.length} marked as duplicates`
+      + (released ? `, ${released} put back as not duplicates` : '');
+    $('reviewSlots').replaceChildren();
+    const cards = $('reviewCards');
+    cards.replaceChildren();
+    const groups = {};
+    for (const p of rows) (groups[p.duplicate_of] ||= []).push(p);
+    for (const [keep, members] of Object.entries(groups)) {
+      const wrap = document.createElement('div');
+      wrap.className = 'cellgroup dupgroup';
+      wrap.dataset.keeper = keep;
+      const row = document.createElement('div');
+      row.className = 'cells';
+      if (byId[keep]) row.appendChild(tile(byId[keep], `keeper · ${keep}`, 'keeper'));
+      for (const p of members) {
+        const dup = isDuplicate(p, api.choices);
+        const t = tile(p, `${p.product_id} · ${p.duplicate_cause}`, dup ? 'dup' : 'chosen');
+        t.dataset.pid = p.product_id;
+        const b = document.createElement('button');
+        b.className = 'ghost small';
+        b.dataset.act = 'notdup';
+        b.textContent = dup ? 'Not a duplicate' : 'Is a duplicate';
+        b.addEventListener('click', () => {
+          const cur = api.choices[p.product_id] || {};
+          api.choices[p.product_id] = { ...cur, notDuplicate: dup };
+          if (!dup) delete api.choices[p.product_id].notDuplicate;
+          saveChoices(api.choices); api.onChange(); render();
+        });
+        t.appendChild(b);
+        row.appendChild(t);
+      }
+      wrap.appendChild(row);
+      cards.appendChild(wrap);
+    }
   }
 
   /** Does this product match whichever slot filters are on? */
@@ -174,6 +267,8 @@ export function createReview(api) {
   }
 
   function render() {
+    if (state.dups) { renderDuplicates(); return; }
+    if (state.several) { renderSeveral(); return; }
     const all = pending(api.products());
     let list = state.slot ? all.filter((p) => p.slot === state.slot) : all;
     if (state.multi) list = list.filter((p) => productImages(p).length > 1);
@@ -254,6 +349,7 @@ export function createReview(api) {
     for (const c of cells) {
       const b = document.createElement('button');
       b.className = 'cellpick' + (isReviewed(c, api.choices) ? ' chosen' : '');
+      b.dataset.pid = c.product_id;
       const im = document.createElement('img');
       im.loading = 'lazy';
       im.src = api.source.assetUrl(c);
@@ -366,6 +462,13 @@ export function createReview(api) {
     cnt.textContent = `${nimg} photo${nimg === 1 ? '' : 's'}`;
     head.append(who, cnt);
     el.appendChild(head);
+    if (isSeveral(p, api.choices)) {
+      const w = document.createElement('div');
+      w.className = 'why several';
+      w.textContent = `Several garments in this picture (${p.several.map((x) => x.split(':')[0]).join(', ')})`
+        + ' — not a single product. Adjust box, then Add box, one per garment.';
+      el.appendChild(w);
+    }
     const row = document.createElement('div');
     row.className = 'versions';
     const kinds = [['cutout', 'cut-out'], ['item', 'item box'], ['person', 'person box'], ['full', 'full']];
@@ -853,7 +956,8 @@ export function createReview(api) {
     showImage();
   }
 
-  for (const [id, key] of [['rMulti', 'multi'], ['rNoSlot', 'noSlot'], ['rCheckSlot', 'checkSlot']]) {
+  for (const [id, key] of [['rMulti', 'multi'], ['rNoSlot', 'noSlot'], ['rCheckSlot', 'checkSlot'],
+    ['rSeveral', 'several'], ['rDups', 'dups']]) {
     document.getElementById(id).addEventListener('change', (ev) => {
       state[key] = ev.target.checked;
       render();
