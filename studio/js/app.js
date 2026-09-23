@@ -5,7 +5,7 @@
 
 import { createStaticSource, indexById, indexInspiration, emptyFilters,
   filterProducts, onShelf, effectiveChoice, isReviewed, derivedProducts,
-  WEIGHT_LABELS, FORMALITY_LABELS, isDetail } from './data.js';
+  WEIGHT_LABELS, FORMALITY_LABELS, isDetail, applySlots, SLOT_PICK } from './data.js';
 import * as M from './model.js';
 import { metrics, isTile } from './render.js';
 import { rankByLook } from './colour.js';
@@ -75,6 +75,7 @@ async function init() {
 function refreshDerived() {
   S.products = S.products.filter((p) => !p.local);
   S.products.push(...derivedProducts(S.products, S.choices));
+  applySlots(S.products, S.choices);        // a slot set here shows everywhere at once
   S.productsById = indexById(S.products);
 }
 
@@ -404,6 +405,7 @@ function renderBoard() {
   renderHelpers();
   $('elementBar').hidden = !S.selected;
   showPictureButton(S.selected);
+  renderPieceSlots();
   autosave();
 }
 
@@ -468,6 +470,44 @@ function nextPicture(el) {
   el.crop = [0, 0, 1, 1];
   const a = M.shownAspect(p, el.variant, el.crop, el.image, el.base);
   if (a) el.aspect = a;                    // the width the stylist set is kept
+}
+
+/**
+ * Set a piece's slot from the desk. It goes into the choices, so it travels in
+ * asset-choices.json and the build writes it to the catalogue as `given` — the
+ * stylist looking at the garment is a better authority than anything inferred
+ * from a caption or inherited from the row a product was split out of.
+ */
+function setPieceSlot(pid, slot) {
+  if (!pid || !slot) return;
+  const c = S.choices[pid] || {};
+  S.choices[pid] = { ...c, slot: c.slot === slot ? '' : slot };
+  saveChoices(S.choices);
+  refreshDerived();
+  renderSlotBar(); renderShelf(); renderPieceSlots(); renderHelpers();
+  if (S.review) S.review.render();
+  toast(`${pid} · ${S.choices[pid].slot || 'no slot'}`, 1600);
+}
+
+function renderPieceSlots() {
+  const bar = $('pieceSlots');
+  const el = S.selected ? M.byId(S.board, S.selected) : null;
+  const p = el && el.kind === 'product' ? S.productsById[el.product_id] : null;
+  bar.hidden = !p;
+  if (!p) return;
+  bar.replaceChildren();
+  const lab = document.createElement('span');
+  lab.className = 'hint-inline';
+  lab.textContent = 'slot';
+  bar.appendChild(lab);
+  for (const slot of SLOT_PICK) {
+    const b = document.createElement('button');
+    b.className = 'ghost small' + (p.slot === slot ? ' on' : '');
+    b.dataset.act = 'slot';
+    b.dataset.slot = slot;
+    b.textContent = slot;
+    bar.appendChild(b);
+  }
 }
 
 function showPictureButton(uid) {
@@ -718,6 +758,7 @@ function setSelection(uid) {
   if (d) { d.classList.add('sel'); addHandles(d, uid); }
   $('elementBar').hidden = !uid;
   showPictureButton(uid);
+  renderPieceSlots();
 }
 
 // ------------------------------------------------------------------- save
@@ -901,6 +942,10 @@ function wire() {
     if (act === 'back') M.sendBack(S.board, S.selected);
     if (act === 'flip' && el) el.flip = !el.flip;
     if (act === 'picture' && el) nextPicture(el);
+    if (act === 'slot' && el) {
+      setPieceSlot(el.product_id, ev.target.dataset.slot);
+      return;                                 // the board did not change, the shelf did
+    }
     if (act === 'duplicate') { const d = M.duplicateElement(S.board, S.selected); if (d) S.selected = d.uid; }
     if (act === 'delete') { M.removeElement(S.board, S.selected); S.selected = null; }
     renderBoard();
@@ -917,6 +962,13 @@ function wire() {
     const at = pics.findIndex((q) => q.i === (S.shelfPicture[p.product_id] ?? p.primary ?? 0));
     S.shelfPicture[p.product_id] = pics[(at + 1 + pics.length) % pics.length].i;
     renderShelf();
+  });
+
+  $('pieceSlots').addEventListener('click', (ev) => {
+    const b = ev.target.closest('[data-slot]');
+    if (!b || !S.selected) return;
+    const el = M.byId(S.board, S.selected);
+    if (el && el.kind === 'product') setPieceSlot(el.product_id, b.dataset.slot);
   });
 
   $('title').addEventListener('input', (e) => { S.board.title = e.target.value; renderBoard(); });

@@ -67,6 +67,16 @@ stay findable together, and the note says which row each was split from. The
 slot is the parent's and may describe the parent's garment, so it is worth a
 look.
 
+**The slot is yours to set.** A row of eight buttons — layer, top, bottom,
+dress, shoes, bag, accessory, base — sits on every Review card, on each listing
+cell (tap its label), and under a selected piece on the canvas. What you pick
+goes into `asset-choices.json` and the build writes it to the catalogue as
+`given`, above anything read off a caption or inherited from the row a product
+was split out of. Setting a slot is not a decision about the picture, so it
+never marks a product reviewed. Two filters find the ones that need it: **No
+slot**, and **Slot worth a look** — the rows whose slot came from a listing-grid
+caption or from the product they were split out of.
+
 Review shows each waiting product four ways — the cut-out, a box around the
 item, a box around the whole person, the full photo — and you tap the one you
 want. **Adjust box** lets you draw your own rectangle on the full photo.

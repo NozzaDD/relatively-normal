@@ -833,6 +833,118 @@ ok('a split row is a product, not a piece cut from one', sp.derived === 0, Strin
 ok('the style name is kept on both so they stay linked', sp.sameName > 0, JSON.stringify(sp));
 
 
+
+console.log('\n16. setting the slot from the desk');
+await page.evaluate(() => { localStorage.removeItem('rn.studio.choices.v1'); });
+await page.reload();
+await page.waitForFunction(() => window.__studio?.ready === true, null, { timeout: 20000 });
+await page.evaluate(() => window.__studio.setView('review'));
+await page.waitForTimeout(600);
+const sl0 = await page.evaluate(() => {
+  const c = document.querySelector('#reviewCards .rcard');
+  return { pid: c.dataset.pid, buttons: [...c.querySelectorAll('.rslots button')].map((b) => b.textContent),
+    slot: window.__studio.productsById[c.dataset.pid].slot };
+});
+ok('a Review card offers the eight slots',
+  sl0.buttons.join(' ') === 'layer top bottom dress shoes bag accessory base', sl0.buttons.join(' '));
+const want = sl0.slot === 'dress' ? 'shoes' : 'dress';
+await page.evaluate((w) => {
+  const c = document.querySelector('#reviewCards .rcard');
+  [...c.querySelectorAll('.rslots button')].find((b) => b.textContent === w).click();
+}, want);
+await page.waitForTimeout(300);
+const sl1 = await page.evaluate((pid) => ({
+  choice: window.__studio.choices[pid],
+  live: window.__studio.productsById[pid].slot,
+  conf: window.__studio.productsById[pid].slot_confidence,
+  reviewed: !!(window.__studio.choices[pid] || {}).choice,
+}), sl0.pid);
+ok('picking a slot records it', sl1.choice.slot === want, JSON.stringify(sl1));
+ok('...and the catalogue in memory follows at once', sl1.live === want, JSON.stringify(sl1));
+ok('...as the stylist\'s own, not inherited', sl1.conf === 'given', sl1.conf);
+ok('picking a slot does not decide the picture', sl1.reviewed === false);
+const slotFile = await page.evaluate(async () => {
+  const { choicesFile } = await import('./js/review.js');
+  return choicesFile(window.__studio.choices);
+});
+ok('the slot travels in asset-choices.json', slotFile.choices[sl0.pid].slot === want,
+  JSON.stringify(slotFile.choices[sl0.pid]));
+
+// the two filters
+const filt = await page.evaluate(async () => {
+  const ps = window.__studio.products;
+  const inherited = ps.filter((p) => p.slot_confidence === 'inherited').length;
+  const guessed = ps.filter((p) => p.slot_confidence === 'guessed').length;
+  const none = ps.filter((p) => !p.slot).length;
+  return { inherited, guessed, none };
+});
+ok('the catalogue marks the slots worth a look', filt.inherited > 50 && filt.guessed > 100,
+  JSON.stringify(filt));
+await page.check('#rCheckSlot');
+await page.waitForTimeout(400);
+const onlyCheck = await page.evaluate(() => {
+  const ids = [...document.querySelectorAll('#reviewCards .rcard')].map((c) => c.dataset.pid);
+  const cells = document.querySelectorAll('#reviewCards .cellpick').length;
+  // a listing grid is kept when its CELLS are flagged, which is the point
+  const cellsBy = {};
+  for (const p of window.__studio.products) {
+    if (p.parent_id) (cellsBy[p.parent_id] = cellsBy[p.parent_id] || []).push(p);
+  }
+  return { cards: ids.length, cells,
+    allFlagged: ids.every((i) => ['inherited', 'guessed']
+      .includes(window.__studio.productsById[i].slot_confidence)
+      || (cellsBy[i] || []).some((c) => ['inherited', 'guessed'].includes(c.slot_confidence))) };
+});
+ok('"slot worth a look" shows only rows whose slot, or whose cells\' slots, were inferred',
+  onlyCheck.allFlagged, JSON.stringify(onlyCheck));
+await page.uncheck('#rCheckSlot');
+await page.check('#rNoSlot');
+await page.waitForTimeout(400);
+const onlyNone = await page.evaluate(() => {
+  const cells = [...document.querySelectorAll('#reviewCards .cellpick .cellslot')];
+  return { cells: cells.length, allUnset: cells.every((c) => c.textContent.startsWith('set slot')) };
+});
+ok('"no slot" reaches the grid cells, which is where the gaps are',
+  onlyNone.cells > 50 && onlyNone.allUnset, JSON.stringify(onlyNone));
+// a cell can be given a slot too
+await page.evaluate(() => document.querySelector('#reviewCards .cellpick .cellslot').click());
+await page.waitForTimeout(300);
+const cellRow = await page.evaluate(() => {
+  const rows = [...document.querySelectorAll('#reviewCards .cellgroup .rslots')];
+  if (!rows.length) return null;
+  const b = [...rows[0].querySelectorAll('button')].find((x) => x.textContent === 'top');
+  b.click();
+  return true;
+});
+await page.waitForTimeout(300);
+ok('a grid cell takes a slot the same way', cellRow === true
+  && (await page.evaluate(() => Object.values(window.__studio.choices).some((c) => c.slot === 'top'))));
+await page.uncheck('#rNoSlot');
+
+// and on the canvas
+await page.evaluate(() => window.__studio.setView('grid'));
+await page.waitForTimeout(300);
+const piece = await page.evaluate(async () => {
+  const S = window.__studio;
+  S.board = (await import('./js/model.js')).createBoard('portrait');
+  const el = await S.placeProduct(S.shown[0].product_id, 0.5, 0.5);
+  S.selected = el.uid; S.renderBoard();
+  const bar = document.getElementById('pieceSlots');
+  return { pid: el.product_id, hidden: bar.hidden,
+    buttons: [...bar.querySelectorAll('button')].map((b) => b.textContent) };
+});
+ok('the selected piece offers the slots too', piece.hidden === false
+  && piece.buttons.length === 8, JSON.stringify(piece));
+await page.evaluate(() => {
+  const bar = document.getElementById('pieceSlots');
+  [...bar.querySelectorAll('button')].find((b) => b.textContent === 'bag').click();
+});
+await page.waitForTimeout(300);
+ok('setting it from the canvas records it the same way',
+  await page.evaluate((pid) => (window.__studio.choices[pid] || {}).slot === 'bag'
+    && window.__studio.productsById[pid].slot === 'bag', piece.pid));
+
+
 console.log(`\n${pass} passed, ${fail} failed`);
 if (errors.length) console.log('page errors:\n  ' + errors.slice(0, 6).join('\n  '));
 await browser.close();

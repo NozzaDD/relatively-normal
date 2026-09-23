@@ -163,6 +163,33 @@ export const emptyFilters = () => ({
  * What the stylist decided about a product's image, if anything: the choice
  * made in the browser first, then the one filed in the catalogue.
  */
+/** Every slot the desk can set, in the order the buttons read. */
+export const SLOT_PICK = ['layer', 'top', 'bottom', 'dress', 'shoes', 'bag', 'accessory', 'base'];
+
+/**
+ * The slot a product has right now: the one picked on the desk if there is one,
+ * else the one the catalogue holds. A slot is not a picture decision, so
+ * picking one never marks a product reviewed.
+ */
+export function effectiveSlot(p, local) {
+  const l = local && local[p.product_id];
+  return (l && l.slot) || p.slot || '';
+}
+
+/** Put the desk's slot picks onto the products, so every list sees them. */
+export function applySlots(products, local) {
+  let n = 0;
+  for (const p of products) {
+    const l = local && local[p.product_id];
+    if (l && l.slot && l.slot !== p.slot) {
+      p.slot = l.slot;
+      p.slot_confidence = 'given';
+      n++;
+    }
+  }
+  return n;
+}
+
 export function effectiveChoice(p, local) {
   const l = local && local[p.product_id];
   if (l && (l.hidden || l.choice)) return l;

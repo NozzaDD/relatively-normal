@@ -24,7 +24,10 @@ FIELDS = ['product_id', 'batch_id', 'shop', 'shop_type', 'slot', 'garment_type',
           # a piece the stylist cut out of another product's screenshot
           'parent_id', 'asset_image', 'asset_base',
           # where a brand that was not printed on the page came from
-          'brand_evidence']
+          'brand_evidence',
+          # given = the stylist set it on the desk; inherited = from the product
+          # this row was split out of; guessed = from a listing-grid caption
+          'slot_confidence']
 
 
 def read_rows():
@@ -226,7 +229,8 @@ def grid_rows(by_id, review):
             brand = parent.get('brand', '')
             d.update(product_id=rid, parent_id=pid, n_images=1,
                      image_paths=(parent['image_paths'].split(';') + [''] * 9)[idx],
-                     slot=cap_slot, garment_type=c.get('name', '') or parent.get('garment_type', ''),
+                     slot=cap_slot, slot_confidence='guessed' if cap_slot else '',
+                     garment_type=c.get('name', '') or parent.get('garment_type', ''),
                      shot_type='cell of a listing grid', complete_in_frame='',
                      asset_type='cutout_flat' if c.get('cut') else 'tile',
                      asset_quality='good', asset_path='content/catalogue/' + asset,
@@ -450,6 +454,12 @@ def main():
             shelf='', asset_choice='', asset_box='', recoloured='', recolour_source='',
             parent_id='', asset_image='', asset_base='')
         ch = choices.get(pid)
+        if ch and ch.get('slot'):
+            # the stylist looked at the garment; nothing inferred beats that
+            d['slot'] = ch['slot']
+            d['slot_confidence'] = 'given'
+        elif 'slot and garment type are the parent' in (d.get('notes') or ''):
+            d['slot_confidence'] = 'inherited'
         if ch:
             d['asset_choice'] = ch.get('choice', '')
             d['asset_box'] = ','.join(str(v) for v in ch['box']) if ch.get('box') else ''

@@ -168,6 +168,7 @@ def build_products(rows, review):
             # a cell that looks like a product already filed; never merged
             duplicate_of=n(r.get('validated')) == 'possible duplicate',
             slot=n(r['slot']),
+            slot_confidence=n(r.get('slot_confidence')),
             garment_type=n(r['garment_type']),
             pattern=n(r['pattern']),
             weight=num(r['weight']),

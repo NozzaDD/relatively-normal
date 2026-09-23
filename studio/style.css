@@ -254,7 +254,11 @@ button.on { background: var(--accent); color: #fff; border-color: var(--accent);
 .cellpick.chosen { border-color: var(--accent); }
 .cellpick img { width: 100%; aspect-ratio: 3/4; object-fit: contain; background: var(--ground);
   border-radius: 6px; }
-.cellpick span { font-size: 10px; color: var(--muted); }
+.cellpick .cellslot { font-size: 10px; color: var(--muted); min-height: 0; padding: 1px 5px;
+  border: 1px solid var(--line); border-radius: 999px; background: #fff; max-width: 100%;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cellpick .cellslot.on { background: var(--accent); color: #fff; border-color: var(--accent); }
+.rslots .slotfor { font-size: 11px; color: var(--muted); }
 .cellpick .twin { position: absolute; left: 2px; top: 2px; font-size: 9px; font-style: normal;
   background: #b8860b; color: #fff; border-radius: 999px; padding: 0 4px; }
 .rhead { font-size: 12px; color: var(--muted); margin-bottom: 6px; display: flex; gap: 6px; align-items: baseline; }
@@ -262,6 +266,16 @@ button.on { background: var(--accent); color: #fff; border-color: var(--accent);
 /* the photo count never gets ellipsised away: it is what the filter sorts on */
 .rhead .rphotos { flex: 0 0 auto; margin-left: auto; }
 .rhead .rphotos.many { color: var(--ink); font-weight: 600; }
+/* the slot, set on the card and on the selected piece */
+.rslots { display: flex; gap: 4px; flex-wrap: wrap; align-items: center; margin: 6px 0 0; }
+.rslots button { min-height: 30px; padding: 2px 8px; font-size: 12px; border-radius: 999px; }
+.rslots button.on { background: var(--accent); color: #fff; border-color: var(--accent); }
+.rslots .slotwarn { font-size: 10px; font-style: normal; background: #b8860b; color: #fff;
+  border-radius: 999px; padding: 1px 7px; }
+.piece-slots { gap: 4px; flex-wrap: wrap; }
+.piece-slots button { min-height: 30px; padding: 2px 9px; font-size: 12px; border-radius: 999px; }
+.piece-slots button.on { background: var(--accent); color: #fff; border-color: var(--accent); }
+.piece-slots .hint-inline { font-size: 11px; color: var(--muted); align-self: center; }
 .versions { display: flex; gap: 6px; overflow-x: auto; }
 .version { flex: 0 0 auto; width: 76px; padding: 2px; border: 2px solid transparent; border-radius: 8px; background: none; min-height: 0; display: flex; flex-direction: column; align-items: center; gap: 3px; }
 .version.chosen { border-color: #3a7bd5; }
