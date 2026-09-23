@@ -164,3 +164,34 @@ upgraded), and colours read from the box region by `extract_colours`. The
 - Files are named from the records that own them, never found by matching a
   prefix in the folder: a group that keeps the parent id renames its own later
   pictures, and a prefix scan reads a name another group is about to write.
+
+## Added 23 September 2026 — UNIQLO variants from the swatch circles
+
+| Script | What it does |
+|---|---|
+| `uniqlo_pages.py` | reads every UNIQLO screenshot's buy panel — product name, selected colour as number and name ("03 GREY"), price with currency — the product ID under Description where the screenshot reaches it, and every colour circle under "Colour:", sampled at its centre inside any selection ring. Writes `_uniqlo_pages.json`. |
+| `uniqlo_variants.py` | rewritten. One variant per swatch circle: the style's clean single flat lay (chosen by eye in `STYLES`, measured one piece / clear of the frame / no text) recoloured in CIELAB to the swatch, or — where the all-colours photo has that colour lying alone — the real photo cut out instead. Skips the swatch that is the source's own colour. Writes `_variants.json`, `variants/*.webp` and `sheets/uniqlo-{style}.jpg`. |
+
+- The swatches are pictures of the fabric, and they agree with the flat lays:
+  the swatch nearest each source measured a median dE2000 of about 1 from the
+  source's garment colour. That is what makes them usable as targets.
+- A selected circle is told by the **white gap** inside its ring, not by its
+  size — the median size is wrong when the page has only two circles.
+- The recolour mask leaves out only what sits in the neck (the label) or is
+  big enough to be a trim. Seams and deep folds are recoloured with the rest:
+  left out, they print the source's colour through the new one, which is what
+  made dark-to-pale variants look fake.
+- `build_products.py` applies the page readings to UNIQLO rows (`given`),
+  carries the product ID to a row whose screenshots stop above it at
+  `guessed`, and hides a style's other rows only when all of a row's
+  screenshots belong to that style. A variant takes its shelf verdict from
+  its source row, as the desk's rule says. Where a source row's own
+  catalogue cut-out failed the flat-lay measurement and the cut its variants
+  were made from passes it, the row's picture becomes that cut and its
+  colours are read again (`measured_sources`); `build_studio.py` treats a row
+  whose picture is a measured cut as clean. A source row keeps the page's
+  colour name only when the pictured garment is the selected swatch — the
+  gallery photo is often another colour (`source_colour_names`).
+
+Order to re-run: `uniqlo_pages.py` → `uniqlo_variants.py` → `build_products.py`
+→ `build_studio.py`. Needs `tesseract`, `pytesseract`, `rembg` (u2net), `scipy`.

@@ -1,6 +1,6 @@
 {
  "built_from": "content/catalogue",
- "products": 987,
+ "products": 1119,
  "inspiration": 112,
  "slots": [
   "accessory",
@@ -81,10 +81,10 @@
   "cutout_model",
   "tile"
  ],
- "clean": 96,
+ "clean": 249,
  "with_full": 947,
- "hidden": 57,
- "recoloured": 13,
+ "hidden": 78,
+ "recoloured": 141,
  "derived": 449,
  "images": 858,
  "whole_cutouts": 329
