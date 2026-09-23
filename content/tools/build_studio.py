@@ -92,7 +92,12 @@ def image_list(rv, sources, pid='', panels=None, shot=''):
             for j, pn in enumerate(sp['panels']):
                 if not os.path.exists(CAT + '/' + pn['path']):
                     continue          # a panel whose picture did not survive a split
-                d = dict(path='full/' + os.path.basename(pn['path']), w=pn['w'], h=pn['h'],
+                # the size is read off the file itself: a panel re-cut after
+                # _panels.json was written keeps its old numbers there, and the
+                # desk sizes a piece from them
+                with Image.open(CAT + '/' + pn['path']) as im:
+                    pw, ph = im.size
+                d = dict(path='full/' + os.path.basename(pn['path']), w=pw, h=ph,
                          item=None, person=None, suggested=[], source=src,
                          type=pn['type'], panel_of=i, panel_box=pn['box'])
                 if pn.get('cut') and os.path.exists(CAT + '/' + pn['cut']):
@@ -101,14 +106,21 @@ def image_list(rv, sources, pid='', panels=None, shot=''):
                                           w=im.width, h=im.height)
                 out.append(d)
             continue
-        d = dict(path='full/' + os.path.basename(e['path']), w=e['w'], h=e['h'],
+        w, h = e['w'], e['h']
+        if os.path.exists(CAT + '/' + e['path']):
+            with Image.open(CAT + '/' + e['path']) as im:
+                w, h = im.size
+        d = dict(path='full/' + os.path.basename(e['path']), w=w, h=h,
                  item=e.get('item'), person=e.get('person'),
                  suggested=e.get('suggested') or [],
                  source=src, type='listing grid' if shot == 'listing grid' else 'whole page',
                  panel_of=i, panel_box=[0, 0, 1, 1])
         if e.get('whole'):
-            d['whole'] = dict(path='full/' + os.path.basename(e['whole']['path']),
-                              w=e['whole']['w'], h=e['whole']['h'])
+            ww, wh = e['whole']['w'], e['whole']['h']
+            if os.path.exists(CAT + '/' + e['whole']['path']):
+                with Image.open(CAT + '/' + e['whole']['path']) as im:
+                    ww, wh = im.size
+            d['whole'] = dict(path='full/' + os.path.basename(e['whole']['path']), w=ww, h=wh)
         out.append(d)
     return out
 
@@ -152,8 +164,28 @@ def measured_cuts():
             if r.get('source_clean') and r.get('source_cut')}
 
 
+def load_checks():
+    """shelf_checks.py's verdicts: several garments in one picture, duplicates."""
+    try:
+        return json.load(open(CAT + '/_shelf_checks.json'))
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+
+
+def not_duplicates():
+    """Rows the stylist said are not duplicates, from asset-choices.json."""
+    try:
+        ch = json.load(open(CAT + '/asset-choices.json')).get('choices', {})
+    except (FileNotFoundError, json.JSONDecodeError):
+        return set()
+    return {pid for pid, c in ch.items() if c.get('not_duplicate')}
+
+
 def build_products(rows, review):
     out = []
+    checks = load_checks()
+    several, dups = checks.get('several', {}), checks.get('duplicates', {})
+    kept = not_duplicates()
     flats = load_flats()
     cuts = measured_cuts()
     by_id0 = {r['product_id']: r for r in rows}
@@ -188,7 +220,17 @@ def build_products(rows, review):
             product_id=r['product_id'],
             primary=primary_picture(images),
             # a cell that looks like a product already filed; never merged
-            duplicate_of=n(r.get('validated')) == 'possible duplicate',
+            twin=n(r.get('validated')) == 'possible duplicate',
+            # measured by shelf_checks.py on the picture the shelf shows: a row
+            # that is another row again is kept, marked with its keeper and
+            # hidden from the shelf; one whose picture holds several garments
+            # goes back to Review, grouped under the row that owns the picture
+            duplicate_of='' if r['product_id'] in kept
+            else (dups.get(r['product_id']) or {}).get('keeper', ''),
+            duplicate_cause='' if r['product_id'] in kept
+            else (dups.get(r['product_id']) or {}).get('cause', ''),
+            several=(several.get(r['product_id']) or {}).get('why', []),
+            several_group=(several.get(r['product_id']) or {}).get('group', ''),
             slot=n(r['slot']),
             slot_confidence=n(r.get('slot_confidence')),
             garment_type=n(r['garment_type']),
@@ -317,7 +359,9 @@ def copy_assets(products, rows_by_id):
                 box = [0, 0, 1, 1]
             else:
                 box = (entry or p['boxes'] or {}).get(p['choice'])
-            if p.get('base') == 'whole' and entry and entry.get('whole'):
+            if p.get('base') == 'asset':
+                base_path = src                            # a box drawn on the cut-out
+            elif p.get('base') == 'whole' and entry and entry.get('whole'):
                 base_path = f"{ROOT}/studio/{entry['whole']['path']}"
             else:
                 base_path = f"{ROOT}/studio/{p['full']['path']}"
@@ -397,7 +441,9 @@ def main():
                 recoloured=sum(1 for p in products if p['recoloured']),
                 derived=sum(1 for p in products if p['parent_id']),
                 images=sum(len(p['images'] or []) for p in products if not p['parent_id']),
-                whole_cutouts=sum(1 for p in products for e in (p['images'] or []) if e.get('whole')))
+                whole_cutouts=sum(1 for p in products for e in (p['images'] or []) if e.get('whole')),
+                several=sum(1 for p in products if p['several']),
+                duplicates=sum(1 for p in products if p['duplicate_of']))
     json.dump(products, open(DATA + '/products.json', 'w'), separators=(',', ':'))
     json.dump(inspiration, open(DATA + '/inspiration.json', 'w'), separators=(',', ':'))
     json.dump(meta, open(DATA + '/meta.json', 'w'), indent=1)

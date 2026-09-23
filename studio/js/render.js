@@ -7,7 +7,8 @@
 //   share a white mat and a thin warm keyline; cut-outs have no border at all
 //   and no box behind them, only a shadow taken from their own alpha.
 
-import { GROUND, KEYLINE, INK, DEFAULT_FRAME, stacked, elementBox, labelOrder, swatchStrip } from './model.js';
+import { GROUND, KEYLINE, INK, DEFAULT_FRAME, stacked, elementBox, labelOrder, swatchStrip,
+  pixelAspect } from './model.js';
 
 export const metrics = (W, H) => ({
   margin: Math.round(W * 0.055),
@@ -48,8 +49,16 @@ function sourceRect(img, el) {
   return [x * iw, y * ih, w * iw, h * ih];
 }
 
+/** The mat a framed picture gets, in pixels: the preview and the file share it. */
+export function matOf(framed, frame, m) {
+  return framed && (frame || DEFAULT_FRAME).mat ? m.mat : 0;
+}
+
 function drawImageEl(ctx, img, el, W, H, m, framed, frame) {
-  const b = elementBox(el, W, H);
+  // proportions from the pixels being drawn, never from a stored number
+  const aspect = pixelAspect(img.naturalWidth || img.width, img.naturalHeight || img.height, el.crop) || el.aspect;
+  const mat = matOf(framed, frame, m);
+  const b = elementBox({ ...el, aspect }, W, H, mat);
   const src = sourceRect(img, el);
   ctx.save();
   ctx.translate(b.cx, b.cy);
@@ -57,7 +66,6 @@ function drawImageEl(ctx, img, el, W, H, m, framed, frame) {
   if (el.flip) ctx.scale(-1, 1);
   if (framed) {
     const f = frame || DEFAULT_FRAME;
-    const mat = f.mat ? m.mat : 0;
     const radius = (f.radius || 0) * (W / 1080);
     roundedRect(ctx, -b.w / 2, -b.h / 2, b.w, b.h, radius);
     if (f.mat) { ctx.fillStyle = '#ffffff'; ctx.fill(); }

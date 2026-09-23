@@ -1,7 +1,8 @@
 // Pure functions, no browser. node studio/test/unit.mjs
 import * as M from '../js/model.js';
 import * as C from '../js/colour.js';
-import { filterProducts, emptyFilters, matrixCounts, indexById } from '../js/data.js';
+import { filterProducts, emptyFilters, matrixCounts, indexById, shelfView, sameView, onShelf,
+  isReviewed, isSeveral, isDuplicate, choiceBase } from '../js/data.js';
 import { parsePrice, buildInfo, buildMarkdown } from '../js/export.js';
 
 let pass = 0, fail = 0;
@@ -241,5 +242,41 @@ ok('markdown leaves an unknown link empty', /\| 2 \|  \| loafers \| navy \|  \| 
   ok('a box on a cut-out is left alone', migrateChoices({ Y: { choice: 'custom', base: 'whole', box: [0, 0, 1, 1] } },
     { trim_version: 2, products: { Y: { 0: { prev: [0, 0, 10, 10, 10, 10], now: [0, 0, 5, 5, 10, 10] } } } }) === 0);
 }
+console.log('\nproportions from pixels');
+ok('pixelAspect of a tall narrow image', Math.abs(M.pixelAspect(120, 600) - 0.2) < 1e-9);
+ok('pixelAspect of a wide image', Math.abs(M.pixelAspect(600, 200) - 3) < 1e-9);
+ok('pixelAspect of a crop', Math.abs(M.pixelAspect(900, 300, [0, 0, 0.25, 1]) - 0.75) < 1e-9);
+ok('pixelAspect refuses an undecoded image', M.pixelAspect(0, 0) === null);
+{
+  const bx = M.elementBox({ x: 0.5, y: 0.5, w: 0.2, aspect: 0.2 }, 1000, 1250);
+  ok('a box keeps its picture\'s aspect', Math.abs(bx.w / bx.h - 0.2) < 1e-9, JSON.stringify(bx));
+  const fr = M.elementBox({ x: 0.5, y: 0.5, w: 0.3, aspect: 3 }, 1000, 1250, 7);
+  ok('inside a mat the picture keeps its aspect', Math.abs((fr.w - 14) / (fr.h - 14) - 3) < 1e-9, JSON.stringify(fr));
+}
+
+console.log('\nthe shelf picture is the placed picture');
+{
+  const p = { product_id: 'X', image: 0, images: [{ path: 'a.jpg', w: 10, h: 10, item: [0, 0, 0.5, 0.5] },
+    { path: 'b.jpg', w: 10, h: 10, whole: { path: 'b.webp', w: 10, h: 10 } }], full: { path: 'a.jpg', w: 10, h: 10 } };
+  eq('no choice: the cut-out', shelfView(p, {}), { variant: 'cutout', crop: null, image: 0, base: 'photo' });
+  eq('the badge picks a picture', shelfView(p, {}, 1), { variant: 'whole', crop: [0, 0, 1, 1], image: 1, base: 'whole' });
+  eq('a browser choice wins over the catalogue', shelfView({ ...p, choice: 'full' }, { X: { choice: 'item' } }),
+    { variant: 'item', crop: [0, 0, 0.5, 0.5], image: 0, base: 'photo' });
+  ok('a box drawn on the cut-out stays on the cut-out', choiceBase({ choice: 'custom', base: 'asset' }) === 'asset');
+  ok('sameView compares crop and base', !sameView(shelfView(p, {}), shelfView(p, {}, 0)));
+}
+
+console.log('\nseveral garments, duplicates');
+{
+  const fan = { product_id: 'F', clean: true, several: ['colour regions: 4'], duplicate_of: '' };
+  ok('a clean fan is off the shelf', !onShelf(fan, {}, false) && !onShelf(fan, {}, true));
+  ok('taking it whole does not count as reviewed', !isReviewed(fan, { F: { choice: 'cutout' } }));
+  ok('a box of hers cuts one garment out: back on the shelf',
+    onShelf(fan, { F: { choice: 'custom', box: [0, 0, 0.3, 0.3] } }, false) && !isSeveral(fan, { F: { choice: 'custom', box: [0, 0, 1, 1] } }));
+  const dupe = { product_id: 'D', clean: true, several: [], duplicate_of: 'K' };
+  ok('a duplicate is hidden from the shelf', !onShelf(dupe, {}, true) && isDuplicate(dupe, {}));
+  ok('"not a duplicate" puts it back', onShelf(dupe, { D: { notDuplicate: true } }, false));
+}
+
 console.log(`\nafter 24 Sept: ${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);

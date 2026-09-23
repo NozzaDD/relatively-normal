@@ -195,3 +195,23 @@ upgraded), and colours read from the box region by `extract_colours`. The
 
 Order to re-run: `uniqlo_pages.py` → `uniqlo_variants.py` → `build_products.py`
 → `build_studio.py`. Needs `tesseract`, `pytesseract`, `rembg` (u2net), `scipy`.
+
+## Added 23 September 2026 — one garment per picture, duplicates
+
+| Script | What it does |
+|---|---|
+| `shelf_checks.py` | two measurements the shelf gate did not make, both on the picture the shelf shows. **Several garments**: a listing-grid page, a style's all-colours photo, a cut-out in 3+ separate pieces (2 where a pair is not the garment), or 3+ separate colour regions with no skin. **Duplicates**: same brand and slot, silhouette IoU ≥ 0.96, lightness structure within 2, median colour within dE2000 3; one keeper per group. Writes `_shelf_checks.json` and, with `--sheets`, `sheets/shelf-check-several.jpg` and `sheets/shelf-check-duplicates.jpg`. `build_studio.py` turns it into `several`, `several_group`, `duplicate_of`, `duplicate_cause`. |
+
+- The colour FIELDS are not used for duplicates. A colourway split that copied
+  its parent's picture says "steel blue" beside an oxblood coat; the picture is
+  the evidence.
+- A recolour shares its source's silhouette exactly, so between recolours the
+  colour alone decides. UNIQLO's own swatches are distinct colours: the closest
+  two on one style are dE 4.3 apart, above the threshold.
+- The old `duplicate_of` boolean — a grid cell whose brand, slot and colour
+  name match a filed product — is now `twin`.
+- `build_studio.py` reads each picture's size from the file, not from
+  `_panels.json` or `_review_boxes.json`: eleven panels had been re-cut since
+  their sizes were written, and the desk sized pieces from them.
+
+Order to re-run: `build_products.py` → `shelf_checks.py` → `build_studio.py`.

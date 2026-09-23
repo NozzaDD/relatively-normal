@@ -53,7 +53,8 @@ ok('inspiration loaded', counts.inspiration === 112, JSON.stringify(counts));
 // the gate is the measurement flat_lays.py makes, so the shelf is exactly the
 // products the data marks clean — not a hand-set range that drifts
 const cleanCount = await page.evaluate(() =>
-  window.__studio.products.filter((p) => p.clean && !p.hidden).length);
+  window.__studio.products.filter((p) => p.clean && !p.hidden && !(p.several || []).length
+    && !p.duplicate_of).length);
 ok('only measured-clean cut-outs on the shelf by default',
   counts.cells === cleanCount && cleanCount > 0, `${counts.cells} cells, ${cleanCount} clean`);
 ok('the shelf is a real slice of the catalogue, not all of it',

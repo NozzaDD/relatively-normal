@@ -190,6 +190,71 @@ export function applySlots(products, local) {
   return n;
 }
 
+/**
+ * The box a choice means, as [x, y, w, h] of its base image — or null when the
+ * version is a whole image with no crop (the cut-out, or a whole cut-out).
+ */
+export function choiceBox(p, c) {
+  if (!c || !c.choice || c.choice === 'cutout' || c.choice === 'whole') return null;
+  const e = imageEntry(p, c.image || 0) || p.full;
+  if (!e) return null;
+  if (c.choice === 'full') return [0, 0, 1, 1];
+  if (c.choice === 'custom') return c.box || null;
+  return e[c.choice] || p.boxes?.[c.choice] || null;
+}
+
+/** Which image a choice is drawn on: the photo, the whole cut-out, or the asset. */
+export function choiceBase(c) {
+  if (!c || !c.choice) return 'asset';
+  if (c.choice === 'cutout') return 'asset';
+  if (c.choice === 'whole') return 'whole';
+  // a box drawn on the cut-out in Adjust box is a box on the cut-out
+  if (c.base === 'asset') return 'asset';
+  return c.base === 'whole' ? 'whole' : 'photo';
+}
+
+/**
+ * THE picture a product shows on the shelf, and so the picture a tap places.
+ * The tile and the canvas both read this and nothing else: another picture
+ * picked with the badge, else the stylist's choice (the browser's first, then
+ * the catalogue's), else the cut-out.
+ * @returns {{variant: string, crop: number[]|null, image: number, base: string}}
+ */
+export function shelfView(p, local, picture) {
+  if (picture !== undefined && picture !== null && p.images && p.images[picture]) {
+    const e = p.images[picture];
+    return e.whole ? { variant: 'whole', crop: [0, 0, 1, 1], image: picture, base: 'whole' }
+      : { variant: 'full', crop: [0, 0, 1, 1], image: picture, base: 'photo' };
+  }
+  const c = effectiveChoice(p, local);
+  const box = choiceBox(p, c);
+  const image = (c && c.image) || p.image || 0;
+  if (box) return { variant: c.choice, crop: box, image, base: choiceBase(c) };
+  if (c && c.choice === 'whole') return { variant: 'whole', crop: [0, 0, 1, 1], image, base: 'whole' };
+  return { variant: 'cutout', crop: null, image: 0, base: 'photo' };
+}
+
+export const sameView = (a, b) => a.variant === b.variant && a.image === b.image && a.base === b.base
+  && JSON.stringify(a.crop) === JSON.stringify(b.crop);
+
+/**
+ * Several garments in the picture — a listing-grid page, an all-colours fan.
+ * Never a single product: off the shelf and back in Review until a box she
+ * drew cuts one garment out of it.
+ */
+export function isSeveral(p, local) {
+  if (!p.several || !p.several.length) return false;
+  const c = effectiveChoice(p, local);
+  return !(c && c.choice === 'custom');
+}
+
+/** Marked as another row again. Kept, hidden from the shelf, until she says otherwise. */
+export function isDuplicate(p, local) {
+  if (!p.duplicate_of) return false;
+  const l = local && local[p.product_id];
+  return !(l && l.notDuplicate);
+}
+
 export function effectiveChoice(p, local) {
   const l = local && local[p.product_id];
   if (l && (l.hidden || l.choice)) return l;
@@ -207,12 +272,15 @@ export function effectiveChoice(p, local) {
 export function onShelf(p, local, showUnreviewed) {
   const c = effectiveChoice(p, local);
   if (c?.hidden) return false;
+  if (isDuplicate(p, local) || isSeveral(p, local)) return false;
   if (p.clean || (c && c.choice)) return true;
   return !!showUnreviewed;
 }
 
 export function isReviewed(p, local) {
   const c = effectiveChoice(p, local);
+  // taking a several-garment picture whole was the mistake; only a box counts
+  if (isSeveral(p, local)) return !!(c && c.hidden);
   return !!(c && (c.hidden || c.choice));
 }
 

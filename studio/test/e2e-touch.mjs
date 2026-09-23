@@ -63,7 +63,9 @@ console.log('\n1. the gate and the category bar');
 const gate = await page.evaluate(() => ({
   shown: window.__studio.shown.length,
   total: window.__studio.products.length,
-  clean: window.__studio.products.filter((p) => p.clean && !p.hidden).length,
+  // clean, and neither a picture of several garments nor a duplicate of another row
+  clean: window.__studio.products.filter((p) => p.clean && !p.hidden && !(p.several || []).length
+    && !p.duplicate_of).length,
   buttons: [...document.querySelectorAll('#slotBar button')].map((b) => b.textContent),
 }));
 ok('by default only clean cut-outs show', gate.shown === gate.clean, JSON.stringify(gate));
@@ -462,7 +464,8 @@ const nBefore = await page.$$eval('#reviewCards .rcard', (e) => e.length);
 await page.check('#rMulti');
 await page.waitForTimeout(300);
 const nAfter = await page.$$eval('#reviewCards .rcard', (e) => e.length);
-const multiCount = await page.evaluate(() => window.__studio.products.filter((p) => !p.clean && p.full && !p.parent_id && (p.images || []).length > 1).length);
+const multiCount = await page.evaluate(() => window.__studio.products.filter((p) => (!p.clean || (p.several || []).length) && p.full && !p.parent_id
+  && (p.images || []).length > 1).length);
 ok('"more than one photo" narrows to those', nAfter === multiCount && nAfter < nBefore, `${nBefore} → ${nAfter} (expect ${multiCount})`);
 await page.uncheck('#rMulti');
 await page.waitForTimeout(200);
@@ -707,18 +710,18 @@ const swap = await page.evaluate(async (pid) => {
   S.board = (await import('./js/model.js')).createBoard('portrait');
   const el = await S.placeProduct(pid, 0.42, 0.6);
   el.w = 0.33;
-  const before = { x: el.x, y: el.y, w: el.w, image: el.image };
+  const before = { x: el.x, y: el.y, w: el.w, image: el.image, variant: el.variant };
   S.selected = el.uid;
   S.renderBoard();
   document.querySelector('#elementBar [data-act="picture"]').click();
   const now = S.board.elements.find((e) => e.uid === el.uid);
-  return { before, after: { x: now.x, y: now.y, w: now.w, image: now.image },
+  return { before, after: { x: now.x, y: now.y, w: now.w, image: now.image, variant: now.variant },
     hidden: document.getElementById('elPicture').hidden,
     type: (S.productsById[pid].images[now.image] || {}).type };
 }, pan.pid);
 ok('"other picture" is offered where there is another picture', swap.hidden === false);
 ok('it changes the picture and keeps the place and the size',
-  swap.after.image !== swap.before.image && swap.after.x === swap.before.x
+  (swap.after.image !== swap.before.image || swap.after.variant !== swap.before.variant) && swap.after.x === swap.before.x
   && swap.after.w === swap.before.w, JSON.stringify(swap));
 const pinfo = await page.evaluate(() => window.__studio.buildInfo().pieces.at(-1));
 ok('the info file records which picture was used',
@@ -733,7 +736,7 @@ const cells = await page.evaluate(() => {
   return { cells: c.length, parents: parents.size,
     named: c.filter((p) => p.product_name).length,
     priced: c.filter((p) => p.price).length,
-    twins: c.filter((p) => p.duplicate_of).length,
+    twins: c.filter((p) => p.twin).length,
     guessed: c.filter((p) => p.brand_confidence === 'guessed').length,
     given: c.filter((p) => p.brand_confidence === 'given').length,
     onShelf: c.filter((p) => p.clean).length,
@@ -759,9 +762,14 @@ const took = await page.evaluate(() => {
   const n = g.querySelectorAll('.cellpick').length;
   [...g.querySelectorAll('button')].find((b) => b.textContent === 'Accept all cells').click();
   const after = document.querySelector('#reviewCards .cellgroup');
-  return { n, chosen: after ? after.querySelectorAll('.cellpick.chosen').length : -1 };
+  // a cell whose picture holds several garments is never taken whole
+  const S = window.__studio;
+  const left = [...after.querySelectorAll('.cellpick:not(.chosen)')].map((b) => b.dataset.pid);
+  return { n, chosen: after.querySelectorAll('.cellpick.chosen').length,
+    leftAreSeveral: left.every((pid) => (S.productsById[pid].several || []).length > 0), left };
 });
-ok('"accept all cells" takes the whole grid in one tap', took.chosen === took.n, JSON.stringify(took));
+ok('"accept all cells" takes the whole grid in one tap, except several-garment cells',
+  took.chosen + took.left.length === took.n && took.chosen > 0 && took.leftAreSeveral, JSON.stringify(took));
 
 
 

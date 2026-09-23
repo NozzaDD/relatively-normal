@@ -106,10 +106,26 @@ export function labelOrder(board) {
   return board.elements.filter((e) => e.kind === 'product').sort((a, b) => a.z - b.z);
 }
 
-/** Pixel geometry for one element on a board of the given pixel size. */
-export function elementBox(el, W, H) {
+/**
+ * Aspect (w/h) of what a piece shows, from the image's own pixels: the whole
+ * image, or `crop` of it. This is the only source of truth for a piece's
+ * proportions — the numbers stored in the catalogue describe a file as it was
+ * when they were written, and a thumbnail may be padded.
+ */
+export function pixelAspect(naturalW, naturalH, crop) {
+  if (!naturalW || !naturalH) return null;
+  const [, , cw, ch] = crop || [0, 0, 1, 1];
+  return (cw * naturalW) / (ch * naturalH);
+}
+
+/**
+ * Pixel geometry for one element on a board of the given pixel size. `pad` is
+ * the mat around a framed picture: the picture keeps its own proportions
+ * inside it, so the box is the picture's height plus the mat top and bottom.
+ */
+export function elementBox(el, W, H, pad = 0) {
   const w = el.w * W;
-  const h = w / (el.aspect || 1);
+  const h = Math.max(0, w - 2 * pad) / (el.aspect || 1) + 2 * pad;
   return { w, h, cx: el.x * W, cy: el.y * H, x: el.x * W - w / 2, y: el.y * H - h / 2 };
 }
 
