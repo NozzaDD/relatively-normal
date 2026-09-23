@@ -4380,14 +4380,15 @@
   "why": "backdrop not plain"
  },
  "B056-P004": {
-  "flat": false,
+  "flat": true,
   "lum": 109.7,
   "sd": 118.0,
   "spread": 145.3,
   "skin": 0.0,
   "shot": "flat packshot",
-  "clean": false,
-  "why": "backdrop not plain"
+  "clean": true,
+  "why": "",
+  "from_panel": "review/B056-P004p4.jpg"
  },
  "B056-P005": {
   "flat": false,
@@ -4993,5 +4994,83 @@
   "shot": "on model",
   "clean": false,
   "why": "backdrop not plain"
+ },
+ "B010-P001-V3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_panel": "review/B010-P001-V3p0.jpg"
+ },
+ "B010-P005-V3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_panel": "review/B010-P005-V3p0.jpg"
+ },
+ "B010-P005-V4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_panel": "review/B010-P005-V4p0.jpg"
+ },
+ "B013-P001-V2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_panel": "review/B013-P001-V2p0.jpg"
+ },
+ "B013-P001-V3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_panel": "review/B013-P001-V3p0.jpg"
+ },
+ "B014-P001-V2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_panel": "review/B014-P001-V2p0.jpg"
+ },
+ "B014-P001-V3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_panel": "review/B014-P001-V3p0.jpg"
+ },
+ "B018-P001-V2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_panel": "review/B018-P001-V2p0.jpg"
+ },
+ "B018-P001-V3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_panel": "review/B018-P001-V3p0.jpg"
+ },
+ "B020-P006-V2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_panel": "review/B020-P006-V2p0.jpg"
+ },
+ "B057-P003-V2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_panel": "review/B057-P003-V2p1.jpg"
+ },
+ "B058-P007-V2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_panel": "review/B058-P007-V2p0.jpg"
+ },
+ "B062-P001-V2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_panel": "review/B062-P001-V2p0.jpg"
  }
 }

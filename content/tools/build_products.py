@@ -32,7 +32,9 @@ def read_rows():
     for f in sorted(glob.glob(CAT + '/_viewing_rows/rows_*.txt')):
         for ln in open(f):
             p = [x.strip() for x in ln.rstrip('\n').split('|')]
-            if len(p) < 16 or not re.match(r'^B\d+-P\d+$', p[0]):
+            # ...-V2 is a product split out of another by colour, and is a
+            # product in its own right from here on
+            if len(p) < 16 or not re.match(r'^B\d+-P\d+(-V\d+)?$', p[0]):
                 continue
             rows[p[0]] = dict(zip(
                 ['product_id', 'slot', 'garment_type', 'material_visible', 'pattern',

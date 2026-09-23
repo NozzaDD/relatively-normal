@@ -33,6 +33,11 @@ SMALL = 320              # the page is measured at this width
 GUTTER_SPREAD = 42       # a gutter line is this flat, 5th to 95th percentile
 GUTTER_LUM = 198         # ...and this light
 GUTTER_MIN = 0.012       # ...and a gutter is this deep, as a share of the side
+QUIET_LUM = 120          # a line with no content in it is at least this light
+MARGIN = 0.10            # the strip down each side where the page shows through
+TONE_STEP = 6            # two backdrops differ when their margin tones differ by this
+TONE_RUN = 0.05          # ...held steady over this much of the side, each way
+TONE_SHARP = 10          # ...and the change happens IN ONE LINE, not over many
 PANEL_MIN = 0.10         # a panel is at least this much of the side
 AREA_MIN = 0.035        # ...and this much of the picture, once the two splits are made
 MAX_PANELS = 6
@@ -67,17 +72,73 @@ def gutter_runs(im, axis):
     return runs, n
 
 
+def tone_joins(im, axis):
+    """Where one backdrop ends and a different one begins, with no band between.
+
+    A packshot on one grey above a shot on another grey has no gutter at all:
+    the page simply changes tone, and neither side holds a run of empty lines to
+    find it by — the garment fills the frame nearly all the way down. What does
+    stay empty is the MARGIN: the strip down each side where the page shows past
+    the photograph. Its tone is the backdrop at that height, and the line where
+    it steps is the join.
+
+    Kept tight on purpose, and tighter than it first looks it should be. A
+    looser version of this test split nine screenshots and was wrong on eight:
+    a studio backdrop shading from pale wall to warm floor steps the margin tone
+    by six or eight levels over a dozen lines, and the cut landed across a
+    model's chest. A page boundary steps in ONE line. That is the difference,
+    so that is what is tested, along with steady backdrop on both sides.
+    """
+    w = SMALL
+    h = max(8, int(im.height * SMALL / im.width))
+    s = im.convert('L').resize((w, h), Image.BILINEAR)
+    px = list(s.getdata())
+    n = h if axis == 0 else w
+    m = w if axis == 0 else h
+    k = max(2, int(m * MARGIN))
+    prof = []
+    for i in range(n):
+        line = px[i * w:(i + 1) * w] if axis == 0 else [px[j * w + i] for j in range(h)]
+        side = sorted(line[:k] + line[-k:])
+        q = len(side)
+        prof.append((side[q // 2], side[int(q * 0.9)] - side[int(q * 0.1)]))
+    need = max(3, int(n * TONE_RUN))
+    joins = []
+    for i in range(need, n - need):
+        before = [t for t, sp in prof[i - need:i] if sp <= 18]
+        after = [t for t, sp in prof[i:i + need] if sp <= 18]
+        if len(before) < need * 0.8 or len(after) < need * 0.8:
+            continue          # the margin is busy here: it is photograph, not page
+        a, b = sum(before) / len(before), sum(after) / len(after)
+        if abs(a - b) < TONE_STEP:
+            continue
+        if max(before) - min(before) > TONE_STEP or max(after) - min(after) > TONE_STEP:
+            continue
+        if abs(prof[i][0] - prof[i - 1][0]) < TONE_SHARP:
+            continue          # a gradient inside one photograph, not a join
+        joins.append(i)
+    out = []
+    for j in joins:                       # one cut per step, not one per line
+        if not out or j - out[-1] > need:
+            out.append(j)
+    return out
+
+
 def split_axis(im, axis):
     """-> [(lo, hi), ...] as fractions along `axis`, or [] to leave it whole."""
     runs, n = gutter_runs(im, axis)
     deep = [r for r in runs if (r[1] - r[0]) / n >= GUTTER_MIN]
-    if not deep:
-        return []
+    joins = [j for j in tone_joins(im, axis) if PANEL_MIN < j / n < 1 - PANEL_MIN]
     # Cut through the MIDDLE of each gutter, not at its edges. A panel that
     # begins where the backdrop stops has the garment against its frame from
     # the first row, and the "clear of the frame" measurement then rejects
     # every panel there is; half the gutter on each side gives it air.
     cuts = [(lo + hi) // 2 for lo, hi in deep if lo > 1 and hi < n - 1]
+    # ...and where one backdrop simply becomes another, cut on the join itself
+    for j in joins:
+        if j > 1 and j < n - 1 and all(abs(j - c) > n * GUTTER_MIN for c in cuts):
+            cuts.append(j)
+    cuts.sort()
     if not cuts:
         return []
     bounds, prev = [], 0

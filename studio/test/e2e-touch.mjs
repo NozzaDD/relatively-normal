@@ -764,6 +764,75 @@ const took = await page.evaluate(() => {
 ok('"accept all cells" takes the whole grid in one tap', took.chosen === took.n, JSON.stringify(took));
 
 
+
+console.log('\n15. details hidden, mixed products split apart');
+await page.evaluate(() => { localStorage.removeItem('rn.studio.choices.v1'); });
+await page.reload();
+await page.waitForFunction(() => window.__studio?.products?.length > 0 && window.__studio.review,
+  null, { timeout: 20000 });
+const det = await page.evaluate(async () => {
+  const { productVersions } = await import('./js/data.js');
+  const p = window.__studio.products.find((x) => (x.images || []).some((e) => e.type === 'detail')
+    && (x.images || []).some((e) => e.type !== 'detail'));
+  if (!p) return null;
+  return { pid: p.product_id,
+    without: productVersions(p).length,
+    with: productVersions(p, { details: true }).length,
+    labels: productVersions(p).map((v) => v.label),
+    primaryType: (p.images[p.primary] || {}).type };
+});
+ok('a product has fabric close-ups alongside real pictures', !!det, JSON.stringify(det));
+ok('the filmstrip leaves the close-ups out', det.with > det.without
+  && !det.labels.some((l) => l.startsWith('detail')), JSON.stringify(det));
+ok('the shelf never shows a close-up as the product', det.primaryType !== 'detail', det.primaryType);
+const detPics = await page.evaluate((pid) => {
+  const p = window.__studio.productsById[pid];
+  return { all: (p.images || []).length,
+    offered: (p.images || []).filter((e) => !['detail', 'text', 'other'].includes(e.type)).length };
+}, det.pid);
+ok('the close-ups are kept in the data, not thrown away', detPics.all > detPics.offered,
+  JSON.stringify(detPics));
+// the toggle brings them back in Adjust box
+await page.evaluate(() => window.__studio.setView('review'));
+await page.waitForTimeout(500);
+const opened = await page.evaluate((pid) => {
+  const c = document.querySelector(`#reviewCards .rcard[data-pid="${pid}"]`);
+  if (!c) return false;
+  c.scrollIntoView(); c.querySelector('.racts button').click(); return true;
+}, det.pid);
+if (opened) {
+  await page.waitForTimeout(700);
+  const before = await page.$$eval('#adjStrip img', (e) => e.length);
+  ok('"show details" is offered where there are details',
+    (await page.$eval('#adjDetailsWrap', (e) => e.hidden)) === false);
+  await page.check('#adjDetails');
+  await page.waitForTimeout(400);
+  const after = await page.$$eval('#adjStrip img', (e) => e.length);
+  ok('...and brings them into the filmstrip', after > before, `${before} → ${after}`);
+  await page.click('#adjustCancel');
+}
+
+const sp = await page.evaluate(() => {
+  const ps = window.__studio.products;
+  const sib = ps.filter((p) => /-V\d+$/.test(p.product_id));
+  const pairs = sib.map((p) => {
+    const parent = ps.find((q) => q.product_id === p.product_id.replace(/-V\d+$/, ''));
+    return parent ? { a: parent, b: p } : null;
+  }).filter(Boolean);
+  const sameName = pairs.filter(({ a, b }) => a.product_name && a.product_name === b.product_name);
+  const diffColour = pairs.filter(({ a, b }) => (a.colours[0] || {}).hex !== (b.colours[0] || {}).hex);
+  const ownPics = sib.filter((p) => (p.images || []).length > 0);
+  return { siblings: sib.length, pairs: pairs.length, sameName: sameName.length,
+    diffColour: diffColour.length, ownPics: ownPics.length,
+    derived: sib.filter((p) => p.parent_id).length };
+});
+ok('mixed products were split into rows of their own', sp.siblings > 20, JSON.stringify(sp));
+ok('each split row has its own pictures', sp.ownPics === sp.siblings, JSON.stringify(sp));
+ok('each split row has its own colour', sp.diffColour === sp.pairs, JSON.stringify(sp));
+ok('a split row is a product, not a piece cut from one', sp.derived === 0, String(sp.derived));
+ok('the style name is kept on both so they stay linked', sp.sameName > 0, JSON.stringify(sp));
+
+
 console.log(`\n${pass} passed, ${fail} failed`);
 if (errors.length) console.log('page errors:\n  ' + errors.slice(0, 6).join('\n  '));
 await browser.close();

@@ -57,13 +57,16 @@ export function imageEntry(p, idx = 0) {
  * whole cut-out. `base` says which image a box is drawn on — the photo, or the
  * cut-out, where a box keeps the transparency.
  */
-export function productVersions(p) {
+export function productVersions(p, { details = false } = {}) {
   const out = [];
   if (p.asset && p.asset_type !== 'crop') {
     out.push({ kind: 'cutout', image: 0, base: 'asset', label: 'cut-out' });
   }
   const imgs = (p.images && p.images.length) ? p.images : (imageEntry(p, 0) ? [imageEntry(p, 0)] : []);
   imgs.forEach((e, i) => {
+    // A fabric close-up is not a version of the garment — it is a swatch of it —
+    // so it stays in the data and out of the filmstrip unless asked for.
+    if (isDetail(e) && !details) return;
     // the picture's own type leads the label: a product page that held a flat
     // lay and a shot on the model is two pictures now, and which is which is
     // the thing worth knowing at a glance
@@ -77,9 +80,13 @@ export function productVersions(p) {
   return out;
 }
 
+/** A fabric close-up or a panel of page type: real, kept, but not a version. */
+export const isDetail = (e) => e && (e.type === 'detail' || e.type === 'text' || e.type === 'other');
+
 /** The pictures a piece can be switched between: one per picture of the product. */
 export function productPictures(p) {
-  const imgs = (p.images || []).map((e, i) => ({ i, type: e.type || 'whole page', entry: e }));
+  const imgs = (p.images || []).map((e, i) => ({ i, type: e.type || 'whole page', entry: e }))
+    .filter((x) => !isDetail(x.entry));
   return imgs.length > 1 ? imgs : [];
 }
 

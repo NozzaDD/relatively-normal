@@ -55,6 +55,18 @@ cells** to take a whole grid in one tap. A cell that matches a product already
 filed by brand, slot and colour is flagged *twin?* — flagged, never merged. The
 grid itself is hidden once its cells exist.
 
+A **fabric close-up** is kept but is not a version of the garment: it stays out
+of the filmstrip and off the shelf, and **Show details** in Adjust box brings it
+in when you want it.
+
+Where one row held several garments — the clustering reads page layout, which
+cannot tell two of a shop's products apart — the row is **split by colour**, one
+row per garment, each with its own pictures, cut-out and colour fields. The same
+style in two colourways is two rows; the style name is written on both so they
+stay findable together, and the note says which row each was split from. The
+slot is the parent's and may describe the parent's garment, so it is worth a
+look.
+
 Review shows each waiting product four ways — the cut-out, a box around the
 item, a box around the whole person, the full photo — and you tap the one you
 want. **Adjust box** lets you draw your own rectangle on the full photo.

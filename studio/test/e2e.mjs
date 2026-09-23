@@ -276,14 +276,20 @@ console.log('\n12. autosave');
 // wait for the save to have landed before reloading: autosave runs off the
 // render, so reloading straight away raced it and failed here about one run in
 // three, which reads as a broken board rather than a fast test
+// wait for the save to match the board on screen, not merely to be non-empty:
+// step 11 renders an empty board on its way to reopening the saved one, and a
+// reload that caught that render read back nothing
 await page.waitForFunction(() => {
   try {
     const b = JSON.parse(localStorage.getItem('rn.studio.board.v2') || '{}');
-    return (b.elements || []).length > 0;
+    return (b.elements || []).length === window.__studio.board.elements.length
+      && window.__studio.board.elements.length > 0;
   } catch (e) { return false; }
 }, null, { timeout: 5000 });
 await page.reload();
-await page.waitForFunction(() => window.__studio?.products?.length > 0, null, { timeout: 15000 });
+// products load before the saved board is put back, so waiting on the catalogue
+// alone read the board in the moment before restore() ran
+await page.waitForFunction(() => window.__studio?.ready === true, null, { timeout: 15000 });
 const restored = await page.evaluate(() => window.__studio.board.elements.length);
 ok('the board survives a reload', restored > 0, `${restored} elements`);
 const cleared = await page.evaluate(async () => {
