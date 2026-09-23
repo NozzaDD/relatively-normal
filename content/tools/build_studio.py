@@ -209,7 +209,11 @@ def build_products(rows, review):
         # since it is that same cut-out in another colour. A UNIQLO source row
         # whose picture is the cut its variants were made from carries that
         # cut's measurement.
-        src = n(r.get('recolour_source')) or r['product_id']
+        # recolour_source names a product for a variant; for a flat lay
+        # recoloured to its own model photo it names the two screenshots, and
+        # the row's own cut is the one measured
+        src = n(r.get('recolour_source'))
+        src = src if src in by_id0 else r['product_id']
         clean = is_clean(src)
         has_full = bool(rv.get('w')) and 'error' not in rv
         images = image_list(rv, (parent or r)['image_paths'].split(';'),

@@ -9,7 +9,8 @@ A product is one garment inside a batch, shown once or several times (packshot,
 on model, detail). Grouped on adjacency plus visual similarity of the main
 image area plus colour agreement.
 
-Writes content/catalogue/batches.json.
+Writes content/catalogue/batches.json. `--append [extra paths]` adds new
+screenshots as new batches without renumbering the existing ones.
 """
 import csv, json, os, re, sys, collections
 
@@ -116,7 +117,58 @@ def products(bat, sig, main_max=10, colour_max=26):
     return out
 
 
+def append(extra=()):
+    """Cluster screenshots that no batch holds yet into NEW batches after the
+    last one, leaving every existing batch and product ID as it is.
+
+    A full re-run numbers batches by position, so a screenshot inserted in the
+    middle of the sequence renumbers every batch after it — and the IDs in
+    asset-choices.json, used_in and the outfits would then point at other
+    garments. It would also undo split_mixed.py's rewrite of batches.json.
+    New screenshots are the ones in content/swipe/products/ that the swipe
+    index does not type yet; `extra` adds paths the index typed as something
+    else but that are product pages after all."""
+    out = json.load(open(OUT + '/batches.json'))
+    have = {i for o in out for i in o['images']}
+    idx = {r['path'] for r in csv.DictReader(open(ROOT + '/content/swipe/index.csv'))}
+    folder = 'content/swipe/products'
+    new = [folder + '/' + f for f in os.listdir(ROOT + '/' + folder)
+           if re.match(r'IMG_\d+\.(png|jpe?g)$', f, re.I)]
+    new = [p for p in new if p not in idx and p not in have] + [p for p in extra if p not in have]
+    new = sorted(set(new), key=seq)
+    print('new product images:', len(new))
+    if not new:
+        return
+    old = json.load(open(SIGCACHE)) if os.path.exists(SIGCACHE) else {}
+    missing = [p for p in new if p not in old]
+    if missing:
+        if os.path.exists(SIGCACHE):
+            os.rename(SIGCACHE, SIGCACHE + '.bak')
+        try:
+            sig_new = signatures(missing)
+        finally:
+            if os.path.exists(SIGCACHE + '.bak'):
+                os.replace(SIGCACHE + '.bak', SIGCACHE)
+        old.update(sig_new)
+        json.dump(old, open(SIGCACHE, 'w'))
+    sig = old
+    bi = max(int(o['batch_id'][1:]) for o in out)
+    added = []
+    for bat in batch(new, sig):
+        bi += 1
+        bid = f'B{bi:03d}'
+        for pi, grp in enumerate(products(bat, sig), 1):
+            added.append(dict(batch_id=bid, product_id=f'{bid}-P{pi:03d}', images=grp))
+    out.extend(added)
+    json.dump(out, open(OUT + '/batches.json', 'w'), indent=1)
+    print(f'added batches: {len({a["batch_id"] for a in added})}   products: {len(added)}')
+    for a in added:
+        print(a['product_id'], ' '.join(os.path.basename(i) for i in a['images']))
+
+
 def main():
+    if '--append' in sys.argv:
+        return append([a for a in sys.argv[1:] if a != '--append'])
     rows = [r for r in csv.DictReader(open(ROOT + '/content/swipe/index.csv')) if r['type'] == 'product']
     global BRAND
     BRAND = {r['path']: (r['brand_legible'] or '').split(' (')[0].strip().upper() for r in rows}

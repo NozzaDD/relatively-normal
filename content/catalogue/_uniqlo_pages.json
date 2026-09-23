@@ -7743,5 +7743,1455 @@
     "spread": 4.8
    }
   ]
+ },
+ "content/swipe/products/IMG_1163.png": {
+  "image": "content/swipe/products/IMG_1163.png",
+  "name": "100% Cashmere V Neck Jumper",
+  "colour_no": "57",
+  "colour": "OLIVE",
+  "price": "89,90 \u20ac",
+  "product_id": "485328",
+  "swatches": [
+   {
+    "cx": 1169,
+    "cy": 472,
+    "d": 88,
+    "selected": true,
+    "hex": "4D5943",
+    "lab": [
+     36.23,
+     -9.28,
+     11.22
+    ],
+    "family": "green",
+    "name": "moss",
+    "spread": 14.0
+   },
+   {
+    "cx": 1265,
+    "cy": 472,
+    "d": 72,
+    "selected": false,
+    "hex": "F1EEE5",
+    "lab": [
+     94.1,
+     -0.55,
+     4.7
+    ],
+    "family": "white",
+    "name": "off-white",
+    "spread": 0.4
+   },
+   {
+    "cx": 1361,
+    "cy": 472,
+    "d": 72,
+    "selected": false,
+    "hex": "B2B3AE",
+    "lab": [
+     72.73,
+     -1.28,
+     2.42
+    ],
+    "family": "grey",
+    "name": "light grey",
+    "spread": 11.6
+   },
+   {
+    "cx": 1457,
+    "cy": 472,
+    "d": 72,
+    "selected": false,
+    "hex": "212123",
+    "lab": [
+     12.81,
+     0.51,
+     -1.35
+    ],
+    "family": "black",
+    "name": "black",
+    "spread": 4.0
+   },
+   {
+    "cx": 1553,
+    "cy": 472,
+    "d": 72,
+    "selected": false,
+    "hex": "E64F7C",
+    "lab": [
+     55.96,
+     61.59,
+     7.4
+    ],
+    "family": "red",
+    "name": "red",
+    "spread": 6.0
+   },
+   {
+    "cx": 1649,
+    "cy": 472,
+    "d": 72,
+    "selected": false,
+    "hex": "BEAD9C",
+    "lab": [
+     71.71,
+     3.3,
+     10.95
+    ],
+    "family": "warm neutral",
+    "name": "oatmeal",
+    "spread": 6.9
+   },
+   {
+    "cx": 1745,
+    "cy": 472,
+    "d": 72,
+    "selected": false,
+    "hex": "E0ECE2",
+    "lab": [
+     92.28,
+     -5.79,
+     3.47
+    ],
+    "family": "white",
+    "name": "off-white",
+    "spread": 1.2
+   },
+   {
+    "cx": 1169,
+    "cy": 568,
+    "d": 72,
+    "selected": false,
+    "hex": "AFCDE9",
+    "lab": [
+     81.1,
+     -3.89,
+     -17.13
+    ],
+    "family": "blue",
+    "name": "sky",
+    "spread": 4.7
+   },
+   {
+    "cx": 1265,
+    "cy": 568,
+    "d": 72,
+    "selected": false,
+    "hex": "272941",
+    "lab": [
+     17.45,
+     6.13,
+     -15.47
+    ],
+    "family": "blue",
+    "name": "navy",
+    "spread": 8.4
+   },
+   {
+    "cx": 1361,
+    "cy": 568,
+    "d": 72,
+    "selected": false,
+    "hex": "A9588C",
+    "lab": [
+     48.65,
+     39.93,
+     -13.96
+    ],
+    "family": "purple",
+    "name": "mauve",
+    "spread": 9.3
+   }
+  ]
+ },
+ "content/swipe/products/IMG_1164.png": {
+  "image": "content/swipe/products/IMG_1164.png",
+  "name": "Souffl\u00e9 Yarn Polo Jumper",
+  "colour_no": "10",
+  "colour": "PINK",
+  "price": "39,90 \u20ac",
+  "product_id": "487939",
+  "swatches": [
+   {
+    "cx": 1169,
+    "cy": 654,
+    "d": 88,
+    "selected": true,
+    "hex": "D9B4AA",
+    "lab": [
+     76.25,
+     11.8,
+     10.1
+    ],
+    "family": "warm neutral",
+    "name": "oatmeal",
+    "spread": 3.6
+   },
+   {
+    "cx": 1265,
+    "cy": 654,
+    "d": 72,
+    "selected": false,
+    "hex": "485053",
+    "lab": [
+     33.43,
+     -2.48,
+     -2.85
+    ],
+    "family": "grey",
+    "name": "dark grey",
+    "spread": 15.7
+   },
+   {
+    "cx": 1361,
+    "cy": 654,
+    "d": 72,
+    "selected": false,
+    "hex": "E1DBCF",
+    "lab": [
+     87.57,
+     -0.01,
+     6.62
+    ],
+    "family": "warm neutral",
+    "name": "cream",
+    "spread": 2.9
+   },
+   {
+    "cx": 1457,
+    "cy": 654,
+    "d": 72,
+    "selected": false,
+    "hex": "524636",
+    "lab": [
+     30.5,
+     2.31,
+     11.54
+    ],
+    "family": "brown",
+    "name": "chocolate",
+    "spread": 9.3
+   },
+   {
+    "cx": 1553,
+    "cy": 654,
+    "d": 72,
+    "selected": false,
+    "hex": "273040",
+    "lab": [
+     19.7,
+     0.88,
+     -11.3
+    ],
+    "family": "blue",
+    "name": "navy",
+    "spread": 7.5
+   }
+  ]
+ },
+ "content/swipe/products/IMG_1165.png": {
+  "image": "content/swipe/products/IMG_1165.png",
+  "name": "100% Merino Crew Neck Cardigan",
+  "colour_no": "32",
+  "colour": "BEIGE",
+  "price": "39,90 \u20ac",
+  "product_id": "485304",
+  "swatches": [
+   {
+    "cx": 1169,
+    "cy": 472,
+    "d": 88,
+    "selected": true,
+    "hex": "D2BEA5",
+    "lab": [
+     78.02,
+     3.11,
+     15.21
+    ],
+    "family": "yellow",
+    "name": "butter",
+    "spread": 5.8
+   },
+   {
+    "cx": 1265,
+    "cy": 472,
+    "d": 72,
+    "selected": false,
+    "hex": "F0F0E4",
+    "lab": [
+     94.5,
+     -2.07,
+     5.79
+    ],
+    "family": "white",
+    "name": "off-white",
+    "spread": 0.6
+   },
+   {
+    "cx": 1361,
+    "cy": 472,
+    "d": 72,
+    "selected": false,
+    "hex": "909698",
+    "lab": [
+     61.66,
+     -1.76,
+     -1.8
+    ],
+    "family": "grey",
+    "name": "mid grey",
+    "spread": 15.4
+   },
+   {
+    "cx": 1457,
+    "cy": 472,
+    "d": 72,
+    "selected": false,
+    "hex": "1B1B1B",
+    "lab": [
+     9.77,
+     -0.0,
+     0.0
+    ],
+    "family": "black",
+    "name": "black",
+    "spread": 4.6
+   },
+   {
+    "cx": 1553,
+    "cy": 472,
+    "d": 72,
+    "selected": false,
+    "hex": "EF637D",
+    "lab": [
+     60.57,
+     56.05,
+     13.52
+    ],
+    "family": "red",
+    "name": "red",
+    "spread": 5.6
+   },
+   {
+    "cx": 1649,
+    "cy": 472,
+    "d": 72,
+    "selected": false,
+    "hex": "A37A4D",
+    "lab": [
+     54.28,
+     10.45,
+     30.7
+    ],
+    "family": "yellow",
+    "name": "ochre",
+    "spread": 7.3
+   },
+   {
+    "cx": 1745,
+    "cy": 472,
+    "d": 72,
+    "selected": false,
+    "hex": "9BB2DA",
+    "lab": [
+     72.14,
+     1.19,
+     -22.73
+    ],
+    "family": "blue",
+    "name": "steel blue",
+    "spread": 6.2
+   },
+   {
+    "cx": 1169,
+    "cy": 568,
+    "d": 72,
+    "selected": false,
+    "hex": "374667",
+    "lab": [
+     29.84,
+     3.83,
+     -21.17
+    ],
+    "family": "blue",
+    "name": "denim blue",
+    "spread": 8.8
+   },
+   {
+    "cx": 1265,
+    "cy": 568,
+    "d": 72,
+    "selected": false,
+    "hex": "191C2A",
+    "lab": [
+     10.59,
+     2.91,
+     -9.9
+    ],
+    "family": "blue",
+    "name": "navy",
+    "spread": 4.7
+   },
+   {
+    "cx": 1361,
+    "cy": 568,
+    "d": 72,
+    "selected": false,
+    "hex": "A15988",
+    "lab": [
+     47.62,
+     36.04,
+     -13.22
+    ],
+    "family": "purple",
+    "name": "mauve",
+    "spread": 10.1
+   }
+  ]
+ },
+ "content/swipe/products/IMG_1166.png": {
+  "image": "content/swipe/products/IMG_1166.png",
+  "name": "3D Knit Seamless Merino Blend Ribbed Polo Jumper",
+  "colour_no": "14",
+  "colour": "RED",
+  "price": "39,90 \u20ac",
+  "product_id": "485321",
+  "swatches": [
+   {
+    "cx": 1169,
+    "cy": 525,
+    "d": 88,
+    "selected": true,
+    "hex": "C83D2C",
+    "lab": [
+     46.71,
+     54.03,
+     41.28
+    ],
+    "family": "orange",
+    "name": "rust",
+    "spread": 9.4
+   },
+   {
+    "cx": 1265,
+    "cy": 525,
+    "d": 72,
+    "selected": false,
+    "hex": "F4F3EB",
+    "lab": [
+     95.72,
+     -1.05,
+     3.97
+    ],
+    "family": "white",
+    "name": "off-white",
+    "spread": 3.6
+   },
+   {
+    "cx": 1361,
+    "cy": 525,
+    "d": 72,
+    "selected": false,
+    "hex": "444549",
+    "lab": [
+     29.33,
+     0.5,
+     -2.55
+    ],
+    "family": "grey",
+    "name": "dark grey",
+    "spread": 14.7
+   },
+   {
+    "cx": 1457,
+    "cy": 525,
+    "d": 72,
+    "selected": false,
+    "hex": "272727",
+    "lab": [
+     15.64,
+     -0.0,
+     0.0
+    ],
+    "family": "black",
+    "name": "black",
+    "spread": 8.4
+   },
+   {
+    "cx": 1553,
+    "cy": 525,
+    "d": 72,
+    "selected": false,
+    "hex": "795231",
+    "lab": [
+     38.41,
+     12.45,
+     25.74
+    ],
+    "family": "yellow",
+    "name": "ochre",
+    "spread": 12.0
+   }
+  ]
+ },
+ "content/swipe/products/IMG_1167.png": {
+  "image": "content/swipe/products/IMG_1167.png",
+  "name": "100% Merino Ribbed Turtleneck Jumper",
+  "colour_no": "15",
+  "colour": "RED",
+  "price": "39,90 \u20ac",
+  "product_id": "485305",
+  "swatches": [
+   {
+    "cx": 1169,
+    "cy": 472,
+    "d": 88,
+    "selected": true,
+    "hex": "892D31",
+    "lab": [
+     32.74,
+     39.41,
+     19.17
+    ],
+    "family": "orange",
+    "name": "rust",
+    "spread": 8.5
+   },
+   {
+    "cx": 1265,
+    "cy": 472,
+    "d": 72,
+    "selected": false,
+    "hex": "F0EDE6",
+    "lab": [
+     93.8,
+     -0.21,
+     3.74
+    ],
+    "family": "white",
+    "name": "white",
+    "spread": 2.1
+   },
+   {
+    "cx": 1361,
+    "cy": 472,
+    "d": 72,
+    "selected": false,
+    "hex": "A2A2A9",
+    "lab": [
+     66.81,
+     1.36,
+     -3.62
+    ],
+    "family": "grey",
+    "name": "light grey",
+    "spread": 13.3
+   },
+   {
+    "cx": 1457,
+    "cy": 472,
+    "d": 72,
+    "selected": false,
+    "hex": "504F52",
+    "lab": [
+     33.79,
+     1.06,
+     -1.62
+    ],
+    "family": "grey",
+    "name": "dark grey",
+    "spread": 14.2
+   },
+   {
+    "cx": 1553,
+    "cy": 472,
+    "d": 72,
+    "selected": false,
+    "hex": "1E1E1E",
+    "lab": [
+     11.26,
+     -0.0,
+     0.0
+    ],
+    "family": "black",
+    "name": "black",
+    "spread": 6.7
+   },
+   {
+    "cx": 1649,
+    "cy": 472,
+    "d": 72,
+    "selected": false,
+    "hex": "C72D21",
+    "lab": [
+     44.42,
+     58.93,
+     44.71
+    ],
+    "family": "orange",
+    "name": "rust",
+    "spread": 7.8
+   },
+   {
+    "cx": 1745,
+    "cy": 472,
+    "d": 72,
+    "selected": false,
+    "hex": "623240",
+    "lab": [
+     27.43,
+     23.4,
+     1.0
+    ],
+    "family": "red",
+    "name": "oxblood",
+    "spread": 8.1
+   },
+   {
+    "cx": 1169,
+    "cy": 568,
+    "d": 72,
+    "selected": false,
+    "hex": "AE9B8D",
+    "lab": [
+     65.25,
+     4.66,
+     9.89
+    ],
+    "family": "warm neutral",
+    "name": "oatmeal",
+    "spread": 10.2
+   },
+   {
+    "cx": 1265,
+    "cy": 568,
+    "d": 72,
+    "selected": false,
+    "hex": "504032",
+    "lab": [
+     28.39,
+     4.59,
+     11.19
+    ],
+    "family": "brown",
+    "name": "chocolate",
+    "spread": 9.6
+   },
+   {
+    "cx": 1361,
+    "cy": 568,
+    "d": 72,
+    "selected": false,
+    "hex": "204F52",
+    "lab": [
+     30.66,
+     -14.85,
+     -6.6
+    ],
+    "family": "blue",
+    "name": "petrol",
+    "spread": 9.1
+   },
+   {
+    "cx": 1457,
+    "cy": 568,
+    "d": 72,
+    "selected": false,
+    "hex": "4F88DC",
+    "lab": [
+     56.52,
+     7.52,
+     -48.48
+    ],
+    "family": "blue",
+    "name": "steel blue",
+    "spread": 9.3
+   },
+   {
+    "cx": 1553,
+    "cy": 568,
+    "d": 72,
+    "selected": false,
+    "hex": "1F2635",
+    "lab": [
+     15.14,
+     1.49,
+     -10.74
+    ],
+    "family": "blue",
+    "name": "navy",
+    "spread": 8.1
+   }
+  ]
+ },
+ "content/swipe/products/IMG_1168.png": {
+  "image": "content/swipe/products/IMG_1168.png",
+  "name": "Smooth Cotton Crew Neck Jumper",
+  "colour_no": "19",
+  "colour": "WINE",
+  "price": "39,90 \u20ac",
+  "product_id": "",
+  "swatches": [
+   {
+    "cx": 1169,
+    "cy": 654,
+    "d": 88,
+    "selected": true,
+    "hex": "572433",
+    "lab": [
+     22.04,
+     25.33,
+     1.76
+    ],
+    "family": "red",
+    "name": "oxblood",
+    "spread": 3.3
+   },
+   {
+    "cx": 1265,
+    "cy": 654,
+    "d": 72,
+    "selected": false,
+    "hex": "EEEDE9",
+    "lab": [
+     93.72,
+     -0.37,
+     2.05
+    ],
+    "family": "white",
+    "name": "white",
+    "spread": 1.4
+   },
+   {
+    "cx": 1361,
+    "cy": 654,
+    "d": 72,
+    "selected": false,
+    "hex": "969495",
+    "lab": [
+     61.51,
+     0.92,
+     -0.27
+    ],
+    "family": "grey",
+    "name": "mid grey",
+    "spread": 10.7
+   },
+   {
+    "cx": 1457,
+    "cy": 654,
+    "d": 72,
+    "selected": false,
+    "hex": "212124",
+    "lab": [
+     12.85,
+     0.77,
+     -2.02
+    ],
+    "family": "black",
+    "name": "black",
+    "spread": 3.4
+   },
+   {
+    "cx": 1553,
+    "cy": 654,
+    "d": 72,
+    "selected": false,
+    "hex": "EB2737",
+    "lab": [
+     51.15,
+     71.27,
+     41.93
+    ],
+    "family": "red",
+    "name": "brick",
+    "spread": 3.5
+   },
+   {
+    "cx": 1649,
+    "cy": 654,
+    "d": 72,
+    "selected": false,
+    "hex": "BC9165",
+    "lab": [
+     63.25,
+     10.6,
+     29.54
+    ],
+    "family": "yellow",
+    "name": "gold",
+    "spread": 6.4
+   },
+   {
+    "cx": 1745,
+    "cy": 654,
+    "d": 72,
+    "selected": false,
+    "hex": "342521",
+    "lab": [
+     16.32,
+     6.39,
+     5.43
+    ],
+    "family": "brown",
+    "name": "espresso",
+    "spread": 3.3
+   },
+   {
+    "cx": 1169,
+    "cy": 750,
+    "d": 72,
+    "selected": false,
+    "hex": "F4F0D5",
+    "lab": [
+     94.47,
+     -3.12,
+     13.54
+    ],
+    "family": "white",
+    "name": "off-white",
+    "spread": 1.0
+   },
+   {
+    "cx": 1265,
+    "cy": 750,
+    "d": 72,
+    "selected": false,
+    "hex": "7AAFE7",
+    "lab": [
+     69.87,
+     -2.51,
+     -33.48
+    ],
+    "family": "blue",
+    "name": "steel blue",
+    "spread": 7.9
+   }
+  ]
+ },
+ "content/swipe/products/IMG_1169.png": {
+  "image": "content/swipe/products/IMG_1169.png",
+  "name": "Hoodie T-Shirt (Long Sleeve)",
+  "colour_no": "03",
+  "colour": "GREY",
+  "price": "19,90 \u20ac",
+  "product_id": "488298",
+  "swatches": [
+   {
+    "cx": 1169,
+    "cy": 472,
+    "d": 88,
+    "selected": true,
+    "hex": "C2C4BF",
+    "lab": [
+     78.87,
+     -1.61,
+     2.26
+    ],
+    "family": "cool neutral",
+    "name": "pale grey",
+    "spread": 8.1
+   },
+   {
+    "cx": 1265,
+    "cy": 472,
+    "d": 72,
+    "selected": false,
+    "hex": "EBEAE5",
+    "lab": [
+     92.65,
+     -0.54,
+     2.54
+    ],
+    "family": "white",
+    "name": "white",
+    "spread": 0.9
+   },
+   {
+    "cx": 1361,
+    "cy": 472,
+    "d": 72,
+    "selected": false,
+    "hex": "2D2D2D",
+    "lab": [
+     18.47,
+     -0.0,
+     0.0
+    ],
+    "family": "black",
+    "name": "black",
+    "spread": 2.5
+   },
+   {
+    "cx": 1457,
+    "cy": 472,
+    "d": 72,
+    "selected": false,
+    "hex": "4E3C3B",
+    "lab": [
+     27.21,
+     7.71,
+     3.64
+    ],
+    "family": "grey",
+    "name": "dark grey",
+    "spread": 3.8
+   },
+   {
+    "cx": 1553,
+    "cy": 472,
+    "d": 72,
+    "selected": false,
+    "hex": "CFE2E6",
+    "lab": [
+     88.62,
+     -5.52,
+     -4.11
+    ],
+    "family": "blue",
+    "name": "sky",
+    "spread": 2.6
+   },
+   {
+    "cx": 1649,
+    "cy": 472,
+    "d": 72,
+    "selected": false,
+    "hex": "2F3D5E",
+    "lab": [
+     26.01,
+     4.52,
+     -21.41
+    ],
+    "family": "blue",
+    "name": "navy",
+    "spread": 4.7
+   }
+  ]
+ },
+ "content/swipe/products/IMG_1170.png": {
+  "image": "content/swipe/products/IMG_1170.png",
+  "name": "HEATTECH Extra Warm Cashmere Blend Turtleneck T-Shirt (Long Sleeve)",
+  "colour_no": "10",
+  "colour": "PINK",
+  "price": "24,90 \u20ac",
+  "product_id": "485825",
+  "swatches": [
+   {
+    "cx": 1169,
+    "cy": 525,
+    "d": 88,
+    "selected": true,
+    "hex": "FBE0D9",
+    "lab": [
+     91.16,
+     8.15,
+     6.81
+    ],
+    "family": "pink",
+    "name": "blush",
+    "spread": 0.5
+   },
+   {
+    "cx": 1265,
+    "cy": 525,
+    "d": 72,
+    "selected": false,
+    "hex": "4C4F56",
+    "lab": [
+     33.56,
+     0.4,
+     -4.53
+    ],
+    "family": "grey",
+    "name": "dark grey",
+    "spread": 10.5
+   },
+   {
+    "cx": 1361,
+    "cy": 525,
+    "d": 72,
+    "selected": false,
+    "hex": "2C2D2F",
+    "lab": [
+     18.44,
+     0.04,
+     -1.44
+    ],
+    "family": "black",
+    "name": "black",
+    "spread": 3.0
+   },
+   {
+    "cx": 1457,
+    "cy": 525,
+    "d": 72,
+    "selected": false,
+    "hex": "FF98AD",
+    "lab": [
+     74.02,
+     40.92,
+     5.81
+    ],
+    "family": "grey",
+    "name": "light grey",
+    "spread": 1.9
+   },
+   {
+    "cx": 1553,
+    "cy": 525,
+    "d": 72,
+    "selected": false,
+    "hex": "B30B25",
+    "lab": [
+     37.77,
+     60.82,
+     34.61
+    ],
+    "family": "red",
+    "name": "brick",
+    "spread": 2.1
+   },
+   {
+    "cx": 1649,
+    "cy": 525,
+    "d": 72,
+    "selected": false,
+    "hex": "3E0E24",
+    "lab": [
+     12.39,
+     25.58,
+     -2.21
+    ],
+    "family": "red",
+    "name": "oxblood",
+    "spread": 1.9
+   },
+   {
+    "cx": 1745,
+    "cy": 525,
+    "d": 72,
+    "selected": false,
+    "hex": "ECE9E1",
+    "lab": [
+     92.37,
+     -0.38,
+     4.24
+    ],
+    "family": "white",
+    "name": "off-white",
+    "spread": 1.1
+   },
+   {
+    "cx": 1169,
+    "cy": 621,
+    "d": 72,
+    "selected": false,
+    "hex": "C4B39D",
+    "lab": [
+     73.81,
+     2.49,
+     13.44
+    ],
+    "family": "brown",
+    "name": "tan",
+    "spread": 4.0
+   },
+   {
+    "cx": 1265,
+    "cy": 621,
+    "d": 72,
+    "selected": false,
+    "hex": "362825",
+    "lab": [
+     17.62,
+     5.99,
+     4.49
+    ],
+    "family": "brown",
+    "name": "espresso",
+    "spread": 2.9
+   },
+   {
+    "cx": 1361,
+    "cy": 621,
+    "d": 72,
+    "selected": false,
+    "hex": "F1F0B8",
+    "lab": [
+     93.66,
+     -8.41,
+     27.28
+    ],
+    "family": "yellow",
+    "name": "butter",
+    "spread": 0.7
+   },
+   {
+    "cx": 1457,
+    "cy": 621,
+    "d": 72,
+    "selected": false,
+    "hex": "CFE9C9",
+    "lab": [
+     89.75,
+     -14.36,
+     12.7
+    ],
+    "family": "cool neutral",
+    "name": "pale grey",
+    "spread": 1.0
+   },
+   {
+    "cx": 1553,
+    "cy": 621,
+    "d": 72,
+    "selected": false,
+    "hex": "668D8C",
+    "lab": [
+     55.85,
+     -13.63,
+     -3.83
+    ],
+    "family": "blue",
+    "name": "steel blue",
+    "spread": 4.8
+   },
+   {
+    "cx": 1649,
+    "cy": 621,
+    "d": 72,
+    "selected": false,
+    "hex": "101F40",
+    "lab": [
+     12.35,
+     6.7,
+     -22.95
+    ],
+    "family": "blue",
+    "name": "navy",
+    "spread": 2.6
+   },
+   {
+    "cx": 1745,
+    "cy": 621,
+    "d": 72,
+    "selected": false,
+    "hex": "40293A",
+    "lab": [
+     19.97,
+     13.97,
+     -6.53
+    ],
+    "family": "purple",
+    "name": "aubergine",
+    "spread": 2.8
+   }
+  ]
+ },
+ "content/swipe/products/IMG_1171.png": {
+  "image": "content/swipe/products/IMG_1171.png",
+  "name": "Crew Neck T-Shirt",
+  "colour_no": "32",
+  "colour": "BEIGE",
+  "price": "14,90 \u20ac",
+  "product_id": "",
+  "swatches": [
+   {
+    "cx": 1169,
+    "cy": 644,
+    "d": 88,
+    "selected": true,
+    "hex": "D9D0AF",
+    "lab": [
+     83.42,
+     -2.24,
+     17.53
+    ],
+    "family": "yellow",
+    "name": "butter",
+    "spread": 0.8
+   },
+   {
+    "cx": 1265,
+    "cy": 644,
+    "d": 72,
+    "selected": false,
+    "hex": "EEEFF1",
+    "lab": [
+     94.42,
+     0.02,
+     -1.08
+    ],
+    "family": "white",
+    "name": "white",
+    "spread": 0.9
+   },
+   {
+    "cx": 1361,
+    "cy": 644,
+    "d": 72,
+    "selected": false,
+    "hex": "343C3F",
+    "lab": [
+     24.7,
+     -2.57,
+     -2.98
+    ],
+    "family": "grey",
+    "name": "dark grey",
+    "spread": 1.1
+   },
+   {
+    "cx": 1457,
+    "cy": 644,
+    "d": 72,
+    "selected": false,
+    "hex": "F0E6DC",
+    "lab": [
+     91.81,
+     1.7,
+     6.07
+    ],
+    "family": "white",
+    "name": "off-white",
+    "spread": 0.3
+   },
+   {
+    "cx": 1553,
+    "cy": 644,
+    "d": 72,
+    "selected": false,
+    "hex": "AB2E54",
+    "lab": [
+     40.01,
+     52.85,
+     7.74
+    ],
+    "family": "red",
+    "name": "burgundy",
+    "spread": 2.0
+   },
+   {
+    "cx": 1649,
+    "cy": 644,
+    "d": 72,
+    "selected": false,
+    "hex": "85696A",
+    "lab": [
+     47.15,
+     11.32,
+     3.7
+    ],
+    "family": "grey",
+    "name": "mid grey",
+    "spread": 2.8
+   },
+   {
+    "cx": 1745,
+    "cy": 644,
+    "d": 72,
+    "selected": false,
+    "hex": "F1F3E6",
+    "lab": [
+     95.38,
+     -2.92,
+     6.03
+    ],
+    "family": "white",
+    "name": "off-white",
+    "spread": 1.2
+   },
+   {
+    "cx": 1169,
+    "cy": 740,
+    "d": 72,
+    "selected": false,
+    "hex": "C1D2C8",
+    "lab": [
+     82.7,
+     -7.61,
+     2.99
+    ],
+    "family": "green",
+    "name": "sage",
+    "spread": 1.1
+   },
+   {
+    "cx": 1265,
+    "cy": 740,
+    "d": 72,
+    "selected": false,
+    "hex": "7094AC",
+    "lab": [
+     59.53,
+     -6.41,
+     -16.57
+    ],
+    "family": "blue",
+    "name": "steel blue",
+    "spread": 2.3
+   },
+   {
+    "cx": 1361,
+    "cy": 740,
+    "d": 72,
+    "selected": false,
+    "hex": "324468",
+    "lab": [
+     28.93,
+     4.08,
+     -23.25
+    ],
+    "family": "blue",
+    "name": "denim blue",
+    "spread": 2.1
+   },
+   {
+    "cx": 1457,
+    "cy": 740,
+    "d": 72,
+    "selected": false,
+    "hex": "D1CCCD",
+    "lab": [
+     82.46,
+     1.9,
+     0.12
+    ],
+    "family": "cool neutral",
+    "name": "pale grey",
+    "spread": 0.9
+   },
+   {
+    "cx": 1553,
+    "cy": 740,
+    "d": 72,
+    "selected": false,
+    "hex": "9C949B",
+    "lab": [
+     62.18,
+     4.26,
+     -2.63
+    ],
+    "family": "grey",
+    "name": "light grey",
+    "spread": 2.8
+   }
+  ]
+ },
+ "content/swipe/products/IMG_1172.png": {
+  "image": "content/swipe/products/IMG_1172.png",
+  "name": "100% Supima Cotton T-Shirt",
+  "colour_no": "00",
+  "colour": "WHITE",
+  "price": "9,90 \u20ac",
+  "product_id": "",
+  "swatches": [
+   {
+    "cx": 1169,
+    "cy": 644,
+    "d": 72,
+    "selected": false,
+    "hex": "333436",
+    "lab": [
+     21.68,
+     0.04,
+     -1.41
+    ],
+    "family": "grey",
+    "name": "dark grey",
+    "spread": 1.3
+   },
+   {
+    "cx": 1265,
+    "cy": 644,
+    "d": 88,
+    "selected": true,
+    "hex": "EFEFEF",
+    "lab": [
+     94.45,
+     -0.0,
+     0.0
+    ],
+    "family": "white",
+    "name": "white",
+    "spread": 0.7
+   },
+   {
+    "cx": 1361,
+    "cy": 644,
+    "d": 72,
+    "selected": false,
+    "hex": "D3D5CF",
+    "lab": [
+     84.97,
+     -1.76,
+     2.72
+    ],
+    "family": "cool neutral",
+    "name": "pale grey",
+    "spread": 8.1
+   },
+   {
+    "cx": 1457,
+    "cy": 644,
+    "d": 72,
+    "selected": false,
+    "hex": "FAE3DB",
+    "lab": [
+     91.85,
+     6.56,
+     6.76
+    ],
+    "family": "white",
+    "name": "off-white",
+    "spread": 0.4
+   },
+   {
+    "cx": 1553,
+    "cy": 644,
+    "d": 72,
+    "selected": false,
+    "hex": "A9926C",
+    "lab": [
+     61.72,
+     2.95,
+     23.34
+    ],
+    "family": "brown",
+    "name": "tan",
+    "spread": 1.8
+   },
+   {
+    "cx": 1649,
+    "cy": 644,
+    "d": 72,
+    "selected": false,
+    "hex": "3F3E4E",
+    "lab": [
+     26.88,
+     4.33,
+     -9.52
+    ],
+    "family": "blue",
+    "name": "navy",
+    "spread": 1.8
+   },
+   {
+    "cx": 1745,
+    "cy": 644,
+    "d": 72,
+    "selected": false,
+    "hex": "9E8E99",
+    "lab": [
+     60.71,
+     7.98,
+     -3.64
+    ],
+    "family": "purple",
+    "name": "mauve",
+    "spread": 2.6
+   }
+  ]
  }
 }

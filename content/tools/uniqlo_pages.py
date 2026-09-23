@@ -79,7 +79,9 @@ def read_panel(lines):
                    and abs(lines[j]['left'] - l['left']) < 20 and len(name) < 3):
                 name.insert(0, lines[j]['text'].strip())
                 below, j = lines[j], j - 1
-            got['name'] = ' '.join(name)
+            # a badge set on the name's own line ("| Best seller") is not the
+            # name; UNIQLO's names never contain a bar
+            got['name'] = ' '.join(name).split(' | ')[0].strip()
         if got['colour_line'] is not None and got['size_line'] is None and l['text'].startswith('Size'):
             got['size_line'] = l
         m = PRICE_RE.search(l['text'])

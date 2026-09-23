@@ -9835,5 +9835,2024 @@
   ],
   "found": 4,
   "lattice": 4
+ },
+ "B063-P003#0": {
+  "cells": [
+   {
+    "box": [
+     0.0788,
+     0.3319,
+     0.347,
+     0.2831
+    ],
+    "path": "review/B063-P003c0.jpg",
+    "w": 291,
+    "h": 340,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B063-P003c0-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.5698,
+     0.3225,
+     0.347,
+     0.3019
+    ],
+    "path": "review/B063-P003c1.jpg",
+    "w": 292,
+    "h": 362,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "1erinos boat neck",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B063-P003c1-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.0966,
+     0.8506,
+     0.3113,
+     0.1644
+    ],
+    "path": "review/B063-P003c2.jpg",
+    "w": 261,
+    "h": 198,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B063-P003c2-cut.webp",
+    "cut_skin": 0.577,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.5787,
+     0.8569,
+     0.3291,
+     0.1581
+    ],
+    "path": "review/B063-P003c3.jpg",
+    "w": 276,
+    "h": 189,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B063-P003c3-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   }
+  ],
+  "found": 4,
+  "lattice": 4
+ },
+ "B064-P002#0": {
+  "cells": [
+   {
+    "box": [
+     0.0386,
+     0.1881,
+     0.2755,
+     0.2581
+    ],
+    "path": "review/B064-P002c0.jpg",
+    "w": 231,
+    "h": 310,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "ew Neck Sweater With Cable Knit In",
+    "category": "",
+    "price": "3",
+    "currency": "USD",
+    "label": "",
+    "cut": "review/B064-P002c0-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "top"
+   },
+   {
+    "box": [
+     0.3689,
+     0.1881,
+     0.2621,
+     0.2581
+    ],
+    "path": "review/B064-P002c1.jpg",
+    "w": 221,
+    "h": 310,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "rafine Merino Wool Gilet",
+    "category": "",
+    "price": "219.00",
+    "currency": "USD",
+    "label": "",
+    "cut": "review/B064-P002c1-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "layer"
+   },
+   {
+    "box": [
+     0.6814,
+     0.1912,
+     0.2889,
+     0.255
+    ],
+    "path": "review/B064-P002c2.jpg",
+    "w": 243,
+    "h": 306,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "rew Neck Cashmere Sweater",
+    "category": "",
+    "price": "551.00",
+    "currency": "USD",
+    "label": "",
+    "cut": "review/B064-P002c2-cut.webp",
+    "cut_skin": 0.149,
+    "slot": "top"
+   },
+   {
+    "box": [
+     0.0341,
+     0.5975,
+     0.2845,
+     0.255
+    ],
+    "path": "review/B064-P002c3.jpg",
+    "w": 239,
+    "h": 306,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "olcevita Razor Blade In Cashmere",
+    "category": "",
+    "price": "636.00",
+    "currency": "USD",
+    "label": "",
+    "cut": "review/B064-P002c3-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.3622,
+     0.5975,
+     0.2755,
+     0.255
+    ],
+    "path": "review/B064-P002c4.jpg",
+    "w": 231,
+    "h": 306,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "fersized Dolcevita In Pure Wool",
+    "category": "",
+    "price": "3",
+    "currency": "USD",
+    "label": "",
+    "cut": "review/B064-P002c4-cut.webp",
+    "cut_skin": 0.0011,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.7841,
+     0.5975,
+     0.1773,
+     0.255
+    ],
+    "path": "review/B064-P002c5.jpg",
+    "w": 149,
+    "h": 306,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "urtleneck Sweater",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B064-P002c5-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "top"
+   }
+  ],
+  "found": 5,
+  "lattice": 6
+ },
+ "B066-P002#0": {
+  "cells": [
+   {
+    "box": [
+     0.0163,
+     0.1912,
+     0.2443,
+     0.1925
+    ],
+    "path": "review/B066-P002c0.jpg",
+    "w": 206,
+    "h": 231,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "N\u00b0398 Jewel cashmere sweater",
+    "category": "",
+    "price": "325",
+    "currency": "CHF",
+    "label": "new season",
+    "cut": "review/B066-P002c0-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "top"
+   },
+   {
+    "box": [
+     0.2796,
+     0.185,
+     0.1996,
+     0.2019
+    ],
+    "path": "review/B066-P002c1.jpg",
+    "w": 168,
+    "h": 242,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "\u00b0457 Jack cashmere-blend sweat",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B066-P002c1-cut.webp",
+    "cut_skin": 0.0006,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.5162,
+     0.185,
+     0.2086,
+     0.2019
+    ],
+    "path": "review/B066-P002c2.jpg",
+    "w": 175,
+    "h": 242,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "1\u00b0478 Xtra Fun cashmere zip-up c..",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B066-P002c2-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.7662,
+     0.185,
+     0.1907,
+     0.2019
+    ],
+    "path": "review/B066-P002c3.jpg",
+    "w": 160,
+    "h": 242,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "20 Oversize Xtra cashmere swe.",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B066-P002c3-cut.webp",
+    "cut_skin": 0.0092,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.0341,
+     0.4412,
+     0.2041,
+     0.1988
+    ],
+    "path": "review/B066-P002c4.jpg",
+    "w": 172,
+    "h": 239,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "1\u00b0478 Xtra Fun cashmere zip-up c.",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B066-P002c4-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.2841,
+     0.4412,
+     0.1907,
+     0.1988
+    ],
+    "path": "review/B066-P002c5.jpg",
+    "w": 161,
+    "h": 239,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "358 Mister cashmere-blend swe",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B066-P002c5-cut.webp",
+    "cut_skin": 0.0013,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.5296,
+     0.4412,
+     0.1818,
+     0.1988
+    ],
+    "path": "review/B066-P002c6.jpg",
+    "w": 153,
+    "h": 239,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "438 Xtra Fab cashmere zip-up :",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B066-P002c6-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.7529,
+     0.4412,
+     0.2175,
+     0.1988
+    ],
+    "path": "review/B066-P002c7.jpg",
+    "w": 183,
+    "h": 239,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "N\u00b0399 Flyer cashmere cardigan",
+    "category": "",
+    "price": "280",
+    "currency": "CHF",
+    "label": "new season",
+    "cut": "review/B066-P002c7-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "layer"
+   },
+   {
+    "box": [
+     0.0252,
+     0.6975,
+     0.2264,
+     0.1988
+    ],
+    "path": "review/B066-P002c8.jpg",
+    "w": 190,
+    "h": 238,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "N\u00b0399 Flyer cashmere cardigan",
+    "category": "",
+    "price": "280",
+    "currency": "CHF",
+    "label": "new season",
+    "cut": "review/B066-P002c8-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "layer"
+   },
+   {
+    "box": [
+     0.2841,
+     0.6975,
+     0.1907,
+     0.1988
+    ],
+    "path": "review/B066-P002c9.jpg",
+    "w": 161,
+    "h": 238,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "'457 Jack cashmere-blend sweat",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B066-P002c9-cut.webp",
+    "cut_skin": 0.0001,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.5252,
+     0.6975,
+     0.1907,
+     0.1988
+    ],
+    "path": "review/B066-P002c10.jpg",
+    "w": 161,
+    "h": 238,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "'319 Xtra Out cashmere zip-up s",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B066-P002c10-cut.webp",
+    "cut_skin": 0.0034,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.7573,
+     0.6975,
+     0.2086,
+     0.1988
+    ],
+    "path": "review/B066-P002c11.jpg",
+    "w": 176,
+    "h": 238,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "N\u00b0280 Bi cashmere-blend sweater",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B066-P002c11-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "top"
+   }
+  ],
+  "found": 12,
+  "lattice": 12
+ },
+ "B066-P003#0": {
+  "cells": [
+   {
+    "box": [
+     0.043,
+     0.1475,
+     0.1907,
+     0.2019
+    ],
+    "path": "review/B066-P003c0.jpg",
+    "w": 160,
+    "h": 242,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "457 Jack cashmere-blend sweat",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B066-P003c0-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.7662,
+     0.1475,
+     0.1907,
+     0.2019
+    ],
+    "path": "review/B066-P003c1.jpg",
+    "w": 160,
+    "h": 242,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "'223 Be For cashmere-blend pol",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B066-P003c1-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.043,
+     0.1494,
+     0.1907,
+     0.1988
+    ],
+    "path": "review/B066-P003c2.jpg",
+    "w": 160,
+    "h": 238,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "457 Jack cashmere-blend sweat",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B066-P003c2-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.2841,
+     0.1506,
+     0.1907,
+     0.1988
+    ],
+    "path": "review/B066-P003c3.jpg",
+    "w": 161,
+    "h": 239,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "457 Jack oversized cashmere-b.",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B066-P003c3-cut.webp",
+    "cut_skin": 0.0019,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.5162,
+     0.1506,
+     0.2086,
+     0.1956
+    ],
+    "path": "review/B066-P003c4.jpg",
+    "w": 175,
+    "h": 235,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "1\u00b0430 Jeanne cashmere-blend sw..",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B066-P003c4-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.5244,
+     0.1494,
+     0.1907,
+     0.1988
+    ],
+    "path": "review/B066-P003c5.jpg",
+    "w": 160,
+    "h": 238,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "430 Jeanne cashmere-blend sw",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B066-P003c5-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.7662,
+     0.1494,
+     0.1907,
+     0.1988
+    ],
+    "path": "review/B066-P003c6.jpg",
+    "w": 160,
+    "h": 238,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "'223 Be For cashmere-blend pol",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B066-P003c6-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.0386,
+     0.4037,
+     0.1996,
+     0.1988
+    ],
+    "path": "review/B066-P003c7.jpg",
+    "w": 168,
+    "h": 239,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "\u00b0170 Chou cashmere-blend card.",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B066-P003c7-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.2796,
+     0.4037,
+     0.1996,
+     0.1988
+    ],
+    "path": "review/B066-P003c8.jpg",
+    "w": 168,
+    "h": 239,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "\u00b0511 Dorothea cashmere cardiga:",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B066-P003c8-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.5252,
+     0.4037,
+     0.1907,
+     0.1988
+    ],
+    "path": "review/B066-P003c9.jpg",
+    "w": 161,
+    "h": 239,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "'300 Little 2 cashmere cardigan",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B066-P003c9-cut.webp",
+    "cut_skin": 0.0098,
+    "slot": "layer"
+   },
+   {
+    "box": [
+     0.7662,
+     0.4037,
+     0.1907,
+     0.1988
+    ],
+    "path": "review/B066-P003c10.jpg",
+    "w": 160,
+    "h": 239,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "320 Rush cashmere-blend swea",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B066-P003c10-cut.webp",
+    "cut_skin": 0.0113,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.0475,
+     0.66,
+     0.1818,
+     0.1988
+    ],
+    "path": "review/B066-P003c11.jpg",
+    "w": 153,
+    "h": 238,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "516 Ella cashmere blend wrap",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B066-P003c11-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.2886,
+     0.66,
+     0.1818,
+     0.1988
+    ],
+    "path": "review/B066-P003c12.jpg",
+    "w": 153,
+    "h": 238,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "20 Oversize Xtra cashmere swe",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B066-P003c12-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.5244,
+     0.6596,
+     0.1907,
+     0.1988
+    ],
+    "path": "review/B066-P003c13.jpg",
+    "w": 160,
+    "h": 239,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "'385 Xtra Cute cashmere zip-up",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B066-P003c13-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.5252,
+     0.66,
+     0.1862,
+     0.1988
+    ],
+    "path": "review/B066-P003c14.jpg",
+    "w": 157,
+    "h": 238,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "'385 Xtra Cute cashmere zip-up",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B066-P003c14-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.7707,
+     0.66,
+     0.1818,
+     0.1956
+    ],
+    "path": "review/B066-P003c15.jpg",
+    "w": 153,
+    "h": 234,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "385 Xtra Cute cashmere jacket",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B066-P003c15-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "layer"
+   }
+  ],
+  "found": 11,
+  "lattice": 16
+ },
+ "B066-P004#0": {
+  "cells": [
+   {
+    "box": [
+     0.043,
+     0.1475,
+     0.1907,
+     0.1988
+    ],
+    "path": "review/B066-P004c0.jpg",
+    "w": 160,
+    "h": 238,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "434 Crop Xtra cashmere sweate",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B066-P004c0-cut.webp",
+    "cut_skin": 0.0181,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.2886,
+     0.1475,
+     0.1818,
+     0.1988
+    ],
+    "path": "review/B066-P004c1.jpg",
+    "w": 153,
+    "h": 238,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "516 Ella cashmere-blend wrap",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B066-P004c1-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.7662,
+     0.1475,
+     0.1907,
+     0.1988
+    ],
+    "path": "review/B066-P004c2.jpg",
+    "w": 160,
+    "h": 238,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "434 Crop Xtra cashmere sweate",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B066-P004c2-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.5252,
+     0.1506,
+     0.1907,
+     0.1956
+    ],
+    "path": "review/B066-P004c3.jpg",
+    "w": 161,
+    "h": 235,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "513 Jo cashmere sweater",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B066-P004c3-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "top"
+   },
+   {
+    "box": [
+     0.0475,
+     0.4037,
+     0.1862,
+     0.1988
+    ],
+    "path": "review/B066-P004c4.jpg",
+    "w": 157,
+    "h": 239,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "516 Ella cashmere-blend wrap .",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B066-P004c4-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.2573,
+     0.4163,
+     0.2443,
+     0.1737
+    ],
+    "path": "review/B066-P004c5.jpg",
+    "w": 205,
+    "h": 209,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "N\u00b0267 Tina cotton and cashmere ...",
+    "category": "",
+    "price": "155",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B066-P004c5-cut.webp",
+    "cut_skin": 0.0014,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.5029,
+     0.4131,
+     0.2398,
+     0.18
+    ],
+    "path": "review/B066-P004c6.jpg",
+    "w": 202,
+    "h": 216,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "N\u00b0292 America cotton and cashm...",
+    "category": "",
+    "price": "155",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B066-P004c6-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.7662,
+     0.4037,
+     0.1907,
+     0.1988
+    ],
+    "path": "review/B066-P004c7.jpg",
+    "w": 160,
+    "h": 239,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "'% off over CHF450 with FIRST 1!",
+    "category": "",
+    "price": "450",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B066-P004c7-cut.webp",
+    "cut_skin": 0.5933,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.0252,
+     0.6694,
+     0.222,
+     0.2019
+    ],
+    "path": "review/B066-P004c8.jpg",
+    "w": 186,
+    "h": 242,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "N\u00b0451 Lisa striped cotton and cas...",
+    "category": "",
+    "price": "215",
+    "currency": "CHF",
+    "label": "new season 9",
+    "cut": "review/B066-P004c8-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.302,
+     0.6694,
+     0.155,
+     0.2019
+    ],
+    "path": "review/B066-P004c9.jpg",
+    "w": 131,
+    "h": 242,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "2 Collo cotton yniand cashme",
+    "category": "",
+    "price": "450",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B066-P004c9-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.552,
+     0.6694,
+     0.1371,
+     0.2019
+    ],
+    "path": "review/B066-P004c10.jpg",
+    "w": 115,
+    "h": 242,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Pillar cotton and cashm",
+    "category": "",
+    "price": "450",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B066-P004c10-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.7529,
+     0.6694,
+     0.2175,
+     0.2019
+    ],
+    "path": "review/B066-P004c11.jpg",
+    "w": 183,
+    "h": 242,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "N\u00b0490 Martina cashmere-blend s...",
+    "category": "",
+    "price": "405",
+    "currency": "CHF",
+    "label": "new season 9",
+    "cut": "review/B066-P004c11-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   }
+  ],
+  "found": 11,
+  "lattice": 12
+ },
+ "B066-P005#0": {
+  "cells": [
+   {
+    "box": [
+     0.0383,
+     0.2116,
+     0.2033,
+     0.1988
+    ],
+    "path": "review/B066-P005c0.jpg",
+    "w": 171,
+    "h": 239,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "\u00b0479 Runaway cashmere-blend s..",
+    "category": "",
+    "price": "450",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B066-P005c0-cut.webp",
+    "cut_skin": 0.0003,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.2694,
+     0.21,
+     0.2211,
+     0.2019
+    ],
+    "path": "review/B066-P005c1.jpg",
+    "w": 186,
+    "h": 242,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "N\u00b0490 Martina cashmere-blend s...",
+    "category": "",
+    "price": "405",
+    "currency": "CHF",
+    "label": "new season 9",
+    "cut": "review/B066-P005c1-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.5183,
+     0.21,
+     0.2033,
+     0.2019
+    ],
+    "path": "review/B066-P005c2.jpg",
+    "w": 172,
+    "h": 242,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "i\u00b0494 Tangerine cashmere-blend ..",
+    "category": "",
+    "price": "450",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B066-P005c2-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.7539,
+     0.21,
+     0.2078,
+     0.2019
+    ],
+    "path": "review/B066-P005c3.jpg",
+    "w": 175,
+    "h": 242,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "N\u00b0493 Paolo cashmere-blend swe..",
+    "category": "",
+    "price": "515",
+    "currency": "CHF",
+    "label": "new season <",
+    "cut": "review/B066-P005c3-cut.webp",
+    "cut_skin": 0.643,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.0383,
+     0.4819,
+     0.2033,
+     0.1988
+    ],
+    "path": "review/B066-P005c4.jpg",
+    "w": 171,
+    "h": 238,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "\u00b0353 Relax cotton and cashmere..",
+    "category": "",
+    "price": "450",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B066-P005c4-cut.webp",
+    "cut_skin": 0.0011,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.2828,
+     0.4819,
+     0.1944,
+     0.1988
+    ],
+    "path": "review/B066-P005c5.jpg",
+    "w": 164,
+    "h": 238,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "492 Ben cashmere sweater",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B066-P005c5-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "top"
+   },
+   {
+    "box": [
+     0.5376,
+     0.4819,
+     0.2033,
+     0.1988
+    ],
+    "path": "review/B066-P005c6.jpg",
+    "w": 172,
+    "h": 238,
+    "inferred": true,
+    "badges_painted": 0,
+    "name": "57 Tina cotton and cashmere ...",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B066-P005c6-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.6161,
+     0.5006,
+     0.1233,
+     0.1613
+    ],
+    "path": "review/B066-P005c7.jpg",
+    "w": 105,
+    "h": 194,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "n and cashmere ...",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B066-P005c7-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.7539,
+     0.4819,
+     0.2122,
+     0.1988
+    ],
+    "path": "review/B066-P005c8.jpg",
+    "w": 179,
+    "h": 238,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "N\u00b0257 Blouson cashmere-blend c...",
+    "category": "",
+    "price": "405",
+    "currency": "CHF",
+    "label": "new season gC",
+    "cut": "review/B066-P005c8-cut.webp",
+    "cut_skin": 0.002,
+    "slot": "layer"
+   },
+   {
+    "box": [
+     0.0428,
+     0.7506,
+     0.1944,
+     0.1988
+    ],
+    "path": "review/B066-P005c9.jpg",
+    "w": 164,
+    "h": 239,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "434 Crop Xtra cashmere turtlen.",
+    "category": "",
+    "price": "450",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B066-P005c9-cut.webp",
+    "cut_skin": 0.001,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.3139,
+     0.7506,
+     0.1367,
+     0.1988
+    ],
+    "path": "review/B066-P005c10.jpg",
+    "w": 116,
+    "h": 239,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "f over CHF450 with FIR:",
+    "category": "",
+    "price": "450",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B066-P005c10-cut.webp",
+    "cut_skin": 0.7187,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.545,
+     0.7506,
+     0.15,
+     0.1988
+    ],
+    "path": "review/B066-P005c11.jpg",
+    "w": 127,
+    "h": 239,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "off over CHF450 with FIRS",
+    "category": "",
+    "price": "450",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B066-P005c11-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.745,
+     0.7506,
+     0.23,
+     0.1988
+    ],
+    "path": "review/B066-P005c12.jpg",
+    "w": 194,
+    "h": 239,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "N\u00b0384 Ginza cashmere wrap cardi...",
+    "category": "",
+    "price": "945",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B066-P005c12-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   }
+  ],
+  "found": 10,
+  "lattice": 13
+ },
+ "B069-P001#0": {
+  "cells": [
+   {
+    "box": [
+     0,
+     0.1819,
+     0.3604,
+     0.3175
+    ],
+    "path": "review/B069-P001c0.jpg",
+    "w": 303,
+    "h": 381,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Brushed Supersoft Lambswool Rollneck... Do",
+    "category": "",
+    "price": "180",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B069-P001c0-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.3198,
+     0.1819,
+     0.3604,
+     0.3175
+    ],
+    "path": "review/B069-P001c1.jpg",
+    "w": 304,
+    "h": 381,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "AB ord RB ASTIN a hn lth tnt",
+    "category": "",
+    "price": "195",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B069-P001c1-cut.webp",
+    "cut_skin": 0.817,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.6546,
+     0.1819,
+     0.3604,
+     0.3175
+    ],
+    "path": "review/B069-P001c2.jpg",
+    "w": 303,
+    "h": 381,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Brushed Supersoft Lambswool Crewnec...",
+    "category": "",
+    "price": "170",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B069-P001c2-cut.webp",
+    "cut_skin": 0.2444,
+    "slot": ""
+   },
+   {
+    "box": [
+     0,
+     0.5694,
+     0.3604,
+     0.3175
+    ],
+    "path": "review/B069-P001c3.jpg",
+    "w": 303,
+    "h": 381,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Brushed Supersoft Lambswool Polo Mid... Bri",
+    "category": "",
+    "price": "225",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B069-P001c3-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "top"
+   },
+   {
+    "box": [
+     0.3198,
+     0.5694,
+     0.3604,
+     0.3175
+    ],
+    "path": "review/B069-P001c4.jpg",
+    "w": 304,
+    "h": 381,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Brushed Supersoft Lambswool Rollineck...",
+    "category": "",
+    "price": "180",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B069-P001c4-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.6591,
+     0.5694,
+     0.3559,
+     0.3175
+    ],
+    "path": "review/B069-P001c5.jpg",
+    "w": 299,
+    "h": 381,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Donegal Wool Polo Machair",
+    "category": "",
+    "price": "235",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B069-P001c5-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "top"
+   }
+  ],
+  "found": 6,
+  "lattice": 6
+ },
+ "B069-P002#0": {
+  "cells": [
+   {
+    "box": [
+     0,
+     0.2694,
+     0.3561,
+     0.3237
+    ],
+    "path": "review/B069-P002c0.jpg",
+    "w": 306,
+    "h": 388,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Donegal Wool Polo Brown",
+    "category": "",
+    "price": "235",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B069-P002c0-cut.webp",
+    "cut_skin": 0.481,
+    "slot": "top"
+   },
+   {
+    "box": [
+     0.3198,
+     0.2694,
+     0.3604,
+     0.3237
+    ],
+    "path": "review/B069-P002c1.jpg",
+    "w": 310,
+    "h": 388,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Merino V-Neck Navy",
+    "category": "",
+    "price": "185",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B069-P002c1-cut.webp",
+    "cut_skin": 0.0015,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.6546,
+     0.2662,
+     0.3604,
+     0.33
+    ],
+    "path": "review/B069-P002c2.jpg",
+    "w": 310,
+    "h": 396,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Half Zip Fleece Sweater Dark Brown",
+    "category": "",
+    "price": "655",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B069-P002c2-cut.webp",
+    "cut_skin": 0.0562,
+    "slot": "top"
+   },
+   {
+    "box": [
+     0,
+     0.6663,
+     0.3561,
+     0.3237
+    ],
+    "path": "review/B069-P002c3.jpg",
+    "w": 306,
+    "h": 389,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "ST dened",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B069-P002c3-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.3198,
+     0.6663,
+     0.3604,
+     0.3237
+    ],
+    "path": "review/B069-P002c4.jpg",
+    "w": 310,
+    "h": 389,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Lie",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B069-P002c4-cut.webp",
+    "cut_skin": 0.002,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.6589,
+     0.6663,
+     0.3561,
+     0.3237
+    ],
+    "path": "review/B069-P002c5.jpg",
+    "w": 306,
+    "h": 389,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "",
+    "category": "",
+    "price": "",
+    "currency": "",
+    "label": "",
+    "cut": "review/B069-P002c5-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   }
+  ],
+  "found": 6,
+  "lattice": 6
+ },
+ "B071-P002#0": {
+  "cells": [
+   {
+    "box": [
+     0,
+     0.1819,
+     0.3604,
+     0.3175
+    ],
+    "path": "review/B071-P002c0.jpg",
+    "w": 302,
+    "h": 381,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Brushed Supersoft Lambswool Rollneck... Ha",
+    "category": "",
+    "price": "180",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B071-P002c0-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.3198,
+     0.1819,
+     0.3604,
+     0.3175
+    ],
+    "path": "review/B071-P002c1.jpg",
+    "w": 303,
+    "h": 381,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Harley Of Scotland Brushed Supersoft...",
+    "category": "",
+    "price": "180",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B071-P002c1-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.6546,
+     0.1819,
+     0.3604,
+     0.3175
+    ],
+    "path": "review/B071-P002c2.jpg",
+    "w": 303,
+    "h": 381,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Brushed Supersoft Lambswool Crewnec...",
+    "category": "",
+    "price": "170",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B071-P002c2-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0,
+     0.5663,
+     0.3559,
+     0.3206
+    ],
+    "path": "review/B071-P002c3.jpg",
+    "w": 298,
+    "h": 385,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Garment Dyed Fleece Sweatshirt Navy De",
+    "category": "",
+    "price": "300",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B071-P002c3-cut.webp",
+    "cut_skin": 0.0873,
+    "slot": "top"
+   },
+   {
+    "box": [
+     0.3198,
+     0.5663,
+     0.3604,
+     0.3175
+    ],
+    "path": "review/B071-P002c4.jpg",
+    "w": 303,
+    "h": 381,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "anaxtlarveton teen arma al na",
+    "category": "",
+    "price": "195",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B071-P002c4-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "top"
+   },
+   {
+    "box": [
+     0.6546,
+     0.5663,
+     0.3604,
+     0.3175
+    ],
+    "path": "review/B071-P002c5.jpg",
+    "w": 303,
+    "h": 381,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Brushed Supersoft Lambswool Crewoec.",
+    "category": "",
+    "price": "170",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B071-P002c5-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   }
+  ],
+  "found": 6,
+  "lattice": 6
+ },
+ "B071-P003#0": {
+  "cells": [
+   {
+    "box": [
+     0,
+     0.2069,
+     0.3589,
+     0.3175
+    ],
+    "path": "review/B071-P003c0.jpg",
+    "w": 302,
+    "h": 381,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Knitted Lambswool Crew Neck Ash Grey",
+    "category": "",
+    "price": "390",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B071-P003c0-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "top"
+   },
+   {
+    "box": [
+     0.3228,
+     0.2069,
+     0.3544,
+     0.3175
+    ],
+    "path": "review/B071-P003c1.jpg",
+    "w": 299,
+    "h": 381,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Classic Slogan Sweatshirt Black",
+    "category": "",
+    "price": "180",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B071-P003c1-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "top"
+   },
+   {
+    "box": [
+     0.6561,
+     0.2069,
+     0.3589,
+     0.3175
+    ],
+    "path": "review/B071-P003c2.jpg",
+    "w": 303,
+    "h": 381,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Brushed Supersoft Lambswool Crewnec...",
+    "category": "",
+    "price": "170",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B071-P003c2-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0,
+     0.5944,
+     0.3589,
+     0.3175
+    ],
+    "path": "review/B071-P003c3.jpg",
+    "w": 302,
+    "h": 381,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Brushed Supersoft Lambswool Rolineck...",
+    "category": "",
+    "price": "180",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B071-P003c3-cut.webp",
+    "cut_skin": 0.9829,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.3228,
+     0.5944,
+     0.3544,
+     0.3175
+    ],
+    "path": "review/B071-P003c4.jpg",
+    "w": 299,
+    "h": 381,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Donegal Wool Crewneck Harris Green",
+    "category": "",
+    "price": "195",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B071-P003c4-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.6561,
+     0.5912,
+     0.3589,
+     0.3237
+    ],
+    "path": "review/B071-P003c5.jpg",
+    "w": 303,
+    "h": 388,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Knitted Lambswool Zip Button Cardigan...",
+    "category": "",
+    "price": "545",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B071-P003c5-cut.webp",
+    "cut_skin": 0.0681,
+    "slot": "layer"
+   }
+  ],
+  "found": 6,
+  "lattice": 6
+ },
+ "B071-P005#0": {
+  "cells": [
+   {
+    "box": [
+     0,
+     0.1881,
+     0.3589,
+     0.3175
+    ],
+    "path": "review/B071-P005c0.jpg",
+    "w": 302,
+    "h": 381,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Donegal Wool Crewneck Lewis",
+    "category": "",
+    "price": "195",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B071-P005c0-cut.webp",
+    "cut_skin": 0.0005,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.3228,
+     0.1881,
+     0.3544,
+     0.3175
+    ],
+    "path": "review/B071-P005c1.jpg",
+    "w": 299,
+    "h": 381,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Harley Of Scotland Brushed Supersoft...",
+    "category": "",
+    "price": "180",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B071-P005c1-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.6561,
+     0.1881,
+     0.3589,
+     0.3175
+    ],
+    "path": "review/B071-P005c2.jpg",
+    "w": 303,
+    "h": 381,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Brushed Supersoft Lambswool Cardigan...",
+    "category": "",
+    "price": "195",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B071-P005c2-cut.webp",
+    "cut_skin": 0.0004,
+    "slot": "layer"
+   },
+   {
+    "box": [
+     0,
+     0.5756,
+     0.3589,
+     0.3175
+    ],
+    "path": "review/B071-P005c3.jpg",
+    "w": 302,
+    "h": 381,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Brushed Supersoft Lambswool V-Neck...",
+    "category": "",
+    "price": "180",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B071-P005c3-cut.webp",
+    "cut_skin": 0.0,
+    "slot": ""
+   },
+   {
+    "box": [
+     0.3183,
+     0.5756,
+     0.3589,
+     0.3206
+    ],
+    "path": "review/B071-P005c4.jpg",
+    "w": 303,
+    "h": 385,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Knitted Lambswool Crew Neck Navy",
+    "category": "",
+    "price": "390",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B071-P005c4-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "top"
+   },
+   {
+    "box": [
+     0.6561,
+     0.5756,
+     0.3589,
+     0.3269
+    ],
+    "path": "review/B071-P005c5.jpg",
+    "w": 303,
+    "h": 393,
+    "inferred": false,
+    "badges_painted": 0,
+    "name": "Knitted Lambswool Zip Button Cary .) F",
+    "category": "",
+    "price": "545",
+    "currency": "CHF",
+    "label": "",
+    "cut": "review/B071-P005c5-cut.webp",
+    "cut_skin": 0.0,
+    "slot": "top"
+   }
+  ],
+  "found": 6,
+  "lattice": 6
  }
 }

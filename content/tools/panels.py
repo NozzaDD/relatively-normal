@@ -17,7 +17,7 @@ Writes content/catalogue/_panels.json and one JPEG per panel into
 content/catalogue/review/. The originals are never touched, and the whole
 screenshot's own review copy stays exactly where it is.
 """
-import os, sys, json, argparse, collections
+import os, sys, re, csv, json, argparse, collections
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 from PIL import Image
@@ -237,6 +237,95 @@ def cut_panel(panel):
     return (FL.raw_cut(painted_im) if painted else first), painted
 
 
+def measure_flat(cut, px, stem):
+    """The shelf gate's three measurements on a flat-lay panel's cut, and the
+    cut saved when it passes."""
+    m = FL.measure(cut)
+    sliver, sw = slivery(cut, px.size)
+    ok = (m['components'] == 1 and m['edge_pixels'] == 0 and m['words_inside'] == 0
+          and not sliver)
+    rec = dict(m)
+    rec['clean'] = bool(ok)
+    rec['why'] = '' if ok else ', '.join(filter(None, [
+        'more than one piece' if m['components'] != 1 else '',
+        'touches the frame' if m['edge_pixels'] else '',
+        'text inside it' if m['words_inside'] else '', sw]))
+    if ok:
+        bb = cut.getbbox()
+        cut.crop(bb).save(f'{OUT}/{stem}-cut.webp', 'WEBP', quality=90, method=5)
+        rec['cut'] = f'review/{stem}-cut.webp'
+    return rec
+
+
+def seam(im):
+    """The column where one photograph ends and the next begins, on a page
+    whose two photos abut with no gutter: the sharpest change in the columns'
+    mean colour within the middle third of the width."""
+    import numpy as np
+    a = np.asarray(im.convert('RGB').resize((400, max(40, int(400 * im.height / im.width))))).astype(float)
+    col = a.mean(axis=0)
+    step = np.abs(np.diff(col, axis=0)).sum(axis=1)
+    lo, hi = int(0.35 * len(step)), int(0.65 * len(step))
+    x = lo + int(np.argmax(step[lo:hi]))
+    return (x + 1) / 400.0, float(step[x])
+
+
+def side_by_side(out, layouts, review=None):
+    """On a side-by-side page the left photograph is the flat lay and the right
+    one the same garment on a model (Toast, Care of Carl). Position decides
+    there, not the skin test: rembg often cuts the model away and leaves only
+    the jumper, which then reads as a clean flat lay, and a rust or coral
+    jumper falls inside the skin band and reads as a person. The layout is the
+    viewing pass's `layout=side-by-side`, read off the page."""
+    n = 0
+    for key, v in out.items():
+        pid = key.split('#')[0]
+        if layouts.get(pid) != 'side-by-side':
+            continue
+        if not v.get('split') and review:
+            # two photos that abut: no gutter to find, so cut at the seam
+            i = int(key.split('#')[1])
+            e = ((review.get(pid) or {}).get('images') or [None] * (i + 1))[i]
+            if not e or not os.path.exists(f"{CAT}/{e['path']}"):
+                continue
+            with Image.open(f"{CAT}/{e['path']}") as f:
+                im = f.convert('RGB')
+            fx, strength = seam(im)
+            stem = os.path.basename(e['path'])[:-4]
+            W, H = im.size
+            panels = []
+            for j, (bx, bw) in enumerate(((0.0, fx), (fx, 1.0 - fx))):
+                px = im.crop((int(bx * W), 0, int((bx + bw) * W), H))
+                name = f'{stem}p{j}.jpg'
+                px.save(f'{OUT}/{name}', 'JPEG', quality=86, optimize=True)
+                panels.append({'box': [round(bx, 4), 0.0, round(bw, 4), 1.0], 'type': 'other',
+                               'path': f'review/{name}', 'w': px.width, 'h': px.height,
+                               'text_share': 0.0, 'skin': 0.0, 'badges_painted': 0})
+            v.clear()
+            v.update(split=True, panels=panels, split_by='seam', seam_strength=round(strength, 1))
+        if not v.get('split'):
+            continue
+        major = [p for p in v['panels'] if p['box'][3] >= 0.4 and p['box'][2] >= 0.2]
+        if len(major) < 2:
+            continue
+        major.sort(key=lambda p: p['box'][0])
+        left, right = major[0], major[1:]
+        if left.get('typed_by') != 'position':
+            with Image.open(f"{CAT}/{left['path']}") as f:
+                px = f.convert('RGB')
+            cut, _ = cut_panel(px)
+            for k in ('clean', 'why', 'cut', 'components', 'edge_pixels', 'words_inside'):
+                left.pop(k, None)
+            left.update(type='flat lay', typed_by='position',
+                        **measure_flat(cut, px, os.path.basename(left['path'])[:-4]))
+        for p in right:
+            for k in ('clean', 'why', 'cut'):
+                p.pop(k, None)
+            p.update(type='on-model', typed_by='position')
+        n += 1
+    return n
+
+
 def primary_of(panels):
     """The picture the shelf shows: a clean flat lay, else a flat lay, else the
     person wearing it, else whatever came first."""
@@ -350,20 +439,7 @@ def main():
                        'path': f'review/{name}', 'w': px.width, 'h': px.height,
                        'text_share': round(txt, 3), 'skin': cs, 'badges_painted': painted}
                 if kind == 'flat lay':
-                    m = FL.measure(cut)
-                    sliver, sw = slivery(cut, px.size)
-                    ok = (m['components'] == 1 and m['edge_pixels'] == 0 and m['words_inside'] == 0
-                          and not sliver)
-                    rec.update(m)
-                    rec['clean'] = bool(ok)
-                    rec['why'] = '' if ok else ', '.join(filter(None, [
-                        'more than one piece' if m['components'] != 1 else '',
-                        'touches the frame' if m['edge_pixels'] else '',
-                        'text inside it' if m['words_inside'] else '', sw]))
-                    if ok:
-                        bb = cut.getbbox()
-                        cut.crop(bb).save(f'{OUT}/{stem}p{j}-cut.webp', 'WEBP', quality=90, method=5)
-                        rec['cut'] = f'review/{stem}p{j}-cut.webp'
+                    rec.update(measure_flat(cut, px, f'{stem}p{j}'))
                 panels.append(rec)
             if len(panels) < 2:
                 out[key] = {'split': False, 'why': 'panels too small once cropped'}
@@ -372,6 +448,12 @@ def main():
         if k % 10 == 0 or k == len(jobs):
             json.dump(out, open(PAN, 'w'), indent=1)
             print(f'  {k}/{len(jobs)}', flush=True)
+    layouts = {}
+    for r in csv.DictReader(open(CAT + '/products.csv')):
+        m = re.search(r'layout=([\w-]+)', r.get('notes', ''))
+        if m:
+            layouts[r['product_id']] = m.group(1)
+    print('side-by-side pages typed by position:', side_by_side(out, layouts, review))
     json.dump(out, open(PAN, 'w'), indent=1)
     promote(out)
     split = [v for v in out.values() if v.get('split')]

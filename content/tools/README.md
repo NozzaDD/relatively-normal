@@ -215,3 +215,42 @@ Order to re-run: `uniqlo_pages.py` → `uniqlo_variants.py` → `build_products.
   their sizes were written, and the desk sized pieces from them.
 
 Order to re-run: `build_products.py` → `shelf_checks.py` → `build_studio.py`.
+
+## Added 23 September 2026 — ingest without renumbering, one product per colour, every shop's colourways
+
+| Script | What it does |
+|---|---|
+| `cluster_products.py --append [paths]` | new screenshots — the ones in `content/swipe/products/` the swipe index does not type yet, plus any paths given — become new batches after the last one. A full re-run numbers batches by position, so a screenshot inserted mid-sequence renumbers every batch after it and orphans the IDs in `asset-choices.json`, `used_in` and the outfits; it would also undo `split_mixed.py`. |
+| `make_assets.py --new`, `extract_colours.py --new` | only products with no asset / no colours yet. A full run overwrites the cut-outs `flat_lays.py` and `panels.py` have since replaced. |
+| `same_product.py` | two screenshots of one product in one colour (a flat lay and a model photo, or the same page twice) → one row. Grouped by the page text — same batch, shop, product name and colour name — and confirmed by the pictures: two flat lays by `shelf_checks.py`'s duplicate test, two model photos within dE2000 5. Measures the dE2000 between the flat lay's garment and the model's for every pair; `--merge` folds each group into the flat lay's row in `batches.json`; `--preview DE` shows the flat lays above DE recoloured to their model's colour; `--apply DE` makes them, and `build_products.py` gives those rows `recoloured = yes` and a `recolour_source` naming both screenshots. Only batches from `--from` (default 63) on, so no filed ID is folded away. |
+| `colourway_pages.py` | reads the colourway row under "Colour:" on Johnstons of Elgin, Toast and Colorful Standard pages: every swatch's place, size, kind (a fabric patch or a photo of the garment) and colour, and which one is selected (the one with the dark frame). Writes `_colourway_pages.json`. UNIQLO stays with `uniqlo_pages.py`. |
+| `colourway_variants.py` | the other shops' variants. A swatch a screenshot already shows is not made again (the page's own selected swatch says which; colour within dE 10 where the page did not reach the swatch row). A photo swatch is cut out of the page — the brand's own picture, not simulated. A fabric swatch recolours the style's clean flat lay with `uniqlo_variants.recolour()` and is marked simulated. No variant is given a colour name: only the selected swatch has one on a page, and that colour is the screenshot's own. Writes `_colourway_variants.json`; `build_products.py` merges it with `_variants.json`, and unlike UNIQLO's leaves the owner's own screenshots on the shelf. |
+| `variant_sheets.py` | the per-style variant sheets, each variant beside the swatch it came from, every swatch the same size, the measured dE2000 between swatch and variant under it. `--choose` puts both layouts on one sheet. |
+
+- `url_bar.py` knows `.st` (Toast is `eu.toa.st`).
+- `panels.py` types the two photographs of a page the viewing pass read as
+  `layout=side-by-side` by position: left the flat lay, right the model.
+  rembg often cuts the model away and leaves the jumper, which then measured
+  as a clean flat lay, and a rust or coral jumper sits inside the skin band.
+- `uniqlo_variants.py` takes four-digit screenshot numbers (`'1170'`).
+
+Order for an ingest: `cluster_products.py --append` → `render_views.py` and
+the viewing pass into `_viewing_rows/rows_n*.txt` → `url_bar.py` →
+`make_assets.py --new` → `build_products.py` → `crop_figures.py` →
+`asset_quality.py` → `flat_lays.py` → `build_review_images.py` → `panels.py`
+→ `grid_cells.py` → `same_product.py` (then `--merge`, reset the merged rows
+and run the steps above again) → `extract_colours.py --new` →
+`uniqlo_pages.py` → `uniqlo_variants.py` → `colourway_pages.py` →
+`build_products.py` → `colourway_variants.py` → `build_products.py` →
+`shelf_checks.py` → `build_studio.py`.
+
+Two decisions the owner made on 23 September, so the next run does not ask again:
+
+- **Model colour wherever there is one.** A row that holds a flat lay and a
+  model photo of the same product in the same colour shows the flat lay
+  recoloured to the colour measured on the model — no threshold
+  (`same_product.py --apply 0`), and no unrecoloured copy is kept. A product
+  shown only side by side keeps its flat lay's own colour.
+- **Variant sheets in layout A** — one row per variant: swatch, variant,
+  number, real or simulated, dE. Both variant scripts write their sheets
+  through `variant_sheets.write('rows')`.

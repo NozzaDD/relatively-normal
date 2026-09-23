@@ -51,9 +51,10 @@ const counts = await page.evaluate(() => ({
 ok('products loaded', counts.products >= 463, JSON.stringify(counts));
 ok('inspiration loaded', counts.inspiration === 112, JSON.stringify(counts));
 // the gate is the measurement flat_lays.py makes, so the shelf is exactly the
-// products the data marks clean — not a hand-set range that drifts
+// products the data marks clean — not a hand-set range that drifts — plus the
+// ones asset-choices.json has already decided (reviewed on the desk)
 const cleanCount = await page.evaluate(() =>
-  window.__studio.products.filter((p) => p.clean && !p.hidden && !(p.several || []).length
+  window.__studio.products.filter((p) => (p.clean || p.choice) && !p.hidden && !(p.several || []).length
     && !p.duplicate_of).length);
 ok('only measured-clean cut-outs on the shelf by default',
   counts.cells === cleanCount && cleanCount > 0, `${counts.cells} cells, ${cleanCount} clean`);

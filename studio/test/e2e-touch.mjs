@@ -63,9 +63,10 @@ console.log('\n1. the gate and the category bar');
 const gate = await page.evaluate(() => ({
   shown: window.__studio.shown.length,
   total: window.__studio.products.length,
-  // clean, and neither a picture of several garments nor a duplicate of another row
-  clean: window.__studio.products.filter((p) => p.clean && !p.hidden && !(p.several || []).length
-    && !p.duplicate_of).length,
+  // clean or decided in asset-choices.json, and neither a picture of several
+  // garments nor a duplicate of another row
+  clean: window.__studio.products.filter((p) => (p.clean || p.choice) && !p.hidden
+    && !(p.several || []).length && !p.duplicate_of).length,
   buttons: [...document.querySelectorAll('#slotBar button')].map((b) => b.textContent),
 }));
 ok('by default only clean cut-outs show', gate.shown === gate.clean, JSON.stringify(gate));
@@ -156,19 +157,26 @@ const rv = await page.evaluate(() => ({
   cards: document.querySelectorAll('#reviewCards .rcard').length,
   versions: document.querySelector('#reviewCards .rcard .versions')?.children.length,
   progress: document.getElementById('reviewProgress').textContent,
-  first: document.querySelector('#reviewCards .rcard')?.dataset.pid,
+  // the first card a choice puts on the shelf: a duplicate stays off it until
+  // "Not a duplicate", a several-garment picture until a box is drawn
+  first: [...document.querySelectorAll('#reviewCards .rcard')].map((c) => c.dataset.pid)
+    .find((pid) => { const p = window.__studio.productsById[pid];
+      return p && !p.duplicate_of && !(p.several || []).length; }),
 }));
 ok('review lists every product that needs a decision', rv.cards > 300, JSON.stringify(rv));
 ok('a card shows four versions', rv.versions === 4, String(rv.versions));
 const decided0 = Number((rv.progress.match(/^(\d+) of/) || [])[1]);
 // with nothing chosen in this browser, the only products already decided are
 // the ones the catalogue itself settled: a listing grid that has been cut into
-// cells is hidden, and so is a UNIQLO image a recoloured variant replaced
+// cells is hidden, and so is a UNIQLO image a recoloured variant replaced, and
+// so is every product asset-choices.json has a choice for (a several-garment
+// picture counts only when hidden, as on the desk)
 const settled = await page.evaluate(() => window.__studio.products.filter(
-  (p) => !p.clean && p.full && !p.parent_id && p.hidden).length);
+  (p) => !p.clean && p.full && !p.parent_id
+    && (p.hidden || (p.choice && !(p.several || []).length))).length);
 ok('progress counts only what is filed as decided', decided0 === settled,
   `${rv.progress} — ${settled} settled by the catalogue`);
-await page.click('#reviewCards .rcard .version[data-kind="item"]');
+await page.click(`#reviewCards .rcard[data-pid="${rv.first}"] .version[data-kind="item"]`);
 await page.waitForTimeout(150);
 const afterChoice = await page.evaluate((pid) => ({
   choice: window.__studio.choices[pid]?.choice,
@@ -177,7 +185,7 @@ const afterChoice = await page.evaluate((pid) => ({
   stored: JSON.parse(localStorage.getItem('rn.studio.choices.v1') || '{}')[pid]?.choice,
 }), rv.first);
 ok('choosing the item box records it', afterChoice.choice === 'item' && afterChoice.stored === 'item', JSON.stringify(afterChoice));
-ok('…and the piece appears on the shelf at once', afterChoice.onShelf);
+ok('…and the piece appears on the shelf at once', afterChoice.onShelf, rv.first);
 ok('progress moves', Number((afterChoice.progress.match(/^(\d+) of/) || [])[1]) === decided0 + 1, afterChoice.progress);
 const placed = await page.evaluate(async (pid) => {
   const el = await window.__studio.placeProduct(pid, 0.5, 0.5);
@@ -243,7 +251,9 @@ if (simId) {
   // exactly when the source is — the measured verdict is inherited, not re-made
   const vClean = await page.evaluate(() => {
     const by = window.__studio.productsById;
-    return window.__studio.products.filter((p) => p.recoloured)
+    // a flat lay recoloured to its own model photo names two screenshots, not
+    // a source row; its own cut is the one measured
+    return window.__studio.products.filter((p) => p.recoloured && by[p.recolour_source])
       .map((p) => [p.product_id, p.clean, !!(by[p.recolour_source] || {}).clean]);
   });
   ok('a variant is on the shelf exactly when its source is',

@@ -1,0 +1,1234 @@
+{
+ "variants": [
+  {
+   "product_id": "B070-P014-cw01",
+   "source": "B070-P014",
+   "style": "Cotton Linen Easy Sweater",
+   "shop": "eu.toa.st",
+   "swatch": 1,
+   "swatch_hex": "191F28",
+   "selected": false,
+   "colour_name_text": "",
+   "garment_type": "high-neck raglan jumper, rolled edges",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "\u20ac270.00",
+   "source_clean": false,
+   "product_name_confidence": "given",
+   "real": true,
+   "real_from": "content/swipe/products/IMG_1143.png",
+   "tile": [
+    1915,
+    938,
+    2027,
+    1098
+   ],
+   "colour": {
+    "hex": "11181F",
+    "family": "blue",
+    "name": "navy",
+    "share": 1.0,
+    "L": 7.9,
+    "C": 6.0,
+    "h": 260.9,
+    "rel": 0.413,
+    "neutral": false
+   },
+   "swatch_to_variant_de": 2.1,
+   "asset_path": "content/catalogue/variants/B070-P014-cw01.webp"
+  },
+  {
+   "product_id": "B070-P014-cw02",
+   "source": "B070-P014",
+   "style": "Cotton Linen Easy Sweater",
+   "shop": "eu.toa.st",
+   "swatch": 2,
+   "swatch_hex": "BDAB9A",
+   "selected": false,
+   "colour_name_text": "",
+   "garment_type": "high-neck raglan jumper, rolled edges",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "\u20ac270.00",
+   "source_clean": false,
+   "product_name_confidence": "given",
+   "real": true,
+   "real_from": "content/swipe/products/IMG_1143.png",
+   "tile": [
+    2043,
+    938,
+    2155,
+    1098
+   ],
+   "colour": {
+    "hex": "A08E7E",
+    "family": "brown",
+    "name": "tan",
+    "share": 1.0,
+    "L": 60.2,
+    "C": 11.7,
+    "h": 69.7,
+    "rel": 0.165,
+    "neutral": false
+   },
+   "swatch_to_variant_de": 6.0,
+   "asset_path": "content/catalogue/variants/B070-P014-cw02.webp"
+  },
+  {
+   "product_id": "B070-P014-cw04",
+   "source": "B070-P014",
+   "style": "Cotton Linen Easy Sweater",
+   "shop": "eu.toa.st",
+   "swatch": 4,
+   "swatch_hex": "574840",
+   "selected": false,
+   "colour_name_text": "",
+   "garment_type": "high-neck raglan jumper, rolled edges",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "\u20ac270.00",
+   "source_clean": false,
+   "product_name_confidence": "given",
+   "real": true,
+   "real_from": "content/swipe/products/IMG_1143.png",
+   "tile": [
+    2299,
+    938,
+    2411,
+    1098
+   ],
+   "colour": {
+    "hex": "3E2D25",
+    "family": "brown",
+    "name": "espresso",
+    "share": 1.0,
+    "L": 20.2,
+    "C": 10.5,
+    "h": 51.7,
+    "rel": 0.276,
+    "neutral": false
+   },
+   "swatch_to_variant_de": 9.7,
+   "asset_path": "content/catalogue/variants/B070-P014-cw04.webp"
+  },
+  {
+   "product_id": "B070-P021-cw01",
+   "source": "B070-P021",
+   "style": "Eden Wool Cashmere Raglan Cardigan",
+   "shop": "eu.toa.st",
+   "swatch": 1,
+   "swatch_hex": "1D2229",
+   "selected": false,
+   "colour_name_text": "",
+   "garment_type": "crew-neck raglan button cardigan",
+   "slot": "layer",
+   "slot_confidence": "",
+   "price": "\u20ac350.00",
+   "source_clean": false,
+   "product_name_confidence": "given",
+   "real": true,
+   "real_from": "content/swipe/products/IMG_1150.png",
+   "tile": [
+    1915,
+    1022,
+    2027,
+    1182
+   ],
+   "colour": {
+    "hex": "171C23",
+    "family": "blue",
+    "name": "navy",
+    "share": 1.0,
+    "L": 10.1,
+    "C": 5.6,
+    "h": 267.9,
+    "rel": 0.31,
+    "neutral": false
+   },
+   "swatch_to_variant_de": 1.6,
+   "asset_path": "content/catalogue/variants/B070-P021-cw01.webp"
+  },
+  {
+   "product_id": "B070-P021-cw02",
+   "source": "B070-P021",
+   "style": "Eden Wool Cashmere Raglan Cardigan",
+   "shop": "eu.toa.st",
+   "swatch": 2,
+   "swatch_hex": "848745",
+   "selected": false,
+   "colour_name_text": "",
+   "garment_type": "crew-neck raglan button cardigan",
+   "slot": "layer",
+   "slot_confidence": "",
+   "price": "\u20ac350.00",
+   "source_clean": false,
+   "product_name_confidence": "given",
+   "real": true,
+   "real_from": "content/swipe/products/IMG_1150.png",
+   "tile": [
+    2043,
+    1022,
+    2155,
+    1182
+   ],
+   "colour": {
+    "hex": "707237",
+    "family": "green",
+    "name": "olive",
+    "share": 1.0,
+    "L": 46.7,
+    "C": 33.6,
+    "h": 107.1,
+    "rel": 0.617,
+    "neutral": false
+   },
+   "swatch_to_variant_de": 11.3,
+   "asset_path": "content/catalogue/variants/B070-P021-cw02.webp"
+  },
+  {
+   "product_id": "B070-P021-cw03",
+   "source": "B070-P021",
+   "style": "Eden Wool Cashmere Raglan Cardigan",
+   "shop": "eu.toa.st",
+   "swatch": 3,
+   "swatch_hex": "A2262D",
+   "selected": false,
+   "colour_name_text": "",
+   "garment_type": "crew-neck raglan button cardigan",
+   "slot": "layer",
+   "slot_confidence": "",
+   "price": "\u20ac350.00",
+   "source_clean": false,
+   "product_name_confidence": "given",
+   "real": true,
+   "real_from": "content/swipe/products/IMG_1150.png",
+   "tile": [
+    2171,
+    1022,
+    2283,
+    1182
+   ],
+   "colour": {
+    "hex": "9F252C",
+    "family": "red",
+    "name": "brick",
+    "share": 1.0,
+    "L": 35.7,
+    "C": 56.5,
+    "h": 28.5,
+    "rel": 0.824,
+    "neutral": false
+   },
+   "swatch_to_variant_de": 0.2,
+   "asset_path": "content/catalogue/variants/B070-P021-cw03.webp"
+  },
+  {
+   "product_id": "B070-P010-cw02",
+   "source": "B070-P010",
+   "style": "Harvest Yoke Donegal Sweater",
+   "shop": "eu.toa.st",
+   "swatch": 2,
+   "swatch_hex": "A96E26",
+   "selected": false,
+   "colour_name_text": "",
+   "garment_type": "fair-isle yoke raglan jumper",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "\u20ac350.00",
+   "source_clean": false,
+   "product_name_confidence": "given",
+   "real": true,
+   "real_from": "content/swipe/products/IMG_1139.png",
+   "tile": [
+    2043,
+    1072,
+    2155,
+    1232
+   ],
+   "colour": {
+    "hex": "A76B26",
+    "family": "yellow",
+    "name": "ochre",
+    "share": 1.0,
+    "L": 50.5,
+    "C": 49.8,
+    "h": 68.7,
+    "rel": 0.797,
+    "neutral": false
+   },
+   "swatch_to_variant_de": 0.9,
+   "asset_path": "content/catalogue/variants/B070-P010-cw02.webp"
+  },
+  {
+   "product_id": "B070-P013-cw01",
+   "source": "B070-P013",
+   "style": "Wool Cashmere Roll Neck Sweater",
+   "shop": "eu.toa.st",
+   "swatch": 1,
+   "swatch_hex": "AE9D8E",
+   "selected": false,
+   "colour_name_text": "",
+   "garment_type": "oversized roll-neck jumper, dropped sleeves",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "\u20ac320.00",
+   "source_clean": false,
+   "product_name_confidence": "given",
+   "real": true,
+   "real_from": "content/swipe/products/IMG_1142.png",
+   "tile": [
+    1915,
+    1120,
+    2027,
+    1280
+   ],
+   "colour": {
+    "hex": "AA988A",
+    "family": "warm neutral",
+    "name": "oatmeal",
+    "share": 1.0,
+    "L": 64.0,
+    "C": 10.7,
+    "h": 66.3,
+    "rel": 0.139,
+    "neutral": true
+   },
+   "swatch_to_variant_de": 0.8,
+   "asset_path": "content/catalogue/variants/B070-P013-cw01.webp"
+  },
+  {
+   "product_id": "B070-P013-cw03",
+   "source": "B070-P013",
+   "style": "Wool Cashmere Roll Neck Sweater",
+   "shop": "eu.toa.st",
+   "swatch": 3,
+   "swatch_hex": "1F1F1F",
+   "selected": false,
+   "colour_name_text": "",
+   "garment_type": "oversized roll-neck jumper, dropped sleeves",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "\u20ac320.00",
+   "source_clean": false,
+   "product_name_confidence": "given",
+   "real": true,
+   "real_from": "content/swipe/products/IMG_1142.png",
+   "tile": [
+    2171,
+    1120,
+    2283,
+    1280
+   ],
+   "colour": {
+    "hex": "202020",
+    "family": "black",
+    "name": "black",
+    "share": 1.0,
+    "L": 12.3,
+    "C": 0.0,
+    "h": 158.2,
+    "rel": 0.0,
+    "neutral": true
+   },
+   "swatch_to_variant_de": 0.0,
+   "asset_path": "content/catalogue/variants/B070-P013-cw03.webp"
+  },
+  {
+   "product_id": "B072-P002-cw03",
+   "source": "B072-P002",
+   "style": "Cairn Donegal Cashmere Jumper",
+   "shop": "johnstonsofelgin.com",
+   "swatch": 3,
+   "swatch_hex": "121514",
+   "selected": false,
+   "colour_name_text": "",
+   "garment_type": "crew-neck flecked knit jumper",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "CHF 769.00",
+   "source_clean": true,
+   "product_name_confidence": "guessed",
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "121514",
+    "family": "black",
+    "name": "black",
+    "share": 1.0,
+    "L": 6.5,
+    "C": 1.5,
+    "h": 172.8,
+    "rel": 0.154,
+    "neutral": false
+   },
+   "speckle": 1.3,
+   "swatch_to_variant_de": 0.1,
+   "delta_e_to_source": 9.5,
+   "asset_path": "content/catalogue/variants/B072-P002-cw03.webp"
+  },
+  {
+   "product_id": "B072-P002-cw04",
+   "source": "B072-P002",
+   "style": "Cairn Donegal Cashmere Jumper",
+   "shop": "johnstonsofelgin.com",
+   "swatch": 4,
+   "swatch_hex": "111217",
+   "selected": false,
+   "colour_name_text": "",
+   "garment_type": "crew-neck flecked knit jumper",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "CHF 769.00",
+   "source_clean": true,
+   "product_name_confidence": "guessed",
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "111217",
+    "family": "black",
+    "name": "black",
+    "share": 1.0,
+    "L": 5.5,
+    "C": 3.4,
+    "h": 283.3,
+    "rel": 0.155,
+    "neutral": false
+   },
+   "speckle": 1.1,
+   "swatch_to_variant_de": 0.4,
+   "delta_e_to_source": 6.8,
+   "asset_path": "content/catalogue/variants/B072-P002-cw04.webp"
+  },
+  {
+   "product_id": "B072-P002-cw05",
+   "source": "B072-P002",
+   "style": "Cairn Donegal Cashmere Jumper",
+   "shop": "johnstonsofelgin.com",
+   "swatch": 5,
+   "swatch_hex": "BAA995",
+   "selected": false,
+   "colour_name_text": "",
+   "garment_type": "crew-neck flecked knit jumper",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "CHF 769.00",
+   "source_clean": true,
+   "product_name_confidence": "guessed",
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "BAA995",
+    "family": "brown",
+    "name": "tan",
+    "share": 1.0,
+    "L": 70.2,
+    "C": 12.9,
+    "h": 77.2,
+    "rel": 0.169,
+    "neutral": false
+   },
+   "speckle": 1.9,
+   "swatch_to_variant_de": 1.0,
+   "delta_e_to_source": 54.5,
+   "asset_path": "content/catalogue/variants/B072-P002-cw05.webp"
+  },
+  {
+   "product_id": "B072-P005-cw04",
+   "source": "B072-P005",
+   "style": "Iris Classic Cashmere Cardigan",
+   "shop": "johnstonsofelgin.com",
+   "swatch": 4,
+   "swatch_hex": "27387D",
+   "selected": false,
+   "colour_name_text": "",
+   "garment_type": "crew-neck button cardigan",
+   "slot": "layer",
+   "slot_confidence": "",
+   "price": "CHF 769.00",
+   "source_clean": true,
+   "product_name_confidence": "guessed",
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "27387D",
+    "family": "blue",
+    "name": "navy",
+    "share": 1.0,
+    "L": 26.0,
+    "C": 44.9,
+    "h": 293.1,
+    "rel": 0.771,
+    "neutral": false
+   },
+   "speckle": 0.4,
+   "swatch_to_variant_de": 0.2,
+   "delta_e_to_source": 73.8,
+   "asset_path": "content/catalogue/variants/B072-P005-cw04.webp"
+  },
+  {
+   "product_id": "B072-P005-cw06",
+   "source": "B072-P005",
+   "style": "Iris Classic Cashmere Cardigan",
+   "shop": "johnstonsofelgin.com",
+   "swatch": 6,
+   "swatch_hex": "B2092E",
+   "selected": false,
+   "colour_name_text": "",
+   "garment_type": "crew-neck button cardigan",
+   "slot": "layer",
+   "slot_confidence": "",
+   "price": "CHF 769.00",
+   "source_clean": true,
+   "product_name_confidence": "guessed",
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "B2092E",
+    "family": "red",
+    "name": "brick",
+    "share": 1.0,
+    "L": 37.6,
+    "C": 67.6,
+    "h": 25.3,
+    "rel": 0.977,
+    "neutral": false
+   },
+   "speckle": 0.4,
+   "swatch_to_variant_de": 0.2,
+   "delta_e_to_source": 59.6,
+   "asset_path": "content/catalogue/variants/B072-P005-cw06.webp"
+  },
+  {
+   "product_id": "B072-P005-cw07",
+   "source": "B072-P005",
+   "style": "Iris Classic Cashmere Cardigan",
+   "shop": "johnstonsofelgin.com",
+   "swatch": 7,
+   "swatch_hex": "BCC0BA",
+   "selected": false,
+   "colour_name_text": "",
+   "garment_type": "crew-neck button cardigan",
+   "slot": "layer",
+   "slot_confidence": "",
+   "price": "CHF 769.00",
+   "source_clean": true,
+   "product_name_confidence": "guessed",
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "BCC0BA",
+    "family": "grey",
+    "name": "light grey",
+    "share": 1.0,
+    "L": 77.2,
+    "C": 3.6,
+    "h": 134.5,
+    "rel": 0.034,
+    "neutral": true
+   },
+   "speckle": 0.7,
+   "swatch_to_variant_de": 0.1,
+   "delta_e_to_source": 16.3,
+   "asset_path": "content/catalogue/variants/B072-P005-cw07.webp"
+  },
+  {
+   "product_id": "B072-P005-cw08",
+   "source": "B072-P005",
+   "style": "Iris Classic Cashmere Cardigan",
+   "shop": "johnstonsofelgin.com",
+   "swatch": 8,
+   "swatch_hex": "CFAFB0",
+   "selected": false,
+   "colour_name_text": "",
+   "garment_type": "crew-neck button cardigan",
+   "slot": "layer",
+   "slot_confidence": "",
+   "price": "CHF 769.00",
+   "source_clean": true,
+   "product_name_confidence": "guessed",
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "CFAFB0",
+    "family": "pink",
+    "name": "dusty rose",
+    "share": 1.0,
+    "L": 74.2,
+    "C": 12.3,
+    "h": 18.0,
+    "rel": 0.305,
+    "neutral": false
+   },
+   "speckle": 0.7,
+   "swatch_to_variant_de": 0.4,
+   "delta_e_to_source": 28.4,
+   "asset_path": "content/catalogue/variants/B072-P005-cw08.webp"
+  },
+  {
+   "product_id": "B072-P005-cw09",
+   "source": "B072-P005",
+   "style": "Iris Classic Cashmere Cardigan",
+   "shop": "johnstonsofelgin.com",
+   "swatch": 9,
+   "swatch_hex": "D7CCBC",
+   "selected": false,
+   "colour_name_text": "",
+   "garment_type": "crew-neck button cardigan",
+   "slot": "layer",
+   "slot_confidence": "",
+   "price": "CHF 769.00",
+   "source_clean": true,
+   "product_name_confidence": "guessed",
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "D7CCBC",
+    "family": "warm neutral",
+    "name": "cream",
+    "share": 1.0,
+    "L": 82.5,
+    "C": 9.4,
+    "h": 83.1,
+    "rel": 0.129,
+    "neutral": true
+   },
+   "speckle": 0.7,
+   "swatch_to_variant_de": 0.2,
+   "delta_e_to_source": 12.8,
+   "asset_path": "content/catalogue/variants/B072-P005-cw09.webp"
+  },
+  {
+   "product_id": "B072-P005-cw10",
+   "source": "B072-P005",
+   "style": "Iris Classic Cashmere Cardigan",
+   "shop": "johnstonsofelgin.com",
+   "swatch": 10,
+   "swatch_hex": "1B2131",
+   "selected": false,
+   "colour_name_text": "",
+   "garment_type": "crew-neck button cardigan",
+   "slot": "layer",
+   "slot_confidence": "",
+   "price": "CHF 769.00",
+   "source_clean": true,
+   "product_name_confidence": "guessed",
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "1B2131",
+    "family": "blue",
+    "name": "navy",
+    "share": 1.0,
+    "L": 12.9,
+    "C": 11.7,
+    "h": 281.5,
+    "rel": 0.428,
+    "neutral": false
+   },
+   "speckle": 0.5,
+   "swatch_to_variant_de": 0.2,
+   "delta_e_to_source": 81.7,
+   "asset_path": "content/catalogue/variants/B072-P005-cw10.webp"
+  },
+  {
+   "product_id": "B072-P005-cw11",
+   "source": "B072-P005",
+   "style": "Iris Classic Cashmere Cardigan",
+   "shop": "johnstonsofelgin.com",
+   "swatch": 11,
+   "swatch_hex": "ADADA1",
+   "selected": false,
+   "colour_name_text": "",
+   "garment_type": "crew-neck button cardigan",
+   "slot": "layer",
+   "slot_confidence": "",
+   "price": "CHF 769.00",
+   "source_clean": true,
+   "product_name_confidence": "guessed",
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "ADADA1",
+    "family": "warm neutral",
+    "name": "oatmeal",
+    "share": 1.0,
+    "L": 70.4,
+    "C": 6.5,
+    "h": 109.5,
+    "rel": 0.086,
+    "neutral": true
+   },
+   "speckle": 0.7,
+   "swatch_to_variant_de": 0.3,
+   "delta_e_to_source": 17.6,
+   "asset_path": "content/catalogue/variants/B072-P005-cw11.webp"
+  },
+  {
+   "product_id": "B072-P005-cw12",
+   "source": "B072-P005",
+   "style": "Iris Classic Cashmere Cardigan",
+   "shop": "johnstonsofelgin.com",
+   "swatch": 12,
+   "swatch_hex": "E9ECE5",
+   "selected": false,
+   "colour_name_text": "",
+   "garment_type": "crew-neck button cardigan",
+   "slot": "layer",
+   "slot_confidence": "",
+   "price": "CHF 769.00",
+   "source_clean": true,
+   "product_name_confidence": "guessed",
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "E9ECE5",
+    "family": "white",
+    "name": "white",
+    "share": 1.0,
+    "L": 93.0,
+    "C": 3.8,
+    "h": 126.4,
+    "rel": 0.051,
+    "neutral": true
+   },
+   "speckle": 1.0,
+   "swatch_to_variant_de": 0.4,
+   "delta_e_to_source": 13.7,
+   "asset_path": "content/catalogue/variants/B072-P005-cw12.webp"
+  },
+  {
+   "product_id": "B072-P005-cw13",
+   "source": "B072-P005",
+   "style": "Iris Classic Cashmere Cardigan",
+   "shop": "johnstonsofelgin.com",
+   "swatch": 13,
+   "swatch_hex": "DCC90B",
+   "selected": false,
+   "colour_name_text": "",
+   "garment_type": "crew-neck button cardigan",
+   "slot": "layer",
+   "slot_confidence": "",
+   "price": "CHF 769.00",
+   "source_clean": true,
+   "product_name_confidence": "guessed",
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "DCC90B",
+    "family": "yellow",
+    "name": "butter",
+    "share": 1.0,
+    "L": 80.2,
+    "C": 80.4,
+    "h": 97.0,
+    "rel": 0.987,
+    "neutral": false
+   },
+   "speckle": 0.8,
+   "swatch_to_variant_de": 0.2,
+   "delta_e_to_source": 18.0,
+   "asset_path": "content/catalogue/variants/B072-P005-cw13.webp"
+  }
+ ],
+ "report": {
+  "WOMEN CLASSIC MERINO WOOL CREW": {
+   "shop": "colorfulstandard.com",
+   "shop_label": "Colorful Standard",
+   "source": "B068-P003",
+   "source_image": "content/swipe/products/IMG_1042.png",
+   "source_clean": false,
+   "source_cut": "content/catalogue/assets/B068-P003.webp",
+   "swatches": 22,
+   "kinds": [
+    "photo"
+   ],
+   "covered": {
+    "2": [
+     "B068-P005",
+     "colour match dE 2.5"
+    ],
+    "3": [
+     "B068-P006",
+     "colour match dE 0.0"
+    ],
+    "4": [
+     "B068-P007",
+     "colour match dE 0.9"
+    ],
+    "5": [
+     "B068-P008",
+     "colour match dE 1.3"
+    ],
+    "6": [
+     "B068-P009",
+     "colour match dE 2.0"
+    ],
+    "7": [
+     "B068-P010",
+     "colour match dE 0.8"
+    ],
+    "8": [
+     "B068-P011",
+     "colour match dE 0.7"
+    ],
+    "9": [
+     "B068-P012",
+     "colour match dE 0.6"
+    ],
+    "10": [
+     "B068-P013",
+     "colour match dE 0.5"
+    ],
+    "11": [
+     "B068-P003",
+     "selected on IMG_1042.png (dE 0.0 to the reference swatch)"
+    ],
+    "12": [
+     "B068-P015",
+     "colour match dE 1.1"
+    ],
+    "13": [
+     "B068-P016",
+     "colour match dE 0.7"
+    ],
+    "14": [
+     "B068-P017",
+     "colour match dE 0.7"
+    ],
+    "15": [
+     "B068-P018",
+     "colour match dE 1.9"
+    ],
+    "16": [
+     "B068-P019",
+     "colour match dE 1.5"
+    ],
+    "17": [
+     "B068-P020",
+     "colour match dE 1.5"
+    ],
+    "18": [
+     "B068-P021",
+     "colour match dE 0.5"
+    ],
+    "19": [
+     "B068-P022",
+     "colour match dE 0.5"
+    ],
+    "20": [
+     "B068-P023",
+     "colour match dE 0.5"
+    ],
+    "21": [
+     "B068-P024",
+     "colour match dE 0.8"
+    ],
+    "22": [
+     "B068-P025",
+     "colour match dE 0.9"
+    ]
+   },
+   "own_swatch": 11,
+   "own_hex": "F1D6B6",
+   "images": [
+    "content/swipe/products/IMG_1040.png",
+    "content/swipe/products/IMG_1041.png",
+    "content/swipe/products/IMG_1042.png",
+    "content/swipe/products/IMG_1044.png",
+    "content/swipe/products/IMG_1045.png",
+    "content/swipe/products/IMG_1046.png",
+    "content/swipe/products/IMG_1047.png",
+    "content/swipe/products/IMG_1048.png",
+    "content/swipe/products/IMG_1049.png",
+    "content/swipe/products/IMG_1050.png",
+    "content/swipe/products/IMG_1051.png",
+    "content/swipe/products/IMG_1052.png",
+    "content/swipe/products/IMG_1053.png",
+    "content/swipe/products/IMG_1054.png",
+    "content/swipe/products/IMG_1055.png",
+    "content/swipe/products/IMG_1056.png",
+    "content/swipe/products/IMG_1057.png",
+    "content/swipe/products/IMG_1058.png",
+    "content/swipe/products/IMG_1059.png",
+    "content/swipe/products/IMG_1060.png",
+    "content/swipe/products/IMG_1061.png",
+    "content/swipe/products/IMG_1062.png",
+    "content/swipe/products/IMG_1063.png",
+    "content/swipe/products/IMG_1064.png"
+   ],
+   "variants": [],
+   "real": [],
+   "sheet": "colorful-standard-women-classic-merino-wool-crew"
+  },
+  "Boat Neck Wool Sweater": {
+   "shop": "eu.toa.st",
+   "shop_label": "Toast",
+   "source": "B070-P019",
+   "source_image": "content/swipe/products/IMG_1148.png",
+   "source_clean": true,
+   "source_cut": "content/catalogue/review/B070-P019p0-cut.webp",
+   "swatches": 2,
+   "kinds": [
+    "photo"
+   ],
+   "covered": {
+    "1": [
+     "B070-P020",
+     "selected on IMG_1149.png (dE 0.5 to the reference swatch)"
+    ],
+    "2": [
+     "B070-P019",
+     "selected on IMG_1148.png (dE 0.0 to the reference swatch)"
+    ]
+   },
+   "own_swatch": 2,
+   "own_hex": "70723E",
+   "images": [
+    "content/swipe/products/IMG_1148.png",
+    "content/swipe/products/IMG_1149.png"
+   ],
+   "variants": [],
+   "real": [],
+   "sheet": "toast-boat-neck-wool-sweater"
+  },
+  "Cotton Linen Easy Sweater": {
+   "shop": "eu.toa.st",
+   "shop_label": "Toast",
+   "source": "B070-P014",
+   "source_image": "content/swipe/products/IMG_1143.png",
+   "source_clean": false,
+   "source_cut": "content/catalogue/review/B070-P014p0.jpg",
+   "swatches": 5,
+   "kinds": [
+    "photo"
+   ],
+   "covered": {
+    "3": [
+     "B070-P014",
+     "selected on IMG_1143.png (dE 0.0 to the reference swatch)"
+    ],
+    "5": [
+     "B070-P015",
+     "selected on IMG_1144.png (dE 0.0 to the reference swatch)"
+    ]
+   },
+   "own_swatch": 3,
+   "own_hex": "958A3C",
+   "images": [
+    "content/swipe/products/IMG_1143.png",
+    "content/swipe/products/IMG_1144.png"
+   ],
+   "variants": [
+    "B070-P014-cw01",
+    "B070-P014-cw02",
+    "B070-P014-cw04"
+   ],
+   "real": [
+    "B070-P014-cw01",
+    "B070-P014-cw02",
+    "B070-P014-cw04"
+   ],
+   "sheet": "toast-cotton-linen-easy-sweater"
+  },
+  "Eden Wool Cashmere Raglan Cardigan": {
+   "shop": "eu.toa.st",
+   "shop_label": "Toast",
+   "source": "B070-P021",
+   "source_image": "content/swipe/products/IMG_1150.png",
+   "source_clean": true,
+   "source_cut": "content/catalogue/review/B070-P021p0-cut.webp",
+   "swatches": 4,
+   "kinds": [
+    "photo"
+   ],
+   "covered": {
+    "4": [
+     "B070-P021",
+     "selected on IMG_1150.png (dE 0.0 to the reference swatch)"
+    ]
+   },
+   "own_swatch": 4,
+   "own_hex": "394552",
+   "images": [
+    "content/swipe/products/IMG_1150.png"
+   ],
+   "variants": [
+    "B070-P021-cw01",
+    "B070-P021-cw02",
+    "B070-P021-cw03"
+   ],
+   "real": [
+    "B070-P021-cw01",
+    "B070-P021-cw02",
+    "B070-P021-cw03"
+   ],
+   "sheet": "toast-eden-wool-cashmere-raglan-cardigan"
+  },
+  "Fine Wool Cashmere Half Sleeve Sweater": {
+   "shop": "eu.toa.st",
+   "shop_label": "Toast",
+   "source": "B070-P011",
+   "source_image": "content/swipe/products/IMG_1140.png",
+   "source_clean": false,
+   "source_cut": "content/catalogue/review/B070-P011p2.jpg",
+   "swatches": 2,
+   "kinds": [
+    "photo"
+   ],
+   "covered": {
+    "1": [
+     "B070-P011",
+     "selected on IMG_1140.png (dE 0.0 to the reference swatch)"
+    ],
+    "2": [
+     "B070-P012",
+     "selected on IMG_1141.png (dE 0.0 to the reference swatch)"
+    ]
+   },
+   "own_swatch": 1,
+   "own_hex": "E0E3D9",
+   "images": [
+    "content/swipe/products/IMG_1140.png",
+    "content/swipe/products/IMG_1141.png"
+   ],
+   "variants": [],
+   "real": [],
+   "sheet": "toast-fine-wool-cashmere-half-sleeve-sweater"
+  },
+  "Harvest Yoke Donegal Sweater": {
+   "shop": "eu.toa.st",
+   "shop_label": "Toast",
+   "source": "B070-P010",
+   "source_image": "content/swipe/products/IMG_1139.png",
+   "source_clean": true,
+   "source_cut": "content/catalogue/review/B070-P010p0-cut.webp",
+   "swatches": 2,
+   "kinds": [
+    "photo"
+   ],
+   "covered": {
+    "1": [
+     "B070-P010",
+     "selected on IMG_1139.png (dE 0.0 to the reference swatch)"
+    ]
+   },
+   "own_swatch": 1,
+   "own_hex": "202731",
+   "images": [
+    "content/swipe/products/IMG_1139.png"
+   ],
+   "variants": [
+    "B070-P010-cw02"
+   ],
+   "real": [
+    "B070-P010-cw02"
+   ],
+   "sheet": "toast-harvest-yoke-donegal-sweater"
+  },
+  "Orla Donegal Wool Sweater": {
+   "shop": "eu.toa.st",
+   "shop_label": "Toast",
+   "source": "B070-P001",
+   "source_image": "content/swipe/products/IMG_1130.png",
+   "source_clean": true,
+   "source_cut": "content/catalogue/review/B070-P001p0-cut.webp",
+   "swatches": 6,
+   "kinds": [
+    "photo"
+   ],
+   "covered": {
+    "1": [
+     "B070-P002",
+     "selected on IMG_1131.png (dE 0.0 to the reference swatch)"
+    ],
+    "2": [
+     "B070-P004",
+     "selected on IMG_1133.png (dE 0.0 to the reference swatch)"
+    ],
+    "3": [
+     "B070-P005",
+     "selected on IMG_1134.png (dE 1.1 to the reference swatch)"
+    ],
+    "4": [
+     "B070-P006",
+     "selected on IMG_1135.png (dE 0.0 to the reference swatch)"
+    ],
+    "5": [
+     "B070-P007",
+     "selected on IMG_1136.png (dE 0.0 to the reference swatch)"
+    ],
+    "6": [
+     "B070-P001",
+     "selected on IMG_1130.png (dE 0.0 to the reference swatch)"
+    ]
+   },
+   "own_swatch": 6,
+   "own_hex": "545D32",
+   "images": [
+    "content/swipe/products/IMG_1130.png",
+    "content/swipe/products/IMG_1131.png",
+    "content/swipe/products/IMG_1132.png",
+    "content/swipe/products/IMG_1133.png",
+    "content/swipe/products/IMG_1134.png",
+    "content/swipe/products/IMG_1135.png",
+    "content/swipe/products/IMG_1136.png",
+    "content/swipe/products/IMG_1137.png"
+   ],
+   "variants": [],
+   "real": [],
+   "sheet": "toast-orla-donegal-wool-sweater"
+  },
+  "Wool Cashmere Neat Sweater": {
+   "shop": "eu.toa.st",
+   "shop_label": "Toast",
+   "source": "B070-P017",
+   "source_image": "content/swipe/products/IMG_1146.png",
+   "source_clean": true,
+   "source_cut": "content/catalogue/review/B070-P017p0-cut.webp",
+   "swatches": 2,
+   "kinds": [
+    "photo"
+   ],
+   "covered": {
+    "1": [
+     "B070-P018",
+     "selected on IMG_1147.png (dE 0.0 to the reference swatch)"
+    ],
+    "2": [
+     "B070-P017",
+     "selected on IMG_1146.png (dE 0.0 to the reference swatch)"
+    ]
+   },
+   "own_swatch": 2,
+   "own_hex": "874A23",
+   "images": [
+    "content/swipe/products/IMG_1146.png",
+    "content/swipe/products/IMG_1147.png"
+   ],
+   "variants": [],
+   "real": [],
+   "sheet": "toast-wool-cashmere-neat-sweater"
+  },
+  "Wool Cashmere Roll Neck Sweater": {
+   "shop": "eu.toa.st",
+   "shop_label": "Toast",
+   "source": "B070-P013",
+   "source_image": "content/swipe/products/IMG_1142.png",
+   "source_clean": true,
+   "source_cut": "content/catalogue/review/B070-P013p0-cut.webp",
+   "swatches": 3,
+   "kinds": [
+    "photo"
+   ],
+   "covered": {
+    "2": [
+     "B070-P013",
+     "selected on IMG_1142.png (dE 0.0 to the reference swatch)"
+    ]
+   },
+   "own_swatch": 2,
+   "own_hex": "692D2C",
+   "images": [
+    "content/swipe/products/IMG_1142.png"
+   ],
+   "variants": [
+    "B070-P013-cw01",
+    "B070-P013-cw03"
+   ],
+   "real": [
+    "B070-P013-cw01",
+    "B070-P013-cw03"
+   ],
+   "sheet": "toast-wool-cashmere-roll-neck-sweater"
+  },
+  "Cairn Donegal Cashmere Jumper": {
+   "shop": "johnstonsofelgin.com",
+   "shop_label": "Johnstons of Elgin",
+   "source": "B072-P002",
+   "source_image": "content/swipe/products/IMG_1157.png",
+   "source_clean": true,
+   "source_cut": "content/catalogue/assets/B072-P002.webp",
+   "swatches": 5,
+   "kinds": [
+    "fabric"
+   ],
+   "covered": {
+    "1": [
+     "B072-P002",
+     "selected on IMG_1157.png (dE 0.0 to the reference swatch)"
+    ],
+    "2": [
+     "B072-P003",
+     "selected on IMG_1158.png (dE 0.0 to the reference swatch)"
+    ]
+   },
+   "own_swatch": 1,
+   "own_hex": "352236",
+   "images": [
+    "content/swipe/products/IMG_1157.png",
+    "content/swipe/products/IMG_1158.png"
+   ],
+   "variants": [
+    "B072-P002-cw03",
+    "B072-P002-cw04",
+    "B072-P002-cw05"
+   ],
+   "real": [],
+   "sheet": "johnstons-of-elgin-cairn-donegal-cashmere-jumper"
+  },
+  "Iris Classic Cashmere Cardigan": {
+   "shop": "johnstonsofelgin.com",
+   "shop_label": "Johnstons of Elgin",
+   "source": "B072-P005",
+   "source_image": "content/swipe/products/IMG_1159.png",
+   "source_clean": true,
+   "source_cut": "content/catalogue/assets/B072-P005.webp",
+   "swatches": 13,
+   "kinds": [
+    "fabric"
+   ],
+   "covered": {
+    "1": [
+     "B072-P004",
+     "selected on IMG_1159.png (dE 0.0 to the reference swatch)"
+    ],
+    "2": [
+     "B072-P005",
+     "selected on IMG_1160.png (dE 0.0 to the reference swatch)"
+    ],
+    "3": [
+     "B072-P006",
+     "selected on IMG_1161.png (dE 0.0 to the reference swatch)"
+    ],
+    "5": [
+     "B072-P007",
+     "selected on IMG_1162.png (dE 0.0 to the reference swatch)"
+    ]
+   },
+   "own_swatch": 2,
+   "own_hex": "DDDBA6",
+   "images": [
+    "content/swipe/products/IMG_1159.png",
+    "content/swipe/products/IMG_1160.png",
+    "content/swipe/products/IMG_1161.png",
+    "content/swipe/products/IMG_1162.png"
+   ],
+   "variants": [
+    "B072-P005-cw04",
+    "B072-P005-cw06",
+    "B072-P005-cw07",
+    "B072-P005-cw08",
+    "B072-P005-cw09",
+    "B072-P005-cw10",
+    "B072-P005-cw11",
+    "B072-P005-cw12",
+    "B072-P005-cw13"
+   ],
+   "real": [],
+   "sheet": "johnstons-of-elgin-iris-classic-cashmere-cardigan"
+  }
+ },
+ "dropped": {
+  "B068-P003-cw01": "the pale thumbnail ground joins the pale grey jumper; the cut keeps a white block under the hem"
+ }
+}
