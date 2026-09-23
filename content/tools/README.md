@@ -148,3 +148,19 @@ upgraded), and colours read from the box region by `extract_colours`. The
 - A panel is classified by what is in it, not by its backdrop: once the page is
   split the panel IS the photograph, so the corner test reads the garment's own
   shoulders and calls a good packshot "other".
+
+## Added 23 September 2026 — one row per garment
+
+| Script | What it does |
+|---|---|
+| `split_mixed.py` | splits a product row that holds several garments. The clustering groups screenshots by page layout, which cannot tell two of one shop's products apart; colour can, and colour decides on its own — the same style in navy and in cream is two things to put on a shelf. Writes `_product_splits.json`, rewrites `batches.json`, and gives each new row its own pictures, cut-out, colours and viewing row. |
+
+- Listing grids are left alone: a grid screenshot is a page of a dozen
+  products, its dominant colour means nothing, and `grid_cells.py` cuts it up.
+- The style name is written on every row a split produces, and each row records
+  the product it came from, so the pair stay findable together.
+- The slot is the parent's and may describe the parent's garment. It is carried
+  with a note saying so rather than guessed at again.
+- Files are named from the records that own them, never found by matching a
+  prefix in the folder: a group that keeps the parent id renames its own later
+  pictures, and a prefix scan reads a name another group is about to write.

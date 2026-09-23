@@ -88,12 +88,14 @@ def image_list(rv, sources, pid='', panels=None, shot=''):
             continue
         src = sources[i] if i < len(sources) else ''
         sp = panels.get(f'{pid}#{i}') or {}
-        if sp.get('split'):
+        if sp.get('split') and any(os.path.exists(CAT + '/' + pn['path']) for pn in sp['panels']):
             for j, pn in enumerate(sp['panels']):
+                if not os.path.exists(CAT + '/' + pn['path']):
+                    continue          # a panel whose picture did not survive a split
                 d = dict(path='full/' + os.path.basename(pn['path']), w=pn['w'], h=pn['h'],
                          item=None, person=None, suggested=[], source=src,
                          type=pn['type'], panel_of=i, panel_box=pn['box'])
-                if pn.get('cut'):
+                if pn.get('cut') and os.path.exists(CAT + '/' + pn['cut']):
                     with Image.open(CAT + '/' + pn['cut']) as im:
                         d['whole'] = dict(path='full/' + os.path.basename(pn['cut']),
                                           w=im.width, h=im.height)
@@ -111,12 +113,22 @@ def image_list(rv, sources, pid='', panels=None, shot=''):
     return out
 
 
+DETAIL_TYPES = ('detail', 'text', 'other')
+
+
 def primary_picture(images):
-    """The picture the shelf shows: flat lay first, the person wearing it next."""
+    """The picture the shelf shows: flat lay first, the person wearing it next.
+
+    Never a fabric close-up or a panel of page type. Those are kept, because
+    they are part of the page, but the shelf is showing the garment.
+    """
     for want in ('flat lay', 'on-model', 'whole page'):
         for i, e in enumerate(images):
             if e.get('type') == want:
                 return i
+    for i, e in enumerate(images):
+        if e.get('type') not in DETAIL_TYPES:
+            return i
     return 0
 
 

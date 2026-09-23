@@ -102,7 +102,13 @@
   "batch_id": "B008",
   "product_id": "B008-P003",
   "images": [
-   "content/swipe/products/IMG_0015.png",
+   "content/swipe/products/IMG_0015.png"
+  ]
+ },
+ {
+  "batch_id": "B008",
+  "product_id": "B008-P003-V2",
+  "images": [
    "content/swipe/products/IMG_0016.png"
   ]
  },
@@ -138,8 +144,20 @@
   "batch_id": "B010",
   "product_id": "B010-P001",
   "images": [
-   "content/swipe/products/IMG_0171.png",
-   "content/swipe/products/IMG_0172.png",
+   "content/swipe/products/IMG_0171.png"
+  ]
+ },
+ {
+  "batch_id": "B010",
+  "product_id": "B010-P001-V2",
+  "images": [
+   "content/swipe/products/IMG_0172.png"
+  ]
+ },
+ {
+  "batch_id": "B010",
+  "product_id": "B010-P001-V3",
+  "images": [
    "content/swipe/products/IMG_0173.png"
   ]
  },
@@ -154,7 +172,13 @@
   "batch_id": "B010",
   "product_id": "B010-P003",
   "images": [
-   "content/swipe/products/IMG_0175.png",
+   "content/swipe/products/IMG_0175.png"
+  ]
+ },
+ {
+  "batch_id": "B010",
+  "product_id": "B010-P003-V2",
+  "images": [
    "content/swipe/products/IMG_0176.png"
   ]
  },
@@ -169,9 +193,27 @@
   "batch_id": "B010",
   "product_id": "B010-P005",
   "images": [
-   "content/swipe/products/IMG_0178.png",
-   "content/swipe/products/IMG_0179.png",
-   "content/swipe/products/IMG_0180.png",
+   "content/swipe/products/IMG_0178.png"
+  ]
+ },
+ {
+  "batch_id": "B010",
+  "product_id": "B010-P005-V2",
+  "images": [
+   "content/swipe/products/IMG_0179.png"
+  ]
+ },
+ {
+  "batch_id": "B010",
+  "product_id": "B010-P005-V3",
+  "images": [
+   "content/swipe/products/IMG_0180.png"
+  ]
+ },
+ {
+  "batch_id": "B010",
+  "product_id": "B010-P005-V4",
+  "images": [
    "content/swipe/products/IMG_0181.png",
    "content/swipe/products/IMG_0182.png"
   ]
@@ -252,7 +294,13 @@
   "product_id": "B012-P003",
   "images": [
    "content/swipe/products/IMG_0194.png",
-   "content/swipe/products/IMG_0195.png",
+   "content/swipe/products/IMG_0195.png"
+  ]
+ },
+ {
+  "batch_id": "B012",
+  "product_id": "B012-P003-V2",
+  "images": [
    "content/swipe/products/IMG_0196.png"
   ]
  },
@@ -268,8 +316,20 @@
   "product_id": "B013-P001",
   "images": [
    "content/swipe/products/IMG_0198.png",
-   "content/swipe/products/IMG_0199.png",
-   "content/swipe/products/IMG_0200.png",
+   "content/swipe/products/IMG_0200.png"
+  ]
+ },
+ {
+  "batch_id": "B013",
+  "product_id": "B013-P001-V2",
+  "images": [
+   "content/swipe/products/IMG_0199.png"
+  ]
+ },
+ {
+  "batch_id": "B013",
+  "product_id": "B013-P001-V3",
+  "images": [
    "content/swipe/products/IMG_0201.png"
   ]
  },
@@ -277,9 +337,27 @@
   "batch_id": "B014",
   "product_id": "B014-P001",
   "images": [
-   "content/swipe/products/IMG_0202.png",
-   "content/swipe/products/IMG_0203.png",
-   "content/swipe/products/IMG_0204.png",
+   "content/swipe/products/IMG_0202.png"
+  ]
+ },
+ {
+  "batch_id": "B014",
+  "product_id": "B014-P001-V2",
+  "images": [
+   "content/swipe/products/IMG_0203.png"
+  ]
+ },
+ {
+  "batch_id": "B014",
+  "product_id": "B014-P001-V3",
+  "images": [
+   "content/swipe/products/IMG_0204.png"
+  ]
+ },
+ {
+  "batch_id": "B014",
+  "product_id": "B014-P001-V4",
+  "images": [
    "content/swipe/products/IMG_0205.jpeg"
   ]
  },
@@ -324,7 +402,13 @@
   "batch_id": "B016",
   "product_id": "B016-P001",
   "images": [
-   "content/swipe/products/IMG_0213.png",
+   "content/swipe/products/IMG_0213.png"
+  ]
+ },
+ {
+  "batch_id": "B016",
+  "product_id": "B016-P001-V2",
+  "images": [
    "content/swipe/products/IMG_0214.png"
   ]
  },
@@ -354,8 +438,20 @@
   "product_id": "B017-P001",
   "images": [
    "content/swipe/products/IMG_0218.png",
-   "content/swipe/products/IMG_0219.png",
-   "content/swipe/products/IMG_0220.png",
+   "content/swipe/products/IMG_0220.png"
+  ]
+ },
+ {
+  "batch_id": "B017",
+  "product_id": "B017-P001-V2",
+  "images": [
+   "content/swipe/products/IMG_0219.png"
+  ]
+ },
+ {
+  "batch_id": "B017",
+  "product_id": "B017-P001-V3",
+  "images": [
    "content/swipe/products/IMG_0221.png"
   ]
  },
@@ -364,8 +460,20 @@
   "product_id": "B018-P001",
   "images": [
    "content/swipe/products/IMG_0222.png",
-   "content/swipe/products/IMG_0223.png",
-   "content/swipe/products/IMG_0224.png",
+   "content/swipe/products/IMG_0224.png"
+  ]
+ },
+ {
+  "batch_id": "B018",
+  "product_id": "B018-P001-V2",
+  "images": [
+   "content/swipe/products/IMG_0223.png"
+  ]
+ },
+ {
+  "batch_id": "B018",
+  "product_id": "B018-P001-V3",
+  "images": [
    "content/swipe/products/IMG_0225.png"
   ]
  },
@@ -476,7 +584,13 @@
   "batch_id": "B020",
   "product_id": "B020-P006",
   "images": [
-   "content/swipe/products/IMG_0247.png",
+   "content/swipe/products/IMG_0247.png"
+  ]
+ },
+ {
+  "batch_id": "B020",
+  "product_id": "B020-P006-V2",
+  "images": [
    "content/swipe/products/IMG_0248.png"
   ]
  },
@@ -485,16 +599,34 @@
   "product_id": "B021-P001",
   "images": [
    "content/swipe/products/IMG_0249.png",
-   "content/swipe/products/IMG_0250.png",
    "content/swipe/products/IMG_0251.png"
+  ]
+ },
+ {
+  "batch_id": "B021",
+  "product_id": "B021-P001-V2",
+  "images": [
+   "content/swipe/products/IMG_0250.png"
   ]
  },
  {
   "batch_id": "B021",
   "product_id": "B021-P002",
   "images": [
-   "content/swipe/products/IMG_0252.png",
-   "content/swipe/products/IMG_0253.png",
+   "content/swipe/products/IMG_0252.png"
+  ]
+ },
+ {
+  "batch_id": "B021",
+  "product_id": "B021-P002-V2",
+  "images": [
+   "content/swipe/products/IMG_0253.png"
+  ]
+ },
+ {
+  "batch_id": "B021",
+  "product_id": "B021-P002-V3",
+  "images": [
    "content/swipe/products/IMG_0254.png"
   ]
  },
@@ -516,7 +648,13 @@
   "batch_id": "B021",
   "product_id": "B021-P005",
   "images": [
-   "content/swipe/products/IMG_0257.png",
+   "content/swipe/products/IMG_0257.png"
+  ]
+ },
+ {
+  "batch_id": "B021",
+  "product_id": "B021-P005-V2",
+  "images": [
    "content/swipe/products/IMG_0258.png"
   ]
  },
@@ -524,7 +662,13 @@
   "batch_id": "B021",
   "product_id": "B021-P006",
   "images": [
-   "content/swipe/products/IMG_0259.png",
+   "content/swipe/products/IMG_0259.png"
+  ]
+ },
+ {
+  "batch_id": "B021",
+  "product_id": "B021-P006-V2",
+  "images": [
    "content/swipe/products/IMG_0260.png"
   ]
  },
@@ -562,9 +706,21 @@
   "product_id": "B021-P011",
   "images": [
    "content/swipe/products/IMG_0267.png",
-   "content/swipe/products/IMG_0268.png",
-   "content/swipe/products/IMG_0269.png",
    "content/swipe/products/IMG_0270.png"
+  ]
+ },
+ {
+  "batch_id": "B021",
+  "product_id": "B021-P011-V2",
+  "images": [
+   "content/swipe/products/IMG_0268.png"
+  ]
+ },
+ {
+  "batch_id": "B021",
+  "product_id": "B021-P011-V3",
+  "images": [
+   "content/swipe/products/IMG_0269.png"
   ]
  },
  {
@@ -1026,7 +1182,13 @@
   "product_id": "B025-P001",
   "images": [
    "content/swipe/products/IMG_0342.png",
-   "content/swipe/products/IMG_0343.png",
+   "content/swipe/products/IMG_0343.png"
+  ]
+ },
+ {
+  "batch_id": "B025",
+  "product_id": "B025-P001-V2",
+  "images": [
    "content/swipe/products/IMG_0344.png"
   ]
  },
@@ -1041,7 +1203,13 @@
   "batch_id": "B025",
   "product_id": "B025-P003",
   "images": [
-   "content/swipe/products/IMG_0346.png",
+   "content/swipe/products/IMG_0346.png"
+  ]
+ },
+ {
+  "batch_id": "B025",
+  "product_id": "B025-P003-V2",
+  "images": [
    "content/swipe/products/IMG_0347.png"
   ]
  },
@@ -1080,7 +1248,13 @@
   "batch_id": "B025",
   "product_id": "B025-P008",
   "images": [
-   "content/swipe/products/IMG_0355.png",
+   "content/swipe/products/IMG_0355.png"
+  ]
+ },
+ {
+  "batch_id": "B025",
+  "product_id": "B025-P008-V2",
+  "images": [
    "content/swipe/products/IMG_0356.png"
   ]
  },
@@ -1449,7 +1623,13 @@
   "product_id": "B031-P002",
   "images": [
    "content/swipe/products/IMG_0423.png",
-   "content/swipe/products/IMG_0424.png",
+   "content/swipe/products/IMG_0424.png"
+  ]
+ },
+ {
+  "batch_id": "B031",
+  "product_id": "B031-P002-V2",
+  "images": [
    "content/swipe/products/IMG_0425.png",
    "content/swipe/products/IMG_0426.png"
   ]
@@ -1508,7 +1688,13 @@
   "product_id": "B032-P001",
   "images": [
    "content/swipe/products/IMG_0434.png",
-   "content/swipe/products/IMG_0435.png",
+   "content/swipe/products/IMG_0435.png"
+  ]
+ },
+ {
+  "batch_id": "B032",
+  "product_id": "B032-P001-V2",
+  "images": [
    "content/swipe/products/IMG_0436.png"
   ]
  },
@@ -1732,7 +1918,13 @@
   "batch_id": "B037",
   "product_id": "B037-P006",
   "images": [
-   "content/swipe/products/IMG_0473.png",
+   "content/swipe/products/IMG_0473.png"
+  ]
+ },
+ {
+  "batch_id": "B037",
+  "product_id": "B037-P006-V2",
+  "images": [
    "content/swipe/products/IMG_0474.png"
   ]
  },
@@ -2156,7 +2348,13 @@
   "batch_id": "B042",
   "product_id": "B042-P032",
   "images": [
-   "content/swipe/products/IMG_0557.png",
+   "content/swipe/products/IMG_0557.png"
+  ]
+ },
+ {
+  "batch_id": "B042",
+  "product_id": "B042-P032-V2",
+  "images": [
    "content/swipe/products/IMG_0558.png"
   ]
  },
@@ -2195,9 +2393,15 @@
   "images": [
    "content/swipe/products/IMG_0564.png",
    "content/swipe/products/IMG_0566.png",
-   "content/swipe/products/IMG_0567.png",
    "content/swipe/products/IMG_0568.png",
    "content/swipe/products/IMG_0569.png"
+  ]
+ },
+ {
+  "batch_id": "B042",
+  "product_id": "B042-P037-V2",
+  "images": [
+   "content/swipe/products/IMG_0567.png"
   ]
  },
  {
@@ -2262,9 +2466,21 @@
   "product_id": "B043-P004",
   "images": [
    "content/swipe/products/IMG_0579.png",
-   "content/swipe/products/IMG_0581.png",
-   "content/swipe/products/IMG_0582.png",
    "content/swipe/products/IMG_0583.png"
+  ]
+ },
+ {
+  "batch_id": "B043",
+  "product_id": "B043-P004-V2",
+  "images": [
+   "content/swipe/products/IMG_0581.png"
+  ]
+ },
+ {
+  "batch_id": "B043",
+  "product_id": "B043-P004-V3",
+  "images": [
+   "content/swipe/products/IMG_0582.png"
   ]
  },
  {
@@ -2360,7 +2576,13 @@
   "batch_id": "B044",
   "product_id": "B044-P010",
   "images": [
-   "content/swipe/products/IMG_0601.png",
+   "content/swipe/products/IMG_0601.png"
+  ]
+ },
+ {
+  "batch_id": "B044",
+  "product_id": "B044-P010-V2",
+  "images": [
    "content/swipe/products/IMG_0602.png"
   ]
  },
@@ -2772,8 +2994,20 @@
   "batch_id": "B053",
   "product_id": "B053-P001",
   "images": [
-   "content/swipe/products/IMG_0677.png",
-   "content/swipe/products/IMG_0678.png",
+   "content/swipe/products/IMG_0677.png"
+  ]
+ },
+ {
+  "batch_id": "B053",
+  "product_id": "B053-P001-V2",
+  "images": [
+   "content/swipe/products/IMG_0678.png"
+  ]
+ },
+ {
+  "batch_id": "B053",
+  "product_id": "B053-P001-V3",
+  "images": [
    "content/swipe/products/IMG_0679.png"
   ]
  },
@@ -2790,7 +3024,13 @@
   "product_id": "B053-P003",
   "images": [
    "content/swipe/products/IMG_0682.png",
-   "content/swipe/products/IMG_0683.png",
+   "content/swipe/products/IMG_0683.png"
+  ]
+ },
+ {
+  "batch_id": "B053",
+  "product_id": "B053-P003-V2",
+  "images": [
    "content/swipe/products/IMG_0684.png"
   ]
  },
@@ -2848,8 +3088,20 @@
   "product_id": "B054-P005",
   "images": [
    "content/swipe/products/IMG_0692.png",
-   "content/swipe/products/IMG_0693.png",
-   "content/swipe/products/IMG_0694.png",
+   "content/swipe/products/IMG_0693.png"
+  ]
+ },
+ {
+  "batch_id": "B054",
+  "product_id": "B054-P005-V2",
+  "images": [
+   "content/swipe/products/IMG_0694.png"
+  ]
+ },
+ {
+  "batch_id": "B054",
+  "product_id": "B054-P005-V3",
+  "images": [
    "content/swipe/products/IMG_0695.png"
   ]
  },
@@ -2886,9 +3138,21 @@
   "product_id": "B055-P003",
   "images": [
    "content/swipe/products/IMG_0700.png",
-   "content/swipe/products/IMG_0701.png",
    "content/swipe/products/IMG_0702.png",
-   "content/swipe/products/IMG_0703.png",
+   "content/swipe/products/IMG_0703.png"
+  ]
+ },
+ {
+  "batch_id": "B055",
+  "product_id": "B055-P003-V2",
+  "images": [
+   "content/swipe/products/IMG_0701.png"
+  ]
+ },
+ {
+  "batch_id": "B055",
+  "product_id": "B055-P003-V3",
+  "images": [
    "content/swipe/products/IMG_0704.png"
   ]
  },
@@ -2896,8 +3160,20 @@
   "batch_id": "B055",
   "product_id": "B055-P004",
   "images": [
-   "content/swipe/products/IMG_0705.png",
-   "content/swipe/products/IMG_0706.png",
+   "content/swipe/products/IMG_0705.png"
+  ]
+ },
+ {
+  "batch_id": "B055",
+  "product_id": "B055-P004-V2",
+  "images": [
+   "content/swipe/products/IMG_0706.png"
+  ]
+ },
+ {
+  "batch_id": "B055",
+  "product_id": "B055-P004-V3",
+  "images": [
    "content/swipe/products/IMG_0707.png"
   ]
  },
@@ -3022,7 +3298,13 @@
   "batch_id": "B057",
   "product_id": "B057-P001",
   "images": [
-   "content/swipe/products/IMG_0729.png",
+   "content/swipe/products/IMG_0729.png"
+  ]
+ },
+ {
+  "batch_id": "B057",
+  "product_id": "B057-P001-V2",
+  "images": [
    "content/swipe/products/IMG_0730.png"
   ]
  },
@@ -3038,9 +3320,15 @@
   "product_id": "B057-P003",
   "images": [
    "content/swipe/products/IMG_0732.png",
-   "content/swipe/products/IMG_0733.png",
-   "content/swipe/products/IMG_0734.png",
    "content/swipe/products/IMG_0735.png"
+  ]
+ },
+ {
+  "batch_id": "B057",
+  "product_id": "B057-P003-V2",
+  "images": [
+   "content/swipe/products/IMG_0733.png",
+   "content/swipe/products/IMG_0734.png"
   ]
  },
  {
@@ -3070,7 +3358,13 @@
   "batch_id": "B058",
   "product_id": "B058-P001",
   "images": [
-   "content/swipe/products/IMG_0741.png",
+   "content/swipe/products/IMG_0741.png"
+  ]
+ },
+ {
+  "batch_id": "B058",
+  "product_id": "B058-P001-V2",
+  "images": [
    "content/swipe/products/IMG_0742.png"
   ]
  },
@@ -3114,7 +3408,13 @@
   "batch_id": "B058",
   "product_id": "B058-P007",
   "images": [
-   "content/swipe/products/IMG_0749.png",
+   "content/swipe/products/IMG_0749.png"
+  ]
+ },
+ {
+  "batch_id": "B058",
+  "product_id": "B058-P007-V2",
+  "images": [
    "content/swipe/products/IMG_0750.png"
   ]
  },
@@ -3157,7 +3457,13 @@
   "batch_id": "B059",
   "product_id": "B059-P006",
   "images": [
-   "content/swipe/products/IMG_0756.png",
+   "content/swipe/products/IMG_0756.png"
+  ]
+ },
+ {
+  "batch_id": "B059",
+  "product_id": "B059-P006-V2",
+  "images": [
    "content/swipe/products/IMG_0757.png"
   ]
  },
@@ -3172,7 +3478,13 @@
   "batch_id": "B059",
   "product_id": "B059-P008",
   "images": [
-   "content/swipe/products/IMG_0759.png",
+   "content/swipe/products/IMG_0759.png"
+  ]
+ },
+ {
+  "batch_id": "B059",
+  "product_id": "B059-P008-V2",
+  "images": [
    "content/swipe/products/IMG_0760.png"
   ]
  },
@@ -3187,7 +3499,13 @@
   "batch_id": "B060",
   "product_id": "B060-P002",
   "images": [
-   "content/swipe/products/IMG_0762.png",
+   "content/swipe/products/IMG_0762.png"
+  ]
+ },
+ {
+  "batch_id": "B060",
+  "product_id": "B060-P002-V2",
+  "images": [
    "content/swipe/products/IMG_0763.png"
   ]
  },
@@ -3223,7 +3541,13 @@
   "batch_id": "B061",
   "product_id": "B061-P001",
   "images": [
-   "content/swipe/products/IMG_0768.png",
+   "content/swipe/products/IMG_0768.png"
+  ]
+ },
+ {
+  "batch_id": "B061",
+  "product_id": "B061-P001-V2",
+  "images": [
    "content/swipe/products/IMG_0769.png"
   ]
  },
@@ -3231,7 +3555,13 @@
   "batch_id": "B061",
   "product_id": "B061-P002",
   "images": [
-   "content/swipe/products/IMG_0770.png",
+   "content/swipe/products/IMG_0770.png"
+  ]
+ },
+ {
+  "batch_id": "B061",
+  "product_id": "B061-P002-V2",
+  "images": [
    "content/swipe/products/IMG_0771.png"
   ]
  },
@@ -3239,7 +3569,13 @@
   "batch_id": "B061",
   "product_id": "B061-P003",
   "images": [
-   "content/swipe/products/IMG_0772.png",
+   "content/swipe/products/IMG_0772.png"
+  ]
+ },
+ {
+  "batch_id": "B061",
+  "product_id": "B061-P003-V2",
+  "images": [
    "content/swipe/products/IMG_0773.png"
   ]
  },
@@ -3247,7 +3583,13 @@
   "batch_id": "B061",
   "product_id": "B061-P004",
   "images": [
-   "content/swipe/products/IMG_0774.png",
+   "content/swipe/products/IMG_0774.png"
+  ]
+ },
+ {
+  "batch_id": "B061",
+  "product_id": "B061-P004-V2",
+  "images": [
    "content/swipe/products/IMG_0775.png"
   ]
  },
@@ -3255,7 +3597,13 @@
   "batch_id": "B061",
   "product_id": "B061-P005",
   "images": [
-   "content/swipe/products/IMG_0776.png",
+   "content/swipe/products/IMG_0776.png"
+  ]
+ },
+ {
+  "batch_id": "B061",
+  "product_id": "B061-P005-V2",
+  "images": [
    "content/swipe/products/IMG_0777.png"
   ]
  },
@@ -3263,7 +3611,13 @@
   "batch_id": "B062",
   "product_id": "B062-P001",
   "images": [
-   "content/swipe/products/IMG_0778.png",
+   "content/swipe/products/IMG_0778.png"
+  ]
+ },
+ {
+  "batch_id": "B062",
+  "product_id": "B062-P001-V2",
+  "images": [
    "content/swipe/products/IMG_0779.png"
   ]
  },
@@ -3292,7 +3646,13 @@
   "batch_id": "B062",
   "product_id": "B062-P005",
   "images": [
-   "content/swipe/products/IMG_0783.png",
+   "content/swipe/products/IMG_0783.png"
+  ]
+ },
+ {
+  "batch_id": "B062",
+  "product_id": "B062-P005-V2",
+  "images": [
    "content/swipe/products/IMG_0784.png"
   ]
  },
@@ -3336,7 +3696,13 @@
   "batch_id": "B062",
   "product_id": "B062-P011",
   "images": [
-   "content/swipe/products/IMG_0791.png",
+   "content/swipe/products/IMG_0791.png"
+  ]
+ },
+ {
+  "batch_id": "B062",
+  "product_id": "B062-P011-V2",
+  "images": [
    "content/swipe/products/IMG_0792.png"
   ]
  },
@@ -3345,8 +3711,14 @@
   "product_id": "B062-P012",
   "images": [
    "content/swipe/products/IMG_0793.png",
-   "content/swipe/products/IMG_0794.png",
    "content/swipe/products/IMG_0795.png"
+  ]
+ },
+ {
+  "batch_id": "B062",
+  "product_id": "B062-P012-V2",
+  "images": [
+   "content/swipe/products/IMG_0794.png"
   ]
  },
  {

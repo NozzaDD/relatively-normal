@@ -5,7 +5,7 @@
 
 import { createStaticSource, indexById, indexInspiration, emptyFilters,
   filterProducts, onShelf, effectiveChoice, isReviewed, derivedProducts,
-  WEIGHT_LABELS, FORMALITY_LABELS } from './data.js';
+  WEIGHT_LABELS, FORMALITY_LABELS, isDetail } from './data.js';
 import * as M from './model.js';
 import { metrics, isTile } from './render.js';
 import { rankByLook } from './colour.js';
@@ -34,6 +34,7 @@ const S = {
   taps: 0,
   review: null,
   shelfPicture: {},                       // per product: which picture the shelf shows
+  ready: false,
 };
 window.__studio = S;                      // the test harness reaches in here
 
@@ -67,6 +68,7 @@ async function init() {
   renderReviewBadge();
   layoutStage();
   renderBoard();
+  S.ready = true;               // the saved board is back: the desk is up
 }
 
 /** Pieces cut out of other products' images appear on the shelf at once. */
@@ -474,8 +476,12 @@ function showPictureButton(uid) {
     && X_pictures(S.productsById[el.product_id]).length > 1);
 }
 
-const X_pictures = (p) => (p && p.images && p.images.length > 1
-  ? p.images.map((e, i) => ({ i, type: e.type || 'whole page', entry: e })) : []);
+const X_pictures = (p) => {
+  const all = (p && p.images) || [];
+  const keep = all.map((e, i) => ({ i, type: e.type || 'whole page', entry: e }))
+    .filter((x) => !isDetail(x.entry));
+  return keep.length > 1 ? keep : [];
+};
 
 function placement(p) {
   const c = effectiveChoice(p, S.choices);

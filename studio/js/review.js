@@ -353,7 +353,12 @@ export function createReview(api) {
   function openAdjust(p) {
     const m = $('adjust');
     const wrap = $('adjustWrap');
-    const vers = productVersions(p);
+    // the fabric close-ups are kept, and kept out of the way until asked for
+    const hasDetails = (p.images || []).some((e) => e.type === 'detail' || e.type === 'text'
+      || e.type === 'other');
+    $('adjDetailsWrap').hidden = !hasDetails;
+    $('adjDetails').checked = false;
+    let vers = productVersions(p);
     if (!vers.length) { api.toast('No image to draw on.'); return; }
     const prev = api.choices[p.product_id] || {};
     const eff = effectiveChoice(p, api.choices);
@@ -714,6 +719,14 @@ export function createReview(api) {
     $('adjZoom').onclick = () => { layout(st.zoom > 1.01 ? 1 : 2.5); paintBoxes(); };
     window.addEventListener('resize', () => { if (!m.classList.contains('hidden')) { layout(); paintBoxes(); } });
 
+    $('adjDetails').onchange = (ev) => {
+      const was = vers[st.cur];
+      vers = productVersions(p, { details: ev.target.checked });
+      const i = vers.findIndex((v) => v.kind === was.kind && v.image === was.image && v.base === was.base);
+      st.cur = i >= 0 ? i : 0;
+      st.sel = null;
+      showImage();
+    };
     const go = (d) => { const n = st.cur + d; if (n >= 0 && n < vers.length) { st.cur = n; st.sel = null; showImage(); } };
     $('adjPrev').onclick = () => go(-1);
     $('adjNext').onclick = () => go(1);

@@ -3787,11 +3787,11 @@
   "asset_type": "cutout_flat",
   "asset_quality": "good",
   "asset_path": "content/catalogue/assets/B056-P004.webp",
-  "note": "1 components; box found",
-  "bytes": 20038,
+  "note": "cut from the flat-lay panel of a split product page",
+  "bytes": 26596,
   "skin_share": 0.0,
   "alpha_fill": 0.585,
-  "measured": "backdrop not plain"
+  "measured": "clean"
  },
  "B056-P005": {
   "asset_type": "tile",
@@ -4328,5 +4328,615 @@
   "note": "crop tile; box found, 17% of page",
   "bytes": 23894,
   "measured": "backdrop not plain"
+ },
+ "B008-P003-V2": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B008-P003-V2.webp",
+  "note": "split out of B008-P003",
+  "bytes": 78848,
+  "skin_share": 0.418,
+  "alpha_fill": 0.691,
+  "measured": "backdrop not plain"
+ },
+ "B010-P001-V2": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B010-P001-V2.webp",
+  "note": "split out of B010-P001",
+  "bytes": 5796,
+  "measured": "clean"
+ },
+ "B010-P001-V3": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B010-P001-V3.webp",
+  "note": "split out of B010-P001",
+  "bytes": 5796,
+  "measured": "clean"
+ },
+ "B010-P003-V2": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B010-P003-V2.webp",
+  "note": "split out of B010-P003",
+  "bytes": 5108,
+  "skin_share": 0.0,
+  "alpha_fill": 0.741,
+  "measured": "backdrop not plain"
+ },
+ "B010-P005-V2": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B010-P005-V2.webp",
+  "note": "split out of B010-P005",
+  "bytes": 2604,
+  "skin_share": 0.45,
+  "alpha_fill": 0.731,
+  "measured": "clean"
+ },
+ "B010-P005-V3": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B010-P005-V3.webp",
+  "note": "split out of B010-P005",
+  "bytes": 2604,
+  "skin_share": 0.45,
+  "alpha_fill": 0.731,
+  "measured": "clean"
+ },
+ "B010-P005-V4": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B010-P005-V4.webp",
+  "note": "split out of B010-P005",
+  "bytes": 2604,
+  "skin_share": 0.45,
+  "alpha_fill": 0.731,
+  "measured": "clean"
+ },
+ "B012-P003-V2": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B012-P003-V2.webp",
+  "note": "split out of B012-P003",
+  "bytes": 3880,
+  "skin_share": 0.026,
+  "alpha_fill": 0.44,
+  "measured": "clean"
+ },
+ "B013-P001-V2": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B013-P001-V2.webp",
+  "note": "split out of B013-P001",
+  "bytes": 5616,
+  "skin_share": 0.071,
+  "alpha_fill": 0.512,
+  "measured": "clean"
+ },
+ "B013-P001-V3": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B013-P001-V3.webp",
+  "note": "split out of B013-P001",
+  "bytes": 5616,
+  "skin_share": 0.071,
+  "alpha_fill": 0.512,
+  "measured": "clean"
+ },
+ "B014-P001-V2": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B014-P001-V2.webp",
+  "note": "split out of B014-P001",
+  "bytes": 5256,
+  "skin_share": 0.26,
+  "alpha_fill": 0.761,
+  "measured": "clean"
+ },
+ "B014-P001-V3": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B014-P001-V3.webp",
+  "note": "split out of B014-P001",
+  "bytes": 5256,
+  "skin_share": 0.26,
+  "alpha_fill": 0.761,
+  "measured": "clean"
+ },
+ "B014-P001-V4": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B014-P001-V4.webp",
+  "note": "split out of B014-P001",
+  "bytes": 5256,
+  "skin_share": 0.26,
+  "alpha_fill": 0.761,
+  "measured": "clean"
+ },
+ "B016-P001-V2": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B016-P001-V2.webp",
+  "note": "split out of B016-P001",
+  "bytes": 5720,
+  "skin_share": 0.591,
+  "alpha_fill": 0.651,
+  "measured": "clean"
+ },
+ "B017-P001-V2": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B017-P001-V2.webp",
+  "note": "split out of B017-P001",
+  "bytes": 3634,
+  "skin_share": 0.142,
+  "alpha_fill": 0.671,
+  "measured": "clean"
+ },
+ "B017-P001-V3": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B017-P001-V3.webp",
+  "note": "split out of B017-P001",
+  "bytes": 3634,
+  "skin_share": 0.142,
+  "alpha_fill": 0.671,
+  "measured": "clean"
+ },
+ "B018-P001-V2": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B018-P001-V2.webp",
+  "note": "split out of B018-P001",
+  "bytes": 7528,
+  "skin_share": 0.135,
+  "alpha_fill": 0.787,
+  "measured": "clean"
+ },
+ "B018-P001-V3": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B018-P001-V3.webp",
+  "note": "split out of B018-P001",
+  "bytes": 7528,
+  "skin_share": 0.135,
+  "alpha_fill": 0.787,
+  "measured": "clean"
+ },
+ "B020-P006-V2": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B020-P006-V2.webp",
+  "note": "split out of B020-P006",
+  "bytes": 17958,
+  "skin_share": 0.0,
+  "alpha_fill": 0.429,
+  "measured": "clean"
+ },
+ "B021-P001-V2": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P001-V2.webp",
+  "note": "split out of B021-P001",
+  "bytes": 16328,
+  "skin_share": 0.016,
+  "alpha_fill": 0.395,
+  "measured": "clean"
+ },
+ "B021-P002-V2": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P002-V2.webp",
+  "note": "split out of B021-P002",
+  "bytes": 44186,
+  "skin_share": 0.093,
+  "alpha_fill": 0.63,
+  "measured": "clean"
+ },
+ "B021-P002-V3": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P002-V3.webp",
+  "note": "split out of B021-P002",
+  "bytes": 44186,
+  "skin_share": 0.093,
+  "alpha_fill": 0.63,
+  "measured": "clean"
+ },
+ "B021-P005-V2": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B021-P005-V2.webp",
+  "note": "split out of B021-P005",
+  "bytes": 15028,
+  "skin_share": 0.812,
+  "alpha_fill": 0.67,
+  "measured": "backdrop not plain"
+ },
+ "B021-P006-V2": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P006-V2.webp",
+  "note": "split out of B021-P006",
+  "bytes": 39646,
+  "skin_share": 0.001,
+  "alpha_fill": 0.802,
+  "measured": "backdrop not plain"
+ },
+ "B021-P011-V2": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P011-V2.webp",
+  "note": "split out of B021-P011",
+  "bytes": 14144,
+  "skin_share": 0.184,
+  "alpha_fill": 0.677,
+  "measured": "backdrop not plain"
+ },
+ "B021-P011-V3": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B021-P011-V3.webp",
+  "note": "split out of B021-P011",
+  "bytes": 14144,
+  "skin_share": 0.184,
+  "alpha_fill": 0.677,
+  "measured": "backdrop not plain"
+ },
+ "B025-P001-V2": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B025-P001-V2.webp",
+  "note": "split out of B025-P001",
+  "bytes": 12732,
+  "skin_share": 0.192,
+  "alpha_fill": 0.739,
+  "measured": "backdrop not plain"
+ },
+ "B025-P003-V2": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B025-P003-V2.webp",
+  "note": "split out of B025-P003",
+  "bytes": 18368,
+  "skin_share": 0.926,
+  "alpha_fill": 0.656,
+  "measured": "backdrop not plain"
+ },
+ "B025-P008-V2": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B025-P008-V2.webp",
+  "note": "split out of B025-P008",
+  "bytes": 58888,
+  "skin_share": 0.989,
+  "alpha_fill": 0.645,
+  "measured": "skin in the frame"
+ },
+ "B031-P002-V2": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B031-P002-V2.webp",
+  "note": "split out of B031-P002",
+  "bytes": 37486,
+  "skin_share": 0.849,
+  "alpha_fill": 0.574,
+  "measured": "skin in the frame"
+ },
+ "B032-P001-V2": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B032-P001-V2.webp",
+  "note": "split out of B032-P001",
+  "bytes": 33614,
+  "skin_share": 0.938,
+  "alpha_fill": 0.71,
+  "measured": "skin in the frame"
+ },
+ "B037-P006-V2": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B037-P006-V2.webp",
+  "note": "split out of B037-P006",
+  "bytes": 25244,
+  "skin_share": 0.0,
+  "alpha_fill": 0.698,
+  "measured": "clean"
+ },
+ "B042-P032-V2": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P032-V2.webp",
+  "note": "split out of B042-P032",
+  "bytes": 16164,
+  "skin_share": 0.124,
+  "alpha_fill": 0.8,
+  "measured": "backdrop not plain"
+ },
+ "B042-P037-V2": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B042-P037-V2.webp",
+  "note": "split out of B042-P037",
+  "bytes": 10810,
+  "skin_share": 0.081,
+  "alpha_fill": 0.619,
+  "measured": "backdrop not plain"
+ },
+ "B043-P004-V2": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B043-P004-V2.webp",
+  "note": "split out of B043-P004",
+  "bytes": 69622,
+  "skin_share": 0.0,
+  "alpha_fill": 0.747,
+  "measured": "touches the frame"
+ },
+ "B043-P004-V3": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B043-P004-V3.webp",
+  "note": "split out of B043-P004",
+  "bytes": 69622,
+  "skin_share": 0.0,
+  "alpha_fill": 0.747,
+  "measured": "touches the frame"
+ },
+ "B044-P010-V2": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B044-P010-V2.webp",
+  "note": "split out of B044-P010",
+  "bytes": 53666,
+  "measured": "clean"
+ },
+ "B053-P001-V2": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B053-P001-V2.webp",
+  "note": "split out of B053-P001",
+  "bytes": 30386,
+  "measured": "touches the frame"
+ },
+ "B053-P001-V3": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B053-P001-V3.webp",
+  "note": "split out of B053-P001",
+  "bytes": 30386,
+  "measured": "touches the frame"
+ },
+ "B053-P003-V2": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B053-P003-V2.webp",
+  "note": "split out of B053-P003",
+  "bytes": 21778,
+  "skin_share": 0.146,
+  "alpha_fill": 0.832,
+  "measured": "backdrop not plain"
+ },
+ "B054-P005-V2": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B054-P005-V2.webp",
+  "note": "split out of B054-P005",
+  "bytes": 13474,
+  "skin_share": 0.0,
+  "alpha_fill": 0.774,
+  "measured": "backdrop not plain"
+ },
+ "B054-P005-V3": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B054-P005-V3.webp",
+  "note": "split out of B054-P005",
+  "bytes": 13474,
+  "skin_share": 0.0,
+  "alpha_fill": 0.774,
+  "measured": "backdrop not plain"
+ },
+ "B055-P003-V2": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B055-P003-V2.webp",
+  "note": "split out of B055-P003",
+  "bytes": 64286,
+  "skin_share": 0.077,
+  "alpha_fill": 0.67,
+  "measured": "backdrop not plain"
+ },
+ "B055-P003-V3": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B055-P003-V3.webp",
+  "note": "split out of B055-P003",
+  "bytes": 64286,
+  "skin_share": 0.077,
+  "alpha_fill": 0.67,
+  "measured": "backdrop not plain"
+ },
+ "B055-P004-V2": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B055-P004-V2.webp",
+  "note": "split out of B055-P004",
+  "bytes": 59778,
+  "skin_share": 0.101,
+  "alpha_fill": 0.511,
+  "measured": "backdrop not plain"
+ },
+ "B055-P004-V3": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B055-P004-V3.webp",
+  "note": "split out of B055-P004",
+  "bytes": 59778,
+  "skin_share": 0.101,
+  "alpha_fill": 0.511,
+  "measured": "backdrop not plain"
+ },
+ "B057-P001-V2": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B057-P001-V2.webp",
+  "note": "split out of B057-P001",
+  "bytes": 5958,
+  "skin_share": 0.254,
+  "alpha_fill": 0.571,
+  "measured": "clean"
+ },
+ "B057-P003-V2": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B057-P003-V2.webp",
+  "note": "split out of B057-P003",
+  "bytes": 2900,
+  "skin_share": 0.136,
+  "alpha_fill": 0.656,
+  "measured": "clean"
+ },
+ "B058-P001-V2": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B058-P001-V2.webp",
+  "note": "split out of B058-P001",
+  "bytes": 21684,
+  "skin_share": 0.0,
+  "alpha_fill": 0.608,
+  "measured": "backdrop not plain"
+ },
+ "B058-P007-V2": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B058-P007-V2.webp",
+  "note": "split out of B058-P007",
+  "bytes": 42268,
+  "skin_share": 0.183,
+  "alpha_fill": 0.826,
+  "measured": "clean"
+ },
+ "B059-P006-V2": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B059-P006-V2.webp",
+  "note": "split out of B059-P006",
+  "bytes": 24450,
+  "skin_share": 0.214,
+  "alpha_fill": 0.627,
+  "measured": "skin in the frame"
+ },
+ "B059-P008-V2": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B059-P008-V2.webp",
+  "note": "split out of B059-P008",
+  "bytes": 25450,
+  "skin_share": 0.322,
+  "alpha_fill": 0.617,
+  "measured": "skin in the frame"
+ },
+ "B060-P002-V2": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B060-P002-V2.webp",
+  "note": "split out of B060-P002",
+  "bytes": 24920,
+  "skin_share": 0.307,
+  "alpha_fill": 0.747,
+  "measured": "skin in the frame"
+ },
+ "B061-P001-V2": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B061-P001-V2.webp",
+  "note": "split out of B061-P001",
+  "bytes": 92206,
+  "skin_share": 0.035,
+  "alpha_fill": 0.871,
+  "measured": "backdrop not plain"
+ },
+ "B061-P002-V2": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B061-P002-V2.webp",
+  "note": "split out of B061-P002",
+  "bytes": 23144,
+  "skin_share": 0.127,
+  "alpha_fill": 0.66,
+  "measured": "skin in the frame"
+ },
+ "B061-P003-V2": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B061-P003-V2.webp",
+  "note": "split out of B061-P003",
+  "bytes": 38354,
+  "skin_share": 0.159,
+  "alpha_fill": 0.834,
+  "measured": "backdrop not plain"
+ },
+ "B061-P004-V2": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B061-P004-V2.webp",
+  "note": "split out of B061-P004",
+  "bytes": 20418,
+  "skin_share": 0.205,
+  "alpha_fill": 0.643,
+  "measured": "backdrop not plain"
+ },
+ "B061-P005-V2": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B061-P005-V2.webp",
+  "note": "split out of B061-P005",
+  "bytes": 15760,
+  "skin_share": 0.011,
+  "alpha_fill": 0.697,
+  "measured": "backdrop not plain"
+ },
+ "B062-P001-V2": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P001-V2.webp",
+  "note": "split out of B062-P001",
+  "bytes": 35294,
+  "skin_share": 0.366,
+  "alpha_fill": 0.687,
+  "measured": "clean"
+ },
+ "B062-P005-V2": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B062-P005-V2.webp",
+  "note": "split out of B062-P005",
+  "bytes": 14432,
+  "skin_share": 0.23,
+  "alpha_fill": 0.567,
+  "measured": "skin in the frame"
+ },
+ "B062-P011-V2": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B062-P011-V2.webp",
+  "note": "split out of B062-P011",
+  "bytes": 10084,
+  "skin_share": 0.731,
+  "alpha_fill": 0.704,
+  "measured": "skin in the frame"
+ },
+ "B062-P012-V2": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B062-P012-V2.webp",
+  "note": "split out of B062-P012",
+  "bytes": 18222,
+  "skin_share": 0.0,
+  "alpha_fill": 0.962,
+  "measured": "clean"
  }
 }
