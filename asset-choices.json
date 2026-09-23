@@ -1,0 +1,82 @@
+{
+ "kind": "relatively-normal.asset-choices",
+ "version": 1,
+ "exported": "2026-09-22",
+ "choices": {
+  "B001-P001": {
+   "choice": "cutout"
+  },
+  "B001-P002": {
+   "choice": "full"
+  },
+  "B001-P003": {
+   "choice": "item"
+  },
+  "B001-P004": {
+   "choice": "full"
+  },
+  "B002-P001": {
+   "choice": "cutout"
+  },
+  "B003-P001": {
+   "choice": "cutout"
+  },
+  "B004-P001": {
+   "choice": "person"
+  },
+  "B005-P001": {
+   "hidden": true
+  },
+  "B006-P001": {
+   "hidden": true
+  },
+  "B007-P001": {
+   "choice": "cutout"
+  },
+  "B007-P002": {
+   "choice": "custom",
+   "box": [
+    0.1285,
+    0.0946,
+    0.7021,
+    0.8439
+   ]
+  },
+  "B007-P003": {
+   "choice": "custom",
+   "box": [
+    0.025,
+    0.0385,
+    0.9396,
+    0.8834
+   ]
+  },
+  "B008-P001": {
+   "choice": "custom",
+   "box": [
+    0.1535,
+    0.0432,
+    0.6375,
+    0.8872
+   ]
+  },
+  "B008-P002": {
+   "choice": "custom",
+   "box": [
+    0.0563,
+    0.0227,
+    0.8326,
+    0.8692
+   ]
+  },
+  "B008-P003": {
+   "choice": "custom",
+   "box": [
+    0.1042,
+    0.0155,
+    0.7368,
+    0.9075
+   ]
+  }
+ }
+}
