@@ -219,6 +219,84 @@ def apply_pages(by_id):
     return n
 
 
+def measured_sources(by_id):
+    """A UNIQLO style's source row takes the cut its variants were made from.
+
+    uniqlo_variants.py cuts each style's flat lay again from the one photo
+    panel it sits in and measures it the way flat_lays.py does: one piece,
+    clear of the frame, no text inside. Where the row's own catalogue cut-out
+    did not pass — the page read as "skin in the frame" because the jumper is
+    brown, or the backdrop was not plain because the panel above rode along —
+    and the new cut does, the row's picture becomes the new cut and its
+    colours are read again from it. build_studio.py then gives the row the
+    measured verdict, and its variants inherit it as they always have.
+    A row that already passed keeps the cut-out it has."""
+    from PIL import Image
+    import extract_colours as X
+    from colour_names import classify
+    flats = load_json(CAT + '/_flat_lays.json', {})
+    v = load_json(CAT + '/_variants.json', {})
+    n = 0
+    for style, rep in v.get('report', {}).items():
+        d = by_id.get(rep['source'])
+        if not d or not rep.get('source_clean') or not rep.get('source_cut'):
+            continue
+        if (flats.get(rep['source']) or {}).get('clean'):
+            continue
+        # a row that holds two styles' screenshots (B062-P014: a jacket and
+        # leggings) takes the cut of the style whose screenshot comes first
+        imgs = (d.get('image_paths') or '').split(';')
+        mine = [r['source_image'] for r in v['report'].values() if r['source'] == rep['source']]
+        if rep['source_image'] not in imgs or \
+                min(mine, key=lambda p: imgs.index(p) if p in imgs else 99) != rep['source_image']:
+            continue
+        d.update(asset_path=rep['source_cut'], asset_type='cutout_flat', asset_quality='good')
+        with Image.open(ROOT + '/' + rep['source_cut']) as im:
+            cols, skin, kept = X.colours_for_image(im.convert('RGBA'), is_cutout=True)
+        for i in (1, 2, 3):
+            for k in ('hex', 'share', 'family', 'name'):
+                d[f'colour{i}_{k}'] = ''
+        for i, c in enumerate(cols[:3], 1):
+            fam, nm, L, Cc, h, rel, nt = classify(c['hex'])
+            d[f'colour{i}_hex'] = c['hex']; d[f'colour{i}_share'] = round(c['share'], 3)
+            d[f'colour{i}_family'] = fam; d[f'colour{i}_name'] = nm
+            if i == 1:
+                d.update(colour1_L=round(L, 1), colour1_C=round(Cc, 1), colour1_h=round(h, 1),
+                         colour1_rel_chroma=round(rel, 3), colour1_neutral=nt)
+        d['colour_confidence'] = X.confidence('cutout_flat', cols, skin, kept)
+        d['notes'] = (d['notes'] + f"; picture re-cut from the flat-lay panel of "
+                      f"{os.path.basename(rep['source_image'])} and measured clean "
+                      "(one piece, clear of the frame, no text)").strip('; ')
+        n += 1
+    return n
+
+
+def source_colour_names(by_id):
+    """UNIQLO's page names the selected colour, and the gallery photo is often
+    another one: IMG_0755 says 55 GREEN above a brown jumper. On a style's
+    source row the name is kept only when the swatch nearest the pictured
+    garment is the selected one; otherwise it is cleared, and the variant made
+    for the selected swatch is the row that carries it."""
+    pages = load_json(CAT + '/_uniqlo_pages.json', {})
+    v = load_json(CAT + '/_variants.json', {})
+    n = 0
+    for rep in v.get('report', {}).values():
+        d = by_id.get(rep['source'])
+        page = pages.get(rep['source_image'])
+        if not d or not page or not rep.get('own_swatch'):
+            continue
+        if d.get('image_paths', '').split(';')[0] != rep['source_image'] and \
+                rep['source_image'] not in d.get('image_paths', ''):
+            continue
+        own = page['swatches'][rep['own_swatch'] - 1]
+        if not own['selected'] and d.get('colour_name_text'):
+            d['notes'] = (d['notes'] + f"; the page names {d['colour_name_text']}, the selected colour, "
+                          "but the photo shows another — the name is on that colour's variant").strip('; ')
+            d['colour_name_text'] = ''
+            n += 1
+    return n
+
+
 def variant_rows(base_by_id):
     """UNIQLO colour variants from uniqlo_variants.py, as full product rows.
 
@@ -557,6 +635,8 @@ def main():
     by_id = {d['product_id']: d for d in out}
     read = apply_pages(by_id)
     print('UNIQLO rows read off the page:', read)
+    print('UNIQLO source rows switched to their measured cut:', measured_sources(by_id))
+    print('UNIQLO source rows whose photo is not the selected colour:', source_colour_names(by_id))
     variants, hide = variant_rows(by_id)
     for pid, why in hide.items():
         by_id[pid]['shelf'] = 'hidden'

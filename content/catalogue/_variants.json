@@ -4693,7 +4693,8 @@
     "B057-P006-sw10",
     "B057-P006-sw17",
     "B057-P006-sw20"
-   ]
+   ],
+   "source_cut": "content/catalogue/variants/B057-P006-source.png"
   },
   "100% Cashmere Crew Neck Cardigan": {
    "source": "B058-P001",
@@ -4717,7 +4718,8 @@
     "B058-P001-sw02",
     "B058-P001-sw03"
    ],
-   "real": []
+   "real": [],
+   "source_cut": "content/catalogue/variants/B058-P001-source.png"
   },
   "100% Cashmere V Neck Jumper": {
    "source": "B058-P002",
@@ -4748,7 +4750,8 @@
     "B058-P002-sw09",
     "B058-P002-sw10"
    ],
-   "real": []
+   "real": [],
+   "source_cut": "content/catalogue/variants/B058-P002-source.png"
   },
   "100% Cashmere Turtleneck Jumper": {
    "source": "B058-P004",
@@ -4779,7 +4782,8 @@
     "B058-P004-sw09",
     "B058-P004-sw10"
    ],
-   "real": []
+   "real": [],
+   "source_cut": "content/catalogue/variants/B058-P004-source.png"
   },
   "100% Cashmere Crew Neck Short Cardigan": {
    "source": "B058-P005",
@@ -4805,7 +4809,8 @@
     "B058-P005-sw05",
     "B058-P005-sw06"
    ],
-   "real": []
+   "real": [],
+   "source_cut": "content/catalogue/variants/B058-P005-source.png"
   },
   "100% Cashmere High Neck Button Jumper": {
    "source": "B058-P006",
@@ -4829,7 +4834,8 @@
     "B058-P006-sw02",
     "B058-P006-sw03"
    ],
-   "real": []
+   "real": [],
+   "source_cut": "content/catalogue/variants/B058-P006-source.png"
   },
   "Souffl\u00e9 Yarn Crew Neck Jumper": {
    "source": "B058-P007-V2",
@@ -4862,7 +4868,8 @@
     "B058-P007-V2-sw09",
     "B058-P007-V2-sw10"
    ],
-   "real": []
+   "real": [],
+   "source_cut": "content/catalogue/variants/B058-P007-V2-source.png"
   },
   "100% Merino Crew Neck Cardigan": {
    "source": "B059-P002",
@@ -4893,7 +4900,8 @@
     "B059-P002-sw09",
     "B059-P002-sw10"
    ],
-   "real": []
+   "real": [],
+   "source_cut": "content/catalogue/variants/B059-P002-source.png"
   },
   "100% Merino Crew Neck Jumper": {
    "source": "B059-P005",
@@ -4928,7 +4936,8 @@
     "B059-P005-sw09",
     "B059-P005-sw11"
    ],
-   "real": []
+   "real": [],
+   "source_cut": "content/catalogue/variants/B059-P005-source.png"
   },
   "100% Merino Ribbed Turtleneck Jumper": {
    "source": "B059-P007",
@@ -4964,7 +4973,8 @@
     "B059-P007-sw11",
     "B059-P007-sw12"
    ],
-   "real": []
+   "real": [],
+   "source_cut": "content/catalogue/variants/B059-P007-source.png"
   },
   "3D Knit Seamless Merino Blend Ribbed Polo Jumper": {
    "source": "B060-P001",
@@ -4993,7 +5003,8 @@
     "B060-P001-sw03",
     "B060-P001-sw04"
    ],
-   "real": []
+   "real": [],
+   "source_cut": "content/catalogue/variants/B060-P001-source.png"
   },
   "Merino Polo Neck Cardigan": {
    "source": "B060-P002-V2",
@@ -5017,7 +5028,8 @@
     "B060-P002-V2-sw02",
     "B060-P002-V2-sw03"
    ],
-   "real": []
+   "real": [],
+   "source_cut": "content/catalogue/variants/B060-P002-V2-source.png"
   },
   "Utility Cotton Blend Parka": {
    "source": "B060-P004",
@@ -5042,7 +5054,8 @@
     "B060-P004-sw01",
     "B060-P004-sw04"
    ],
-   "real": []
+   "real": [],
+   "source_cut": "content/catalogue/variants/B060-P004-source.png"
   },
   "Fleece Lined Stand Blouson": {
    "source": "B061-P001-V2",
@@ -5067,7 +5080,8 @@
     "B061-P001-V2-sw02",
     "B061-P001-V2-sw03"
    ],
-   "real": []
+   "real": [],
+   "source_cut": "content/catalogue/variants/B061-P001-V2-source.png"
   },
   "Seamless Down Parka": {
    "source": "B061-P003-V2",
@@ -5095,7 +5109,8 @@
     "B061-P003-V2-sw03",
     "B061-P003-V2-sw04"
    ],
-   "real": []
+   "real": [],
+   "source_cut": "content/catalogue/variants/B061-P003-V2-source.png"
   },
   "Mini T-Shirt (Long Sleeve)": {
    "source": "B061-P005-V2",
@@ -5126,7 +5141,8 @@
     "B061-P005-V2-sw06",
     "B061-P005-V2-sw07"
    ],
-   "real": []
+   "real": [],
+   "source_cut": "content/catalogue/variants/B061-P005-V2-source.png"
   },
   "Hoodie T-Shirt (Long Sleeve)": {
    "source": "B062-P004",
@@ -5156,7 +5172,8 @@
     "B062-P004-sw05",
     "B062-P004-sw06"
    ],
-   "real": []
+   "real": [],
+   "source_cut": "content/catalogue/variants/B062-P004-source.png"
   },
   "Soft Ribbed T-Shirt (Long Sleeve)": {
    "source": "B062-P006",
@@ -5186,7 +5203,8 @@
     "B062-P006-sw05",
     "B062-P006-sw06"
    ],
-   "real": []
+   "real": [],
+   "source_cut": "content/catalogue/variants/B062-P006-source.png"
   },
   "Mini T-Shirt": {
    "source": "B062-P011",
@@ -5216,7 +5234,8 @@
     "B062-P011-sw08",
     "B062-P011-sw09"
    ],
-   "real": []
+   "real": [],
+   "source_cut": "content/catalogue/variants/B062-P011-source.png"
   },
   "Hooded Long Coat (Oversized)": {
    "source": "B062-P012-V2",
@@ -5238,7 +5257,8 @@
    "variants": [
     "B062-P012-V2-sw02"
    ],
-   "real": []
+   "real": [],
+   "source_cut": "content/catalogue/variants/B062-P012-V2-source.png"
   },
   "Sweat Half-Zip Pullover": {
    "source": "B062-P013",
@@ -5264,7 +5284,8 @@
     "B062-P013-sw04",
     "B062-P013-sw05"
    ],
-   "real": []
+   "real": [],
+   "source_cut": "content/catalogue/variants/B062-P013-source.png"
   },
   "Ultra Stretch Active Full-Zip Jacket": {
    "source": "B062-P014",
@@ -5291,7 +5312,8 @@
     "B062-P014-sw06",
     "B062-P014-sw07"
    ],
-   "real": []
+   "real": [],
+   "source_cut": "content/catalogue/variants/B062-P014-source.png"
   },
   "Ultra Stretch Active Flare Leggings": {
    "source": "B062-P014",
@@ -5314,7 +5336,8 @@
     "B062-P014-I798-sw01",
     "B062-P014-I798-sw03"
    ],
-   "real": []
+   "real": [],
+   "source_cut": "content/catalogue/variants/B062-P014-I798-source.png"
   },
   "Sweatshirt": {
    "source": "B062-P016",
@@ -5346,7 +5369,8 @@
     "B062-P016-sw07",
     "B062-P016-sw09"
    ],
-   "real": []
+   "real": [],
+   "source_cut": "content/catalogue/variants/B062-P016-source.png"
   }
  },
  "dropped": {

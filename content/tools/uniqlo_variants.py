@@ -498,6 +498,7 @@ def main():
         sheet(cells, f'{CAT}/sheets/uniqlo-{sid}.jpg', cols=6, cell=230, label_h=40, swatch_h=14,
               title=f'UNIQLO {style} ({style_id.get(style, "no product ID on the page")})')
         report[style] = dict(source=src_row['product_id'], source_image=img, source_clean=clean,
+                             source_cut=os.path.relpath(spath, ROOT),
                              source_measure=meas, style_id=style_id.get(style, ''),
                              swatches=len(swatches), own_swatch=own + 1,
                              own_swatch_de=round(d_src[own], 1) if swatches else None,

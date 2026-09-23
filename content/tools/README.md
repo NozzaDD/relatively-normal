@@ -184,9 +184,14 @@ upgraded), and colours read from the box region by `extract_colours`. The
 - `build_products.py` applies the page readings to UNIQLO rows (`given`),
   carries the product ID to a row whose screenshots stop above it at
   `guessed`, and hides a style's other rows only when all of a row's
-  screenshots belong to that style. A variant still takes its shelf verdict
-  from its source row, as the desk's rule says, even though the cut it was
-  made from is measured separately (`source_clean` in `_variants.json`).
+  screenshots belong to that style. A variant takes its shelf verdict from
+  its source row, as the desk's rule says. Where a source row's own
+  catalogue cut-out failed the flat-lay measurement and the cut its variants
+  were made from passes it, the row's picture becomes that cut and its
+  colours are read again (`measured_sources`); `build_studio.py` treats a row
+  whose picture is a measured cut as clean. A source row keeps the page's
+  colour name only when the pictured garment is the selected swatch — the
+  gallery photo is often another colour (`source_colour_names`).
 
 Order to re-run: `uniqlo_pages.py` → `uniqlo_variants.py` → `build_products.py`
 → `build_studio.py`. Needs `tesseract`, `pytesseract`, `rembg` (u2net), `scipy`.

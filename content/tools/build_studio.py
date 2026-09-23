@@ -140,9 +140,29 @@ def load_flats():
         return {}
 
 
+def measured_cuts():
+    """The source cuts uniqlo_variants.py measured clean: {asset path: source id}.
+    A row whose picture IS one of them has passed the same three questions
+    flat_lays.py asks, on the picture the shelf shows."""
+    try:
+        v = json.load(open(CAT + '/_variants.json'))
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+    return {r['source_cut']: r['source'] for r in v.get('report', {}).values()
+            if r.get('source_clean') and r.get('source_cut')}
+
+
 def build_products(rows, review):
     out = []
     flats = load_flats()
+    cuts = measured_cuts()
+    by_id0 = {r['product_id']: r for r in rows}
+
+    def is_clean(pid):
+        r0 = by_id0.get(pid) or {}
+        return (bool((flats.get(pid) or {}).get('clean'))
+                or cuts.get(n(r0.get('asset_path'))) == pid)
+
     panels = load_panels()
     by_id = {r['product_id']: r for r in rows}
     for r in rows:
@@ -154,9 +174,11 @@ def build_products(rows, review):
         # backdrop whose re-cut is one piece, clear of the frame and with no
         # text left in it. Anything else is a decision for a person, so it
         # stays in Review. A recoloured variant inherits its source's verdict,
-        # since it is that same cut-out in another colour.
+        # since it is that same cut-out in another colour. A UNIQLO source row
+        # whose picture is the cut its variants were made from carries that
+        # cut's measurement.
         src = n(r.get('recolour_source')) or r['product_id']
-        clean = bool((flats.get(src) or {}).get('clean'))
+        clean = is_clean(src)
         has_full = bool(rv.get('w')) and 'error' not in rv
         images = image_list(rv, (parent or r)['image_paths'].split(';'),
                             (parent or r)['product_id'], panels, n(r.get('shot_type')))
