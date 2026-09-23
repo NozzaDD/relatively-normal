@@ -8292,5 +8292,7040 @@
   "clean": true,
   "why": "",
   "from_panel": "review/B090-P013p1.jpg"
+ },
+ "B006-P001-C0": {
+  "clean": false,
+  "why": "more than one piece",
+  "flat": true,
+  "from_cell": "review/B006-P001c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B006-P001-C1": {
+  "clean": false,
+  "why": "more than one piece, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B006-P001c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B006-P001-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B006-P001c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B006-P001-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B006-P001c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B006-P001-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B006-P001c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B006-P001-C5": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B006-P001c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B016-P004-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B016-P004c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B016-P004-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B016-P004c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B018-P003-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B018-P003c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B019-P006-C0": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B019-P006c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B019-P006-C1": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B019-P006c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B019-P006-C2": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B019-P006c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B019-P006-C3": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B019-P006c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B019-P006-C4": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B019-P006c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B019-P006-C5": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B019-P006c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B019-P006-I1-C0": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B019-P006-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B019-P006-I1-C1": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B019-P006-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B019-P006-I1-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B019-P006-1c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B019-P006-I1-C3": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B019-P006-1c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B019-P007-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B019-P007c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B019-P007-C1": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B019-P007c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B019-P007-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B019-P007c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B019-P007-C3": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B019-P007c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B019-P007-C4": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B019-P007c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B019-P007-C5": {
+  "clean": false,
+  "why": "touches the frame, text inside it",
+  "flat": true,
+  "from_cell": "review/B019-P007c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B020-P002-C0": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B020-P002c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B020-P002-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B020-P002c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B020-P002-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B020-P002c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B020-P002-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B020-P002c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B020-P002-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B020-P002c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B020-P002-C5": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B020-P002c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B020-P002-I1-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B020-P002-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B020-P002-I1-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B020-P002-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B020-P002-I1-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B020-P002-1c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B020-P002-I1-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B020-P002-1c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B020-P002-I1-C4": {
+  "clean": false,
+  "why": "more than one piece, text inside it, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B020-P002-1c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B020-P002-I1-C5": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B020-P002-1c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B020-P005-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B020-P005c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B020-P005-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B020-P005c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B021-P007-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B021-P007c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B021-P007-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B021-P007c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B021-P008-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B021-P008c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B021-P008-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B021-P008c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B021-P008-I1-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B021-P008-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B021-P008-I1-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B021-P008-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B021-P026-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B021-P026c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B021-P026-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B021-P026c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P001-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P001c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P001-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P001c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P002-C0": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B022-P002c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P002-C1": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P002c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P002-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P002c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P002-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P002c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P003-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P003c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P003-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P003c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P003-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P003c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P003-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P003c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P004-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P004c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P004-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P004c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P004-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P004c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P005-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P005c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P005-C1": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B022-P005c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P005-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P005c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P005-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P005c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P006-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P006c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P006-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P006c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P006-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P006c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P006-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P006c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P007-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P007c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P007-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P007c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P007-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P007c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P007-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P007c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P008-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P008c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P008-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P008c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P008-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P008c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P008-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P008c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P009-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P009c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P009-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P009c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P009-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P009c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P009-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P009c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P010-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P010c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P010-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P010c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P010-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P010c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P010-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P010c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P011-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P011c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P011-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P011c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P011-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P011c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P011-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P011c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P012-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P012c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P012-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P012c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P012-C2": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B022-P012c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P012-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P012c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P013-C0": {
+  "clean": false,
+  "why": "more than one piece, touches the frame, text inside it, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P013c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P013-C1": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B022-P013c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P013-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P013c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P013-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P013c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P013-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P013c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P013-C5": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P013c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P013-C6": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P013c6-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P013-C7": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P013c7-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P014-C0": {
+  "clean": false,
+  "why": "more than one piece",
+  "flat": true,
+  "from_cell": "review/B022-P014c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P014-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P014c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P014-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P014c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P014-C3": {
+  "clean": false,
+  "why": "more than one piece, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P014c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P014-C4": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P014c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P014-C5": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P014c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P014-C6": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P014c6-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P014-C7": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P014c7-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P015-C0": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P015c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P015-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P015c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P015-C2": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P015c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P015-C3": {
+  "clean": false,
+  "why": "more than one piece, touches the frame, text inside it",
+  "flat": true,
+  "from_cell": "review/B022-P015c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P015-C4": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P015c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P015-C5": {
+  "clean": false,
+  "why": "more than one piece, touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P015c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P015-C6": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P015c6-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P015-C7": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P015c7-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P016-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P016c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P016-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P016c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P016-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P016c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P016-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P016c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P016-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P016c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P016-C5": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B022-P016c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P016-C6": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P016c6-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P016-C7": {
+  "clean": false,
+  "why": "more than one piece, touches the frame, text inside it",
+  "flat": true,
+  "from_cell": "review/B022-P016c7-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P017-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P017c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P017-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P017c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P017-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P017c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P017-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P017c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P017-C4": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P017c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P017-C5": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P017c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P017-C6": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P017c6-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P017-C7": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P017c7-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P018-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P018c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P018-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P018c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P018-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P018c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P018-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P018c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P018-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P018c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P018-C5": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P018c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P018-C6": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P018c6-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P018-C7": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P018c7-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P019-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P019c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P019-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P019c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P019-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P019c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P019-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P019c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P019-C4": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P019c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P019-C5": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P019c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P019-C6": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P019c6-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P019-C7": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P019c7-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P020-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P020c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P020-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P020c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P020-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P020c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P020-C3": {
+  "clean": false,
+  "why": "more than one piece, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P020c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P020-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P020c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P020-C5": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P020c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P020-C6": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P020c6-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P020-C7": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P020c7-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P021-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P021c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P021-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P021c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P021-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P021c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P021-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P021c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P021-C4": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P021c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P021-C5": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P021c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P021-C6": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P021c6-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P021-C7": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B022-P021c7-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P022-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P022c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P022-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P022c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P022-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P022c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B022-P022-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P022c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P001-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P001c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P001-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P001c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P001-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P001c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P001-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P001c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P001-C4": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P001c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P001-C5": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P001c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P002-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P002c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P002-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P002c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P002-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P002c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P002-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P002c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P002-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P002c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P002-C5": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P002c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P003-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P003c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P003-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P003c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P003-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P003c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P003-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P003c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P003-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P003c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P003-C5": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P003c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P004-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P004c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P004-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P004c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P004-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P004c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P004-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P004c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P004-C4": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P004c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P004-C5": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P004c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P004-C6": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P004c6-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P005-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P005c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P005-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P005c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P005-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P005c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P005-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P005c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P005-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P005c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P005-C5": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P005c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P005-C6": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P005c6-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P005-C7": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P005c7-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P006-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P006c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P006-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P006c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P006-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P006c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P006-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P006c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P006-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P006c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P006-C5": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P006c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P006-C6": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P006c6-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P006-C7": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P006c7-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P007-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P007c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P007-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P007c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P008-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P008c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P008-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P008c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P009-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P009c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P009-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P009c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P009-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P009c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P009-C3": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P009c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P009-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P009c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P009-C5": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P009c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P009-I1-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P009-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P009-I1-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P009-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P010-C0": {
+  "clean": false,
+  "why": "more than one piece, touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P010c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P010-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P010c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P010-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P010c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P010-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P010c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P010-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P010c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P010-C5": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P010c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P011-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P011c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P011-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P011c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P014-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P014c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P014-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P014c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P014-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P014c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P014-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P014c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P014-C4": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P014c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P014-C5": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P014c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P015-C0": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P015c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P015-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P015c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P015-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P015c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P015-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P015c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P015-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P015c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P015-C5": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P015c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P015-I1-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P015-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P015-I1-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P015-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P015-I1-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P015-1c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P015-I1-C3": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P015-1c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P015-I1-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P015-1c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P015-I1-C5": {
+  "clean": false,
+  "why": "text inside it, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P015-1c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P016-C0": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P016c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P016-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P016c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P016-C2": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P016c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P016-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P016c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P017-C0": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P017c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P017-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B023-P017c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P017-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P017c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P017-C3": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P017c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P017-C4": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P017c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B023-P017-C5": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B023-P017c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P001-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B024-P001c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P001-C1": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B024-P001c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P001-C2": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B024-P001c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P001-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B024-P001c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P001-C4": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B024-P001c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P001-C5": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B024-P001c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P002-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B024-P002c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P002-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B024-P002c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P002-C2": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B024-P002c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P002-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B024-P002c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P002-C4": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B024-P002c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P002-C5": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B024-P002c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P003-C0": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B024-P003c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P003-C1": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B024-P003c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P003-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B024-P003c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P003-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B024-P003c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P003-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B024-P003c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P003-C5": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B024-P003c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P004-C0": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B024-P004c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P004-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B024-P004c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P004-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B024-P004c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P004-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B024-P004c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P004-C4": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B024-P004c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P004-C5": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B024-P004c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P005-C0": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B024-P005c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P005-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B024-P005c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P005-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B024-P005c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P005-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B024-P005c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P005-C4": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B024-P005c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P005-C5": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B024-P005c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P005-I1-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B024-P005-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P005-I1-C1": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B024-P005-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P005-I1-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B024-P005-1c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P005-I1-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B024-P005-1c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P005-I1-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B024-P005-1c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P005-I1-C5": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B024-P005-1c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P006-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B024-P006c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P006-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B024-P006c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P006-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B024-P006c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P006-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B024-P006c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P006-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B024-P006c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P006-C5": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B024-P006c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P007-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B024-P007c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P007-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B024-P007c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P007-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B024-P007c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P008-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B024-P008c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P008-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B024-P008c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P008-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B024-P008c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P008-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B024-P008c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P008-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B024-P008c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P008-C5": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B024-P008c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P009-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B024-P009c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P009-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B024-P009c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P009-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B024-P009c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P009-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B024-P009c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P009-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B024-P009c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B024-P009-C5": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B024-P009c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P004-C0": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B025-P004c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P004-C1": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B025-P004c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P004-C2": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B025-P004c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P004-C3": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B025-P004c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P004-C4": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B025-P004c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P004-C5": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B025-P004c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P005-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B025-P005c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P005-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B025-P005c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P005-C2": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B025-P005c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P005-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B025-P005c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P005-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B025-P005c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P005-C5": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B025-P005c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P006-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B025-P006c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P006-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B025-P006c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P006-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B025-P006c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P006-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B025-P006c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P006-C4": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B025-P006c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P006-C5": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B025-P006c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P006-I1-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B025-P006-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P006-I1-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B025-P006-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P006-I1-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B025-P006-1c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P006-I1-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B025-P006-1c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P006-I1-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B025-P006-1c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P006-I1-C5": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B025-P006-1c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P007-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B025-P007c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P007-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B025-P007c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P007-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B025-P007c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P007-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B025-P007c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P007-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B025-P007c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P007-C5": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B025-P007c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P007-I1-C0": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B025-P007-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P007-I1-C1": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B025-P007-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P007-I1-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B025-P007-1c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P007-I1-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B025-P007-1c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P007-I1-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B025-P007-1c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P007-I1-C5": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B025-P007-1c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P007-I2-C0": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B025-P007-2c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P007-I2-C1": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B025-P007-2c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P007-I2-C2": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B025-P007-2c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P007-I2-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B025-P007-2c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P007-I2-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B025-P007-2c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B025-P007-I2-C5": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B025-P007-2c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B026-P001-I1-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B026-P001-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B026-P001-I1-C1": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B026-P001-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B026-P001-I2-C0": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B026-P001-2c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B026-P001-I2-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B026-P001-2c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B026-P002-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B026-P002c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B026-P002-C1": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B026-P002c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B026-P003-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B026-P003c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B026-P003-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B026-P003c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B026-P004-C0": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B026-P004c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B026-P004-C1": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B026-P004c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B026-P005-C0": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B026-P005c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B026-P005-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B026-P005c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B026-P006-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B026-P006c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B026-P006-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B026-P006c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B026-P007-C0": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B026-P007c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B026-P007-C1": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B026-P007c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B026-P008-C0": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B026-P008c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B026-P008-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B026-P008c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B026-P011-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B026-P011c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B026-P011-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B026-P011c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B027-P009-C0": {
+  "clean": false,
+  "why": "more than one piece",
+  "flat": true,
+  "from_cell": "review/B027-P009c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B027-P009-C1": {
+  "clean": false,
+  "why": "nothing cut",
+  "flat": true,
+  "from_cell": "review/B027-P009c1.jpg",
+  "measured_by": "read_grids"
+ },
+ "B027-P009-I1-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B027-P009-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B027-P009-I1-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B027-P009-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B027-P010-C0": {
+  "clean": false,
+  "why": "nothing cut",
+  "flat": true,
+  "from_cell": "review/B027-P010c0.jpg",
+  "measured_by": "read_grids"
+ },
+ "B027-P010-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B027-P010c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B027-P011-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B027-P011c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B027-P011-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B027-P011c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B028-P006-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B028-P006c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B028-P006-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B028-P006c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B028-P010-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B028-P010c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B028-P010-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B028-P010c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B028-P010-I1-C0": {
+  "clean": false,
+  "why": "more than one piece",
+  "flat": true,
+  "from_cell": "review/B028-P010-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B028-P010-I1-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B028-P010-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B028-P010-I2-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B028-P010-2c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B028-P010-I2-C1": {
+  "clean": false,
+  "why": "too small",
+  "flat": true,
+  "from_cell": "review/B028-P010-2c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B028-P010-I3-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B028-P010-3c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B028-P010-I3-C1": {
+  "clean": false,
+  "why": "more than one piece, touches the frame, too small",
+  "flat": true,
+  "from_cell": "review/B028-P010-3c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B028-P011-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B028-P011c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B028-P011-C1": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B028-P011c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B030-P005-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B030-P005c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B030-P005-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B030-P005c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B030-P006-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B030-P006c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B030-P006-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B030-P006c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B030-P007-C0": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B030-P007c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B030-P007-C1": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B030-P007c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B030-P007-C2": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B030-P007c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B030-P007-C3": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B030-P007c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B030-P007-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B030-P007c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B030-P007-C5": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B030-P007c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B032-P003-C0": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B032-P003c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B032-P003-C1": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B032-P003c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B033-P002-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B033-P002c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B033-P002-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B033-P002c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B033-P002-I1-C0": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B033-P002-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B033-P002-I1-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B033-P002-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B033-P003-C0": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B033-P003c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B033-P003-C1": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B033-P003c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B033-P005-C0": {
+  "clean": false,
+  "why": "more than one piece, touches the frame",
+  "flat": true,
+  "from_cell": "review/B033-P005c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B033-P005-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B033-P005c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B034-P001-C0": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B034-P001c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B034-P001-C1": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B034-P001c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B034-P003-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B034-P003c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B034-P003-C1": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B034-P003c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B034-P004-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B034-P004c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B034-P004-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B034-P004c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B036-P001-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B036-P001c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B036-P001-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B036-P001c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B036-P002-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B036-P002c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B036-P002-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B036-P002c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B036-P003-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B036-P003c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B036-P003-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B036-P003c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B036-P004-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B036-P004c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B036-P005-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B036-P005c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B036-P005-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B036-P005c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B036-P006-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B036-P006c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B036-P006-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B036-P006c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B036-P007-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B036-P007c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B036-P007-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B036-P007c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B036-P008-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B036-P008c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B036-P008-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B036-P008c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B036-P009-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B036-P009c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B036-P009-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B036-P009c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B036-P009-I1-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B036-P009-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B036-P009-I1-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B036-P009-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B039-P004-C0": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B039-P004c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B039-P004-C1": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B039-P004c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B039-P004-C2": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B039-P004c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B039-P004-C3": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B039-P004c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B039-P004-C4": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B039-P004c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B039-P004-C5": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B039-P004c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B039-P004-C6": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B039-P004c6-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B039-P004-C7": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B039-P004c7-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B039-P004-C8": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B039-P004c8-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B039-P004-I1-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B039-P004-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B039-P004-I1-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B039-P004-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B039-P004-I1-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B039-P004-1c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B042-P002-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B042-P002c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B042-P002-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B042-P002c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B042-P005-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B042-P005c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B042-P005-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B042-P005c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B042-P006-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B042-P006c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B042-P006-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B042-P006c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B042-P007-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B042-P007c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B042-P007-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B042-P007c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B042-P012-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B042-P012c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B042-P012-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B042-P012c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B042-P019-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B042-P019c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B042-P019-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B042-P019c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B042-P036-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B042-P036c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B042-P036-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B042-P036c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B042-P036-I1-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B042-P036-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B042-P036-I1-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B042-P036-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B043-P007-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B043-P007c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B043-P007-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B043-P007c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B043-P007-I1-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B043-P007-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B043-P007-I1-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B043-P007-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B043-P007-I1-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B043-P007-1c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B043-P007-I1-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B043-P007-1c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P001-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P001c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P001-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P001c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P001-C2": {
+  "clean": false,
+  "why": "more than one piece",
+  "flat": true,
+  "from_cell": "review/B044-P001c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P001-C3": {
+  "clean": false,
+  "why": "more than one piece",
+  "flat": true,
+  "from_cell": "review/B044-P001c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P002-C0": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B044-P002c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P002-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P002c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P002-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P002c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P002-C3": {
+  "clean": false,
+  "why": "more than one piece",
+  "flat": true,
+  "from_cell": "review/B044-P002c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P002-I1-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P002-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P002-I1-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P002-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P002-I1-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P002-1c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P002-I1-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P002-1c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P003-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P003c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P003-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P003c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P003-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P003c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P003-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P003c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P004-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P004c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P004-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P004c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P004-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P004c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P004-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P004c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P004-I1-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P004-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P004-I1-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P004-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P004-I1-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P004-1c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P004-I1-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P004-1c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P005-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P005c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P005-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P005c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P005-I1-C0": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B044-P005-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P005-I1-C1": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B044-P005-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P005-I1-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P005-1c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P005-I1-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P005-1c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P005-I2-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P005-2c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P005-I2-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P005-2c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P005-I2-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P005-2c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P005-I2-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P005-2c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P006-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P006c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P006-C1": {
+  "clean": false,
+  "why": "touches the frame, text inside it, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B044-P006c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P007-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P007c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P007-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P007c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P011-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P011c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P011-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P011c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P012-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P012c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P012-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P012c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P013-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B044-P013c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P013-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P013c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P014-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P014c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P014-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P014c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P014-I1-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P014-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P014-I1-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P014-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P015-C0": {
+  "clean": false,
+  "why": "more than one piece",
+  "flat": true,
+  "from_cell": "review/B044-P015c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P015-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B044-P015c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P016-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B044-P016c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P016-C1": {
+  "clean": false,
+  "why": "more than one piece",
+  "flat": true,
+  "from_cell": "review/B044-P016c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P017-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P017c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P017-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B044-P017c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P020-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B044-P020c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P020-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B044-P020c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P020-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B044-P020c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P020-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B044-P020c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P020-C4": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B044-P020c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P020-C5": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B044-P020c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P020-I1-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B044-P020-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P020-I1-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B044-P020-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B044-P020-I1-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B044-P020-1c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B045-P001-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B045-P001c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B045-P001-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B045-P001c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B045-P001-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B045-P001c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B045-P001-C3": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B045-P001c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B045-P001-C4": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B045-P001c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B045-P001-C5": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B045-P001c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B045-P001-I1-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B045-P001-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B045-P001-I1-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B045-P001-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B045-P001-I1-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B045-P001-1c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B045-P001-I1-C3": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B045-P001-1c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B045-P001-I1-C4": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B045-P001-1c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B045-P001-I1-C5": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B045-P001-1c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B045-P001-I2-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B045-P001-2c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B045-P001-I2-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B045-P001-2c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B045-P001-I2-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B045-P001-2c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B045-P001-I2-C3": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B045-P001-2c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B045-P001-I2-C4": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B045-P001-2c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B045-P001-I2-C5": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B045-P001-2c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B045-P001-I3-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B045-P001-3c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B045-P001-I3-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B045-P001-3c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B045-P001-I3-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B045-P001-3c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B045-P001-I3-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B045-P001-3c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B045-P001-I3-C4": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B045-P001-3c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B045-P001-I3-C5": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B045-P001-3c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B046-P001-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B046-P001c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B046-P001-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B046-P001c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B046-P001-I1-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B046-P001-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B046-P001-I1-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B046-P001-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B046-P002-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B046-P002c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B046-P002-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B046-P002c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B046-P004-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B046-P004c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B046-P004-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B046-P004c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B046-P005-C0": {
+  "clean": false,
+  "why": "more than one piece",
+  "flat": true,
+  "from_cell": "review/B046-P005c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B046-P005-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B046-P005c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B046-P006-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B046-P006c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B046-P006-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B046-P006c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B046-P007-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B046-P007c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B046-P007-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B046-P007c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B046-P007-I1-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B046-P007-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B046-P007-I1-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B046-P007-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B046-P008-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B046-P008c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B046-P008-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B046-P008c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B046-P009-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B046-P009c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B046-P009-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B046-P009c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B046-P010-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B046-P010c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B046-P010-C1": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B046-P010c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B046-P010-C2": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B046-P010c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B046-P010-C3": {
+  "clean": false,
+  "why": "more than one piece, touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B046-P010c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B046-P011-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B046-P011c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B046-P011-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B046-P011c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B047-P001-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B047-P001c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B047-P001-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B047-P001c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B047-P004-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B047-P004c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B047-P004-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B047-P004c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B049-P002-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B049-P002c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B049-P002-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B049-P002c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B049-P003-C0": {
+  "clean": false,
+  "why": "more than one piece, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B049-P003c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B049-P003-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B049-P003c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B049-P003-I1-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B049-P003-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B049-P003-I1-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B049-P003-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B049-P003-I2-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B049-P003-2c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B049-P003-I2-C1": {
+  "clean": false,
+  "why": "more than one piece, touches the frame",
+  "flat": true,
+  "from_cell": "review/B049-P003-2c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B049-P003-I2-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B049-P003-2c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B049-P003-I2-C3": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B049-P003-2c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B050-P001-I1-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B050-P001-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B050-P001-I1-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B050-P001-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B050-P001-I2-C0": {
+  "clean": false,
+  "why": "more than one piece",
+  "flat": true,
+  "from_cell": "review/B050-P001-2c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B050-P001-I2-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B050-P001-2c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B050-P001-I3-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B050-P001-3c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B050-P001-I3-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B050-P001-3c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B050-P001-I4-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B050-P001-4c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B050-P001-I4-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B050-P001-4c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B050-P001-I4-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B050-P001-4c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B050-P001-I4-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B050-P001-4c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B052-P007-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B052-P007c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B052-P007-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B052-P007c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B052-P007-C2": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B052-P007c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B052-P007-C3": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B052-P007c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B052-P007-C4": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B052-P007c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B052-P007-C5": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B052-P007c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B052-P007-C6": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B052-P007c6-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B052-P007-C7": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B052-P007c7-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B053-P002-C0": {
+  "clean": false,
+  "why": "more than one piece, touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B053-P002c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B053-P002-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B053-P002c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B053-P002-I1-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B053-P002-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B053-P002-I1-C1": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B053-P002-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B056-P005-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B056-P005c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B056-P005-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B056-P005c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B056-P006-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B056-P006c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B056-P006-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B056-P006c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B057-P004-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B057-P004c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B057-P004-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B057-P004c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B062-P018-C0": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B062-P018c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B062-P018-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B062-P018c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B062-P019-C0": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B062-P019c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B062-P019-C1": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B062-P019c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B062-P020-C0": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B062-P020c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B062-P020-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B062-P020c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B063-P001-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B063-P001c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B063-P001-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B063-P001c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B063-P003-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B063-P003c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B063-P003-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B063-P003c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B063-P004-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B063-P004c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B063-P004-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B063-P004c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B063-P005-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B063-P005c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B063-P005-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B063-P005c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B063-P006-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B063-P006c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B063-P006-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B063-P006c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B064-P001-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B064-P001c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B064-P001-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B064-P001c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B064-P001-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B064-P001c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B064-P002-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B064-P002c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B064-P002-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B064-P002c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B064-P002-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B064-P002c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B064-P002-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B064-P002c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B064-P002-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B064-P002c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B064-P002-C5": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B064-P002c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B064-P003-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B064-P003c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B064-P003-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B064-P003c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B064-P003-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B064-P003c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B065-P001-C0": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B065-P001c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B065-P001-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B065-P001c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B065-P004-C0": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B065-P004c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B065-P004-C1": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B065-P004c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P001-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P001c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P001-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P001c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P001-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P001c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P001-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P001c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P001-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P001c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P001-C5": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P001c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P001-C6": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P001c6-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P001-C7": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P001c7-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P001-C8": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P001c8-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P001-C9": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B066-P001c9-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P001-C10": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P001c10-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P001-C11": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P001c11-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P002-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P002c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P002-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P002c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P002-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P002c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P002-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P002c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P002-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P002c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P002-C5": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P002c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P002-C6": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P002c6-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P002-C7": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P002c7-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P002-C8": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P002c8-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P002-C9": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P002c9-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P002-C10": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B066-P002c10-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P002-C11": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P002c11-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P003-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P003c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P003-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P003c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P003-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P003c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P003-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P003c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P003-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P003c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P003-C5": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P003c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P003-C6": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P003c6-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P003-C7": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B066-P003c7-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P003-C8": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P003c8-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P003-C9": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P003c9-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P003-C10": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P003c10-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P003-C11": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P003c11-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P004-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P004c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P004-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P004c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P004-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P004c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P004-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P004c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P004-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P004c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P004-C5": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P004c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P004-C6": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P004c6-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P004-C7": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B066-P004c7-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P004-C8": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P004c8-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P004-C9": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P004c9-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P004-C10": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P004c10-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P004-C11": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P004c11-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P005-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P005c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P005-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P005c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P005-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P005c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P005-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B066-P005c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P005-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P005c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P005-C5": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P005c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P005-C6": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P005c6-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P005-C7": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P005c7-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P005-C8": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P005c8-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P005-C9": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B066-P005c9-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P005-C10": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P005c10-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B066-P005-C11": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B066-P005c11-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B069-P001-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B069-P001c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B069-P001-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B069-P001c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B069-P001-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B069-P001c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B069-P001-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B069-P001c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B069-P001-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B069-P001c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B069-P001-C5": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B069-P001c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B069-P002-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B069-P002c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B069-P002-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B069-P002c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B069-P002-C2": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B069-P002c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B069-P002-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B069-P002c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B069-P002-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B069-P002c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B069-P002-C5": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B069-P002c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B071-P002-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B071-P002c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B071-P002-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B071-P002c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B071-P002-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B071-P002c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B071-P002-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B071-P002c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B071-P002-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B071-P002c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B071-P002-C5": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B071-P002c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B071-P003-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B071-P003c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B071-P003-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B071-P003c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B071-P003-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B071-P003c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B071-P003-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B071-P003c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B071-P003-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B071-P003c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B071-P003-C5": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B071-P003c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B071-P004-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B071-P004c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B071-P004-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B071-P004c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B071-P004-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B071-P004c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B071-P004-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B071-P004c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B071-P004-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B071-P004c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B071-P004-C5": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B071-P004c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B071-P005-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B071-P005c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B071-P005-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B071-P005c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B071-P005-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B071-P005c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B071-P005-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B071-P005c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B071-P005-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B071-P005c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B071-P005-C5": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B071-P005c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B076-P003-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B076-P003c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B076-P003-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B076-P003c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P004-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P004c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P004-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P004c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P004-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P004c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P004-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P004c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P004-C4": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P004c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P004-C5": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P004c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P005-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B078-P005c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P005-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P005c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P005-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P005c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P005-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P005c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P005-C4": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P005c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P005-C5": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P005c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P006-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P006c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P006-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P006c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P006-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P006c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P006-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P006c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P006-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B078-P006c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P006-C5": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P006c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P007-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P007c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P007-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P007c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P007-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B078-P007c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P007-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P007c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P007-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B078-P007c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P007-C5": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P007c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P008-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P008c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P008-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B078-P008c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P008-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B078-P008c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P008-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P008c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P008-C4": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P008c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P009-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P009c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P009-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B078-P009c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P009-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B078-P009c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P009-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B078-P009c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P009-C4": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P009c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P009-C5": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P009c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P010-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P010c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P010-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P010c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P010-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B078-P010c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P010-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B078-P010c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P010-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B078-P010c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P010-C5": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P010c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P011-C0": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B078-P011c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P011-C1": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B078-P011c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P011-C2": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P011c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P011-C3": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B078-P011c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P011-C4": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P011c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P011-C5": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P011c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P012-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P012c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P012-C1": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P012c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P012-C2": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P012c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P012-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P012c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P012-C4": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B078-P012c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P012-C5": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P012c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P013-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B078-P013c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P013-C1": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P013c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P013-C2": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P013c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P013-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B078-P013c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P013-C4": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B078-P013c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B078-P013-C5": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B078-P013c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B079-P002-C0": {
+  "clean": false,
+  "why": "more than one piece, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B079-P002c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B079-P002-C1": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B079-P002c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B079-P002-C2": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B079-P002c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B079-P002-C3": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B079-P002c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B079-P002-I1-C0": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B079-P002-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B079-P002-I1-C1": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B079-P002-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B079-P002-I1-C2": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B079-P002-1c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B079-P002-I1-C3": {
+  "clean": false,
+  "why": "more than one piece",
+  "flat": true,
+  "from_cell": "review/B079-P002-1c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B079-P002-I2-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B079-P002-2c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B079-P002-I2-C1": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B079-P002-2c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B079-P002-I2-C2": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B079-P002-2c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B079-P002-I2-C3": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B079-P002-2c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B079-P003-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B079-P003c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B079-P003-C1": {
+  "clean": false,
+  "why": "more than one piece, touches the frame",
+  "flat": true,
+  "from_cell": "review/B079-P003c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B079-P003-C2": {
+  "clean": false,
+  "why": "more than one piece, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B079-P003c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B079-P003-C3": {
+  "clean": false,
+  "why": "more than one piece, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B079-P003c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B079-P004-C0": {
+  "clean": false,
+  "why": "more than one piece, touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B079-P004c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B079-P004-C1": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B079-P004c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B079-P004-C2": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B079-P004c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B079-P004-C3": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B079-P004c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P001-C0": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B080-P001c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P001-C1": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P001c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P001-C2": {
+  "clean": false,
+  "why": "more than one piece",
+  "flat": true,
+  "from_cell": "review/B080-P001c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P001-C3": {
+  "clean": false,
+  "why": "more than one piece, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P001c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P001-I1-C0": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P001-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P001-I1-C1": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B080-P001-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P001-I1-C2": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P001-1c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P001-I1-C3": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P001-1c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P001-I2-C0": {
+  "clean": false,
+  "why": "more than one piece, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P001-2c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P001-I2-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P001-2c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P001-I2-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P001-2c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P001-I2-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P001-2c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P002-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P002c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P002-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P002c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P002-C2": {
+  "clean": false,
+  "why": "more than one piece, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P002c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P002-C3": {
+  "clean": false,
+  "why": "more than one piece",
+  "flat": true,
+  "from_cell": "review/B080-P002c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P002-I1-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P002-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P002-I1-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P002-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P002-I1-C2": {
+  "clean": false,
+  "why": "more than one piece, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P002-1c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P002-I1-C3": {
+  "clean": false,
+  "why": "more than one piece, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P002-1c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P002-I2-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P002-2c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P002-I2-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P002-2c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P002-I2-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P002-2c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P002-I2-C3": {
+  "clean": false,
+  "why": "more than one piece, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P002-2c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P002-I3-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P002-3c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P002-I3-C1": {
+  "clean": false,
+  "why": "more than one piece, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P002-3c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P002-I3-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P002-3c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P002-I3-C3": {
+  "clean": false,
+  "why": "more than one piece",
+  "flat": true,
+  "from_cell": "review/B080-P002-3c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P003-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P003c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P003-C1": {
+  "clean": false,
+  "why": "more than one piece, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P003c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P003-C2": {
+  "clean": false,
+  "why": "more than one piece, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P003c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P003-C3": {
+  "clean": false,
+  "why": "too small",
+  "flat": true,
+  "from_cell": "review/B080-P003c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P004-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P004c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P004-C1": {
+  "clean": false,
+  "why": "more than one piece, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P004c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P004-C2": {
+  "clean": false,
+  "why": "more than one piece, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P004c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P004-C3": {
+  "clean": false,
+  "why": "more than one piece",
+  "flat": true,
+  "from_cell": "review/B080-P004c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P005-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P005c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P005-C1": {
+  "clean": false,
+  "why": "more than one piece",
+  "flat": true,
+  "from_cell": "review/B080-P005c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P005-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P005c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P005-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P005c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P006-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P006c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P006-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P006c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P006-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P006c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P006-C3": {
+  "clean": false,
+  "why": "more than one piece",
+  "flat": true,
+  "from_cell": "review/B080-P006c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P006-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P006c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P006-C5": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P006c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P006-C6": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P006c6-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P006-C7": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P006c7-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P006-C8": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P006c8-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P006-C9": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P006c9-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P006-C10": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P006c10-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P006-C11": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P006c11-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P007-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P007c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P007-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P007c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P007-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P007c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P007-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P007c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P007-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P007c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P007-C5": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P007c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P007-C6": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P007c6-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P007-C7": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P007c7-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P007-C8": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P007c8-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P007-C9": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P007c9-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P007-C10": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P007c10-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P007-C11": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P007c11-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P008-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P008c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P008-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P008c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P008-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P008c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P008-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P008c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P008-C4": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P008c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P008-C5": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P008c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P008-C6": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P008c6-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P008-C7": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P008c7-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P008-C8": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P008c8-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P008-C9": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P008c9-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P008-C10": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P008c10-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P008-C11": {
+  "clean": false,
+  "why": "too small",
+  "flat": true,
+  "from_cell": "review/B080-P008c11-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P009-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P009c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P009-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P009c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P009-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P009c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P009-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P009c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P009-C4": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P009c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P009-C5": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P009c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P009-C6": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P009c6-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P010-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P010c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P010-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P010c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P010-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P010c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P010-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P010c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P010-C4": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P010c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P010-C5": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P010c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P010-C6": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P010c6-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P010-C7": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P010c7-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P010-C8": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P010c8-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P010-C9": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P010c9-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P010-C10": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P010c10-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P010-C11": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P010c11-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P011-C0": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B080-P011c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P011-C1": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B080-P011c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P011-C2": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P011c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P011-C3": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B080-P011c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P011-C4": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B080-P011c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P011-C5": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P011c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P011-C6": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P011c6-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P011-C7": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P011c7-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P011-C8": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P011c8-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P011-C9": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P011c9-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P011-C10": {
+  "clean": false,
+  "why": "more than one piece, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P011c10-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P011-C11": {
+  "clean": false,
+  "why": "more than one piece, touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P011c11-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P012-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P012c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P012-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P012c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P012-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P012c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P012-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P012c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P012-C4": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P012c4-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P012-C5": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P012c5-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P012-C6": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P012c6-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P012-C7": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P012c7-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P012-C8": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P012c8-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P012-C9": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P012c9-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P012-C10": {
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P012c10-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P012-C11": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P012c11-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P013-C0": {
+  "clean": false,
+  "why": "more than one piece",
+  "flat": true,
+  "from_cell": "review/B080-P013c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P013-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P013c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P014-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P014c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P014-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P014c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P014-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P014c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P014-C3": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P014c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P014-I1-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P014-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P014-I1-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B080-P014-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P014-I1-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P014-1c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B080-P014-I1-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B080-P014-1c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B081-P001-C0": {
+  "clean": false,
+  "why": "more than one piece",
+  "flat": true,
+  "from_cell": "review/B081-P001c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B081-P001-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B081-P001c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B081-P002-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B081-P002c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B081-P002-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B081-P002c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B081-P002-I1-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B081-P002-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B081-P002-I1-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B081-P002-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B082-P001-C0": {
+  "clean": false,
+  "why": "more than one piece",
+  "flat": true,
+  "from_cell": "review/B082-P001c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B082-P001-C1": {
+  "clean": false,
+  "why": "more than one piece",
+  "flat": true,
+  "from_cell": "review/B082-P001c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B082-P001-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B082-P001c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B082-P001-I1-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B082-P001-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B082-P001-I1-C1": {
+  "clean": false,
+  "why": "more than one piece",
+  "flat": true,
+  "from_cell": "review/B082-P001-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B082-P001-I1-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B082-P001-1c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B082-P001-I1-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B082-P001-1c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B082-P001-I2-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B082-P001-2c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B082-P001-I2-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B082-P001-2c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B082-P001-I2-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B082-P001-2c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B082-P001-I2-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B082-P001-2c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B090-P003-C0": {
+  "clean": false,
+  "why": "more than one piece",
+  "flat": true,
+  "from_cell": "review/B090-P003c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B090-P003-C1": {
+  "clean": false,
+  "why": "more than one piece",
+  "flat": true,
+  "from_cell": "review/B090-P003c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B090-P003-I1-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B090-P003-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B090-P003-I1-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B090-P003-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B090-P003-I2-C0": {
+  "clean": false,
+  "why": "more than one piece, someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B090-P003-2c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B090-P003-I2-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B090-P003-2c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B090-P004-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B090-P004c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B090-P004-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B090-P004c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B090-P004-I1-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B090-P004-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B090-P004-I1-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B090-P004-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B090-P005-C0": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B090-P005c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B090-P005-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B090-P005c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B090-P008-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B090-P008c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B090-P008-C1": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B090-P008c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B090-P008-I1-C0": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B090-P008-1c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B090-P008-I1-C1": {
+  "clean": false,
+  "why": "touches the frame",
+  "flat": true,
+  "from_cell": "review/B090-P008-1c1-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B090-P008-I1-C2": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B090-P008-1c2-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B090-P008-I1-C3": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B090-P008-1c3-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B090-P008-I2-C0": {
+  "clean": true,
+  "why": "",
+  "flat": true,
+  "from_cell": "review/B090-P008-2c0-cut.webp",
+  "measured_by": "read_grids"
+ },
+ "B090-P008-I2-C1": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B090-P008-2c1-cut.webp",
+  "measured_by": "read_grids"
  }
 }

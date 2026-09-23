@@ -256,7 +256,8 @@ const sev = await page.evaluate(() => {
   return { n: rows.length, onShelf: S.shown.filter((p) => p.several && p.several.length).map((p) => p.product_id),
     fan: (S.productsById['B062-P001'] || {}).several || [] };
 });
-ok('the several-garment rows are in the catalogue', sev.n > 50, String(sev.n));
+// grid pages used to make up most of these; cut into cells they are hidden and no longer counted
+ok('the several-garment rows are in the catalogue', sev.n > 20, String(sev.n));
 ok('none of them is on the shelf', sev.onShelf.length === 0, JSON.stringify(sev.onShelf));
 ok('the fan of colourways B062-P001 is one of them', sev.fan.length > 0, JSON.stringify(sev.fan));
 await page.evaluate(() => window.__studio.setView('review'));
@@ -267,7 +268,7 @@ const sevView = await page.evaluate(() => ({
   fanGroup: !!document.querySelector('#reviewCards .cellgroup.several [data-pid="B062-P001-V2"]'),
   fanCard: !!document.querySelector('#reviewCards .rcard[data-pid="B062-P001"] .why.several'),
 }));
-ok('Review groups them under the picture they share', sevView.groups > 30 && sevView.fanGroup, JSON.stringify(sevView));
+ok('Review groups them under the picture they share', sevView.groups > 20 && sevView.fanGroup, JSON.stringify(sevView));
 ok('the owning card says why and offers Add box', sevView.fanCard, JSON.stringify(sevView));
 await page.uncheck('#rSeveral');
 
