@@ -13,6 +13,8 @@
    "colour_name_text": "10 PINK",
    "garment_type": "cashmere crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "89,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -28,9 +30,7 @@
     "neutral": false
    },
    "speckle": 0.7,
-   "asset_path": "content/catalogue/variants/B057-P006-sw01.webp",
-   "price": "89,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B057-P006-sw01.webp"
   },
   {
    "product_id": "B057-P006-sw02",
@@ -45,6 +45,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "89,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -60,9 +62,7 @@
     "neutral": false
    },
    "speckle": 0.7,
-   "asset_path": "content/catalogue/variants/B057-P006-sw02.webp",
-   "price": "89,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B057-P006-sw02.webp"
   },
   {
    "product_id": "B057-P006-sw03",
@@ -77,6 +77,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "89,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -92,9 +94,7 @@
     "neutral": true
    },
    "speckle": 0.7,
-   "asset_path": "content/catalogue/variants/B057-P006-sw03.webp",
-   "price": "89,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B057-P006-sw03.webp"
   },
   {
    "product_id": "B057-P006-sw04",
@@ -109,6 +109,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "89,90 \u20ac",
    "source_clean": true,
    "real": true,
    "real_from": "content/swipe/products/IMG_0739.png",
@@ -124,9 +126,7 @@
     "rel": 0.142,
     "neutral": true
    },
-   "asset_path": "content/catalogue/variants/B057-P006-sw04.webp",
-   "price": "89,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B057-P006-sw04.webp"
   },
   {
    "product_id": "B057-P006-sw05",
@@ -141,6 +141,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "89,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -156,9 +158,7 @@
     "neutral": true
    },
    "speckle": 0.5,
-   "asset_path": "content/catalogue/variants/B057-P006-sw05.webp",
-   "price": "89,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B057-P006-sw05.webp"
   },
   {
    "product_id": "B057-P006-sw06",
@@ -173,6 +173,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "89,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -188,9 +190,7 @@
     "neutral": false
    },
    "speckle": 0.4,
-   "asset_path": "content/catalogue/variants/B057-P006-sw06.webp",
-   "price": "89,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B057-P006-sw06.webp"
   },
   {
    "product_id": "B057-P006-sw07",
@@ -205,6 +205,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "89,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -220,9 +222,7 @@
     "neutral": false
    },
    "speckle": 0.4,
-   "asset_path": "content/catalogue/variants/B057-P006-sw07.webp",
-   "price": "89,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B057-P006-sw07.webp"
   },
   {
    "product_id": "B057-P006-sw08",
@@ -237,6 +237,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "89,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -252,9 +254,7 @@
     "neutral": false
    },
    "speckle": 0.4,
-   "asset_path": "content/catalogue/variants/B057-P006-sw08.webp",
-   "price": "89,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B057-P006-sw08.webp"
   },
   {
    "product_id": "B057-P006-sw09",
@@ -269,6 +269,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "89,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -284,9 +286,7 @@
     "neutral": true
    },
    "speckle": 0.7,
-   "asset_path": "content/catalogue/variants/B057-P006-sw09.webp",
-   "price": "89,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B057-P006-sw09.webp"
   },
   {
    "product_id": "B057-P006-sw10",
@@ -301,6 +301,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "89,90 \u20ac",
    "source_clean": true,
    "real": true,
    "real_from": "content/swipe/products/IMG_0739.png",
@@ -316,9 +318,7 @@
     "rel": 0.344,
     "neutral": false
    },
-   "asset_path": "content/catalogue/variants/B057-P006-sw10.webp",
-   "price": "89,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B057-P006-sw10.webp"
   },
   {
    "product_id": "B057-P006-sw11",
@@ -333,6 +333,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "89,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -348,9 +350,7 @@
     "neutral": false
    },
    "speckle": 0.4,
-   "asset_path": "content/catalogue/variants/B057-P006-sw11.webp",
-   "price": "89,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B057-P006-sw11.webp"
   },
   {
    "product_id": "B057-P006-sw12",
@@ -365,6 +365,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "89,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -380,9 +382,7 @@
     "neutral": true
    },
    "speckle": 0.5,
-   "asset_path": "content/catalogue/variants/B057-P006-sw12.webp",
-   "price": "89,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B057-P006-sw12.webp"
   },
   {
    "product_id": "B057-P006-sw14",
@@ -397,6 +397,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "89,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -412,9 +414,7 @@
     "neutral": true
    },
    "speckle": 0.7,
-   "asset_path": "content/catalogue/variants/B057-P006-sw14.webp",
-   "price": "89,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B057-P006-sw14.webp"
   },
   {
    "product_id": "B057-P006-sw15",
@@ -429,6 +429,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "89,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -444,9 +446,7 @@
     "neutral": false
    },
    "speckle": 0.4,
-   "asset_path": "content/catalogue/variants/B057-P006-sw15.webp",
-   "price": "89,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B057-P006-sw15.webp"
   },
   {
    "product_id": "B057-P006-sw16",
@@ -461,6 +461,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "89,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -476,9 +478,7 @@
     "neutral": false
    },
    "speckle": 0.4,
-   "asset_path": "content/catalogue/variants/B057-P006-sw16.webp",
-   "price": "89,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B057-P006-sw16.webp"
   },
   {
    "product_id": "B057-P006-sw17",
@@ -493,6 +493,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "89,90 \u20ac",
    "source_clean": true,
    "real": true,
    "real_from": "content/swipe/products/IMG_0739.png",
@@ -508,9 +510,7 @@
     "rel": 0.569,
     "neutral": false
    },
-   "asset_path": "content/catalogue/variants/B057-P006-sw17.webp",
-   "price": "89,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B057-P006-sw17.webp"
   },
   {
    "product_id": "B057-P006-sw18",
@@ -525,6 +525,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "89,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -540,9 +542,7 @@
     "neutral": false
    },
    "speckle": 0.4,
-   "asset_path": "content/catalogue/variants/B057-P006-sw18.webp",
-   "price": "89,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B057-P006-sw18.webp"
   },
   {
    "product_id": "B057-P006-sw19",
@@ -557,6 +557,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "89,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -572,9 +574,7 @@
     "neutral": false
    },
    "speckle": 0.4,
-   "asset_path": "content/catalogue/variants/B057-P006-sw19.webp",
-   "price": "89,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B057-P006-sw19.webp"
   },
   {
    "product_id": "B057-P006-sw20",
@@ -589,6 +589,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "89,90 \u20ac",
    "source_clean": true,
    "real": true,
    "real_from": "content/swipe/products/IMG_0739.png",
@@ -604,9 +606,7 @@
     "rel": 0.534,
     "neutral": false
    },
-   "asset_path": "content/catalogue/variants/B057-P006-sw20.webp",
-   "price": "89,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B057-P006-sw20.webp"
   },
   {
    "product_id": "B057-P006-sw21",
@@ -621,6 +621,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "89,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -636,9 +638,7 @@
     "neutral": false
    },
    "speckle": 0.5,
-   "asset_path": "content/catalogue/variants/B057-P006-sw21.webp",
-   "price": "89,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B057-P006-sw21.webp"
   },
   {
    "product_id": "B057-P006-sw22",
@@ -653,6 +653,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "89,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -668,9 +670,7 @@
     "neutral": false
    },
    "speckle": 0.4,
-   "asset_path": "content/catalogue/variants/B057-P006-sw22.webp",
-   "price": "89,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B057-P006-sw22.webp"
   },
   {
    "product_id": "B057-P006-sw23",
@@ -685,6 +685,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "89,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -700,9 +702,7 @@
     "neutral": false
    },
    "speckle": 0.5,
-   "asset_path": "content/catalogue/variants/B057-P006-sw23.webp",
-   "price": "89,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B057-P006-sw23.webp"
   },
   {
    "product_id": "B057-P006-sw24",
@@ -717,6 +717,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "89,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -732,9 +734,7 @@
     "neutral": false
    },
    "speckle": 0.7,
-   "asset_path": "content/catalogue/variants/B057-P006-sw24.webp",
-   "price": "89,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B057-P006-sw24.webp"
   },
   {
    "product_id": "B057-P006-sw25",
@@ -749,6 +749,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "89,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -764,9 +766,7 @@
     "neutral": false
    },
    "speckle": 0.6,
-   "asset_path": "content/catalogue/variants/B057-P006-sw25.webp",
-   "price": "89,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B057-P006-sw25.webp"
   },
   {
    "product_id": "B058-P001-sw01",
@@ -781,6 +781,8 @@
    "colour_name_text": "34 BROWN",
    "garment_type": "cashmere crew neck cardigan",
    "slot": "layer",
+   "slot_confidence": "",
+   "price": "149 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.99,
@@ -796,9 +798,7 @@
     "neutral": false
    },
    "speckle": 1.9,
-   "asset_path": "content/catalogue/variants/B058-P001-sw01.webp",
-   "price": "149 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P001-sw01.webp"
   },
   {
    "product_id": "B058-P001-sw02",
@@ -813,6 +813,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere crew neck cardigan",
    "slot": "layer",
+   "slot_confidence": "",
+   "price": "149 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.99,
@@ -828,9 +830,7 @@
     "neutral": false
    },
    "speckle": 1.8,
-   "asset_path": "content/catalogue/variants/B058-P001-sw02.webp",
-   "price": "149 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P001-sw02.webp"
   },
   {
    "product_id": "B058-P001-sw03",
@@ -845,6 +845,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere crew neck cardigan",
    "slot": "layer",
+   "slot_confidence": "",
+   "price": "149 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.99,
@@ -860,9 +862,7 @@
     "neutral": false
    },
    "speckle": 2.0,
-   "asset_path": "content/catalogue/variants/B058-P001-sw03.webp",
-   "price": "149 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P001-sw03.webp"
   },
   {
    "product_id": "B058-P002-sw01",
@@ -877,6 +877,8 @@
    "colour_name_text": "73 PURPLE",
    "garment_type": "cashmere v-neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "89,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -892,9 +894,7 @@
     "neutral": false
    },
    "speckle": 1.7,
-   "asset_path": "content/catalogue/variants/B058-P002-sw01.webp",
-   "price": "89,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P002-sw01.webp"
   },
   {
    "product_id": "B058-P002-sw02",
@@ -909,6 +909,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere v-neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "89,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -924,9 +926,7 @@
     "neutral": true
    },
    "speckle": 2.5,
-   "asset_path": "content/catalogue/variants/B058-P002-sw02.webp",
-   "price": "89,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P002-sw02.webp"
   },
   {
    "product_id": "B058-P002-sw03",
@@ -941,6 +941,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere v-neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "89,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -956,9 +958,7 @@
     "neutral": true
    },
    "speckle": 2.6,
-   "asset_path": "content/catalogue/variants/B058-P002-sw03.webp",
-   "price": "89,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P002-sw03.webp"
   },
   {
    "product_id": "B058-P002-sw04",
@@ -973,6 +973,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere v-neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "89,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -988,9 +990,7 @@
     "neutral": true
    },
    "speckle": 1.0,
-   "asset_path": "content/catalogue/variants/B058-P002-sw04.webp",
-   "price": "89,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P002-sw04.webp"
   },
   {
    "product_id": "B058-P002-sw05",
@@ -1005,6 +1005,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere v-neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "89,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -1020,9 +1022,7 @@
     "neutral": false
    },
    "speckle": 2.0,
-   "asset_path": "content/catalogue/variants/B058-P002-sw05.webp",
-   "price": "89,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P002-sw05.webp"
   },
   {
    "product_id": "B058-P002-sw07",
@@ -1037,6 +1037,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere v-neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "89,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -1052,9 +1054,7 @@
     "neutral": true
    },
    "speckle": 2.5,
-   "asset_path": "content/catalogue/variants/B058-P002-sw07.webp",
-   "price": "89,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P002-sw07.webp"
   },
   {
    "product_id": "B058-P002-sw08",
@@ -1069,6 +1069,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere v-neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "89,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -1084,9 +1086,7 @@
     "neutral": false
    },
    "speckle": 1.3,
-   "asset_path": "content/catalogue/variants/B058-P002-sw08.webp",
-   "price": "89,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P002-sw08.webp"
   },
   {
    "product_id": "B058-P002-sw09",
@@ -1101,6 +1101,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere v-neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "89,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -1116,9 +1118,7 @@
     "neutral": false
    },
    "speckle": 2.5,
-   "asset_path": "content/catalogue/variants/B058-P002-sw09.webp",
-   "price": "89,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P002-sw09.webp"
   },
   {
    "product_id": "B058-P002-sw10",
@@ -1133,6 +1133,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere v-neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "89,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -1148,9 +1150,7 @@
     "neutral": false
    },
    "speckle": 1.0,
-   "asset_path": "content/catalogue/variants/B058-P002-sw10.webp",
-   "price": "89,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P002-sw10.webp"
   },
   {
    "product_id": "B058-P004-sw01",
@@ -1165,6 +1165,8 @@
    "colour_name_text": "01 OFF WHITE",
    "garment_type": "cashmere turtleneck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "99,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.997,
@@ -1180,9 +1182,7 @@
     "neutral": true
    },
    "speckle": 1.8,
-   "asset_path": "content/catalogue/variants/B058-P004-sw01.webp",
-   "price": "99,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P004-sw01.webp"
   },
   {
    "product_id": "B058-P004-sw02",
@@ -1197,6 +1197,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere turtleneck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "99,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.997,
@@ -1212,9 +1214,7 @@
     "neutral": false
    },
    "speckle": 0.9,
-   "asset_path": "content/catalogue/variants/B058-P004-sw02.webp",
-   "price": "99,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P004-sw02.webp"
   },
   {
    "product_id": "B058-P004-sw03",
@@ -1229,6 +1229,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere turtleneck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "99,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.997,
@@ -1244,9 +1246,7 @@
     "neutral": true
    },
    "speckle": 1.0,
-   "asset_path": "content/catalogue/variants/B058-P004-sw03.webp",
-   "price": "99,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P004-sw03.webp"
   },
   {
    "product_id": "B058-P004-sw04",
@@ -1261,6 +1261,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere turtleneck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "99,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.997,
@@ -1276,9 +1278,7 @@
     "neutral": false
    },
    "speckle": 1.8,
-   "asset_path": "content/catalogue/variants/B058-P004-sw04.webp",
-   "price": "99,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P004-sw04.webp"
   },
   {
    "product_id": "B058-P004-sw05",
@@ -1293,6 +1293,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere turtleneck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "99,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.997,
@@ -1308,9 +1310,7 @@
     "neutral": false
    },
    "speckle": 0.9,
-   "asset_path": "content/catalogue/variants/B058-P004-sw05.webp",
-   "price": "99,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P004-sw05.webp"
   },
   {
    "product_id": "B058-P004-sw07",
@@ -1325,6 +1325,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere turtleneck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "99,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.997,
@@ -1340,9 +1342,7 @@
     "neutral": false
    },
    "speckle": 0.9,
-   "asset_path": "content/catalogue/variants/B058-P004-sw07.webp",
-   "price": "99,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P004-sw07.webp"
   },
   {
    "product_id": "B058-P004-sw08",
@@ -1357,6 +1357,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere turtleneck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "99,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.997,
@@ -1372,9 +1374,7 @@
     "neutral": false
    },
    "speckle": 0.8,
-   "asset_path": "content/catalogue/variants/B058-P004-sw08.webp",
-   "price": "99,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P004-sw08.webp"
   },
   {
    "product_id": "B058-P004-sw09",
@@ -1389,6 +1389,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere turtleneck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "99,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.997,
@@ -1404,9 +1406,7 @@
     "neutral": false
    },
    "speckle": 1.8,
-   "asset_path": "content/catalogue/variants/B058-P004-sw09.webp",
-   "price": "99,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P004-sw09.webp"
   },
   {
    "product_id": "B058-P004-sw10",
@@ -1421,6 +1421,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere turtleneck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "99,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.997,
@@ -1436,9 +1438,7 @@
     "neutral": false
    },
    "speckle": 0.9,
-   "asset_path": "content/catalogue/variants/B058-P004-sw10.webp",
-   "price": "99,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P004-sw10.webp"
   },
   {
    "product_id": "B058-P005-sw01",
@@ -1453,6 +1453,8 @@
    "colour_name_text": "12 PINK",
    "garment_type": "cashmere crew neck short cardigan",
    "slot": "layer",
+   "slot_confidence": "",
+   "price": "69,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -1468,9 +1470,7 @@
     "neutral": false
    },
    "speckle": 2.8,
-   "asset_path": "content/catalogue/variants/B058-P005-sw01.webp",
-   "price": "69,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P005-sw01.webp"
   },
   {
    "product_id": "B058-P005-sw02",
@@ -1485,6 +1485,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere crew neck short cardigan",
    "slot": "layer",
+   "slot_confidence": "",
+   "price": "69,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -1500,9 +1502,7 @@
     "neutral": true
    },
    "speckle": 2.8,
-   "asset_path": "content/catalogue/variants/B058-P005-sw02.webp",
-   "price": "69,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P005-sw02.webp"
   },
   {
    "product_id": "B058-P005-sw04",
@@ -1517,6 +1517,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere crew neck short cardigan",
    "slot": "layer",
+   "slot_confidence": "",
+   "price": "69,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -1532,9 +1534,7 @@
     "neutral": true
    },
    "speckle": 1.0,
-   "asset_path": "content/catalogue/variants/B058-P005-sw04.webp",
-   "price": "69,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P005-sw04.webp"
   },
   {
    "product_id": "B058-P005-sw05",
@@ -1549,6 +1549,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere crew neck short cardigan",
    "slot": "layer",
+   "slot_confidence": "",
+   "price": "69,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -1564,9 +1566,7 @@
     "neutral": false
    },
    "speckle": 1.3,
-   "asset_path": "content/catalogue/variants/B058-P005-sw05.webp",
-   "price": "69,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P005-sw05.webp"
   },
   {
    "product_id": "B058-P005-sw06",
@@ -1581,6 +1581,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere crew neck short cardigan",
    "slot": "layer",
+   "slot_confidence": "",
+   "price": "69,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -1596,9 +1598,7 @@
     "neutral": false
    },
    "speckle": 1.6,
-   "asset_path": "content/catalogue/variants/B058-P005-sw06.webp",
-   "price": "69,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P005-sw06.webp"
   },
   {
    "product_id": "B058-P006-sw02",
@@ -1613,6 +1613,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere high neck button jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "149 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -1628,9 +1630,7 @@
     "neutral": false
    },
    "speckle": 0.8,
-   "asset_path": "content/catalogue/variants/B058-P006-sw02.webp",
-   "price": "149 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P006-sw02.webp"
   },
   {
    "product_id": "B058-P006-sw03",
@@ -1645,6 +1645,8 @@
    "colour_name_text": "",
    "garment_type": "cashmere high neck button jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "149 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -1660,9 +1662,7 @@
     "neutral": false
    },
    "speckle": 0.5,
-   "asset_path": "content/catalogue/variants/B058-P006-sw03.webp",
-   "price": "149 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P006-sw03.webp"
   },
   {
    "product_id": "B058-P007-V2-sw01",
@@ -1677,6 +1677,8 @@
    "colour_name_text": "38 DARK BROWN",
    "garment_type": "souffl\u00e9 yarn crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -1692,9 +1694,7 @@
     "neutral": false
    },
    "speckle": 0.5,
-   "asset_path": "content/catalogue/variants/B058-P007-V2-sw01.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P007-V2-sw01.webp"
   },
   {
    "product_id": "B058-P007-V2-sw02",
@@ -1709,6 +1709,8 @@
    "colour_name_text": "",
    "garment_type": "souffl\u00e9 yarn crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -1724,9 +1726,7 @@
     "neutral": true
    },
    "speckle": 1.4,
-   "asset_path": "content/catalogue/variants/B058-P007-V2-sw02.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P007-V2-sw02.webp"
   },
   {
    "product_id": "B058-P007-V2-sw03",
@@ -1741,6 +1741,8 @@
    "colour_name_text": "",
    "garment_type": "souffl\u00e9 yarn crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -1756,9 +1758,7 @@
     "neutral": true
    },
    "speckle": 1.1,
-   "asset_path": "content/catalogue/variants/B058-P007-V2-sw03.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P007-V2-sw03.webp"
   },
   {
    "product_id": "B058-P007-V2-sw04",
@@ -1773,6 +1773,8 @@
    "colour_name_text": "",
    "garment_type": "souffl\u00e9 yarn crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -1788,9 +1790,7 @@
     "neutral": true
    },
    "speckle": 0.5,
-   "asset_path": "content/catalogue/variants/B058-P007-V2-sw04.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P007-V2-sw04.webp"
   },
   {
    "product_id": "B058-P007-V2-sw06",
@@ -1805,6 +1805,8 @@
    "colour_name_text": "",
    "garment_type": "souffl\u00e9 yarn crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -1820,9 +1822,7 @@
     "neutral": false
    },
    "speckle": 0.6,
-   "asset_path": "content/catalogue/variants/B058-P007-V2-sw06.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P007-V2-sw06.webp"
   },
   {
    "product_id": "B058-P007-V2-sw07",
@@ -1837,6 +1837,8 @@
    "colour_name_text": "",
    "garment_type": "souffl\u00e9 yarn crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -1852,9 +1854,7 @@
     "neutral": false
    },
    "speckle": 0.8,
-   "asset_path": "content/catalogue/variants/B058-P007-V2-sw07.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P007-V2-sw07.webp"
   },
   {
    "product_id": "B058-P007-V2-sw08",
@@ -1869,6 +1869,8 @@
    "colour_name_text": "",
    "garment_type": "souffl\u00e9 yarn crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -1884,9 +1886,7 @@
     "neutral": false
    },
    "speckle": 1.4,
-   "asset_path": "content/catalogue/variants/B058-P007-V2-sw08.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P007-V2-sw08.webp"
   },
   {
    "product_id": "B058-P007-V2-sw09",
@@ -1901,6 +1901,8 @@
    "colour_name_text": "",
    "garment_type": "souffl\u00e9 yarn crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -1916,9 +1918,7 @@
     "neutral": false
    },
    "speckle": 0.8,
-   "asset_path": "content/catalogue/variants/B058-P007-V2-sw09.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P007-V2-sw09.webp"
   },
   {
    "product_id": "B058-P007-V2-sw10",
@@ -1933,6 +1933,8 @@
    "colour_name_text": "",
    "garment_type": "souffl\u00e9 yarn crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -1948,9 +1950,7 @@
     "neutral": false
    },
    "speckle": 1.4,
-   "asset_path": "content/catalogue/variants/B058-P007-V2-sw10.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B058-P007-V2-sw10.webp"
   },
   {
    "product_id": "B059-P002-sw01",
@@ -1965,6 +1965,8 @@
    "colour_name_text": "32 BEIGE",
    "garment_type": "merino crew neck cardigan",
    "slot": "layer",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -1980,9 +1982,7 @@
     "neutral": false
    },
    "speckle": 3.1,
-   "asset_path": "content/catalogue/variants/B059-P002-sw01.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B059-P002-sw01.webp"
   },
   {
    "product_id": "B059-P002-sw02",
@@ -1997,6 +1997,8 @@
    "colour_name_text": "",
    "garment_type": "merino crew neck cardigan",
    "slot": "layer",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -2012,9 +2014,7 @@
     "neutral": true
    },
    "speckle": 3.1,
-   "asset_path": "content/catalogue/variants/B059-P002-sw02.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B059-P002-sw02.webp"
   },
   {
    "product_id": "B059-P002-sw04",
@@ -2029,6 +2029,8 @@
    "colour_name_text": "",
    "garment_type": "merino crew neck cardigan",
    "slot": "layer",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -2044,9 +2046,7 @@
     "neutral": true
    },
    "speckle": 1.1,
-   "asset_path": "content/catalogue/variants/B059-P002-sw04.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B059-P002-sw04.webp"
   },
   {
    "product_id": "B059-P002-sw05",
@@ -2061,6 +2061,8 @@
    "colour_name_text": "",
    "garment_type": "merino crew neck cardigan",
    "slot": "layer",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -2076,9 +2078,7 @@
     "neutral": false
    },
    "speckle": 2.9,
-   "asset_path": "content/catalogue/variants/B059-P002-sw05.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B059-P002-sw05.webp"
   },
   {
    "product_id": "B059-P002-sw06",
@@ -2093,6 +2093,8 @@
    "colour_name_text": "",
    "garment_type": "merino crew neck cardigan",
    "slot": "layer",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -2108,9 +2110,7 @@
     "neutral": false
    },
    "speckle": 2.7,
-   "asset_path": "content/catalogue/variants/B059-P002-sw06.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B059-P002-sw06.webp"
   },
   {
    "product_id": "B059-P002-sw07",
@@ -2125,6 +2125,8 @@
    "colour_name_text": "",
    "garment_type": "merino crew neck cardigan",
    "slot": "layer",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -2140,9 +2142,7 @@
     "neutral": false
    },
    "speckle": 3.1,
-   "asset_path": "content/catalogue/variants/B059-P002-sw07.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B059-P002-sw07.webp"
   },
   {
    "product_id": "B059-P002-sw08",
@@ -2157,6 +2157,8 @@
    "colour_name_text": "",
    "garment_type": "merino crew neck cardigan",
    "slot": "layer",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -2172,9 +2174,7 @@
     "neutral": false
    },
    "speckle": 1.4,
-   "asset_path": "content/catalogue/variants/B059-P002-sw08.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B059-P002-sw08.webp"
   },
   {
    "product_id": "B059-P002-sw09",
@@ -2189,6 +2189,8 @@
    "colour_name_text": "",
    "garment_type": "merino crew neck cardigan",
    "slot": "layer",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -2204,9 +2206,7 @@
     "neutral": false
    },
    "speckle": 1.1,
-   "asset_path": "content/catalogue/variants/B059-P002-sw09.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B059-P002-sw09.webp"
   },
   {
    "product_id": "B059-P002-sw10",
@@ -2221,6 +2221,8 @@
    "colour_name_text": "",
    "garment_type": "merino crew neck cardigan",
    "slot": "layer",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -2236,9 +2238,7 @@
     "neutral": false
    },
    "speckle": 2.4,
-   "asset_path": "content/catalogue/variants/B059-P002-sw10.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B059-P002-sw10.webp"
   },
   {
    "product_id": "B059-P005-sw01",
@@ -2253,6 +2253,8 @@
    "colour_name_text": "55 GREEN",
    "garment_type": "merino crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -2268,9 +2270,7 @@
     "neutral": false
    },
    "speckle": 1.8,
-   "asset_path": "content/catalogue/variants/B059-P005-sw01.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B059-P005-sw01.webp"
   },
   {
    "product_id": "B059-P005-sw02",
@@ -2285,6 +2285,8 @@
    "colour_name_text": "",
    "garment_type": "merino crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -2300,9 +2302,7 @@
     "neutral": true
    },
    "speckle": 1.8,
-   "asset_path": "content/catalogue/variants/B059-P005-sw02.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B059-P005-sw02.webp"
   },
   {
    "product_id": "B059-P005-sw03",
@@ -2317,6 +2317,8 @@
    "colour_name_text": "",
    "garment_type": "merino crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -2332,9 +2334,7 @@
     "neutral": true
    },
    "speckle": 1.8,
-   "asset_path": "content/catalogue/variants/B059-P005-sw03.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B059-P005-sw03.webp"
   },
   {
    "product_id": "B059-P005-sw04",
@@ -2349,6 +2349,8 @@
    "colour_name_text": "",
    "garment_type": "merino crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -2364,9 +2366,7 @@
     "neutral": true
    },
    "speckle": 1.4,
-   "asset_path": "content/catalogue/variants/B059-P005-sw04.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B059-P005-sw04.webp"
   },
   {
    "product_id": "B059-P005-sw05",
@@ -2381,6 +2381,8 @@
    "colour_name_text": "",
    "garment_type": "merino crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -2396,9 +2398,7 @@
     "neutral": true
    },
    "speckle": 1.0,
-   "asset_path": "content/catalogue/variants/B059-P005-sw05.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B059-P005-sw05.webp"
   },
   {
    "product_id": "B059-P005-sw06",
@@ -2413,6 +2413,8 @@
    "colour_name_text": "",
    "garment_type": "merino crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -2428,9 +2430,7 @@
     "neutral": false
    },
    "speckle": 1.8,
-   "asset_path": "content/catalogue/variants/B059-P005-sw06.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B059-P005-sw06.webp"
   },
   {
    "product_id": "B059-P005-sw07",
@@ -2445,6 +2445,8 @@
    "colour_name_text": "",
    "garment_type": "merino crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -2460,9 +2462,7 @@
     "neutral": false
    },
    "speckle": 1.8,
-   "asset_path": "content/catalogue/variants/B059-P005-sw07.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B059-P005-sw07.webp"
   },
   {
    "product_id": "B059-P005-sw08",
@@ -2477,6 +2477,8 @@
    "colour_name_text": "",
    "garment_type": "merino crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -2492,9 +2494,7 @@
     "neutral": false
    },
    "speckle": 1.7,
-   "asset_path": "content/catalogue/variants/B059-P005-sw08.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B059-P005-sw08.webp"
   },
   {
    "product_id": "B059-P005-sw09",
@@ -2509,6 +2509,8 @@
    "colour_name_text": "",
    "garment_type": "merino crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -2524,9 +2526,7 @@
     "neutral": false
    },
    "speckle": 1.6,
-   "asset_path": "content/catalogue/variants/B059-P005-sw09.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B059-P005-sw09.webp"
   },
   {
    "product_id": "B059-P005-sw11",
@@ -2541,6 +2541,8 @@
    "colour_name_text": "",
    "garment_type": "merino crew neck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.998,
@@ -2556,9 +2558,7 @@
     "neutral": false
    },
    "speckle": 1.0,
-   "asset_path": "content/catalogue/variants/B059-P005-sw11.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B059-P005-sw11.webp"
   },
   {
    "product_id": "B059-P007-sw01",
@@ -2573,6 +2573,8 @@
    "colour_name_text": "15 RED",
    "garment_type": "merino ribbed turtleneck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -2588,9 +2590,7 @@
     "neutral": false
    },
    "speckle": 1.3,
-   "asset_path": "content/catalogue/variants/B059-P007-sw01.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B059-P007-sw01.webp"
   },
   {
    "product_id": "B059-P007-sw02",
@@ -2605,6 +2605,8 @@
    "colour_name_text": "",
    "garment_type": "merino ribbed turtleneck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -2620,9 +2622,7 @@
     "neutral": true
    },
    "speckle": 1.7,
-   "asset_path": "content/catalogue/variants/B059-P007-sw02.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B059-P007-sw02.webp"
   },
   {
    "product_id": "B059-P007-sw03",
@@ -2637,6 +2637,8 @@
    "colour_name_text": "",
    "garment_type": "merino ribbed turtleneck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -2652,9 +2654,7 @@
     "neutral": true
    },
    "speckle": 1.6,
-   "asset_path": "content/catalogue/variants/B059-P007-sw03.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B059-P007-sw03.webp"
   },
   {
    "product_id": "B059-P007-sw04",
@@ -2669,6 +2669,8 @@
    "colour_name_text": "",
    "garment_type": "merino ribbed turtleneck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -2684,9 +2686,7 @@
     "neutral": true
    },
    "speckle": 1.3,
-   "asset_path": "content/catalogue/variants/B059-P007-sw04.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B059-P007-sw04.webp"
   },
   {
    "product_id": "B059-P007-sw05",
@@ -2701,6 +2701,8 @@
    "colour_name_text": "",
    "garment_type": "merino ribbed turtleneck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -2716,9 +2718,7 @@
     "neutral": true
    },
    "speckle": 1.0,
-   "asset_path": "content/catalogue/variants/B059-P007-sw05.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B059-P007-sw05.webp"
   },
   {
    "product_id": "B059-P007-sw07",
@@ -2733,6 +2733,8 @@
    "colour_name_text": "",
    "garment_type": "merino ribbed turtleneck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -2748,9 +2750,7 @@
     "neutral": false
    },
    "speckle": 1.0,
-   "asset_path": "content/catalogue/variants/B059-P007-sw07.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B059-P007-sw07.webp"
   },
   {
    "product_id": "B059-P007-sw08",
@@ -2765,6 +2765,8 @@
    "colour_name_text": "",
    "garment_type": "merino ribbed turtleneck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -2780,9 +2782,7 @@
     "neutral": true
    },
    "speckle": 1.6,
-   "asset_path": "content/catalogue/variants/B059-P007-sw08.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B059-P007-sw08.webp"
   },
   {
    "product_id": "B059-P007-sw09",
@@ -2797,6 +2797,8 @@
    "colour_name_text": "",
    "garment_type": "merino ribbed turtleneck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -2812,9 +2814,7 @@
     "neutral": false
    },
    "speckle": 1.2,
-   "asset_path": "content/catalogue/variants/B059-P007-sw09.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B059-P007-sw09.webp"
   },
   {
    "product_id": "B059-P007-sw10",
@@ -2829,6 +2829,8 @@
    "colour_name_text": "",
    "garment_type": "merino ribbed turtleneck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -2844,9 +2846,7 @@
     "neutral": false
    },
    "speckle": 1.3,
-   "asset_path": "content/catalogue/variants/B059-P007-sw10.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B059-P007-sw10.webp"
   },
   {
    "product_id": "B059-P007-sw11",
@@ -2861,6 +2861,8 @@
    "colour_name_text": "",
    "garment_type": "merino ribbed turtleneck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -2876,9 +2878,7 @@
     "neutral": false
    },
    "speckle": 1.6,
-   "asset_path": "content/catalogue/variants/B059-P007-sw11.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B059-P007-sw11.webp"
   },
   {
    "product_id": "B059-P007-sw12",
@@ -2893,6 +2893,8 @@
    "colour_name_text": "",
    "garment_type": "merino ribbed turtleneck jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -2908,9 +2910,7 @@
     "neutral": false
    },
    "speckle": 0.9,
-   "asset_path": "content/catalogue/variants/B059-P007-sw12.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B059-P007-sw12.webp"
   },
   {
    "product_id": "B060-P001-sw01",
@@ -2925,6 +2925,8 @@
    "colour_name_text": "14 RED",
    "garment_type": "merino-blend ribbed polo jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -2940,9 +2942,7 @@
     "neutral": false
    },
    "speckle": 4.0,
-   "asset_path": "content/catalogue/variants/B060-P001-sw01.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B060-P001-sw01.webp"
   },
   {
    "product_id": "B060-P001-sw02",
@@ -2957,6 +2957,8 @@
    "colour_name_text": "",
    "garment_type": "merino-blend ribbed polo jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -2972,9 +2974,7 @@
     "neutral": true
    },
    "speckle": 4.0,
-   "asset_path": "content/catalogue/variants/B060-P001-sw02.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B060-P001-sw02.webp"
   },
   {
    "product_id": "B060-P001-sw03",
@@ -2989,6 +2989,8 @@
    "colour_name_text": "",
    "garment_type": "merino-blend ribbed polo jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -3004,9 +3006,7 @@
     "neutral": true
    },
    "speckle": 3.1,
-   "asset_path": "content/catalogue/variants/B060-P001-sw03.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B060-P001-sw03.webp"
   },
   {
    "product_id": "B060-P001-sw04",
@@ -3021,6 +3021,8 @@
    "colour_name_text": "",
    "garment_type": "merino-blend ribbed polo jumper",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -3036,9 +3038,7 @@
     "neutral": true
    },
    "speckle": 1.9,
-   "asset_path": "content/catalogue/variants/B060-P001-sw04.webp",
-   "price": "39,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B060-P001-sw04.webp"
   },
   {
    "product_id": "B060-P002-V2-sw02",
@@ -3053,6 +3053,8 @@
    "colour_name_text": "",
    "garment_type": "merino polo neck cardigan",
    "slot": "layer",
+   "slot_confidence": "",
+   "price": "99 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.927,
@@ -3068,9 +3070,7 @@
     "neutral": true
    },
    "speckle": 1.9,
-   "asset_path": "content/catalogue/variants/B060-P002-V2-sw02.webp",
-   "price": "99 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B060-P002-V2-sw02.webp"
   },
   {
    "product_id": "B060-P002-V2-sw03",
@@ -3085,6 +3085,8 @@
    "colour_name_text": "",
    "garment_type": "merino polo neck cardigan",
    "slot": "layer",
+   "slot_confidence": "",
+   "price": "99 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.927,
@@ -3100,9 +3102,7 @@
     "neutral": true
    },
    "speckle": 1.0,
-   "asset_path": "content/catalogue/variants/B060-P002-V2-sw03.webp",
-   "price": "99 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B060-P002-V2-sw03.webp"
   },
   {
    "product_id": "B060-P004-sw01",
@@ -3117,6 +3117,8 @@
    "colour_name_text": "09 BLACK",
    "garment_type": "hooded utility parka",
    "slot": "layer",
+   "slot_confidence": "",
+   "price": "59,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.968,
@@ -3132,9 +3134,7 @@
     "neutral": true
    },
    "speckle": 1.4,
-   "asset_path": "content/catalogue/variants/B060-P004-sw01.webp",
-   "price": "59,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B060-P004-sw01.webp"
   },
   {
    "product_id": "B060-P004-sw04",
@@ -3149,6 +3149,8 @@
    "colour_name_text": "",
    "garment_type": "hooded utility parka",
    "slot": "layer",
+   "slot_confidence": "",
+   "price": "59,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.968,
@@ -3164,9 +3166,7 @@
     "neutral": true
    },
    "speckle": 2.0,
-   "asset_path": "content/catalogue/variants/B060-P004-sw04.webp",
-   "price": "59,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B060-P004-sw04.webp"
   },
   {
    "product_id": "B061-P001-V2-sw02",
@@ -3181,6 +3181,8 @@
    "colour_name_text": "",
    "garment_type": "fleece-lined stand collar blouson",
    "slot": "layer",
+   "slot_confidence": "",
+   "price": "59,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.944,
@@ -3196,9 +3198,7 @@
     "neutral": false
    },
    "speckle": 2.1,
-   "asset_path": "content/catalogue/variants/B061-P001-V2-sw02.webp",
-   "price": "59,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B061-P001-V2-sw02.webp"
   },
   {
    "product_id": "B061-P001-V2-sw03",
@@ -3213,6 +3213,8 @@
    "colour_name_text": "",
    "garment_type": "fleece-lined stand collar blouson",
    "slot": "layer",
+   "slot_confidence": "",
+   "price": "59,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.944,
@@ -3228,9 +3230,7 @@
     "neutral": false
    },
    "speckle": 1.7,
-   "asset_path": "content/catalogue/variants/B061-P001-V2-sw03.webp",
-   "price": "59,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B061-P001-V2-sw03.webp"
   },
   {
    "product_id": "B061-P003-V2-sw03",
@@ -3245,6 +3245,8 @@
    "colour_name_text": "36 BROWN",
    "garment_type": "quilted hooded down parka",
    "slot": "layer",
+   "slot_confidence": "",
+   "price": "149,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.962,
@@ -3260,9 +3262,7 @@
     "neutral": false
    },
    "speckle": 1.2,
-   "asset_path": "content/catalogue/variants/B061-P003-V2-sw03.webp",
-   "price": "149,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B061-P003-V2-sw03.webp"
   },
   {
    "product_id": "B061-P003-V2-sw04",
@@ -3277,6 +3277,8 @@
    "colour_name_text": "",
    "garment_type": "quilted hooded down parka",
    "slot": "layer",
+   "slot_confidence": "",
+   "price": "149,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.962,
@@ -3292,9 +3294,7 @@
     "neutral": false
    },
    "speckle": 1.2,
-   "asset_path": "content/catalogue/variants/B061-P003-V2-sw04.webp",
-   "price": "149,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B061-P003-V2-sw04.webp"
   },
   {
    "product_id": "B061-P005-V2-sw01",
@@ -3309,6 +3309,8 @@
    "colour_name_text": "32 BEIGE",
    "garment_type": "long-sleeve fitted t-shirt",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "19,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -3324,9 +3326,7 @@
     "neutral": false
    },
    "speckle": 1.0,
-   "asset_path": "content/catalogue/variants/B061-P005-V2-sw01.webp",
-   "price": "19,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B061-P005-V2-sw01.webp"
   },
   {
    "product_id": "B061-P005-V2-sw02",
@@ -3341,6 +3341,8 @@
    "colour_name_text": "",
    "garment_type": "long-sleeve fitted t-shirt",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "19,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -3356,9 +3358,7 @@
     "neutral": true
    },
    "speckle": 0.7,
-   "asset_path": "content/catalogue/variants/B061-P005-V2-sw02.webp",
-   "price": "19,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B061-P005-V2-sw02.webp"
   },
   {
    "product_id": "B061-P005-V2-sw03",
@@ -3373,6 +3373,8 @@
    "colour_name_text": "",
    "garment_type": "long-sleeve fitted t-shirt",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "19,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -3388,9 +3390,7 @@
     "neutral": true
    },
    "speckle": 0.5,
-   "asset_path": "content/catalogue/variants/B061-P005-V2-sw03.webp",
-   "price": "19,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B061-P005-V2-sw03.webp"
   },
   {
    "product_id": "B061-P005-V2-sw04",
@@ -3405,6 +3405,8 @@
    "colour_name_text": "",
    "garment_type": "long-sleeve fitted t-shirt",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "19,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -3420,9 +3422,7 @@
     "neutral": false
    },
    "speckle": 1.0,
-   "asset_path": "content/catalogue/variants/B061-P005-V2-sw04.webp",
-   "price": "19,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B061-P005-V2-sw04.webp"
   },
   {
    "product_id": "B061-P005-V2-sw06",
@@ -3437,6 +3437,8 @@
    "colour_name_text": "",
    "garment_type": "long-sleeve fitted t-shirt",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "19,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -3452,9 +3454,7 @@
     "neutral": false
    },
    "speckle": 0.8,
-   "asset_path": "content/catalogue/variants/B061-P005-V2-sw06.webp",
-   "price": "19,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B061-P005-V2-sw06.webp"
   },
   {
    "product_id": "B061-P005-V2-sw07",
@@ -3469,6 +3469,8 @@
    "colour_name_text": "",
    "garment_type": "long-sleeve fitted t-shirt",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "19,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -3484,9 +3486,7 @@
     "neutral": false
    },
    "speckle": 0.6,
-   "asset_path": "content/catalogue/variants/B061-P005-V2-sw07.webp",
-   "price": "19,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B061-P005-V2-sw07.webp"
   },
   {
    "product_id": "B062-P004-sw02",
@@ -3501,6 +3501,8 @@
    "colour_name_text": "",
    "garment_type": "hooded henley long sleeve t-shirt",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "19,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 1.0,
@@ -3516,9 +3518,7 @@
     "neutral": true
    },
    "speckle": 1.8,
-   "asset_path": "content/catalogue/variants/B062-P004-sw02.webp",
-   "price": "19,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B062-P004-sw02.webp"
   },
   {
    "product_id": "B062-P004-sw03",
@@ -3533,6 +3533,8 @@
    "colour_name_text": "",
    "garment_type": "hooded henley long sleeve t-shirt",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "19,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 1.0,
@@ -3548,9 +3550,7 @@
     "neutral": true
    },
    "speckle": 0.9,
-   "asset_path": "content/catalogue/variants/B062-P004-sw03.webp",
-   "price": "19,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B062-P004-sw03.webp"
   },
   {
    "product_id": "B062-P004-sw04",
@@ -3565,6 +3565,8 @@
    "colour_name_text": "",
    "garment_type": "hooded henley long sleeve t-shirt",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "19,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 1.0,
@@ -3580,9 +3582,7 @@
     "neutral": false
    },
    "speckle": 0.9,
-   "asset_path": "content/catalogue/variants/B062-P004-sw04.webp",
-   "price": "19,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B062-P004-sw04.webp"
   },
   {
    "product_id": "B062-P004-sw05",
@@ -3597,6 +3597,8 @@
    "colour_name_text": "",
    "garment_type": "hooded henley long sleeve t-shirt",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "19,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 1.0,
@@ -3612,9 +3614,7 @@
     "neutral": false
    },
    "speckle": 1.8,
-   "asset_path": "content/catalogue/variants/B062-P004-sw05.webp",
-   "price": "19,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B062-P004-sw05.webp"
   },
   {
    "product_id": "B062-P004-sw06",
@@ -3629,6 +3629,8 @@
    "colour_name_text": "",
    "garment_type": "hooded henley long sleeve t-shirt",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "19,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 1.0,
@@ -3644,9 +3646,7 @@
     "neutral": false
    },
    "speckle": 0.9,
-   "asset_path": "content/catalogue/variants/B062-P004-sw06.webp",
-   "price": "19,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B062-P004-sw06.webp"
   },
   {
    "product_id": "B062-P006-sw01",
@@ -3661,6 +3661,8 @@
    "colour_name_text": "27 ORANGE",
    "garment_type": "long-sleeve ribbed t-shirt",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "19,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -3676,9 +3678,7 @@
     "neutral": false
    },
    "speckle": 1.0,
-   "asset_path": "content/catalogue/variants/B062-P006-sw01.webp",
-   "price": "19,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B062-P006-sw01.webp"
   },
   {
    "product_id": "B062-P006-sw02",
@@ -3693,6 +3693,8 @@
    "colour_name_text": "",
    "garment_type": "long-sleeve ribbed t-shirt",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "19,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -3708,9 +3710,7 @@
     "neutral": false
    },
    "speckle": 1.7,
-   "asset_path": "content/catalogue/variants/B062-P006-sw02.webp",
-   "price": "19,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B062-P006-sw02.webp"
   },
   {
    "product_id": "B062-P006-sw04",
@@ -3725,6 +3725,8 @@
    "colour_name_text": "",
    "garment_type": "long-sleeve ribbed t-shirt",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "19,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -3740,9 +3742,7 @@
     "neutral": true
    },
    "speckle": 0.8,
-   "asset_path": "content/catalogue/variants/B062-P006-sw04.webp",
-   "price": "19,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B062-P006-sw04.webp"
   },
   {
    "product_id": "B062-P006-sw05",
@@ -3757,6 +3757,8 @@
    "colour_name_text": "",
    "garment_type": "long-sleeve ribbed t-shirt",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "19,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -3772,9 +3774,7 @@
     "neutral": false
    },
    "speckle": 0.7,
-   "asset_path": "content/catalogue/variants/B062-P006-sw05.webp",
-   "price": "19,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B062-P006-sw05.webp"
   },
   {
    "product_id": "B062-P006-sw06",
@@ -3789,6 +3789,8 @@
    "colour_name_text": "",
    "garment_type": "long-sleeve ribbed t-shirt",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "19,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -3804,9 +3806,7 @@
     "neutral": false
    },
    "speckle": 0.8,
-   "asset_path": "content/catalogue/variants/B062-P006-sw06.webp",
-   "price": "19,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B062-P006-sw06.webp"
   },
   {
    "product_id": "B062-P011-sw01",
@@ -3821,6 +3821,8 @@
    "colour_name_text": "18 WINE",
    "garment_type": "short-sleeve cropped fitted t-shirt",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "14,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -3836,9 +3838,7 @@
     "neutral": false
    },
    "speckle": 0.6,
-   "asset_path": "content/catalogue/variants/B062-P011-sw01.webp",
-   "price": "14,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B062-P011-sw01.webp"
   },
   {
    "product_id": "B062-P011-sw04",
@@ -3853,6 +3853,8 @@
    "colour_name_text": "",
    "garment_type": "short-sleeve cropped fitted t-shirt",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "14,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -3868,9 +3870,7 @@
     "neutral": true
    },
    "speckle": 0.5,
-   "asset_path": "content/catalogue/variants/B062-P011-sw04.webp",
-   "price": "14,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B062-P011-sw04.webp"
   },
   {
    "product_id": "B062-P011-sw05",
@@ -3885,6 +3885,8 @@
    "colour_name_text": "",
    "garment_type": "short-sleeve cropped fitted t-shirt",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "14,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -3900,9 +3902,7 @@
     "neutral": false
    },
    "speckle": 0.7,
-   "asset_path": "content/catalogue/variants/B062-P011-sw05.webp",
-   "price": "14,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B062-P011-sw05.webp"
   },
   {
    "product_id": "B062-P011-sw08",
@@ -3917,6 +3917,8 @@
    "colour_name_text": "",
    "garment_type": "short-sleeve cropped fitted t-shirt",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "14,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -3932,9 +3934,7 @@
     "neutral": false
    },
    "speckle": 0.7,
-   "asset_path": "content/catalogue/variants/B062-P011-sw08.webp",
-   "price": "14,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B062-P011-sw08.webp"
   },
   {
    "product_id": "B062-P011-sw09",
@@ -3949,6 +3949,8 @@
    "colour_name_text": "",
    "garment_type": "short-sleeve cropped fitted t-shirt",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "14,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -3964,9 +3966,7 @@
     "neutral": false
    },
    "speckle": 0.5,
-   "asset_path": "content/catalogue/variants/B062-P011-sw09.webp",
-   "price": "14,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B062-P011-sw09.webp"
   },
   {
    "product_id": "B062-P012-V2-sw02",
@@ -3981,6 +3981,8 @@
    "colour_name_text": "08 DARK GREY",
    "garment_type": "hooded long coat",
    "slot": "layer",
+   "slot_confidence": "guessed",
+   "price": "109,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 1.0,
@@ -3996,9 +3998,7 @@
     "neutral": true
    },
    "speckle": 1.3,
-   "asset_path": "content/catalogue/variants/B062-P012-V2-sw02.webp",
-   "price": "109,90 \u20ac",
-   "slot_confidence": "guessed"
+   "asset_path": "content/catalogue/variants/B062-P012-V2-sw02.webp"
   },
   {
    "product_id": "B062-P013-sw01",
@@ -4013,6 +4013,8 @@
    "colour_name_text": "03 GREY",
    "garment_type": "half-zip sweatshirt pullover",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "34,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 1.0,
@@ -4028,9 +4030,7 @@
     "neutral": true
    },
    "speckle": 0.7,
-   "asset_path": "content/catalogue/variants/B062-P013-sw01.webp",
-   "price": "34,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B062-P013-sw01.webp"
   },
   {
    "product_id": "B062-P013-sw02",
@@ -4045,6 +4045,8 @@
    "colour_name_text": "",
    "garment_type": "half-zip sweatshirt pullover",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "34,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 1.0,
@@ -4060,9 +4062,7 @@
     "neutral": true
    },
    "speckle": 0.5,
-   "asset_path": "content/catalogue/variants/B062-P013-sw02.webp",
-   "price": "34,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B062-P013-sw02.webp"
   },
   {
    "product_id": "B062-P013-sw04",
@@ -4077,6 +4077,8 @@
    "colour_name_text": "",
    "garment_type": "half-zip sweatshirt pullover",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "34,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 1.0,
@@ -4092,9 +4094,7 @@
     "neutral": false
    },
    "speckle": 0.5,
-   "asset_path": "content/catalogue/variants/B062-P013-sw04.webp",
-   "price": "34,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B062-P013-sw04.webp"
   },
   {
    "product_id": "B062-P013-sw05",
@@ -4109,6 +4109,8 @@
    "colour_name_text": "",
    "garment_type": "half-zip sweatshirt pullover",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "34,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 1.0,
@@ -4124,9 +4126,7 @@
     "neutral": false
    },
    "speckle": 0.4,
-   "asset_path": "content/catalogue/variants/B062-P013-sw05.webp",
-   "price": "34,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B062-P013-sw05.webp"
   },
   {
    "product_id": "B062-P014-sw01",
@@ -4141,6 +4141,8 @@
    "colour_name_text": "68 BLUE",
    "garment_type": "full-zip stand collar active jacket",
    "slot": "layer",
+   "slot_confidence": "",
+   "price": "34,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -4156,9 +4158,7 @@
     "neutral": false
    },
    "speckle": 1.7,
-   "asset_path": "content/catalogue/variants/B062-P014-sw01.webp",
-   "price": "34,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B062-P014-sw01.webp"
   },
   {
    "product_id": "B062-P014-sw02",
@@ -4173,6 +4173,8 @@
    "colour_name_text": "",
    "garment_type": "full-zip stand collar active jacket",
    "slot": "layer",
+   "slot_confidence": "",
+   "price": "34,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -4188,9 +4190,7 @@
     "neutral": false
    },
    "speckle": 1.7,
-   "asset_path": "content/catalogue/variants/B062-P014-sw02.webp",
-   "price": "34,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B062-P014-sw02.webp"
   },
   {
    "product_id": "B062-P014-sw03",
@@ -4205,6 +4205,8 @@
    "colour_name_text": "",
    "garment_type": "full-zip stand collar active jacket",
    "slot": "layer",
+   "slot_confidence": "",
+   "price": "34,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -4220,9 +4222,7 @@
     "neutral": true
    },
    "speckle": 1.0,
-   "asset_path": "content/catalogue/variants/B062-P014-sw03.webp",
-   "price": "34,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B062-P014-sw03.webp"
   },
   {
    "product_id": "B062-P014-sw05",
@@ -4237,6 +4237,8 @@
    "colour_name_text": "",
    "garment_type": "full-zip stand collar active jacket",
    "slot": "layer",
+   "slot_confidence": "",
+   "price": "34,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -4252,9 +4254,7 @@
     "neutral": true
    },
    "speckle": 1.3,
-   "asset_path": "content/catalogue/variants/B062-P014-sw05.webp",
-   "price": "34,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B062-P014-sw05.webp"
   },
   {
    "product_id": "B062-P014-sw06",
@@ -4269,6 +4269,8 @@
    "colour_name_text": "",
    "garment_type": "full-zip stand collar active jacket",
    "slot": "layer",
+   "slot_confidence": "",
+   "price": "34,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -4284,9 +4286,7 @@
     "neutral": false
    },
    "speckle": 1.8,
-   "asset_path": "content/catalogue/variants/B062-P014-sw06.webp",
-   "price": "34,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B062-P014-sw06.webp"
   },
   {
    "product_id": "B062-P014-sw07",
@@ -4301,6 +4301,8 @@
    "colour_name_text": "",
    "garment_type": "full-zip stand collar active jacket",
    "slot": "layer",
+   "slot_confidence": "",
+   "price": "34,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.999,
@@ -4316,9 +4318,7 @@
     "neutral": false
    },
    "speckle": 0.9,
-   "asset_path": "content/catalogue/variants/B062-P014-sw07.webp",
-   "price": "34,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B062-P014-sw07.webp"
   },
   {
    "product_id": "B062-P014-I798-sw01",
@@ -4333,6 +4333,8 @@
    "colour_name_text": "39 DARK BROWN",
    "garment_type": "flare leggings",
    "slot": "bottom",
+   "slot_confidence": "guessed",
+   "price": "29,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 1.0,
@@ -4348,9 +4350,7 @@
     "neutral": true
    },
    "speckle": 0.9,
-   "asset_path": "content/catalogue/variants/B062-P014-I798-sw01.webp",
-   "price": "29,90 \u20ac",
-   "slot_confidence": "guessed"
+   "asset_path": "content/catalogue/variants/B062-P014-I798-sw01.webp"
   },
   {
    "product_id": "B062-P014-I798-sw03",
@@ -4365,6 +4365,8 @@
    "colour_name_text": "",
    "garment_type": "flare leggings",
    "slot": "bottom",
+   "slot_confidence": "guessed",
+   "price": "29,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 1.0,
@@ -4380,9 +4382,7 @@
     "neutral": true
    },
    "speckle": 0.5,
-   "asset_path": "content/catalogue/variants/B062-P014-I798-sw03.webp",
-   "price": "29,90 \u20ac",
-   "slot_confidence": "guessed"
+   "asset_path": "content/catalogue/variants/B062-P014-I798-sw03.webp"
   },
   {
    "product_id": "B062-P016-sw01",
@@ -4397,6 +4397,8 @@
    "colour_name_text": "",
    "garment_type": "crew neck sweatshirt",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "34,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.996,
@@ -4412,9 +4414,7 @@
     "neutral": true
    },
    "speckle": 1.5,
-   "asset_path": "content/catalogue/variants/B062-P016-sw01.webp",
-   "price": "34,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B062-P016-sw01.webp"
   },
   {
    "product_id": "B062-P016-sw02",
@@ -4429,6 +4429,8 @@
    "colour_name_text": "",
    "garment_type": "crew neck sweatshirt",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "34,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.996,
@@ -4444,9 +4446,7 @@
     "neutral": true
    },
    "speckle": 1.4,
-   "asset_path": "content/catalogue/variants/B062-P016-sw02.webp",
-   "price": "34,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B062-P016-sw02.webp"
   },
   {
    "product_id": "B062-P016-sw03",
@@ -4461,6 +4461,8 @@
    "colour_name_text": "",
    "garment_type": "crew neck sweatshirt",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "34,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.996,
@@ -4476,9 +4478,7 @@
     "neutral": true
    },
    "speckle": 1.5,
-   "asset_path": "content/catalogue/variants/B062-P016-sw03.webp",
-   "price": "34,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B062-P016-sw03.webp"
   },
   {
    "product_id": "B062-P016-sw04",
@@ -4493,6 +4493,8 @@
    "colour_name_text": "08 DARK GREY",
    "garment_type": "crew neck sweatshirt",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "34,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.996,
@@ -4508,9 +4510,7 @@
     "neutral": true
    },
    "speckle": 0.9,
-   "asset_path": "content/catalogue/variants/B062-P016-sw04.webp",
-   "price": "34,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B062-P016-sw04.webp"
   },
   {
    "product_id": "B062-P016-sw05",
@@ -4525,6 +4525,8 @@
    "colour_name_text": "",
    "garment_type": "crew neck sweatshirt",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "34,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.996,
@@ -4540,9 +4542,7 @@
     "neutral": true
    },
    "speckle": 0.9,
-   "asset_path": "content/catalogue/variants/B062-P016-sw05.webp",
-   "price": "34,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B062-P016-sw05.webp"
   },
   {
    "product_id": "B062-P016-sw06",
@@ -4557,6 +4557,8 @@
    "colour_name_text": "",
    "garment_type": "crew neck sweatshirt",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "34,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.996,
@@ -4572,9 +4574,7 @@
     "neutral": false
    },
    "speckle": 1.4,
-   "asset_path": "content/catalogue/variants/B062-P016-sw06.webp",
-   "price": "34,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B062-P016-sw06.webp"
   },
   {
    "product_id": "B062-P016-sw07",
@@ -4589,6 +4589,8 @@
    "colour_name_text": "",
    "garment_type": "crew neck sweatshirt",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "34,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.996,
@@ -4604,9 +4606,7 @@
     "neutral": false
    },
    "speckle": 0.9,
-   "asset_path": "content/catalogue/variants/B062-P016-sw07.webp",
-   "price": "34,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B062-P016-sw07.webp"
   },
   {
    "product_id": "B062-P016-sw09",
@@ -4621,6 +4621,8 @@
    "colour_name_text": "",
    "garment_type": "crew neck sweatshirt",
    "slot": "top",
+   "slot_confidence": "",
+   "price": "34,90 \u20ac",
    "source_clean": true,
    "real": false,
    "recoloured_share": 0.996,
@@ -4636,9 +4638,1351 @@
     "neutral": false
    },
    "speckle": 0.8,
-   "asset_path": "content/catalogue/variants/B062-P016-sw09.webp",
-   "price": "34,90 \u20ac",
-   "slot_confidence": ""
+   "asset_path": "content/catalogue/variants/B062-P016-sw09.webp"
+  },
+  {
+   "product_id": "B073-P002-sw01",
+   "source": "B073-P002",
+   "style": "Souffl\u00e9 Yarn Polo Jumper",
+   "style_id": "487939",
+   "swatch": 1,
+   "swatch_hex": "D9B4AA",
+   "selected": true,
+   "cross_check_de": null,
+   "delta_e_to_source": 45.5,
+   "colour_name_text": "10 PINK",
+   "garment_type": "long-sleeve knit polo jumper",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 0.998,
+   "colour": {
+    "hex": "D9B4AA",
+    "family": "warm neutral",
+    "name": "oatmeal",
+    "share": 1.0,
+    "L": 76.3,
+    "C": 15.5,
+    "h": 40.6,
+    "rel": 0.388,
+    "neutral": false
+   },
+   "speckle": 1.8,
+   "asset_path": "content/catalogue/variants/B073-P002-sw01.webp"
+  },
+  {
+   "product_id": "B073-P002-sw02",
+   "source": "B073-P002",
+   "style": "Souffl\u00e9 Yarn Polo Jumper",
+   "style_id": "487939",
+   "swatch": 2,
+   "swatch_hex": "485053",
+   "selected": false,
+   "cross_check_de": null,
+   "delta_e_to_source": 13.4,
+   "colour_name_text": "",
+   "garment_type": "long-sleeve knit polo jumper",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 0.998,
+   "colour": {
+    "hex": "485053",
+    "family": "grey",
+    "name": "dark grey",
+    "share": 1.0,
+    "L": 33.4,
+    "C": 3.8,
+    "h": 229.0,
+    "rel": 0.166,
+    "neutral": false
+   },
+   "speckle": 1.7,
+   "asset_path": "content/catalogue/variants/B073-P002-sw02.webp"
+  },
+  {
+   "product_id": "B073-P002-sw03",
+   "source": "B073-P002",
+   "style": "Souffl\u00e9 Yarn Polo Jumper",
+   "style_id": "487939",
+   "swatch": 3,
+   "swatch_hex": "E1DBCF",
+   "selected": false,
+   "cross_check_de": null,
+   "delta_e_to_source": 50.9,
+   "colour_name_text": "",
+   "garment_type": "long-sleeve knit polo jumper",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 0.998,
+   "colour": {
+    "hex": "E1DBCF",
+    "family": "warm neutral",
+    "name": "cream",
+    "share": 1.0,
+    "L": 87.6,
+    "C": 6.6,
+    "h": 90.1,
+    "rel": 0.1,
+    "neutral": true
+   },
+   "speckle": 1.8,
+   "asset_path": "content/catalogue/variants/B073-P002-sw03.webp"
+  },
+  {
+   "product_id": "B073-P002-sw05",
+   "source": "B073-P002",
+   "style": "Souffl\u00e9 Yarn Polo Jumper",
+   "style_id": "487939",
+   "swatch": 5,
+   "swatch_hex": "273040",
+   "selected": false,
+   "cross_check_de": null,
+   "delta_e_to_source": 20.0,
+   "colour_name_text": "",
+   "garment_type": "long-sleeve knit polo jumper",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 0.998,
+   "colour": {
+    "hex": "273040",
+    "family": "blue",
+    "name": "navy",
+    "share": 1.0,
+    "L": 19.7,
+    "C": 11.3,
+    "h": 274.5,
+    "rel": 0.402,
+    "neutral": false
+   },
+   "speckle": 1.0,
+   "asset_path": "content/catalogue/variants/B073-P002-sw05.webp"
+  },
+  {
+   "product_id": "B073-P006-sw02",
+   "source": "B073-P006",
+   "style": "Smooth Cotton Crew Neck Jumper",
+   "style_id": "",
+   "swatch": 2,
+   "swatch_hex": "EEEDE9",
+   "selected": false,
+   "cross_check_de": 1.1,
+   "delta_e_to_source": 74.8,
+   "colour_name_text": "",
+   "garment_type": "crew-neck sweatshirt-style jumper",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 0.995,
+   "colour": {
+    "hex": "EEEDE9",
+    "family": "white",
+    "name": "white",
+    "share": 1.0,
+    "L": 93.7,
+    "C": 2.1,
+    "h": 100.2,
+    "rel": 0.022,
+    "neutral": true
+   },
+   "speckle": 0.7,
+   "asset_path": "content/catalogue/variants/B073-P006-sw02.webp"
+  },
+  {
+   "product_id": "B073-P006-sw03",
+   "source": "B073-P006",
+   "style": "Smooth Cotton Crew Neck Jumper",
+   "style_id": "",
+   "swatch": 3,
+   "swatch_hex": "969495",
+   "selected": false,
+   "cross_check_de": 3.1,
+   "delta_e_to_source": 42.4,
+   "colour_name_text": "",
+   "garment_type": "crew-neck sweatshirt-style jumper",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 0.995,
+   "colour": {
+    "hex": "969495",
+    "family": "grey",
+    "name": "mid grey",
+    "share": 1.0,
+    "L": 61.5,
+    "C": 1.0,
+    "h": 343.8,
+    "rel": 0.012,
+    "neutral": true
+   },
+   "speckle": 0.8,
+   "asset_path": "content/catalogue/variants/B073-P006-sw03.webp"
+  },
+  {
+   "product_id": "B073-P006-sw04",
+   "source": "B073-P006",
+   "style": "Smooth Cotton Crew Neck Jumper",
+   "style_id": "",
+   "swatch": 4,
+   "swatch_hex": "212124",
+   "selected": false,
+   "cross_check_de": 2.3,
+   "delta_e_to_source": 18.2,
+   "colour_name_text": "",
+   "garment_type": "crew-neck sweatshirt-style jumper",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 0.995,
+   "colour": {
+    "hex": "212124",
+    "family": "black",
+    "name": "black",
+    "share": 1.0,
+    "L": 12.9,
+    "C": 2.2,
+    "h": 290.8,
+    "rel": 0.059,
+    "neutral": true
+   },
+   "speckle": 0.5,
+   "asset_path": "content/catalogue/variants/B073-P006-sw04.webp"
+  },
+  {
+   "product_id": "B073-P006-sw05",
+   "source": "B073-P006",
+   "style": "Smooth Cotton Crew Neck Jumper",
+   "style_id": "",
+   "swatch": 5,
+   "swatch_hex": "EB2737",
+   "selected": false,
+   "cross_check_de": 2.7,
+   "delta_e_to_source": 34.8,
+   "colour_name_text": "",
+   "garment_type": "crew-neck sweatshirt-style jumper",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 0.995,
+   "colour": {
+    "hex": "EB2737",
+    "family": "red",
+    "name": "brick",
+    "share": 1.0,
+    "L": 51.1,
+    "C": 82.7,
+    "h": 30.5,
+    "rel": 0.913,
+    "neutral": false
+   },
+   "speckle": 0.7,
+   "asset_path": "content/catalogue/variants/B073-P006-sw05.webp"
+  },
+  {
+   "product_id": "B073-P006-sw06",
+   "source": "B073-P006",
+   "style": "Smooth Cotton Crew Neck Jumper",
+   "style_id": "",
+   "swatch": 6,
+   "swatch_hex": "BC9165",
+   "selected": false,
+   "cross_check_de": 17.9,
+   "delta_e_to_source": 46.6,
+   "colour_name_text": "",
+   "garment_type": "crew-neck sweatshirt-style jumper",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 0.995,
+   "colour": {
+    "hex": "BC9165",
+    "family": "yellow",
+    "name": "gold",
+    "share": 1.0,
+    "L": 63.2,
+    "C": 31.4,
+    "h": 70.3,
+    "rel": 0.427,
+    "neutral": false
+   },
+   "speckle": 0.8,
+   "asset_path": "content/catalogue/variants/B073-P006-sw06.webp"
+  },
+  {
+   "product_id": "B073-P006-sw07",
+   "source": "B073-P006",
+   "style": "Smooth Cotton Crew Neck Jumper",
+   "style_id": "",
+   "swatch": 7,
+   "swatch_hex": "342521",
+   "selected": false,
+   "cross_check_de": 9.4,
+   "delta_e_to_source": 12.4,
+   "colour_name_text": "",
+   "garment_type": "crew-neck sweatshirt-style jumper",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 0.995,
+   "colour": {
+    "hex": "342521",
+    "family": "brown",
+    "name": "espresso",
+    "share": 1.0,
+    "L": 16.3,
+    "C": 8.4,
+    "h": 40.3,
+    "rel": 0.218,
+    "neutral": false
+   },
+   "speckle": 0.8,
+   "asset_path": "content/catalogue/variants/B073-P006-sw07.webp"
+  },
+  {
+   "product_id": "B073-P006-sw08",
+   "source": "B073-P006",
+   "style": "Smooth Cotton Crew Neck Jumper",
+   "style_id": "",
+   "swatch": 8,
+   "swatch_hex": "F4F0D5",
+   "selected": false,
+   "cross_check_de": 9.7,
+   "delta_e_to_source": 77.5,
+   "colour_name_text": "",
+   "garment_type": "crew-neck sweatshirt-style jumper",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 0.995,
+   "colour": {
+    "hex": "F4F0D5",
+    "family": "white",
+    "name": "off-white",
+    "share": 1.0,
+    "L": 94.5,
+    "C": 13.9,
+    "h": 103.0,
+    "rel": 0.147,
+    "neutral": true
+   },
+   "speckle": 0.7,
+   "asset_path": "content/catalogue/variants/B073-P006-sw08.webp"
+  },
+  {
+   "product_id": "B073-P006-sw09",
+   "source": "B073-P006",
+   "style": "Smooth Cotton Crew Neck Jumper",
+   "style_id": "",
+   "swatch": 9,
+   "swatch_hex": "7AAFE7",
+   "selected": false,
+   "cross_check_de": 20.9,
+   "delta_e_to_source": 58.4,
+   "colour_name_text": "",
+   "garment_type": "crew-neck sweatshirt-style jumper",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "39,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 0.995,
+   "colour": {
+    "hex": "7AAFE7",
+    "family": "blue",
+    "name": "steel blue",
+    "share": 1.0,
+    "L": 69.9,
+    "C": 33.6,
+    "h": 265.7,
+    "rel": 0.718,
+    "neutral": false
+   },
+   "speckle": 0.8,
+   "asset_path": "content/catalogue/variants/B073-P006-sw09.webp"
+  },
+  {
+   "product_id": "B073-P010-sw01",
+   "source": "B073-P010",
+   "style": "100% Supima Cotton T-Shirt",
+   "style_id": "",
+   "swatch": 1,
+   "swatch_hex": "333436",
+   "selected": false,
+   "cross_check_de": 7.7,
+   "delta_e_to_source": 33.6,
+   "colour_name_text": "",
+   "garment_type": "short-sleeve crew-neck T-shirt",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "9,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "333436",
+    "family": "grey",
+    "name": "dark grey",
+    "share": 1.0,
+    "L": 21.7,
+    "C": 1.4,
+    "h": 271.7,
+    "rel": 0.05,
+    "neutral": true
+   },
+   "speckle": 0.5,
+   "asset_path": "content/catalogue/variants/B073-P010-sw01.webp"
+  },
+  {
+   "product_id": "B073-P010-sw02",
+   "source": "B073-P010",
+   "style": "100% Supima Cotton T-Shirt",
+   "style_id": "",
+   "swatch": 2,
+   "swatch_hex": "EFEFEF",
+   "selected": true,
+   "cross_check_de": 1.1,
+   "delta_e_to_source": 27.8,
+   "colour_name_text": "00 WHITE",
+   "garment_type": "short-sleeve crew-neck T-shirt",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "9,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "EFEFEF",
+    "family": "white",
+    "name": "white",
+    "share": 1.0,
+    "L": 94.4,
+    "C": 0.0,
+    "h": 158.2,
+    "rel": 0.0,
+    "neutral": true
+   },
+   "speckle": 0.7,
+   "asset_path": "content/catalogue/variants/B073-P010-sw02.webp"
+  },
+  {
+   "product_id": "B073-P010-sw03",
+   "source": "B073-P010",
+   "style": "100% Supima Cotton T-Shirt",
+   "style_id": "",
+   "swatch": 3,
+   "swatch_hex": "D3D5CF",
+   "selected": false,
+   "cross_check_de": 3.9,
+   "delta_e_to_source": 24.6,
+   "colour_name_text": "",
+   "garment_type": "short-sleeve crew-neck T-shirt",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "9,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "D3D5CF",
+    "family": "cool neutral",
+    "name": "pale grey",
+    "share": 1.0,
+    "L": 85.0,
+    "C": 3.2,
+    "h": 122.9,
+    "rel": 0.033,
+    "neutral": true
+   },
+   "speckle": 0.7,
+   "asset_path": "content/catalogue/variants/B073-P010-sw03.webp"
+  },
+  {
+   "product_id": "B073-P010-sw04",
+   "source": "B073-P010",
+   "style": "100% Supima Cotton T-Shirt",
+   "style_id": "",
+   "swatch": 4,
+   "swatch_hex": "FAE3DB",
+   "selected": false,
+   "cross_check_de": 1.5,
+   "delta_e_to_source": 26.0,
+   "colour_name_text": "",
+   "garment_type": "short-sleeve crew-neck T-shirt",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "9,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "FAE3DB",
+    "family": "white",
+    "name": "off-white",
+    "share": 1.0,
+    "L": 91.9,
+    "C": 9.4,
+    "h": 45.8,
+    "rel": 0.775,
+    "neutral": false
+   },
+   "speckle": 0.8,
+   "asset_path": "content/catalogue/variants/B073-P010-sw04.webp"
+  },
+  {
+   "product_id": "B073-P010-sw05",
+   "source": "B073-P010",
+   "style": "100% Supima Cotton T-Shirt",
+   "style_id": "",
+   "swatch": 5,
+   "swatch_hex": "A9926C",
+   "selected": false,
+   "cross_check_de": 6.1,
+   "delta_e_to_source": 22.0,
+   "colour_name_text": "",
+   "garment_type": "short-sleeve crew-neck T-shirt",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "9,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "A9926C",
+    "family": "brown",
+    "name": "tan",
+    "share": 1.0,
+    "L": 61.7,
+    "C": 23.5,
+    "h": 82.8,
+    "rel": 0.351,
+    "neutral": false
+   },
+   "speckle": 0.8,
+   "asset_path": "content/catalogue/variants/B073-P010-sw05.webp"
+  },
+  {
+   "product_id": "B073-P010-sw06",
+   "source": "B073-P010",
+   "style": "100% Supima Cotton T-Shirt",
+   "style_id": "",
+   "swatch": 6,
+   "swatch_hex": "3F3E4E",
+   "selected": false,
+   "cross_check_de": 3.4,
+   "delta_e_to_source": 29.5,
+   "colour_name_text": "",
+   "garment_type": "short-sleeve crew-neck T-shirt",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "9,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "3F3E4E",
+    "family": "blue",
+    "name": "navy",
+    "share": 1.0,
+    "L": 26.9,
+    "C": 10.5,
+    "h": 294.5,
+    "rel": 0.166,
+    "neutral": false
+   },
+   "speckle": 0.4,
+   "asset_path": "content/catalogue/variants/B073-P010-sw06.webp"
+  },
+  {
+   "product_id": "B073-P008-sw01",
+   "source": "B073-P008",
+   "style": "HEATTECH Extra Warm Cashmere Blend Turtleneck T-Shirt (Long Sleeve)",
+   "style_id": "485825",
+   "swatch": 1,
+   "swatch_hex": "FBE0D9",
+   "selected": true,
+   "cross_check_de": null,
+   "delta_e_to_source": 76.2,
+   "colour_name_text": "10 PINK",
+   "garment_type": "long-sleeve turtleneck base layer",
+   "slot": "base",
+   "slot_confidence": "",
+   "price": "24,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "FBE0D9",
+    "family": "pink",
+    "name": "blush",
+    "share": 1.0,
+    "L": 91.2,
+    "C": 10.6,
+    "h": 39.9,
+    "rel": 0.834,
+    "neutral": false
+   },
+   "speckle": 0.8,
+   "asset_path": "content/catalogue/variants/B073-P008-sw01.webp"
+  },
+  {
+   "product_id": "B073-P008-sw02",
+   "source": "B073-P008",
+   "style": "HEATTECH Extra Warm Cashmere Blend Turtleneck T-Shirt (Long Sleeve)",
+   "style_id": "485825",
+   "swatch": 2,
+   "swatch_hex": "4C4F56",
+   "selected": false,
+   "cross_check_de": null,
+   "delta_e_to_source": 17.5,
+   "colour_name_text": "",
+   "garment_type": "long-sleeve turtleneck base layer",
+   "slot": "base",
+   "slot_confidence": "",
+   "price": "24,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "4C4F56",
+    "family": "grey",
+    "name": "dark grey",
+    "share": 1.0,
+    "L": 33.6,
+    "C": 4.5,
+    "h": 275.1,
+    "rel": 0.115,
+    "neutral": true
+   },
+   "speckle": 0.9,
+   "asset_path": "content/catalogue/variants/B073-P008-sw02.webp"
+  },
+  {
+   "product_id": "B073-P008-sw03",
+   "source": "B073-P008",
+   "style": "HEATTECH Extra Warm Cashmere Blend Turtleneck T-Shirt (Long Sleeve)",
+   "style_id": "485825",
+   "swatch": 3,
+   "swatch_hex": "2C2D2F",
+   "selected": false,
+   "cross_check_de": null,
+   "delta_e_to_source": 9.4,
+   "colour_name_text": "",
+   "garment_type": "long-sleeve turtleneck base layer",
+   "slot": "base",
+   "slot_confidence": "",
+   "price": "24,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "2C2D2F",
+    "family": "black",
+    "name": "black",
+    "share": 1.0,
+    "L": 18.4,
+    "C": 1.4,
+    "h": 271.8,
+    "rel": 0.056,
+    "neutral": true
+   },
+   "speckle": 0.9,
+   "asset_path": "content/catalogue/variants/B073-P008-sw03.webp"
+  },
+  {
+   "product_id": "B073-P008-sw04",
+   "source": "B073-P008",
+   "style": "HEATTECH Extra Warm Cashmere Blend Turtleneck T-Shirt (Long Sleeve)",
+   "style_id": "485825",
+   "swatch": 4,
+   "swatch_hex": "FF98AD",
+   "selected": false,
+   "cross_check_de": null,
+   "delta_e_to_source": 59.0,
+   "colour_name_text": "",
+   "garment_type": "long-sleeve turtleneck base layer",
+   "slot": "base",
+   "slot_confidence": "",
+   "price": "24,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "FF98AD",
+    "family": "grey",
+    "name": "light grey",
+    "share": 1.0,
+    "L": 74.0,
+    "C": 41.3,
+    "h": 8.1,
+    "rel": 1.0,
+    "neutral": false
+   },
+   "speckle": 0.7,
+   "asset_path": "content/catalogue/variants/B073-P008-sw04.webp"
+  },
+  {
+   "product_id": "B073-P008-sw05",
+   "source": "B073-P008",
+   "style": "HEATTECH Extra Warm Cashmere Blend Turtleneck T-Shirt (Long Sleeve)",
+   "style_id": "485825",
+   "swatch": 5,
+   "swatch_hex": "B30B25",
+   "selected": false,
+   "cross_check_de": null,
+   "delta_e_to_source": 29.0,
+   "colour_name_text": "",
+   "garment_type": "long-sleeve turtleneck base layer",
+   "slot": "base",
+   "slot_confidence": "",
+   "price": "24,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "B30B25",
+    "family": "red",
+    "name": "brick",
+    "share": 1.0,
+    "L": 37.8,
+    "C": 70.0,
+    "h": 29.6,
+    "rel": 0.972,
+    "neutral": false
+   },
+   "speckle": 0.8,
+   "asset_path": "content/catalogue/variants/B073-P008-sw05.webp"
+  },
+  {
+   "product_id": "B073-P008-sw06",
+   "source": "B073-P008",
+   "style": "HEATTECH Extra Warm Cashmere Blend Turtleneck T-Shirt (Long Sleeve)",
+   "style_id": "485825",
+   "swatch": 6,
+   "swatch_hex": "3E0E24",
+   "selected": false,
+   "cross_check_de": null,
+   "delta_e_to_source": 14.1,
+   "colour_name_text": "",
+   "garment_type": "long-sleeve turtleneck base layer",
+   "slot": "base",
+   "slot_confidence": "",
+   "price": "24,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "3E0E24",
+    "family": "red",
+    "name": "oxblood",
+    "share": 1.0,
+    "L": 12.4,
+    "C": 25.7,
+    "h": 355.1,
+    "rel": 0.748,
+    "neutral": false
+   },
+   "speckle": 0.7,
+   "asset_path": "content/catalogue/variants/B073-P008-sw06.webp"
+  },
+  {
+   "product_id": "B073-P008-sw07",
+   "source": "B073-P008",
+   "style": "HEATTECH Extra Warm Cashmere Blend Turtleneck T-Shirt (Long Sleeve)",
+   "style_id": "485825",
+   "swatch": 7,
+   "swatch_hex": "ECE9E1",
+   "selected": false,
+   "cross_check_de": null,
+   "delta_e_to_source": 77.2,
+   "colour_name_text": "",
+   "garment_type": "long-sleeve turtleneck base layer",
+   "slot": "base",
+   "slot_confidence": "",
+   "price": "24,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "ECE9E1",
+    "family": "white",
+    "name": "off-white",
+    "share": 1.0,
+    "L": 92.4,
+    "C": 4.3,
+    "h": 95.1,
+    "rel": 0.094,
+    "neutral": true
+   },
+   "speckle": 0.7,
+   "asset_path": "content/catalogue/variants/B073-P008-sw07.webp"
+  },
+  {
+   "product_id": "B073-P008-sw08",
+   "source": "B073-P008",
+   "style": "HEATTECH Extra Warm Cashmere Blend Turtleneck T-Shirt (Long Sleeve)",
+   "style_id": "485825",
+   "swatch": 8,
+   "swatch_hex": "C4B39D",
+   "selected": false,
+   "cross_check_de": null,
+   "delta_e_to_source": 56.8,
+   "colour_name_text": "",
+   "garment_type": "long-sleeve turtleneck base layer",
+   "slot": "base",
+   "slot_confidence": "",
+   "price": "24,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "C4B39D",
+    "family": "brown",
+    "name": "tan",
+    "share": 1.0,
+    "L": 73.8,
+    "C": 13.7,
+    "h": 79.5,
+    "rel": 0.174,
+    "neutral": false
+   },
+   "speckle": 0.8,
+   "asset_path": "content/catalogue/variants/B073-P008-sw08.webp"
+  },
+  {
+   "product_id": "B073-P008-sw10",
+   "source": "B073-P008",
+   "style": "HEATTECH Extra Warm Cashmere Blend Turtleneck T-Shirt (Long Sleeve)",
+   "style_id": "485825",
+   "swatch": 10,
+   "swatch_hex": "F1F0B8",
+   "selected": false,
+   "cross_check_de": null,
+   "delta_e_to_source": 80.6,
+   "colour_name_text": "",
+   "garment_type": "long-sleeve turtleneck base layer",
+   "slot": "base",
+   "slot_confidence": "",
+   "price": "24,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "F1F0B8",
+    "family": "yellow",
+    "name": "butter",
+    "share": 1.0,
+    "L": 93.7,
+    "C": 28.5,
+    "h": 107.1,
+    "rel": 0.299,
+    "neutral": false
+   },
+   "speckle": 0.7,
+   "asset_path": "content/catalogue/variants/B073-P008-sw10.webp"
+  },
+  {
+   "product_id": "B073-P008-sw11",
+   "source": "B073-P008",
+   "style": "HEATTECH Extra Warm Cashmere Blend Turtleneck T-Shirt (Long Sleeve)",
+   "style_id": "485825",
+   "swatch": 11,
+   "swatch_hex": "CFE9C9",
+   "selected": false,
+   "cross_check_de": null,
+   "delta_e_to_source": 79.6,
+   "colour_name_text": "",
+   "garment_type": "long-sleeve turtleneck base layer",
+   "slot": "base",
+   "slot_confidence": "",
+   "price": "24,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "CFE9C9",
+    "family": "cool neutral",
+    "name": "pale grey",
+    "share": 1.0,
+    "L": 89.7,
+    "C": 19.2,
+    "h": 138.5,
+    "rel": 0.213,
+    "neutral": false
+   },
+   "speckle": 0.8,
+   "asset_path": "content/catalogue/variants/B073-P008-sw11.webp"
+  },
+  {
+   "product_id": "B073-P008-sw12",
+   "source": "B073-P008",
+   "style": "HEATTECH Extra Warm Cashmere Blend Turtleneck T-Shirt (Long Sleeve)",
+   "style_id": "485825",
+   "swatch": 12,
+   "swatch_hex": "668D8C",
+   "selected": false,
+   "cross_check_de": null,
+   "delta_e_to_source": 42.6,
+   "colour_name_text": "",
+   "garment_type": "long-sleeve turtleneck base layer",
+   "slot": "base",
+   "slot_confidence": "",
+   "price": "24,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "668D8C",
+    "family": "blue",
+    "name": "steel blue",
+    "share": 1.0,
+    "L": 55.9,
+    "C": 14.2,
+    "h": 195.7,
+    "rel": 0.42,
+    "neutral": false
+   },
+   "speckle": 0.8,
+   "asset_path": "content/catalogue/variants/B073-P008-sw12.webp"
+  },
+  {
+   "product_id": "B073-P008-sw13",
+   "source": "B073-P008",
+   "style": "HEATTECH Extra Warm Cashmere Blend Turtleneck T-Shirt (Long Sleeve)",
+   "style_id": "485825",
+   "swatch": 13,
+   "swatch_hex": "101F40",
+   "selected": false,
+   "cross_check_de": null,
+   "delta_e_to_source": 17.9,
+   "colour_name_text": "",
+   "garment_type": "long-sleeve turtleneck base layer",
+   "slot": "base",
+   "slot_confidence": "",
+   "price": "24,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "101F40",
+    "family": "blue",
+    "name": "navy",
+    "share": 1.0,
+    "L": 12.4,
+    "C": 23.9,
+    "h": 286.3,
+    "rel": 0.777,
+    "neutral": false
+   },
+   "speckle": 0.8,
+   "asset_path": "content/catalogue/variants/B073-P008-sw13.webp"
+  },
+  {
+   "product_id": "B073-P008-sw14",
+   "source": "B073-P008",
+   "style": "HEATTECH Extra Warm Cashmere Blend Turtleneck T-Shirt (Long Sleeve)",
+   "style_id": "485825",
+   "swatch": 14,
+   "swatch_hex": "40293A",
+   "selected": false,
+   "cross_check_de": null,
+   "delta_e_to_source": 10.6,
+   "colour_name_text": "",
+   "garment_type": "long-sleeve turtleneck base layer",
+   "slot": "base",
+   "slot_confidence": "",
+   "price": "24,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "40293A",
+    "family": "purple",
+    "name": "aubergine",
+    "share": 1.0,
+    "L": 20.0,
+    "C": 15.4,
+    "h": 334.9,
+    "rel": 0.309,
+    "neutral": false
+   },
+   "speckle": 0.9,
+   "asset_path": "content/catalogue/variants/B073-P008-sw14.webp"
+  },
+  {
+   "product_id": "B073-P009-sw01",
+   "source": "B073-P009",
+   "style": "Crew Neck T-Shirt",
+   "style_id": "",
+   "swatch": 1,
+   "swatch_hex": "D9D0AF",
+   "selected": true,
+   "cross_check_de": 9.4,
+   "delta_e_to_source": 10.4,
+   "colour_name_text": "32 BEIGE",
+   "garment_type": "short-sleeve crew-neck T-shirt",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "14,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "D9D0AF",
+    "family": "yellow",
+    "name": "butter",
+    "share": 1.0,
+    "L": 83.4,
+    "C": 17.7,
+    "h": 97.3,
+    "rel": 0.21,
+    "neutral": false
+   },
+   "speckle": 0.4,
+   "asset_path": "content/catalogue/variants/B073-P009-sw01.webp"
+  },
+  {
+   "product_id": "B073-P009-sw02",
+   "source": "B073-P009",
+   "style": "Crew Neck T-Shirt",
+   "style_id": "",
+   "swatch": 2,
+   "swatch_hex": "EEEFF1",
+   "selected": false,
+   "cross_check_de": 1.1,
+   "delta_e_to_source": 7.8,
+   "colour_name_text": "",
+   "garment_type": "short-sleeve crew-neck T-shirt",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "14,90 \u20ac",
+   "source_clean": true,
+   "real": true,
+   "real_from": "content/swipe/products/IMG_1171.png",
+   "real_de": 1.2,
+   "colour": {
+    "hex": "EFEFF1",
+    "family": "white",
+    "name": "white",
+    "share": 1.0,
+    "L": 94.5,
+    "C": 1.0,
+    "h": 290.3,
+    "rel": 0.117,
+    "neutral": true
+   },
+   "asset_path": "content/catalogue/variants/B073-P009-sw02.webp"
+  },
+  {
+   "product_id": "B073-P009-sw03",
+   "source": "B073-P009",
+   "style": "Crew Neck T-Shirt",
+   "style_id": "",
+   "swatch": 3,
+   "swatch_hex": "343C3F",
+   "selected": false,
+   "cross_check_de": 2.8,
+   "delta_e_to_source": 62.3,
+   "colour_name_text": "",
+   "garment_type": "short-sleeve crew-neck T-shirt",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "14,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "343C3F",
+    "family": "grey",
+    "name": "dark grey",
+    "share": 1.0,
+    "L": 24.7,
+    "C": 3.9,
+    "h": 229.2,
+    "rel": 0.21,
+    "neutral": false
+   },
+   "speckle": 0.4,
+   "asset_path": "content/catalogue/variants/B073-P009-sw03.webp"
+  },
+  {
+   "product_id": "B073-P009-sw04",
+   "source": "B073-P009",
+   "style": "Crew Neck T-Shirt",
+   "style_id": "",
+   "swatch": 4,
+   "swatch_hex": "F0E6DC",
+   "selected": false,
+   "cross_check_de": 5.1,
+   "delta_e_to_source": 7.1,
+   "colour_name_text": "",
+   "garment_type": "short-sleeve crew-neck T-shirt",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "14,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "F0E6DC",
+    "family": "white",
+    "name": "off-white",
+    "share": 1.0,
+    "L": 91.8,
+    "C": 6.3,
+    "h": 74.4,
+    "rel": 0.335,
+    "neutral": false
+   },
+   "speckle": 0.5,
+   "asset_path": "content/catalogue/variants/B073-P009-sw04.webp"
+  },
+  {
+   "product_id": "B073-P009-sw05",
+   "source": "B073-P009",
+   "style": "Crew Neck T-Shirt",
+   "style_id": "",
+   "swatch": 5,
+   "swatch_hex": "AB2E54",
+   "selected": false,
+   "cross_check_de": 1.3,
+   "delta_e_to_source": 54.5,
+   "colour_name_text": "",
+   "garment_type": "short-sleeve crew-neck T-shirt",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "14,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "AB2E54",
+    "family": "red",
+    "name": "burgundy",
+    "share": 1.0,
+    "L": 40.0,
+    "C": 53.4,
+    "h": 8.3,
+    "rel": 0.796,
+    "neutral": false
+   },
+   "speckle": 0.3,
+   "asset_path": "content/catalogue/variants/B073-P009-sw05.webp"
+  },
+  {
+   "product_id": "B073-P009-sw06",
+   "source": "B073-P009",
+   "style": "Crew Neck T-Shirt",
+   "style_id": "",
+   "swatch": 6,
+   "swatch_hex": "85696A",
+   "selected": false,
+   "cross_check_de": 0.8,
+   "delta_e_to_source": 40.8,
+   "colour_name_text": "",
+   "garment_type": "short-sleeve crew-neck T-shirt",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "14,90 \u20ac",
+   "source_clean": true,
+   "real": true,
+   "real_from": "content/swipe/products/IMG_1171.png",
+   "real_de": 1.9,
+   "colour": {
+    "hex": "826567",
+    "family": "grey",
+    "name": "mid grey",
+    "share": 1.0,
+    "L": 45.7,
+    "C": 12.4,
+    "h": 15.6,
+    "rel": 0.165,
+    "neutral": false
+   },
+   "asset_path": "content/catalogue/variants/B073-P009-sw06.webp"
+  },
+  {
+   "product_id": "B073-P009-sw08",
+   "source": "B073-P009",
+   "style": "Crew Neck T-Shirt",
+   "style_id": "",
+   "swatch": 8,
+   "swatch_hex": "C1D2C8",
+   "selected": false,
+   "cross_check_de": 10.3,
+   "delta_e_to_source": 9.4,
+   "colour_name_text": "",
+   "garment_type": "short-sleeve crew-neck T-shirt",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "14,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "C1D2C8",
+    "family": "green",
+    "name": "sage",
+    "share": 1.0,
+    "L": 82.7,
+    "C": 8.2,
+    "h": 158.6,
+    "rel": 0.117,
+    "neutral": true
+   },
+   "speckle": 0.4,
+   "asset_path": "content/catalogue/variants/B073-P009-sw08.webp"
+  },
+  {
+   "product_id": "B073-P009-sw09",
+   "source": "B073-P009",
+   "style": "Crew Neck T-Shirt",
+   "style_id": "",
+   "swatch": 9,
+   "swatch_hex": "7094AC",
+   "selected": false,
+   "cross_check_de": 0.4,
+   "delta_e_to_source": 31.1,
+   "colour_name_text": "",
+   "garment_type": "short-sleeve crew-neck T-shirt",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "14,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "7094AC",
+    "family": "blue",
+    "name": "steel blue",
+    "share": 1.0,
+    "L": 59.5,
+    "C": 17.8,
+    "h": 248.9,
+    "rel": 0.446,
+    "neutral": false
+   },
+   "speckle": 0.4,
+   "asset_path": "content/catalogue/variants/B073-P009-sw09.webp"
+  },
+  {
+   "product_id": "B073-P009-sw10",
+   "source": "B073-P009",
+   "style": "Crew Neck T-Shirt",
+   "style_id": "",
+   "swatch": 10,
+   "swatch_hex": "324468",
+   "selected": false,
+   "cross_check_de": 14.1,
+   "delta_e_to_source": 60.9,
+   "colour_name_text": "",
+   "garment_type": "short-sleeve crew-neck T-shirt",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "14,90 \u20ac",
+   "source_clean": true,
+   "real": false,
+   "recoloured_share": 1.0,
+   "colour": {
+    "hex": "324468",
+    "family": "blue",
+    "name": "denim blue",
+    "share": 1.0,
+    "L": 28.9,
+    "C": 23.6,
+    "h": 280.0,
+    "rel": 0.582,
+    "neutral": false
+   },
+   "speckle": 0.4,
+   "asset_path": "content/catalogue/variants/B073-P009-sw10.webp"
+  },
+  {
+   "product_id": "B073-P009-sw11",
+   "source": "B073-P009",
+   "style": "Crew Neck T-Shirt",
+   "style_id": "",
+   "swatch": 11,
+   "swatch_hex": "D1CCCD",
+   "selected": false,
+   "cross_check_de": 0.7,
+   "delta_e_to_source": 11.9,
+   "colour_name_text": "",
+   "garment_type": "short-sleeve crew-neck T-shirt",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "14,90 \u20ac",
+   "source_clean": true,
+   "real": true,
+   "real_from": "content/swipe/products/IMG_1171.png",
+   "real_de": 0.8,
+   "colour": {
+    "hex": "D4CED0",
+    "family": "cool neutral",
+    "name": "pale grey",
+    "share": 1.0,
+    "L": 83.3,
+    "C": 2.4,
+    "h": 354.0,
+    "rel": 0.089,
+    "neutral": true
+   },
+   "asset_path": "content/catalogue/variants/B073-P009-sw11.webp"
+  },
+  {
+   "product_id": "B073-P009-sw12",
+   "source": "B073-P009",
+   "style": "Crew Neck T-Shirt",
+   "style_id": "",
+   "swatch": 12,
+   "swatch_hex": "9C949B",
+   "selected": false,
+   "cross_check_de": 2.7,
+   "delta_e_to_source": 26.4,
+   "colour_name_text": "",
+   "garment_type": "short-sleeve crew-neck T-shirt",
+   "slot": "top",
+   "slot_confidence": "",
+   "price": "14,90 \u20ac",
+   "source_clean": true,
+   "real": true,
+   "real_from": "content/swipe/products/IMG_1171.png",
+   "real_de": 2.5,
+   "colour": {
+    "hex": "968D93",
+    "family": "grey",
+    "name": "mid grey",
+    "share": 1.0,
+    "L": 59.6,
+    "C": 4.9,
+    "h": 336.1,
+    "rel": 0.05,
+    "neutral": true
+   },
+   "asset_path": "content/catalogue/variants/B073-P009-sw12.webp"
   }
  ],
  "report": {
@@ -4646,6 +5990,7 @@
    "source": "B057-P006",
    "source_image": "content/swipe/products/IMG_0740.png",
    "source_clean": true,
+   "source_cut": "content/catalogue/variants/B057-P006-source.png",
    "source_measure": {
     "components": 1,
     "edge_pixels": 0,
@@ -4693,13 +6038,13 @@
     "B057-P006-sw10",
     "B057-P006-sw17",
     "B057-P006-sw20"
-   ],
-   "source_cut": "content/catalogue/variants/B057-P006-source.png"
+   ]
   },
   "100% Cashmere Crew Neck Cardigan": {
    "source": "B058-P001",
    "source_image": "content/swipe/products/IMG_0741.png",
    "source_clean": true,
+   "source_cut": "content/catalogue/variants/B058-P001-source.png",
    "source_measure": {
     "components": 1,
     "edge_pixels": 0,
@@ -4718,13 +6063,13 @@
     "B058-P001-sw02",
     "B058-P001-sw03"
    ],
-   "real": [],
-   "source_cut": "content/catalogue/variants/B058-P001-source.png"
+   "real": []
   },
   "100% Cashmere V Neck Jumper": {
    "source": "B058-P002",
    "source_image": "content/swipe/products/IMG_0743.png",
    "source_clean": true,
+   "source_cut": "content/catalogue/variants/B058-P002-source.png",
    "source_measure": {
     "components": 1,
     "edge_pixels": 0,
@@ -4737,7 +6082,8 @@
    "colours_photos": [],
    "images": [
     "content/swipe/products/IMG_0742.png",
-    "content/swipe/products/IMG_0743.png"
+    "content/swipe/products/IMG_0743.png",
+    "content/swipe/products/IMG_1163.png"
    ],
    "variants": [
     "B058-P002-sw01",
@@ -4750,13 +6096,13 @@
     "B058-P002-sw09",
     "B058-P002-sw10"
    ],
-   "real": [],
-   "source_cut": "content/catalogue/variants/B058-P002-source.png"
+   "real": []
   },
   "100% Cashmere Turtleneck Jumper": {
    "source": "B058-P004",
    "source_image": "content/swipe/products/IMG_0745.png",
    "source_clean": true,
+   "source_cut": "content/catalogue/variants/B058-P004-source.png",
    "source_measure": {
     "components": 1,
     "edge_pixels": 0,
@@ -4782,13 +6128,13 @@
     "B058-P004-sw09",
     "B058-P004-sw10"
    ],
-   "real": [],
-   "source_cut": "content/catalogue/variants/B058-P004-source.png"
+   "real": []
   },
   "100% Cashmere Crew Neck Short Cardigan": {
    "source": "B058-P005",
    "source_image": "content/swipe/products/IMG_0746.png",
    "source_clean": true,
+   "source_cut": "content/catalogue/variants/B058-P005-source.png",
    "source_measure": {
     "components": 1,
     "edge_pixels": 0,
@@ -4809,13 +6155,13 @@
     "B058-P005-sw05",
     "B058-P005-sw06"
    ],
-   "real": [],
-   "source_cut": "content/catalogue/variants/B058-P005-source.png"
+   "real": []
   },
   "100% Cashmere High Neck Button Jumper": {
    "source": "B058-P006",
    "source_image": "content/swipe/products/IMG_0748.png",
    "source_clean": true,
+   "source_cut": "content/catalogue/variants/B058-P006-source.png",
    "source_measure": {
     "components": 1,
     "edge_pixels": 0,
@@ -4834,13 +6180,13 @@
     "B058-P006-sw02",
     "B058-P006-sw03"
    ],
-   "real": [],
-   "source_cut": "content/catalogue/variants/B058-P006-source.png"
+   "real": []
   },
   "Souffl\u00e9 Yarn Crew Neck Jumper": {
    "source": "B058-P007-V2",
    "source_image": "content/swipe/products/IMG_0750.png",
    "source_clean": true,
+   "source_cut": "content/catalogue/variants/B058-P007-V2-source.png",
    "source_measure": {
     "components": 1,
     "edge_pixels": 0,
@@ -4868,13 +6214,13 @@
     "B058-P007-V2-sw09",
     "B058-P007-V2-sw10"
    ],
-   "real": [],
-   "source_cut": "content/catalogue/variants/B058-P007-V2-source.png"
+   "real": []
   },
   "100% Merino Crew Neck Cardigan": {
    "source": "B059-P002",
    "source_image": "content/swipe/products/IMG_0752.png",
    "source_clean": true,
+   "source_cut": "content/catalogue/variants/B059-P002-source.png",
    "source_measure": {
     "components": 1,
     "edge_pixels": 0,
@@ -4887,7 +6233,8 @@
    "colours_photos": [],
    "images": [
     "content/swipe/products/IMG_0751.png",
-    "content/swipe/products/IMG_0752.png"
+    "content/swipe/products/IMG_0752.png",
+    "content/swipe/products/IMG_1165.png"
    ],
    "variants": [
     "B059-P002-sw01",
@@ -4900,13 +6247,13 @@
     "B059-P002-sw09",
     "B059-P002-sw10"
    ],
-   "real": [],
-   "source_cut": "content/catalogue/variants/B059-P002-source.png"
+   "real": []
   },
   "100% Merino Crew Neck Jumper": {
    "source": "B059-P005",
    "source_image": "content/swipe/products/IMG_0755.png",
    "source_clean": true,
+   "source_cut": "content/catalogue/variants/B059-P005-source.png",
    "source_measure": {
     "components": 1,
     "edge_pixels": 0,
@@ -4936,13 +6283,13 @@
     "B059-P005-sw09",
     "B059-P005-sw11"
    ],
-   "real": [],
-   "source_cut": "content/catalogue/variants/B059-P005-source.png"
+   "real": []
   },
   "100% Merino Ribbed Turtleneck Jumper": {
    "source": "B059-P007",
    "source_image": "content/swipe/products/IMG_0758.png",
    "source_clean": true,
+   "source_cut": "content/catalogue/variants/B059-P007-source.png",
    "source_measure": {
     "components": 1,
     "edge_pixels": 0,
@@ -4958,7 +6305,8 @@
    "images": [
     "content/swipe/products/IMG_0756.png",
     "content/swipe/products/IMG_0757.png",
-    "content/swipe/products/IMG_0758.png"
+    "content/swipe/products/IMG_0758.png",
+    "content/swipe/products/IMG_1167.png"
    ],
    "variants": [
     "B059-P007-sw01",
@@ -4973,13 +6321,13 @@
     "B059-P007-sw11",
     "B059-P007-sw12"
    ],
-   "real": [],
-   "source_cut": "content/catalogue/variants/B059-P007-source.png"
+   "real": []
   },
   "3D Knit Seamless Merino Blend Ribbed Polo Jumper": {
    "source": "B060-P001",
    "source_image": "content/swipe/products/IMG_0761.png",
    "source_clean": true,
+   "source_cut": "content/catalogue/variants/B060-P001-source.png",
    "source_measure": {
     "components": 1,
     "edge_pixels": 0,
@@ -4995,7 +6343,8 @@
    "images": [
     "content/swipe/products/IMG_0759.png",
     "content/swipe/products/IMG_0760.png",
-    "content/swipe/products/IMG_0761.png"
+    "content/swipe/products/IMG_0761.png",
+    "content/swipe/products/IMG_1166.png"
    ],
    "variants": [
     "B060-P001-sw01",
@@ -5003,13 +6352,13 @@
     "B060-P001-sw03",
     "B060-P001-sw04"
    ],
-   "real": [],
-   "source_cut": "content/catalogue/variants/B060-P001-source.png"
+   "real": []
   },
   "Merino Polo Neck Cardigan": {
    "source": "B060-P002-V2",
    "source_image": "content/swipe/products/IMG_0763.png",
    "source_clean": true,
+   "source_cut": "content/catalogue/variants/B060-P002-V2-source.png",
    "source_measure": {
     "components": 1,
     "edge_pixels": 0,
@@ -5028,13 +6377,13 @@
     "B060-P002-V2-sw02",
     "B060-P002-V2-sw03"
    ],
-   "real": [],
-   "source_cut": "content/catalogue/variants/B060-P002-V2-source.png"
+   "real": []
   },
   "Utility Cotton Blend Parka": {
    "source": "B060-P004",
    "source_image": "content/swipe/products/IMG_0765.png",
    "source_clean": true,
+   "source_cut": "content/catalogue/variants/B060-P004-source.png",
    "source_measure": {
     "components": 1,
     "edge_pixels": 0,
@@ -5054,13 +6403,13 @@
     "B060-P004-sw01",
     "B060-P004-sw04"
    ],
-   "real": [],
-   "source_cut": "content/catalogue/variants/B060-P004-source.png"
+   "real": []
   },
   "Fleece Lined Stand Blouson": {
    "source": "B061-P001-V2",
    "source_image": "content/swipe/products/IMG_0769.png",
    "source_clean": true,
+   "source_cut": "content/catalogue/variants/B061-P001-V2-source.png",
    "source_measure": {
     "components": 1,
     "edge_pixels": 0,
@@ -5080,13 +6429,13 @@
     "B061-P001-V2-sw02",
     "B061-P001-V2-sw03"
    ],
-   "real": [],
-   "source_cut": "content/catalogue/variants/B061-P001-V2-source.png"
+   "real": []
   },
   "Seamless Down Parka": {
    "source": "B061-P003-V2",
    "source_image": "content/swipe/products/IMG_0773.png",
    "source_clean": true,
+   "source_cut": "content/catalogue/variants/B061-P003-V2-source.png",
    "source_measure": {
     "components": 1,
     "edge_pixels": 0,
@@ -5109,13 +6458,13 @@
     "B061-P003-V2-sw03",
     "B061-P003-V2-sw04"
    ],
-   "real": [],
-   "source_cut": "content/catalogue/variants/B061-P003-V2-source.png"
+   "real": []
   },
   "Mini T-Shirt (Long Sleeve)": {
    "source": "B061-P005-V2",
    "source_image": "content/swipe/products/IMG_0777.png",
    "source_clean": true,
+   "source_cut": "content/catalogue/variants/B061-P005-V2-source.png",
    "source_measure": {
     "components": 1,
     "edge_pixels": 0,
@@ -5141,13 +6490,13 @@
     "B061-P005-V2-sw06",
     "B061-P005-V2-sw07"
    ],
-   "real": [],
-   "source_cut": "content/catalogue/variants/B061-P005-V2-source.png"
+   "real": []
   },
   "Hoodie T-Shirt (Long Sleeve)": {
    "source": "B062-P004",
    "source_image": "content/swipe/products/IMG_0782.png",
    "source_clean": true,
+   "source_cut": "content/catalogue/variants/B062-P004-source.png",
    "source_measure": {
     "components": 1,
     "edge_pixels": 0,
@@ -5163,7 +6512,8 @@
    "images": [
     "content/swipe/products/IMG_0780.png",
     "content/swipe/products/IMG_0781.png",
-    "content/swipe/products/IMG_0782.png"
+    "content/swipe/products/IMG_0782.png",
+    "content/swipe/products/IMG_1169.png"
    ],
    "variants": [
     "B062-P004-sw02",
@@ -5172,13 +6522,13 @@
     "B062-P004-sw05",
     "B062-P004-sw06"
    ],
-   "real": [],
-   "source_cut": "content/catalogue/variants/B062-P004-source.png"
+   "real": []
   },
   "Soft Ribbed T-Shirt (Long Sleeve)": {
    "source": "B062-P006",
    "source_image": "content/swipe/products/IMG_0785.png",
    "source_clean": true,
+   "source_cut": "content/catalogue/variants/B062-P006-source.png",
    "source_measure": {
     "components": 1,
     "edge_pixels": 0,
@@ -5203,13 +6553,13 @@
     "B062-P006-sw05",
     "B062-P006-sw06"
    ],
-   "real": [],
-   "source_cut": "content/catalogue/variants/B062-P006-source.png"
+   "real": []
   },
   "Mini T-Shirt": {
    "source": "B062-P011",
    "source_image": "content/swipe/products/IMG_0791.png",
    "source_clean": true,
+   "source_cut": "content/catalogue/variants/B062-P011-source.png",
    "source_measure": {
     "components": 1,
     "edge_pixels": 0,
@@ -5234,13 +6584,13 @@
     "B062-P011-sw08",
     "B062-P011-sw09"
    ],
-   "real": [],
-   "source_cut": "content/catalogue/variants/B062-P011-source.png"
+   "real": []
   },
   "Hooded Long Coat (Oversized)": {
    "source": "B062-P012-V2",
    "source_image": "content/swipe/products/IMG_0794.png",
    "source_clean": true,
+   "source_cut": "content/catalogue/variants/B062-P012-V2-source.png",
    "source_measure": {
     "components": 1,
     "edge_pixels": 0,
@@ -5257,13 +6607,13 @@
    "variants": [
     "B062-P012-V2-sw02"
    ],
-   "real": [],
-   "source_cut": "content/catalogue/variants/B062-P012-V2-source.png"
+   "real": []
   },
   "Sweat Half-Zip Pullover": {
    "source": "B062-P013",
    "source_image": "content/swipe/products/IMG_0796.png",
    "source_clean": true,
+   "source_cut": "content/catalogue/variants/B062-P013-source.png",
    "source_measure": {
     "components": 1,
     "edge_pixels": 0,
@@ -5284,13 +6634,13 @@
     "B062-P013-sw04",
     "B062-P013-sw05"
    ],
-   "real": [],
-   "source_cut": "content/catalogue/variants/B062-P013-source.png"
+   "real": []
   },
   "Ultra Stretch Active Full-Zip Jacket": {
    "source": "B062-P014",
    "source_image": "content/swipe/products/IMG_0797.png",
    "source_clean": true,
+   "source_cut": "content/catalogue/variants/B062-P014-source.png",
    "source_measure": {
     "components": 1,
     "edge_pixels": 0,
@@ -5312,13 +6662,13 @@
     "B062-P014-sw06",
     "B062-P014-sw07"
    ],
-   "real": [],
-   "source_cut": "content/catalogue/variants/B062-P014-source.png"
+   "real": []
   },
   "Ultra Stretch Active Flare Leggings": {
    "source": "B062-P014",
    "source_image": "content/swipe/products/IMG_0798.png",
    "source_clean": true,
+   "source_cut": "content/catalogue/variants/B062-P014-I798-source.png",
    "source_measure": {
     "components": 1,
     "edge_pixels": 0,
@@ -5336,13 +6686,13 @@
     "B062-P014-I798-sw01",
     "B062-P014-I798-sw03"
    ],
-   "real": [],
-   "source_cut": "content/catalogue/variants/B062-P014-I798-source.png"
+   "real": []
   },
   "Sweatshirt": {
    "source": "B062-P016",
    "source_image": "content/swipe/products/IMG_0800.png",
    "source_clean": true,
+   "source_cut": "content/catalogue/variants/B062-P016-source.png",
    "source_measure": {
     "components": 1,
     "edge_pixels": 0,
@@ -5369,8 +6719,174 @@
     "B062-P016-sw07",
     "B062-P016-sw09"
    ],
-   "real": [],
-   "source_cut": "content/catalogue/variants/B062-P016-source.png"
+   "real": []
+  },
+  "Souffl\u00e9 Yarn Polo Jumper": {
+   "source": "B073-P002",
+   "source_image": "content/swipe/products/IMG_1164.png",
+   "source_clean": true,
+   "source_cut": "content/catalogue/variants/B073-P002-source.png",
+   "source_measure": {
+    "components": 1,
+    "edge_pixels": 0,
+    "words_inside": 0
+   },
+   "style_id": "487939",
+   "swatches": 5,
+   "own_swatch": 4,
+   "own_swatch_de": 0.2,
+   "colours_photos": [],
+   "images": [
+    "content/swipe/products/IMG_1164.png"
+   ],
+   "variants": [
+    "B073-P002-sw01",
+    "B073-P002-sw02",
+    "B073-P002-sw03",
+    "B073-P002-sw05"
+   ],
+   "real": []
+  },
+  "Smooth Cotton Crew Neck Jumper": {
+   "source": "B073-P006",
+   "source_image": "content/swipe/products/IMG_1168.png",
+   "source_clean": true,
+   "source_cut": "content/catalogue/variants/B073-P006-source.png",
+   "source_measure": {
+    "components": 1,
+    "edge_pixels": 0,
+    "words_inside": 0
+   },
+   "style_id": "",
+   "swatches": 9,
+   "own_swatch": 1,
+   "own_swatch_de": 3.9,
+   "colours_photos": [
+    "content/swipe/products/IMG_1168.png"
+   ],
+   "images": [
+    "content/swipe/products/IMG_1168.png"
+   ],
+   "variants": [
+    "B073-P006-sw02",
+    "B073-P006-sw03",
+    "B073-P006-sw04",
+    "B073-P006-sw05",
+    "B073-P006-sw06",
+    "B073-P006-sw07",
+    "B073-P006-sw08",
+    "B073-P006-sw09"
+   ],
+   "real": []
+  },
+  "100% Supima Cotton T-Shirt": {
+   "source": "B073-P010",
+   "source_image": "content/swipe/products/IMG_1172.png",
+   "source_clean": true,
+   "source_cut": "content/catalogue/variants/B073-P010-source.png",
+   "source_measure": {
+    "components": 1,
+    "edge_pixels": 0,
+    "words_inside": 0
+   },
+   "style_id": "",
+   "swatches": 7,
+   "own_swatch": 7,
+   "own_swatch_de": 2.1,
+   "colours_photos": [
+    "content/swipe/products/IMG_1172.png"
+   ],
+   "images": [
+    "content/swipe/products/IMG_1172.png"
+   ],
+   "variants": [
+    "B073-P010-sw01",
+    "B073-P010-sw02",
+    "B073-P010-sw03",
+    "B073-P010-sw04",
+    "B073-P010-sw05",
+    "B073-P010-sw06"
+   ],
+   "real": []
+  },
+  "HEATTECH Extra Warm Cashmere Blend Turtleneck T-Shirt (Long Sleeve)": {
+   "source": "B073-P008",
+   "source_image": "content/swipe/products/IMG_1170.png",
+   "source_clean": true,
+   "source_cut": "content/catalogue/variants/B073-P008-source.png",
+   "source_measure": {
+    "components": 1,
+    "edge_pixels": 0,
+    "words_inside": 0
+   },
+   "style_id": "485825",
+   "swatches": 14,
+   "own_swatch": 9,
+   "own_swatch_de": 2.9,
+   "colours_photos": [],
+   "images": [
+    "content/swipe/products/IMG_0786.png",
+    "content/swipe/products/IMG_0787.png",
+    "content/swipe/products/IMG_1170.png"
+   ],
+   "variants": [
+    "B073-P008-sw01",
+    "B073-P008-sw02",
+    "B073-P008-sw03",
+    "B073-P008-sw04",
+    "B073-P008-sw05",
+    "B073-P008-sw06",
+    "B073-P008-sw07",
+    "B073-P008-sw08",
+    "B073-P008-sw10",
+    "B073-P008-sw11",
+    "B073-P008-sw12",
+    "B073-P008-sw13",
+    "B073-P008-sw14"
+   ],
+   "real": []
+  },
+  "Crew Neck T-Shirt": {
+   "source": "B073-P009",
+   "source_image": "content/swipe/products/IMG_1171.png",
+   "source_clean": true,
+   "source_cut": "content/catalogue/variants/B073-P009-source.png",
+   "source_measure": {
+    "components": 1,
+    "edge_pixels": 0,
+    "words_inside": 0
+   },
+   "style_id": "",
+   "swatches": 12,
+   "own_swatch": 7,
+   "own_swatch_de": 0.8,
+   "colours_photos": [
+    "content/swipe/products/IMG_1171.png"
+   ],
+   "images": [
+    "content/swipe/products/IMG_0792.png",
+    "content/swipe/products/IMG_0793.png",
+    "content/swipe/products/IMG_1171.png"
+   ],
+   "variants": [
+    "B073-P009-sw01",
+    "B073-P009-sw02",
+    "B073-P009-sw03",
+    "B073-P009-sw04",
+    "B073-P009-sw05",
+    "B073-P009-sw06",
+    "B073-P009-sw08",
+    "B073-P009-sw09",
+    "B073-P009-sw10",
+    "B073-P009-sw11",
+    "B073-P009-sw12"
+   ],
+   "real": [
+    "B073-P009-sw02",
+    "B073-P009-sw06",
+    "B073-P009-sw11",
+    "B073-P009-sw12"
+   ]
   }
  },
  "dropped": {
@@ -5402,14 +6918,17 @@
   "B062-P013-sw03": "swatch 3 is the source's own colour (dE 0.7): the real photo is B062-P013",
   "B062-P014-sw04": "swatch 4 is the source's own colour (dE 1.3): the real photo is B062-P014",
   "B062-P014-I798-sw02": "swatch 2 is the source's own colour (dE 4.1): the real photo is B062-P014",
-  "B062-P016-sw08": "swatch 8 is the source's own colour (dE 1.5): the real photo is B062-P016"
+  "B062-P016-sw08": "swatch 8 is the source's own colour (dE 1.5): the real photo is B062-P016",
+  "B073-P002-sw04": "swatch 4 is the source's own colour (dE 0.2): the real photo is B073-P002",
+  "B073-P006-sw01": "swatch 1 is the source's own colour (dE 3.9): the real photo is B073-P006",
+  "B073-P010-sw07": "swatch 7 is the source's own colour (dE 2.1): the real photo is B073-P010",
+  "B073-P008-sw09": "swatch 9 is the source's own colour (dE 2.9): the real photo is B073-P008",
+  "B073-P009-sw07": "swatch 7 is the source's own colour (dE 0.8): the real photo is B073-P009"
  },
  "no_source": {
   "Windproof Stand Collar Blouson": "only a fan of four overlapping colours and a model; no single flat lay",
   "Ribbed Henley Neck Long Sleeve T-Shirt": "only a model and an overlapping fan; no single flat lay",
-  "HEATTECH Extra Warm Cashmere Blend Turtleneck T-Shirt (Long Sleeve)": "only a model and two overlapping fans; no single flat lay",
-  "HEATTECH Ultra Warm Crew Neck T-Shirt (Long Sleeve)": "only model shots",
-  "Crew Neck T-Shirt": "a grid of folded tees and a single tee cut off by the bottom of the screenshot"
+  "HEATTECH Ultra Warm Crew Neck T-Shirt (Long Sleeve)": "only model shots"
  },
  "style_ids": {
   "100% Cashmere Crew Neck Cardigan": "488533",
@@ -5429,6 +6948,8 @@
   "Soft Ribbed T-Shirt (Long Sleeve)": "487553",
   "Mini T-Shirt": "483455",
   "Sweat Half-Zip Pullover": "491119",
-  "Sweatshirt": "486117"
+  "Sweatshirt": "486117",
+  "Souffl\u00e9 Yarn Polo Jumper": "487939",
+  "HEATTECH Extra Warm Cashmere Blend Turtleneck T-Shirt (Long Sleeve)": "485825"
  }
 }

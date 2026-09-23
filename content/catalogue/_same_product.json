@@ -1,0 +1,1428 @@
+[
+ {
+  "members": [
+   {
+    "pid": "B065-P006",
+    "image": "content/swipe/products/IMG_1031.png",
+    "shot": "on model",
+    "slot": "layer",
+    "layout": "other",
+    "flat": null,
+    "model": "/home/user/relatively-normal/content/catalogue/assets/B065-P006.webp",
+    "model_lab": [
+     57.11,
+     -5.53,
+     7.57
+    ],
+    "skin_share": 0.09,
+    "band": [
+     0.0,
+     0.8
+    ]
+   }
+  ],
+  "same": false,
+  "why": [
+   "B065-P006 / B065-P007 differ (model/model, dE 20.3)",
+   "B065-P006 / B065-P008 differ (model/model, dE 22.2)",
+   "B065-P007 / B065-P008 differ (model/model, dE 7.0)"
+  ],
+  "checks": [
+   {
+    "a": "B065-P006",
+    "b": "B065-P007",
+    "kind": "model/model",
+    "de": 20.3,
+    "same": false
+   },
+   {
+    "a": "B065-P006",
+    "b": "B065-P008",
+    "kind": "model/model",
+    "de": 22.2,
+    "same": false
+   },
+   {
+    "a": "B065-P007",
+    "b": "B065-P008",
+    "kind": "model/model",
+    "de": 7.0,
+    "same": false
+   }
+  ],
+  "flat": null,
+  "model": "B065-P006",
+  "flat_lab": null,
+  "flat_model_de": null,
+  "layouts": [
+   "other"
+  ],
+  "literal": false
+ },
+ {
+  "members": [
+   {
+    "pid": "B065-P007",
+    "image": "content/swipe/products/IMG_1032.png",
+    "shot": "on model",
+    "slot": "layer",
+    "layout": "other",
+    "flat": null,
+    "model": "/home/user/relatively-normal/content/catalogue/assets/B065-P007.webp",
+    "model_lab": [
+     41.83,
+     2.5,
+     21.59
+    ],
+    "skin_share": 0.118,
+    "band": [
+     0.0,
+     0.8
+    ]
+   }
+  ],
+  "same": false,
+  "why": [
+   "B065-P006 / B065-P007 differ (model/model, dE 20.3)",
+   "B065-P006 / B065-P008 differ (model/model, dE 22.2)",
+   "B065-P007 / B065-P008 differ (model/model, dE 7.0)"
+  ],
+  "checks": [
+   {
+    "a": "B065-P006",
+    "b": "B065-P007",
+    "kind": "model/model",
+    "de": 20.3,
+    "same": false
+   },
+   {
+    "a": "B065-P006",
+    "b": "B065-P008",
+    "kind": "model/model",
+    "de": 22.2,
+    "same": false
+   },
+   {
+    "a": "B065-P007",
+    "b": "B065-P008",
+    "kind": "model/model",
+    "de": 7.0,
+    "same": false
+   }
+  ],
+  "flat": null,
+  "model": "B065-P007",
+  "flat_lab": null,
+  "flat_model_de": null,
+  "layouts": [
+   "other"
+  ],
+  "literal": false
+ },
+ {
+  "members": [
+   {
+    "pid": "B065-P008",
+    "image": "content/swipe/products/IMG_1033.png",
+    "shot": "on model",
+    "slot": "layer",
+    "layout": "other",
+    "flat": null,
+    "model": "/home/user/relatively-normal/content/catalogue/review/B065-P008p0.jpg",
+    "model_lab": [
+     42.42,
+     7.15,
+     15.27
+    ],
+    "skin_share": 0.394,
+    "band": [
+     0.0,
+     0.8
+    ]
+   }
+  ],
+  "same": false,
+  "why": [
+   "B065-P006 / B065-P007 differ (model/model, dE 20.3)",
+   "B065-P006 / B065-P008 differ (model/model, dE 22.2)",
+   "B065-P007 / B065-P008 differ (model/model, dE 7.0)"
+  ],
+  "checks": [
+   {
+    "a": "B065-P006",
+    "b": "B065-P007",
+    "kind": "model/model",
+    "de": 20.3,
+    "same": false
+   },
+   {
+    "a": "B065-P006",
+    "b": "B065-P008",
+    "kind": "model/model",
+    "de": 22.2,
+    "same": false
+   },
+   {
+    "a": "B065-P007",
+    "b": "B065-P008",
+    "kind": "model/model",
+    "de": 7.0,
+    "same": false
+   }
+  ],
+  "flat": null,
+  "model": "B065-P008",
+  "flat_lab": null,
+  "flat_model_de": null,
+  "layouts": [
+   "other"
+  ],
+  "literal": false
+ },
+ {
+  "members": [
+   {
+    "pid": "B068-P002",
+    "image": "content/swipe/products/IMG_1041.png",
+    "shot": "ghost mannequin",
+    "slot": "top",
+    "layout": "centred",
+    "flat": "/home/user/relatively-normal/content/catalogue/assets/B068-P002.webp",
+    "model": null,
+    "model_lab": null
+   },
+   {
+    "pid": "B068-P014",
+    "image": "content/swipe/products/IMG_1053.png",
+    "shot": "flat packshot",
+    "slot": "top",
+    "layout": "centred",
+    "flat": null,
+    "model": null,
+    "model_lab": null
+   }
+  ],
+  "same": true,
+  "why": [],
+  "checks": [
+   {
+    "a": "B068-P002",
+    "b": "B068-P014",
+    "kind": "flat/flat",
+    "iou": 0.998,
+    "structure": 0.08,
+    "de": 0.17,
+    "same": true
+   }
+  ],
+  "flat": "B068-P002",
+  "model": null,
+  "flat_lab": [
+   88.4,
+   3.21,
+   19.53
+  ],
+  "flat_model_de": null,
+  "layouts": [
+   "centred"
+  ],
+  "literal": false,
+  "row": "B068-P002"
+ },
+ {
+  "members": [
+   {
+    "pid": "B068-P003",
+    "image": "content/swipe/products/IMG_1042.png",
+    "shot": "ghost mannequin",
+    "slot": "top",
+    "layout": "stacked",
+    "flat": "/home/user/relatively-normal/content/catalogue/assets/B068-P003.webp",
+    "model": null,
+    "model_lab": null
+   }
+  ],
+  "same": false,
+  "why": [
+   "B068-P002 / B068-P003 differ (flat/flat, IoU 0.459, structure 3.28, dE 5.6)",
+   "B068-P003 / B068-P014 differ (flat/flat, IoU 0.458, structure 3.29, dE 5.61)"
+  ],
+  "checks": [
+   {
+    "a": "B068-P002",
+    "b": "B068-P003",
+    "kind": "flat/flat",
+    "iou": 0.459,
+    "structure": 3.28,
+    "de": 5.6,
+    "same": false
+   },
+   {
+    "a": "B068-P002",
+    "b": "B068-P014",
+    "kind": "flat/flat",
+    "iou": 0.998,
+    "structure": 0.08,
+    "de": 0.17,
+    "same": true
+   },
+   {
+    "a": "B068-P003",
+    "b": "B068-P014",
+    "kind": "flat/flat",
+    "iou": 0.458,
+    "structure": 3.29,
+    "de": 5.61,
+    "same": false
+   }
+  ],
+  "flat": "B068-P003",
+  "model": null,
+  "flat_lab": [
+   76.42,
+   3.61,
+   18.04
+  ],
+  "flat_model_de": null,
+  "layouts": [
+   "stacked"
+  ],
+  "literal": false
+ },
+ {
+  "members": [
+   {
+    "pid": "B068-P027",
+    "image": "content/swipe/products/IMG_1066.png",
+    "shot": "flat packshot",
+    "slot": "top",
+    "layout": "centred",
+    "flat": "/home/user/relatively-normal/content/catalogue/assets/B068-P027.webp",
+    "model": null,
+    "model_lab": null
+   },
+   {
+    "pid": "B068-P030",
+    "image": "content/swipe/products/IMG_1069.png",
+    "shot": "on model",
+    "slot": "top",
+    "layout": "centred",
+    "flat": null,
+    "model": "/home/user/relatively-normal/content/catalogue/review/B068-P027-1-whole.webp",
+    "model_lab": [
+     67.9,
+     1.69,
+     1.25
+    ],
+    "skin_share": 0.164,
+    "band": [
+     0.04,
+     0.56
+    ]
+   }
+  ],
+  "same": true,
+  "why": [],
+  "checks": [],
+  "flat": "B068-P027",
+  "model": "B068-P030",
+  "flat_lab": [
+   57.73,
+   1.5,
+   -1.33
+  ],
+  "flat_model_de": 9.0,
+  "layouts": [
+   "centred"
+  ],
+  "literal": false,
+  "row": "B068-P027",
+  "recolour": {
+   "asset_path": "content/catalogue/variants/B068-P027-mc.webp",
+   "source": "B068-P027",
+   "recolour_source": "content/swipe/products/IMG_1066.png;content/swipe/products/IMG_1069.png",
+   "target_lab": [
+    67.9,
+    1.69,
+    1.25
+   ],
+   "recoloured_share": 1.0,
+   "result_to_model_de": 0.9,
+   "applied": true
+  }
+ },
+ {
+  "members": [
+   {
+    "pid": "B068-P029",
+    "image": "content/swipe/products/IMG_1068.png",
+    "shot": "flat packshot",
+    "slot": "top",
+    "layout": "centred",
+    "flat": "/home/user/relatively-normal/content/catalogue/assets/B068-P029.webp",
+    "model": null,
+    "model_lab": null
+   },
+   {
+    "pid": "B068-P028",
+    "image": "content/swipe/products/IMG_1067.png",
+    "shot": "on model",
+    "slot": "top",
+    "layout": "centred",
+    "flat": null,
+    "model": "/tmp/rn-model-cuts/B068-P029-1-model.png",
+    "model_lab": [
+     23.11,
+     0.86,
+     -3.76
+    ],
+    "skin_share": 0.177,
+    "band": [
+     0.04,
+     0.56
+    ]
+   }
+  ],
+  "same": true,
+  "why": [],
+  "checks": [],
+  "flat": "B068-P029",
+  "model": "B068-P028",
+  "flat_lab": [
+   22.34,
+   2.56,
+   -3.13
+  ],
+  "flat_model_de": 2.5,
+  "layouts": [
+   "centred"
+  ],
+  "literal": false,
+  "row": "B068-P029",
+  "recolour": {
+   "asset_path": "content/catalogue/variants/B068-P029-mc.webp",
+   "source": "B068-P029",
+   "recolour_source": "content/swipe/products/IMG_1068.png;content/swipe/products/IMG_1067.png",
+   "target_lab": [
+    23.11,
+    0.86,
+    -3.76
+   ],
+   "recoloured_share": 0.998,
+   "result_to_model_de": 2.6,
+   "applied": true
+  }
+ },
+ {
+  "members": [
+   {
+    "pid": "B068-P033",
+    "image": "content/swipe/products/IMG_1072.png",
+    "shot": "flat packshot",
+    "slot": "top",
+    "layout": "centred",
+    "flat": "/home/user/relatively-normal/content/catalogue/assets/B068-P033.webp",
+    "model": null,
+    "model_lab": null
+   },
+   {
+    "pid": "B068-P034",
+    "image": "content/swipe/products/IMG_1073.png",
+    "shot": "on model",
+    "slot": "top",
+    "layout": "centred",
+    "flat": null,
+    "model": "/tmp/rn-model-cuts/B068-P033-1-model.png",
+    "model_lab": [
+     19.01,
+     3.31,
+     5.65
+    ],
+    "skin_share": 0.346,
+    "band": [
+     0.04,
+     0.56
+    ]
+   }
+  ],
+  "same": true,
+  "why": [],
+  "checks": [],
+  "flat": "B068-P033",
+  "model": "B068-P034",
+  "flat_lab": [
+   21.09,
+   7.49,
+   7.99
+  ],
+  "flat_model_de": 4.9,
+  "layouts": [
+   "centred"
+  ],
+  "literal": false,
+  "row": "B068-P033",
+  "recolour": {
+   "asset_path": "content/catalogue/variants/B068-P033-mc.webp",
+   "source": "B068-P033",
+   "recolour_source": "content/swipe/products/IMG_1072.png;content/swipe/products/IMG_1073.png",
+   "target_lab": [
+    19.01,
+    3.31,
+    5.65
+   ],
+   "recoloured_share": 0.998,
+   "result_to_model_de": 0.6,
+   "applied": true
+  }
+ },
+ {
+  "members": [
+   {
+    "pid": "B068-P045",
+    "image": "content/swipe/products/IMG_1084.png",
+    "shot": "flat packshot",
+    "slot": "top",
+    "layout": "centred",
+    "flat": "/home/user/relatively-normal/content/catalogue/assets/B068-P045.webp",
+    "model": null,
+    "model_lab": null
+   },
+   {
+    "pid": "B068-P049",
+    "image": "content/swipe/products/IMG_1088.png",
+    "shot": "on model",
+    "slot": "top",
+    "layout": "centred",
+    "flat": null,
+    "model": "/tmp/rn-model-cuts/B068-P045-1-model.png",
+    "model_lab": [
+     32.38,
+     -11.86,
+     -17.57
+    ],
+    "skin_share": 0.149,
+    "band": [
+     0.04,
+     0.56
+    ]
+   }
+  ],
+  "same": true,
+  "why": [],
+  "checks": [],
+  "flat": "B068-P045",
+  "model": "B068-P049",
+  "flat_lab": [
+   30.33,
+   -16.58,
+   -5.87
+  ],
+  "flat_model_de": 9.4,
+  "layouts": [
+   "centred"
+  ],
+  "literal": false,
+  "row": "B068-P045",
+  "recolour": {
+   "asset_path": "content/catalogue/variants/B068-P045-mc.webp",
+   "source": "B068-P045",
+   "recolour_source": "content/swipe/products/IMG_1084.png;content/swipe/products/IMG_1088.png",
+   "target_lab": [
+    32.38,
+    -11.86,
+    -17.57
+   ],
+   "recoloured_share": 0.998,
+   "result_to_model_de": 1.9,
+   "applied": true
+  }
+ },
+ {
+  "members": [
+   {
+    "pid": "B068-P047",
+    "image": "content/swipe/products/IMG_1086.png",
+    "shot": "flat packshot",
+    "slot": "top",
+    "layout": "centred",
+    "flat": "/home/user/relatively-normal/content/catalogue/assets/B068-P047.webp",
+    "model": null,
+    "model_lab": null
+   },
+   {
+    "pid": "B068-P048",
+    "image": "content/swipe/products/IMG_1087.png",
+    "shot": "on model",
+    "slot": "top",
+    "layout": "centred",
+    "flat": null,
+    "model": "/tmp/rn-model-cuts/B068-P047-1-model.png",
+    "model_lab": [
+     60.04,
+     7.79,
+     -43.53
+    ],
+    "skin_share": 0.138,
+    "band": [
+     0.04,
+     0.56
+    ]
+   }
+  ],
+  "same": true,
+  "why": [],
+  "checks": [],
+  "flat": "B068-P047",
+  "model": "B068-P048",
+  "flat_lab": [
+   52.19,
+   11.09,
+   -47.74
+  ],
+  "flat_model_de": 7.4,
+  "layouts": [
+   "centred"
+  ],
+  "literal": false,
+  "row": "B068-P047",
+  "recolour": {
+   "asset_path": "content/catalogue/variants/B068-P047-mc.webp",
+   "source": "B068-P047",
+   "recolour_source": "content/swipe/products/IMG_1086.png;content/swipe/products/IMG_1087.png",
+   "target_lab": [
+    60.04,
+    7.79,
+    -43.53
+   ],
+   "recoloured_share": 0.998,
+   "result_to_model_de": 0.1,
+   "applied": true
+  }
+ },
+ {
+  "members": [
+   {
+    "pid": "B068-P056",
+    "image": "content/swipe/products/IMG_1095.png",
+    "shot": "flat packshot",
+    "slot": "top",
+    "layout": "centred",
+    "flat": "/home/user/relatively-normal/content/catalogue/assets/B068-P056.webp",
+    "model": null,
+    "model_lab": null
+   },
+   {
+    "pid": "B068-P057",
+    "image": "content/swipe/products/IMG_1096.png",
+    "shot": "on model",
+    "slot": "top",
+    "layout": "centred",
+    "flat": null,
+    "model": "/tmp/rn-model-cuts/B068-P056-1-model.png",
+    "model_lab": [
+     66.34,
+     1.64,
+     -0.53
+    ],
+    "skin_share": 0.131,
+    "band": [
+     0.04,
+     0.56
+    ]
+   }
+  ],
+  "same": true,
+  "why": [],
+  "checks": [],
+  "flat": "B068-P056",
+  "model": "B068-P057",
+  "flat_lab": [
+   59.62,
+   1.57,
+   -1.35
+  ],
+  "flat_model_de": 5.7,
+  "layouts": [
+   "centred"
+  ],
+  "literal": false,
+  "row": "B068-P056",
+  "recolour": {
+   "asset_path": "content/catalogue/variants/B068-P056-mc.webp",
+   "source": "B068-P056",
+   "recolour_source": "content/swipe/products/IMG_1095.png;content/swipe/products/IMG_1096.png",
+   "target_lab": [
+    66.34,
+    1.64,
+    -0.53
+   ],
+   "recoloured_share": 1.0,
+   "result_to_model_de": 1.4,
+   "applied": true
+  }
+ },
+ {
+  "members": [
+   {
+    "pid": "B068-P058",
+    "image": "content/swipe/products/IMG_1097.png",
+    "shot": "flat packshot",
+    "slot": "top",
+    "layout": "centred",
+    "flat": "/home/user/relatively-normal/content/catalogue/assets/B068-P058.webp",
+    "model": null,
+    "model_lab": null
+   },
+   {
+    "pid": "B068-P059",
+    "image": "content/swipe/products/IMG_1098.png",
+    "shot": "on model",
+    "slot": "top",
+    "layout": "centred",
+    "flat": null,
+    "model": "/home/user/relatively-normal/content/catalogue/review/B068-P058-1-whole.webp",
+    "model_lab": [
+     37.3,
+     0.99,
+     -3.67
+    ],
+    "skin_share": 0.132,
+    "band": [
+     0.04,
+     0.56
+    ]
+   }
+  ],
+  "same": true,
+  "why": [],
+  "checks": [],
+  "flat": "B068-P058",
+  "model": "B068-P059",
+  "flat_lab": [
+   23.88,
+   2.52,
+   -3.23
+  ],
+  "flat_model_de": 10.7,
+  "layouts": [
+   "centred"
+  ],
+  "literal": false,
+  "row": "B068-P058",
+  "recolour": {
+   "asset_path": "content/catalogue/variants/B068-P058-mc.webp",
+   "source": "B068-P058",
+   "recolour_source": "content/swipe/products/IMG_1097.png;content/swipe/products/IMG_1098.png",
+   "target_lab": [
+    37.3,
+    0.99,
+    -3.67
+   ],
+   "recoloured_share": 1.0,
+   "result_to_model_de": 3.1,
+   "applied": true
+  }
+ },
+ {
+  "members": [
+   {
+    "pid": "B068-P063",
+    "image": "content/swipe/products/IMG_1102.png",
+    "shot": "flat packshot",
+    "slot": "top",
+    "layout": "centred",
+    "flat": "/home/user/relatively-normal/content/catalogue/assets/B068-P063.webp",
+    "model": null,
+    "model_lab": null
+   },
+   {
+    "pid": "B068-P064",
+    "image": "content/swipe/products/IMG_1103.png",
+    "shot": "on model",
+    "slot": "top",
+    "layout": "centred",
+    "flat": null,
+    "model": "/home/user/relatively-normal/content/catalogue/review/B068-P063-1-whole.webp",
+    "model_lab": [
+     18.83,
+     2.78,
+     3.87
+    ],
+    "skin_share": 0.14,
+    "band": [
+     0.04,
+     0.56
+    ]
+   }
+  ],
+  "same": true,
+  "why": [],
+  "checks": [],
+  "flat": "B068-P063",
+  "model": "B068-P064",
+  "flat_lab": [
+   19.35,
+   7.41,
+   7.95
+  ],
+  "flat_model_de": 5.6,
+  "layouts": [
+   "centred"
+  ],
+  "literal": false,
+  "row": "B068-P063",
+  "recolour": {
+   "asset_path": "content/catalogue/variants/B068-P063-mc.webp",
+   "source": "B068-P063",
+   "recolour_source": "content/swipe/products/IMG_1102.png;content/swipe/products/IMG_1103.png",
+   "target_lab": [
+    18.83,
+    2.78,
+    3.87
+   ],
+   "recoloured_share": 1.0,
+   "result_to_model_de": 0.0,
+   "applied": true
+  }
+ },
+ {
+  "members": [
+   {
+    "pid": "B068-P073",
+    "image": "content/swipe/products/IMG_1112.png",
+    "shot": "flat packshot",
+    "slot": "top",
+    "layout": "centred",
+    "flat": "/home/user/relatively-normal/content/catalogue/assets/B068-P073.webp",
+    "model": null,
+    "model_lab": null
+   },
+   {
+    "pid": "B068-P074",
+    "image": "content/swipe/products/IMG_1113.png",
+    "shot": "flat packshot",
+    "slot": "top",
+    "layout": "centred",
+    "flat": null,
+    "model": null,
+    "model_lab": null
+   }
+  ],
+  "same": true,
+  "why": [],
+  "checks": [
+   {
+    "a": "B068-P073",
+    "b": "B068-P074",
+    "kind": "flat/flat",
+    "iou": 0.994,
+    "structure": 0.07,
+    "de": 0.01,
+    "same": true
+   }
+  ],
+  "flat": "B068-P073",
+  "model": null,
+  "flat_lab": [
+   39.65,
+   1.14,
+   6.71
+  ],
+  "flat_model_de": null,
+  "layouts": [
+   "centred"
+  ],
+  "literal": false,
+  "row": "B068-P073"
+ },
+ {
+  "members": [
+   {
+    "pid": "B068-P075",
+    "image": "content/swipe/products/IMG_1114.png",
+    "shot": "flat packshot",
+    "slot": "top",
+    "layout": "centred",
+    "flat": "/home/user/relatively-normal/content/catalogue/assets/B068-P075.webp",
+    "model": null,
+    "model_lab": null
+   },
+   {
+    "pid": "B068-P076",
+    "image": "content/swipe/products/IMG_1115.png",
+    "shot": "on model",
+    "slot": "top",
+    "layout": "centred",
+    "flat": null,
+    "model": "/home/user/relatively-normal/content/catalogue/review/B068-P075-1-whole.webp",
+    "model_lab": [
+     19.39,
+     -2.52,
+     0.83
+    ],
+    "skin_share": 0.138,
+    "band": [
+     0.04,
+     0.56
+    ]
+   }
+  ],
+  "same": true,
+  "why": [],
+  "checks": [],
+  "flat": "B068-P075",
+  "model": "B068-P076",
+  "flat_lab": [
+   14.73,
+   -4.12,
+   3.41
+  ],
+  "flat_model_de": 4.3,
+  "layouts": [
+   "centred"
+  ],
+  "literal": false,
+  "row": "B068-P075",
+  "recolour": {
+   "asset_path": "content/catalogue/variants/B068-P075-mc.webp",
+   "source": "B068-P075",
+   "recolour_source": "content/swipe/products/IMG_1114.png;content/swipe/products/IMG_1115.png",
+   "target_lab": [
+    19.39,
+    -2.52,
+    0.83
+   ],
+   "recoloured_share": 1.0,
+   "result_to_model_de": 0.8,
+   "applied": true
+  }
+ },
+ {
+  "members": [
+   {
+    "pid": "B068-P077",
+    "image": "content/swipe/products/IMG_1116.png",
+    "shot": "flat packshot",
+    "slot": "top",
+    "layout": "centred",
+    "flat": "/home/user/relatively-normal/content/catalogue/assets/B068-P077.webp",
+    "model": null,
+    "model_lab": null
+   },
+   {
+    "pid": "B068-P078",
+    "image": "content/swipe/products/IMG_1117.png",
+    "shot": "on model",
+    "slot": "top",
+    "layout": "centred",
+    "flat": null,
+    "model": "/home/user/relatively-normal/content/catalogue/review/B068-P077-1-whole.webp",
+    "model_lab": [
+     26.13,
+     -10.38,
+     -15.58
+    ],
+    "skin_share": 0.131,
+    "band": [
+     0.04,
+     0.56
+    ]
+   }
+  ],
+  "same": true,
+  "why": [],
+  "checks": [],
+  "flat": "B068-P077",
+  "model": "B068-P078",
+  "flat_lab": [
+   31.92,
+   -16.9,
+   -5.7
+  ],
+  "flat_model_de": 10.3,
+  "layouts": [
+   "centred"
+  ],
+  "literal": false,
+  "row": "B068-P077",
+  "recolour": {
+   "asset_path": "content/catalogue/variants/B068-P077-mc.webp",
+   "source": "B068-P077",
+   "recolour_source": "content/swipe/products/IMG_1116.png;content/swipe/products/IMG_1117.png",
+   "target_lab": [
+    26.13,
+    -10.38,
+    -15.58
+   ],
+   "recoloured_share": 1.0,
+   "result_to_model_de": 1.0,
+   "applied": true
+  }
+ },
+ {
+  "members": [
+   {
+    "pid": "B068-P080",
+    "image": "content/swipe/products/IMG_1119.png",
+    "shot": "flat packshot",
+    "slot": "top",
+    "layout": "centred",
+    "flat": "/home/user/relatively-normal/content/catalogue/assets/B068-P080.webp",
+    "model": null,
+    "model_lab": null
+   },
+   {
+    "pid": "B068-P081",
+    "image": "content/swipe/products/IMG_1120.png",
+    "shot": "on model",
+    "slot": "top",
+    "layout": "centred",
+    "flat": null,
+    "model": "/tmp/rn-model-cuts/B068-P080-1-model.png",
+    "model_lab": [
+     60.61,
+     6.77,
+     -41.04
+    ],
+    "skin_share": 0.098,
+    "band": [
+     0.04,
+     0.56
+    ]
+   }
+  ],
+  "same": true,
+  "why": [],
+  "checks": [],
+  "flat": "B068-P080",
+  "model": "B068-P081",
+  "flat_lab": [
+   49.51,
+   10.87,
+   -46.49
+  ],
+  "flat_model_de": 10.6,
+  "layouts": [
+   "centred"
+  ],
+  "literal": false,
+  "row": "B068-P080",
+  "recolour": {
+   "asset_path": "content/catalogue/variants/B068-P080-mc.webp",
+   "source": "B068-P080",
+   "recolour_source": "content/swipe/products/IMG_1119.png;content/swipe/products/IMG_1120.png",
+   "target_lab": [
+    60.61,
+    6.77,
+    -41.04
+   ],
+   "recoloured_share": 1.0,
+   "result_to_model_de": 0.7,
+   "applied": true
+  }
+ },
+ {
+  "members": [
+   {
+    "pid": "B068-P082",
+    "image": "content/swipe/products/IMG_1121.png",
+    "shot": "flat packshot",
+    "slot": "top",
+    "layout": "centred",
+    "flat": "/home/user/relatively-normal/content/catalogue/assets/B068-P082.webp",
+    "model": null,
+    "model_lab": null
+   },
+   {
+    "pid": "B068-P083",
+    "image": "content/swipe/products/IMG_1122.png",
+    "shot": "on model",
+    "slot": "top",
+    "layout": "centred",
+    "flat": null,
+    "model": "/home/user/relatively-normal/content/catalogue/review/B068-P082-1p0.jpg",
+    "model_lab": [
+     24.67,
+     2.53,
+     -18.77
+    ],
+    "skin_share": 0.111,
+    "band": [
+     0.04,
+     0.56
+    ]
+   }
+  ],
+  "same": true,
+  "why": [],
+  "checks": [],
+  "flat": "B068-P082",
+  "model": "B068-P083",
+  "flat_lab": [
+   13.14,
+   5.1,
+   -15.79
+  ],
+  "flat_model_de": 8.9,
+  "layouts": [
+   "centred"
+  ],
+  "literal": false,
+  "row": "B068-P082",
+  "recolour": {
+   "asset_path": "content/catalogue/variants/B068-P082-mc.webp",
+   "source": "B068-P082",
+   "recolour_source": "content/swipe/products/IMG_1121.png;content/swipe/products/IMG_1122.png",
+   "target_lab": [
+    24.67,
+    2.53,
+    -18.77
+   ],
+   "recoloured_share": 1.0,
+   "result_to_model_de": 0.3,
+   "applied": true
+  }
+ },
+ {
+  "members": [
+   {
+    "pid": "B068-P084",
+    "image": "content/swipe/products/IMG_1123.png",
+    "shot": "flat packshot",
+    "slot": "top",
+    "layout": "centred",
+    "flat": "/home/user/relatively-normal/content/catalogue/assets/B068-P084.webp",
+    "model": null,
+    "model_lab": null
+   },
+   {
+    "pid": "B068-P085",
+    "image": "content/swipe/products/IMG_1124.png",
+    "shot": "on model",
+    "slot": "top",
+    "layout": "centred",
+    "flat": null,
+    "model": "/home/user/relatively-normal/content/catalogue/review/B068-P084-1-whole.webp",
+    "model_lab": [
+     31.88,
+     1.37,
+     -19.41
+    ],
+    "skin_share": 0.143,
+    "band": [
+     0.04,
+     0.56
+    ]
+   }
+  ],
+  "same": true,
+  "why": [],
+  "checks": [],
+  "flat": "B068-P084",
+  "model": "B068-P085",
+  "flat_lab": [
+   26.83,
+   2.03,
+   -17.69
+  ],
+  "flat_model_de": 4.1,
+  "layouts": [
+   "centred"
+  ],
+  "literal": false,
+  "row": "B068-P084",
+  "recolour": {
+   "asset_path": "content/catalogue/variants/B068-P084-mc.webp",
+   "source": "B068-P084",
+   "recolour_source": "content/swipe/products/IMG_1123.png;content/swipe/products/IMG_1124.png",
+   "target_lab": [
+    31.88,
+    1.37,
+    -19.41
+   ],
+   "recoloured_share": 1.0,
+   "result_to_model_de": 0.3,
+   "applied": true
+  }
+ },
+ {
+  "members": [
+   {
+    "pid": "B068-P087",
+    "image": "content/swipe/products/IMG_1126.png",
+    "shot": "flat packshot",
+    "slot": "top",
+    "layout": "centred",
+    "flat": "/home/user/relatively-normal/content/catalogue/assets/B068-P087.webp",
+    "model": null,
+    "model_lab": null
+   },
+   {
+    "pid": "B068-P088",
+    "image": "content/swipe/products/IMG_1127.png",
+    "shot": "on model",
+    "slot": "top",
+    "layout": "centred",
+    "flat": null,
+    "model": "/home/user/relatively-normal/content/catalogue/review/B068-P087-1-whole.webp",
+    "model_lab": [
+     33.64,
+     23.36,
+     -30.96
+    ],
+    "skin_share": 0.143,
+    "band": [
+     0.04,
+     0.56
+    ]
+   }
+  ],
+  "same": true,
+  "why": [],
+  "checks": [],
+  "flat": "B068-P087",
+  "model": "B068-P088",
+  "flat_lab": [
+   21.88,
+   18.59,
+   -24.88
+  ],
+  "flat_model_de": 9.4,
+  "layouts": [
+   "centred"
+  ],
+  "literal": false,
+  "row": "B068-P087",
+  "recolour": {
+   "asset_path": "content/catalogue/variants/B068-P087-mc.webp",
+   "source": "B068-P087",
+   "recolour_source": "content/swipe/products/IMG_1126.png;content/swipe/products/IMG_1127.png",
+   "target_lab": [
+    33.64,
+    23.36,
+    -30.96
+   ],
+   "recoloured_share": 1.0,
+   "result_to_model_de": 0.1,
+   "applied": true
+  }
+ },
+ {
+  "members": [
+   {
+    "pid": "B070-P001",
+    "image": "content/swipe/products/IMG_1130.png",
+    "shot": "flat packshot",
+    "slot": "top",
+    "layout": "side-by-side",
+    "flat": "/home/user/relatively-normal/content/catalogue/review/B070-P001p0-cut.webp",
+    "model": "/home/user/relatively-normal/content/catalogue/review/B070-P001p1.jpg",
+    "model_lab": [
+     37.66,
+     -10.71,
+     24.62
+    ],
+    "skin_share": 0.038,
+    "band": [
+     0.04,
+     0.56
+    ]
+   },
+   {
+    "pid": "B070-P008",
+    "image": "content/swipe/products/IMG_1137.png",
+    "shot": "flat packshot",
+    "slot": "top",
+    "layout": "side-by-side",
+    "flat": "/home/user/relatively-normal/content/catalogue/review/B070-P001-1p0-cut.webp",
+    "model": "/home/user/relatively-normal/content/catalogue/review/B070-P001-1p1.jpg",
+    "model_lab": [
+     32.45,
+     -9.93,
+     22.86
+    ],
+    "skin_share": 0.039,
+    "band": [
+     0.04,
+     0.56
+    ]
+   }
+  ],
+  "same": true,
+  "why": [],
+  "checks": [
+   {
+    "a": "B070-P001",
+    "b": "B070-P008",
+    "kind": "flat/flat",
+    "iou": 0.996,
+    "structure": 0.17,
+    "de": 0.24,
+    "same": true
+   }
+  ],
+  "flat": "B070-P001",
+  "model": "B070-P001",
+  "flat_lab": [
+   36.46,
+   -11.52,
+   23.61
+  ],
+  "flat_model_de": 1.4,
+  "layouts": [
+   "side-by-side"
+  ],
+  "literal": false,
+  "row": "B070-P001"
+ },
+ {
+  "members": [
+   {
+    "pid": "B070-P002",
+    "image": "content/swipe/products/IMG_1131.png",
+    "shot": "flat packshot",
+    "slot": "top",
+    "layout": "side-by-side",
+    "flat": "/home/user/relatively-normal/content/catalogue/review/B070-P002p1-cut.webp",
+    "model": "/home/user/relatively-normal/content/catalogue/review/B070-P002p2.jpg",
+    "model_lab": [
+     14.23,
+     -5.2,
+     2.45
+    ],
+    "skin_share": 0.0,
+    "band": [
+     0.04,
+     0.56
+    ]
+   },
+   {
+    "pid": "B070-P003",
+    "image": "content/swipe/products/IMG_1132.png",
+    "shot": "flat packshot",
+    "slot": "top",
+    "layout": "side-by-side",
+    "flat": "/home/user/relatively-normal/content/catalogue/review/B070-P002-1p2-cut.webp",
+    "model": "/home/user/relatively-normal/content/catalogue/review/B070-P002-1p3.jpg",
+    "model_lab": [
+     14.43,
+     -5.27,
+     2.49
+    ],
+    "skin_share": 0.0,
+    "band": [
+     0.04,
+     0.56
+    ]
+   }
+  ],
+  "same": true,
+  "why": [],
+  "checks": [
+   {
+    "a": "B070-P002",
+    "b": "B070-P003",
+    "kind": "flat/flat",
+    "iou": 0.985,
+    "structure": 0.31,
+    "de": 0.14,
+    "same": true
+   }
+  ],
+  "flat": "B070-P002",
+  "model": "B070-P002",
+  "flat_lab": [
+   22.4,
+   -10.23,
+   2.69
+  ],
+  "flat_model_de": 7.4,
+  "layouts": [
+   "side-by-side"
+  ],
+  "literal": false,
+  "row": "B070-P002"
+ },
+ {
+  "members": [
+   {
+    "pid": "B072-P002",
+    "image": "content/swipe/products/IMG_1157.png",
+    "shot": "flat packshot",
+    "slot": "top",
+    "layout": "other",
+    "flat": "/home/user/relatively-normal/content/catalogue/assets/B072-P002.webp",
+    "model": null,
+    "model_lab": null
+   }
+  ],
+  "same": false,
+  "why": [
+   "B072-P002 / B072-P001 differ (flat/flat, IoU 0.85, structure 0.7, dE 0.42)"
+  ],
+  "checks": [
+   {
+    "a": "B072-P002",
+    "b": "B072-P001",
+    "kind": "flat/flat",
+    "iou": 0.85,
+    "structure": 0.7,
+    "de": 0.42,
+    "same": false
+   }
+  ],
+  "flat": "B072-P002",
+  "model": null,
+  "flat_lab": [
+   9.51,
+   5.27,
+   -0.46
+  ],
+  "flat_model_de": null,
+  "layouts": [
+   "other"
+  ],
+  "literal": false
+ },
+ {
+  "members": [
+   {
+    "pid": "B072-P001",
+    "image": "content/swipe/products/IMG_1156.png",
+    "shot": "flat packshot",
+    "slot": "top",
+    "layout": "stacked",
+    "flat": "/home/user/relatively-normal/content/catalogue/assets/B072-P001.webp",
+    "model": null,
+    "model_lab": null
+   }
+  ],
+  "same": false,
+  "why": [
+   "B072-P002 / B072-P001 differ (flat/flat, IoU 0.85, structure 0.7, dE 0.42)"
+  ],
+  "checks": [
+   {
+    "a": "B072-P002",
+    "b": "B072-P001",
+    "kind": "flat/flat",
+    "iou": 0.85,
+    "structure": 0.7,
+    "de": 0.42,
+    "same": false
+   }
+  ],
+  "flat": "B072-P001",
+  "model": null,
+  "flat_lab": [
+   9.77,
+   5.5,
+   -0.42
+  ],
+  "flat_model_de": null,
+  "layouts": [
+   "stacked"
+  ],
+  "literal": false
+ }
+]

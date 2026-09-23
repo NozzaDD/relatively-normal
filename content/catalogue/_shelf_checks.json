@@ -848,19 +848,6 @@
     "struct": 0.0
    }
   },
-  "B062-P011-V2": {
-   "cause": "colourway split",
-   "cluster": [
-    "B062-P011",
-    "B062-P011-V2"
-   ],
-   "keeper": "B062-P011",
-   "measured": {
-    "de": 0.17,
-    "iou": 0.985,
-    "struct": 0.23
-   }
-  },
   "B062-P012-V2": {
    "cause": "colourway split",
    "cluster": [
@@ -872,6 +859,19 @@
     "de": 0.17,
     "iou": 0.996,
     "struct": 0.21
+   }
+  },
+  "B068-P001": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B068-P001",
+    "B068-P013"
+   ],
+   "keeper": "B068-P013",
+   "measured": {
+    "de": 0.02,
+    "iou": 0.999,
+    "struct": 0.09
    }
   }
  },
@@ -1548,6 +1548,114 @@
    "group": "B062-P020",
    "why": [
     "grid page: the picture is a listing-grid page of several products"
+   ]
+  },
+  "B063-P001": {
+   "group": "B063-P001",
+   "why": [
+    "grid page: the picture is a listing-grid page of several products"
+   ]
+  },
+  "B063-P002": {
+   "group": "B063-P002",
+   "why": [
+    "grid page: the picture is a listing-grid page of several products"
+   ]
+  },
+  "B063-P004": {
+   "group": "B063-P004",
+   "why": [
+    "grid page: the picture is a listing-grid page of several products"
+   ]
+  },
+  "B063-P005": {
+   "group": "B063-P005",
+   "why": [
+    "grid page: the picture is a listing-grid page of several products"
+   ]
+  },
+  "B063-P006": {
+   "group": "B063-P006",
+   "why": [
+    "grid page: the picture is a listing-grid page of several products"
+   ]
+  },
+  "B064-P001": {
+   "group": "B064-P001",
+   "why": [
+    "grid page: the picture is a listing-grid page of several products"
+   ]
+  },
+  "B064-P003": {
+   "group": "B064-P003",
+   "why": [
+    "grid page: the picture is a listing-grid page of several products"
+   ]
+  },
+  "B065-P001": {
+   "group": "B065-P001",
+   "why": [
+    "grid page: the picture is a listing-grid page of several products"
+   ]
+  },
+  "B065-P004": {
+   "group": "B065-P004",
+   "why": [
+    "grid page: the picture is a listing-grid page of several products"
+   ]
+  },
+  "B065-P006": {
+   "group": "B065-P006",
+   "why": [
+    "colour regions: 3 separate colour regions and no skin \u2014 a fan of colourways"
+   ]
+  },
+  "B066-P001": {
+   "group": "B066-P001",
+   "why": [
+    "grid page: the picture is a listing-grid page of several products"
+   ]
+  },
+  "B070-P011": {
+   "group": "B070-P011",
+   "why": [
+    "pieces: the cut-out is 2 separate pieces"
+   ]
+  },
+  "B070-P012": {
+   "group": "B070-P012",
+   "why": [
+    "pieces: the cut-out is 2 separate pieces"
+   ]
+  },
+  "B070-P014": {
+   "group": "B070-P014",
+   "why": [
+    "pieces: the cut-out is 2 separate pieces"
+   ]
+  },
+  "B071-P004": {
+   "group": "B071-P004",
+   "why": [
+    "grid page: the picture is a listing-grid page of several products"
+   ]
+  },
+  "B073-P006": {
+   "group": "B073-P006",
+   "why": [
+    "all-colours: the picture is the style's all-colours photo"
+   ]
+  },
+  "B073-P009": {
+   "group": "B073-P009",
+   "why": [
+    "all-colours: the picture is the style's all-colours photo"
+   ]
+  },
+  "B073-P010": {
+   "group": "B073-P010",
+   "why": [
+    "all-colours: the picture is the style's all-colours photo"
    ]
   }
  },

@@ -297,6 +297,41 @@ def source_colour_names(by_id):
     return n
 
 
+def model_colour_rows(by_id):
+    """A row made of a flat lay and a model photo of the same product in the
+    same colour (same_product.py) shows the flat lay recoloured to the colour
+    measured on the model, where the owner approved that for the pair's dE.
+    The model photo carries the true colour; the picture is ours, so the row
+    is marked simulated with both screenshots as its recolour source."""
+    from PIL import Image
+    import extract_colours as X
+    from colour_names import classify
+    n = 0
+    for r in load_json(CAT + '/_same_product.json', []):
+        rc = r.get('recolour') or {}
+        d = by_id.get(rc.get('source'))
+        if not d or not rc.get('applied') or not os.path.exists(ROOT + '/' + rc['asset_path']):
+            continue
+        d.update(asset_path=rc['asset_path'], asset_type='cutout_flat', recoloured='yes',
+                 recolour_source=rc['recolour_source'])
+        with Image.open(ROOT + '/' + rc['asset_path']) as im:
+            cols, skin, kept = X.colours_for_image(im.convert('RGBA'), is_cutout=True)
+        for i in (1, 2, 3):
+            for k in ('hex', 'share', 'family', 'name'):
+                d[f'colour{i}_{k}'] = ''
+        for i, c in enumerate(cols[:3], 1):
+            fam, nm, L, Cc, h, rel, nt = classify(c['hex'])
+            d[f'colour{i}_hex'] = c['hex']; d[f'colour{i}_share'] = round(c['share'], 3)
+            d[f'colour{i}_family'] = fam; d[f'colour{i}_name'] = nm
+            if i == 1:
+                d.update(colour1_L=round(L, 1), colour1_C=round(Cc, 1), colour1_h=round(h, 1),
+                         colour1_rel_chroma=round(rel, 3), colour1_neutral=nt)
+        d['notes'] = (d['notes'] + f"; flat lay recoloured to the colour on the model photo "
+                      f"(dE {r['flat_model_de']} between them); colour simulated").strip('; ')
+        n += 1
+    return n
+
+
 def variant_rows(base_by_id):
     """UNIQLO colour variants from uniqlo_variants.py, as full product rows.
 
@@ -306,21 +341,30 @@ def variant_rows(base_by_id):
     where the garment lay alone; those are the brand's own photo and are not
     marked simulated."""
     v = load_json(CAT + '/_variants.json', {})
+    # every other shop's, from colourway_variants.py: the same row shape, but
+    # a real photo there is the colour's own thumbnail on the page, and the
+    # owner's screenshots of the style stay on the shelf — a swatch they cover
+    # was never made again
+    cw = load_json(CAT + '/_colourway_variants.json', {})
     out, hide = [], {}
-    for x in v.get('variants', []):
+    for x in v.get('variants', []) + cw.get('variants', []):
         src = base_by_id.get(x['source'])
         if not src:
             continue
         d = dict(src)
         c = x['colour']
         real = x.get('real')
-        note = (f"cut from the all-colours photo {os.path.basename(x['real_from'])}, the brand's own "
+        thumb = x['product_id'].rsplit('-', 1)[-1].startswith('cw')
+        note = (f"cut from the colour thumbnail {x['swatch']} on {os.path.basename(x['real_from'])}, "
+                f"the brand's own photo of this colour; style {x['style']}"
+                if real and thumb else
+                f"cut from the all-colours photo {os.path.basename(x['real_from'])}, the brand's own "
                 f"photo of this colour; swatch {x['swatch']} of the style {x['style']}"
                 if real else
                 f"recoloured from {x['source']} to swatch {x['swatch']} of the style {x['style']} in CIELAB; "
                 "colour simulated, not the brand's photo")
         d.update(product_id=x['product_id'], n_images=0,
-                 product_name=x['style'], product_name_confidence='given',
+                 product_name=x['style'], product_name_confidence=x.get('product_name_confidence', 'given'),
                  price=x.get('price') or src['price'],
                  price_confidence='given' if x.get('price') else src['price_confidence'],
                  slot=x['slot'], garment_type=x['garment_type'],
@@ -637,6 +681,7 @@ def main():
     print('UNIQLO rows read off the page:', read)
     print('UNIQLO source rows switched to their measured cut:', measured_sources(by_id))
     print('UNIQLO source rows whose photo is not the selected colour:', source_colour_names(by_id))
+    print('flat lays recoloured to their model photo:', model_colour_rows(by_id))
     variants, hide = variant_rows(by_id)
     for pid, why in hide.items():
         by_id[pid]['shelf'] = 'hidden'

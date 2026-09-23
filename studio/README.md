@@ -46,6 +46,12 @@ which is the flat lay wherever there is one, and the colours are read from it.
 another picture and keeps where the piece sits and how big it is; the info file
 records which was used.
 
+Where you screenshotted a product twice in one colour — the flat lay and the
+same garment on a model — it is **one row with both pictures**, and the flat
+lay is recoloured to the colour measured on the model photo, because the model
+photo is where the shop's colour is true. That row says *simulated*, and its
+`recolour_source` names both screenshots.
+
 **One picture, one garment.** Clean is not the same as single: a fan of five
 colourways laid over each other is one connected piece, clear of the frame, with
 no text in it. `content/tools/shelf_checks.py` measures the shelf picture of every

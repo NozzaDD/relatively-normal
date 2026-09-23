@@ -29,7 +29,7 @@ OUT = CAT + '/_url_bars.json'
 
 BAND = 0.13                  # deep enough to hold the tab strip AND the bar below it
 TLDS = ('com', 'co.uk', 'net', 'org', 'it', 'de', 'fr', 'ch', 'nl', 'se', 'dk',
-        'eu', 'us', 'store', 'shop', 'fashion', 'jp', 'at', 'be', 'es', 'io')
+        'eu', 'us', 'store', 'shop', 'fashion', 'jp', 'at', 'be', 'es', 'io', 'st')
 NOT_A_SHOP = {'google.com', 'apple.com', 'icloud.com', 'safari.com'}
 TOKEN = re.compile(r'\b((?:[a-z0-9][a-z0-9-]{1,30}\.)+[a-z]{2,10})\b')
 

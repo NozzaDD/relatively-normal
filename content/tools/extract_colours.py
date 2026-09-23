@@ -155,7 +155,12 @@ def main():
     B = {o['product_id']: o for o in json.load(open(ROOT + '/content/catalogue/batches.json'))}
     out = {}
     wb_tests = []
-    for i, (pid, a) in enumerate(sorted(A.items()), 1):
+    items = sorted(A.items())
+    if '--new' in sys.argv:           # only assets that have no colours yet
+        out = json.load(open(ROOT + '/content/catalogue/_colours.json'))
+        items = [(k, v) for k, v in items if k not in out]
+        print('new assets:', len(items))
+    for i, (pid, a) in enumerate(items, 1):
         if not a.get('asset_path'):
             out[pid] = dict(error='no asset'); continue
         p = ROOT + '/' + a['asset_path']

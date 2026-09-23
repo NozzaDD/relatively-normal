@@ -33,7 +33,7 @@ the desk prints "colour simulated" beside it in the info file and piece list.
 Writes
   content/catalogue/variants/{source}-sw{nn}.webp
   content/catalogue/_variants.json               rows build_products.py merges in
-  content/catalogue/sheets/uniqlo-{style}.jpg    one contact sheet per style
+  content/catalogue/sheets/uniqlo-{style}.jpg    one sheet per style (variant_sheets.py, rows)
 """
 import sys, os, json, csv, glob, io
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -52,7 +52,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 CAT = ROOT + '/content/catalogue'
 OUT = CAT + '/variants'
 SCRATCH = __import__('tempfile').mkdtemp(prefix='uq-')   # sheet inputs, never committed
-IMG = 'content/swipe/products/IMG_0{}.png'
+IMG = 'content/swipe/products/IMG_{:0>4}.png'      # '740' -> IMG_0740, '1170' -> IMG_1170
 
 # style -> source (screenshot, photo panel, share of the panel's top to skip,
 # because a strip of the photo above sometimes shares the panel) and the
@@ -88,14 +88,19 @@ STYLES = {
     'Ultra Stretch Active Flare Leggings':   dict(source=('798', 2, 0.0), colours=[],
                                                   slot='bottom', garment_type='flare leggings'),
     'Sweatshirt':                            dict(source=('800', 1, 0.1), colours=[('799', 2)]),
+    # the 23 September screenshots: three new styles, and a single flat lay for
+    # two styles that had none before
+    'Soufflé Yarn Polo Jumper':              dict(source=('1164', 1, 0.0), colours=[]),
+    'Smooth Cotton Crew Neck Jumper':        dict(source=('1168', 2, 0.0), colours=[('1168', 1)]),
+    '100% Supima Cotton T-Shirt':            dict(source=('1172', 2, 0.0), colours=[('1172', 1)]),
+    'HEATTECH Extra Warm Cashmere Blend Turtleneck T-Shirt (Long Sleeve)':
+                                             dict(source=('1170', 0, 0.3), colours=[]),
+    'Crew Neck T-Shirt':                     dict(source=('1171', 2, 0.0), colours=[('1171', 1)]),
 }
 NO_SOURCE = {
     'Windproof Stand Collar Blouson': 'only a fan of four overlapping colours and a model; no single flat lay',
     'Ribbed Henley Neck Long Sleeve T-Shirt': 'only a model and an overlapping fan; no single flat lay',
-    'HEATTECH Extra Warm Cashmere Blend Turtleneck T-Shirt (Long Sleeve)':
-        'only a model and two overlapping fans; no single flat lay',
     'HEATTECH Ultra Warm Crew Neck T-Shirt (Long Sleeve)': 'only model shots',
-    'Crew Neck T-Shirt': 'a grid of folded tees and a single tee cut off by the bottom of the screenshot',
 }
 
 # Judged by eye on the contact sheets, one per style.
@@ -374,7 +379,9 @@ def main():
     by_img = rows_by_image()
     os.makedirs(OUT, exist_ok=True)
     os.makedirs(SCRATCH, exist_ok=True)
-    for f in glob.glob(OUT + '/*.webp') + glob.glob(OUT + '/*-source.png'):
+    # only this script's own files: variants/ also holds colourway_variants.py's
+    # (-cw) and same_product.py's (-mc)
+    for f in glob.glob(OUT + '/*-sw[0-9][0-9].webp') + glob.glob(OUT + '/*-source.png'):
         os.remove(f)
     # style id and every screenshot of the style, from the page readings
     style_imgs, style_id = {}, {}
@@ -406,7 +413,7 @@ def main():
         sid = slug(style)
         spath = f'{OUT}/{base_id}-source.png'
         src.save(spath)
-        cells = [dict(path=spath, label=f'SOURCE {src_row["product_id"]} IMG_0{num}\n'
+        cells = [dict(path=spath, label=f'SOURCE {src_row["product_id"]} IMG_{num:0>4}\n'
                       f'{"clean" if clean else "NOT clean"}: {meas["components"]} piece(s), '
                       f'{meas["edge_pixels"]} edge px', swatches=[EC.lab_to_hex(tuple(src_lab))])]
         # the swatch circles as read, the selected one marked
@@ -432,7 +439,7 @@ def main():
             gs, ccut = lone_garments(cpanel)
             cp = f'{SCRATCH}/{sid}-colours-{cn}.png'
             ccut.save(cp)
-            cells.append(dict(path=cp, label=f'all colours IMG_0{cn}\n'
+            cells.append(dict(path=cp, label=f'all colours IMG_{cn:0>4}\n'
                               f'{sum(1 for g in gs if g["clear"] and g["one_colour"] > 0.8)} garments stand alone'))
             fan_colours += colours_on(ccut)
             for g in gs:
@@ -495,8 +502,6 @@ def main():
             rec['asset_path'] = f'content/catalogue/variants/{pid}.webp'
             variants.append(rec)
             made.append(pid)
-        sheet(cells, f'{CAT}/sheets/uniqlo-{sid}.jpg', cols=6, cell=230, label_h=40, swatch_h=14,
-              title=f'UNIQLO {style} ({style_id.get(style, "no product ID on the page")})')
         report[style] = dict(source=src_row['product_id'], source_image=img, source_clean=clean,
                              source_cut=os.path.relpath(spath, ROOT),
                              source_measure=meas, style_id=style_id.get(style, ''),
@@ -509,6 +514,8 @@ def main():
               f'({len(report[style]["real"])} real), source {"clean" if clean else "NOT clean"}', flush=True)
     json.dump(dict(variants=variants, report=report, dropped=dropped, no_source=NO_SOURCE,
                    style_ids=style_id), open(CAT + '/_variants.json', 'w'), indent=1, default=float)
+    import variant_sheets             # the per-style sheets, layout A: one row per variant
+    variant_sheets.write('rows', only='_variants.json')
     print('styles:', len(report), ' variants kept:', len(variants),
           ' real:', sum(v['real'] for v in variants), ' dropped:', len(dropped))
     for k, why in dropped.items():

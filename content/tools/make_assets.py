@@ -161,11 +161,17 @@ def build(product, shot_type):
                 note='crop tile; box %s, %.0f%% of page' % ('found' if found else 'fallback', area * 100))
 
 
-def main(shotmap_path):
+def main(shotmap_path, new_only=False):
     shot = json.load(open(shotmap_path))
     B = json.load(open(ROOT + '/content/catalogue/batches.json'))
     os.makedirs(ASSETS, exist_ok=True)
     out = {}
+    if new_only:
+        # only products that have no asset yet: a full run would overwrite the
+        # cut-outs flat_lays.py, panels.py and split_mixed.py have since replaced
+        out = json.load(open(ROOT + '/content/catalogue/_assets.json'))
+        B = [p for p in B if p['product_id'] not in out]
+        print('new products:', len(B))
     for i, p in enumerate(B, 1):
         pid = p['product_id']
         st = shot.get(pid, 'flat packshot')
@@ -192,4 +198,4 @@ def main(shotmap_path):
 
 
 if __name__ == '__main__':
-    main(sys.argv[1])
+    main(sys.argv[1], new_only='--new' in sys.argv)
