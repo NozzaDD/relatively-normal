@@ -397,6 +397,10 @@ def variant_rows(base_by_id):
     return out, hide
 
 
+UNIQUE_CELL_IDS_FROM = 75
+SHOP_SCOPED_GUESS_FROM = 75
+
+
 def grid_rows(by_id, review):
     """One row per cell of a listing grid.
 
@@ -421,7 +425,12 @@ def grid_rows(by_id, review):
             continue
         for j, c in enumerate(rec.get('cells') or []):
             d = dict(parent)
-            rid = f'{pid}-C{j}'
+            # a grid row with several screenshots numbered every screenshot's
+            # cells from C0, so two cells shared an ID. From batch 75 on the
+            # screenshot is in the ID; earlier IDs are left as filed, because
+            # the owner's choices and outfits point at them.
+            rid = f'{pid}-C{j}' if idx == 0 or int(pid[1:4]) < UNIQUE_CELL_IDS_FROM \
+                else f'{pid}-I{idx}-C{j}'
             asset = c.get('cut') or c.get('path')
             cap_slot = c.get('slot') or ''
             brand = parent.get('brand', '')
@@ -586,6 +595,10 @@ def main():
     shops = {bid: shop_of(rs) for bid, rs in by_batch.items()}
     kinds = {bid: shop_kind(rs, shops[bid]) for bid, rs in by_batch.items()}
 
+    # each product's own shop, so a brand guess never crosses from one shop's
+    # pages to another's inside one batch: B080 holds Jamie Haller, ATP Atelier
+    # and Marge Sherwood screenshots, and ATP's grids were guessed Jamie Haller
+    own_domain = {b['product_id']: shop_for_product(b['images'], b['batch_id'], bars)[0] for b in bat}
     out = []
     for b in bat:
         pid = b['product_id']
@@ -611,7 +624,11 @@ def main():
         if not brand and kind == 'mono-brand':
             # the only guess allowed: another image in this batch named the shop
             # and every legible brand in it was that shop's own
-            cands = {none(x['brand_text']) for x in by_batch[b['batch_id']] if none(x['brand_text'])}
+            # (from batch 75 on: applied earlier it would re-guess filed rows,
+            # B050's Ulla Johnson pages among them — the owner decides those)
+            scoped = int(b['batch_id'][1:]) >= SHOP_SCOPED_GUESS_FROM
+            cands = {none(x['brand_text']) for x in by_batch[b['batch_id']] if none(x['brand_text'])
+                     and (not scoped or not domain or own_domain.get(x['product_id']) in (domain, ''))}
             if len(cands) == 1:
                 brand, bconf = cands.pop(), 'guessed'
         if not brand and label:

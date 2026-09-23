@@ -22,9 +22,17 @@ def main():
     A = json.load(open(ROOT + '/content/catalogue/_assets.json'))
     slots = {r['product_id']: r['slot'] for r in
              csv.DictReader(open(ROOT + '/content/catalogue/products.csv'))}
+    import incremental as INC
+    # new or changed products only, unless --all: a flat lay re-cut since the
+    # first run is tall and has no "cropped to" note, and would be cut in half
+    cands = [pid for pid, a in A.items()
+             if a.get('asset_path') and a['asset_type'].startswith('cutout')]
+    todo, fp = INC.select('crop_figures', cands)
+    INC.report('crop_figures', todo, cands)
+    mine = set(todo)
     n = 0
     for pid, a in A.items():
-        if not a.get('asset_path') or not a['asset_type'].startswith('cutout'):
+        if pid not in mine:
             continue
         if 'cropped to' in a.get('note', ''):          # idempotent: never twice
             continue
@@ -54,6 +62,7 @@ def main():
         a['bytes'] = os.path.getsize(p)
         n += 1
     json.dump(A, open(ROOT + '/content/catalogue/_assets.json', 'w'), indent=1)
+    INC.mark('crop_figures', todo, fp)
     print('cropped', n, 'whole-figure cut-outs to their slot band')
 
 

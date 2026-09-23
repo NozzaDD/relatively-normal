@@ -11,7 +11,10 @@ gutters. Where that does not give a clean answer — panels too small, too many,
 too unequal — the screenshot is left whole and the reason is recorded, because
 a wrong split costs more than no split.
 
-  python3 content/tools/panels.py [--limit N] [--redo]
+  python3 content/tools/panels.py [--limit N] [--all]
+
+Only new or changed products are looked at (incremental.py); --all (or --redo)
+looks at every one again, reviewed ones included.
 
 Writes content/catalogue/_panels.json and one JPEG per panel into
 content/catalogue/review/. The originals are never touched, and the whole
@@ -23,6 +26,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspa
 from PIL import Image
 import imglib
 import flat_lays as FL
+import incremental as INC
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 CAT = ROOT + '/content/catalogue'
@@ -339,7 +343,7 @@ def primary_of(panels):
     return 0
 
 
-def promote(out):
+def promote(out, only=None):
     """Give a product whose flat-lay panel is clean that panel as its cut-out.
 
     This is the whole point of splitting: the product's own picture stops being
@@ -360,6 +364,8 @@ def promote(out):
         if not v.get('split'):
             continue
         pid = key.split('#')[0]
+        if only is not None and pid not in only:
+            continue
         for p in v['panels']:
             if p.get('clean') and p.get('cut'):
                 prev = best.get(pid)
@@ -388,19 +394,29 @@ def promote(out):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--limit', type=int, default=0)
-    ap.add_argument('--redo', action='store_true')
+    ap.add_argument('--all', action='store_true',
+                    help='process every product, including ones already reviewed; '
+                         'without it only new or changed products are looked at')
+    ap.add_argument('--redo', dest='all', action='store_true', help='same as --all')
     args = ap.parse_args()
     import csv
     review = json.load(open(CAT + '/_review_boxes.json'))
     shots = {r['product_id']: r['shot_type'] for r in csv.DictReader(open(CAT + '/products.csv'))}
     try:
-        out = {} if args.redo else json.load(open(PAN))
+        out = json.load(open(PAN))
     except (FileNotFoundError, json.JSONDecodeError):
         out = {}
+    # new or changed products only, unless --all: a product the owner has
+    # reviewed keeps its panels and its cut-out exactly as they are
+    cands = [pid for pid in sorted(review) if shots.get(pid) != 'listing grid']
+    todo, fp = INC.select('panels', cands, args.all)
+    INC.report('panels', todo, cands, args.all)
+    mine = set(todo)
+    for key in [k for k in out if k.split('#')[0] in mine]:
+        del out[key]                     # a changed product is looked at afresh
     jobs = []
-    for pid, rec in sorted(review.items()):
-        if shots.get(pid) == 'listing grid':
-            continue
+    for pid in todo:
+        rec = review[pid]
         for i, e in enumerate(rec.get('images') or []):
             if not e or 'error' in e or e.get('panel_of') is not None:
                 continue
@@ -408,6 +424,9 @@ def main():
                 continue
             jobs.append((pid, i, e))
     if args.limit:
+        # a product cut short by --limit is not stamped: the next run finishes it
+        todo = [pid for pid in todo if pid not in {j[0] for j in jobs[args.limit:]}]
+        mine = set(todo)
         jobs = jobs[:args.limit]
     print(f'{len(jobs)} screenshots to look at, {len(out)} already done', flush=True)
     for k, (pid, i, e) in enumerate(jobs, 1):
@@ -453,9 +472,11 @@ def main():
         m = re.search(r'layout=([\w-]+)', r.get('notes', ''))
         if m:
             layouts[r['product_id']] = m.group(1)
-    print('side-by-side pages typed by position:', side_by_side(out, layouts, review))
+    print('side-by-side pages typed by position:',
+          side_by_side({k: v for k, v in out.items() if k.split('#')[0] in mine}, layouts, review))
     json.dump(out, open(PAN, 'w'), indent=1)
-    promote(out)
+    promote(out, mine)
+    INC.mark('panels', todo, fp)
     split = [v for v in out.values() if v.get('split')]
     kinds = collections.Counter(p['type'] for v in split for p in v['panels'])
     print(f'split: {len(split)} of {len(out)} screenshots into {sum(len(v["panels"]) for v in split)} panels')

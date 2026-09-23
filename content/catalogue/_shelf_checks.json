@@ -873,6 +873,58 @@
     "iou": 0.999,
     "struct": 0.09
    }
+  },
+  "B078-P008-C0": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B078-P007-C1",
+    "B078-P008-C0"
+   ],
+   "keeper": "B078-P007-C1",
+   "measured": {
+    "de": 0.5,
+    "iou": 0.988,
+    "struct": 0.53
+   }
+  },
+  "B079-P002-I1-C0": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B079-P002-I1-C0",
+    "B079-P002-I1-C1"
+   ],
+   "keeper": "B079-P002-I1-C1",
+   "measured": {
+    "de": 0.04,
+    "iou": 0.984,
+    "struct": 0.4
+   }
+  },
+  "B082-P002": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B082-P002",
+    "B083-P010"
+   ],
+   "keeper": "B083-P010",
+   "measured": {
+    "de": 2.94,
+    "iou": 0.999,
+    "struct": 0.19
+   }
+  },
+  "B090-P008-I1-C2": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B090-P008-I1-C1",
+    "B090-P008-I1-C2"
+   ],
+   "keeper": "B090-P008-I1-C1",
+   "measured": {
+    "de": 0.08,
+    "iou": 0.994,
+    "struct": 0.25
+   }
   }
  },
  "several": {
@@ -1656,6 +1708,102 @@
    "group": "B073-P010",
    "why": [
     "all-colours: the picture is the style's all-colours photo"
+   ]
+  },
+  "B077-P005": {
+   "group": "B077-P005",
+   "why": [
+    "pieces: the cut-out is 2 separate pieces"
+   ]
+  },
+  "B079-P002-C0": {
+   "group": "B079-P002",
+   "why": [
+    "pieces: the cut-out is 2 separate pieces"
+   ]
+  },
+  "B079-P003-C2": {
+   "group": "B079-P003",
+   "why": [
+    "pieces: the cut-out is 2 separate pieces"
+   ]
+  },
+  "B079-P003-C4": {
+   "group": "B079-P003",
+   "why": [
+    "pieces: the cut-out is 2 separate pieces"
+   ]
+  },
+  "B079-P004": {
+   "group": "B079-P004",
+   "why": [
+    "grid page: the picture is a listing-grid page of several products"
+   ]
+  },
+  "B080-P002-I3-C3": {
+   "group": "B080-P002",
+   "why": [
+    "pieces: the cut-out is 2 separate pieces"
+   ]
+  },
+  "B080-P004-C0": {
+   "group": "B080-P004",
+   "why": [
+    "pieces: the cut-out is 2 separate pieces"
+   ]
+  },
+  "B080-P005-C1": {
+   "group": "B080-P005",
+   "why": [
+    "pieces: the cut-out is 2 separate pieces"
+   ]
+  },
+  "B080-P006-C3": {
+   "group": "B080-P006",
+   "why": [
+    "pieces: the cut-out is 2 separate pieces"
+   ]
+  },
+  "B080-P008": {
+   "group": "B080-P008",
+   "why": [
+    "grid page: the picture is a listing-grid page of several products"
+   ]
+  },
+  "B080-P009": {
+   "group": "B080-P009",
+   "why": [
+    "grid page: the picture is a listing-grid page of several products"
+   ]
+  },
+  "B080-P012": {
+   "group": "B080-P012",
+   "why": [
+    "grid page: the picture is a listing-grid page of several products"
+   ]
+  },
+  "B081-P001": {
+   "group": "B081-P001",
+   "why": [
+    "grid page: the picture is a listing-grid page of several products"
+   ]
+  },
+  "B090-P004-C1": {
+   "group": "B090-P004",
+   "why": [
+    "pieces: the cut-out is 2 separate pieces"
+   ]
+  },
+  "B090-P004-I1-C5": {
+   "group": "B090-P004",
+   "why": [
+    "pieces: the cut-out is 2 separate pieces"
+   ]
+  },
+  "B090-P008-I2-C4": {
+   "group": "B090-P008",
+   "why": [
+    "pieces: the cut-out is 2 separate pieces"
    ]
   }
  },

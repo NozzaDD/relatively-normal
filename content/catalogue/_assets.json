@@ -6284,5 +6284,1221 @@
   "alpha_fill": 0.722,
   "skin_share": 0.175,
   "measured": "backdrop not plain"
+ },
+ "B075-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B075-P001.webp",
+  "note": "1 components; box found; 83% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 54812,
+  "alpha_fill": 0.543,
+  "skin_share": 0.833,
+  "measured": "skin in the frame"
+ },
+ "B075-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B075-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 69698,
+  "alpha_fill": 0.558,
+  "skin_share": 0.56,
+  "measured": "skin in the frame"
+ },
+ "B075-P003": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B075-P003.webp",
+  "note": "1 components; box found; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 92898,
+  "alpha_fill": 0.601,
+  "skin_share": 0.063,
+  "measured": "clean"
+ },
+ "B075-P004": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B075-P004.webp",
+  "note": "crop tile; box found, 27% of page",
+  "bytes": 43460,
+  "measured": "backdrop not plain"
+ },
+ "B075-P005": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B075-P005.webp",
+  "note": "1 components; box found; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 155162,
+  "alpha_fill": 0.715,
+  "skin_share": 0.001,
+  "measured": "clean"
+ },
+ "B075-P006": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B075-P006.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure",
+  "bytes": 21782,
+  "alpha_fill": 0.728,
+  "skin_share": 0.001,
+  "measured": "backdrop not plain"
+ },
+ "B075-P007": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B075-P007.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 3364,
+  "alpha_fill": 0.879,
+  "skin_share": 0.0,
+  "measured": "backdrop not plain"
+ },
+ "B076-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B076-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 12154,
+  "alpha_fill": 0.871,
+  "skin_share": 0.0,
+  "measured": "backdrop not plain"
+ },
+ "B076-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B076-P002.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 58682,
+  "alpha_fill": 0.689,
+  "skin_share": 0.001,
+  "measured": "clean"
+ },
+ "B076-P003": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B076-P003.webp",
+  "note": "crop tile; box found, 24% of page",
+  "bytes": 48280,
+  "measured": "backdrop not plain"
+ },
+ "B076-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B076-P004.webp",
+  "note": "1 components; box found; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 93278,
+  "alpha_fill": 0.703,
+  "skin_share": 0.0,
+  "measured": "clean"
+ },
+ "B076-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B076-P005.webp",
+  "note": "1 components; box found",
+  "bytes": 32114,
+  "alpha_fill": 0.653,
+  "skin_share": 0.163,
+  "measured": "backdrop not plain"
+ },
+ "B076-P006": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B076-P006.webp",
+  "note": "cut from the flat-lay panel of a split product page",
+  "bytes": 83354,
+  "alpha_fill": 0.896,
+  "skin_share": 0.0,
+  "measured": "clean"
+ },
+ "B076-P007": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B076-P007.webp",
+  "note": "1 components; box found",
+  "bytes": 16692,
+  "alpha_fill": 0.753,
+  "skin_share": 0.053,
+  "measured": "backdrop not plain"
+ },
+ "B077-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B077-P001.webp",
+  "note": "1 components; box found; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 71200,
+  "alpha_fill": 0.706,
+  "skin_share": 0.0,
+  "measured": "clean"
+ },
+ "B077-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B077-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 30486,
+  "alpha_fill": 0.701,
+  "skin_share": 0.024,
+  "measured": "backdrop not plain"
+ },
+ "B077-P003": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B077-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 848,
+  "alpha_fill": 0.88,
+  "skin_share": 0.001,
+  "measured": "backdrop not plain"
+ },
+ "B077-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B077-P004.webp",
+  "note": "1 components; box found; 95% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 107064,
+  "alpha_fill": 0.751,
+  "skin_share": 0.95,
+  "measured": "skin in the frame"
+ },
+ "B077-P005": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B077-P005.webp",
+  "note": "2 components; box found; 99% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 5634,
+  "alpha_fill": 0.197,
+  "skin_share": 0.993,
+  "measured": "backdrop not plain"
+ },
+ "B077-P006": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B077-P006.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure; rectangular (92% of its own box) \u2014 a page panel, not a piece; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 13898,
+  "alpha_fill": 0.917,
+  "skin_share": 0.0,
+  "measured": "clean"
+ },
+ "B077-P007": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B077-P007.webp",
+  "note": "1 components; box found",
+  "bytes": 113356,
+  "alpha_fill": 0.829,
+  "skin_share": 0.0,
+  "measured": "touches the frame"
+ },
+ "B077-P008": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B077-P008.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure; rectangular (94% of its own box) \u2014 a page panel, not a piece",
+  "bytes": 9610,
+  "alpha_fill": 0.937,
+  "skin_share": 0.0,
+  "measured": "backdrop not plain"
+ },
+ "B077-P009": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B077-P009.webp",
+  "note": "1 components; box found; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 160476,
+  "alpha_fill": 0.728,
+  "skin_share": 0.0,
+  "measured": "clean"
+ },
+ "B077-P010": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B077-P010.webp",
+  "note": "1 components; box found",
+  "bytes": 44990,
+  "alpha_fill": 0.669,
+  "skin_share": 0.0,
+  "measured": "backdrop not plain"
+ },
+ "B077-P011": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B077-P011.webp",
+  "note": "1 components; box found",
+  "bytes": 99646,
+  "alpha_fill": 0.681,
+  "skin_share": 0.0,
+  "measured": "backdrop not plain"
+ },
+ "B077-P012": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B077-P012.webp",
+  "note": "1 components; box found",
+  "bytes": 126696,
+  "alpha_fill": 0.724,
+  "skin_share": 0.001,
+  "measured": "backdrop not plain"
+ },
+ "B077-P013": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B077-P013.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure; 90% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 101708,
+  "alpha_fill": 0.938,
+  "skin_share": 0.901,
+  "measured": "skin in the frame"
+ },
+ "B077-P014": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B077-P014.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 100868,
+  "alpha_fill": 0.65,
+  "skin_share": 0.0,
+  "measured": "clean"
+ },
+ "B077-P015": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B077-P015.webp",
+  "note": "crop tile; box found, 16% of page",
+  "bytes": 69798,
+  "measured": "not measured"
+ },
+ "B078-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B078-P001.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure",
+  "bytes": 5282,
+  "alpha_fill": 0.852,
+  "skin_share": 0.001,
+  "measured": "backdrop not plain"
+ },
+ "B078-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B078-P002.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure; 100% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 6988,
+  "alpha_fill": 0.836,
+  "skin_share": 0.997,
+  "measured": "skin in the frame"
+ },
+ "B078-P003": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B078-P003.webp",
+  "note": "crop tile; box fallback, 18% of page",
+  "bytes": 35252,
+  "measured": "backdrop not plain"
+ },
+ "B078-P004": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B078-P004.webp",
+  "note": "crop tile; box fallback, 21% of page",
+  "bytes": 48854,
+  "measured": "backdrop not plain"
+ },
+ "B078-P005": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B078-P005.webp",
+  "note": "crop tile; box fallback, 65% of page",
+  "bytes": 45114,
+  "measured": "backdrop not plain"
+ },
+ "B078-P006": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B078-P006.webp",
+  "note": "crop tile; box fallback, 33% of page",
+  "bytes": 34038,
+  "measured": "backdrop not plain"
+ },
+ "B078-P007": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B078-P007.webp",
+  "note": "crop tile; box found, 8% of page",
+  "bytes": 9618,
+  "measured": "backdrop not plain"
+ },
+ "B078-P008": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B078-P008.webp",
+  "note": "crop tile; box found, 8% of page",
+  "bytes": 9584,
+  "measured": "backdrop not plain"
+ },
+ "B078-P009": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B078-P009.webp",
+  "note": "crop tile; box fallback, 7% of page",
+  "bytes": 5160,
+  "measured": "backdrop not plain"
+ },
+ "B078-P010": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B078-P010.webp",
+  "note": "crop tile; box fallback, 37% of page",
+  "bytes": 47782,
+  "measured": "backdrop not plain"
+ },
+ "B078-P011": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B078-P011.webp",
+  "note": "crop tile; box fallback, 22% of page",
+  "bytes": 44828,
+  "measured": "backdrop not plain"
+ },
+ "B078-P012": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B078-P012.webp",
+  "note": "crop tile; box fallback, 22% of page",
+  "bytes": 39080,
+  "measured": "backdrop not plain"
+ },
+ "B078-P013": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B078-P013.webp",
+  "note": "crop tile; box fallback, 22% of page",
+  "bytes": 43422,
+  "measured": "backdrop not plain"
+ },
+ "B078-P014": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B078-P014.webp",
+  "note": "crop tile; box fallback, 22% of page",
+  "bytes": 38562,
+  "measured": "more than one piece, touches the frame"
+ },
+ "B079-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B079-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 28308,
+  "alpha_fill": 0.603,
+  "skin_share": 0.092,
+  "measured": "backdrop not plain"
+ },
+ "B079-P002": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B079-P002.webp",
+  "note": "crop tile; box found, 12% of page",
+  "bytes": 45364,
+  "measured": "backdrop not plain"
+ },
+ "B079-P003": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B079-P003.webp",
+  "note": "crop tile; box found, 16% of page",
+  "bytes": 45082,
+  "measured": "backdrop not plain"
+ },
+ "B079-P004": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B079-P004.webp",
+  "note": "crop tile; box found, 94% of page",
+  "bytes": 39104,
+  "measured": "backdrop not plain"
+ },
+ "B080-P001": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B080-P001.webp",
+  "note": "crop tile; box found, 100% of page",
+  "bytes": 43426,
+  "measured": "backdrop not plain"
+ },
+ "B080-P002": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B080-P002.webp",
+  "note": "crop tile; box found, 10% of page",
+  "bytes": 56714,
+  "measured": "backdrop not plain"
+ },
+ "B080-P003": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B080-P003.webp",
+  "note": "crop tile; box fallback, 9% of page",
+  "bytes": 21734,
+  "measured": "backdrop not plain"
+ },
+ "B080-P004": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B080-P004.webp",
+  "note": "crop tile; box found, 13% of page",
+  "bytes": 26164,
+  "measured": "backdrop not plain"
+ },
+ "B080-P005": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B080-P005.webp",
+  "note": "crop tile; box found, 100% of page",
+  "bytes": 45066,
+  "measured": "backdrop not plain"
+ },
+ "B080-P006": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B080-P006.webp",
+  "note": "crop tile; box fallback, 48% of page",
+  "bytes": 46714,
+  "measured": "backdrop not plain"
+ },
+ "B080-P007": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B080-P007.webp",
+  "note": "crop tile; box fallback, 6% of page",
+  "bytes": 12668,
+  "measured": "backdrop not plain"
+ },
+ "B080-P008": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B080-P008.webp",
+  "note": "crop tile; box fallback, 73% of page",
+  "bytes": 43062,
+  "measured": "backdrop not plain"
+ },
+ "B080-P009": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B080-P009.webp",
+  "note": "crop tile; box found, 65% of page",
+  "bytes": 33088,
+  "measured": "backdrop not plain"
+ },
+ "B080-P010": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B080-P010.webp",
+  "note": "crop tile; box fallback, 60% of page",
+  "bytes": 45666,
+  "measured": "backdrop not plain"
+ },
+ "B080-P011": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B080-P011.webp",
+  "note": "crop tile; box fallback, 11% of page",
+  "bytes": 31126,
+  "measured": "backdrop not plain"
+ },
+ "B080-P012": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B080-P012.webp",
+  "note": "crop tile; box fallback, 17% of page",
+  "bytes": 39678,
+  "measured": "backdrop not plain"
+ },
+ "B080-P013": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B080-P013.webp",
+  "note": "crop tile; box found, 13% of page",
+  "bytes": 25282,
+  "measured": "backdrop not plain"
+ },
+ "B080-P014": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B080-P014.webp",
+  "note": "crop tile; box fallback, 13% of page",
+  "bytes": 39192,
+  "measured": "backdrop not plain"
+ },
+ "B081-P001": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B081-P001.webp",
+  "note": "crop tile; box found, 9% of page",
+  "bytes": 11134,
+  "measured": "backdrop not plain"
+ },
+ "B081-P002": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B081-P002.webp",
+  "note": "crop tile; box fallback, 17% of page",
+  "bytes": 11088,
+  "measured": "backdrop not plain"
+ },
+ "B082-P001": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B082-P001.webp",
+  "note": "crop tile; box found, 6% of page",
+  "bytes": 32198,
+  "measured": "backdrop not plain"
+ },
+ "B082-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B082-P002.webp",
+  "note": "1 components; box found; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 212616,
+  "alpha_fill": 0.825,
+  "skin_share": 0.0,
+  "measured": "clean"
+ },
+ "B082-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B082-P003.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 35954,
+  "alpha_fill": 0.688,
+  "skin_share": 0.128,
+  "measured": "backdrop not plain"
+ },
+ "B082-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B082-P004.webp",
+  "note": "1 components; box found; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 218190,
+  "alpha_fill": 0.819,
+  "skin_share": 0.0,
+  "measured": "clean"
+ },
+ "B083-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B083-P001.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 100026,
+  "alpha_fill": 0.883,
+  "skin_share": 0.001,
+  "measured": "clean"
+ },
+ "B083-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B083-P002.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure; 85% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 81882,
+  "alpha_fill": 0.876,
+  "skin_share": 0.848,
+  "measured": "skin in the frame"
+ },
+ "B083-P003": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B083-P003.webp",
+  "note": "1 components; box found",
+  "bytes": 188100,
+  "alpha_fill": 0.796,
+  "skin_share": 0.031,
+  "measured": "someone is wearing it"
+ },
+ "B083-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B083-P004.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure; 99% skin and hair \u2014 the cut-out found the model, not the piece; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 87162,
+  "alpha_fill": 0.88,
+  "skin_share": 0.992,
+  "measured": "clean"
+ },
+ "B083-P005": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B083-P005.webp",
+  "note": "1 components; box found",
+  "bytes": 47180,
+  "alpha_fill": 0.805,
+  "skin_share": 0.001,
+  "measured": "skin in the frame"
+ },
+ "B083-P006": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B083-P006.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 128508,
+  "alpha_fill": 0.874,
+  "skin_share": 0.0,
+  "measured": "clean"
+ },
+ "B083-P007": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B083-P007.webp",
+  "note": "1 components; box found; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 190346,
+  "alpha_fill": 0.8,
+  "skin_share": 0.0,
+  "measured": "clean"
+ },
+ "B083-P008": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B083-P008.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 62244,
+  "alpha_fill": 0.881,
+  "skin_share": 0.0,
+  "measured": "clean"
+ },
+ "B083-P009": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B083-P009.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 241950,
+  "alpha_fill": 0.876,
+  "skin_share": 0.034,
+  "measured": "clean"
+ },
+ "B083-P010": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B083-P010.webp",
+  "note": "1 components; box found; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 88224,
+  "alpha_fill": 0.825,
+  "skin_share": 0.0,
+  "measured": "clean"
+ },
+ "B083-P011": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B083-P011.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 154730,
+  "alpha_fill": 0.867,
+  "skin_share": 0.0,
+  "measured": "clean"
+ },
+ "B083-P012": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B083-P012.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 55338,
+  "alpha_fill": 0.88,
+  "skin_share": 0.0,
+  "measured": "clean"
+ },
+ "B083-P013": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B083-P013.webp",
+  "note": "1 components; box found; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 111850,
+  "alpha_fill": 0.834,
+  "skin_share": 0.0,
+  "measured": "clean"
+ },
+ "B083-P014": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B083-P014.webp",
+  "note": "1 components; box found; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 59936,
+  "alpha_fill": 0.847,
+  "skin_share": 0.0,
+  "measured": "clean"
+ },
+ "B083-P015": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B083-P015.webp",
+  "note": "1 components; box found; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 73984,
+  "alpha_fill": 0.814,
+  "skin_share": 0.001,
+  "measured": "clean"
+ },
+ "B084-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B084-P001.webp",
+  "note": "1 components; box found; cropped to the layer band of a whole figure; rectangular (91% of its own box) \u2014 a page panel, not a piece; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 114464,
+  "alpha_fill": 0.909,
+  "skin_share": 0.001,
+  "measured": "clean"
+ },
+ "B084-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B084-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 143440,
+  "alpha_fill": 0.839,
+  "skin_share": 0.626,
+  "measured": "skin in the frame"
+ },
+ "B084-P003": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B084-P003.webp",
+  "note": "1 components; box found; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 158748,
+  "alpha_fill": 0.852,
+  "skin_share": 0.001,
+  "measured": "clean"
+ },
+ "B084-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B084-P004.webp",
+  "note": "1 components; box found; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 264106,
+  "alpha_fill": 0.843,
+  "skin_share": 0.0,
+  "measured": "clean"
+ },
+ "B084-P005": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B084-P005.webp",
+  "note": "1 components; box found; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 230618,
+  "alpha_fill": 0.86,
+  "skin_share": 0.0,
+  "measured": "clean"
+ },
+ "B084-P006": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B084-P006.webp",
+  "note": "1 components; box found; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 232398,
+  "alpha_fill": 0.829,
+  "skin_share": 0.021,
+  "measured": "clean"
+ },
+ "B085-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B085-P001.webp",
+  "note": "1 components; box found; 100% skin and hair \u2014 the cut-out found the model, not the piece; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 69902,
+  "alpha_fill": 0.86,
+  "skin_share": 0.996,
+  "measured": "clean"
+ },
+ "B085-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B085-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 79582,
+  "alpha_fill": 0.82,
+  "skin_share": 0.001,
+  "measured": "skin in the frame"
+ },
+ "B085-P003": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B085-P003.webp",
+  "note": "1 components; box found; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 115964,
+  "alpha_fill": 0.832,
+  "skin_share": 0.0,
+  "measured": "clean"
+ },
+ "B085-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B085-P004.webp",
+  "note": "1 components; box found; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 228984,
+  "alpha_fill": 0.835,
+  "skin_share": 0.0,
+  "measured": "clean"
+ },
+ "B085-P005": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B085-P005.webp",
+  "note": "1 components; box found; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 205210,
+  "alpha_fill": 0.814,
+  "skin_share": 0.0,
+  "measured": "clean"
+ },
+ "B085-P006": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B085-P006.webp",
+  "note": "1 components; box found; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 128804,
+  "alpha_fill": 0.832,
+  "skin_share": 0.0,
+  "measured": "clean"
+ },
+ "B085-P007": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B085-P007.webp",
+  "note": "1 components; box found; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 275688,
+  "alpha_fill": 0.835,
+  "skin_share": 0.0,
+  "measured": "clean"
+ },
+ "B086-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B086-P001.webp",
+  "note": "1 components; box found; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 62634,
+  "alpha_fill": 0.847,
+  "skin_share": 0.0,
+  "measured": "clean"
+ },
+ "B086-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B086-P002.webp",
+  "note": "1 components; box found; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 62010,
+  "alpha_fill": 0.783,
+  "skin_share": 0.0,
+  "measured": "clean"
+ },
+ "B087-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B087-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 45670,
+  "alpha_fill": 0.796,
+  "skin_share": 0.0,
+  "measured": "skin in the frame"
+ },
+ "B087-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B087-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 150000,
+  "alpha_fill": 0.79,
+  "skin_share": 0.567,
+  "measured": "skin in the frame"
+ },
+ "B087-P003": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B087-P003.webp",
+  "note": "1 components; box found; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 135038,
+  "alpha_fill": 0.818,
+  "skin_share": 0.0,
+  "measured": "clean"
+ },
+ "B087-P004": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B087-P004.webp",
+  "note": "1 components; box found; cropped to the accessory band of a whole figure; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 134368,
+  "alpha_fill": 0.677,
+  "skin_share": 0.002,
+  "measured": "clean"
+ },
+ "B087-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B087-P005.webp",
+  "note": "1 components; box found; cropped to the accessory band of a whole figure; 80% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 12936,
+  "alpha_fill": 0.684,
+  "skin_share": 0.801,
+  "measured": "skin in the frame"
+ },
+ "B087-P006": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B087-P006.webp",
+  "note": "1 components; box found; cropped to the accessory band of a whole figure; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 100802,
+  "alpha_fill": 0.704,
+  "skin_share": 0.0,
+  "measured": "clean"
+ },
+ "B087-P007": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B087-P007.webp",
+  "note": "1 components; box found; cropped to the accessory band of a whole figure; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 72026,
+  "alpha_fill": 0.778,
+  "skin_share": 0.007,
+  "measured": "clean"
+ },
+ "B087-P008": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B087-P008.webp",
+  "note": "1 components; box found; cropped to the accessory band of a whole figure; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 29792,
+  "alpha_fill": 0.757,
+  "skin_share": 0.0,
+  "measured": "clean"
+ },
+ "B088-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B088-P001.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 44788,
+  "alpha_fill": 0.634,
+  "skin_share": 0.461,
+  "measured": "backdrop not plain"
+ },
+ "B088-P002": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B088-P002.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 32454,
+  "alpha_fill": 0.623,
+  "skin_share": 0.202,
+  "measured": "backdrop not plain"
+ },
+ "B088-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B088-P003.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 15542,
+  "alpha_fill": 0.714,
+  "skin_share": 0.087,
+  "measured": "someone is wearing it"
+ },
+ "B088-P004": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B088-P004.webp",
+  "note": "1 components; box found; cropped to the top band of a whole figure",
+  "bytes": 23246,
+  "alpha_fill": 0.639,
+  "skin_share": 0.116,
+  "measured": "skin in the frame"
+ },
+ "B088-P005": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B088-P005.webp",
+  "note": "1 components; box found; cropped to the accessory band of a whole figure",
+  "bytes": 19442,
+  "alpha_fill": 0.52,
+  "skin_share": 0.446,
+  "measured": "skin in the frame"
+ },
+ "B088-P006": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B088-P006.webp",
+  "note": "1 components; box found; cropped to the accessory band of a whole figure",
+  "bytes": 13110,
+  "alpha_fill": 0.544,
+  "skin_share": 0.225,
+  "measured": "skin in the frame"
+ },
+ "B088-P007": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B088-P007.webp",
+  "note": "1 components; box found; cropped to the accessory band of a whole figure",
+  "bytes": 15426,
+  "alpha_fill": 0.504,
+  "skin_share": 0.353,
+  "measured": "skin in the frame"
+ },
+ "B088-P008": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B088-P008.webp",
+  "note": "1 components; box found",
+  "bytes": 63388,
+  "alpha_fill": 0.659,
+  "skin_share": 0.162,
+  "measured": "backdrop not plain"
+ },
+ "B088-P009": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B088-P009.webp",
+  "note": "1 components; box found",
+  "bytes": 38206,
+  "alpha_fill": 0.775,
+  "skin_share": 0.0,
+  "measured": "touches the frame"
+ },
+ "B089-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B089-P001.webp",
+  "note": "1 components; box found; 97% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 87340,
+  "alpha_fill": 0.756,
+  "skin_share": 0.966,
+  "measured": "skin in the frame"
+ },
+ "B089-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B089-P002.webp",
+  "note": "1 components; box found; 79% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 98574,
+  "alpha_fill": 0.676,
+  "skin_share": 0.786,
+  "measured": "skin in the frame"
+ },
+ "B089-P003": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B089-P003.webp",
+  "note": "crop tile; box found, 36% of page",
+  "bytes": 154364,
+  "measured": "backdrop not plain"
+ },
+ "B090-P001": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B090-P001.webp",
+  "note": "crop tile; box found, 36% of page",
+  "bytes": 144998,
+  "measured": "backdrop not plain"
+ },
+ "B090-P002": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B090-P002.webp",
+  "note": "crop tile; box found, 37% of page",
+  "bytes": 34884,
+  "measured": "backdrop not plain"
+ },
+ "B090-P003": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B090-P003.webp",
+  "note": "crop tile; box found, 11% of page",
+  "bytes": 16380,
+  "measured": "backdrop not plain"
+ },
+ "B090-P004": {
+  "asset_type": "tile",
+  "asset_quality": "usable",
+  "asset_path": "content/catalogue/assets/B090-P004.webp",
+  "note": "crop tile; box found, 5% of page",
+  "bytes": 27918,
+  "measured": "backdrop not plain"
+ },
+ "B090-P005": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B090-P005.webp",
+  "note": "crop tile; box found, 9% of page",
+  "bytes": 77532,
+  "measured": "backdrop not plain"
+ },
+ "B090-P006": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B090-P006.webp",
+  "note": "1 components; box found",
+  "bytes": 27958,
+  "alpha_fill": 0.608,
+  "skin_share": 0.007,
+  "measured": "touches the frame"
+ },
+ "B090-P007": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B090-P007.webp",
+  "note": "1 components; box found",
+  "bytes": 37190,
+  "alpha_fill": 0.796,
+  "skin_share": 0.15,
+  "measured": "skin in the frame"
+ },
+ "B090-P008": {
+  "asset_type": "tile",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B090-P008.webp",
+  "note": "crop tile; box found, 10% of page",
+  "bytes": 81738,
+  "measured": "backdrop not plain"
+ },
+ "B090-P009": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B090-P009.webp",
+  "note": "1 components; box found; 89% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 165626,
+  "alpha_fill": 0.72,
+  "skin_share": 0.892,
+  "measured": "skin in the frame"
+ },
+ "B090-P010": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B090-P010.webp",
+  "note": "1 components; box found; 88% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 182914,
+  "alpha_fill": 0.707,
+  "skin_share": 0.883,
+  "measured": "skin in the frame"
+ },
+ "B090-P011": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B090-P011.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 65078,
+  "alpha_fill": 0.784,
+  "skin_share": 0.0,
+  "measured": "clean"
+ },
+ "B090-P012": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B090-P012.webp",
+  "note": "1 components; box found; cropped to the bottom band of a whole figure; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 72514,
+  "alpha_fill": 0.818,
+  "skin_share": 0.0,
+  "measured": "clean"
+ },
+ "B090-P013": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B090-P013.webp",
+  "note": "cut from the flat-lay panel of a split product page",
+  "bytes": 63138,
+  "alpha_fill": 0.841,
+  "skin_share": 0.0,
+  "measured": "clean"
  }
 }

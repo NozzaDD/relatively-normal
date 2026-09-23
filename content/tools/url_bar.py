@@ -74,6 +74,20 @@ def vocabulary():
     return v
 
 
+def eye_read():
+    """Domains the viewing pass read off the pages by eye. These outrank the
+    catalogue's own shop column, which is built from this file's readings and
+    so can carry an OCR slip back into the vocabulary (ilysilk.com)."""
+    import glob
+    v = set()
+    for f in glob.glob(CAT + '/_viewing_rows/rows_*.txt'):
+        for ln in open(f):
+            p = [x.strip().lower() for x in ln.split('|')]
+            if len(p) > 9 and WORD.match(p[9]):
+                v.add(p[9])
+    return v
+
+
 def edits(a, b):
     """Levenshtein, small strings only."""
     if abs(len(a) - len(b)) > 2:
@@ -87,12 +101,20 @@ def edits(a, b):
     return prev[-1]
 
 
-def snap(d, vocab):
+def snap(d, vocab, eye=()):
     """unigqlo.com is uniqlo.com with one letter hallucinated; snap it back."""
-    if not d or d in vocab:
+    if not d or d in eye:
+        return d
+    # two slips only on a long name: tods.com is two edits from bode.com, and
+    # snapping it filed a page of Tod's loafers under Bode
+    room = 2 if len(d.split('.')[0]) >= 8 else 1
+    near = sorted((edits(d, v), v) for v in eye)
+    if near and near[0][0] <= room:
+        return near[0][1]
+    if d in vocab:
         return d
     near = sorted((edits(d, v), v) for v in vocab)
-    return near[0][1] if near and near[0][0] <= 2 else d
+    return near[0][1] if near and near[0][0] <= room else d
 
 
 WORD = re.compile(r'^(?:[a-z0-9][a-z0-9-]{1,30}\.)+[a-z]{2,10}$')
@@ -159,9 +181,9 @@ def main():
         if k % 20 == 0 or k == len(todo):
             json.dump(out, open(OUT, 'w'), indent=1)
             print(f'  {k}/{len(todo)}', flush=True)
-    vocab = vocabulary()
+    vocab, eye = vocabulary(), eye_read()
     for v in imgs.values():
-        v['domain'] = snap(v.get('domain', ''), vocab)
+        v['domain'] = snap(v.get('domain', ''), vocab, eye)
     per = {}
     for b in batches:
         c = collections.Counter(imgs.get(i, {}).get('domain', '') for i in b['images'])

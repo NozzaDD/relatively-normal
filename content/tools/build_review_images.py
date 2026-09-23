@@ -264,13 +264,17 @@ def boxes_for(full, slot):
 
 
 # ------------------------------------------------------------- listing grids
-def grid_cells(im, min_cells=4):
+def grid_cells(im, min_cells=4, strict=True):
     """The cells of a listing grid, or [] when the page is not plainly one.
 
     Uniform cells on a plain backdrop: the content that differs from the page's
     modal colour breaks into blobs of about one size, laid out in at least two
     rows and two columns. Anything less regular is not offered — a wrong
     suggestion costs more taps than none.
+
+    `strict=False` is for a page the viewing pass already typed as a listing
+    grid, so the page need not prove it: two alike blobs side by side are
+    enough, and header text or a half-scrolled row no longer vetoes the rest.
     """
     import numpy as np
     from scipy import ndimage
@@ -302,7 +306,7 @@ def grid_cells(im, min_cells=4):
     mw = float(np.median([c[2] for c in cells]))
     mh = float(np.median([c[3] for c in cells]))
     alike = [c for c in cells if 0.55 * mw <= c[2] <= 1.6 * mw and 0.55 * mh <= c[3] <= 1.6 * mh]
-    if len(alike) < min_cells or len(alike) < 0.7 * len(cells):
+    if len(alike) < min_cells or (strict and len(alike) < 0.7 * len(cells)):
         return []
 
     def bands(vals, tol):
@@ -315,7 +319,7 @@ def grid_cells(im, min_cells=4):
         return out
     rows = bands([c[1] + c[3] / 2 for c in alike], mh * 0.5)
     cols = bands([c[0] + c[2] / 2 for c in alike], mw * 0.5)
-    if len(rows) < 2 or len(cols) < 2:
+    if (len(rows) < 2 and strict) or len(cols) < 2:
         return []
     pad = 0.015
     out = []
