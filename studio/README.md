@@ -79,6 +79,25 @@ catalogue's), else the cut-out. The built thumbnail is shown only while it is a
 picture of that same view; a choice made since the last rebuild is cut live from
 the picture itself.
 
+**The image filter picks the picture.** With *Any image* set to a picture
+type, every tile shows that product's picture of that type, and a tap places
+exactly that picture: *flat cut-out* shows the cut-out of its flat lay (or of
+its grid cell), *on-model cut-out* the cut-out of the photo on a person, *tile*
+the crop tile. A product is under the filter when it has a picture of that
+type, whatever its catalogue cut-out is. With no filter, the tile and the tap
+both use the product's primary picture: your choice, else the cut-out.
+
+**The cut-out is offered.** Where the shelf picture is a box or a crop tile
+and the catalogue holds a cut-out of that same picture, **Other picture** (and
+the badge on the tile) lists it as *cut-out*; the button says what the next
+picture is. A colourway row's pictures are only those of its own colour, and a
+listing-grid cell's only picture is its own cell.
+
+**Decisions follow their picture.** When a split moves a picture to another
+row, a box or whole-picture choice made on it in this browser moves with it
+the next time the desk loads (`data/picture-migration.json`), once. Hiding,
+taking the cut-out and a slot stay with the row.
+
 **Proportions come from pixels.** A piece's aspect is measured on the decoded
 image it shows (`pixelAspect()` in `model.js`) when it is placed, when Other
 picture switches it, when a saved board or an opened file loads, and again at

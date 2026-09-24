@@ -86,25 +86,59 @@ def batch(paths, sig, brand_of=None, peak=17, min_len=3, gap_max=8):
     idx = sorted(cuts) + [n]
     raw = [paths[idx[k]:idx[k + 1]] for k in range(len(idx) - 1)]
     merged = []                        # absorb runts into the previous batch
+    def other_shop(a, b):
+        pa = brand_of(a[-1]) if brand_of else ''
+        pb = brand_of(b[0]) if brand_of else ''
+        return bool(pa and pb and pa != pb)
     for b in raw:
-        if merged and len(b) < min_len and len(merged[-1]) >= min_len:
+        # a runt joins the batch before it, never across a change of shop
+        if merged and len(b) < min_len and len(merged[-1]) >= min_len and not other_shop(merged[-1], b):
             merged[-1].extend(b)
         else:
             merged.append(b)
+    if brand_of:
+        # one shop, one sitting: neighbouring batches the address bar puts in
+        # the same shop are one batch, however much its page layout varies
+        out = []
+        for b in merged:
+            da = {brand_of(x) for x in out[-1]} - {''} if out else set()
+            db = {brand_of(x) for x in b} - {''}
+            if out and da and da == db:
+                out[-1].extend(b)
+            else:
+                out.append(b)
+        merged = out
     return [b for b in merged if b]
 
 
 MAX_PER_PRODUCT = 5      # a long run of near-identical listing grids is not one product
 
 
-def products(bat, sig, main_max=10, colour_max=26):
-    """Merge adjacent shots of the same garment."""
+def products(bat, sig, main_max=10, colour_max=26, text=None):
+    """Merge adjacent shots of the same garment.
+
+    The page's own text decides first (`text`, from page_text.py): two pages
+    that name different products, colours or product numbers are two products
+    however alike their layout, and two that agree on one of those and
+    contradict none are one. Only where neither page says anything legible
+    about itself does the layout and colour of the page decide, as before —
+    consecutive pages from one shop share every pixel of their furniture, which
+    is how three Levi's jeans became one product."""
+    import page_text as T
     groups = [[bat[0]]]
     for prev, p in zip(bat, bat[1:]):
         dmain = imglib.ham(sig[p]['main'], sig[prev]['main'])
         ca, cb = sig[p]['avg'], sig[prev]['avg']
         dcol = sum(abs(a - b) for a, b in zip(ca, cb))
-        if seq(p) - seq(prev) <= 2 and (dmain <= main_max or dcol <= colour_max):
+        near = seq(p) - seq(prev) <= 2
+        fa, fb = (text or {}).get(prev), (text or {}).get(p)
+        if fa and fb and T.disagree(fa, fb):
+            same = False
+        elif fa and fb and T.legible_in_both(fa, fb):
+            same = near
+        else:
+            same = near and (dmain <= main_max or dcol <= colour_max)
+        if same:
             groups[-1].append(p)
         else:
             groups.append([p])
@@ -184,10 +218,22 @@ def append(extra=()):
     sig = old
     bi = max(int(o['batch_id'][1:]) for o in out)
     added = []
-    for bat in batch(new, sig):
+    import page_text as T
+    import url_bar as U
+    # the address bar names the shop: a batch never spans two domains
+    bars = json.load(open(OUT + '/_url_bars.json')) if os.path.exists(OUT + '/_url_bars.json') else {'images': {}}
+    vocab, eye = U.vocabulary(), U.eye_read()
+    for p in new:
+        if p not in bars['images']:
+            d, raw = U.read_bar(ROOT + '/' + p)
+            bars['images'][p] = {'domain': U.snap(d, vocab, eye), 'raw': raw}
+    json.dump(bars, open(OUT + '/_url_bars.json', 'w'), indent=1)
+    dom = {p: bars['images'][p]['domain'] for p in new}
+    text = T.ensure(new)
+    for bat in batch(new, sig, brand_of=lambda p: dom.get(p, '')):
         bi += 1
         bid = f'B{bi:03d}'
-        for pi, grp in enumerate(products(bat, sig), 1):
+        for pi, grp in enumerate(products(bat, sig, text=text), 1):
             added.append(dict(batch_id=bid, product_id=f'{bid}-P{pi:03d}', images=grp))
     out.extend(added)
     json.dump(out, open(OUT + '/batches.json', 'w'), indent=1)

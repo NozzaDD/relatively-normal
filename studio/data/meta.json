@@ -1,6 +1,6 @@
 {
  "built_from": "content/catalogue",
- "products": 2007,
+ "products": 2154,
  "inspiration": 112,
  "slots": [
   "accessory",
@@ -32,6 +32,7 @@
   "'S MAX MARA",
   "A.P.C.",
   "ARKET",
+  "ARMA",
   "ASPESI",
   "BARENA VENEZIA",
   "BODE",
@@ -41,6 +42,8 @@
   "Drumohr",
   "Extreme Cashmere",
   "FAIRFAX & FAVOR",
+  "Flattered",
+  "G.H.BASS",
   "GABRIELA HEARST",
   "Gran Sasso",
   "HARLEY OF SCOTLAND",
@@ -75,6 +78,7 @@
   "SPORTMAX",
   "STONE ISLAND; HARLEY OF SCOTLAND; DR\u00d4LE DE MONSIEUR",
   "STONE ISLAND; HARLEY OF SCOTLAND; HARLEY OF SCOTLAND FOR CARE OF CARL",
+  "STUDIO AR",
   "STUDIO NICHOLSON",
   "S\u00c9ZANE",
   "S\u00e9zane",
@@ -106,13 +110,13 @@
   "cutout_model",
   "tile"
  ],
- "clean": 860,
- "with_full": 1694,
- "hidden": 233,
+ "clean": 933,
+ "with_full": 1833,
+ "hidden": 255,
  "recoloured": 193,
- "derived": 1005,
- "images": 1165,
- "whole_cutouts": 491,
- "several": 31,
- "duplicates": 94
+ "derived": 1071,
+ "images": 1209,
+ "whole_cutouts": 1575,
+ "several": 32,
+ "duplicates": 80
 }

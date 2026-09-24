@@ -222,18 +222,90 @@ export function choiceBase(c) {
  * the catalogue's), else the cut-out.
  * @returns {{variant: string, crop: number[]|null, image: number, base: string}}
  */
-export function shelfView(p, local, picture) {
+export function shelfView(p, local, picture, type) {
+  if (picture === 'cut') {
+    const base = shelfView(p, local, undefined, type);
+    return cutoutOf(p, base) || base;
+  }
   if (picture !== undefined && picture !== null && p.images && p.images[picture]) {
     const e = p.images[picture];
     return e.whole ? { variant: 'whole', crop: [0, 0, 1, 1], image: picture, base: 'whole' }
       : { variant: 'full', crop: [0, 0, 1, 1], image: picture, base: 'photo' };
   }
+  // a filter that names a picture type decides the picture, for the tile and
+  // for the tap alike; the stylist's own choice is what shows without one
+  if (type) {
+    const v = pictureOfType(p, type);
+    if (v) return v;
+  }
+  return primaryView(p, local);
+}
+
+/** The product's own picture on the shelf: her choice, else the cut-out. */
+function primaryView(p, local) {
   const c = effectiveChoice(p, local);
   const box = choiceBox(p, c);
   const image = (c && c.image) || p.image || 0;
   if (box) return { variant: c.choice, crop: box, image, base: choiceBase(c) };
   if (c && c.choice === 'whole') return { variant: 'whole', crop: [0, 0, 1, 1], image, base: 'whole' };
   return { variant: 'cutout', crop: null, image: 0, base: 'photo' };
+}
+
+const CUTOUT = Object.freeze({ variant: 'cutout', crop: null, image: 0, base: 'photo' });
+/** The picture types the image filter names, and the pictures that are of each. */
+export const PICTURE_TYPES = { cutout_flat: ['flat lay', 'cell'], cutout_model: ['on-model'] };
+
+/**
+ * The view of a product in the picture type a filter names, or null when it
+ * has no picture of that type. The catalogue cut-out counts when it is that
+ * type and was not cut from a picture typed as another; otherwise a whole
+ * cut-out of a picture of that type.
+ */
+export function pictureOfType(p, type) {
+  if (!type) return null;
+  if (type === 'tile') return p.asset_type === 'tile' ? { ...CUTOUT } : null;
+  const want = PICTURE_TYPES[type] || [];
+  const imgs = p.images || [];
+  const src = imgs[p.image || 0];
+  const other = src && src.type && !want.includes(src.type) && src.type !== 'whole page'
+    && src.type !== 'listing grid';
+  if (p.asset_type === type && !other) return { ...CUTOUT };
+  const i = imgs.findIndex((e) => want.includes(e.type) && e.whole);
+  if (i >= 0) return { variant: 'whole', crop: [0, 0, 1, 1], image: i, base: 'whole' };
+  return p.asset_type === type ? { ...CUTOUT } : null;
+}
+
+/**
+ * The cut-out of the picture a view shows, when the view is a box or a crop
+ * tile and the catalogue holds a cut-out of that same picture: the picture's
+ * whole cut-out, else the product's own cut-out where it was cut from it.
+ */
+export function cutoutOf(p, view) {
+  if (!view) return null;
+  const boxed = view.variant !== 'cutout' && view.variant !== 'whole' && view.base === 'photo';
+  const tile = view.variant === 'cutout' && p.asset_type === 'tile';
+  if (!boxed && !tile) return null;
+  const e = (p.images || [])[view.image || 0];
+  if (e && e.whole) return { variant: 'whole', crop: [0, 0, 1, 1], image: view.image || 0, base: 'whole' };
+  if (boxed && p.asset_type && p.asset_type.startsWith('cutout') && (p.image || 0) === (view.image || 0)) {
+    return { ...CUTOUT };
+  }
+  return null;
+}
+
+/**
+ * What "Other picture" and the shelf badge cycle through after the shelf's
+ * own picture: every picture of the product (fabric close-ups and page text
+ * aside) when there is more than one, and the cut-out of the shelf picture
+ * when that picture is a box or a crop tile. Each is { pick, label }; `pick`
+ * is what shelfView takes as its picture.
+ */
+export function pictureChoices(p, local, type) {
+  const keep = ((p && p.images) || []).map((e, i) => ({ pick: i, label: e.type || 'whole page', entry: e }))
+    .filter((x) => !isDetail(x.entry));
+  const out = keep.length > 1 ? keep : [];
+  if (p && cutoutOf(p, shelfView(p, local, undefined, type))) out.push({ pick: 'cut', label: 'cut-out' });
+  return out;
 }
 
 export const sameView = (a, b) => a.variant === b.variant && a.image === b.image && a.base === b.base
@@ -261,7 +333,9 @@ export function effectiveChoice(p, local) {
   const l = local && local[p.product_id];
   if (l && (l.hidden || l.choice)) return l;
   if (p.hidden) return { hidden: true };
-  if (p.choice) return { choice: p.choice, box: p.custom_box };
+  // the catalogue's choice is on the picture it names (asset_image), not
+  // always the first: without it a box filed on picture 2 was read off picture 1
+  if (p.choice) return { choice: p.choice, box: p.custom_box, image: p.image || 0, base: p.base };
   return null;
 }
 
@@ -291,7 +365,7 @@ export function filterProducts(products, f, local) {
   return products.filter((p) => {
     if (!onShelf(p, local, f.showUnreviewed)) return false;
     if (f.slot && p.slot !== f.slot) return false;
-    if (f.assetType && p.asset_type !== f.assetType) return false;
+    if (f.assetType && !pictureOfType(p, f.assetType)) return false;
     if (f.brand && p.brand !== f.brand) return false;
     if (f.weight && String(p.weight) !== String(f.weight)) return false;
     if (f.formality && String(p.formality) !== String(f.formality)) return false;

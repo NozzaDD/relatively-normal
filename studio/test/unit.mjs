@@ -2,7 +2,8 @@
 import * as M from '../js/model.js';
 import * as C from '../js/colour.js';
 import { filterProducts, emptyFilters, matrixCounts, indexById, shelfView, sameView, onShelf,
-  isReviewed, isSeveral, isDuplicate, choiceBase } from '../js/data.js';
+  isReviewed, isSeveral, isDuplicate, choiceBase, pictureOfType, cutoutOf, pictureChoices } from '../js/data.js';
+import { migratePictures } from '../js/review.js';
 import { parsePrice, buildInfo, buildMarkdown } from '../js/export.js';
 import { indexPalettes, palettesIn, paletteSnapshot, outfitShares, SLOT_WEIGHT } from '../js/palette.js';
 import { stripRows, metrics } from '../js/render.js';
@@ -381,6 +382,40 @@ console.log('\npalettes: on the board');
   const inf0 = buildInfo(bp, byId, {}, { date: new Date(2026, 8, 24) });
   ok('no palette, no line', inf0.palette === null && !buildMarkdown(inf0).includes('Palette'));
   ok('clearing moves nothing', JSON.stringify(bp.elements) === before);
+}
+
+console.log('\ntile follows the filter, the cut-out is offered (24 Sept)');
+{
+  const flat = { type: 'flat lay', path: 'f.jpg', w: 10, h: 10, whole: { path: 'fw.webp', w: 9, h: 9 } };
+  const model = { type: 'on-model', path: 'm.jpg', w: 10, h: 10, whole: { path: 'mw.webp', w: 9, h: 9 } };
+  // a row whose cut-out is of the model photo, with a flat lay among its pictures
+  const p = { product_id: 'F1', asset_type: 'cutout_model', image: 1, images: [flat, model], colours: [] };
+  const vf = shelfView(p, {}, undefined, 'cutout_flat');
+  ok('a flat cut-out filter shows the flat lay\'s own cut-out', vf.variant === 'whole' && vf.image === 0, JSON.stringify(vf));
+  ok('the filter keeps a product that has a picture of that type',
+    filterProducts([{ ...p, clean: true }], { ...emptyFilters(), assetType: 'cutout_flat' }, {}).length === 1);
+  const vm = shelfView(p, {}, undefined, 'cutout_model');
+  ok('an on-model filter shows the catalogue cut-out, which is that type', vm.variant === 'cutout', JSON.stringify(vm));
+  ok('no filter: the primary (her choice, else the cut-out)', shelfView(p, {}).variant === 'cutout');
+  ok('a type the product has no picture of drops it', pictureOfType({ ...p, images: [model] }, 'cutout_flat') === null);
+  const boxed = { ...p, choice: 'item', images: [flat, { ...model, item: [0.1, 0.1, 0.5, 0.5] }] };
+  const base = shelfView(boxed, {});
+  ok('a box on a picture with a cut-out offers that cut-out', !!cutoutOf(boxed, base)
+    && pictureChoices(boxed, {}).some((c) => c.pick === 'cut' && c.label === 'cut-out'));
+  const vc = shelfView(boxed, {}, 'cut');
+  ok('...and choosing it shows the cut-out of that same picture', vc.variant === 'whole' && vc.image === 1, JSON.stringify(vc));
+  const tile = { product_id: 'T1', asset_type: 'tile', image: 0, images: [{ ...model }] };
+  ok('a crop tile offers the cut-out of its picture', pictureChoices(tile, {}).some((c) => c.pick === 'cut'));
+  ok('a cut-out offers nothing more', !pictureChoices({ ...p, images: [model] }, {}).some((c) => c.pick === 'cut'));
+  const ch = { A: { choice: 'item', image: 1 }, B: { hidden: true }, C: { choice: 'full', image: 0 } };
+  const n = migratePictures(ch, { versions: [{ version: 1, moved: {
+    'A#1': { product_id: 'A-V2', image: 0 }, 'B#0': { product_id: 'X', image: 0 }, 'C#0': { product_id: 'C', image: 2 } } }] });
+  ok('a box moves with its picture to the row that now holds it', ch['A-V2'] && ch['A-V2'].choice === 'item'
+    && ch['A-V2'].image === 0 && !ch.A.choice, JSON.stringify(ch));
+  ok('hiding is about the row and stays', ch.B.hidden === true && !ch.X);
+  ok('a picture that moved within its row keeps the choice at its new place', ch.C.image === 2 && n === 2, String(n));
+  const again = migratePictures(ch, { versions: [{ version: 1, moved: { 'A-V2#0': { product_id: 'Z', image: 0 } } }] });
+  ok('a version is applied once', again === 0 && !ch.Z);
 }
 
 console.log(`\nafter 24 Sept: ${pass} passed, ${fail} failed`);

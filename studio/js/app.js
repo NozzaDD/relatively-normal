@@ -5,13 +5,13 @@
 
 import { createStaticSource, indexById, indexInspiration, emptyFilters,
   filterProducts, onShelf, effectiveChoice, isReviewed, derivedProducts,
-  WEIGHT_LABELS, FORMALITY_LABELS, isDetail, applySlots, SLOT_PICK, shelfView, sameView,
+  WEIGHT_LABELS, FORMALITY_LABELS, isDetail, applySlots, SLOT_PICK, shelfView, sameView, pictureChoices,
   isSeveral } from './data.js';
 import * as M from './model.js';
 import { metrics, isTile, matOf, stripRows } from './render.js';
 import { rankByLook } from './colour.js';
 import * as X from './export.js';
-import { createReview, loadChoices, saveChoices, choicesFile, applyCrop, migrateChoices } from './review.js';
+import { createReview, loadChoices, saveChoices, choicesFile, applyCrop, migrateChoices, migratePictures } from './review.js';
 import { indexPalettes, palettesIn, paletteSnapshot, placementText, outfitShares } from './palette.js';
 
 const $ = (id) => document.getElementById(id);
@@ -57,6 +57,11 @@ async function init() {
     const mig = await fetch('data/trim-migration.json').then((r) => (r.ok ? r.json() : null));
     const moved = migrateChoices(S.choices, mig);
     if (moved) { saveChoices(S.choices); toast(`Moved ${moved} box(es) onto the new trim.`, 4000); }
+  } catch (e) { /* no migration file: nothing to move */ }
+  try {
+    const mig = await fetch('data/picture-migration.json').then((r) => (r.ok ? r.json() : null));
+    const moved = migratePictures(S.choices, mig);
+    if (moved) { saveChoices(S.choices); toast(`${moved} decision(s) moved with their picture.`, 4000); }
   } catch (e) { /* no migration file: nothing to move */ }
   loadSettings();
   buildFilterOptions(cat.meta);
@@ -177,9 +182,10 @@ function renderShelf() {
     img.alt = p.garment_type || p.product_id;
     const pics = X_pictures(p);
     const shown = S.shelfPicture[p.product_id];
-    // The tile shows exactly what a tap places: both read shelfView. The built
-    // thumbnail is used only while it is a picture of that same view.
-    const view = shelfView(p, S.choices, shown);
+    // The tile shows exactly what a tap places: both read shelfView, with the
+    // image filter's picture type. The built thumbnail is used only while it
+    // is a picture of that same view.
+    const view = shelfView(p, S.choices, shown, S.filters.assetType);
     img.dataset.view = JSON.stringify(view);
     if (p.thumb && sameView(view, shelfView(p, null))) {
       img.src = S.source.thumbUrl(p);
@@ -206,13 +212,13 @@ function renderShelf() {
     const flag = p.recoloured ? 'simulated' : p.local ? 'new' : p.parent_id ? 'cut'
       : (!p.clean && !isReviewed(p, S.choices)) ? 'unreviewed'
       : p.asset_quality === 'weak' ? 'weak' : '';
-    if (pics.length > 1) {
+    if (pics.length > 0) {
       const b = document.createElement('button');
       b.className = 'pic-flip';
       b.dataset.pic = p.product_id;
-      b.title = 'Show another picture of this product';
       // 1 is the shelf's own picture; the others are the product's pictures
-      const k = shown === undefined ? 0 : pics.findIndex((q) => q.i === shown) + 1;
+      const k = shown === undefined ? 0 : pics.findIndex((q) => q.pick === shown) + 1;
+      b.title = `Show another picture of this product (next: ${pics[k % pics.length].label})`;
       b.textContent = `${k + 1}/${pics.length + 1}`;
       cell.appendChild(b);
     }
@@ -712,11 +718,11 @@ function nextPicture(el) {
   const p = S.productsById[el.product_id];
   const pics = X_pictures(p);
   if (!pics.length) return;
-  const at = el.variant === 'cutout' || el.picture === undefined ? 0
-    : pics.findIndex((q) => q.i === el.picture) + 1;
+  const at = el.picture === undefined ? 0 : pics.findIndex((q) => q.pick === el.picture) + 1;
   const k = (at + 1) % (pics.length + 1);
-  const view = k === 0 ? shelfView(p, S.choices) : shelfView(p, S.choices, pics[k - 1].i);
-  Object.assign(el, view, { picture: k === 0 ? undefined : pics[k - 1].i });
+  const pick = k === 0 ? undefined : pics[k - 1].pick;
+  const view = shelfView(p, S.choices, pick, S.filters.assetType);
+  Object.assign(el, view, { picture: pick });
   // the width the stylist set is kept; the height follows the new picture's
   // pixels as soon as it has loaded (syncAspect)
   el.aspect = M.shownAspect(p, el.variant, el.crop, el.image, el.base) || el.aspect;
@@ -762,21 +768,26 @@ function renderPieceSlots() {
 
 function showPictureButton(uid) {
   const el = uid ? M.byId(S.board, uid) : null;
-  $('elPicture').hidden = !(el && el.kind === 'product'
-    && X_pictures(S.productsById[el.product_id]).length > 0);
+  const p = el && el.kind === 'product' ? S.productsById[el.product_id] : null;
+  const pics = p ? X_pictures(p) : [];
+  const b = $('elPicture');
+  b.hidden = !pics.length;
+  if (!pics.length) return;
+  // say what the next picture is: "cut-out" where the piece is a box whose
+  // picture has a cut-out in the catalogue
+  const at = el.picture === undefined ? 0 : pics.findIndex((q) => q.pick === el.picture) + 1;
+  const next = at + 1 > pics.length ? 'own picture' : pics[at].label;
+  b.textContent = `Other picture · ${next}`;
 }
 
-// Every picture of a product except fabric close-ups and page text, when
-// there is more than one of them to switch between.
-const X_pictures = (p) => {
-  const keep = ((p && p.images) || []).map((e, i) => ({ i, type: e.type || 'whole page', entry: e }))
-    .filter((x) => !isDetail(x.entry));
-  return keep.length > 1 ? keep : [];
-};
+// What Other picture and the badge cycle through: every picture of a product
+// except fabric close-ups and page text, when there is more than one, and the
+// cut-out of the shelf picture when that is a box or a crop tile.
+const X_pictures = (p) => (p ? pictureChoices(p, S.choices, S.filters.assetType) : []);
 
 /** What a tap places: exactly what the tile shows (shelfView, one reading). */
 function placement(p) {
-  return shelfView(p, S.choices, S.shelfPicture[p.product_id]);
+  return shelfView(p, S.choices, S.shelfPicture[p.product_id], S.filters.assetType);
 }
 
 /** The aspect of the tile's picture, if the tile has it decoded. A first guess. */
@@ -875,8 +886,11 @@ function lift(ev) {
   const p = S.productsById[d.pid];
   const g = $('drag');
   g.replaceChildren();
+  // the ghost is the tile's own picture, not the built thumbnail: under a
+  // filter or a badge they differ
+  const tileImg = d.cell.querySelector('img');
   const img = document.createElement('img');
-  img.src = S.source.thumbUrl(p);
+  img.src = tileImg ? tileImg.currentSrc || tileImg.src : S.source.thumbUrl(p);
   g.appendChild(img);
   g.style.left = `${ev.clientX}px`;
   g.style.top = `${ev.clientY}px`;
@@ -1266,10 +1280,10 @@ function wire() {
     if (!pics.length) return;
     // the shelf's own picture, then each picture in turn, then back
     const cur = S.shelfPicture[p.product_id];
-    const at = cur === undefined ? 0 : pics.findIndex((q) => q.i === cur) + 1;
+    const at = cur === undefined ? 0 : pics.findIndex((q) => q.pick === cur) + 1;
     const k = (at + 1) % (pics.length + 1);
     if (k === 0) delete S.shelfPicture[p.product_id];
-    else S.shelfPicture[p.product_id] = pics[k - 1].i;
+    else S.shelfPicture[p.product_id] = pics[k - 1].pick;
     renderShelf();
   });
 
