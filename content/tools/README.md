@@ -360,3 +360,19 @@ Order for an ingest: `cluster_products.py --append` → viewing rows → `build_
 - `build_studio.py` exports `hold`, the reason the gate kept a row in Review; the desk shows it under the cell.
 
 Order after a grid ingest: `read_grids.py --ingest` → `eye_gate.py --sheets DIR` → the contact-sheet pass into `HELD` → `eye_gate.py` → `build_products.py` → `shelf_checks.py` → `build_studio.py`.
+
+## Added 24 September 2026 (evening) — palette matching, remove and back to Review, page text
+
+| Script | What it does |
+|---|---|
+| `shelf_text.py` | OCR of every shelf tile as the desk shows it (the cut-out, or the box chosen on the photo), and of every other picture a tile can switch to. Page text is a page word ("colore", "taglia", "size", "add to cart", also cut off at the box's edge: "guid"), a price, or two or more size labels; a lone word is recorded, not acted on. `eng` only and 25 s per picture: the first run with three languages and a second layout pass sat fifteen minutes on one knit texture. Writes `_shelf_text.json`. |
+| `send_to_review.py` | `send(version, {pid: reason})`: the products go back to Review — their entry in `asset-choices.json` becomes `review` with the reason (slot, boxes and "not a duplicate" kept), and `review-sends.json` gets a version the desk applies once over a browser's own old decision. |
+
+Changed:
+
+- `build_products.py`: `split_rows` took an undefined `filed` and crashed on the first box drawn since 24 Sept, which is why no *Apply shelf choices (auto)* commit followed the owner's review push. Choices now reach variant, cell and split rows too, and `review` becomes `shelf = review` with `review_reason`. A box drawn on the **cut-out** (`base: asset`) is cut from the parent's cut-out; it used to be cut from the full photo at the same fractions, which is how "Guida alle Taglie" and a size row reached the shelf as Aspesi trousers (B011-P002-S1..S3). The desk's `derivedProducts` had the same mistake.
+- `shelf_checks.py`: a product page zoomed onto its colour-swatch row is `swatch row`, never a listing grid (`is_swatch_row`: the viewing pass names one garment "shown in N colourways" or a "colour swatch row", and no tiles). `grid_cells.py` and `read_grids.py` skip it. A piece cut by hand is measured by its own box, not its parent's whole page — measured whole, every box on B022-P002 and B046-P010 was a "duplicate" of its siblings.
+- `panels.py`: a panel with eight or more confident words is `text`, whatever area they cover. B018-P001's "Composizione" block covered 3.7% of its panel, cut into one clean piece, and was the product's shelf picture.
+- `build_studio.py` exports `review` (why it is back in Review) and `removed` (removed by the owner, as against hidden by the build), and copies `review-sends.json`.
+
+Order after a push of `asset-choices.json`: `build_products.py` → `shelf_checks.py` → `build_studio.py`. After an ingest, `shelf_text.py` → `send_to_review.py` for what it finds.

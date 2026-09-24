@@ -79,14 +79,6 @@
    "choice": "cutout"
   },
   "B011-P002": {
-   "choice": "custom",
-   "box": [
-    0.075,
-    0.4435,
-    0.1604,
-    0.24
-   ],
-   "base": "asset",
    "splits": [
     {
      "n": 1,
@@ -127,7 +119,8 @@
      "colour_name": "",
      "base": "asset"
     }
-   ]
+   ],
+   "review": "colour-swatch thumbnails on a product page: the picture is Aspesi's colour picker (\"Colore NAVY\", \"Taglia 36\"), not a listing grid. Fixed; remove it, or keep the navy the page shows."
   },
   "B011-P003": {
    "choice": "item"
@@ -1560,6 +1553,18 @@
   },
   "B093-P001": {
    "choice": "cutout"
+  },
+  "B018-P001": {
+   "review": "page text in the picture: the shelf picture was the page's \"Composizione\" text block, which panels.py had typed as a flat lay. Fixed; the cut-out is now the flat-lay panel of the polo \u2014 check it."
+  },
+  "B011-P002-S1": {
+   "review": "cut from colour-swatch thumbnails on a product page (B011-P002 is Aspesi's colour picker, not a listing grid), and the box drawn on the cut-out was cropped from the full photo, so the picture took in \"Guida alle Taglie\" and the size row. Both fixed; the thumbnails are not products."
+  },
+  "B011-P002-S2": {
+   "review": "cut from colour-swatch thumbnails on a product page (B011-P002 is Aspesi's colour picker, not a listing grid), and the box drawn on the cut-out was cropped from the full photo, so the picture took in \"Guida alle Taglie\" and the size row. Both fixed; the thumbnails are not products."
+  },
+  "B011-P002-S3": {
+   "review": "cut from colour-swatch thumbnails on a product page (B011-P002 is Aspesi's colour picker, not a listing grid), and the box drawn on the cut-out was cropped from the full photo, so the picture took in \"Guida alle Taglie\" and the size row. Both fixed; the thumbnails are not products."
   }
  }
 }

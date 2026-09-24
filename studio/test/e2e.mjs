@@ -56,7 +56,8 @@ ok('inspiration loaded', counts.inspiration === 112, JSON.stringify(counts));
 // products the data marks clean — not a hand-set range that drifts — plus the
 // ones asset-choices.json has already decided (reviewed on the desk)
 const cleanCount = await page.evaluate(() =>
-  window.__studio.products.filter((p) => (p.clean || p.choice) && !p.hidden && !(p.several || []).length
+  window.__studio.products.filter((p) => (p.clean || p.choice) && !p.hidden && !p.review
+    && !((p.several || []).length && p.choice !== 'custom')
     && !p.duplicate_of).length);
 ok('only measured-clean cut-outs on the shelf by default',
   counts.cells === cleanCount && cleanCount > 0, `${counts.cells} cells, ${cleanCount} clean`);
@@ -312,13 +313,42 @@ console.log('\n11b. palette');
   await page.check('#fPalette');
   await page.waitForTimeout(250);
   const rank = await page.evaluate(async () => {
-    const { hexToOklab, productDistanceToLook } = await import('./js/colour.js');
+    const P = await import('./js/palette.js');
     const S = window.__studio;
-    const labs = S.board.palette.colours.map((c) => hexToOklab(c.hex));
-    const ds = S.shown.slice(0, 30).map((p) => productDistanceToLook(p, labs));
-    return { sorted: ds.every((d, i) => !i || d >= ds[i - 1] - 1e-12), look: document.querySelector('#fMatch').checked };
+    const order = P.matchOrder(S.board.palette);
+    // each piece: the first colour in matching order it matches, and how close
+    const at = (p) => { for (let g = 0; g < order.length; g++) { const d = P.swatchDistance(p, order[g]);
+      if (d < Infinity) return [g, d]; } return null; };
+    const ks = S.shown.map(at);
+    const sorted = ks.every((k, i) => k && (!i || k[0] > ks[i - 1][0] || (k[0] === ks[i - 1][0] && k[1] >= ks[i - 1][1] - 1e-12)));
+    // chromatic colours first: no piece matched to a neutral before one matched to a colour
+    const neutralFirst = ks.findIndex((k) => k && P.isNeutralLab(order[k[0]]._lab));
+    const chromaAfter = neutralFirst >= 0 && ks.slice(neutralFirst).some((k) => !P.isNeutralLab(order[k[0]]._lab));
+    return { sorted, chromaAfter, n: S.shown.length, look: document.querySelector('#fMatch').checked };
   });
-  ok('"Matches this palette" ranks the shelf by distance to its colours', rank.sorted && !rank.look, JSON.stringify(rank));
+  ok('"Matches this palette" ranks chromatic colours first, closest first, and drops what matches nothing',
+    rank.sorted && !rank.chromaAfter && !rank.look && rank.n > 0, JSON.stringify(rank));
+
+  // tap a swatch: that colour only, closest first, with its count on the swatch
+  const counts = await page.$$eval('#palRef [data-swatch] .pal-count', (els) => els.map((e) => Number(e.textContent)));
+  await page.click('#palRef [data-swatch="0"]');
+  await page.waitForTimeout(200);
+  const one = await page.evaluate(async () => {
+    const P = await import('./js/palette.js');
+    const S = window.__studio;
+    const sw = S.board.palette.colours[0];
+    const ds = S.shown.map((p) => P.swatchDistance(p, sw));
+    return { n: S.shown.length, finite: ds.every((d) => d < Infinity),
+      sorted: ds.every((d, i) => !i || d >= ds[i - 1] - 1e-12),
+      on: document.querySelector('#palRef [data-swatch="0"]').classList.contains('on'),
+      count: document.getElementById('shelfCount').textContent };
+  });
+  ok('tapping a swatch filters the shelf to that colour, closest first',
+    one.n > 0 && one.finite && one.sorted && one.on && one.n === counts[0], JSON.stringify({ ...one, counts }));
+  await page.click('#palRef [data-swatch="0"]');
+  await page.waitForTimeout(200);
+  ok('tapping it again brings the ranked shelf back', await page.evaluate(() => window.__studio.swatch === null
+    && !document.querySelector('#palRef .pal-swatch.on')));
 
   const read = await page.evaluate(() => ({
     rows: document.querySelectorAll('#paletteRead .pr-item').length,

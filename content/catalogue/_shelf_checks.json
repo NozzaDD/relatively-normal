@@ -1,31 +1,5 @@
 {
  "duplicates": {
-  "B009-P001": {
-   "cause": "already in the catalogue",
-   "cluster": [
-    "B001-P001",
-    "B009-P001"
-   ],
-   "keeper": "B001-P001",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
-   }
-  },
-  "B009-P003": {
-   "cause": "already in the catalogue",
-   "cluster": [
-    "B001-P003",
-    "B009-P003"
-   ],
-   "keeper": "B001-P003",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
-   }
-  },
   "B009-P004": {
    "cause": "already in the catalogue",
    "cluster": [
@@ -39,55 +13,13 @@
     "struct": 0.0
    }
   },
-  "B010-P001-V2": {
-   "cause": "colourway split",
-   "cluster": [
-    "B010-P001",
-    "B010-P001-V2",
-    "B010-P001-V3"
-   ],
-   "keeper": "B010-P001",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
-   }
-  },
   "B010-P001-V3": {
    "cause": "colourway split",
    "cluster": [
     "B010-P001",
-    "B010-P001-V2",
     "B010-P001-V3"
    ],
    "keeper": "B010-P001",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
-   }
-  },
-  "B010-P003-V2": {
-   "cause": "colourway split",
-   "cluster": [
-    "B010-P003",
-    "B010-P003-V2"
-   ],
-   "keeper": "B010-P003",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
-   }
-  },
-  "B010-P005-V2": {
-   "cause": "colourway split",
-   "cluster": [
-    "B010-P005",
-    "B010-P005-V2",
-    "B010-P005-V4"
-   ],
-   "keeper": "B010-P005",
    "measured": {
     "de": 0.0,
     "iou": 1.0,
@@ -98,10 +30,54 @@
    "cause": "colourway split",
    "cluster": [
     "B010-P005",
-    "B010-P005-V2",
     "B010-P005-V4"
    ],
    "keeper": "B010-P005",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B011-P002-S1": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B011-P002",
+    "B011-P002-S1",
+    "B011-P002-S2",
+    "B011-P002-S3"
+   ],
+   "keeper": "B011-P002",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B011-P002-S2": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B011-P002",
+    "B011-P002-S1",
+    "B011-P002-S2",
+    "B011-P002-S3"
+   ],
+   "keeper": "B011-P002",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B011-P002-S3": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B011-P002",
+    "B011-P002-S1",
+    "B011-P002-S2",
+    "B011-P002-S3"
+   ],
+   "keeper": "B011-P002",
    "measured": {
     "de": 0.0,
     "iou": 1.0,
@@ -121,39 +97,11 @@
     "struct": 0.24
    }
   },
-  "B012-P003-V2": {
-   "cause": "colourway split",
-   "cluster": [
-    "B012-P003",
-    "B012-P003-V2"
-   ],
-   "keeper": "B012-P003",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
-   }
-  },
   "B014-P001-V3": {
    "cause": "colourway split",
    "cluster": [
     "B014-P001",
-    "B014-P001-V3",
-    "B014-P001-V4"
-   ],
-   "keeper": "B014-P001",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
-   }
-  },
-  "B014-P001-V4": {
-   "cause": "colourway split",
-   "cluster": [
-    "B014-P001",
-    "B014-P001-V3",
-    "B014-P001-V4"
+    "B014-P001-V3"
    ],
    "keeper": "B014-P001",
    "measured": {
@@ -175,27 +123,12 @@
     "struct": 0.0
    }
   },
-  "B017-P001-V2": {
-   "cause": "colourway split",
-   "cluster": [
-    "B017-P001",
-    "B017-P001-V2"
-   ],
-   "keeper": "B017-P001",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
-   }
-  },
   "B020-P006-V2": {
    "cause": "colourway split",
    "cluster": [
     "B020-P006",
     "B020-P006-V2",
-    "B021-P001",
-    "B021-P001-V2",
-    "B021-P001-V3"
+    "B021-P001"
    ],
    "keeper": "B020-P006",
    "measured": {
@@ -209,99 +142,13 @@
    "cluster": [
     "B020-P006",
     "B020-P006-V2",
-    "B021-P001",
-    "B021-P001-V2",
-    "B021-P001-V3"
+    "B021-P001"
    ],
    "keeper": "B020-P006",
    "measured": {
     "de": 0.37,
     "iou": 0.988,
     "struct": 0.2
-   }
-  },
-  "B021-P001-V2": {
-   "cause": "already in the catalogue",
-   "cluster": [
-    "B020-P006",
-    "B020-P006-V2",
-    "B021-P001",
-    "B021-P001-V2",
-    "B021-P001-V3"
-   ],
-   "keeper": "B020-P006",
-   "measured": {
-    "de": 0.37,
-    "iou": 0.988,
-    "struct": 0.2
-   }
-  },
-  "B021-P001-V3": {
-   "cause": "already in the catalogue",
-   "cluster": [
-    "B020-P006",
-    "B020-P006-V2",
-    "B021-P001",
-    "B021-P001-V2",
-    "B021-P001-V3"
-   ],
-   "keeper": "B020-P006",
-   "measured": {
-    "de": 0.37,
-    "iou": 0.988,
-    "struct": 0.2
-   }
-  },
-  "B021-P002-V2": {
-   "cause": "colourway split",
-   "cluster": [
-    "B021-P002",
-    "B021-P002-V2"
-   ],
-   "keeper": "B021-P002",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
-   }
-  },
-  "B021-P005-V2": {
-   "cause": "colourway split",
-   "cluster": [
-    "B021-P005",
-    "B021-P005-V2"
-   ],
-   "keeper": "B021-P005",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
-   }
-  },
-  "B021-P006-V2": {
-   "cause": "colourway split",
-   "cluster": [
-    "B021-P006",
-    "B021-P006-V2"
-   ],
-   "keeper": "B021-P006",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
-   }
-  },
-  "B021-P011-V2": {
-   "cause": "colourway split",
-   "cluster": [
-    "B021-P011",
-    "B021-P011-V2"
-   ],
-   "keeper": "B021-P011",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
    }
   },
   "B023-P003-C0": {
@@ -460,19 +307,6 @@
     "struct": 1.21
    }
   },
-  "B025-P008-V2": {
-   "cause": "colourway split",
-   "cluster": [
-    "B025-P008",
-    "B025-P008-V2"
-   ],
-   "keeper": "B025-P008",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
-   }
-  },
   "B028-P012-V2": {
    "cause": "colourway split",
    "cluster": [
@@ -497,32 +331,6 @@
     "de": 0.02,
     "iou": 0.999,
     "struct": 0.15
-   }
-  },
-  "B032-P001": {
-   "cause": "already in the catalogue",
-   "cluster": [
-    "B031-P009",
-    "B032-P001"
-   ],
-   "keeper": "B031-P009",
-   "measured": {
-    "de": 0.07,
-    "iou": 0.994,
-    "struct": 0.25
-   }
-  },
-  "B035-P004-V2": {
-   "cause": "colourway split",
-   "cluster": [
-    "B035-P004",
-    "B035-P004-V2"
-   ],
-   "keeper": "B035-P004",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
    }
   },
   "B036-P002-C0": {
@@ -564,19 +372,6 @@
     "struct": 0.35
    }
   },
-  "B042-P032-V2": {
-   "cause": "colourway split",
-   "cluster": [
-    "B042-P032",
-    "B042-P032-V2"
-   ],
-   "keeper": "B042-P032",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
-   }
-  },
   "B042-P035": {
    "cause": "already in the catalogue",
    "cluster": [
@@ -588,19 +383,6 @@
     "de": 0.32,
     "iou": 0.98,
     "struct": 0.39
-   }
-  },
-  "B043-P004-V4": {
-   "cause": "colourway split",
-   "cluster": [
-    "B043-P004",
-    "B043-P004-V4"
-   ],
-   "keeper": "B043-P004",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
    }
   },
   "B044-P005-I1-C2": {
@@ -640,97 +422,6 @@
     "de": 0.01,
     "iou": 0.997,
     "struct": 0.09
-   }
-  },
-  "B044-P010-V2": {
-   "cause": "colourway split",
-   "cluster": [
-    "B044-P010",
-    "B044-P010-V2"
-   ],
-   "keeper": "B044-P010",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
-   }
-  },
-  "B053-P003-V2": {
-   "cause": "colourway split",
-   "cluster": [
-    "B053-P003",
-    "B053-P003-V2"
-   ],
-   "keeper": "B053-P003",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
-   }
-  },
-  "B054-P005-V3": {
-   "cause": "colourway split",
-   "cluster": [
-    "B054-P005",
-    "B054-P005-V3"
-   ],
-   "keeper": "B054-P005",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
-   }
-  },
-  "B055-P003-V5": {
-   "cause": "colourway split",
-   "cluster": [
-    "B055-P003-V4",
-    "B055-P003-V5"
-   ],
-   "keeper": "B055-P003-V4",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
-   }
-  },
-  "B055-P004-V3": {
-   "cause": "colourway split",
-   "cluster": [
-    "B055-P004",
-    "B055-P004-V3"
-   ],
-   "keeper": "B055-P004",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
-   }
-  },
-  "B057-P001-V2": {
-   "cause": "colourway split",
-   "cluster": [
-    "B057-P001",
-    "B057-P001-V2"
-   ],
-   "keeper": "B057-P001",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
-   }
-  },
-  "B062-P001-V2": {
-   "cause": "colourway split",
-   "cluster": [
-    "B062-P001",
-    "B062-P001-V2"
-   ],
-   "keeper": "B062-P001",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
    }
   },
   "B063-P005-C0": {
@@ -1008,19 +699,6 @@
     "struct": 0.0
    }
   },
-  "B090-P010-V2": {
-   "cause": "colourway split",
-   "cluster": [
-    "B090-P010",
-    "B090-P010-V2"
-   ],
-   "keeper": "B090-P010",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
-   }
-  },
   "B092-P002-V2": {
    "cause": "colourway split",
    "cluster": [
@@ -1072,38 +750,7 @@
   "B011-P002": {
    "group": "B011-P002",
    "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B011-P006": {
-   "group": "B011-P006",
-   "why": [
-    "pieces: the cut-out is 6 separate pieces"
-   ]
-  },
-  "B012-P002": {
-   "group": "B012-P002",
-   "why": [
-    "pieces: the cut-out is 2 separate pieces"
-   ]
-  },
-  "B015-P002": {
-   "group": "B015-P002",
-   "why": [
-    "pieces: the cut-out is 3 separate pieces"
-   ]
-  },
-  "B015-P003": {
-   "group": "B015-P003",
-   "why": [
-    "pieces: the cut-out is 2 separate pieces"
-   ]
-  },
-  "B016-P002": {
-   "group": "B016-P002",
-   "why": [
-    "pieces: the cut-out is 3 separate pieces",
-    "colour regions: 3 separate colour regions and no skin \u2014 a fan of colourways"
+    "swatch row: colour-swatch thumbnails on a product page \u2014 not products"
    ]
   },
   "B022-P013-C0": {
@@ -1118,46 +765,10 @@
     "pieces: the cut-out is 2 separate pieces"
    ]
   },
-  "B026-P009": {
-   "group": "B026-P009",
-   "why": [
-    "pieces: the cut-out is 2 separate pieces"
-   ]
-  },
-  "B031-P002-V2": {
-   "group": "B031-P002",
-   "why": [
-    "colour regions: 3 separate colour regions and no skin \u2014 a fan of colourways"
-   ]
-  },
   "B036-P005-C0": {
    "group": "B036-P005",
    "why": [
     "colour regions: 4 separate colour regions and no skin \u2014 a fan of colourways"
-   ]
-  },
-  "B037-P002": {
-   "group": "B037-P002",
-   "why": [
-    "pieces: the cut-out is 2 separate pieces"
-   ]
-  },
-  "B037-P007": {
-   "group": "B037-P007",
-   "why": [
-    "pieces: the cut-out is 3 separate pieces"
-   ]
-  },
-  "B038-P002": {
-   "group": "B038-P002",
-   "why": [
-    "pieces: the cut-out is 2 separate pieces"
-   ]
-  },
-  "B044-P009": {
-   "group": "B044-P009",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
    ]
   },
   "B044-P020-C5": {
@@ -1178,50 +789,8 @@
     "colour regions: 3 separate colour regions and no skin \u2014 a fan of colourways"
    ]
   },
-  "B045-P004": {
-   "group": "B045-P004",
-   "why": [
-    "colour regions: 3 separate colour regions and no skin \u2014 a fan of colourways"
-   ]
-  },
   "B046-P010-C3": {
    "group": "B046-P010",
-   "why": [
-    "pieces: the cut-out is 2 separate pieces"
-   ]
-  },
-  "B062-P001": {
-   "group": "B062-P001",
-   "why": [
-    "colour regions: 3 separate colour regions and no skin \u2014 a fan of colourways"
-   ]
-  },
-  "B062-P001-V2": {
-   "group": "B062-P001",
-   "why": [
-    "colour regions: 3 separate colour regions and no skin \u2014 a fan of colourways"
-   ]
-  },
-  "B063-P002": {
-   "group": "B063-P002",
-   "why": [
-    "grid page: the picture is a listing-grid page of several products"
-   ]
-  },
-  "B065-P006": {
-   "group": "B065-P006",
-   "why": [
-    "colour regions: 3 separate colour regions and no skin \u2014 a fan of colourways"
-   ]
-  },
-  "B070-P011": {
-   "group": "B070-P011",
-   "why": [
-    "pieces: the cut-out is 2 separate pieces"
-   ]
-  },
-  "B070-P012": {
-   "group": "B070-P012",
    "why": [
     "pieces: the cut-out is 2 separate pieces"
    ]
@@ -1232,28 +801,10 @@
     "pieces: the cut-out is 2 separate pieces"
    ]
   },
-  "B073-P006": {
-   "group": "B073-P006",
-   "why": [
-    "all-colours: the picture is the style's all-colours photo"
-   ]
-  },
-  "B073-P009": {
-   "group": "B073-P009",
-   "why": [
-    "all-colours: the picture is the style's all-colours photo"
-   ]
-  },
   "B073-P010": {
    "group": "B073-P010",
    "why": [
     "all-colours: the picture is the style's all-colours photo"
-   ]
-  },
-  "B077-P005": {
-   "group": "B077-P005",
-   "why": [
-    "pieces: the cut-out is 2 separate pieces"
    ]
   }
  },

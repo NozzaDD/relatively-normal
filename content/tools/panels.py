@@ -179,13 +179,18 @@ def find_panels(im):
     return out, ''
 
 
-def text_share(im):
-    """How much of a panel confident OCR words cover."""
+def text_share(im, count=False):
+    """How much of a panel confident OCR words cover (and, with `count`, how
+    many words there are)."""
     boxes = FL.word_boxes(im, conf=55)
     if not boxes:
-        return 0.0
+        return (0.0, 0) if count else 0.0
     area = sum(w * h for _x, _y, w, h, _t in boxes)
-    return min(1.0, area / float(im.width * im.height))
+    share = min(1.0, area / float(im.width * im.height))
+    return (share, len(boxes)) if count else share
+
+
+TEXT_WORDS = 8           # a panel with this many confident words is page text
 
 
 def slivery(cut, panel_size):
@@ -209,7 +214,7 @@ def slivery(cut, panel_size):
     return False, ''
 
 
-def classify(panel, cut, cut_skin, text):
+def classify(panel, cut, cut_skin, text, words=0):
     """flat lay | on-model | detail | text | other.
 
     Once the page has been split, the panel IS the photograph, so the corner
@@ -220,7 +225,10 @@ def classify(panel, cut, cut_skin, text):
     """
     bb = cut.getbbox()
     covered = ((bb[2] - bb[0]) * (bb[3] - bb[1]) / float(panel.width * panel.height)) if bb else 0
-    if text >= 0.16 or (text >= 0.05 and covered < 0.12):
+    # page text set small covers little area: B018-P001's "Composizione"
+    # block covered 3.7% of its panel, cut into one clean piece and went on the
+    # shelf as a flat lay. Counting the words catches what the area misses.
+    if text >= 0.16 or (text >= 0.05 and covered < 0.12) or words >= TEXT_WORDS:
         return 'text'
     if cut_skin > FL.SKIN_MAX:
         return 'on-model'
@@ -448,10 +456,10 @@ def main():
                 px = im.crop((int(bx * W), int(by * H), int((bx + bw) * W), int((by + bh) * H)))
                 if min(px.size) < 80 or (px.width * px.height) < AREA_MIN * W * H:
                     continue
-                txt = text_share(px)
+                txt, nwords = text_share(px, count=True)
                 cut, painted = cut_panel(px)
                 cs = round(FL.cutout_skin(cut), 4)
-                kind = classify(px, cut, cs, txt)
+                kind = classify(px, cut, cs, txt, nwords)
                 name = f'{stem}p{j}.jpg'
                 px.save(f'{OUT}/{name}', 'JPEG', quality=86, optimize=True)
                 rec = {'box': [round(v, 4) for v in (bx, by, bw, bh)], 'type': kind,

@@ -10654,19 +10654,14 @@
      0.5938,
      0.4169
     ],
-    "type": "flat lay",
+    "type": "text",
     "path": "review/B018-P001p3.jpg",
     "w": 549,
     "h": 500,
     "text_share": 0.037,
     "skin": 0.0,
     "badges_painted": 33,
-    "components": 1,
-    "edge_pixels": 0,
-    "words_inside": 0,
-    "clean": true,
-    "why": "",
-    "cut": "review/B018-P001p3-cut.webp"
+    "text_words": 36
    }
   ]
  },

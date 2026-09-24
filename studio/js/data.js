@@ -114,7 +114,9 @@ export function derivedProducts(products, choices) {
       const img = imageEntry(parent, sp.image || 0);
       if (!img) continue;
       const base = sp.base || 'photo';
-      const src = base === 'whole' && img.whole ? img.whole : img;
+      // a box drawn on the cut-out crops the parent's cut-out, never the photo
+      const src = base === 'asset' ? { path: parent.asset, w: null, h: null }
+        : base === 'whole' && img.whole ? img.whole : img;
       out.push({
         product_id: id, parent_id: pid, local: true,
         slot: sp.slot || parent.slot || '', garment_type: parent.garment_type || '',
@@ -322,6 +324,68 @@ export function isSeveral(p, local) {
   return !(c && c.choice === 'custom');
 }
 
+/** Sent back to Review — from the shelf, the canvas, or by the build — and not decided since. */
+export const isBackToReview = (p, local) => !!effectiveChoice(p, local)?.review;
+
+/** Why it is back in Review, in words. */
+export function reviewReason(p, local) {
+  const r = effectiveChoice(p, local)?.review;
+  return typeof r === 'string' ? r : (r ? 'sent back to Review' : '');
+}
+
+/**
+ * Removed by her — on the shelf, the canvas or in Review — as opposed to
+ * hidden by the build (a grid page once its cells exist, a UNIQLO style's
+ * other pictures). Only these are listed under Removed.
+ */
+export function isRemoved(p, local) {
+  const l = local && local[p.product_id];
+  if (l && l.hidden) return true;
+  return !!p.removed && effectiveChoice(p, local)?.hidden === true;
+}
+
+/**
+ * The two shelf actions, as the choice they leave behind. Nothing is deleted:
+ * both are entries in asset-choices.json, and the slot, the boxes cut out of
+ * the picture and "not a duplicate" are kept.
+ */
+export function removeChoice(prev) {
+  const { choice, box, base, image, review, restored, later, ...keep } = prev || {};
+  return { ...keep, hidden: true };
+}
+export function backToReviewChoice(prev, reason = 'sent back from the shelf') {
+  const { choice, box, base, image, hidden, restored, later, ...keep } = prev || {};
+  return { ...keep, review: reason };
+}
+/** Out of Removed: back in Review, undecided, whatever the catalogue had filed. */
+export function restoreChoice(prev) {
+  const { hidden, choice, box, base, image, later, ...keep } = prev || {};
+  return { ...keep, review: 'restored from Removed', restored: true };
+}
+
+/**
+ * The build sends products back to Review (data/review-sends.json): a re-cut
+ * to look at again, page text found in the picture. A decision kept in this
+ * browser would otherwise hide that, so each send is applied here once — the
+ * browser remembers the last version it applied — and only to what was
+ * decided before it. Returns { n, version }.
+ */
+export function applyReviewSends(local, sends, applied = '') {
+  let n = 0, version = applied || '';
+  if (!sends || !Array.isArray(sends.versions)) return { n, version };
+  for (const v of sends.versions) {
+    if (!v.version || v.version <= version) continue;
+    for (const [pid, reason] of Object.entries(v.products || {})) {
+      const l = local[pid];
+      if (!l) continue;                  // nothing decided here: the catalogue says it
+      local[pid] = backToReviewChoice(l, reason);
+      n++;
+    }
+    version = v.version;
+  }
+  return { n, version };
+}
+
 /** Marked as another row again. Kept, hidden from the shelf, until she says otherwise. */
 export function isDuplicate(p, local) {
   if (!p.duplicate_of) return false;
@@ -331,8 +395,11 @@ export function isDuplicate(p, local) {
 
 export function effectiveChoice(p, local) {
   const l = local && local[p.product_id];
-  if (l && (l.hidden || l.choice)) return l;
-  if (p.hidden) return { hidden: true };
+  if (l && (l.hidden || l.choice || l.review)) return l;
+  // sent back to Review by the build (a re-cut, page text found in the
+  // picture): undecided again until she decides
+  if (p.review && !(l && l.restored)) return { review: p.review };
+  if (p.hidden && !(l && l.restored)) return { hidden: true };
   // the catalogue's choice is on the picture it names (asset_image), not
   // always the first: without it a box filed on picture 2 was read off picture 1
   if (p.choice) return { choice: p.choice, box: p.custom_box, image: p.image || 0, base: p.base };
@@ -348,6 +415,7 @@ export function effectiveChoice(p, local) {
 export function onShelf(p, local, showUnreviewed) {
   const c = effectiveChoice(p, local);
   if (c?.hidden) return false;
+  if (c?.review) return false;                 // back in Review: off the shelf until decided
   if (isDuplicate(p, local) || isSeveral(p, local)) return false;
   if (p.clean || (c && c.choice)) return true;
   return !!showUnreviewed;
@@ -355,6 +423,7 @@ export function onShelf(p, local, showUnreviewed) {
 
 export function isReviewed(p, local) {
   const c = effectiveChoice(p, local);
+  if (c?.review) return false;
   // taking a several-garment picture whole was the mistake; only a box counts
   if (isSeveral(p, local)) return !!(c && c.hidden);
   return !!(c && (c.hidden || c.choice));

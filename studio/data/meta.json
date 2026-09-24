@@ -1,6 +1,6 @@
 {
  "built_from": "content/catalogue",
- "products": 2154,
+ "products": 2167,
  "inspiration": 112,
  "slots": [
   "accessory",
@@ -106,17 +106,19 @@
   "ulla johnson"
  ],
  "asset_types": [
+  "crop",
   "cutout_flat",
   "cutout_model",
   "tile"
  ],
  "clean": 1253,
- "with_full": 1833,
- "hidden": 255,
+ "with_full": 1846,
+ "hidden": 459,
+ "back_in_review": 5,
  "recoloured": 193,
- "derived": 1071,
+ "derived": 1084,
  "images": 1209,
- "whole_cutouts": 1575,
- "several": 32,
- "duplicates": 80
+ "whole_cutouts": 1576,
+ "several": 11,
+ "duplicates": 56
 }
