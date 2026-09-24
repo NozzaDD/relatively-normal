@@ -60,8 +60,10 @@ const cleanCount = await page.evaluate(() =>
     && !p.duplicate_of).length);
 ok('only measured-clean cut-outs on the shelf by default',
   counts.cells === cleanCount && cleanCount > 0, `${counts.cells} cells, ${cleanCount} clean`);
+// since the eye-read gate of 24 Sept more than half the catalogue is on the
+// shelf; the guard is that the gate still holds some of it back
 ok('the shelf is a real slice of the catalogue, not all of it',
-  counts.cells < counts.products / 2,
+  counts.cells < counts.products * 0.75,
   `${counts.cells} cells`);
 ok('no page errors on load', errors.length === 0, errors.join(' | '));
 

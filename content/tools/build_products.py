@@ -404,10 +404,14 @@ SHOP_SCOPED_GUESS_FROM = 75
 # picture that has not changed, and a later change to the vocabulary or the
 # reader is a decision to re-read, not a side effect of adding a product.
 # To re-read on purpose, delete the rows (or products.csv) first.
+# The READING is frozen (hexes, shares, lightness); the names are not: a
+# family and a name are a function of the hex and the vocabulary, and are
+# given again from the hex on every build (name_from_hex), as the owner asked
+# on 24 Sept when the vocabulary of that morning was applied.
 FROZEN = ['colour1_hex', 'colour1_share', 'colour1_L', 'colour1_C', 'colour1_h',
-          'colour1_rel_chroma', 'colour1_neutral', 'colour1_family', 'colour1_name',
-          'colour2_hex', 'colour2_share', 'colour2_family', 'colour2_name',
-          'colour3_hex', 'colour3_share', 'colour3_family', 'colour3_name',
+          'colour1_rel_chroma', 'colour1_neutral',
+          'colour2_hex', 'colour2_share',
+          'colour3_hex', 'colour3_share',
           'colour_confidence', 'colour_stability', 'notes', 'validated',
           # a brand guess leans on the other rows of the batch, so a row added
           # to the batch (a split, a new screenshot) must not re-guess it
@@ -435,6 +439,23 @@ def keep_filed(out, filed):
             for k in FROZEN:
                 d[k] = o.get(k, '')
             n += 1
+    return n
+
+
+def name_from_hex(out):
+    """Every colour's family and plain name from its hex, in the vocabulary
+    colour_names.py holds now. Nothing else about a colour changes."""
+    from colour_names import classify
+    n = 0
+    for d in out:
+        for i in (1, 2, 3):
+            hx = (d.get(f'colour{i}_hex') or '').strip().lstrip('#')
+            if not hx:
+                continue
+            fam, nm = classify(hx)[:2]
+            if (d.get(f'colour{i}_family'), d.get(f'colour{i}_name')) != (fam, nm):
+                d[f'colour{i}_family'], d[f'colour{i}_name'] = fam, nm
+                n += 1
     return n
 
 
@@ -793,6 +814,7 @@ def main():
         if d.get('brand_confidence') == 'guessed' and norm(d.get('brand')) in spelt:
             d['brand'] = spelt[norm(d['brand'])]
     print('filed rows kept as filed:', keep_filed(out, filed))
+    print('colours renamed from their hex:', name_from_hex(out))
     os.makedirs(CAT, exist_ok=True)
     with open(CAT + '/products.csv', 'w', newline='') as f:
         w = csv.DictWriter(f, FIELDS)

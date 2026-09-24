@@ -346,6 +346,25 @@ await page.evaluate(() => {
   const u = document.getElementById('fUnreviewed'); u.checked = false; u.dispatchEvent(new Event('change', { bubbles: true }));
 });
 
+console.log('\n7. a grid cut into cells, in Review (24 Sept)');
+await page.evaluate(() => window.__studio.setView('review'));
+for (const id of ['#rDups', '#rSeveral']) if (await page.isChecked(id)) await page.uncheck(id);
+await page.waitForTimeout(500);
+const gc = await page.evaluate(() => {
+  const S = window.__studio;
+  const cards = [...document.querySelectorAll('#reviewCards .gridcard')];
+  const bad = cards.filter((c) => !/^\S+ · \d+ cells?: \d+ on the shelf, \d+ in Review$/.test(c.querySelector('.rwho').textContent));
+  const withCells = new Set(S.products.map((p) => p.parent_id).filter(Boolean));
+  const asCard = [...document.querySelectorAll('#reviewCards .rcard')].filter((c) => withCells.has(c.dataset.pid));
+  const shelfInList = cards.flatMap((c) => [...c.querySelectorAll('.cellpick')])
+    .filter((b) => S.shown.some((p) => p.product_id === b.dataset.pid)).length;
+  return { cards: cards.length, bad: bad.length, asCard: asCard.length, shelfInList,
+    several: document.querySelectorAll('#reviewCards .gridcard .why.several').length };
+});
+ok('a cut grid says "N cells: M on the shelf, K in Review" and lists only the K', gc.cards > 50 && gc.bad === 0
+  && gc.shelfInList === 0, JSON.stringify(gc));
+ok('...and is never a "Several garments, Adjust box" card', gc.asCard === 0 && gc.several === 0, JSON.stringify(gc));
+
 console.log(`\n${pass} passed, ${fail} failed`);
 if (errors.length) console.log('page errors:\n  ' + errors.slice(0, 6).join('\n  '));
 await browser.close();

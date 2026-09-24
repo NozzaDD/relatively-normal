@@ -93,6 +93,11 @@ the badge on the tile) lists it as *cut-out*; the button says what the next
 picture is. A colourway row's pictures are only those of its own colour, and a
 listing-grid cell's only picture is its own cell.
 
+**A grid cut into cells is its cells.** In Review a listing grid that has
+been cut reads "N cells: M on the shelf, K in Review", with the K underneath,
+each saying why it is there (on a model, more than one piece, …), and **Accept
+all cells** for them. It is no longer a "Several garments, Adjust box" card.
+
 **Decisions follow their picture.** When a split moves a picture to another
 row, a box or whole-picture choice made on it in this browser moves with it
 the next time the desk loads (`data/picture-migration.json`), once. Hiding,
