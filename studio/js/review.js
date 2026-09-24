@@ -69,6 +69,40 @@ export function migrateChoices(choices, migration) {
   return moved;
 }
 
+/**
+ * Decisions follow their picture. When a split or a colourway assignment
+ * moves a picture to another row, or to another place in its row's list, a
+ * box or a whole-picture choice made on it moves with it
+ * (data/picture-migration.json, one version per build that moved anything).
+ * Hiding, taking the cut-out and a slot are decisions about the row, and stay.
+ */
+export function migratePictures(choices, migration) {
+  if (!migration || !Array.isArray(migration.versions)) return 0;
+  const onPicture = (c) => ['item', 'person', 'full', 'custom', 'whole'].includes(c.choice);
+  let moved = 0;
+  for (const v of migration.versions) {
+    for (const [pid, c] of Object.entries({ ...choices })) {
+      if (!c || (c.pmig || 0) >= v.version) continue;
+      c.pmig = v.version;
+      for (const sp of c.splits || []) {
+        const t = v.moved[`${pid}#${sp.image || 0}`];
+        if (t && t.product_id === pid) { sp.image = t.image; moved++; }
+      }
+      if (!onPicture(c)) continue;
+      const t = v.moved[`${pid}#${c.image || 0}`];
+      if (!t) continue;
+      if (t.product_id === pid) { c.image = t.image; moved++; continue; }
+      const there = choices[t.product_id];
+      if (there && there.choice) continue;          // she decided there already
+      const { choice, box, base } = c;
+      choices[t.product_id] = { ...(there || {}), choice, box, base, image: t.image, pmig: v.version };
+      delete c.choice; delete c.box; delete c.base; delete c.image;
+      moved++;
+    }
+  }
+  return moved;
+}
+
 export function saveChoices(choices) {
   try { localStorage.setItem(STORE, JSON.stringify(choices)); } catch (e) { /* fine */ }
 }

@@ -845,7 +845,9 @@ const sp = await page.evaluate(() => {
   }).filter(Boolean);
   const sameName = pairs.filter(({ a, b }) => a.product_name && a.product_name === b.product_name);
   const diffColour = pairs.filter(({ a, b }) => (a.colours[0] || {}).hex !== (b.colours[0] || {}).hex);
-  const ownPics = sib.filter((p) => (p.images || []).length > 0);
+  // a split row that measured clean is its own screenshot's cut-out and, like
+  // every clean flat lay, needs no pictures to review
+  const ownPics = sib.filter((p) => (p.images || []).length > 0 || p.clean);
   return { siblings: sib.length, pairs: pairs.length, sameName: sameName.length,
     diffColour: diffColour.length, ownPics: ownPics.length,
     derived: sib.filter((p) => p.parent_id).length };

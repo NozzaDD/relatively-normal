@@ -1,0 +1,712 @@
+{
+ "rule": {
+  "L_MAX": 8.0,
+  "IOU_MIN": 0.9,
+  "text": {
+   "name": 0.8,
+   "colour": 0.75,
+   "pid": 0.9,
+   "domain": 1.0
+  }
+ },
+ "runs": [
+  {
+   "note": "the first run, on the 96 filed product-page rows with two or more screenshots; reconstructed from split-migration.json and rows_namesplit.txt after a --check overwrote the file (fixed: every run is now kept)",
+   "rows_checked": 96,
+   "plan": {
+    "B012-P003": [
+     [
+      0
+     ],
+     [
+      1
+     ]
+    ],
+    "B013-P001": [
+     [
+      0,
+      2
+     ],
+     [
+      1
+     ]
+    ],
+    "B017-P001": [
+     [
+      0,
+      2
+     ],
+     [
+      1
+     ]
+    ],
+    "B018-P001": [
+     [
+      0,
+      2
+     ],
+     [
+      1
+     ]
+    ],
+    "B021-P001": [
+     [
+      0,
+      2
+     ],
+     [
+      1
+     ]
+    ],
+    "B021-P011": [
+     [
+      0,
+      3
+     ],
+     [
+      1
+     ]
+    ],
+    "B043-P004": [
+     [
+      0,
+      3
+     ],
+     [
+      1
+     ]
+    ],
+    "B055-P003": [
+     [
+      0,
+      3
+     ],
+     [
+      1
+     ],
+     [
+      2
+     ]
+    ],
+    "B062-P012": [
+     [
+      0,
+      2
+     ],
+     [
+      1
+     ]
+    ],
+    "B010-P005-V4": [
+     [
+      0
+     ],
+     [
+      1
+     ]
+    ],
+    "B011-P005": [
+     [
+      0
+     ],
+     [
+      1
+     ]
+    ],
+    "B015-P001": [
+     [
+      0
+     ],
+     [
+      1
+     ],
+     [
+      2
+     ]
+    ],
+    "B019-P001": [
+     [
+      0
+     ],
+     [
+      1,
+      2
+     ]
+    ],
+    "B023-P013": [
+     [
+      0,
+      2
+     ],
+     [
+      1
+     ]
+    ],
+    "B028-P012": [
+     [
+      0
+     ],
+     [
+      1
+     ]
+    ],
+    "B035-P004": [
+     [
+      0
+     ],
+     [
+      1
+     ]
+    ],
+    "B038-P001": [
+     [
+      0
+     ],
+     [
+      1
+     ]
+    ],
+    "B049-P001": [
+     [
+      0,
+      2
+     ],
+     [
+      1
+     ]
+    ],
+    "B057-P005": [
+     [
+      0
+     ],
+     [
+      1
+     ]
+    ],
+    "B062-P008": [
+     [
+      0
+     ],
+     [
+      1
+     ]
+    ],
+    "B062-P014": [
+     [
+      0
+     ],
+     [
+      1
+     ]
+    ],
+    "B075-P002": [
+     [
+      0
+     ],
+     [
+      1
+     ],
+     [
+      2
+     ],
+     [
+      3
+     ]
+    ],
+    "B075-P007": [
+     [
+      0,
+      2
+     ],
+     [
+      1
+     ]
+    ],
+    "B076-P001": [
+     [
+      0,
+      3,
+      4
+     ],
+     [
+      1,
+      2
+     ]
+    ],
+    "B086-P001": [
+     [
+      0,
+      2,
+      4
+     ],
+     [
+      1
+     ],
+     [
+      3
+     ]
+    ],
+    "B086-P002": [
+     [
+      0
+     ],
+     [
+      1
+     ]
+    ],
+    "B088-P009": [
+     [
+      0
+     ],
+     [
+      1
+     ]
+    ],
+    "B089-P001": [
+     [
+      0
+     ],
+     [
+      1
+     ]
+    ],
+    "B089-P002": [
+     [
+      0
+     ],
+     [
+      1
+     ],
+     [
+      2
+     ]
+    ],
+    "B090-P001": [
+     [
+      0
+     ],
+     [
+      1
+     ]
+    ],
+    "B090-P009": [
+     [
+      0
+     ],
+     [
+      1
+     ]
+    ],
+    "B090-P010": [
+     [
+      0
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      4
+     ]
+    ],
+    "B090-P013": [
+     [
+      0
+     ],
+     [
+      1
+     ],
+     [
+      2
+     ],
+     [
+      3
+     ],
+     [
+      4
+     ]
+    ]
+   },
+   "made": {
+    "B010-P005-V5": [
+     "content/swipe/products/IMG_0182.png"
+    ],
+    "B011-P005-V2": [
+     "content/swipe/products/IMG_0188.png"
+    ],
+    "B012-P003-V3": [
+     "content/swipe/products/IMG_0195.png"
+    ],
+    "B013-P001-V4": [
+     "content/swipe/products/IMG_0200.png"
+    ],
+    "B015-P001-V2": [
+     "content/swipe/products/IMG_0207.png"
+    ],
+    "B015-P001-V3": [
+     "content/swipe/products/IMG_0208.png"
+    ],
+    "B017-P001-V4": [
+     "content/swipe/products/IMG_0220.png"
+    ],
+    "B018-P001-V4": [
+     "content/swipe/products/IMG_0224.png"
+    ],
+    "B019-P001-V2": [
+     "content/swipe/products/IMG_0229.png",
+     "content/swipe/products/IMG_0230.png"
+    ],
+    "B021-P001-V3": [
+     "content/swipe/products/IMG_0251.png"
+    ],
+    "B021-P011-V4": [
+     "content/swipe/products/IMG_0270.png"
+    ],
+    "B023-P013-V2": [
+     "content/swipe/products/IMG_0325.png"
+    ],
+    "B028-P012-V2": [
+     "content/swipe/products/IMG_0401.png"
+    ],
+    "B035-P004-V2": [
+     "content/swipe/products/IMG_0455.png"
+    ],
+    "B038-P001-V2": [
+     "content/swipe/products/IMG_0480.png"
+    ],
+    "B043-P004-V4": [
+     "content/swipe/products/IMG_0583.png"
+    ],
+    "B049-P001-V2": [
+     "content/swipe/products/IMG_0646.png"
+    ],
+    "B055-P003-V4": [
+     "content/swipe/products/IMG_0702.png"
+    ],
+    "B055-P003-V5": [
+     "content/swipe/products/IMG_0703.png"
+    ],
+    "B057-P005-V2": [
+     "content/swipe/products/IMG_0738.png"
+    ],
+    "B062-P008-V2": [
+     "content/swipe/products/IMG_0788.png"
+    ],
+    "B062-P012-V3": [
+     "content/swipe/products/IMG_0795.png"
+    ],
+    "B062-P014-V2": [
+     "content/swipe/products/IMG_0798.png"
+    ],
+    "B075-P002-V2": [
+     "content/swipe/products/IMG_1180.png"
+    ],
+    "B075-P002-V3": [
+     "content/swipe/products/IMG_1181.png"
+    ],
+    "B075-P002-V4": [
+     "content/swipe/products/IMG_1182.png"
+    ],
+    "B075-P007-V2": [
+     "content/swipe/products/IMG_1188.png"
+    ],
+    "B076-P001-V2": [
+     "content/swipe/products/IMG_1191.png",
+     "content/swipe/products/IMG_1192.png"
+    ],
+    "B086-P001-V2": [
+     "content/swipe/products/IMG_1304.png"
+    ],
+    "B086-P001-V3": [
+     "content/swipe/products/IMG_1306.png"
+    ],
+    "B086-P002-V2": [
+     "content/swipe/products/IMG_1309.png"
+    ],
+    "B088-P009-V2": [
+     "content/swipe/products/IMG_1339.png"
+    ],
+    "B089-P001-V2": [
+     "content/swipe/products/IMG_1341.png"
+    ],
+    "B089-P002-V2": [
+     "content/swipe/products/IMG_1343.png"
+    ],
+    "B089-P002-V3": [
+     "content/swipe/products/IMG_1344.png"
+    ],
+    "B090-P001-V2": [
+     "content/swipe/products/IMG_1347.png"
+    ],
+    "B090-P009-V2": [
+     "content/swipe/products/IMG_1362.png"
+    ],
+    "B090-P010-V2": [
+     "content/swipe/products/IMG_1364.png",
+     "content/swipe/products/IMG_1365.png",
+     "content/swipe/products/IMG_1366.png"
+    ],
+    "B090-P010-V3": [
+     "content/swipe/products/IMG_1368.png"
+    ],
+    "B090-P013-V2": [
+     "content/swipe/products/IMG_1372.png"
+    ],
+    "B090-P013-V3": [
+     "content/swipe/products/IMG_1373.png"
+    ],
+    "B090-P013-V4": [
+     "content/swipe/products/IMG_1374.png"
+    ],
+    "B090-P013-V5": [
+     "content/swipe/products/IMG_1375.png"
+    ]
+   },
+   "literal_would_also_split": [
+    "B007-P003",
+    "B021-P015",
+    "B023-P013",
+    "B027-P008",
+    "B028-P002",
+    "B031-P002",
+    "B031-P002-V2",
+    "B032-P001",
+    "B037-P003",
+    "B037-P004",
+    "B040-P003",
+    "B042-P037",
+    "B043-P003",
+    "B043-P004",
+    "B048-P001",
+    "B054-P005",
+    "B056-P004",
+    "B057-P003",
+    "B075-P007",
+    "B076-P001",
+    "B076-P005",
+    "B076-P007",
+    "B077-P007",
+    "B077-P013",
+    "B078-P001",
+    "B090-P002"
+   ],
+   "kept_whole": {
+    "B051-P002": "the same lace skirt worn and flat: 8.4 L* apart only because the model photo is lit warmer"
+   }
+  },
+  {
+   "rows": {
+    "B092-P002": {
+     "groups": [
+      [
+       0
+      ],
+      [
+       1
+      ]
+     ],
+     "pairs": {
+      "1-0": "pictures not of one known kind (model, flat), not compared"
+     },
+     "literal": [
+      [
+       0,
+       1
+      ]
+     ],
+     "pages": [
+      {
+       "name": "FRANKIE Cinched-Waist Faux fur Jacket",
+       "colour": "Olive",
+       "pid": "",
+       "domain": "studio-ar.nl"
+      },
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "studio-ar.nl"
+      }
+     ],
+     "by_eye": "IMG_1393 is the FRANKIE jacket in Olive laid flat; IMG_1394 is a model in a black faux fur jacket. Flat against worn is not compared, and the model photo has no text (contact sheet, 24 Sept)"
+    },
+    "B092-P005": {
+     "groups": [
+      [
+       0
+      ],
+      [
+       1
+      ]
+     ],
+     "pairs": {
+      "1-0": "lightness 12.1"
+     },
+     "literal": [
+      [
+       0
+      ],
+      [
+       1
+      ]
+     ],
+     "pages": [
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "studio-ar.nl"
+      },
+      {
+       "name": "LUCY Faux Fawn Jacket",
+       "colour": "Brown",
+       "pid": "",
+       "domain": "studio-ar.nl"
+      }
+     ]
+    },
+    "B092-P008": {
+     "groups": [
+      [
+       0
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       3
+      ]
+     ],
+     "pairs": {
+      "1-0": "pictures agree (dL 1.2)",
+      "2-0": "pictures agree (dL 2.8)",
+      "2-1": "pictures agree (dL 1.6)",
+      "3-0": "pictures agree (dL 2.5)",
+      "3-1": "pictures agree (dL 3.8)",
+      "3-2": "pictures agree (dL 5.4)"
+     },
+     "literal": [
+      [
+       0,
+       1
+      ],
+      [
+       2
+      ],
+      [
+       3
+      ]
+     ],
+     "pages": [
+      {
+       "name": "BEAU Faux Fur Hat",
+       "colour": "Choco",
+       "pid": "",
+       "domain": "studio-ar.nl"
+      },
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "studio-ar.nl"
+      },
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "studio-ar.nl"
+      },
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "studio-ar.nl"
+      }
+     ],
+     "by_eye": "IMG_1401 is the BEAU hat; IMG_1402-1403 a belted long faux fur coat front and back; IMG_1404 an open long coat with a pale facing. No text on 1402-1404 and all within 5.4 L* (contact sheet, 24 Sept)"
+    }
+   },
+   "plan": {
+    "B092-P002": [
+     [
+      0
+     ],
+     [
+      1
+     ]
+    ],
+    "B092-P005": [
+     [
+      0
+     ],
+     [
+      1
+     ]
+    ],
+    "B092-P008": [
+     [
+      0
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      3
+     ]
+    ]
+   },
+   "made": {
+    "B092-P002-V2": [
+     "content/swipe/products/IMG_1394.png"
+    ],
+    "B092-P005-V2": [
+     "content/swipe/products/IMG_1398.png"
+    ],
+    "B092-P008-V2": [
+     "content/swipe/products/IMG_1402.png",
+     "content/swipe/products/IMG_1403.png"
+    ],
+    "B092-P008-V3": [
+     "content/swipe/products/IMG_1404.png"
+    ]
+   },
+   "moved": {
+    "B092-P002#0": {
+     "product_id": "B092-P002",
+     "image": 0
+    },
+    "B092-P002#1": {
+     "product_id": "B092-P002-V2",
+     "image": 0
+    },
+    "B092-P005#0": {
+     "product_id": "B092-P005",
+     "image": 0
+    },
+    "B092-P005#1": {
+     "product_id": "B092-P005-V2",
+     "image": 0
+    },
+    "B092-P008#0": {
+     "product_id": "B092-P008",
+     "image": 0
+    },
+    "B092-P008#1": {
+     "product_id": "B092-P008-V2",
+     "image": 0
+    },
+    "B092-P008#2": {
+     "product_id": "B092-P008-V2",
+     "image": 1
+    },
+    "B092-P008#3": {
+     "product_id": "B092-P008-V3",
+     "image": 0
+    }
+   }
+  }
+ ]
+}

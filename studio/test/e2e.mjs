@@ -43,6 +43,8 @@ page.on('console', (m) => { if (m.type() === 'error') errors.push(m.text()); });
 console.log('\n1. load');
 await page.goto(`${base}/index.html`);
 await page.waitForFunction(() => window.__studio?.products?.length > 0, null, { timeout: 15000 });
+// the shelf renders after the products load; count it once it has
+await page.waitForFunction(() => document.querySelectorAll('#grid .cell').length > 0, null, { timeout: 15000 });
 const counts = await page.evaluate(() => ({
   products: window.__studio.products.length,
   inspiration: window.__studio.inspiration.length,

@@ -1,0 +1,18 @@
+B094-P001 | multiple | listing grid of shoes | smooth leather and suede | mixed | 2 | 2 | listing grid | yes | ghbass-eu.com | G.H.BASS | NONE | NONE | NONE | NONE | two loafers, a colour-dot row under each; read by eye in read_grids
+B095-P001 | multiple | listing grid of shoes | smooth leather and suede | mixed | 2 | 2 | listing grid | yes | ghbass-eu.com | G.H.BASS | NONE | NONE | NONE | NONE | two loafers; read by eye in read_grids
+B096-P001 | multiple | listing grid of shoes | smooth leather and suede | mixed | 2 | 2 | listing grid | yes | ghbass-eu.com | G.H.BASS | NONE | NONE | NONE | NONE | two Chelsea boots; read by eye in read_grids
+B097-P001 | multiple | listing grid of shoes | smooth leather and suede | mixed | 2 | 2 | listing grid | yes | prettyballerinas.com | NONE | NONE | NONE | NONE | NONE | six ballet flats; read by eye in read_grids
+B098-P001 | multiple | listing grid of shoes | smooth leather and suede | mixed | 2 | 2 | listing grid | yes | eu.flattered.com | Flattered | NONE | NONE | NONE | NONE | two shoes, category tabs above; read by eye in read_grids
+B099-P001 | multiple | listing grid of shoes | smooth leather and suede | mixed | 2 | 2 | listing grid | yes | eu.flattered.com | NONE | NONE | NONE | NONE | NONE | four shoes; read by eye in read_grids
+B099-P002 | multiple | listing grid of shoes | smooth leather and suede | mixed | 2 | 2 | listing grid | yes | eu.flattered.com | NONE | NONE | NONE | NONE | NONE | four shoes; read by eye in read_grids
+B099-P003 | multiple | listing grid of shoes | smooth leather and suede | mixed | 2 | 2 | listing grid | yes | eu.flattered.com | NONE | NONE | NONE | NONE | NONE | four shoes; read by eye in read_grids
+B099-P004 | multiple | listing grid of shoes | smooth leather and suede | mixed | 2 | 2 | listing grid | yes | eu.flattered.com | NONE | NONE | NONE | NONE | NONE | four shoes; read by eye in read_grids
+B099-P005 | multiple | listing grid of shoes | smooth leather and suede | mixed | 2 | 2 | listing grid | yes | eu.flattered.com | NONE | NONE | NONE | NONE | NONE | four shoes; read by eye in read_grids
+B099-P006 | multiple | listing grid of shoes | smooth leather and suede | mixed | 2 | 2 | listing grid | yes | eu.flattered.com | NONE | NONE | NONE | NONE | NONE | four shoes; read by eye in read_grids
+B099-P007 | multiple | listing grid of shoes | smooth leather and suede | mixed | 2 | 2 | listing grid | yes | eu.flattered.com | NONE | NONE | NONE | NONE | NONE | four shoes; read by eye in read_grids
+B099-P008 | multiple | listing grid of shoes | smooth leather and suede | mixed | 2 | 2 | listing grid | yes | eu.flattered.com | NONE | NONE | NONE | NONE | NONE | four shoes; read by eye in read_grids
+B099-P009 | multiple | listing grid of shoes | smooth leather and suede | mixed | 2 | 2 | listing grid | yes | eu.flattered.com | NONE | NONE | NONE | NONE | NONE | four shoes; read by eye in read_grids
+B099-P010 | multiple | listing grid of shoes | smooth leather and suede | mixed | 2 | 2 | listing grid | yes | eu.flattered.com | NONE | NONE | NONE | NONE | NONE | four shoes; read by eye in read_grids
+B099-P011 | multiple | listing grid of shoes | smooth leather and suede | mixed | 2 | 2 | listing grid | yes | eu.flattered.com | NONE | NONE | NONE | NONE | NONE | four shoes; read by eye in read_grids
+B099-P012 | multiple | listing grid of shoes | smooth leather and suede | mixed | 2 | 2 | listing grid | yes | eu.flattered.com | NONE | NONE | NONE | NONE | NONE | four shoes; read by eye in read_grids
+B099-P013 | multiple | listing grid of shoes | smooth leather and suede | mixed | 2 | 2 | listing grid | yes | eu.flattered.com | NONE | NONE | NONE | NONE | NONE | four shoes; read by eye in read_grids
