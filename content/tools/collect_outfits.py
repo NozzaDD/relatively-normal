@@ -39,7 +39,11 @@ def read_outfits():
             continue
         info['_file'] = os.path.basename(path)
         info['_dir'] = os.path.dirname(path)
-        info['_slug'] = info.get('slug') or os.path.splitext(os.path.basename(path))[0]
+        # the file's own name, not the slug inside it: the desk writes the slug
+        # from the title, so every untitled board of a day says the same one
+        # (four boards of 24 Sept all read 2026-09-24-untitled), and a board
+        # renamed on disk is known by its new name
+        info['_slug'] = os.path.splitext(os.path.basename(path))[0]
         if info['_slug'] in seen:
             problems.append(f"{os.path.relpath(path, ROOT)}: {info['_slug']} is already read from "
                             'content/outfits/, this copy is skipped')
