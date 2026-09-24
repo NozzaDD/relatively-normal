@@ -6,7 +6,7 @@
 // later it can be a signed-in user's own wardrobe, and nothing above this line
 // has to change.
 
-/** @typedef {{products: Array, inspiration: Array, meta: Object}} Catalogue */
+/** @typedef {{products: Array, inspiration: Array, meta: Object, palettes: Object|null}} Catalogue */
 
 export function createStaticSource(base = '.') {
   const url = (p) => `${base.replace(/\/$/, '')}/${p}`;
@@ -14,12 +14,14 @@ export function createStaticSource(base = '.') {
     name: 'catalogue',
     /** @returns {Promise<Catalogue>} */
     async load() {
-      const [products, inspiration, meta] = await Promise.all([
+      const [products, inspiration, meta, palettes] = await Promise.all([
         fetch(url('data/products.json')).then((r) => r.json()),
         fetch(url('data/inspiration.json')).then((r) => r.json()),
         fetch(url('data/meta.json')).then((r) => r.json()).catch(() => ({})),
+        // the palettes are a working aid: without them the desk still works
+        fetch(url('data/palettes.json')).then((r) => (r.ok ? r.json() : null)).catch(() => null),
       ]);
-      return { products, inspiration, meta };
+      return { products, inspiration, meta, palettes };
     },
     assetUrl: (p) => url(p.asset),
     thumbUrl: (p) => url(p.thumb),

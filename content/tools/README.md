@@ -83,6 +83,7 @@ Two design notes worth keeping:
 | Script | What it does |
 |---|---|
 | `build_studio.py` | builds `studio/data/` and the web-sized images the desk serves |
+| `build_palettes.py` | builds `content/palettes/palettes.json` from the frameworks, the engine's generators and the AW26/27 seed; `build_studio.py` runs it and copies the result |
 | `collect_outfits.py` | reads `content/outfits/` and writes `used_in` back into the catalogue |
 
 `build_studio.py` is the only thing that writes into `studio/data/`,

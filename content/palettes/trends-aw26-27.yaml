@@ -1,0 +1,176 @@
+# trends-aw26-27.yaml — the seed for category c, autumn/winter 2026/27.
+#
+# Transcribed from the owner's brief of 24 Sept 2026. These come from trade and
+# press sources, not from the repository: every palette carries confidence
+# "external". Hexes are approximate anchors given in the brief; build_palettes.py
+# re-expresses them in the engine's colour space (CIELAB D65, LCh, relative
+# chroma) and keeps the names.
+#
+# A colour with `hex_given: false` had no hex in the brief. Its hex is the
+# stand-in named in `stand_in`, taken from another palette in this same brief —
+# never from general knowledge. Confirm or replace it.
+#
+# `worn_as` is what the source says about how a colour is worn. It is not a
+# framework placement and is never written into `placement`.
+#
+# `pairs` lists alternatives the source gives with "or": each becomes its own
+# palette, the pair plus a bridge chosen from this file's own neutrals by
+# combinations.md §3.6.
+
+collected: "web, Sept 2026"
+
+sources:
+  whowhatwear: whowhatwear.com/fashion/fashion-colour-combinations-2026
+  marieclaire: marieclaire.com/fashion/winter-fashion/winter-fashion-color-trends-2026
+  fashionunited: fashionunited.com WGSN/Coloro AW26/27 (Transformative Teal)
+  mango_trends: shop.mango.com discover/trends, AW26/27
+  mango_colours: shop.mango.com, colours of AW26/27
+  autumlove: autumlove.com/blog/nyfw-fall-winter-2026-color-report
+  nadamanley: nadamanley.com fall-color-trends-2026
+  styleacademy: styleacademyintl.com/post/fall-2026-color-trends
+  ana: a-n-a.com/en/pages/trend-colours (Pantone NYFW AW26/27)
+
+# The neutrals of this set. Bridges for two-colour pairs are chosen from these.
+set_neutrals: [cream, anthracite]
+
+colours:
+  teal:         {name: teal/petrol,         hex: "257C82"}
+  aubergine:    {name: aubergine,           hex: "472A3C"}
+  burgundy:     {name: burgundy,            hex: "6B1F2E"}
+  chocolate:    {name: chocolate,           hex: "4A2C22"}
+  butter:       {name: butter yellow,       hex: "F3E5A0"}
+  baby_pink:    {name: baby pink,           hex: "F2C6D0"}
+  red_accent:   {name: red,                 hex: "B22A2A"}
+  sage:         {name: sage,                hex: "9CAF88"}
+  cream:        {name: cream,               hex: "F0EBE0"}
+  camel:        {name: camel,               hex: "C19A6B"}
+  cognac:       {name: cognac,              hex: "9A5B2E"}
+  rust:         {name: rust,                hex: "A0522D"}
+  cinnamon:     {name: cinnamon,            hex: "8B4A2B"}
+  mahogany:     {name: mahogany,            hex: "5C1F1A"}
+  pale_pink:    {name: pale pink,           hex: "F2C6D0", hex_given: false, stand_in: "baby pink, T2/T3"}
+  oxblood:      {name: oxblood,             hex: "5A1F26"}
+  cherry:       {name: cherry,              hex: "B22A2A"}
+  tomato:       {name: tomato,              hex: "C8352F"}
+  chartreuse:   {name: chartreuse (Green Glow), hex: "B5C63A"}
+  charcoal:     {name: charcoal,            hex: "3A3A3C"}
+  navy:         {name: navy,                hex: "1B2138"}
+  olive:        {name: olive,               hex: "6B6B3A"}
+  mauve:        {name: Foxglove mauve,      hex: "A28399"}
+  bordeaux:     {name: bordeaux,            hex: "6B1F2E", hex_given: false, stand_in: "burgundy, T1"}
+  warm_brown:   {name: warm brown,          hex: "4A2C22", hex_given: false, stand_in: "chocolate, T1"}
+  muted_clay:   {name: Muted Clay,          hex: "C9A99A"}
+  off_white:    {name: Wax Paper / Cloud Dancer off-white, hex: "F0EBE0"}
+  ink_navy:     {name: ink navy,            hex: "1B2138"}
+  anthracite:   {name: anthracite,          hex: "3A3A3C"}
+  white:        {name: white,               hex: "FFFFFF", hex_given: false, stand_in: "plain white"}
+  black:        {name: black,               hex: "000000", hex_given: false, stand_in: "plain black"}
+  klein_blue:   {name: Klein blue,          hex: "2B3FB8"}
+
+palettes:
+  - id: T1
+    name: Teal on earth
+    when: Teal as the coat or the main piece, grounded by one deep earth colour.
+    sources: [whowhatwear, marieclaire, fashionunited]
+    runway: [Tory Burch, Loewe, Saint Laurent, Victoria Beckham, Fendi]
+    dominant: teal
+    worn_as: {teal: coat or dominant}
+    pairs: [[teal, aubergine], [teal, burgundy], [teal, chocolate]]
+
+  - id: T2
+    name: Aubergine, butter, baby pink
+    when: Aubergine as the coat or knit, with butter and baby pink as the light pieces.
+    sources: [mango_trends]
+    colours: [aubergine, butter, baby_pink]
+    dominant: aubergine
+    worn_as: {aubergine: coat or knit}
+
+  - id: T3
+    name: Pink on chocolate
+    when: Baby pink worn against chocolate, with one red accent.
+    sources: [autumlove]
+    runway: [Ulla Johnson FW26]
+    colours: [chocolate, baby_pink, red_accent]
+    dominant: chocolate
+    accent: red_accent
+
+  - id: T4
+    name: Sage and butter
+    when: Sage and butter yellow together on a cream base.
+    sources: [autumlove]
+    colours: [cream, sage, butter]
+    dominant: cream
+    worn_as: {cream: base}
+
+  - id: T5a
+    name: Tonal brown, cream to chocolate
+    when: One brown family from cream to chocolate, no second hue.
+    sources: [nadamanley, styleacademy]
+    trade_names: "Pantone AW26/27: Arabian Spice, Toffee, Red Mahogany; WGSN: Cocoa Powder"
+    colours: [chocolate, cognac, camel, cream]
+    dominant: chocolate
+
+  - id: T5b
+    name: Tonal brown, rust to mahogany
+    when: The redder brown family, rust through cinnamon to mahogany.
+    sources: [nadamanley, styleacademy]
+    trade_names: "Pantone AW26/27: Arabian Spice, Toffee, Red Mahogany; WGSN: Cocoa Powder"
+    colours: [mahogany, cinnamon, rust]
+    dominant: mahogany
+
+  - id: T6
+    name: Pink, burgundy, chocolate
+    when: Pale pink lifted against oxblood and chocolate.
+    sources: [nadamanley]
+    colours: [oxblood, chocolate, pale_pink]
+    dominant: oxblood
+
+  - id: T7
+    name: Red on brown
+    when: One red worn on one brown.
+    sources: [nadamanley]
+    pairs: [[chocolate, cherry], [camel, tomato], [cognac, burgundy]]
+
+  - id: T8
+    name: Chartreuse grounded
+    when: Chartreuse as a small accent against one dark ground.
+    sources: [fashionunited, nadamanley]
+    accent: chartreuse
+    pairs: [[chocolate, chartreuse], [charcoal, chartreuse], [navy, chartreuse], [olive, chartreuse]]
+
+  - id: T9
+    name: Mauve and earth
+    when: Foxglove mauve with bordeaux and warm brown on a Muted Clay base.
+    sources: [ana]
+    colours: [muted_clay, mauve, bordeaux, warm_brown]
+    dominant: muted_clay
+    worn_as: {muted_clay: base}
+
+  - id: T10
+    name: Quiet base
+    when: The season's off-white carrying one strong colour.
+    sources: [fashionunited, autumlove]
+    dominant: off_white
+    # The brief names no strong colour. The two WGSN/Coloro AW26/27 colours in
+    # this same brief (Transformative Teal, Green Glow) are the ones used.
+    pairs: [[off_white, teal], [off_white, chartreuse]]
+
+  - id: T11
+    name: Camel and ink
+    when: Camel against ink navy.
+    sources: [marieclaire]
+    pairs: [[ink_navy, camel]]
+
+  - id: T12
+    name: Anthracite
+    when: Anthracite with white and black, Klein blue as the one bright.
+    sources: [mango_colours]
+    colours: [anthracite, black, white, klein_blue]
+    dominant: anthracite
+    accent: klein_blue
+
+# Louder runway pairs: notes only, never palettes.
+notes:
+  - {pair: mustard + bright pink, runway: Marc Jacobs}
+  - {pair: hot pink + chartreuse, runway: Prada}
+  - {pair: Festival Fuchsia accents}

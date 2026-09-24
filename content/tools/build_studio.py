@@ -451,6 +451,11 @@ def main():
     json.dump(products, open(DATA + '/products.json', 'w'), separators=(',', ':'))
     json.dump(inspiration, open(DATA + '/inspiration.json', 'w'), separators=(',', ':'))
     json.dump(meta, open(DATA + '/meta.json', 'w'), indent=1)
+    # the palettes beside the canvas: rebuilt from the frameworks and the
+    # AW26/27 seed, then copied as they are
+    import build_palettes
+    build_palettes.main()
+    shutil.copyfile(ROOT + '/content/palettes/palettes.json', DATA + '/palettes.json')
 
     if not a.no_images:
         copy_assets(products, {r['product_id']: r for r in prod_rows})

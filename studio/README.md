@@ -18,6 +18,7 @@ python3 content/tools/build_studio.py --no-images # JSON only, much faster
 | `js/data.js` | **the only file that knows where items come from.** Swap the source and the desk reads a user's own wardrobe instead of the catalogue. |
 | `js/model.js` | the board — pure data and pure functions |
 | `js/colour.js` | OKLab distance, used to *rank* suggestions and nothing else |
+| `js/palette.js` | the chosen palette: its snapshot, and the outfit's colour share against it |
 | `js/render.js` | draws a board onto a canvas; the export path |
 | `js/export.js` | PNG, JPEG, the info JSON, the markdown list, the share sheet |
 | `js/app.js` | the UI, and the only file that touches the DOM |
@@ -167,6 +168,30 @@ repository's **Actions** tab, workflow *Apply shelf choices*.
 **Frame…** on the canvas bar is one setting for every framed image on the
 board — the inspiration image, page tiles and every box: thin border, white
 mat, corner radius. It is saved with the board and remembered for the next.
+
+## Palettes
+
+Above the canvas, the first dropdown picks a category and group: a colour
+season, a colour family, or this season's AW26/27 palettes and their Soft
+Summer versions. The button beside it opens that group's palettes as swatch
+rows; tap one. It appears **beside** the canvas as a working reference, with
+names, shares, roles and placement. **On board** puts it on the board as a
+strip, above the pieces' own strip, and is off by default.
+
+While a palette is chosen, **Matches this palette** on the shelf ranks pieces
+by distance to its colours, using the same OKLab comparison as *Matches this
+look*. Only one of the two is on at a time. Under the canvas, two bars compare
+what the palette suggests with how the pieces divide by colour share. Each
+piece is weighted by slot as matching.md §3 weights tier balance: top and
+bottom double, a dress four. A colour further than 0.12 (OKLab) from every
+palette colour counts as *outside*. The bars are a reading aid, not a verdict.
+
+Choosing, changing or clearing a palette never moves anything on the canvas.
+The info file records it (`palette`: id, name, category, colours, source) and
+whether the strip was shown. The `.md` piece list names it in one line.
+Reopening a saved outfit brings the selection back. The palettes come from
+`content/palettes/palettes.json`, which `build_studio.py` rebuilds and copies to
+`data/palettes.json`. Without that file the desk still works, with no palettes.
 
 ## Touch
 

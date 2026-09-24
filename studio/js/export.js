@@ -136,7 +136,21 @@ export function buildInfo(board, productsById, inspById, { date = new Date() } =
     elements_shown: {
       title: !!board.showTitle, line: !!board.showLine,
       swatch_strip: !!board.showSwatches, numbered_labels: !!board.showLabels,
+      palette_strip: !!(board.showPalette && board.palette),
     },
+    // the palette chosen as the board's inspiration: a working aid, recorded
+    // so the outfit can be reopened with it and read against it later
+    palette: board.palette ? {
+      id: board.palette.id,
+      name: board.palette.name,
+      category: board.palette.category,
+      group: board.palette.group || '',
+      colours: (board.palette.colours || []).map((c) => ({
+        hex: c.hex, name: c.name, role: c.role, share: c.share, placement: c.placement || null,
+      })),
+      source: board.palette.source || null,
+      ...(board.palette.derived ? { derived: true, derived_from: board.palette.derived_from } : {}),
+    } : null,
     inspiration: insp ? {
       inspiration_id: insp.inspiration_id,
       path: insp.source_path,
@@ -166,6 +180,12 @@ export function buildMarkdown(info) {
     const h = info.inspiration.house
       ? `${info.inspiration.house} (${info.inspiration.house_confidence})` : 'house not legible';
     L.push(`*Inspiration: ${h} — ${info.inspiration.image_source}.*`, '');
+  }
+  if (info.palette) {
+    const cat = { season: 'colour season', family: 'colour family', trend: 'AW26/27' }[info.palette.category]
+      || info.palette.category;
+    const src = info.palette.source ? ` — ${info.palette.source.confidence}` : '';
+    L.push(`*Palette: ${info.palette.name} (${cat}${src}).*`, '');
   }
   L.push('| # | Brand | Piece | Colour | Price | Link |', '|---|---|---|---|---|---|');
   for (const p of info.pieces) {

@@ -34,6 +34,10 @@ export function createBoard(format = 'portrait') {
     showSwatches: true,
     showLabels: false,
     inspiration: null,
+    // the chosen palette, a snapshot (palette.js paletteSnapshot); a working
+    // reference beside the canvas, drawn on the board only when showPalette
+    palette: null,
+    showPalette: false,
     frame: { ...DEFAULT_FRAME },
     elements: [],
   };
@@ -165,6 +169,16 @@ export function swatchStrip(board, productsById, max = 5) {
     }
   }
   return mergeColours(list).slice(0, max);
+}
+
+/**
+ * The palette as a strip on the board: its colours by share, only when the
+ * toggle is on. Off by default — the palette is a working aid, not part of
+ * the picture.
+ */
+export function paletteStrip(board) {
+  if (!board.showPalette || !board.palette) return [];
+  return (board.palette.colours || []).map((c) => ({ hex: c.hex, name: c.name, share: (c.share || 0) / 100 }));
 }
 
 export function slugify(s) {
