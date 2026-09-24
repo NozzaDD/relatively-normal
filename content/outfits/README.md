@@ -27,3 +27,14 @@ in `validated`.
 The `.json` is what reopens a board: **Open** on the desk reads it back and
 refreshes every piece's brand, name, price and link from the catalogue as it is
 now. Nothing in this folder is ever edited by a script.
+
+**A board is known by its file name**, not by the slug inside its `.json`. The
+desk makes the slug from the title, so every untitled board of one day carries
+the same one: the four boards of 24 September all said `2026-09-24-untitled`,
+and the collector counted only the first. Give a board a title before saving,
+or rename its four files together. On 24 September the three palette boards
+were renamed `…-pink-on-chocolate`, `…-tonal-brown` and `…-teal-on-earth`
+(their `.json` and `.md` still say `untitled` inside, and were not edited).
+
+**`text.txt` files** are the iPad share sheet's stub (a binary plist holding
+the board's name). They are not part of a board; delete them.
