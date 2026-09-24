@@ -193,6 +193,15 @@ Reopening a saved outfit brings the selection back. The palettes come from
 `content/palettes/palettes.json`, which `build_studio.py` rebuilds and copies to
 `data/palettes.json`. Without that file the desk still works, with no palettes.
 
+## Where saved outfits go
+
+**Save** hands over four files with one name (`.png`, `.jpg`, `.json`, `.md`).
+Put all four in **`content/outfits/`**, not `content/swipe/outfits/`.
+`content/swipe/` holds inspiration, not boards. `collect_outfits.py` reads both
+folders, so nothing already saved there is lost, and it names each board it
+finds in the wrong one so you can move it. `content/outfits/README.md` has the
+rest.
+
 ## Touch
 
 - A vertical swipe on the shelf scrolls it.

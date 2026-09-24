@@ -315,16 +315,17 @@ def generators_slug(p):
 
 # -------------------------------------------------------------- (b) families
 
-# The words colour_names.py itself uses for each family: its family name and
-# the plain names in its rows. `denim` is left out on purpose — denim is a
-# fibre, never a colour (CLAUDE.md, hard rule 6).
+# The words colour_names.py uses for each family: its family name, its plain
+# names and its named exceptions. Only used to report where an anchor's own
+# name points elsewhere; the family itself is the measured one. `denim` is
+# left out on purpose — denim is a fibre, never a colour (hard rule 6).
 FAMILY_WORDS = {
     'red': {'red', 'oxblood', 'burgundy', 'brick'},
-    'orange': {'orange', 'rust', 'terracotta', 'apricot'},
-    'brown': {'brown', 'espresso', 'chocolate', 'tobacco', 'tan'},
+    'orange': {'orange', 'rust', 'terracotta', 'apricot', 'coral'},
+    'brown': {'brown', 'espresso', 'chocolate', 'tobacco', 'tan', 'camel'},
     'yellow': {'yellow', 'ochre', 'mustard', 'gold', 'butter'},
-    'green': {'green', 'olive', 'moss', 'sage', 'forest', 'emerald'},
-    'blue': {'blue', 'navy', 'steel', 'sky', 'petrol'},
+    'green': {'green', 'olive', 'moss', 'sage', 'forest', 'emerald', 'lime'},
+    'blue': {'blue', 'navy', 'steel', 'sky', 'petrol', 'teal', 'cobalt'},
     'purple': {'purple', 'aubergine', 'plum', 'violet', 'lilac', 'mauve'},
     'pink': {'pink', 'raspberry', 'rose', 'blush'},
 }
@@ -333,29 +334,28 @@ FAMILY_WORDS = {
 def family_of(anchor):
     """(family or None, measured family, named family or None).
 
-    Filed only when two repository sources agree: the family colour_names.py
-    measures, and a family word in the anchor's own name in seasons.yaml. The
-    vocabulary was drawn for the catalogue's muted garments and misfiles many
-    saturated anchors (true red as orange, cobalt as grey); the name alone is
-    not a measurement. Where they disagree, or the name carries no family word,
-    the anchor is unfiled and reported."""
+    The family is the one colour_names.py measures from hue and chroma. The
+    name is read only to report disagreement."""
     measured = classify(anchor.hex)[0]
     words = set(re.split(r'[^a-z]+', anchor.name.lower()))
     named = [f for f, ws in FAMILY_WORDS.items() if words & ws]
     named = named[0] if len(named) == 1 else None
-    return (measured if named == measured else None), measured, named
+    return (measured if measured in FAMILIES else None), measured, named
 
 
 def family_palettes(seasons, lists_by_season, gaps):
     out = []
     unfiled = []
+    differs = []
     filed = {}
     for key, season in seasons.items():
         for a in season.anchors:
             fam, measured, named = family_of(a)
             if fam:
                 filed.setdefault((fam, key), []).append(a)
-            elif not generators.is_neutral(a.rel) and (named or measured in FAMILIES):
+                if named and named != fam:
+                    differs.append((key, a, fam, named))
+            elif not generators.is_neutral(a.rel):
                 unfiled.append((key, a, measured, named))
     for fam in FAMILIES:
         for key, season in seasons.items():
@@ -363,8 +363,7 @@ def family_palettes(seasons, lists_by_season, gaps):
             members = filed.get((fam, key), [])
             if not members:
                 gaps.append({'category': 'family', 'group': fam, 'kind': 'no anchor',
-                             'detail': f'{SEASON_LABEL[key]} has no anchor filed as {fam} '
-                                       '(see the unfiled list for anchors the two sources disagree on).'})
+                             'detail': f'{SEASON_LABEL[key]} has no {fam} anchor.'})
                 continue
             for a in members:
                 pairs = [p for name in generators.DEFAULT_ORDER for p in lists[name] if a.name in p.names]
@@ -411,10 +410,13 @@ def family_palettes(seasons, lists_by_season, gaps):
                                       'family from content/tools/colour_names.py'}})
     for key, a, measured, named in unfiled:
         f, plain, *_ = classify(a.hex)
-        why = (f'its name says {named}, colour_names.py measures {f} / {plain}' if named
-               else f'colour_names.py measures {f} / {plain}, its name carries no family word')
         gaps.append({'category': 'family', 'group': 'unfiled', 'kind': 'unfiled',
-                     'detail': f'{SEASON_LABEL[key]} {a.name} #{a.hex}: {why}; filed in no family.'})
+                     'detail': f'{SEASON_LABEL[key]} {a.name} #{a.hex}: chromatic by the engine, filed by '
+                               f'colour_names.py as {f} / {plain}, a neutral name, so in no colour family.'})
+    for key, a, fam, named in differs:
+        gaps.append({'category': 'family', 'group': fam, 'kind': 'name differs',
+                     'detail': f'{SEASON_LABEL[key]} {a.name} #{a.hex}: filed as {fam} by hue and chroma; '
+                               f'its name points to {named}.'})
     return out
 
 

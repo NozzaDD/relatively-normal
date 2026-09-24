@@ -8,7 +8,7 @@ deleted or re-encoded.
 | Script | What it does |
 |---|---|
 | `imglib.py` | Shared helpers: iOS/Safari chrome trim, in-page lightbox trim, dHash, white balance against a studio backdrop, skin band, `rembg` cut-out with alpha hard-threshold and connected-component tidy-up. |
-| `colour_names.py` | The fixed colour vocabulary — 13 families and a closed list of plain names, assigned from CIELAB LCh plus the engine's relative chroma. `python3 content/tools/colour_names.py` prints a self-test. |
+| `colour_names.py` | The fixed colour vocabulary — 13 families and a closed list of plain names. Family follows CIELAB hue and chroma, with named exceptions for cream, camel, coral and teal; below C* 12 the original rows decide. `python3 content/tools/colour_names.py` prints a self-test. |
 | `cluster_products.py` | Clusters product screenshots into shop **batches** (layout change + legible-brand change) and, inside a batch, into **products** (adjacent shots of one garment). Writes `content/catalogue/batches.json`. Caches per-image signatures in `content/catalogue/_signatures.json`. |
 | `render_views.py` | Renders one readable image per product for the viewing pass. |
 | `make_assets.py` | One usable image per product: flat cut-out → on-model cut-out → crop tile, as WebP under 1200px. Driven by the `shot_type` recorded in the viewing pass. |
@@ -84,7 +84,7 @@ Two design notes worth keeping:
 |---|---|
 | `build_studio.py` | builds `studio/data/` and the web-sized images the desk serves |
 | `build_palettes.py` | builds `content/palettes/palettes.json` from the frameworks, the engine's generators and the AW26/27 seed; `build_studio.py` runs it and copies the result |
-| `collect_outfits.py` | reads `content/outfits/` and writes `used_in` back into the catalogue |
+| `collect_outfits.py` | reads `content/outfits/` (and `content/swipe/outfits/`, where some boards landed) and writes `used_in` back into the catalogue |
 
 `build_studio.py` is the only thing that writes into `studio/data/`,
 `studio/assets/`, `studio/thumbs/`, `studio/inspiration/` and `studio/fonts/`.

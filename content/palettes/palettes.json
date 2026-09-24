@@ -113,11 +113,11 @@
  ],
  "counts": {
   "season": 59,
-  "family": 73,
+  "family": 144,
   "trend": 20,
   "trend_soft_summer": 1,
   "trend_not_translated": 19,
-  "gaps": 152
+  "gaps": 99
  },
  "palettes": [
   {
@@ -2952,6 +2952,262 @@
    }
   },
   {
+   "id": "family-red-true_spring-tomato-red",
+   "name": "Tomato red · True Spring",
+   "category": "family",
+   "group": "red",
+   "group_label": "Red",
+   "season": "true_spring",
+   "focus": {
+    "name": "tomato red",
+    "hex": "#E63B2E",
+    "tier": "accents"
+   },
+   "when": "Tomato red carries the outfit and turquoise answers it: opposed hues at matched chroma, far apart in value, with warm charcoal between them.",
+   "colours": [
+    {
+     "hex": "#40C4B8",
+     "name": "turquoise",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "supporting",
+     "part": "counter"
+    },
+    {
+     "hex": "#403A35",
+     "name": "warm charcoal",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    },
+    {
+     "hex": "#E63B2E",
+     "name": "tomato red",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "dominant"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "turquoise",
+     "with_hex": "#40C4B8",
+     "bridge": "warm charcoal",
+     "generator": "opposition",
+     "hue_gap": 150.2,
+     "delta_L": 20.2,
+     "delta_rel_chroma": 0.06
+    },
+    {
+     "with": "bright turquoise",
+     "with_hex": "#00BFA5",
+     "bridge": "warm charcoal",
+     "generator": "opposition",
+     "hue_gap": 141.4,
+     "delta_L": 17.4,
+     "delta_rel_chroma": 0.19
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml true_spring; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-red-bright_spring-true-red",
+   "name": "True red · Bright Spring",
+   "category": "family",
+   "group": "red",
+   "group_label": "Red",
+   "season": "bright_spring",
+   "focus": {
+    "name": "true red",
+    "hex": "#E5202B",
+    "tier": "accents"
+   },
+   "when": "True red carries the outfit and bright turquoise answers it: opposed hues at matched chroma, far apart in value, with black between them.",
+   "colours": [
+    {
+     "hex": "#1FC9C3",
+     "name": "bright turquoise",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "supporting",
+     "part": "counter"
+    },
+    {
+     "hex": "#000000",
+     "name": "black",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    },
+    {
+     "hex": "#E5202B",
+     "name": "true red",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "dominant"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "bright turquoise",
+     "with_hex": "#1FC9C3",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 158.6,
+     "delta_L": 24.2,
+     "delta_rel_chroma": 0.03
+    },
+    {
+     "with": "emerald",
+     "with_hex": "#1DB47A",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 126.1,
+     "delta_L": 15.9,
+     "delta_rel_chroma": 0.02
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml bright_spring; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-red-true_autumn-warm-burgundy",
+   "name": "Warm burgundy · True Autumn",
+   "category": "family",
+   "group": "red",
+   "group_label": "Red",
+   "season": "true_autumn",
+   "focus": {
+    "name": "warm burgundy",
+    "hex": "#7A2E2E",
+    "tier": "supporting"
+   },
+   "when": "One hue family at two weights, Warm burgundy deep and pumpkin light, with linen between them.",
+   "colours": [
+    {
+     "hex": "#7A2E2E",
+     "name": "warm burgundy",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "supporting",
+     "part": "dominant"
+    },
+    {
+     "hex": "#DBD3CD",
+     "name": "linen",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    },
+    {
+     "hex": "#E07A2D",
+     "name": "pumpkin",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "counter"
+    }
+   ],
+   "basis": "tonal pair",
+   "combinations": [
+    {
+     "with": "pumpkin",
+     "with_hex": "#E07A2D",
+     "bridge": "linen",
+     "generator": "tonal",
+     "hue_gap": 31.4,
+     "delta_L": 31.5,
+     "delta_rel_chroma": 0.2
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml true_autumn; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-red-true_autumn-tomato",
+   "name": "Tomato · True Autumn",
+   "category": "family",
+   "group": "red",
+   "group_label": "Red",
+   "season": "true_autumn",
+   "focus": {
+    "name": "tomato",
+    "hex": "#C93B2B",
+    "tier": "accents"
+   },
+   "when": "Tomato as the one colour, linen and warm charcoal as the ground.",
+   "colours": [
+    {
+     "hex": "#DBD3CD",
+     "name": "linen",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#403A35",
+     "name": "warm charcoal",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#C93B2B",
+     "name": "tomato",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "colour"
+    }
+   ],
+   "basis": "on neutral ground",
+   "combinations": [],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml true_autumn; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
    "id": "family-red-deep_autumn-burgundy",
    "name": "Burgundy · Deep Autumn",
    "category": "family",
@@ -3005,6 +3261,77 @@
      "hue_gap": 144.6,
      "delta_L": 20.1,
      "delta_rel_chroma": 0.17
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml deep_autumn; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-red-deep_autumn-tomato-red",
+   "name": "Tomato red · Deep Autumn",
+   "category": "family",
+   "group": "red",
+   "group_label": "Red",
+   "season": "deep_autumn",
+   "focus": {
+    "name": "tomato red",
+    "hex": "#C6362A",
+    "tier": "accents"
+   },
+   "when": "Deep teal carries the outfit and tomato red answers it: opposed hues at matched chroma, far apart in value, with linen between them.",
+   "colours": [
+    {
+     "hex": "#184E4F",
+     "name": "deep teal",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "dominant"
+    },
+    {
+     "hex": "#DBD3CD",
+     "name": "linen",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    },
+    {
+     "hex": "#C6362A",
+     "name": "tomato red",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "counter"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "deep teal",
+     "with_hex": "#184E4F",
+     "bridge": "linen",
+     "generator": "opposition",
+     "hue_gap": 162.8,
+     "delta_L": 15.5,
+     "delta_rel_chroma": 0.06
+    },
+    {
+     "with": "forest",
+     "with_hex": "#1F4D3A",
+     "bridge": "linen",
+     "generator": "opposition",
+     "hue_gap": 126.5,
+     "delta_L": 16.2,
+     "delta_rel_chroma": 0.05
     }
    ],
    "source": {
@@ -3138,6 +3465,68 @@
    }
   },
   {
+   "id": "family-red-true_winter-true-red",
+   "name": "True red · True Winter",
+   "category": "family",
+   "group": "red",
+   "group_label": "Red",
+   "season": "true_winter",
+   "focus": {
+    "name": "true red",
+    "hex": "#D0021B",
+    "tier": "supporting"
+   },
+   "when": "True red carries the outfit and bright teal answers it: opposed hues at matched chroma, far apart in value, with black between them.",
+   "colours": [
+    {
+     "hex": "#D0021B",
+     "name": "true red",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "supporting",
+     "part": "dominant"
+    },
+    {
+     "hex": "#000000",
+     "name": "black",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    },
+    {
+     "hex": "#00A8A8",
+     "name": "bright teal",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "counter"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "bright teal",
+     "with_hex": "#00A8A8",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 161.7,
+     "delta_L": 18.8,
+     "delta_rel_chroma": 0.0
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml true_winter; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
    "id": "family-red-bright_winter-true-red",
    "name": "True red · Bright Winter",
    "category": "family",
@@ -3209,6 +3598,318 @@
    }
   },
   {
+   "id": "family-orange-light_spring-peach",
+   "name": "Peach · Light Spring",
+   "category": "family",
+   "group": "orange",
+   "group_label": "Orange",
+   "season": "light_spring",
+   "focus": {
+    "name": "peach",
+    "hex": "#F2B58B",
+    "tier": "supporting"
+   },
+   "when": "Peach as the one colour, warm charcoal and pebble as the ground.",
+   "colours": [
+    {
+     "hex": "#F2B58B",
+     "name": "peach",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "supporting",
+     "part": "colour"
+    },
+    {
+     "hex": "#403A35",
+     "name": "warm charcoal",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#89837D",
+     "name": "pebble",
+     "role": "accent",
+     "share": 20,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    }
+   ],
+   "basis": "on neutral ground",
+   "combinations": [],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml light_spring; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-orange-light_spring-light-coral",
+   "name": "Light coral · Light Spring",
+   "category": "family",
+   "group": "orange",
+   "group_label": "Orange",
+   "season": "light_spring",
+   "focus": {
+    "name": "light coral",
+    "hex": "#F08A7A",
+    "tier": "supporting"
+   },
+   "when": "Light coral as the one colour, warm charcoal and pebble as the ground.",
+   "colours": [
+    {
+     "hex": "#F08A7A",
+     "name": "light coral",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "supporting",
+     "part": "colour"
+    },
+    {
+     "hex": "#403A35",
+     "name": "warm charcoal",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#89837D",
+     "name": "pebble",
+     "role": "accent",
+     "share": 20,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    }
+   ],
+   "basis": "on neutral ground",
+   "combinations": [],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml light_spring; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-orange-light_spring-bright-coral",
+   "name": "Bright coral · Light Spring",
+   "category": "family",
+   "group": "orange",
+   "group_label": "Orange",
+   "season": "light_spring",
+   "focus": {
+    "name": "bright coral",
+    "hex": "#FF6F61",
+    "tier": "accents"
+   },
+   "when": "Bright coral as the one colour, warm charcoal and light warm grey as the ground.",
+   "colours": [
+    {
+     "hex": "#403A35",
+     "name": "warm charcoal",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#C8C2B4",
+     "name": "light warm grey",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#FF6F61",
+     "name": "bright coral",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "colour"
+    }
+   ],
+   "basis": "on neutral ground",
+   "combinations": [],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml light_spring; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-orange-true_spring-coral",
+   "name": "Coral · True Spring",
+   "category": "family",
+   "group": "orange",
+   "group_label": "Orange",
+   "season": "true_spring",
+   "focus": {
+    "name": "coral",
+    "hex": "#F0766B",
+    "tier": "supporting"
+   },
+   "when": "Coral as the one colour, warm charcoal and linen as the ground.",
+   "colours": [
+    {
+     "hex": "#F0766B",
+     "name": "coral",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "supporting",
+     "part": "colour"
+    },
+    {
+     "hex": "#403A35",
+     "name": "warm charcoal",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#DBD3CD",
+     "name": "linen",
+     "role": "accent",
+     "share": 20,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    }
+   ],
+   "basis": "on neutral ground",
+   "combinations": [],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml true_spring; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-orange-bright_spring-bright-coral",
+   "name": "Bright coral · Bright Spring",
+   "category": "family",
+   "group": "orange",
+   "group_label": "Orange",
+   "season": "bright_spring",
+   "focus": {
+    "name": "bright coral",
+    "hex": "#FF5A4E",
+    "tier": "supporting"
+   },
+   "when": "Bright coral as the one colour, black and charcoal as the ground.",
+   "colours": [
+    {
+     "hex": "#FF5A4E",
+     "name": "bright coral",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "supporting",
+     "part": "colour"
+    },
+    {
+     "hex": "#000000",
+     "name": "black",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#3C3C3C",
+     "name": "charcoal",
+     "role": "accent",
+     "share": 20,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    }
+   ],
+   "basis": "on neutral ground",
+   "combinations": [],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml bright_spring; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-orange-soft_autumn-cinnamon",
+   "name": "Cinnamon · Soft Autumn",
+   "category": "family",
+   "group": "orange",
+   "group_label": "Orange",
+   "season": "soft_autumn",
+   "focus": {
+    "name": "cinnamon",
+    "hex": "#B5693C",
+    "tier": "supporting"
+   },
+   "when": "Petrol carries the outfit and cinnamon answers it: opposed hues at matched chroma, far apart in value, with stone between them.",
+   "colours": [
+    {
+     "hex": "#2C5A66",
+     "name": "petrol",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "supporting",
+     "part": "dominant"
+    },
+    {
+     "hex": "#B5693C",
+     "name": "cinnamon",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "supporting",
+     "part": "counter"
+    },
+    {
+     "hex": "#D6CEC2",
+     "name": "stone",
+     "role": "accent",
+     "share": 20,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "petrol",
+     "with_hex": "#2C5A66",
+     "bridge": "stone",
+     "generator": "opposition",
+     "hue_gap": 169.3,
+     "delta_L": 16.5,
+     "delta_rel_chroma": 0.1
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml soft_autumn; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
    "id": "family-orange-soft_autumn-rust",
    "name": "Rust · Soft Autumn",
    "category": "family",
@@ -3262,6 +3963,77 @@
      "hue_gap": 153.6,
      "delta_L": 15.3,
      "delta_rel_chroma": 0.02
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml soft_autumn; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-orange-soft_autumn-salmon",
+   "name": "Salmon · Soft Autumn",
+   "category": "family",
+   "group": "orange",
+   "group_label": "Orange",
+   "season": "soft_autumn",
+   "focus": {
+    "name": "salmon",
+    "hex": "#D9907A",
+    "tier": "accents"
+   },
+   "when": "Petrol carries the outfit and salmon answers it: opposed hues at matched chroma, far apart in value, with stone between them.",
+   "colours": [
+    {
+     "hex": "#2C5A66",
+     "name": "petrol",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "supporting",
+     "part": "dominant"
+    },
+    {
+     "hex": "#D6CEC2",
+     "name": "stone",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    },
+    {
+     "hex": "#D9907A",
+     "name": "salmon",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "counter"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "petrol",
+     "with_hex": "#2C5A66",
+     "bridge": "stone",
+     "generator": "opposition",
+     "hue_gap": 178.1,
+     "delta_L": 31.0,
+     "delta_rel_chroma": 0.19
+    },
+    {
+     "with": "chocolate",
+     "with_hex": "#4A3728",
+     "bridge": "cream",
+     "generator": "tonal",
+     "hue_gap": 21.7,
+     "delta_L": 41.8,
+     "delta_rel_chroma": 0.16
     }
    ],
    "source": {
@@ -3371,6 +4143,77 @@
    }
   },
   {
+   "id": "family-orange-true_autumn-pumpkin",
+   "name": "Pumpkin · True Autumn",
+   "category": "family",
+   "group": "orange",
+   "group_label": "Orange",
+   "season": "true_autumn",
+   "focus": {
+    "name": "pumpkin",
+    "hex": "#E07A2D",
+    "tier": "accents"
+   },
+   "when": "Teal carries the outfit and pumpkin answers it: opposed hues at matched chroma, far apart in value, with linen between them.",
+   "colours": [
+    {
+     "hex": "#236E6B",
+     "name": "teal",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "dominant"
+    },
+    {
+     "hex": "#DBD3CD",
+     "name": "linen",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    },
+    {
+     "hex": "#E07A2D",
+     "name": "pumpkin",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "counter"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "teal",
+     "with_hex": "#236E6B",
+     "bridge": "linen",
+     "generator": "opposition",
+     "hue_gap": 133.5,
+     "delta_L": 19.5,
+     "delta_rel_chroma": 0.04
+    },
+    {
+     "with": "warm burgundy",
+     "with_hex": "#7A2E2E",
+     "bridge": "linen",
+     "generator": "tonal",
+     "hue_gap": 31.4,
+     "delta_L": 31.5,
+     "delta_rel_chroma": 0.2
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml true_autumn; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
    "id": "family-orange-deep_autumn-rust",
    "name": "Rust · Deep Autumn",
    "category": "family",
@@ -3424,6 +4267,77 @@
      "hue_gap": 35.0,
      "delta_L": 34.6,
      "delta_rel_chroma": 0.17
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml deep_autumn; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-orange-deep_autumn-pumpkin",
+   "name": "Pumpkin · Deep Autumn",
+   "category": "family",
+   "group": "orange",
+   "group_label": "Orange",
+   "season": "deep_autumn",
+   "focus": {
+    "name": "pumpkin",
+    "hex": "#DA6F1E",
+    "tier": "accents"
+   },
+   "when": "Deep teal carries the outfit and pumpkin answers it: opposed hues at matched chroma, far apart in value, with black between them.",
+   "colours": [
+    {
+     "hex": "#184E4F",
+     "name": "deep teal",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "dominant"
+    },
+    {
+     "hex": "#000000",
+     "name": "black",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    },
+    {
+     "hex": "#DA6F1E",
+     "name": "pumpkin",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "counter"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "deep teal",
+     "with_hex": "#184E4F",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 141.1,
+     "delta_L": 28.5,
+     "delta_rel_chroma": 0.05
+    },
+    {
+     "with": "forest",
+     "with_hex": "#1F4D3A",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 104.8,
+     "delta_L": 29.2,
+     "delta_rel_chroma": 0.15
     }
    ],
    "source": {
@@ -3545,6 +4459,56 @@
    }
   },
   {
+   "id": "family-yellow-true_spring-marigold",
+   "name": "Marigold · True Spring",
+   "category": "family",
+   "group": "yellow",
+   "group_label": "Yellow",
+   "season": "true_spring",
+   "focus": {
+    "name": "marigold",
+    "hex": "#F2A93B",
+    "tier": "supporting"
+   },
+   "when": "Marigold as the one colour, warm charcoal and pebble as the ground.",
+   "colours": [
+    {
+     "hex": "#F2A93B",
+     "name": "marigold",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "supporting",
+     "part": "colour"
+    },
+    {
+     "hex": "#403A35",
+     "name": "warm charcoal",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#89837D",
+     "name": "pebble",
+     "role": "accent",
+     "share": 20,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    }
+   ],
+   "basis": "on neutral ground",
+   "combinations": [],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml true_spring; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
    "id": "family-yellow-true_spring-bright-yellow",
    "name": "Bright yellow · True Spring",
    "category": "family",
@@ -3594,6 +4558,171 @@
     "kind": "repo",
     "confidence": "repo",
     "ref": "frameworks/seasons.yaml true_spring; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-yellow-bright_spring-lemon",
+   "name": "Lemon · Bright Spring",
+   "category": "family",
+   "group": "yellow",
+   "group_label": "Yellow",
+   "season": "bright_spring",
+   "focus": {
+    "name": "lemon",
+    "hex": "#FFE94D",
+    "tier": "supporting"
+   },
+   "when": "Bright navy carries the outfit and lemon answers it: opposed hues at matched chroma, far apart in value, with black between them.",
+   "colours": [
+    {
+     "hex": "#1F3A93",
+     "name": "bright navy",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "dominant"
+    },
+    {
+     "hex": "#FFE94D",
+     "name": "lemon",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "supporting",
+     "part": "counter"
+    },
+    {
+     "hex": "#000000",
+     "name": "black",
+     "role": "accent",
+     "share": 20,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "bright navy",
+     "with_hex": "#1F3A93",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 162.4,
+     "delta_L": 63.8,
+     "delta_rel_chroma": 0.12
+    },
+    {
+     "with": "cobalt",
+     "with_hex": "#1E5EFF",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 161.1,
+     "delta_L": 45.4,
+     "delta_rel_chroma": 0.0
+    },
+    {
+     "with": "bright violet",
+     "with_hex": "#8E44FF",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 147.1,
+     "delta_L": 43.3,
+     "delta_rel_chroma": 0.0
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml bright_spring; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-yellow-light_summer-soft-lemon",
+   "name": "Soft lemon · Light Summer",
+   "category": "family",
+   "group": "yellow",
+   "group_label": "Yellow",
+   "season": "light_summer",
+   "focus": {
+    "name": "soft lemon",
+    "hex": "#F2E8A6",
+    "tier": "supporting"
+   },
+   "when": "Soft navy carries the outfit and soft lemon answers it: opposed hues at matched chroma, far apart in value, with lavender between them.",
+   "colours": [
+    {
+     "hex": "#4C5B78",
+     "name": "soft navy",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "dominant"
+    },
+    {
+     "hex": "#F2E8A6",
+     "name": "soft lemon",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "supporting",
+     "part": "counter"
+    },
+    {
+     "hex": "#B9A9D6",
+     "name": "lavender",
+     "role": "accent",
+     "share": 20,
+     "placement": null,
+     "tier": "supporting",
+     "part": "bridge"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "soft navy",
+     "with_hex": "#4C5B78",
+     "bridge": "lavender",
+     "generator": "opposition",
+     "hue_gap": 175.4,
+     "delta_L": 52.9,
+     "delta_rel_chroma": 0.04
+    },
+    {
+     "with": "sky blue",
+     "with_hex": "#8FB8DE",
+     "bridge": "graphite",
+     "generator": "opposition",
+     "hue_gap": 158.4,
+     "delta_L": 18.2,
+     "delta_rel_chroma": 0.19
+    },
+    {
+     "with": "lavender",
+     "with_hex": "#B9A9D6",
+     "bridge": "graphite",
+     "generator": "opposition",
+     "hue_gap": 155.7,
+     "delta_L": 19.5,
+     "delta_rel_chroma": 0.11
+    },
+    {
+     "with": "dusty rose",
+     "with_hex": "#D9A5B3",
+     "bridge": "graphite",
+     "generator": "opposition",
+     "hue_gap": 100.1,
+     "delta_L": 18.6,
+     "delta_rel_chroma": 0.1
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml light_summer; engine/generators.py; family from content/tools/colour_names.py"
    }
   },
   {
@@ -3806,6 +4935,75 @@
    }
   },
   {
+   "id": "family-yellow-true_autumn-warm-khaki",
+   "name": "Warm khaki · True Autumn",
+   "category": "family",
+   "group": "yellow",
+   "group_label": "Yellow",
+   "season": "true_autumn",
+   "focus": {
+    "name": "warm khaki",
+    "hex": "#9B8B5A",
+    "tier": "foundations"
+   },
+   "when": "One hue family at two weights, Warm khaki deep and cream light, with dark chocolate between them.",
+   "colours": [
+    {
+     "hex": "#9B8B5A",
+     "name": "warm khaki",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "dominant"
+    },
+    {
+     "hex": "#EFE6D3",
+     "name": "cream",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "counter"
+    },
+    {
+     "hex": "#3B2A1E",
+     "name": "dark chocolate",
+     "role": "accent",
+     "share": 20,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    }
+   ],
+   "basis": "tonal pair",
+   "combinations": [
+    {
+     "with": "cream",
+     "with_hex": "#EFE6D3",
+     "bridge": "dark chocolate",
+     "generator": "tonal",
+     "hue_gap": 1.8,
+     "delta_L": 33.3,
+     "delta_rel_chroma": 0.17
+    },
+    {
+     "with": "dark chocolate",
+     "with_hex": "#3B2A1E",
+     "bridge": "cream",
+     "generator": "tonal",
+     "hue_gap": 31.2,
+     "delta_L": 39.5,
+     "delta_rel_chroma": 0.05
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml true_autumn; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
    "id": "family-yellow-true_autumn-mustard",
    "name": "Mustard · True Autumn",
    "category": "family",
@@ -3997,6 +5195,529 @@
    }
   },
   {
+   "id": "family-yellow-true_winter-lemon-ice",
+   "name": "Lemon ice · True Winter",
+   "category": "family",
+   "group": "yellow",
+   "group_label": "Yellow",
+   "season": "true_winter",
+   "focus": {
+    "name": "lemon ice",
+    "hex": "#F5F5A0",
+    "tier": "accents"
+   },
+   "when": "Cool purple carries the outfit and lemon ice answers it: opposed hues at matched chroma, far apart in value, with black between them.",
+   "colours": [
+    {
+     "hex": "#5A2D91",
+     "name": "cool purple",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "supporting",
+     "part": "dominant"
+    },
+    {
+     "hex": "#000000",
+     "name": "black",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    },
+    {
+     "hex": "#F5F5A0",
+     "name": "lemon ice",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "counter"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "cool purple",
+     "with_hex": "#5A2D91",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 155.8,
+     "delta_L": 65.2,
+     "delta_rel_chroma": 0.17
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml true_winter; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-yellow-bright_winter-lemon",
+   "name": "Lemon · Bright Winter",
+   "category": "family",
+   "group": "yellow",
+   "group_label": "Yellow",
+   "season": "bright_winter",
+   "focus": {
+    "name": "lemon",
+    "hex": "#FFF44F",
+    "tier": "accents"
+   },
+   "when": "Lemon as the one colour, black and cool taupe as the ground.",
+   "colours": [
+    {
+     "hex": "#000000",
+     "name": "black",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#9C9A9A",
+     "name": "cool taupe",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#FFF44F",
+     "name": "lemon",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "colour"
+    }
+   ],
+   "basis": "on neutral ground",
+   "combinations": [],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml bright_winter; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-brown-light_spring-camel",
+   "name": "Camel · Light Spring",
+   "category": "family",
+   "group": "brown",
+   "group_label": "Brown",
+   "season": "light_spring",
+   "focus": {
+    "name": "camel",
+    "hex": "#C9A66B",
+    "tier": "foundations"
+   },
+   "when": "Soft navy carries the outfit and camel answers it: opposed hues at matched chroma, far apart in value, with pebble between them.",
+   "colours": [
+    {
+     "hex": "#3F4F6B",
+     "name": "soft navy",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "dominant"
+    },
+    {
+     "hex": "#C9A66B",
+     "name": "camel",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "counter"
+    },
+    {
+     "hex": "#89837D",
+     "name": "pebble",
+     "role": "accent",
+     "share": 20,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "soft navy",
+     "with_hex": "#3F4F6B",
+     "bridge": "pebble",
+     "generator": "opposition",
+     "hue_gap": 166.5,
+     "delta_L": 36.6,
+     "delta_rel_chroma": 0.02
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml light_spring; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-brown-light_spring-warm-taupe",
+   "name": "Warm taupe · Light Spring",
+   "category": "family",
+   "group": "brown",
+   "group_label": "Brown",
+   "season": "light_spring",
+   "focus": {
+    "name": "warm taupe",
+    "hex": "#B8A48A",
+    "tier": "foundations"
+   },
+   "when": "Warm taupe as the one colour, warm charcoal and pebble as the ground.",
+   "colours": [
+    {
+     "hex": "#B8A48A",
+     "name": "warm taupe",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "colour"
+    },
+    {
+     "hex": "#403A35",
+     "name": "warm charcoal",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#89837D",
+     "name": "pebble",
+     "role": "accent",
+     "share": 20,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    }
+   ],
+   "basis": "on neutral ground",
+   "combinations": [],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml light_spring; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-brown-true_spring-camel",
+   "name": "Camel · True Spring",
+   "category": "family",
+   "group": "brown",
+   "group_label": "Brown",
+   "season": "true_spring",
+   "focus": {
+    "name": "camel",
+    "hex": "#C69C6D",
+    "tier": "foundations"
+   },
+   "when": "Warm navy carries the outfit and camel answers it: opposed hues at matched chroma, far apart in value, with linen between them.",
+   "colours": [
+    {
+     "hex": "#34495E",
+     "name": "warm navy",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "dominant"
+    },
+    {
+     "hex": "#C69C6D",
+     "name": "camel",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "counter"
+    },
+    {
+     "hex": "#DBD3CD",
+     "name": "linen",
+     "role": "accent",
+     "share": 20,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "warm navy",
+     "with_hex": "#34495E",
+     "bridge": "linen",
+     "generator": "opposition",
+     "hue_gap": 170.0,
+     "delta_L": 37.0,
+     "delta_rel_chroma": 0.1
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml true_spring; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-brown-true_spring-warm-beige",
+   "name": "Warm beige · True Spring",
+   "category": "family",
+   "group": "brown",
+   "group_label": "Brown",
+   "season": "true_spring",
+   "focus": {
+    "name": "warm beige",
+    "hex": "#D9C4A1",
+    "tier": "foundations"
+   },
+   "when": "Warm beige as the one colour, warm charcoal and pebble as the ground.",
+   "colours": [
+    {
+     "hex": "#D9C4A1",
+     "name": "warm beige",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "colour"
+    },
+    {
+     "hex": "#403A35",
+     "name": "warm charcoal",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#89837D",
+     "name": "pebble",
+     "role": "accent",
+     "share": 20,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    }
+   ],
+   "basis": "on neutral ground",
+   "combinations": [],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml true_spring; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-brown-true_spring-golden-brown",
+   "name": "Golden brown · True Spring",
+   "category": "family",
+   "group": "brown",
+   "group_label": "Brown",
+   "season": "true_spring",
+   "focus": {
+    "name": "golden brown",
+    "hex": "#9C6B3F",
+    "tier": "foundations"
+   },
+   "when": "Warm navy carries the outfit and golden brown answers it: opposed hues at matched chroma, far apart in value, with linen between them.",
+   "colours": [
+    {
+     "hex": "#34495E",
+     "name": "warm navy",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "dominant"
+    },
+    {
+     "hex": "#9C6B3F",
+     "name": "golden brown",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "counter"
+    },
+    {
+     "hex": "#DBD3CD",
+     "name": "linen",
+     "role": "accent",
+     "share": 20,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "warm navy",
+     "with_hex": "#34495E",
+     "bridge": "linen",
+     "generator": "opposition",
+     "hue_gap": 162.8,
+     "delta_L": 19.3,
+     "delta_rel_chroma": 0.04
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml true_spring; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-brown-true_spring-khaki",
+   "name": "Khaki · True Spring",
+   "category": "family",
+   "group": "brown",
+   "group_label": "Brown",
+   "season": "true_spring",
+   "focus": {
+    "name": "khaki",
+    "hex": "#A89A6B",
+    "tier": "foundations"
+   },
+   "when": "Warm navy carries the outfit and khaki answers it: opposed hues at matched chroma, far apart in value, with cream between them.",
+   "colours": [
+    {
+     "hex": "#34495E",
+     "name": "warm navy",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "dominant"
+    },
+    {
+     "hex": "#A89A6B",
+     "name": "khaki",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "counter"
+    },
+    {
+     "hex": "#EFE6D3",
+     "name": "cream",
+     "role": "accent",
+     "share": 20,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "warm navy",
+     "with_hex": "#34495E",
+     "bridge": "cream",
+     "generator": "opposition",
+     "hue_gap": 168.4,
+     "delta_L": 33.6,
+     "delta_rel_chroma": 0.12
+    },
+    {
+     "with": "cream",
+     "with_hex": "#EFE6D3",
+     "bridge": "warm charcoal",
+     "generator": "tonal",
+     "hue_gap": 3.7,
+     "delta_L": 27.8,
+     "delta_rel_chroma": 0.11
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml true_spring; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-brown-bright_spring-camel",
+   "name": "Camel · Bright Spring",
+   "category": "family",
+   "group": "brown",
+   "group_label": "Brown",
+   "season": "bright_spring",
+   "focus": {
+    "name": "camel",
+    "hex": "#C8A165",
+    "tier": "foundations"
+   },
+   "when": "One hue family at two weights, Camel deep and warm white light, with black between them.",
+   "colours": [
+    {
+     "hex": "#C8A165",
+     "name": "camel",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "dominant"
+    },
+    {
+     "hex": "#FBF7EF",
+     "name": "warm white",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "counter"
+    },
+    {
+     "hex": "#000000",
+     "name": "black",
+     "role": "accent",
+     "share": 20,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    }
+   ],
+   "basis": "tonal pair",
+   "combinations": [
+    {
+     "with": "warm white",
+     "with_hex": "#FBF7EF",
+     "bridge": "black",
+     "generator": "tonal",
+     "hue_gap": 11.2,
+     "delta_L": 28.8,
+     "delta_rel_chroma": 0.04
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml bright_spring; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
    "id": "family-brown-soft_autumn-chocolate",
    "name": "Chocolate · Soft Autumn",
    "category": "family",
@@ -4093,6 +5814,191 @@
    }
   },
   {
+   "id": "family-brown-soft_autumn-camel",
+   "name": "Camel · Soft Autumn",
+   "category": "family",
+   "group": "brown",
+   "group_label": "Brown",
+   "season": "soft_autumn",
+   "focus": {
+    "name": "camel",
+    "hex": "#B89A6B",
+    "tier": "foundations"
+   },
+   "when": "One hue family at two weights, Camel deep and cream light, with warm charcoal between them.",
+   "colours": [
+    {
+     "hex": "#B89A6B",
+     "name": "camel",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "dominant"
+    },
+    {
+     "hex": "#EFE6D3",
+     "name": "cream",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "counter"
+    },
+    {
+     "hex": "#3A3632",
+     "name": "warm charcoal",
+     "role": "accent",
+     "share": 20,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    }
+   ],
+   "basis": "tonal pair",
+   "combinations": [
+    {
+     "with": "cream",
+     "with_hex": "#EFE6D3",
+     "bridge": "warm charcoal",
+     "generator": "tonal",
+     "hue_gap": 9.7,
+     "delta_L": 26.3,
+     "delta_rel_chroma": 0.13
+    },
+    {
+     "with": "chocolate",
+     "with_hex": "#4A3728",
+     "bridge": "cream",
+     "generator": "tonal",
+     "hue_gap": 16.7,
+     "delta_L": 40.5,
+     "delta_rel_chroma": 0.05
+    },
+    {
+     "with": "soft plum",
+     "with_hex": "#5C3A4E",
+     "bridge": "cream",
+     "generator": "muted",
+     "hue_gap": 98.7,
+     "delta_L": 36.2,
+     "delta_rel_chroma": 0.08
+    },
+    {
+     "with": "dark olive",
+     "with_hex": "#4E5A3A",
+     "bridge": "cream",
+     "generator": "muted",
+     "hue_gap": 42.0,
+     "delta_L": 28.8,
+     "delta_rel_chroma": 0.02
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml soft_autumn; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-brown-soft_autumn-warm-taupe",
+   "name": "Warm taupe · Soft Autumn",
+   "category": "family",
+   "group": "brown",
+   "group_label": "Brown",
+   "season": "soft_autumn",
+   "focus": {
+    "name": "warm taupe",
+    "hex": "#A8957C",
+    "tier": "supporting"
+   },
+   "when": "One hue family at two weights, Warm taupe deep and cream light, with warm charcoal between them.",
+   "colours": [
+    {
+     "hex": "#A8957C",
+     "name": "warm taupe",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "supporting",
+     "part": "dominant"
+    },
+    {
+     "hex": "#EFE6D3",
+     "name": "cream",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "counter"
+    },
+    {
+     "hex": "#3A3632",
+     "name": "warm charcoal",
+     "role": "accent",
+     "share": 20,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    }
+   ],
+   "basis": "tonal pair",
+   "combinations": [
+    {
+     "with": "cream",
+     "with_hex": "#EFE6D3",
+     "bridge": "warm charcoal",
+     "generator": "tonal",
+     "hue_gap": 11.5,
+     "delta_L": 28.8,
+     "delta_rel_chroma": 0.05
+    },
+    {
+     "with": "chocolate",
+     "with_hex": "#4A3728",
+     "bridge": "cream",
+     "generator": "tonal",
+     "hue_gap": 14.9,
+     "delta_L": 38.0,
+     "delta_rel_chroma": 0.13
+    },
+    {
+     "with": "soft plum",
+     "with_hex": "#5C3A4E",
+     "bridge": "cream",
+     "generator": "muted",
+     "hue_gap": 97.0,
+     "delta_L": 33.7,
+     "delta_rel_chroma": 0.1
+    },
+    {
+     "with": "soft plum and cream",
+     "with_hex": null,
+     "bridge": "warm taupe",
+     "as": "bridge",
+     "generator": "opposition",
+     "hue_gap": 108.5,
+     "delta_L": 62.5,
+     "delta_rel_chroma": 0.05
+    },
+    {
+     "with": "dark olive and cream",
+     "with_hex": null,
+     "bridge": "warm taupe",
+     "as": "bridge",
+     "generator": "tonal",
+     "hue_gap": 32.3,
+     "delta_L": 55.1,
+     "delta_rel_chroma": 0.12
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml soft_autumn; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
    "id": "family-brown-true_autumn-dark-chocolate",
    "name": "Dark chocolate · True Autumn",
    "category": "family",
@@ -4172,6 +6078,66 @@
      "hue_gap": 1.8,
      "delta_L": 33.3,
      "delta_rel_chroma": 0.17
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml true_autumn; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-brown-true_autumn-camel",
+   "name": "Camel · True Autumn",
+   "category": "family",
+   "group": "brown",
+   "group_label": "Brown",
+   "season": "true_autumn",
+   "focus": {
+    "name": "camel",
+    "hex": "#B48A50",
+    "tier": "foundations"
+   },
+   "when": "One hue family at two weights, Dark chocolate deep and camel light, with cream between them.",
+   "colours": [
+    {
+     "hex": "#3B2A1E",
+     "name": "dark chocolate",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "dominant"
+    },
+    {
+     "hex": "#B48A50",
+     "name": "camel",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "counter"
+    },
+    {
+     "hex": "#EFE6D3",
+     "name": "cream",
+     "role": "accent",
+     "share": 20,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    }
+   ],
+   "basis": "tonal pair",
+   "combinations": [
+    {
+     "with": "dark chocolate",
+     "with_hex": "#3B2A1E",
+     "bridge": "cream",
+     "generator": "tonal",
+     "hue_gap": 15.0,
+     "delta_L": 41.6,
+     "delta_rel_chroma": 0.16
     }
    ],
    "source": {
@@ -4580,6 +6546,95 @@
    }
   },
   {
+   "id": "family-green-bright_spring-lime",
+   "name": "Lime · Bright Spring",
+   "category": "family",
+   "group": "green",
+   "group_label": "Green",
+   "season": "bright_spring",
+   "focus": {
+    "name": "lime",
+    "hex": "#B7F542",
+    "tier": "accents"
+   },
+   "when": "Bright navy carries the outfit and lime answers it: opposed hues at matched chroma, far apart in value, with black between them.",
+   "colours": [
+    {
+     "hex": "#1F3A93",
+     "name": "bright navy",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "dominant"
+    },
+    {
+     "hex": "#000000",
+     "name": "black",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    },
+    {
+     "hex": "#B7F542",
+     "name": "lime",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "counter"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "cobalt",
+     "with_hex": "#1E5EFF",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 175.5,
+     "delta_L": 43.4,
+     "delta_rel_chroma": 0.14
+    },
+    {
+     "with": "bright navy",
+     "with_hex": "#1F3A93",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 174.1,
+     "delta_L": 61.8,
+     "delta_rel_chroma": 0.02
+    },
+    {
+     "with": "bright violet",
+     "with_hex": "#8E44FF",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 170.5,
+     "delta_L": 41.4,
+     "delta_rel_chroma": 0.14
+    },
+    {
+     "with": "hot pink",
+     "with_hex": "#FF4F9A",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 122.4,
+     "delta_L": 28.8,
+     "delta_rel_chroma": 0.14
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml bright_spring; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
    "id": "family-green-light_summer-sage",
    "name": "Sage · Light Summer",
    "category": "family",
@@ -4623,6 +6678,68 @@
    ],
    "basis": "on neutral ground",
    "combinations": [],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml light_summer; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-green-light_summer-mint",
+   "name": "Mint · Light Summer",
+   "category": "family",
+   "group": "green",
+   "group_label": "Green",
+   "season": "light_summer",
+   "focus": {
+    "name": "mint",
+    "hex": "#9FE2CF",
+    "tier": "accents"
+   },
+   "when": "Soft navy carries the outfit and mint answers it: opposed hues at matched chroma, far apart in value, with slate grey between them.",
+   "colours": [
+    {
+     "hex": "#4C5B78",
+     "name": "soft navy",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "dominant"
+    },
+    {
+     "hex": "#818488",
+     "name": "slate grey",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    },
+    {
+     "hex": "#9FE2CF",
+     "name": "mint",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "counter"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "soft navy",
+     "with_hex": "#4C5B78",
+     "bridge": "slate grey",
+     "generator": "opposition",
+     "hue_gap": 102.0,
+     "delta_L": 46.6,
+     "delta_rel_chroma": 0.03
+    }
+   ],
    "source": {
     "kind": "repo",
     "confidence": "repo",
@@ -5300,6 +7417,68 @@
    }
   },
   {
+   "id": "family-green-deep_winter-deep-pine",
+   "name": "Deep pine · Deep Winter",
+   "category": "family",
+   "group": "green",
+   "group_label": "Green",
+   "season": "deep_winter",
+   "focus": {
+    "name": "deep pine",
+    "hex": "#1E3D34",
+    "tier": "foundations"
+   },
+   "when": "Deep pine carries the outfit and icy lilac answers it: opposed hues at matched chroma, far apart in value, with slate grey between them.",
+   "colours": [
+    {
+     "hex": "#1E3D34",
+     "name": "deep pine",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "dominant"
+    },
+    {
+     "hex": "#818488",
+     "name": "slate grey",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    },
+    {
+     "hex": "#D9CFF5",
+     "name": "icy lilac",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "counter"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "icy lilac",
+     "with_hex": "#D9CFF5",
+     "bridge": "slate grey",
+     "generator": "opposition",
+     "hue_gap": 129.4,
+     "delta_L": 61.8,
+     "delta_rel_chroma": 0.14
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml deep_winter; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
    "id": "family-green-deep_winter-emerald",
    "name": "Emerald · Deep Winter",
    "category": "family",
@@ -5532,6 +7711,104 @@
    }
   },
   {
+   "id": "family-green-bright_winter-lime",
+   "name": "Lime · Bright Winter",
+   "category": "family",
+   "group": "green",
+   "group_label": "Green",
+   "season": "bright_winter",
+   "focus": {
+    "name": "lime",
+    "hex": "#9EF01A",
+    "tier": "accents"
+   },
+   "when": "Cobalt carries the outfit and lime answers it: opposed hues at matched chroma, far apart in value, with black between them.",
+   "colours": [
+    {
+     "hex": "#0047FF",
+     "name": "cobalt",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "supporting",
+     "part": "dominant"
+    },
+    {
+     "hex": "#000000",
+     "name": "black",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    },
+    {
+     "hex": "#9EF01A",
+     "name": "lime",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "counter"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "cobalt",
+     "with_hex": "#0047FF",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 177.3,
+     "delta_L": 46.1,
+     "delta_rel_chroma": 0.03
+    },
+    {
+     "with": "bright purple",
+     "with_hex": "#7B2CBF",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 169.2,
+     "delta_L": 49.4,
+     "delta_rel_chroma": 0.19
+    },
+    {
+     "with": "bright navy",
+     "with_hex": "#0B2E6B",
+     "bridge": "emerald",
+     "generator": "opposition",
+     "hue_gap": 166.6,
+     "delta_L": 66.4,
+     "delta_rel_chroma": 0.03
+    },
+    {
+     "with": "hot pink",
+     "with_hex": "#FF2E88",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 120.9,
+     "delta_L": 29.8,
+     "delta_rel_chroma": 0.03
+    },
+    {
+     "with": "emerald",
+     "with_hex": "#00A86B",
+     "bridge": "black",
+     "generator": "tonal",
+     "hue_gap": 34.7,
+     "delta_L": 26.0,
+     "delta_rel_chroma": 0.03
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml bright_winter; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
    "id": "family-blue-light_spring-soft-navy",
    "name": "Soft navy · Light Spring",
    "category": "family",
@@ -5628,6 +7905,108 @@
    }
   },
   {
+   "id": "family-blue-light_spring-warm-aqua",
+   "name": "Warm aqua · Light Spring",
+   "category": "family",
+   "group": "blue",
+   "group_label": "Blue",
+   "season": "light_spring",
+   "focus": {
+    "name": "warm aqua",
+    "hex": "#8FD1C8",
+    "tier": "supporting"
+   },
+   "when": "Warm aqua as the one colour, warm charcoal and pebble as the ground.",
+   "colours": [
+    {
+     "hex": "#8FD1C8",
+     "name": "warm aqua",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "supporting",
+     "part": "colour"
+    },
+    {
+     "hex": "#403A35",
+     "name": "warm charcoal",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#89837D",
+     "name": "pebble",
+     "role": "accent",
+     "share": 20,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    }
+   ],
+   "basis": "on neutral ground",
+   "combinations": [],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml light_spring; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-blue-light_spring-turquoise",
+   "name": "Turquoise · Light Spring",
+   "category": "family",
+   "group": "blue",
+   "group_label": "Blue",
+   "season": "light_spring",
+   "focus": {
+    "name": "turquoise",
+    "hex": "#3FBFBF",
+    "tier": "accents"
+   },
+   "when": "Turquoise as the one colour, warm charcoal and pebble as the ground.",
+   "colours": [
+    {
+     "hex": "#403A35",
+     "name": "warm charcoal",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#89837D",
+     "name": "pebble",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#3FBFBF",
+     "name": "turquoise",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "colour"
+    }
+   ],
+   "basis": "on neutral ground",
+   "combinations": [],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml light_spring; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
    "id": "family-blue-true_spring-warm-navy",
    "name": "Warm navy · True Spring",
    "category": "family",
@@ -5706,6 +8085,130 @@
      "hue_gap": 129.4,
      "delta_L": 38.2,
      "delta_rel_chroma": 0.03
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml true_spring; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-blue-true_spring-turquoise",
+   "name": "Turquoise · True Spring",
+   "category": "family",
+   "group": "blue",
+   "group_label": "Blue",
+   "season": "true_spring",
+   "focus": {
+    "name": "turquoise",
+    "hex": "#40C4B8",
+    "tier": "supporting"
+   },
+   "when": "Tomato red carries the outfit and turquoise answers it: opposed hues at matched chroma, far apart in value, with warm charcoal between them.",
+   "colours": [
+    {
+     "hex": "#40C4B8",
+     "name": "turquoise",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "supporting",
+     "part": "counter"
+    },
+    {
+     "hex": "#403A35",
+     "name": "warm charcoal",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    },
+    {
+     "hex": "#E63B2E",
+     "name": "tomato red",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "dominant"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "tomato red",
+     "with_hex": "#E63B2E",
+     "bridge": "warm charcoal",
+     "generator": "opposition",
+     "hue_gap": 150.2,
+     "delta_L": 20.2,
+     "delta_rel_chroma": 0.06
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml true_spring; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-blue-true_spring-bright-turquoise",
+   "name": "Bright turquoise · True Spring",
+   "category": "family",
+   "group": "blue",
+   "group_label": "Blue",
+   "season": "true_spring",
+   "focus": {
+    "name": "bright turquoise",
+    "hex": "#00BFA5",
+    "tier": "accents"
+   },
+   "when": "Bright turquoise as the one colour, warm charcoal and linen as the ground.",
+   "colours": [
+    {
+     "hex": "#403A35",
+     "name": "warm charcoal",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#DBD3CD",
+     "name": "linen",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#00BFA5",
+     "name": "bright turquoise",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "colour"
+    }
+   ],
+   "basis": "on neutral ground",
+   "combinations": [
+    {
+     "with": "tomato red",
+     "with_hex": "#E63B2E",
+     "bridge": "warm charcoal",
+     "generator": "opposition",
+     "hue_gap": 141.4,
+     "delta_L": 17.4,
+     "delta_rel_chroma": 0.19
     }
    ],
    "source": {
@@ -5795,6 +8298,184 @@
      "hue_gap": 102.7,
      "delta_L": 45.6,
      "delta_rel_chroma": 0.09
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml bright_spring; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-blue-bright_spring-bright-turquoise",
+   "name": "Bright turquoise · Bright Spring",
+   "category": "family",
+   "group": "blue",
+   "group_label": "Blue",
+   "season": "bright_spring",
+   "focus": {
+    "name": "bright turquoise",
+    "hex": "#1FC9C3",
+    "tier": "supporting"
+   },
+   "when": "True red carries the outfit and bright turquoise answers it: opposed hues at matched chroma, far apart in value, with black between them.",
+   "colours": [
+    {
+     "hex": "#1FC9C3",
+     "name": "bright turquoise",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "supporting",
+     "part": "counter"
+    },
+    {
+     "hex": "#000000",
+     "name": "black",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    },
+    {
+     "hex": "#E5202B",
+     "name": "true red",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "dominant"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "true red",
+     "with_hex": "#E5202B",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 158.6,
+     "delta_L": 24.2,
+     "delta_rel_chroma": 0.03
+    },
+    {
+     "with": "bright violet",
+     "with_hex": "#8E44FF",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 118.1,
+     "delta_L": 25.2,
+     "delta_rel_chroma": 0.03
+    },
+    {
+     "with": "cobalt",
+     "with_hex": "#1E5EFF",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 104.1,
+     "delta_L": 27.2,
+     "delta_rel_chroma": 0.03
+    },
+    {
+     "with": "bright navy",
+     "with_hex": "#1F3A93",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 102.7,
+     "delta_L": 45.6,
+     "delta_rel_chroma": 0.09
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml bright_spring; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-blue-bright_spring-cobalt",
+   "name": "Cobalt · Bright Spring",
+   "category": "family",
+   "group": "blue",
+   "group_label": "Blue",
+   "season": "bright_spring",
+   "focus": {
+    "name": "cobalt",
+    "hex": "#1E5EFF",
+    "tier": "accents"
+   },
+   "when": "Cobalt carries the outfit and lemon answers it: opposed hues at matched chroma, far apart in value, with black between them.",
+   "colours": [
+    {
+     "hex": "#FFE94D",
+     "name": "lemon",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "supporting",
+     "part": "counter"
+    },
+    {
+     "hex": "#000000",
+     "name": "black",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    },
+    {
+     "hex": "#1E5EFF",
+     "name": "cobalt",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "dominant"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "lime",
+     "with_hex": "#B7F542",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 175.5,
+     "delta_L": 43.4,
+     "delta_rel_chroma": 0.14
+    },
+    {
+     "with": "lemon",
+     "with_hex": "#FFE94D",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 161.1,
+     "delta_L": 45.4,
+     "delta_rel_chroma": 0.0
+    },
+    {
+     "with": "emerald",
+     "with_hex": "#1DB47A",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 136.6,
+     "delta_L": 18.9,
+     "delta_rel_chroma": 0.04
+    },
+    {
+     "with": "bright turquoise",
+     "with_hex": "#1FC9C3",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 104.1,
+     "delta_L": 27.2,
+     "delta_rel_chroma": 0.03
     }
    ],
    "source": {
@@ -6047,6 +8728,58 @@
    }
   },
   {
+   "id": "family-blue-light_summer-periwinkle",
+   "name": "Periwinkle · Light Summer",
+   "category": "family",
+   "group": "blue",
+   "group_label": "Blue",
+   "season": "light_summer",
+   "focus": {
+    "name": "periwinkle",
+    "hex": "#8C9EFF",
+    "tier": "accents"
+   },
+   "when": "Periwinkle as the one colour, graphite and soft white as the ground.",
+   "colours": [
+    {
+     "hex": "#393C3F",
+     "name": "graphite",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#F4F2EE",
+     "name": "soft white",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#8C9EFF",
+     "name": "periwinkle",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "colour"
+    }
+   ],
+   "basis": "on neutral ground",
+   "combinations": [],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml light_summer; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
    "id": "family-blue-true_summer-slate-blue",
    "name": "Slate blue · True Summer",
    "category": "family",
@@ -6245,6 +8978,172 @@
    }
   },
   {
+   "id": "family-blue-true_summer-blue-green",
+   "name": "Blue-green · True Summer",
+   "category": "family",
+   "group": "blue",
+   "group_label": "Blue",
+   "season": "true_summer",
+   "focus": {
+    "name": "blue-green",
+    "hex": "#5FA8A0",
+    "tier": "supporting"
+   },
+   "when": "Raspberry carries the outfit and blue-green answers it: opposed hues at matched chroma, far apart in value, with soft white between them.",
+   "colours": [
+    {
+     "hex": "#5FA8A0",
+     "name": "blue-green",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "supporting",
+     "part": "counter"
+    },
+    {
+     "hex": "#F2F1EE",
+     "name": "soft white",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    },
+    {
+     "hex": "#B03A64",
+     "name": "raspberry",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "dominant"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "raspberry",
+     "with_hex": "#B03A64",
+     "bridge": "soft white",
+     "generator": "opposition",
+     "hue_gap": 175.5,
+     "delta_L": 21.1,
+     "delta_rel_chroma": 0.1
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml true_summer; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-blue-true_summer-cornflower",
+   "name": "Cornflower · True Summer",
+   "category": "family",
+   "group": "blue",
+   "group_label": "Blue",
+   "season": "true_summer",
+   "focus": {
+    "name": "cornflower",
+    "hex": "#5B7FE0",
+    "tier": "accents"
+   },
+   "when": "Cornflower as the one colour, soft white and graphite as the ground.",
+   "colours": [
+    {
+     "hex": "#F2F1EE",
+     "name": "soft white",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#393C3F",
+     "name": "graphite",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#5B7FE0",
+     "name": "cornflower",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "colour"
+    }
+   ],
+   "basis": "on neutral ground",
+   "combinations": [],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml true_summer; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-blue-true_summer-teal",
+   "name": "Teal · True Summer",
+   "category": "family",
+   "group": "blue",
+   "group_label": "Blue",
+   "season": "true_summer",
+   "focus": {
+    "name": "teal",
+    "hex": "#2E8B8B",
+    "tier": "accents"
+   },
+   "when": "Teal as the one colour, soft white and graphite as the ground.",
+   "colours": [
+    {
+     "hex": "#F2F1EE",
+     "name": "soft white",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#393C3F",
+     "name": "graphite",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#2E8B8B",
+     "name": "teal",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "colour"
+    }
+   ],
+   "basis": "on neutral ground",
+   "combinations": [],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml true_summer; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
    "id": "family-blue-soft_summer-grey-blue",
    "name": "Grey-blue · Soft Summer",
    "category": "family",
@@ -6342,6 +9241,188 @@
     "kind": "repo",
     "confidence": "repo",
     "ref": "frameworks/seasons.yaml soft_summer; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-blue-soft_summer-dusty-teal",
+   "name": "Dusty teal · Soft Summer",
+   "category": "family",
+   "group": "blue",
+   "group_label": "Blue",
+   "season": "soft_summer",
+   "focus": {
+    "name": "dusty teal",
+    "hex": "#5E8F8A",
+    "tier": "accents"
+   },
+   "when": "Dusty teal as the one colour, soft white and graphite as the ground.",
+   "colours": [
+    {
+     "hex": "#F0EEEA",
+     "name": "soft white",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#393C3F",
+     "name": "graphite",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#5E8F8A",
+     "name": "dusty teal",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "colour"
+    }
+   ],
+   "basis": "on neutral ground",
+   "combinations": [],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml soft_summer; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-blue-soft_summer-soft-periwinkle",
+   "name": "Soft periwinkle · Soft Summer",
+   "category": "family",
+   "group": "blue",
+   "group_label": "Blue",
+   "season": "soft_summer",
+   "focus": {
+    "name": "soft periwinkle",
+    "hex": "#8A94C8",
+    "tier": "accents"
+   },
+   "when": "Soft periwinkle as the one colour, graphite and soft white as the ground.",
+   "colours": [
+    {
+     "hex": "#393C3F",
+     "name": "graphite",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#F0EEEA",
+     "name": "soft white",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#8A94C8",
+     "name": "soft periwinkle",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "colour"
+    }
+   ],
+   "basis": "on neutral ground",
+   "combinations": [],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml soft_summer; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-blue-soft_autumn-deep-teal",
+   "name": "Deep teal · Soft Autumn",
+   "category": "family",
+   "group": "blue",
+   "group_label": "Blue",
+   "season": "soft_autumn",
+   "focus": {
+    "name": "deep teal",
+    "hex": "#1F5F63",
+    "tier": "foundations"
+   },
+   "when": "Deep teal carries the outfit and ochre answers it: opposed hues at matched chroma, far apart in value, with stone between them.",
+   "colours": [
+    {
+     "hex": "#1F5F63",
+     "name": "deep teal",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "dominant"
+    },
+    {
+     "hex": "#C7912B",
+     "name": "ochre",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "supporting",
+     "part": "counter"
+    },
+    {
+     "hex": "#D6CEC2",
+     "name": "stone",
+     "role": "accent",
+     "share": 20,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "ochre",
+     "with_hex": "#C7912B",
+     "bridge": "stone",
+     "generator": "opposition",
+     "hue_gap": 125.0,
+     "delta_L": 27.1,
+     "delta_rel_chroma": 0.0
+    },
+    {
+     "with": "mustard",
+     "with_hex": "#D3A82A",
+     "bridge": "warm mid grey",
+     "generator": "opposition",
+     "hue_gap": 117.7,
+     "delta_L": 34.2,
+     "delta_rel_chroma": 0.04
+    },
+    {
+     "with": "old gold",
+     "with_hex": "#B8963E",
+     "bridge": "stone",
+     "generator": "opposition",
+     "hue_gap": 117.4,
+     "delta_L": 26.9,
+     "delta_rel_chroma": 0.11
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml soft_autumn; engine/generators.py; family from content/tools/colour_names.py"
    }
   },
   {
@@ -6452,6 +9533,280 @@
    }
   },
   {
+   "id": "family-blue-soft_autumn-muted-teal",
+   "name": "Muted teal · Soft Autumn",
+   "category": "family",
+   "group": "blue",
+   "group_label": "Blue",
+   "season": "soft_autumn",
+   "focus": {
+    "name": "muted teal",
+    "hex": "#5A9A9C",
+    "tier": "accents"
+   },
+   "when": "Muted teal as the one colour, warm charcoal and stone as the ground.",
+   "colours": [
+    {
+     "hex": "#3A3632",
+     "name": "warm charcoal",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#D6CEC2",
+     "name": "stone",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#5A9A9C",
+     "name": "muted teal",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "colour"
+    }
+   ],
+   "basis": "on neutral ground",
+   "combinations": [
+    {
+     "with": "rust",
+     "with_hex": "#A6502F",
+     "bridge": "stone",
+     "generator": "opposition",
+     "hue_gap": 153.6,
+     "delta_L": 15.3,
+     "delta_rel_chroma": 0.02
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml soft_autumn; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-blue-true_autumn-teal",
+   "name": "Teal · True Autumn",
+   "category": "family",
+   "group": "blue",
+   "group_label": "Blue",
+   "season": "true_autumn",
+   "focus": {
+    "name": "teal",
+    "hex": "#236E6B",
+    "tier": "foundations"
+   },
+   "when": "Teal carries the outfit and pumpkin answers it: opposed hues at matched chroma, far apart in value, with linen between them.",
+   "colours": [
+    {
+     "hex": "#236E6B",
+     "name": "teal",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "dominant"
+    },
+    {
+     "hex": "#DBD3CD",
+     "name": "linen",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    },
+    {
+     "hex": "#E07A2D",
+     "name": "pumpkin",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "counter"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "pumpkin",
+     "with_hex": "#E07A2D",
+     "bridge": "linen",
+     "generator": "opposition",
+     "hue_gap": 133.5,
+     "delta_L": 19.5,
+     "delta_rel_chroma": 0.04
+    },
+    {
+     "with": "mustard",
+     "with_hex": "#D3A12A",
+     "bridge": "warm charcoal",
+     "generator": "opposition",
+     "hue_gap": 109.3,
+     "delta_L": 27.0,
+     "delta_rel_chroma": 0.02
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml true_autumn; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-blue-true_autumn-turquoise",
+   "name": "Turquoise · True Autumn",
+   "category": "family",
+   "group": "blue",
+   "group_label": "Blue",
+   "season": "true_autumn",
+   "focus": {
+    "name": "turquoise",
+    "hex": "#2A9D8F",
+    "tier": "accents"
+   },
+   "when": "Turquoise as the one colour, warm charcoal and linen as the ground.",
+   "colours": [
+    {
+     "hex": "#403A35",
+     "name": "warm charcoal",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#DBD3CD",
+     "name": "linen",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#2A9D8F",
+     "name": "turquoise",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "colour"
+    }
+   ],
+   "basis": "on neutral ground",
+   "combinations": [],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml true_autumn; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-blue-deep_autumn-deep-teal",
+   "name": "Deep teal · Deep Autumn",
+   "category": "family",
+   "group": "blue",
+   "group_label": "Blue",
+   "season": "deep_autumn",
+   "focus": {
+    "name": "deep teal",
+    "hex": "#184E4F",
+    "tier": "foundations"
+   },
+   "when": "Deep teal carries the outfit and tomato red answers it: opposed hues at matched chroma, far apart in value, with linen between them.",
+   "colours": [
+    {
+     "hex": "#184E4F",
+     "name": "deep teal",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "dominant"
+    },
+    {
+     "hex": "#DBD3CD",
+     "name": "linen",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    },
+    {
+     "hex": "#C6362A",
+     "name": "tomato red",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "counter"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "tomato red",
+     "with_hex": "#C6362A",
+     "bridge": "linen",
+     "generator": "opposition",
+     "hue_gap": 162.8,
+     "delta_L": 15.5,
+     "delta_rel_chroma": 0.06
+    },
+    {
+     "with": "pumpkin",
+     "with_hex": "#DA6F1E",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 141.1,
+     "delta_L": 28.5,
+     "delta_rel_chroma": 0.05
+    },
+    {
+     "with": "mustard",
+     "with_hex": "#C3931F",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 116.3,
+     "delta_L": 33.9,
+     "delta_rel_chroma": 0.07
+    },
+    {
+     "with": "hot mustard",
+     "with_hex": "#E8B52F",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 114.3,
+     "delta_L": 46.4,
+     "delta_rel_chroma": 0.04
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml deep_autumn; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
    "id": "family-blue-deep_winter-navy",
    "name": "Navy · Deep Winter",
    "category": "family",
@@ -6505,6 +9860,77 @@
      "hue_gap": 18.2,
      "delta_L": 67.6,
      "delta_rel_chroma": 0.09
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml deep_winter; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-blue-deep_winter-royal-blue",
+   "name": "Royal blue · Deep Winter",
+   "category": "family",
+   "group": "blue",
+   "group_label": "Blue",
+   "season": "deep_winter",
+   "focus": {
+    "name": "royal blue",
+    "hex": "#2540B8",
+    "tier": "supporting"
+   },
+   "when": "Royal blue carries the outfit and bright teal answers it: opposed hues at matched chroma, far apart in value, with pure white between them.",
+   "colours": [
+    {
+     "hex": "#2540B8",
+     "name": "royal blue",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "supporting",
+     "part": "dominant"
+    },
+    {
+     "hex": "#FFFFFF",
+     "name": "pure white",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    },
+    {
+     "hex": "#008B8B",
+     "name": "bright teal",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "counter"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "bright teal",
+     "with_hex": "#008B8B",
+     "bridge": "pure white",
+     "generator": "opposition",
+     "hue_gap": 101.2,
+     "delta_L": 19.2,
+     "delta_rel_chroma": 0.1
+    },
+    {
+     "with": "icy lilac",
+     "with_hex": "#D9CFF5",
+     "bridge": "black",
+     "generator": "tonal",
+     "hue_gap": 3.9,
+     "delta_L": 52.0,
+     "delta_rel_chroma": 0.13
     }
    ],
    "source": {
@@ -6585,6 +10011,68 @@
    }
   },
   {
+   "id": "family-blue-deep_winter-bright-teal",
+   "name": "Bright teal · Deep Winter",
+   "category": "family",
+   "group": "blue",
+   "group_label": "Blue",
+   "season": "deep_winter",
+   "focus": {
+    "name": "bright teal",
+    "hex": "#008B8B",
+    "tier": "accents"
+   },
+   "when": "Royal blue carries the outfit and bright teal answers it: opposed hues at matched chroma, far apart in value, with pure white between them.",
+   "colours": [
+    {
+     "hex": "#2540B8",
+     "name": "royal blue",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "supporting",
+     "part": "dominant"
+    },
+    {
+     "hex": "#FFFFFF",
+     "name": "pure white",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    },
+    {
+     "hex": "#008B8B",
+     "name": "bright teal",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "counter"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "royal blue",
+     "with_hex": "#2540B8",
+     "bridge": "pure white",
+     "generator": "opposition",
+     "hue_gap": 101.2,
+     "delta_L": 19.2,
+     "delta_rel_chroma": 0.1
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml deep_winter; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
    "id": "family-blue-true_winter-navy",
    "name": "Navy · True Winter",
    "category": "family",
@@ -6647,6 +10135,125 @@
    }
   },
   {
+   "id": "family-blue-true_winter-cool-grey",
+   "name": "Cool grey · True Winter",
+   "category": "family",
+   "group": "blue",
+   "group_label": "Blue",
+   "season": "true_winter",
+   "focus": {
+    "name": "cool grey",
+    "hex": "#8E9AAF",
+    "tier": "foundations"
+   },
+   "when": "Cool grey as the one colour, black and pure white as the ground.",
+   "colours": [
+    {
+     "hex": "#8E9AAF",
+     "name": "cool grey",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "colour"
+    },
+    {
+     "hex": "#000000",
+     "name": "black",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#FFFFFF",
+     "name": "pure white",
+     "role": "accent",
+     "share": 20,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    }
+   ],
+   "basis": "on neutral ground",
+   "combinations": [],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml true_winter; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-blue-true_winter-royal-blue",
+   "name": "Royal blue · True Winter",
+   "category": "family",
+   "group": "blue",
+   "group_label": "Blue",
+   "season": "true_winter",
+   "focus": {
+    "name": "royal blue",
+    "hex": "#1F45C9",
+    "tier": "supporting"
+   },
+   "when": "Royal blue carries the outfit and emerald answers it: opposed hues at matched chroma, far apart in value, with pure white between them.",
+   "colours": [
+    {
+     "hex": "#1F45C9",
+     "name": "royal blue",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "supporting",
+     "part": "dominant"
+    },
+    {
+     "hex": "#17A06B",
+     "name": "emerald",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "supporting",
+     "part": "counter"
+    },
+    {
+     "hex": "#FFFFFF",
+     "name": "pure white",
+     "role": "accent",
+     "share": 20,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "emerald",
+     "with_hex": "#17A06B",
+     "bridge": "pure white",
+     "generator": "opposition",
+     "hue_gap": 138.4,
+     "delta_L": 22.9,
+     "delta_rel_chroma": 0.03
+    },
+    {
+     "with": "bright teal",
+     "with_hex": "#00A8A8",
+     "bridge": "pure white",
+     "generator": "opposition",
+     "hue_gap": 101.0,
+     "delta_L": 26.8,
+     "delta_rel_chroma": 0.06
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml true_winter; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
    "id": "family-blue-true_winter-icy-blue",
    "name": "Icy blue · True Winter",
    "category": "family",
@@ -6700,6 +10307,77 @@
      "hue_gap": 38.9,
      "delta_L": 75.6,
      "delta_rel_chroma": 0.03
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml true_winter; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-blue-true_winter-bright-teal",
+   "name": "Bright teal · True Winter",
+   "category": "family",
+   "group": "blue",
+   "group_label": "Blue",
+   "season": "true_winter",
+   "focus": {
+    "name": "bright teal",
+    "hex": "#00A8A8",
+    "tier": "accents"
+   },
+   "when": "True red carries the outfit and bright teal answers it: opposed hues at matched chroma, far apart in value, with black between them.",
+   "colours": [
+    {
+     "hex": "#D0021B",
+     "name": "true red",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "supporting",
+     "part": "dominant"
+    },
+    {
+     "hex": "#000000",
+     "name": "black",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    },
+    {
+     "hex": "#00A8A8",
+     "name": "bright teal",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "counter"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "true red",
+     "with_hex": "#D0021B",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 161.7,
+     "delta_L": 18.8,
+     "delta_rel_chroma": 0.0
+    },
+    {
+     "with": "royal blue",
+     "with_hex": "#1F45C9",
+     "bridge": "pure white",
+     "generator": "opposition",
+     "hue_gap": 101.0,
+     "delta_L": 26.8,
+     "delta_rel_chroma": 0.06
     }
    ],
    "source": {
@@ -6798,6 +10476,353 @@
    }
   },
   {
+   "id": "family-blue-bright_winter-cobalt",
+   "name": "Cobalt · Bright Winter",
+   "category": "family",
+   "group": "blue",
+   "group_label": "Blue",
+   "season": "bright_winter",
+   "focus": {
+    "name": "cobalt",
+    "hex": "#0047FF",
+    "tier": "supporting"
+   },
+   "when": "Cobalt carries the outfit and lime answers it: opposed hues at matched chroma, far apart in value, with black between them.",
+   "colours": [
+    {
+     "hex": "#0047FF",
+     "name": "cobalt",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "supporting",
+     "part": "dominant"
+    },
+    {
+     "hex": "#000000",
+     "name": "black",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    },
+    {
+     "hex": "#9EF01A",
+     "name": "lime",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "counter"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "lime",
+     "with_hex": "#9EF01A",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 177.3,
+     "delta_L": 46.1,
+     "delta_rel_chroma": 0.03
+    },
+    {
+     "with": "emerald",
+     "with_hex": "#00A86B",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 142.6,
+     "delta_L": 20.1,
+     "delta_rel_chroma": 0.0
+    },
+    {
+     "with": "bright turquoise",
+     "with_hex": "#00E5E5",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 103.6,
+     "delta_L": 42.0,
+     "delta_rel_chroma": 0.0
+    },
+    {
+     "with": "icy lilac",
+     "with_hex": "#D8C8FF",
+     "bridge": "black",
+     "generator": "tonal",
+     "hue_gap": 2.9,
+     "delta_L": 42.7,
+     "delta_rel_chroma": 0.0
+    },
+    {
+     "with": "bright navy and icy lilac",
+     "with_hex": null,
+     "bridge": "cobalt",
+     "as": "bridge",
+     "generator": "tonal",
+     "hue_gap": 13.6,
+     "delta_L": 63.1,
+     "delta_rel_chroma": 0.06
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml bright_winter; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-blue-bright_winter-bright-turquoise",
+   "name": "Bright turquoise · Bright Winter",
+   "category": "family",
+   "group": "blue",
+   "group_label": "Blue",
+   "season": "bright_winter",
+   "focus": {
+    "name": "bright turquoise",
+    "hex": "#00E5E5",
+    "tier": "accents"
+   },
+   "when": "Hot pink carries the outfit and bright turquoise answers it: opposed hues at matched chroma, far apart in value, with black between them.",
+   "colours": [
+    {
+     "hex": "#FF2E88",
+     "name": "hot pink",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "supporting",
+     "part": "dominant"
+    },
+    {
+     "hex": "#000000",
+     "name": "black",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    },
+    {
+     "hex": "#00E5E5",
+     "name": "bright turquoise",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "counter"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "hot pink",
+     "with_hex": "#FF2E88",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 165.4,
+     "delta_L": 25.7,
+     "delta_rel_chroma": 0.0
+    },
+    {
+     "with": "true red",
+     "with_hex": "#E4002B",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 165.3,
+     "delta_L": 34.9,
+     "delta_rel_chroma": 0.0
+    },
+    {
+     "with": "cobalt",
+     "with_hex": "#0047FF",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 103.6,
+     "delta_L": 42.0,
+     "delta_rel_chroma": 0.0
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml bright_winter; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-purple-bright_spring-bright-violet",
+   "name": "Bright violet · Bright Spring",
+   "category": "family",
+   "group": "purple",
+   "group_label": "Purple",
+   "season": "bright_spring",
+   "focus": {
+    "name": "bright violet",
+    "hex": "#8E44FF",
+    "tier": "accents"
+   },
+   "when": "Bright violet carries the outfit and emerald answers it: opposed hues at matched chroma, far apart in value, with black between them.",
+   "colours": [
+    {
+     "hex": "#1DB47A",
+     "name": "emerald",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "supporting",
+     "part": "counter"
+    },
+    {
+     "hex": "#000000",
+     "name": "black",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    },
+    {
+     "hex": "#8E44FF",
+     "name": "bright violet",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "dominant"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "lime",
+     "with_hex": "#B7F542",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 170.5,
+     "delta_L": 41.4,
+     "delta_rel_chroma": 0.14
+    },
+    {
+     "with": "emerald",
+     "with_hex": "#1DB47A",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 150.6,
+     "delta_L": 16.8,
+     "delta_rel_chroma": 0.04
+    },
+    {
+     "with": "lemon",
+     "with_hex": "#FFE94D",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 147.1,
+     "delta_L": 43.3,
+     "delta_rel_chroma": 0.0
+    },
+    {
+     "with": "bright turquoise",
+     "with_hex": "#1FC9C3",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 118.1,
+     "delta_L": 25.2,
+     "delta_rel_chroma": 0.03
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml bright_spring; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-purple-light_summer-lavender",
+   "name": "Lavender · Light Summer",
+   "category": "family",
+   "group": "purple",
+   "group_label": "Purple",
+   "season": "light_summer",
+   "focus": {
+    "name": "lavender",
+    "hex": "#B9A9D6",
+    "tier": "supporting"
+   },
+   "when": "Lavender carries the outfit and soft lemon answers it: opposed hues at matched chroma, far apart in value, with graphite between them.",
+   "colours": [
+    {
+     "hex": "#B9A9D6",
+     "name": "lavender",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "supporting",
+     "part": "dominant"
+    },
+    {
+     "hex": "#F2E8A6",
+     "name": "soft lemon",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "supporting",
+     "part": "counter"
+    },
+    {
+     "hex": "#393C3F",
+     "name": "graphite",
+     "role": "accent",
+     "share": 20,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "soft lemon",
+     "with_hex": "#F2E8A6",
+     "bridge": "graphite",
+     "generator": "opposition",
+     "hue_gap": 155.7,
+     "delta_L": 19.5,
+     "delta_rel_chroma": 0.11
+    },
+    {
+     "with": "soft navy",
+     "with_hex": "#4C5B78",
+     "bridge": "soft white",
+     "generator": "tonal",
+     "hue_gap": 28.9,
+     "delta_L": 33.4,
+     "delta_rel_chroma": 0.07
+    },
+    {
+     "with": "soft navy and soft lemon",
+     "with_hex": null,
+     "bridge": "lavender",
+     "as": "bridge",
+     "generator": "opposition",
+     "hue_gap": 175.4,
+     "delta_L": 52.9,
+     "delta_rel_chroma": 0.04
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml light_summer; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
    "id": "family-purple-true_summer-mauve",
    "name": "Mauve · True Summer",
    "category": "family",
@@ -6848,6 +10873,58 @@
    }
   },
   {
+   "id": "family-purple-true_summer-orchid",
+   "name": "Orchid · True Summer",
+   "category": "family",
+   "group": "purple",
+   "group_label": "Purple",
+   "season": "true_summer",
+   "focus": {
+    "name": "orchid",
+    "hex": "#C070C0",
+    "tier": "accents"
+   },
+   "when": "Orchid as the one colour, soft white and graphite as the ground.",
+   "colours": [
+    {
+     "hex": "#F2F1EE",
+     "name": "soft white",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#393C3F",
+     "name": "graphite",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#C070C0",
+     "name": "orchid",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "colour"
+    }
+   ],
+   "basis": "on neutral ground",
+   "combinations": [],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml true_summer; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
    "id": "family-purple-soft_summer-soft-plum",
    "name": "Soft plum · Soft Summer",
    "category": "family",
@@ -6887,6 +10964,58 @@
      "placement": null,
      "tier": "foundations",
      "part": "ground"
+    }
+   ],
+   "basis": "on neutral ground",
+   "combinations": [],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml soft_summer; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-purple-soft_summer-muted-lavender",
+   "name": "Muted lavender · Soft Summer",
+   "category": "family",
+   "group": "purple",
+   "group_label": "Purple",
+   "season": "soft_summer",
+   "focus": {
+    "name": "muted lavender",
+    "hex": "#A091BF",
+    "tier": "accents"
+   },
+   "when": "Muted lavender as the one colour, graphite and soft white as the ground.",
+   "colours": [
+    {
+     "hex": "#393C3F",
+     "name": "graphite",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#F0EEEA",
+     "name": "soft white",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#A091BF",
+     "name": "muted lavender",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "colour"
     }
    ],
    "basis": "on neutral ground",
@@ -7436,6 +11565,170 @@
    }
   },
   {
+   "id": "family-pink-light_spring-warm-pink",
+   "name": "Warm pink · Light Spring",
+   "category": "family",
+   "group": "pink",
+   "group_label": "Pink",
+   "season": "light_spring",
+   "focus": {
+    "name": "warm pink",
+    "hex": "#F48FB1",
+    "tier": "accents"
+   },
+   "when": "Warm pink as the one colour, warm charcoal and pebble as the ground.",
+   "colours": [
+    {
+     "hex": "#403A35",
+     "name": "warm charcoal",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#89837D",
+     "name": "pebble",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#F48FB1",
+     "name": "warm pink",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "colour"
+    }
+   ],
+   "basis": "on neutral ground",
+   "combinations": [],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml light_spring; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-pink-true_spring-warm-pink",
+   "name": "Warm pink · True Spring",
+   "category": "family",
+   "group": "pink",
+   "group_label": "Pink",
+   "season": "true_spring",
+   "focus": {
+    "name": "warm pink",
+    "hex": "#F28C9D",
+    "tier": "supporting"
+   },
+   "when": "Warm pink as the one colour, warm charcoal and linen as the ground.",
+   "colours": [
+    {
+     "hex": "#F28C9D",
+     "name": "warm pink",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "supporting",
+     "part": "colour"
+    },
+    {
+     "hex": "#403A35",
+     "name": "warm charcoal",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#DBD3CD",
+     "name": "linen",
+     "role": "accent",
+     "share": 20,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    }
+   ],
+   "basis": "on neutral ground",
+   "combinations": [],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml true_spring; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-pink-bright_spring-hot-pink",
+   "name": "Hot pink · Bright Spring",
+   "category": "family",
+   "group": "pink",
+   "group_label": "Pink",
+   "season": "bright_spring",
+   "focus": {
+    "name": "hot pink",
+    "hex": "#FF4F9A",
+    "tier": "supporting"
+   },
+   "when": "Hot pink carries the outfit and lime answers it: opposed hues at matched chroma, far apart in value, with black between them.",
+   "colours": [
+    {
+     "hex": "#FF4F9A",
+     "name": "hot pink",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "supporting",
+     "part": "dominant"
+    },
+    {
+     "hex": "#000000",
+     "name": "black",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    },
+    {
+     "hex": "#B7F542",
+     "name": "lime",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "counter"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "lime",
+     "with_hex": "#B7F542",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 122.4,
+     "delta_L": 28.8,
+     "delta_rel_chroma": 0.14
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml bright_spring; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
    "id": "family-pink-light_summer-dusty-rose",
    "name": "Dusty rose · Light Summer",
    "category": "family",
@@ -7493,6 +11786,180 @@
     "kind": "repo",
     "confidence": "repo",
     "ref": "frameworks/seasons.yaml light_summer; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-pink-light_summer-raspberry",
+   "name": "Raspberry · Light Summer",
+   "category": "family",
+   "group": "pink",
+   "group_label": "Pink",
+   "season": "light_summer",
+   "focus": {
+    "name": "raspberry",
+    "hex": "#D2527F",
+    "tier": "accents"
+   },
+   "when": "Raspberry carries the outfit and sky blue answers it: opposed hues at matched chroma, far apart in value, with graphite between them.",
+   "colours": [
+    {
+     "hex": "#8FB8DE",
+     "name": "sky blue",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "supporting",
+     "part": "counter"
+    },
+    {
+     "hex": "#393C3F",
+     "name": "graphite",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    },
+    {
+     "hex": "#D2527F",
+     "name": "raspberry",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "dominant"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "sky blue",
+     "with_hex": "#8FB8DE",
+     "bridge": "graphite",
+     "generator": "opposition",
+     "hue_gap": 102.2,
+     "delta_L": 19.9,
+     "delta_rel_chroma": 0.09
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml light_summer; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-pink-light_summer-cool-pink",
+   "name": "Cool pink · Light Summer",
+   "category": "family",
+   "group": "pink",
+   "group_label": "Pink",
+   "season": "light_summer",
+   "focus": {
+    "name": "cool pink",
+    "hex": "#F7A1C4",
+    "tier": "accents"
+   },
+   "when": "Cool pink as the one colour, graphite and slate grey as the ground.",
+   "colours": [
+    {
+     "hex": "#393C3F",
+     "name": "graphite",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#818488",
+     "name": "slate grey",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "ground"
+    },
+    {
+     "hex": "#F7A1C4",
+     "name": "cool pink",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "colour"
+    }
+   ],
+   "basis": "on neutral ground",
+   "combinations": [],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml light_summer; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-pink-true_summer-cocoa-rose",
+   "name": "Cocoa rose · True Summer",
+   "category": "family",
+   "group": "pink",
+   "group_label": "Pink",
+   "season": "true_summer",
+   "focus": {
+    "name": "cocoa rose",
+    "hex": "#8C6E70",
+    "tier": "foundations"
+   },
+   "when": "Cocoa rose carries the outfit and cool sage answers it: opposed hues at matched chroma, far apart in value, with soft white between them.",
+   "colours": [
+    {
+     "hex": "#8C6E70",
+     "name": "cocoa rose",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "foundations",
+     "part": "dominant"
+    },
+    {
+     "hex": "#8FA89B",
+     "name": "cool sage",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "supporting",
+     "part": "counter"
+    },
+    {
+     "hex": "#F2F1EE",
+     "name": "soft white",
+     "role": "accent",
+     "share": 20,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "cool sage",
+     "with_hex": "#8FA89B",
+     "bridge": "soft white",
+     "generator": "opposition",
+     "hue_gap": 145.6,
+     "delta_L": 17.3,
+     "delta_rel_chroma": 0.05
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml true_summer; engine/generators.py; family from content/tools/colour_names.py"
    }
   },
   {
@@ -7869,6 +12336,68 @@
    }
   },
   {
+   "id": "family-pink-true_winter-fuchsia",
+   "name": "Fuchsia · True Winter",
+   "category": "family",
+   "group": "pink",
+   "group_label": "Pink",
+   "season": "true_winter",
+   "focus": {
+    "name": "fuchsia",
+    "hex": "#D61C8E",
+    "tier": "supporting"
+   },
+   "when": "One hue family at two weights, Fuchsia deep and icy pink light, with black between them.",
+   "colours": [
+    {
+     "hex": "#D61C8E",
+     "name": "fuchsia",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "supporting",
+     "part": "dominant"
+    },
+    {
+     "hex": "#000000",
+     "name": "black",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    },
+    {
+     "hex": "#F5C6DA",
+     "name": "icy pink",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "counter"
+    }
+   ],
+   "basis": "tonal pair",
+   "combinations": [
+    {
+     "with": "icy pink",
+     "with_hex": "#F5C6DA",
+     "bridge": "black",
+     "generator": "tonal",
+     "hue_gap": 1.1,
+     "delta_L": 36.0,
+     "delta_rel_chroma": 0.18
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml true_winter; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
    "id": "family-pink-true_winter-icy-pink",
    "name": "Icy pink · True Winter",
    "category": "family",
@@ -7946,6 +12475,77 @@
     "kind": "repo",
     "confidence": "repo",
     "ref": "frameworks/seasons.yaml true_winter; engine/generators.py; family from content/tools/colour_names.py"
+   }
+  },
+  {
+   "id": "family-pink-bright_winter-hot-pink",
+   "name": "Hot pink · Bright Winter",
+   "category": "family",
+   "group": "pink",
+   "group_label": "Pink",
+   "season": "bright_winter",
+   "focus": {
+    "name": "hot pink",
+    "hex": "#FF2E88",
+    "tier": "supporting"
+   },
+   "when": "Hot pink carries the outfit and bright turquoise answers it: opposed hues at matched chroma, far apart in value, with black between them.",
+   "colours": [
+    {
+     "hex": "#FF2E88",
+     "name": "hot pink",
+     "role": "dominant",
+     "share": 50,
+     "placement": null,
+     "tier": "supporting",
+     "part": "dominant"
+    },
+    {
+     "hex": "#000000",
+     "name": "black",
+     "role": "secondary",
+     "share": 30,
+     "placement": null,
+     "tier": "foundations",
+     "part": "bridge"
+    },
+    {
+     "hex": "#00E5E5",
+     "name": "bright turquoise",
+     "role": "accent",
+     "share": 20,
+     "placement": [
+      "accessory"
+     ],
+     "tier": "accents",
+     "part": "counter"
+    }
+   ],
+   "basis": "opposition pair",
+   "combinations": [
+    {
+     "with": "bright turquoise",
+     "with_hex": "#00E5E5",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 165.4,
+     "delta_L": 25.7,
+     "delta_rel_chroma": 0.0
+    },
+    {
+     "with": "lime",
+     "with_hex": "#9EF01A",
+     "bridge": "black",
+     "generator": "opposition",
+     "hue_gap": 120.9,
+     "delta_L": 29.8,
+     "delta_rel_chroma": 0.03
+    }
+   ],
+   "source": {
+    "kind": "repo",
+    "confidence": "repo",
+    "ref": "frameworks/seasons.yaml bright_winter; engine/generators.py; family from content/tools/colour_names.py"
    }
   },
   {
@@ -10212,91 +14812,85 @@
    "category": "family",
    "group": "red",
    "kind": "no anchor",
-   "detail": "Light Spring has no anchor filed as red (see the unfiled list for anchors the two sources disagree on)."
+   "detail": "Light Spring has no red anchor."
   },
   {
    "category": "family",
    "group": "red",
    "kind": "no anchor",
-   "detail": "True Spring has no anchor filed as red (see the unfiled list for anchors the two sources disagree on)."
+   "detail": "Light Summer has no red anchor."
   },
   {
    "category": "family",
    "group": "red",
    "kind": "no anchor",
-   "detail": "Bright Spring has no anchor filed as red (see the unfiled list for anchors the two sources disagree on)."
+   "detail": "True Summer has no red anchor."
   },
   {
    "category": "family",
    "group": "red",
    "kind": "no anchor",
-   "detail": "Light Summer has no anchor filed as red (see the unfiled list for anchors the two sources disagree on)."
+   "detail": "Soft Summer has no red anchor."
   },
   {
    "category": "family",
    "group": "red",
    "kind": "no anchor",
-   "detail": "True Summer has no anchor filed as red (see the unfiled list for anchors the two sources disagree on)."
+   "detail": "Soft Autumn has no red anchor."
   },
   {
    "category": "family",
    "group": "red",
-   "kind": "no anchor",
-   "detail": "Soft Summer has no anchor filed as red (see the unfiled list for anchors the two sources disagree on)."
+   "kind": "no pair",
+   "detail": "True Autumn tomato: no generator pair; offered on neutral ground only."
   },
   {
    "category": "family",
-   "group": "red",
-   "kind": "no anchor",
-   "detail": "Soft Autumn has no anchor filed as red (see the unfiled list for anchors the two sources disagree on)."
+   "group": "orange",
+   "kind": "no pair",
+   "detail": "Light Spring peach: no generator pair; offered on neutral ground only."
   },
   {
    "category": "family",
-   "group": "red",
-   "kind": "no anchor",
-   "detail": "True Autumn has no anchor filed as red (see the unfiled list for anchors the two sources disagree on)."
+   "group": "orange",
+   "kind": "no pair",
+   "detail": "Light Spring light coral: no generator pair; offered on neutral ground only."
   },
   {
    "category": "family",
-   "group": "red",
-   "kind": "no anchor",
-   "detail": "True Winter has no anchor filed as red (see the unfiled list for anchors the two sources disagree on)."
+   "group": "orange",
+   "kind": "no pair",
+   "detail": "Light Spring bright coral: no generator pair; offered on neutral ground only."
+  },
+  {
+   "category": "family",
+   "group": "orange",
+   "kind": "no pair",
+   "detail": "True Spring coral: no generator pair; offered on neutral ground only."
+  },
+  {
+   "category": "family",
+   "group": "orange",
+   "kind": "no pair",
+   "detail": "Bright Spring bright coral: no generator pair; offered on neutral ground only."
   },
   {
    "category": "family",
    "group": "orange",
    "kind": "no anchor",
-   "detail": "Light Spring has no anchor filed as orange (see the unfiled list for anchors the two sources disagree on)."
+   "detail": "Light Summer has no orange anchor."
   },
   {
    "category": "family",
    "group": "orange",
    "kind": "no anchor",
-   "detail": "True Spring has no anchor filed as orange (see the unfiled list for anchors the two sources disagree on)."
+   "detail": "True Summer has no orange anchor."
   },
   {
    "category": "family",
    "group": "orange",
    "kind": "no anchor",
-   "detail": "Bright Spring has no anchor filed as orange (see the unfiled list for anchors the two sources disagree on)."
-  },
-  {
-   "category": "family",
-   "group": "orange",
-   "kind": "no anchor",
-   "detail": "Light Summer has no anchor filed as orange (see the unfiled list for anchors the two sources disagree on)."
-  },
-  {
-   "category": "family",
-   "group": "orange",
-   "kind": "no anchor",
-   "detail": "True Summer has no anchor filed as orange (see the unfiled list for anchors the two sources disagree on)."
-  },
-  {
-   "category": "family",
-   "group": "orange",
-   "kind": "no anchor",
-   "detail": "Soft Summer has no anchor filed as orange (see the unfiled list for anchors the two sources disagree on)."
+   "detail": "Soft Summer has no orange anchor."
   },
   {
    "category": "family",
@@ -10314,19 +14908,19 @@
    "category": "family",
    "group": "orange",
    "kind": "no anchor",
-   "detail": "Deep Winter has no anchor filed as orange (see the unfiled list for anchors the two sources disagree on)."
+   "detail": "Deep Winter has no orange anchor."
   },
   {
    "category": "family",
    "group": "orange",
    "kind": "no anchor",
-   "detail": "True Winter has no anchor filed as orange (see the unfiled list for anchors the two sources disagree on)."
+   "detail": "True Winter has no orange anchor."
   },
   {
    "category": "family",
    "group": "orange",
    "kind": "no anchor",
-   "detail": "Bright Winter has no anchor filed as orange (see the unfiled list for anchors the two sources disagree on)."
+   "detail": "Bright Winter has no orange anchor."
   },
   {
    "category": "family",
@@ -10338,103 +14932,85 @@
    "category": "family",
    "group": "yellow",
    "kind": "no pair",
+   "detail": "True Spring marigold: no generator pair; offered on neutral ground only."
+  },
+  {
+   "category": "family",
+   "group": "yellow",
+   "kind": "no pair",
    "detail": "True Spring bright yellow: no generator pair; offered on neutral ground only."
   },
   {
    "category": "family",
    "group": "yellow",
    "kind": "no anchor",
-   "detail": "Bright Spring has no anchor filed as yellow (see the unfiled list for anchors the two sources disagree on)."
+   "detail": "True Summer has no yellow anchor."
   },
   {
    "category": "family",
    "group": "yellow",
    "kind": "no anchor",
-   "detail": "Light Summer has no anchor filed as yellow (see the unfiled list for anchors the two sources disagree on)."
+   "detail": "Soft Summer has no yellow anchor."
   },
   {
    "category": "family",
    "group": "yellow",
    "kind": "no anchor",
-   "detail": "True Summer has no anchor filed as yellow (see the unfiled list for anchors the two sources disagree on)."
+   "detail": "Deep Winter has no yellow anchor."
   },
   {
    "category": "family",
    "group": "yellow",
-   "kind": "no anchor",
-   "detail": "Soft Summer has no anchor filed as yellow (see the unfiled list for anchors the two sources disagree on)."
+   "kind": "no pair",
+   "detail": "Bright Winter lemon: no generator pair; offered on neutral ground only."
   },
   {
    "category": "family",
-   "group": "yellow",
-   "kind": "no anchor",
-   "detail": "Deep Winter has no anchor filed as yellow (see the unfiled list for anchors the two sources disagree on)."
+   "group": "brown",
+   "kind": "no pair",
+   "detail": "Light Spring warm taupe: no generator pair; offered on neutral ground only."
   },
   {
    "category": "family",
-   "group": "yellow",
-   "kind": "no anchor",
-   "detail": "True Winter has no anchor filed as yellow (see the unfiled list for anchors the two sources disagree on)."
-  },
-  {
-   "category": "family",
-   "group": "yellow",
-   "kind": "no anchor",
-   "detail": "Bright Winter has no anchor filed as yellow (see the unfiled list for anchors the two sources disagree on)."
+   "group": "brown",
+   "kind": "no pair",
+   "detail": "True Spring warm beige: no generator pair; offered on neutral ground only."
   },
   {
    "category": "family",
    "group": "brown",
    "kind": "no anchor",
-   "detail": "Light Spring has no anchor filed as brown (see the unfiled list for anchors the two sources disagree on)."
+   "detail": "Light Summer has no brown anchor."
   },
   {
    "category": "family",
    "group": "brown",
    "kind": "no anchor",
-   "detail": "True Spring has no anchor filed as brown (see the unfiled list for anchors the two sources disagree on)."
+   "detail": "True Summer has no brown anchor."
   },
   {
    "category": "family",
    "group": "brown",
    "kind": "no anchor",
-   "detail": "Bright Spring has no anchor filed as brown (see the unfiled list for anchors the two sources disagree on)."
+   "detail": "Soft Summer has no brown anchor."
   },
   {
    "category": "family",
    "group": "brown",
    "kind": "no anchor",
-   "detail": "Light Summer has no anchor filed as brown (see the unfiled list for anchors the two sources disagree on)."
+   "detail": "Deep Winter has no brown anchor."
   },
   {
    "category": "family",
    "group": "brown",
    "kind": "no anchor",
-   "detail": "True Summer has no anchor filed as brown (see the unfiled list for anchors the two sources disagree on)."
+   "detail": "True Winter has no brown anchor."
   },
   {
    "category": "family",
    "group": "brown",
    "kind": "no anchor",
-   "detail": "Soft Summer has no anchor filed as brown (see the unfiled list for anchors the two sources disagree on)."
-  },
-  {
-   "category": "family",
-   "group": "brown",
-   "kind": "no anchor",
-   "detail": "Deep Winter has no anchor filed as brown (see the unfiled list for anchors the two sources disagree on)."
-  },
-  {
-   "category": "family",
-   "group": "brown",
-   "kind": "no anchor",
-   "detail": "True Winter has no anchor filed as brown (see the unfiled list for anchors the two sources disagree on)."
-  },
-  {
-   "category": "family",
-   "group": "brown",
-   "kind": "no anchor",
-   "detail": "Bright Winter has no anchor filed as brown (see the unfiled list for anchors the two sources disagree on)."
+   "detail": "Bright Winter has no brown anchor."
   },
   {
    "category": "family",
@@ -10464,6 +15040,36 @@
    "category": "family",
    "group": "blue",
    "kind": "no pair",
+   "detail": "Light Spring warm aqua: no generator pair; offered on neutral ground only."
+  },
+  {
+   "category": "family",
+   "group": "blue",
+   "kind": "no pair",
+   "detail": "Light Spring turquoise: no generator pair; offered on neutral ground only."
+  },
+  {
+   "category": "family",
+   "group": "blue",
+   "kind": "no pair",
+   "detail": "Light Summer periwinkle: no generator pair; offered on neutral ground only."
+  },
+  {
+   "category": "family",
+   "group": "blue",
+   "kind": "no pair",
+   "detail": "True Summer cornflower: no generator pair; offered on neutral ground only."
+  },
+  {
+   "category": "family",
+   "group": "blue",
+   "kind": "no pair",
+   "detail": "True Summer teal: no generator pair; offered on neutral ground only."
+  },
+  {
+   "category": "family",
+   "group": "blue",
+   "kind": "no pair",
    "detail": "Soft Summer grey-blue: no generator pair; offered on neutral ground only."
   },
   {
@@ -10475,44 +15081,50 @@
   {
    "category": "family",
    "group": "blue",
-   "kind": "no anchor",
-   "detail": "True Autumn has no anchor filed as blue (see the unfiled list for anchors the two sources disagree on)."
+   "kind": "no pair",
+   "detail": "Soft Summer dusty teal: no generator pair; offered on neutral ground only."
   },
   {
    "category": "family",
    "group": "blue",
-   "kind": "no anchor",
-   "detail": "Deep Autumn has no anchor filed as blue (see the unfiled list for anchors the two sources disagree on)."
+   "kind": "no pair",
+   "detail": "Soft Summer soft periwinkle: no generator pair; offered on neutral ground only."
+  },
+  {
+   "category": "family",
+   "group": "blue",
+   "kind": "no pair",
+   "detail": "True Autumn turquoise: no generator pair; offered on neutral ground only."
+  },
+  {
+   "category": "family",
+   "group": "blue",
+   "kind": "no pair",
+   "detail": "True Winter cool grey: no generator pair; offered on neutral ground only."
   },
   {
    "category": "family",
    "group": "purple",
    "kind": "no anchor",
-   "detail": "Light Spring has no anchor filed as purple (see the unfiled list for anchors the two sources disagree on)."
+   "detail": "Light Spring has no purple anchor."
   },
   {
    "category": "family",
    "group": "purple",
    "kind": "no anchor",
-   "detail": "True Spring has no anchor filed as purple (see the unfiled list for anchors the two sources disagree on)."
-  },
-  {
-   "category": "family",
-   "group": "purple",
-   "kind": "no anchor",
-   "detail": "Bright Spring has no anchor filed as purple (see the unfiled list for anchors the two sources disagree on)."
-  },
-  {
-   "category": "family",
-   "group": "purple",
-   "kind": "no anchor",
-   "detail": "Light Summer has no anchor filed as purple (see the unfiled list for anchors the two sources disagree on)."
+   "detail": "True Spring has no purple anchor."
   },
   {
    "category": "family",
    "group": "purple",
    "kind": "no pair",
    "detail": "True Summer mauve: no generator pair; offered on neutral ground only."
+  },
+  {
+   "category": "family",
+   "group": "purple",
+   "kind": "no pair",
+   "detail": "True Summer orchid: no generator pair; offered on neutral ground only."
   },
   {
    "category": "family",
@@ -10529,26 +15141,32 @@
   {
    "category": "family",
    "group": "purple",
+   "kind": "no pair",
+   "detail": "Soft Summer muted lavender: no generator pair; offered on neutral ground only."
+  },
+  {
+   "category": "family",
+   "group": "purple",
    "kind": "no anchor",
-   "detail": "True Autumn has no anchor filed as purple (see the unfiled list for anchors the two sources disagree on)."
+   "detail": "True Autumn has no purple anchor."
   },
   {
    "category": "family",
    "group": "pink",
-   "kind": "no anchor",
-   "detail": "Light Spring has no anchor filed as pink (see the unfiled list for anchors the two sources disagree on)."
+   "kind": "no pair",
+   "detail": "Light Spring warm pink: no generator pair; offered on neutral ground only."
   },
   {
    "category": "family",
    "group": "pink",
-   "kind": "no anchor",
-   "detail": "True Spring has no anchor filed as pink (see the unfiled list for anchors the two sources disagree on)."
+   "kind": "no pair",
+   "detail": "True Spring warm pink: no generator pair; offered on neutral ground only."
   },
   {
    "category": "family",
    "group": "pink",
-   "kind": "no anchor",
-   "detail": "Bright Spring has no anchor filed as pink (see the unfiled list for anchors the two sources disagree on)."
+   "kind": "no pair",
+   "detail": "Light Summer cool pink: no generator pair; offered on neutral ground only."
   },
   {
    "category": "family",
@@ -10566,403 +15184,67 @@
    "category": "family",
    "group": "pink",
    "kind": "no anchor",
-   "detail": "True Autumn has no anchor filed as pink (see the unfiled list for anchors the two sources disagree on)."
+   "detail": "True Autumn has no pink anchor."
   },
   {
    "category": "family",
    "group": "pink",
    "kind": "no anchor",
-   "detail": "Deep Autumn has no anchor filed as pink (see the unfiled list for anchors the two sources disagree on)."
+   "detail": "Deep Autumn has no pink anchor."
   },
   {
    "category": "family",
-   "group": "pink",
-   "kind": "no anchor",
-   "detail": "Bright Winter has no anchor filed as pink (see the unfiled list for anchors the two sources disagree on)."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "Light Spring camel #C9A66B: colour_names.py measures yellow / gold, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "Light Spring warm taupe #B8A48A: colour_names.py measures brown / tan, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "Light Spring peach #F2B58B: colour_names.py measures orange / apricot, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "Light Spring light coral #F08A7A: colour_names.py measures red / red, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "Light Spring bright coral #FF6F61: colour_names.py measures orange / terracotta, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "Light Spring turquoise #3FBFBF: colour_names.py measures blue / steel blue, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "Light Spring warm pink #F48FB1: its name says pink, colour_names.py measures grey / light grey; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "True Spring camel #C69C6D: colour_names.py measures yellow / gold, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "True Spring warm beige #D9C4A1: colour_names.py measures yellow / butter, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "True Spring golden brown #9C6B3F: its name says brown, colour_names.py measures yellow / ochre; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "True Spring khaki #A89A6B: colour_names.py measures brown / tan, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "True Spring coral #F0766B: colour_names.py measures orange / terracotta, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "True Spring marigold #F2A93B: colour_names.py measures yellow / gold, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "True Spring warm pink #F28C9D: its name says pink, colour_names.py measures red / red; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "True Spring tomato red #E63B2E: its name says red, colour_names.py measures orange / terracotta; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "True Spring bright turquoise #00BFA5: colour_names.py measures green / emerald, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "Bright Spring camel #C8A165: colour_names.py measures yellow / gold, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "Bright Spring bright coral #FF5A4E: colour_names.py measures orange / terracotta, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "Bright Spring hot pink #FF4F9A: its name says pink, colour_names.py measures red / red; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "Bright Spring lemon #FFE94D: colour_names.py measures yellow / butter, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "Bright Spring true red #E5202B: its name says red, colour_names.py measures orange / rust; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "Bright Spring cobalt #1E5EFF: colour_names.py measures purple / violet, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "Bright Spring bright violet #8E44FF: its name says purple, colour_names.py measures grey / mid grey; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "Light Summer rose beige #D6C3BD: its name says pink, colour_names.py measures warm neutral / cream; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "Light Summer lavender #B9A9D6: colour_names.py measures purple / lilac, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "Light Summer soft lemon #F2E8A6: colour_names.py measures yellow / butter, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "Light Summer periwinkle #8C9EFF: colour_names.py measures purple / lilac, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "Light Summer raspberry #D2527F: its name says pink, colour_names.py measures red / red; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "Light Summer cool pink #F7A1C4: its name says pink, colour_names.py measures purple / mauve; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "True Summer cocoa rose #8C6E70: its name says pink, colour_names.py measures grey / mid grey; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "True Summer blue-green #5FA8A0: colour_names.py measures green / emerald, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "True Summer cornflower #5B7FE0: colour_names.py measures purple / violet, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "True Summer orchid #C070C0: colour_names.py measures purple / mauve, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "True Summer teal #2E8B8B: colour_names.py measures blue / steel blue, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "Soft Summer dusty teal #5E8F8A: colour_names.py measures green / emerald, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "Soft Summer soft periwinkle #8A94C8: colour_names.py measures purple / violet, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "Soft Summer muted lavender #A091BF: colour_names.py measures purple / lilac, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "Soft Autumn deep teal #1F5F63: colour_names.py measures blue / petrol, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "Soft Autumn camel #B89A6B: colour_names.py measures brown / tan, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "Soft Autumn warm taupe #A8957C: colour_names.py measures brown / tan, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "Soft Autumn muted teal #5A9A9C: colour_names.py measures blue / steel blue, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "Soft Autumn salmon #D9907A: colour_names.py measures orange / apricot, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "True Autumn camel #B48A50: colour_names.py measures yellow / ochre, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "True Autumn warm khaki #9B8B5A: colour_names.py measures brown / tan, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "True Autumn teal #236E6B: colour_names.py measures blue / petrol, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "True Autumn warm burgundy #7A2E2E: its name says red, colour_names.py measures orange / rust; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "True Autumn pumpkin #E07A2D: colour_names.py measures yellow / ochre, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "True Autumn tomato #C93B2B: colour_names.py measures orange / rust, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "True Autumn turquoise #2A9D8F: colour_names.py measures green / emerald, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "Deep Autumn deep teal #184E4F: colour_names.py measures blue / petrol, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "Deep Autumn tomato red #C6362A: its name says red, colour_names.py measures orange / rust; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "Deep Winter deep pine #1E3D34: colour_names.py measures green / forest, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "Deep Winter royal blue #2540B8: its name says blue, colour_names.py measures grey / dark grey; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "Deep Winter bright teal #008B8B: colour_names.py measures blue / steel blue, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
-   "group": "unfiled",
-   "kind": "unfiled",
-   "detail": "True Winter cool grey #8E9AAF: colour_names.py measures blue / steel blue, its name carries no family word; filed in no family."
-  },
-  {
-   "category": "family",
    "group": "unfiled",
    "kind": "unfiled",
-   "detail": "True Winter true red #D0021B: its name says red, colour_names.py measures orange / rust; filed in no family."
+   "detail": "Light Spring warm ivory #F5EBD8: chromatic by the engine, filed by colour_names.py as warm neutral / cream, a neutral name, so in no colour family."
   },
   {
    "category": "family",
    "group": "unfiled",
    "kind": "unfiled",
-   "detail": "True Winter royal blue #1F45C9: its name says blue, colour_names.py measures purple / violet; filed in no family."
+   "detail": "Light Spring cream #EFE6D3: chromatic by the engine, filed by colour_names.py as warm neutral / cream, a neutral name, so in no colour family."
   },
   {
    "category": "family",
    "group": "unfiled",
    "kind": "unfiled",
-   "detail": "True Winter fuchsia #D61C8E: colour_names.py measures pink / raspberry, its name carries no family word; filed in no family."
+   "detail": "True Spring cream #EFE6D3: chromatic by the engine, filed by colour_names.py as warm neutral / cream, a neutral name, so in no colour family."
   },
   {
    "category": "family",
    "group": "unfiled",
    "kind": "unfiled",
-   "detail": "True Winter lemon ice #F5F5A0: colour_names.py measures yellow / butter, its name carries no family word; filed in no family."
+   "detail": "Bright Spring warm white #FBF7EF: chromatic by the engine, filed by colour_names.py as white / off-white, a neutral name, so in no colour family."
   },
   {
    "category": "family",
    "group": "unfiled",
    "kind": "unfiled",
-   "detail": "True Winter bright teal #00A8A8: colour_names.py measures blue / steel blue, its name carries no family word; filed in no family."
+   "detail": "Light Summer rose beige #D6C3BD: chromatic by the engine, filed by colour_names.py as warm neutral / cream, a neutral name, so in no colour family."
   },
   {
    "category": "family",
    "group": "unfiled",
    "kind": "unfiled",
-   "detail": "Bright Winter hot pink #FF2E88: its name says pink, colour_names.py measures red / red; filed in no family."
+   "detail": "Soft Autumn cream #EFE6D3: chromatic by the engine, filed by colour_names.py as warm neutral / cream, a neutral name, so in no colour family."
   },
   {
    "category": "family",
    "group": "unfiled",
    "kind": "unfiled",
-   "detail": "Bright Winter lemon #FFF44F: colour_names.py measures yellow / butter, its name carries no family word; filed in no family."
+   "detail": "True Autumn cream #EFE6D3: chromatic by the engine, filed by colour_names.py as warm neutral / cream, a neutral name, so in no colour family."
   },
   {
    "category": "family",
    "group": "unfiled",
    "kind": "unfiled",
-   "detail": "Bright Winter bright turquoise #00E5E5: colour_names.py measures blue / sky, its name carries no family word; filed in no family."
+   "detail": "Deep Autumn cream #EFE6D3: chromatic by the engine, filed by colour_names.py as warm neutral / cream, a neutral name, so in no colour family."
   },
   {
    "category": "family",
    "group": "unfiled",
    "kind": "unfiled",
-   "detail": "Bright Winter lime #9EF01A: colour_names.py measures green / sage, its name carries no family word; filed in no family."
+   "detail": "Deep Autumn warm white #FBF7EF: chromatic by the engine, filed by colour_names.py as white / off-white, a neutral name, so in no colour family."
   },
   {
    "category": "trend",

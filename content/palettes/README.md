@@ -44,12 +44,13 @@ Autumn also carries the four worked examples of combinations.md §4. The repo
 has no notion of "modern", so nothing here claims it.
 
 **family (b)** — for each colour family, the version each season holds, with
-every generated pair it takes part in (`combinations`). An anchor is filed in a
-family only when two repository sources agree: the family
-`content/tools/colour_names.py` measures, and a family word in the anchor's own
-name. The vocabulary was drawn for the catalogue's muted garments and misfiles
-many saturated anchors (true red as orange, cobalt as grey, turquoise as grey).
-Every disagreement is in `gaps` as `unfiled`, not guessed.
+every generated pair it takes part in (`combinations`). The family is the one
+`content/tools/colour_names.py` measures from hue and chroma. Since 24 Sept
+2026 that vocabulary files saturated colours correctly: true red is red,
+cobalt blue, teal blue, camel brown, coral orange. 144 of the 153 chromatic
+anchors now file; the rest are off-whites and rose beige, which take neutral
+names. Where an anchor's own name points to another family, `gaps` says so as
+`name differs`.
 
 **trend (c)** — AW26/27, from the seed. Every palette is `confidence:
 external` and names its sources as `web, Sept 2026, <url>`. Hexes are
