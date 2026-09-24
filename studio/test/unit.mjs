@@ -4,6 +4,9 @@ import * as C from '../js/colour.js';
 import { filterProducts, emptyFilters, matrixCounts, indexById, shelfView, sameView, onShelf,
   isReviewed, isSeveral, isDuplicate, choiceBase } from '../js/data.js';
 import { parsePrice, buildInfo, buildMarkdown } from '../js/export.js';
+import { indexPalettes, palettesIn, paletteSnapshot, outfitShares, SLOT_WEIGHT } from '../js/palette.js';
+import { stripRows, metrics } from '../js/render.js';
+import { readFileSync } from 'node:fs';
 
 let pass = 0, fail = 0;
 const ok = (n, c, extra = '') => { c ? (pass++, console.log(`  ok   ${n}`))
@@ -276,6 +279,108 @@ console.log('\nseveral garments, duplicates');
   const dupe = { product_id: 'D', clean: true, several: [], duplicate_of: 'K' };
   ok('a duplicate is hidden from the shelf', !onShelf(dupe, {}, true) && isDuplicate(dupe, {}));
   ok('"not a duplicate" puts it back', onShelf(dupe, { D: { notDuplicate: true } }, false));
+}
+
+console.log('\npalettes: the built file');
+{
+  const doc = JSON.parse(readFileSync(new URL('../data/palettes.json', import.meta.url)));
+  const src = JSON.parse(readFileSync(new URL('../../content/palettes/palettes.json', import.meta.url)));
+  ok('studio/data carries the built palettes as they are', JSON.stringify(doc) === JSON.stringify(src));
+  const ids = doc.palettes.map((p) => p.id);
+  ok('ids are unique', new Set(ids).size === ids.length);
+  const bad = doc.palettes.filter((p) => p.colours.length < 3 || p.colours.length > 6
+    || p.colours.reduce((a, c) => a + c.share, 0) !== 100
+    || p.colours.some((c) => !/^#[0-9A-F]{6}$/i.test(c.hex) || !c.name
+      || !['dominant', 'secondary', 'accent'].includes(c.role))
+    || !p.source || !p.name || !p.when);
+  ok('every palette: 3-6 colours, shares add to 100, hex, name, role, source, when',
+    bad.length === 0, bad.map((p) => p.id).slice(0, 5).join(', '));
+  ok('placement is upper / mid / lower / accessory or nothing',
+    doc.palettes.every((p) => p.colours.every((c) => c.placement === null
+      || c.placement.every((x) => ['upper', 'mid', 'lower', 'accessory'].includes(x)))));
+  ok('trend palettes are external and say where from',
+    doc.palettes.filter((p) => p.category === 'trend' && !p.derived)
+      .every((p) => p.source.confidence === 'external' && p.source.ref.startsWith('web, Sept 2026, ')));
+  ok('a Soft Summer version says it is derived and keeps the trend\'s source',
+    doc.palettes.filter((p) => p.derived).every((p) => p.source.confidence === 'external'
+      && doc.palettes.some((q) => q.id === p.derived_from)));
+  ok('season and family palettes come from the repo',
+    doc.palettes.filter((p) => p.category !== 'trend').every((p) => p.source.confidence === 'repo'));
+  // hard rule 5: a season palette names only that season's anchors
+  const seasonsTxt = readFileSync(new URL('../../frameworks/seasons.yaml', import.meta.url), 'utf8');
+  const anchorsOf = {};
+  let cur = null;
+  for (const line of seasonsTxt.split('\n')) {
+    const k = line.match(/^([a-z_]+):\s*$/);
+    if (k) { cur = k[1]; anchorsOf[cur] = new Set(); continue; }
+    if (cur) for (const m of line.matchAll(/\{name: ([^,]+), hex: "([0-9A-F]{6})"\}/g)) anchorsOf[cur].add(`${m[1]}#${m[2]}`);
+  }
+  const off = doc.palettes.filter((p) => p.category === 'season' || p.category === 'family' || p.derived)
+    .filter((p) => {
+      const season = p.category === 'season' ? p.group : p.category === 'family' ? p.season : 'soft_summer';
+      return p.colours.some((c) => c.hex !== '#000000' && !anchorsOf[season].has(`${c.name}#${c.hex.slice(1)}`));
+    });
+  ok('season, family and Soft Summer palettes name only anchors of their season', off.length === 0,
+    off.map((p) => p.id).slice(0, 5).join(', '));
+  const idx = indexPalettes(doc);
+  ok('the index keeps only groups that hold palettes',
+    idx.categories.every((c) => c.groups.every((g) => g.count > 0)));
+  ok('every season in seasons.yaml is a group', idx.categories.find((c) => c.key === 'season')
+    .groups.length === Object.keys(anchorsOf).length);
+  ok('palettesIn filters by group', palettesIn(idx, 'season', 'soft_autumn').every((p) => p.group === 'soft_autumn')
+    && palettesIn(idx, 'season', 'soft_autumn').length > 3);
+}
+
+console.log('\npalettes: on the board');
+{
+  const pal = { id: 'x', name: 'Rust and navy', category: 'season', group: 'g', when: 'w',
+    colours: [{ hex: '#A53B29', name: 'rust', role: 'dominant', share: 60, placement: ['mid'] },
+      { hex: '#2B3446', name: 'navy', role: 'secondary', share: 30, placement: null },
+      { hex: '#F3EFE7', name: 'cream', role: 'accent', share: 10, placement: ['accessory'] }],
+    source: { kind: 'repo', confidence: 'repo', ref: 'here' }, engine: { junk: 1 } };
+  const snap = paletteSnapshot(pal);
+  ok('a snapshot keeps what the outfit file needs and nothing else',
+    snap.id === 'x' && snap.colours.length === 3 && !('engine' in snap) && snap.source.ref === 'here');
+  const bp = M.createBoard('portrait');
+  ok('a new board has no palette and the strip is off', bp.palette === null && bp.showPalette === false);
+  const e1 = M.addElement(bp, { product_id: 'P1', x: 0.3, y: 0.4 });
+  const e2 = M.addElement(bp, { product_id: 'P2', x: 0.7, y: 0.6 });
+  const before = JSON.stringify(bp.elements);
+  bp.palette = snap;
+  const shares = outfitShares(bp, byId, snap);
+  ok('choosing a palette moves nothing', JSON.stringify(bp.elements) === before);
+  // P1 is a top (weight 2) all rust; P2 is shoes (weight 1) all navy
+  eq('shares by slot weight against the palette', shares.rows.map((r) => [r.name, r.actual, r.suggested]),
+    [['rust', 66.7, 60], ['navy', 33.3, 30], ['cream', 0, 10]]);
+  ok('nothing outside', shares.outside === 0 && shares.pieces === 2);
+  ok('top and bottom count double, a dress four', SLOT_WEIGHT.top === 2 && SLOT_WEIGHT.bottom === 2 && SLOT_WEIGHT.dress === 4);
+  const far = outfitShares(bp, byId, { colours: [{ hex: '#9CAF88', name: 'sage', role: 'dominant', share: 100 }] });
+  ok('a colour far from every palette colour is outside', far.outside === 100 && far.rows[0].actual === 0);
+  const rk = C.rankByLook([byId.P2, byId.P1], { colours: [snap.colours[0]] });
+  ok('the palette ranks the shelf with the desk\'s own comparison', rk[0].product_id === 'P1');
+  const m = metrics(1000, 1250);
+  ok('the strip is off the board by default', stripRows(bp, byId, m, 1250).every((r) => r.kind !== 'palette'));
+  bp.showPalette = true;
+  const rows = stripRows(bp, byId, m, 1250);
+  const pr = rows.find((r) => r.kind === 'palette');
+  ok('with the toggle on, the palette is a strip by share', pr && pr.chips.length === 3
+    && Math.abs(pr.chips[0].share - 0.6) < 1e-9);
+  const sw = rows.find((r) => r.kind === 'swatches');
+  ok('it sits above the pieces\' own strip', !sw || pr.top < sw.top);
+  ok('toggling the strip moves nothing', JSON.stringify(bp.elements) === before);
+  const inf = buildInfo(bp, byId, {}, { date: new Date(2026, 8, 24) });
+  ok('the info file records the palette', inf.palette && inf.palette.id === 'x' && inf.palette.name === 'Rust and navy'
+    && inf.palette.category === 'season' && inf.palette.colours[0].hex === '#A53B29'
+    && inf.palette.colours[0].role === 'dominant' && inf.palette.colours[0].share === 60
+    && inf.palette.colours[0].name === 'rust' && inf.palette.source.ref === 'here');
+  ok('and whether it was on the board', inf.elements_shown.palette_strip === true);
+  const mdp = buildMarkdown(inf);
+  const lines = mdp.split('\n').filter((l) => l.includes('Palette'));
+  ok('the piece list names the palette in one line', lines.length === 1 && lines[0].includes('Rust and navy'), lines.join('|'));
+  bp.palette = null;
+  const inf0 = buildInfo(bp, byId, {}, { date: new Date(2026, 8, 24) });
+  ok('no palette, no line', inf0.palette === null && !buildMarkdown(inf0).includes('Palette'));
+  ok('clearing moves nothing', JSON.stringify(bp.elements) === before);
 }
 
 console.log(`\nafter 24 Sept: ${pass} passed, ${fail} failed`);

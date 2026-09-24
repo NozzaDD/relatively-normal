@@ -1,0 +1,501 @@
+product_id,colour,hex,old_family,old_name,new_family,new_name,L,C,h
+B053-P002-C0,2,08225D,blue,navy,purple,aubergine,15.4,41.1,293.1
+B053-P002-C1,1,0D1539,blue,navy,purple,aubergine,8.3,26.8,293.9
+B053-P002-C1,2,252F63,blue,navy,purple,aubergine,21.3,34.9,292.8
+B072-P005-cw04,1,27387D,blue,navy,purple,violet,26.0,44.9,293.1
+B021-P014,3,D1A37E,brown,tan,orange,apricot,70.4,28.4,64.8
+B042-P007-C1,3,B18561,brown,tan,orange,terracotta,59.0,28.7,64.7
+B052-P003,1,A07450,brown,tan,orange,terracotta,52.4,29.6,64.2
+B080-P001-C3,3,D5A57E,brown,tan,orange,apricot,71.3,29.8,65.0
+B082-P001-I2-C1,3,AB7F5B,brown,tan,orange,terracotta,56.7,29.0,64.6
+B022-P015-C2,1,5B2823,brown,chocolate,red,brick,23.2,27.1,32.1
+B022-P016-C2,1,4C1D17,brown,espresso,red,oxblood,17.8,26.5,34.7
+B022-P022-C0,1,4E1D16,brown,espresso,red,oxblood,18.2,27.8,35.8
+B022-P022-C1,1,4C1D14,brown,espresso,red,oxblood,17.8,27.5,38.3
+B022-P022-C2,1,53221D,brown,espresso,red,brick,20.3,26.6,32.8
+B023-P014-C1,3,643529,brown,chocolate,red,brick,27.9,25.9,40.5
+B025-P004-C1,1,401410,brown,espresso,red,oxblood,13.4,25.1,32.5
+B042-P002-C1,1,562A1F,brown,chocolate,red,red,22.8,25.1,40.4
+B045-P001,1,4B1E17,brown,espresso,red,oxblood,17.9,25.6,36.0
+B045-P001-C4,1,55231B,brown,espresso,red,brick,20.9,27.9,36.3
+B062-P020-C0,3,4E2016,brown,espresso,red,oxblood,18.8,26.9,39.4
+B080-P001-I2-C1,1,53241A,brown,espresso,red,red,20.7,27.0,38.9
+B080-P001-I1-C0,1,A27751,brown,tan,yellow,ochre,53.5,30.0,66.2
+B073-P008-sw11,1,CFE9C9,cool neutral,pale grey,green,sage,89.7,19.2,138.5
+B024-P005-I1-C5,2,F1C6DB,cool neutral,pale grey,pink,blush,84.1,19.2,345.9
+B068-P009,1,ECB3CF,cool neutral,pale grey,pink,blush,78.8,25.7,346.3
+B068-P036,1,EDB1CD,cool neutral,pale grey,pink,blush,78.4,26.6,347.9
+B068-P066,1,EAB2CE,cool neutral,pale grey,pink,dusty rose,78.3,25.4,345.8
+B058-P006-sw02,1,02544B,green,forest,blue,petrol,31.5,24.3,182.3
+B058-P007-V2-sw09,1,3C736E,green,emerald,blue,teal,44.7,19.7,188.4
+B061-P004,1,264740,green,forest,blue,petrol,27.5,14.1,178.3
+B061-P004,3,3D7064,green,emerald,blue,teal,43.5,20.4,176.2
+B027-P008,3,8B744C,green,olive,brown,tobacco,50.1,25.6,82.7
+B039-P001,2,C1B792,green,sage,brown,tan,74.4,20.3,96.8
+B039-P004-C0,3,645946,green,olive,brown,tobacco,38.4,12.7,84.7
+B039-P004-I1-C1,1,827C63,green,olive,brown,tan,51.9,14.7,98.1
+B039-P004-I1-C1,2,969079,green,sage,brown,tan,59.7,13.2,97.8
+B039-P004-I1-C1,3,6E684F,green,olive,brown,tobacco,43.9,15.1,97.7
+B042-P018,1,5F5C40,green,olive,brown,chocolate,38.7,17.0,102.7
+B042-P018,2,747051,green,olive,brown,tobacco,46.8,18.2,102.0
+B042-P019-C0,1,5C593E,green,olive,brown,chocolate,37.4,16.5,102.6
+B042-P019-C0,2,726E50,green,olive,brown,tobacco,46.1,17.7,101.9
+B045-P001-I2-C2,2,5C5942,green,olive,brown,chocolate,37.5,14.1,102.2
+B045-P001-I2-C3,2,595741,green,olive,brown,chocolate,36.6,13.5,104.0
+B054-P006,2,3B3422,green,olive,brown,espresso,21.9,12.5,90.6
+B062-P012-V2,3,7C6A4A,green,olive,brown,tobacco,45.8,20.7,83.9
+B065-P001,2,68583D,green,olive,brown,tobacco,38.3,18.2,82.8
+B065-P007,1,6F5D3C,green,olive,brown,tobacco,40.5,21.8,83.8
+B065-P007,2,524328,green,olive,brown,chocolate,29.3,18.9,83.0
+B070-P012,1,474026,green,olive,brown,chocolate,27.1,17.0,94.7
+B070-P014,1,7C722F,green,olive,brown,tobacco,47.7,38.0,97.7
+B070-P014,3,5B5126,green,olive,brown,chocolate,34.5,26.6,94.7
+B071-P002-C5,1,413C23,green,olive,brown,espresso,25.2,16.4,97.7
+B077-P008,1,B8B59C,green,sage,brown,tan,73.3,13.5,103.9
+B077-P008,2,A19D7F,green,sage,brown,tan,64.3,16.7,102.7
+B077-P009,1,7A7660,green,olive,brown,tan,49.4,12.9,100.8
+B077-P010,1,807C66,green,olive,brown,tan,51.8,12.8,100.9
+B080-P009-C4,3,4F3910,green,olive,brown,chocolate,25.6,28.6,79.8
+B080-P014,1,635D3E,green,olive,brown,tobacco,39.3,18.9,98.6
+B080-P014-C2,1,595333,green,olive,brown,chocolate,35.1,19.8,98.4
+B080-P014-C2,2,736E4C,green,olive,brown,tobacco,46.1,20.1,100.9
+B080-P014-C2,3,423D23,green,olive,brown,espresso,25.6,17.0,97.9
+B090-P004,1,473B21,green,olive,brown,chocolate,25.5,18.0,86.3
+B090-P004,2,62573C,green,olive,brown,chocolate,37.4,17.3,89.9
+B090-P004-C1,1,43381F,green,olive,brown,chocolate,24.1,17.4,87.1
+B090-P004-C1,3,756A50,green,olive,brown,tobacco,45.2,16.2,90.1
+B090-P008,2,644D25,green,olive,brown,chocolate,34.3,27.4,80.5
+B090-P008-C1,2,614A23,green,olive,brown,chocolate,33.1,27.1,79.9
+B090-P008-I1-C2,1,473B21,green,olive,brown,chocolate,25.5,18.0,86.3
+B090-P008-I1-C2,2,5F5336,green,olive,brown,chocolate,35.8,18.8,89.1
+B090-P008-I1-C3,1,615235,green,olive,brown,chocolate,35.7,19.4,85.0
+B090-P008-I1-C3,2,42371E,green,olive,brown,chocolate,23.6,17.4,87.0
+B022-P008,1,808FA5,grey,mid grey,blue,steel blue,58.9,13.4,268.2
+B022-P009,2,8290AA,grey,mid grey,blue,steel blue,59.5,15.4,273.2
+B025-P005,2,818592,grey,mid grey,blue,steel blue,55.6,7.6,279.6
+B036-P005,1,898FA0,grey,mid grey,blue,steel blue,59.4,9.8,278.3
+B062-P015,3,6788B4,grey,mid grey,blue,steel blue,55.9,26.8,270.2
+B062-P016,1,6888B5,grey,mid grey,blue,steel blue,56.0,27.2,271.4
+B022-P019-C5,1,4F2220,grey,dark grey,brown,espresso,19.7,23.8,28.6
+B062-P006-sw05,1,644744,grey,dark grey,brown,chocolate,33.2,13.7,29.3
+B080-P004-C1,1,532626,grey,dark grey,brown,espresso,21.5,23.1,25.0
+B021-P012,2,9B6E79,grey,mid grey,pink,raspberry,51.3,19.6,3.1
+B023-P002-C2,3,806165,grey,mid grey,pink,raspberry,44.3,13.5,11.1
+B023-P003-C2,2,7F5F63,grey,mid grey,pink,raspberry,43.7,13.9,11.6
+B057-P006-sw25,1,F78CA1,grey,light grey,pink,dusty rose,70.3,43.3,9.2
+B066-P001-C9,2,A2767A,grey,mid grey,pink,dusty rose,54.1,18.4,14.5
+B073-P008-sw04,1,FF98AD,grey,light grey,pink,dusty rose,74.0,41.3,8.1
+B073-P009-sw06,1,826567,grey,mid grey,pink,raspberry,45.7,12.4,15.6
+B080-P004-C1,3,805E61,grey,mid grey,pink,raspberry,43.4,14.8,14.6
+B082-P001-I1-C2,3,9C737A,grey,mid grey,pink,dusty rose,52.7,17.4,8.2
+B088-P001,3,9D7173,grey,mid grey,pink,dusty rose,52.1,18.6,18.1
+B022-P015-C7,1,511F20,grey,dark grey,red,oxblood,19.4,26.0,25.1
+B023-P002-C1,1,572424,grey,dark grey,red,oxblood,21.6,26.3,26.0
+B023-P003-C1,1,582524,grey,dark grey,red,oxblood,22.0,26.4,27.2
+B016-P002,2,9B4E31,orange,rust,brown,tobacco,42.2,43.2,46.7
+B022-P007-C0,3,974A32,orange,rust,brown,tobacco,40.7,41.9,43.8
+B022-P012-C1,1,582812,orange,rust,brown,chocolate,22.4,31.6,49.9
+B022-P014-C6,1,572D14,orange,rust,brown,chocolate,23.5,29.5,54.9
+B026-P005-C1,3,753E26,orange,rust,brown,chocolate,32.6,33.2,49.2
+B047-P001-C1,2,914C23,orange,rust,brown,tobacco,40.1,44.5,54.6
+B050-P001-I4-C2,1,76360D,orange,rust,brown,chocolate,30.7,44.4,54.9
+B050-P002,3,53200B,orange,rust,brown,espresso,19.6,33.2,47.4
+B051-P002,3,7C3B1E,orange,rust,brown,chocolate,32.9,40.0,49.4
+B051-P004,3,AA6046,orange,rust,brown,tobacco,48.7,39.1,45.4
+B052-P007-C5,3,A75E3C,orange,rust,brown,tobacco,47.7,41.7,50.4
+B078-P005-C1,2,502512,orange,rust,brown,espresso,20.3,28.3,49.3
+B078-P008-C4,1,773017,orange,rust,brown,chocolate,29.7,42.5,45.9
+B078-P012-C2,3,713510,orange,rust,brown,chocolate,29.7,41.4,54.6
+B079-P002-I1-C2,3,542616,orange,rust,brown,espresso,21.3,28.4,45.5
+B080-P002-I1-C1,3,592617,orange,rust,brown,chocolate,22.2,30.5,43.2
+B080-P002-I1-C2,2,562415,orange,rust,brown,espresso,21.2,30.3,43.5
+B080-P002-I2-C1,3,592617,orange,rust,brown,chocolate,22.2,30.5,43.2
+B080-P002-I2-C2,1,592410,orange,rust,brown,espresso,21.7,33.7,46.8
+B080-P002-I3-C0,1,592410,orange,rust,brown,espresso,21.7,33.7,46.8
+B080-P011-C7,1,552615,orange,rust,brown,espresso,21.5,29.3,46.1
+B090-P003-I1-C1,2,703617,orange,rust,brown,chocolate,29.8,38.2,52.5
+B014-P001-V4,1,9C3125,orange,rust,red,brick,36.7,54.3,36.3
+B019-P006-I1-C1,2,8C041D,orange,rust,red,burgundy,28.8,58.1,28.1
+B020-P002-C1,3,8F0821,orange,rust,red,burgundy,29.7,57.8,26.8
+B022-P015-C3,1,571014,orange,rust,red,oxblood,17.7,36.6,28.5
+B022-P015-C5,1,64251B,orange,rust,red,brick,24.0,34.8,37.1
+B022-P015-C6,1,662122,orange,rust,red,red,23.8,35.0,27.5
+B022-P019-C4,1,571F1D,orange,rust,red,brick,20.4,29.7,29.7
+B022-P022,2,44100F,orange,rust,red,oxblood,13.4,28.6,29.8
+B022-P022-C3,1,5E271B,orange,rust,red,red,23.4,31.3,39.6
+B023-P001-C1,1,612420,orange,rust,red,brick,23.4,32.2,31.5
+B023-P001-C2,1,65221B,orange,rust,red,brick,23.6,36.2,34.7
+B023-P001-C3,1,5E271B,orange,rust,red,red,23.4,31.3,39.6
+B023-P014-C1,1,A70E23,orange,rust,red,burgundy,35.3,65.7,29.5
+B025-P008,1,59241E,orange,rust,red,brick,21.9,28.7,33.7
+B026-P004,3,541B1C,orange,rust,red,oxblood,19.0,29.8,26.9
+B026-P004-C0,1,541B1D,orange,rust,red,oxblood,19.0,29.6,25.6
+B028-P010-I2-C0,1,631915,orange,rust,red,brick,21.6,39.5,33.8
+B032-P001-V2,1,591F1C,orange,rust,red,brick,20.8,30.9,30.9
+B032-P001-V2,2,923C37,orange,rust,red,brick,37.2,41.8,30.7
+B036-P003,1,5C2021,orange,rust,red,oxblood,21.6,30.8,26.5
+B045-P001-C5,1,59261D,orange,rust,red,brick,22.3,28.4,37.0
+B045-P001-I2-C3,3,8E0B1C,orange,rust,red,burgundy,29.6,58.3,29.8
+B045-P002,3,770611,orange,rust,red,brick,24.0,52.9,32.3
+B045-P003,2,820715,orange,rust,red,brick,26.6,56.0,31.6
+B046-P007-C1,1,7D030F,orange,rust,red,brick,25.1,56.3,33.5
+B046-P007-C1,2,440303,orange,rust,red,oxblood,11.3,34.0,28.9
+B046-P007-C1,3,7E272C,orange,rust,red,burgundy,29.6,41.9,25.4
+B050-P001-I1-C0,3,451011,orange,rust,red,oxblood,13.7,28.7,28.0
+B057-P006-sw07,1,DB2F30,orange,rust,red,red,48.7,77.2,33.2
+B058-P004-sw05,1,BC141E,orange,rust,red,red,40.1,74.3,33.9
+B059-P006,1,7C262B,orange,rust,red,burgundy,29.0,41.5,25.4
+B059-P007,1,C42B23,orange,rust,red,red,43.6,72.6,36.1
+B059-P007-sw01,1,882E32,orange,rust,red,burgundy,32.7,42.9,25.6
+B059-P008,1,B83426,orange,rust,red,red,42.4,65.1,37.0
+B059-P008,3,812016,orange,rust,red,brick,28.8,51.1,37.2
+B059-P008-V2,2,98281E,orange,rust,red,brick,34.6,56.7,36.3
+B060-P001-sw01,1,C73C2C,orange,rust,red,red,46.4,67.8,37.1
+B060-P002,1,851202,orange,rust,red,red,27.9,60.8,40.9
+B060-P002,3,91362D,orange,rust,red,brick,35.7,45.7,34.1
+B062-P005,1,CB463D,orange,rust,red,red,48.8,62.4,33.3
+B062-P005-V2,2,E24C42,orange,terracotta,red,red,53.7,69.1,33.6
+B062-P006-sw01,1,E15347,orange,terracotta,red,red,54.7,65.7,33.8
+B062-P016-sw06,1,D94B35,orange,terracotta,red,red,51.9,69.2,38.2
+B066-P005-C8,2,910318,orange,rust,red,brick,29.8,61.4,31.2
+B068-P011,1,CC2A26,orange,rust,red,red,45.1,75.0,35.1
+B068-P038,1,CD2926,orange,rust,red,red,45.2,75.6,34.9
+B068-P067,1,CE2B27,orange,rust,red,red,45.6,75.4,35.0
+B070-P006,1,5A251B,orange,rust,red,brick,22.2,29.9,38.0
+B070-P013,1,602827,orange,rust,red,red,24.2,28.6,27.3
+B070-P015,1,5E251F,orange,rust,red,brick,23.0,30.6,33.5
+B073-P005,1,C52B23,orange,rust,red,red,43.8,73.0,36.1
+B074-P001,1,8A2B27,orange,rust,red,brick,32.4,47.3,32.1
+B074-P001,2,5F1110,orange,rust,red,brick,19.5,41.1,33.2
+B078-P011-C2,1,7F2929,orange,rust,red,burgundy,30.1,42.4,28.9
+B079-P001,2,6E0A14,orange,rust,red,brick,22.2,47.8,30.2
+B079-P002-C0,3,820A18,orange,rust,red,brick,26.8,54.8,30.4
+B079-P002-C2,1,57271A,orange,rust,red,red,22.1,28.2,41.8
+B079-P002-I2-C1,1,E04A3F,orange,terracotta,red,red,53.1,69.5,34.2
+B080-P001-I1-C2,2,580B14,orange,rust,red,oxblood,17.3,38.2,26.5
+B083-P005,1,961E1B,orange,rust,red,brick,32.9,58.9,34.7
+B085-P002,1,8C2221,orange,rust,red,brick,31.4,52.1,32.2
+B087-P001,1,761510,orange,rust,red,brick,25.0,50.5,36.2
+B010-P002,3,7998D7,purple,violet,blue,steel blue,62.9,36.0,279.0
+B055-P013,1,3B3085,purple,plum,blue,cobalt,26.0,54.9,302.6
+B066-P001-C0,1,031281,purple,aubergine,blue,navy,15.7,73.0,303.6
+B066-P003-C0,1,02107D,purple,aubergine,blue,navy,14.8,72.0,303.8
+B066-P003-C3,1,030F7A,purple,aubergine,blue,navy,14.2,70.9,303.9
+B068-P020,1,507BCE,purple,violet,blue,cobalt,52.2,48.6,282.8
+B068-P047,1,4A75C8,purple,violet,blue,cobalt,49.9,49.0,283.4
+B024-P005-I1-C5,3,C8809E,purple,mauve,pink,hot pink,61.8,32.3,352.2
+B057-P006-sw22,1,A5528A,purple,mauve,pink,raspberry,46.8,44.3,339.3
+B058-P001-V2,1,A55988,purple,mauve,pink,raspberry,48.2,39.4,341.7
+B058-P001-V2,3,7D3860,purple,plum,pink,raspberry,34.1,36.2,344.7
+B058-P002-sw01,1,A9588C,purple,mauve,pink,raspberry,48.6,42.3,340.7
+B059-P002-sw10,1,A15888,purple,mauve,pink,raspberry,47.4,39.0,339.7
+B064-P002-C3,2,876A78,purple,mauve,pink,raspberry,48.0,14.4,346.5
+B064-P002-C3,3,B68FA0,purple,mauve,pink,dusty rose,63.4,17.8,349.3
+B068-P009,2,D695B1,purple,mauve,pink,hot pink,68.7,28.9,350.6
+B068-P036,2,D391AE,purple,mauve,pink,hot pink,67.4,29.6,350.2
+B088-P003,3,986E7C,purple,mauve,pink,raspberry,51.0,18.9,356.6
+B020-P006,2,4E343F,purple,plum,red,oxblood,25.1,13.8,351.1
+B015-P003,3,3D2021,red,oxblood,brown,espresso,16.2,15.1,21.0
+B021-P002-V3,3,3B1619,red,oxblood,brown,espresso,13.1,19.8,20.2
+B021-P012,3,4F2B2C,red,oxblood,brown,chocolate,22.2,18.0,21.5
+B022-P019-C6,1,542A2A,red,oxblood,brown,chocolate,22.7,21.3,24.3
+B022-P019-C7,1,502B2B,red,oxblood,brown,chocolate,22.3,18.7,23.6
+B023-P002-C0,1,421416,red,oxblood,brown,espresso,13.9,24.8,24.8
+B023-P002-C1,2,361314,red,oxblood,brown,espresso,11.3,19.3,23.9
+B023-P002-C2,1,492021,red,oxblood,brown,espresso,18.2,21.4,23.5
+B023-P003,3,451719,red,oxblood,brown,espresso,15.2,24.5,24.2
+B023-P003-C0,1,421416,red,oxblood,brown,espresso,13.9,24.8,24.8
+B023-P003-C1,2,321212,red,oxblood,brown,espresso,10.2,17.9,24.8
+B023-P003-C2,1,492021,red,oxblood,brown,espresso,18.2,21.4,23.5
+B025-P007-I2-C3,1,3E1E1E,red,oxblood,brown,espresso,15.7,17.0,24.2
+B033-P002,1,341C1D,red,oxblood,brown,espresso,13.5,12.7,20.0
+B062-P018-C1,2,330A09,red,oxblood,brown,espresso,8.5,22.6,24.8
+B002-P001,1,795A5C,red,burgundy,pink,raspberry,41.5,13.6,16.3
+B057-P006-sw06,1,E64576,red,red,pink,raspberry,54.4,65.4,7.7
+B058-P002-sw05,1,E64F7C,red,red,pink,hot pink,56.0,62.0,6.9
+B059-P002-sw05,1,EE647D,red,red,pink,hot pink,60.6,56.9,13.7
+B062-P012,3,AC2F52,red,burgundy,pink,raspberry,40.3,53.5,10.1
+B062-P014,1,834855,red,burgundy,pink,raspberry,38.1,26.9,7.3
+B068-P010,1,ED6C8C,red,red,pink,dusty rose,62.2,53.2,7.7
+B068-P037,1,ED6988,red,red,pink,dusty rose,61.6,54.4,9.0
+B073-P009-sw05,1,AB2E54,red,burgundy,pink,raspberry,40.0,53.4,8.3
+B080-P001-C3,1,FA516F,red,red,pink,raspberry,59.3,68.8,17.1
+B080-P009-C2,2,CF7D81,red,red,pink,dusty rose,61.2,34.2,19.6
+B082-P001-I1-C2,2,7D4D56,red,burgundy,pink,raspberry,38.4,21.8,8.6
+B082-P003,2,C76382,red,red,pink,raspberry,54.7,43.1,2.0
+B019-P006-I1-C3,3,D7BB95,warm neutral,oatmeal,brown,tan,77.4,23.4,79.1
+B019-P007-C5,2,D3B18C,warm neutral,oatmeal,brown,tan,74.3,24.6,73.4
+B021-P001-V2,3,6E4818,warm neutral,taupe,brown,chocolate,34.0,35.9,71.2
+B021-P016,2,E5C8AB,warm neutral,cream,brown,tan,82.3,19.2,72.3
+B021-P017,1,DEBD9E,warm neutral,cream,brown,tan,78.7,21.3,70.2
+B021-P022,2,653D1C,warm neutral,taupe,brown,chocolate,29.9,30.6,62.3
+B022-P016-C2,2,D5B397,warm neutral,oatmeal,brown,tan,75.2,20.6,66.7
+B022-P017-C2,2,D7B79B,warm neutral,oatmeal,brown,tan,76.5,19.9,68.4
+B022-P018-C2,1,D5B499,warm neutral,oatmeal,brown,tan,75.5,19.8,66.6
+B022-P018-C4,1,DBBC9D,warm neutral,cream,brown,tan,78.1,20.8,71.9
+B022-P019,1,CCB5A3,warm neutral,oatmeal,brown,tan,75.2,13.3,66.3
+B022-P019-C2,1,CBB6A5,warm neutral,oatmeal,brown,tan,75.4,12.3,67.4
+B022-P019-C3,1,DDC0A4,warm neutral,cream,brown,tan,79.5,18.9,71.3
+B023-P010-C2,2,CFBAA6,warm neutral,oatmeal,brown,tan,76.8,13.5,71.7
+B024-P002-C5,1,CCBAA2,warm neutral,oatmeal,brown,tan,76.4,14.7,80.1
+B024-P003-C1,1,C9B69F,warm neutral,oatmeal,brown,tan,75.1,14.5,77.7
+B026-P001,1,D9C5B1,warm neutral,cream,brown,tan,80.7,13.2,73.2
+B026-P004-C0,3,E2BDA1,warm neutral,cream,brown,tan,79.1,21.2,64.4
+B026-P007,2,D4BCAB,warm neutral,oatmeal,brown,tan,77.8,13.1,63.6
+B027-P009-I1-C0,1,D4C8B0,warm neutral,cream,brown,tan,81.0,13.5,89.0
+B028-P010-I3-C0,3,D5BFA9,warm neutral,cream,brown,tan,78.6,14.6,72.9
+B038-P002,2,CDBB95,warm neutral,oatmeal,brown,tan,76.5,21.6,88.6
+B039-P004-C5,2,542C14,warm neutral,taupe,brown,chocolate,22.8,28.2,55.1
+B040-P001,1,5A2C0D,warm neutral,taupe,brown,chocolate,23.7,33.8,56.6
+B040-P001,2,85481E,warm neutral,taupe,brown,chocolate,37.3,42.0,57.5
+B042-P001,1,5B2C0D,warm neutral,taupe,brown,chocolate,23.9,34.3,56.1
+B042-P009,2,C9B39E,warm neutral,oatmeal,brown,tan,74.3,14.3,71.6
+B042-P028,1,C5BAA4,warm neutral,oatmeal,brown,tan,75.9,12.6,89.0
+B042-P032,1,DACDB8,warm neutral,cream,brown,tan,82.9,12.1,85.0
+B043-P007-I1-C2,1,C8B48A,warm neutral,oatmeal,brown,tan,74.0,24.1,88.0
+B044-P001-C0,1,CABFA4,warm neutral,oatmeal,brown,tan,77.6,15.0,92.2
+B045-P001-I3-C1,3,E5BE9B,warm neutral,cream,brown,tan,79.5,24.6,68.6
+B046-P003,2,CEB89F,warm neutral,oatmeal,brown,tan,76.0,16.1,75.9
+B046-P004-C0,3,6A3209,warm neutral,taupe,brown,chocolate,27.8,41.3,57.3
+B046-P006-C1,1,6F4826,warm neutral,taupe,brown,chocolate,34.3,29.8,64.3
+B046-P007-I1-C1,1,7A4016,warm neutral,taupe,brown,chocolate,33.7,41.5,58.2
+B046-P007-I1-C1,2,592909,warm neutral,taupe,brown,chocolate,22.8,35.1,55.6
+B046-P008,3,744312,warm neutral,taupe,brown,chocolate,33.5,40.4,64.8
+B046-P008-C0,3,744310,warm neutral,taupe,brown,chocolate,33.5,41.1,65.4
+B047-P003,3,DDBB9E,warm neutral,cream,brown,tan,78.1,20.8,67.7
+B048-P001,3,CDB79E,warm neutral,oatmeal,brown,tan,75.6,16.1,75.9
+B050-P001-I2-C1,3,68461E,warm neutral,taupe,brown,chocolate,32.7,31.0,70.7
+B050-P001-I4-C1,3,D7C7B3,warm neutral,cream,brown,tan,81.0,12.3,79.1
+B050-P006,2,E1C8B3,warm neutral,cream,brown,tan,82.1,14.8,68.2
+B052-P001,1,654619,warm neutral,taupe,brown,chocolate,32.3,32.5,74.9
+B052-P003,3,5C2E11,warm neutral,taupe,brown,chocolate,24.5,32.9,55.7
+B052-P004,1,783D17,warm neutral,taupe,brown,chocolate,32.7,40.6,55.9
+B054-P004,3,D4B090,warm neutral,oatmeal,brown,tan,74.2,22.9,68.4
+B054-P006,3,DFBEA4,warm neutral,cream,brown,tan,79.2,19.2,65.8
+B062-P009,3,E5CDB6,warm neutral,cream,brown,tan,83.8,15.3,71.8
+B066-P005-C0,1,CBB89E,warm neutral,oatmeal,brown,tan,75.7,15.9,80.5
+B068-P007,1,D5BFAD,warm neutral,cream,brown,tan,78.7,12.9,67.7
+B070-P017,1,854821,warm neutral,taupe,brown,chocolate,37.4,40.8,56.2
+B071-P005,1,D2B79C,warm neutral,oatmeal,brown,tan,76.1,18.2,72.2
+B071-P005-C3,1,D3B79C,warm neutral,oatmeal,brown,tan,76.1,18.4,71.2
+B078-P006-C1,1,D0B59A,warm neutral,oatmeal,brown,tan,75.3,18.2,72.2
+B078-P009-C5,2,D5BCA8,warm neutral,oatmeal,brown,tan,77.8,14.6,66.8
+B078-P010-C0,3,8C4B22,warm neutral,taupe,brown,tobacco,39.1,42.9,55.9
+B078-P012-C1,3,D4BBA5,warm neutral,oatmeal,brown,tan,77.4,15.4,69.3
+B078-P013-C1,2,D9BFA6,warm neutral,cream,brown,tan,78.9,16.9,71.5
+B080-P003-C1,2,A16136,warm neutral,stone,brown,tobacco,47.5,41.3,57.9
+B080-P003-C2,2,E6C299,warm neutral,cream,brown,tan,80.6,26.4,74.5
+B080-P008-C1,1,D9CAB5,warm neutral,cream,brown,tan,82.0,12.5,81.7
+B080-P011-C5,1,CFBDA8,warm neutral,oatmeal,brown,tan,77.6,13.3,77.1
+B080-P011-C6,3,6A3F1B,warm neutral,taupe,brown,chocolate,31.1,33.0,62.3
+B080-P012-C11,2,6F3F18,warm neutral,taupe,brown,chocolate,31.8,36.3,61.2
+B080-P012-C5,1,D2C4AF,warm neutral,cream,brown,tan,79.8,12.4,83.3
+B088-P005,3,D7BFAD,warm neutral,cream,brown,tan,78.9,13.4,65.2
+B090-P008-I2-C0,2,D3B382,warm neutral,oatmeal,brown,camel,74.6,29.7,80.8
+B026-P008-C0,3,DFAD87,warm neutral,oatmeal,orange,apricot,74.4,29.7,63.4
+B042-P007,1,A56F4D,warm neutral,stone,orange,terracotta,51.7,32.7,57.5
+B050-P004,2,C58155,warm neutral,stone,orange,terracotta,60.1,40.7,57.8
+B050-P004,3,AE6A3F,warm neutral,stone,orange,terracotta,51.5,42.1,56.8
+B050-P005,2,C67D53,warm neutral,stone,orange,terracotta,59.3,42.1,55.0
+B080-P001-I2-C3,1,E37B30,warm neutral,oatmeal,orange,terracotta,62.3,66.2,58.0
+B073-P002-sw01,1,D9B4AA,warm neutral,oatmeal,pink,dusty rose,76.3,15.5,40.6
+B050-P008,1,EBBD95,warm neutral,cream,yellow,gold,79.7,28.7,67.2
+B051-P003,1,F0C097,warm neutral,cream,yellow,gold,81.0,29.6,66.7
+B075-P004,2,E2F6D3,white,off-white,green,sage,94.6,19.4,130.9
+B019-P006-I1-C3,1,EDEDDF,white,off-white,warm neutral,cream,93.4,7.2,109.6
+B019-P007-C2,1,E9E6DA,white,off-white,warm neutral,cream,91.2,6.3,99.7
+B019-P007-C5,1,F0ECE0,white,off-white,warm neutral,cream,93.4,6.3,96.4
+B020-P002-I1-C2,1,F6EEE2,white,off-white,warm neutral,cream,94.4,6.8,84.4
+B021-P007-C0,1,ECE3D6,white,off-white,warm neutral,cream,90.6,7.5,83.4
+B023-P005,1,EEE8DA,white,off-white,warm neutral,cream,92.1,7.5,92.7
+B023-P005-C6,1,F1EADA,white,off-white,warm neutral,cream,92.8,8.6,92.2
+B025-P006-C5,1,E7E6DA,white,off-white,warm neutral,cream,91.1,6.2,106.3
+B025-P007-C2,1,E5E4D8,white,off-white,warm neutral,cream,90.4,6.2,106.3
+B026-P001-I2-C0,1,ECE2D4,white,off-white,warm neutral,cream,90.3,8.1,82.6
+B033-P001,1,EBE3D1,white,off-white,warm neutral,cream,90.4,9.8,91.8
+B042-P032,2,EFEBDE,white,off-white,warm neutral,cream,93.0,6.8,97.4
+B046-P001-I1-C0,1,F0E8D7,white,off-white,warm neutral,cream,92.2,9.2,90.9
+B058-P007-V2-sw02,1,EAE9DC,white,off-white,warm neutral,cream,92.1,6.7,106.5
+B059-P002-sw02,1,F0F0E4,white,off-white,warm neutral,cream,94.5,6.2,109.7
+B059-P004,2,EFE6D3,white,off-white,warm neutral,cream,91.5,10.3,90.6
+B059-P005-sw02,1,EEEEE0,white,off-white,warm neutral,cream,93.8,7.2,109.6
+B066-P003,1,EAE3D7,white,off-white,warm neutral,cream,90.5,6.7,87.2
+B066-P004-C2,1,EAE4D9,white,off-white,warm neutral,cream,90.8,6.1,88.6
+B073-P006-sw08,1,F4F0D5,white,off-white,warm neutral,cream,94.5,13.9,103.0
+B073-P009-sw04,1,F0E6DC,white,off-white,warm neutral,cream,91.8,6.3,74.4
+B076-P001,1,EAE7DB,white,off-white,warm neutral,cream,91.6,6.3,99.7
+B076-P004,1,EDE9DA,white,off-white,warm neutral,cream,92.3,7.9,98.8
+B077-P001,1,EBE5D7,white,off-white,warm neutral,cream,91.1,7.5,92.7
+B077-P006,1,E9E5D7,white,off-white,warm neutral,cream,90.9,7.4,98.1
+B090-P002,2,F4E6D4,white,off-white,warm neutral,cream,91.9,10.6,80.2
+B001-P001,1,D5C4A8,yellow,butter,brown,tan,79.9,16.3,84.7
+B009-P001,1,D5C4A8,yellow,butter,brown,tan,79.9,16.3,84.7
+B018-P001-V2,2,BB9564,yellow,gold,brown,camel,64.1,32.2,75.8
+B019-P006-I1-C0,3,D5A275,yellow,gold,brown,camel,70.4,33.4,66.6
+B019-P007,2,D5A375,yellow,gold,brown,camel,70.6,33.5,67.7
+B019-P007-C0,2,D4A275,yellow,gold,brown,camel,70.3,33.1,67.2
+B021-P001-V2,1,AF864A,yellow,ochre,brown,camel,58.7,38.9,77.1
+B021-P001-V2,2,90672C,yellow,ochre,brown,tobacco,46.7,40.1,75.2
+B021-P009,3,7D5735,yellow,ochre,brown,tobacco,40.3,28.4,65.8
+B021-P021,1,BD8B5D,yellow,ochre,brown,camel,61.7,34.7,67.0
+B021-P026-C0,1,BBA165,yellow,mustard,brown,camel,67.3,34.7,87.6
+B021-P026-C1,1,A98C54,yellow,mustard,brown,camel,59.7,34.0,83.9
+B022-P007-C3,3,D8AE7A,yellow,gold,brown,camel,73.7,33.6,75.2
+B022-P014-C4,3,8C613E,yellow,ochre,brown,tobacco,44.9,29.9,63.6
+B022-P014-C6,2,7D5535,yellow,ochre,brown,tobacco,39.8,28.3,63.0
+B022-P014-C7,2,785132,yellow,ochre,brown,tobacco,38.0,27.7,62.8
+B022-P017-C6,1,8E6443,yellow,ochre,brown,tobacco,46.0,28.5,63.0
+B023-P001,3,8A6545,yellow,ochre,brown,tobacco,45.8,26.2,65.7
+B026-P003-C1,3,D5C1A9,yellow,butter,brown,tan,79.1,15.0,77.5
+B027-P008,2,DDC9A1,yellow,butter,brown,tan,81.7,22.6,87.6
+B030-P001,3,D6C2AB,yellow,butter,brown,tan,79.5,14.5,76.6
+B039-P001,1,D9D2B2,yellow,butter,brown,tan,84.0,17.0,99.6
+B039-P004-I1-C0,1,DCD3B2,yellow,butter,brown,tan,84.5,17.6,97.3
+B042-P001,2,84481D,yellow,ochre,brown,chocolate,37.2,42.0,58.3
+B042-P002-C1,3,C69E6A,yellow,gold,brown,camel,67.7,33.7,76.0
+B042-P005,1,B98251,yellow,ochre,brown,camel,58.9,38.2,65.6
+B042-P005-C0,3,8B5C29,yellow,ochre,brown,tobacco,43.2,39.0,68.6
+B044-P020-C0,3,A98258,yellow,ochre,brown,camel,57.2,30.0,71.4
+B045-P001,3,BC8C64,yellow,ochre,brown,camel,62.0,31.4,65.0
+B045-P001-C4,3,C08F66,yellow,gold,brown,camel,63.2,32.0,65.1
+B045-P001-I3-C0,1,A28350,yellow,ochre,brown,camel,56.6,32.3,80.7
+B045-P001-I3-C0,2,74572C,yellow,ochre,brown,tobacco,39.1,30.0,77.1
+B046-P006,1,7D5534,yellow,ochre,brown,tobacco,39.8,28.7,63.7
+B046-P007-C0,2,D8BFA1,yellow,butter,brown,tan,78.7,18.9,76.9
+B046-P011,1,C3946A,yellow,gold,brown,camel,64.8,31.5,66.9
+B046-P011,2,AB7C53,yellow,ochre,brown,camel,55.8,32.4,65.7
+B046-P011-C0,1,C6976E,yellow,gold,brown,camel,66.0,31.0,66.4
+B046-P011-C0,2,93663F,yellow,ochre,brown,tobacco,47.1,32.1,64.9
+B047-P001,1,C19269,yellow,gold,brown,camel,64.1,31.2,66.3
+B047-P001-C0,1,C69770,yellow,gold,brown,camel,66.0,30.1,65.3
+B047-P001-C0,2,986942,yellow,ochre,brown,tobacco,48.5,32.6,63.9
+B047-P002,1,AE8643,yellow,ochre,brown,camel,58.5,42.0,79.5
+B047-P002,2,825B29,yellow,ochre,brown,tobacco,41.8,36.0,72.8
+B047-P003,1,AD8644,yellow,ochre,brown,camel,58.4,41.3,79.8
+B047-P003,2,825A28,yellow,ochre,brown,tobacco,41.6,36.4,72.1
+B049-P003-I2-C3,2,685119,yellow,ochre,brown,chocolate,35.8,35.2,84.8
+B049-P003-I2-C3,3,CAAE78,yellow,gold,brown,camel,72.4,31.6,85.2
+B050-P001-I2-C1,2,C9A66F,yellow,gold,brown,camel,70.1,33.7,80.5
+B050-P002,2,96592C,yellow,ochre,brown,tobacco,44.0,41.7,59.6
+B052-P001,2,8D6B45,yellow,ochre,brown,tobacco,47.8,27.8,72.0
+B052-P003,2,805531,yellow,ochre,brown,tobacco,40.1,31.2,63.6
+B053-P002-I1-C1,2,906C43,yellow,ochre,brown,tobacco,48.3,29.8,72.1
+B054-P003,3,906A49,yellow,ochre,brown,tobacco,47.9,26.7,65.9
+B055-P003-V2,1,AB824F,yellow,ochre,brown,camel,57.3,34.9,74.0
+B059-P002-sw01,1,D3BEA5,yellow,butter,brown,tan,78.1,15.7,77.2
+B060-P001,1,815B3C,yellow,ochre,brown,tobacco,42.0,26.7,63.9
+B062-P007,1,78521D,yellow,ochre,brown,tobacco,38.1,37.6,73.7
+B062-P017,1,7D5924,yellow,ochre,brown,tobacco,40.6,36.7,75.5
+B062-P018-C1,1,CE9A69,yellow,gold,brown,camel,67.5,35.9,67.8
+B065-P003,2,825B24,yellow,ochre,brown,tobacco,41.8,38.3,74.4
+B065-P003,3,C5946A,yellow,gold,brown,camel,65.0,32.2,65.8
+B068-P003,1,D6BFA1,yellow,butter,brown,tan,78.5,18.5,79.0
+B070-P007,1,7C5C2D,yellow,ochre,brown,tobacco,41.4,32.5,76.6
+B072-P005,1,E8E7B5,yellow,butter,brown,tan,90.6,25.7,107.2
+B073-P006-sw06,1,BC9165,yellow,gold,brown,camel,63.2,31.4,70.3
+B073-P009-sw01,1,D9D0AF,yellow,butter,brown,tan,83.4,17.7,97.3
+B078-P004-C5,2,D7C2A4,yellow,butter,brown,tan,79.4,18.0,81.3
+B078-P006-C2,1,DBC4A4,yellow,butter,brown,tan,80.3,19.3,80.5
+B078-P006-C3,2,906C47,yellow,ochre,brown,tobacco,48.4,27.9,69.9
+B078-P007-C3,2,8A5523,yellow,ochre,brown,tobacco,41.3,41.1,64.8
+B078-P009-C4,3,BB895C,yellow,ochre,brown,camel,61.0,34.4,66.5
+B078-P009-C5,3,8F6846,yellow,ochre,brown,tobacco,47.2,27.7,65.8
+B078-P010-C5,3,BB895C,yellow,ochre,brown,camel,61.0,34.4,66.5
+B078-P011-C4,2,9C5D2F,yellow,ochre,brown,tobacco,45.8,42.5,59.5
+B078-P011-C4,3,CB9565,yellow,gold,brown,camel,65.9,36.3,66.2
+B078-P012-C2,1,A06335,yellow,ochre,brown,tobacco,47.8,41.2,60.5
+B078-P012-C2,2,BC8555,yellow,ochre,brown,camel,60.0,37.5,65.2
+B078-P012-C3,1,BB8750,yellow,ochre,brown,camel,60.3,39.6,69.6
+B078-P012-C3,2,9D6A39,yellow,ochre,brown,tobacco,49.2,38.4,66.6
+B078-P012-C3,3,D3A56F,yellow,gold,brown,camel,70.8,35.9,73.4
+B078-P012-C5,3,926F39,yellow,ochre,brown,tobacco,49.2,35.7,77.9
+B078-P013-C1,3,926945,yellow,ochre,brown,tobacco,47.8,29.2,65.8
+B078-P013-C2,3,946B46,yellow,ochre,brown,tobacco,48.6,29.5,66.4
+B078-P013-C3,1,AD7F4F,yellow,ochre,brown,camel,56.7,35.0,69.7
+B078-P013-C3,2,895E35,yellow,ochre,brown,tobacco,43.6,32.9,66.8
+B078-P014,1,99734B,yellow,ochre,brown,tobacco,51.3,29.5,70.5
+B079-P002-I1-C0,1,82561B,yellow,ochre,brown,tobacco,40.4,41.8,72.1
+B079-P002-I1-C0,2,9C6E2C,yellow,ochre,brown,tobacco,50.0,44.2,74.6
+B079-P002-I1-C1,1,B18352,yellow,ochre,brown,camel,58.2,35.3,70.3
+B079-P002-I2-C3,1,BA9864,yellow,gold,brown,camel,64.8,32.6,79.7
+B079-P002-I2-C3,2,A2804F,yellow,ochre,brown,camel,55.8,32.2,77.8
+B079-P002-I2-C3,3,856337,yellow,ochre,brown,tobacco,44.5,31.2,74.4
+B080-P001-I2-C0,2,8F6E45,yellow,ochre,brown,tobacco,48.8,28.8,74.4
+B080-P001-I2-C1,3,77552E,yellow,ochre,brown,tobacco,38.9,29.6,71.3
+B080-P002,2,91764E,yellow,ochre,brown,tobacco,51.3,26.4,79.2
+B080-P002-C0,2,986C43,yellow,ochre,brown,tobacco,49.3,32.3,66.8
+B080-P002-I1-C1,2,99734D,yellow,ochre,brown,tobacco,51.3,28.6,69.4
+B080-P002-I2-C1,2,99734D,yellow,ochre,brown,tobacco,51.3,28.6,69.4
+B080-P003,1,CCA076,yellow,gold,brown,camel,69.0,30.1,69.0
+B080-P003-C0,2,BF8C5E,yellow,gold,brown,camel,62.2,35.0,66.5
+B080-P003-C2,3,956F4D,yellow,ochre,brown,tobacco,49.9,26.9,66.7
+B080-P007,1,6F5318,yellow,ochre,brown,chocolate,37.2,37.5,81.8
+B080-P007-C11,1,6E5218,yellow,ochre,brown,chocolate,36.8,37.1,81.5
+B080-P007-C11,3,A58B43,yellow,mustard,brown,camel,58.9,41.5,88.7
+B080-P007-C8,1,CB9F5E,yellow,gold,brown,camel,68.2,40.8,77.9
+B080-P007-C8,3,9C7139,yellow,ochre,brown,tobacco,50.9,38.7,73.8
+B080-P008-C3,2,865021,yellow,ochre,brown,tobacco,39.4,40.6,62.9
+B080-P009,3,6C5319,yellow,ochre,brown,chocolate,36.8,36.5,83.8
+B080-P009-C4,1,6D5318,yellow,ochre,brown,chocolate,36.9,37.1,83.2
+B080-P011-C7,3,9C724D,yellow,ochre,brown,tobacco,51.4,29.5,66.0
+B080-P012-C10,2,975F2D,yellow,ochre,brown,tobacco,45.6,41.4,64.0
+B080-P012-C5,3,8B5729,yellow,ochre,brown,tobacco,41.9,38.9,63.9
+B080-P013,1,E4D3A4,yellow,butter,brown,tan,84.9,25.5,92.7
+B080-P013-C1,1,E4D3A4,yellow,butter,brown,tan,84.9,25.5,92.7
+B080-P014-I1-C0,1,E3D3A4,yellow,butter,brown,tan,84.8,25.4,93.6
+B080-P014-I1-C0,2,97865A,yellow,ochre,brown,tan,56.5,26.0,90.3
+B082-P001-I2-C0,1,CFC4A0,yellow,butter,brown,tan,79.2,19.6,95.6
+B082-P001-I2-C1,1,9B6A40,yellow,ochre,brown,tobacco,49.1,34.6,64.4
+B082-P001-I2-C1,2,825A38,yellow,ochre,brown,tobacco,41.8,28.9,64.5
+B083-P003,1,946C48,yellow,ochre,brown,tobacco,48.9,28.7,66.5
+B084-P005,2,87722C,yellow,ochre,brown,tobacco,48.7,40.6,90.3
+B087-P004,1,CEC0A7,yellow,butter,brown,tan,78.2,14.4,86.6
+B090-P003-I1-C0,3,7B5737,yellow,ochre,brown,tobacco,40.1,26.7,65.9
+B090-P004-C0,1,7F4F22,yellow,ochre,brown,tobacco,38.2,37.6,64.9
+B090-P004-C0,2,A36D35,yellow,ochre,brown,tobacco,50.7,42.3,67.9
+B090-P005-C0,2,E7CFA7,yellow,butter,brown,tan,84.2,23.1,84.0
+B090-P007,1,986132,yellow,ochre,brown,tobacco,46.3,39.6,63.4
+B090-P007,3,C08C58,yellow,gold,brown,camel,62.2,37.9,68.7
+B090-P008,1,8E7645,yellow,ochre,brown,tobacco,50.8,30.4,84.9
+B090-P008-C1,1,876E38,yellow,ochre,brown,tobacco,47.7,33.6,84.9
+B090-P008-I1-C1,1,A08057,yellow,ochre,brown,camel,55.7,27.7,75.9
+B090-P008-I2-C0,1,BD935C,yellow,gold,brown,camel,63.7,36.2,75.5
+B021-P014,2,AA7B56,yellow,ochre,orange,terracotta,55.5,30.6,63.3
+B021-P022,3,D59F72,yellow,gold,orange,apricot,69.6,34.5,65.0
+B022-P012-C1,2,AC774E,yellow,ochre,orange,terracotta,54.6,34.7,62.3
+B022-P014-C6,3,9D6D47,yellow,ochre,orange,terracotta,50.2,32.3,62.9
+B042-P006-C0,2,B98962,yellow,ochre,orange,terracotta,60.9,31.1,64.3
+B046-P004-C0,2,A2612A,yellow,ochre,orange,rust,47.5,46.6,62.3
+B047-P001,2,A3734B,yellow,ochre,orange,terracotta,52.5,32.8,64.3
+B049-P003-I2-C2,3,C07B4D,yellow,ochre,orange,terracotta,58.0,42.3,58.2
+B050-P001-I4-C2,2,985422,yellow,ochre,orange,rust,43.0,46.8,58.8
+B050-P002,1,AE6F41,yellow,ochre,orange,terracotta,52.7,41.0,60.1
+B050-P004,1,DBA67D,yellow,gold,orange,apricot,72.1,32.2,63.5
+B050-P005,1,DEA880,yellow,gold,orange,apricot,73.0,32.0,62.4
+B050-P007,1,E2AB7E,yellow,gold,orange,apricot,74.1,34.2,64.8
+B050-P007,2,B87748,yellow,ochre,orange,terracotta,55.9,41.6,60.0
+B050-P008,2,C38C61,yellow,gold,orange,terracotta,62.7,35.0,63.0
+B051-P001,2,D1986A,yellow,gold,orange,apricot,67.3,36.2,63.9
+B051-P002,1,DAA478,yellow,gold,orange,apricot,71.4,33.8,64.6
+B051-P002,2,BB7F51,yellow,ochre,orange,terracotta,58.4,38.8,61.9
+B051-P003,3,BC8356,yellow,ochre,orange,terracotta,59.5,37.0,62.8
+B052-P004,3,BF8151,yellow,ochre,orange,terracotta,59.3,40.2,62.0
+B052-P007-C7,3,BB8356,yellow,ochre,orange,terracotta,59.4,36.7,63.3
+B062-P018-C1,3,B67642,yellow,ochre,orange,terracotta,55.4,43.4,62.5
+B071-P004-C2,3,9D6E4A,yellow,ochre,orange,terracotta,50.5,31.0,62.3
+B078-P011-C4,1,B2723D,yellow,ochre,orange,terracotta,53.9,44.1,62.7
+B080-P003,2,AB7A53,yellow,ochre,orange,terracotta,55.3,32.3,63.4
+B080-P004,1,CD9970,yellow,gold,orange,apricot,67.2,32.5,63.7
+B080-P004,2,B68055,yellow,ochre,orange,terracotta,58.1,35.3,63.2
+B080-P004-C2,1,CE9B72,yellow,gold,orange,apricot,67.9,32.0,64.3
+B080-P004-C2,2,A06C43,yellow,ochre,orange,terracotta,50.2,35.1,62.5
+B090-P007,2,AD733F,yellow,ochre,orange,terracotta,53.5,41.5,64.9
+B038-P002,1,E4D6B9,yellow,butter,warm neutral,cream,86.1,16.1,89.4
+B046-P001-C1,1,E9D5B9,yellow,butter,warm neutral,cream,86.2,16.6,81.2
+B046-P007,1,F1DEC2,yellow,butter,warm neutral,cream,89.3,16.2,82.5
+B046-P007-C0,1,F0DCC1,yellow,butter,warm neutral,cream,88.7,16.0,80.5
+B058-P007-V2-sw08,1,F1EECC,yellow,butter,warm neutral,cream,93.5,17.5,105.1
+B062-P011-V2,1,E5D6B9,yellow,butter,warm neutral,cream,86.1,16.2,88.1
+B068-P002,1,F1DAB8,yellow,butter,warm neutral,cream,88.1,19.8,82.0
+B068-P041,1,F2DAB7,yellow,butter,warm neutral,cream,88.2,20.5,81.6
+B068-P070,1,F1DBBA,yellow,butter,warm neutral,cream,88.4,19.2,82.4

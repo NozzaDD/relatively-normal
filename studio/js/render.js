@@ -8,7 +8,7 @@
 //   and no box behind them, only a shadow taken from their own alpha.
 
 import { GROUND, KEYLINE, INK, DEFAULT_FRAME, stacked, elementBox, labelOrder, swatchStrip,
-  pixelAspect } from './model.js';
+  pixelAspect, paletteStrip } from './model.js';
 
 export const metrics = (W, H) => ({
   margin: Math.round(W * 0.055),
@@ -90,6 +90,24 @@ function drawImageEl(ctx, img, el, W, H, m, framed, frame) {
 }
 
 /**
+ * The strips along the foot of the board and where each sits: the pieces'
+ * own colours at the bottom, the chosen palette above them when it is shown.
+ * The preview and the export both read this, so they stack the same way.
+ */
+export function stripRows(board, productsById, m, H) {
+  const rows = [];
+  let top = H - m.margin - m.strip;
+  const own = board.showSwatches ? swatchStrip(board, productsById) : [];
+  if (own.length) {
+    rows.push({ kind: 'swatches', chips: own, top });
+    top -= Math.round(m.strip * 1.6);
+  }
+  const pal = paletteStrip(board);
+  if (pal.length) rows.push({ kind: 'palette', chips: pal, top });
+  return rows;
+}
+
+/**
  * @param images  {uid: HTMLImageElement|ImageBitmap} already decoded
  */
 export function drawBoard(ctx, board, productsById, images, W, H) {
@@ -120,20 +138,17 @@ export function drawBoard(ctx, board, productsById, images, W, H) {
     drawImageEl(ctx, img, el, W, H, m, isTile(el.kind, p?.asset_type, el.variant, el.base), board.frame);
   }
 
-  if (board.showSwatches) {
-    const chips = swatchStrip(board, productsById);
-    if (chips.length) {
-      const total = chips.reduce((a, c) => a + (c.share || 1), 0) || 1;
-      let x = m.margin;
-      const top = H - m.margin - m.strip;
-      const avail = W - m.margin * 2;
-      chips.forEach((c, i) => {
-        const w = Math.round((avail * (c.share || 1)) / total);
-        ctx.fillStyle = c.hex;
-        ctx.fillRect(x, top, i === chips.length - 1 ? W - m.margin - x : w - 2, m.strip);
-        x += w;
-      });
-    }
+  const strips = stripRows(board, productsById, m, H);
+  for (const { chips, top } of strips) {
+    const total = chips.reduce((a, c) => a + (c.share || 1), 0) || 1;
+    let x = m.margin;
+    const avail = W - m.margin * 2;
+    chips.forEach((c, i) => {
+      const w = Math.round((avail * (c.share || 1)) / total);
+      ctx.fillStyle = c.hex;
+      ctx.fillRect(x, top, i === chips.length - 1 ? W - m.margin - x : w - 2, m.strip);
+      x += w;
+    });
   }
 
   if (board.showLabels) {
