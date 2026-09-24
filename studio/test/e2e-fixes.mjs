@@ -283,8 +283,10 @@ const dup = await page.evaluate(() => {
 });
 ok('duplicates are marked, nothing deleted', dup.n > 30 && dup.kept, JSON.stringify(dup));
 ok('none is on the shelf', dup.onShelf === 0, String(dup.onShelf));
-ok('a colourway split that copied its parent\'s picture points to the parent',
-  dup.b013 === 'B013-P001' && dup.cause === 'colourway split', JSON.stringify(dup));
+// 24 Sept: the split that copied its parent's picture now carries a cut of
+// its own colour (colourway_pictures.py), so it is no longer the parent again
+ok('a colourway split that copied its parent\'s picture now has its own and is not a duplicate',
+  dup.b013 === '' && dup.cause === '', JSON.stringify(dup));
 ok('the two black Massimo Alba scarves are one', dup.scarf === 'B020-P006', String(dup.scarf));
 await page.check('#rDups');
 await page.waitForTimeout(500);
@@ -293,13 +295,75 @@ const dv = await page.evaluate(() => ({
   keeperFirst: [...document.querySelectorAll('#reviewCards .dupgroup')].every((g) => g.querySelector('.cells').firstChild.classList.contains('keeper')),
 }));
 ok('the duplicates filter shows each one beside its keeper', dv.groups > 20 && dv.keeperFirst, JSON.stringify(dv));
-await page.evaluate(() => document.querySelector('#reviewCards .dupgroup [data-pid="B013-P001-V2"] [data-act="notdup"]').click());
-await page.waitForTimeout(300);
-const back = await page.evaluate(() => {
-  const S = window.__studio; S.filters.showUnreviewed = true; S.renderShelf();
-  return { shown: S.shown.some((p) => p.product_id === 'B013-P001-V2'), choice: S.choices['B013-P001-V2'] };
+// any marked duplicate will do (B013-P001-V2 was one until it got its own picture)
+const dpid = await page.evaluate(() => {
+  const b = document.querySelector('#reviewCards .dupgroup [data-act="notdup"]');
+  const pid = b.closest('[data-pid]').dataset.pid;
+  b.click();
+  return pid;
 });
+await page.waitForTimeout(300);
+const back = await page.evaluate((pid) => {
+  const S = window.__studio; S.filters.showUnreviewed = true; S.renderShelf();
+  return { pid, shown: S.shown.some((p) => p.product_id === pid), choice: S.choices[pid] };
+}, dpid);
 ok('"Not a duplicate" puts it back on the shelf and records it', back.shown && back.choice.notDuplicate === true, JSON.stringify(back));
+
+console.log('\n6. the tile follows the image filter (24 Sept)');
+// unreviewed pieces too, so every picture type has tiles to check
+await page.evaluate(() => {
+  const S = window.__studio; S.setView('grid');
+  const u = document.getElementById('fUnreviewed'); u.checked = true; u.dispatchEvent(new Event('change', { bubbles: true }));
+});
+const setAsset = (v) => page.evaluate((v) => {
+  const s = document.getElementById('fAsset'); s.value = v;
+  s.dispatchEvent(new Event('change', { bubbles: true })); s.dispatchEvent(new Event('input', { bubbles: true }));
+}, v);
+for (const type of ['cutout_flat', 'cutout_model', 'tile']) {
+  await setAsset(type);
+  await page.waitForTimeout(600);
+  const t = await page.evaluate((type) => {
+    const S = window.__studio;
+    const cells = [...document.querySelectorAll('#grid .cell')];
+    let off = 0, wrongType = 0;
+    for (const c of cells) {
+      const p = S.productsById[c.dataset.pid];
+      const img = c.querySelector('img');
+      const pl = S.placement(p);
+      if (img.dataset.view !== JSON.stringify(pl)) off++;
+      // a flat filter never shows a picture typed as worn, nor an on-model one a flat lay
+      const e = (p.images || [])[pl.image];
+      if (pl.variant === 'whole' && e && e.type === (type === 'cutout_flat' ? 'on-model' : 'flat lay')) wrongType++;
+      if (pl.variant === 'cutout' && p.asset_type !== type) wrongType++;
+    }
+    return { n: cells.length, off, wrongType };
+  }, type);
+  ok(`${type}: every tile is what a tap places, and of that type`, t.n > 0 && t.off === 0 && t.wrongType === 0,
+    JSON.stringify(t));
+}
+await setAsset('');
+await page.evaluate(() => {
+  const u = document.getElementById('fUnreviewed'); u.checked = false; u.dispatchEvent(new Event('change', { bubbles: true }));
+});
+
+console.log('\n7. a grid cut into cells, in Review (24 Sept)');
+await page.evaluate(() => window.__studio.setView('review'));
+for (const id of ['#rDups', '#rSeveral']) if (await page.isChecked(id)) await page.uncheck(id);
+await page.waitForTimeout(500);
+const gc = await page.evaluate(() => {
+  const S = window.__studio;
+  const cards = [...document.querySelectorAll('#reviewCards .gridcard')];
+  const bad = cards.filter((c) => !/^\S+ · \d+ cells?: \d+ on the shelf, \d+ in Review$/.test(c.querySelector('.rwho').textContent));
+  const withCells = new Set(S.products.map((p) => p.parent_id).filter(Boolean));
+  const asCard = [...document.querySelectorAll('#reviewCards .rcard')].filter((c) => withCells.has(c.dataset.pid));
+  const shelfInList = cards.flatMap((c) => [...c.querySelectorAll('.cellpick')])
+    .filter((b) => S.shown.some((p) => p.product_id === b.dataset.pid)).length;
+  return { cards: cards.length, bad: bad.length, asCard: asCard.length, shelfInList,
+    several: document.querySelectorAll('#reviewCards .gridcard .why.several').length };
+});
+ok('a cut grid says "N cells: M on the shelf, K in Review" and lists only the K', gc.cards > 50 && gc.bad === 0
+  && gc.shelfInList === 0, JSON.stringify(gc));
+ok('...and is never a "Several garments, Adjust box" card', gc.asCard === 0 && gc.several === 0, JSON.stringify(gc));
 
 console.log(`\n${pass} passed, ${fail} failed`);
 if (errors.length) console.log('page errors:\n  ' + errors.slice(0, 6).join('\n  '));

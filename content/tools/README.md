@@ -8,7 +8,7 @@ deleted or re-encoded.
 | Script | What it does |
 |---|---|
 | `imglib.py` | Shared helpers: iOS/Safari chrome trim, in-page lightbox trim, dHash, white balance against a studio backdrop, skin band, `rembg` cut-out with alpha hard-threshold and connected-component tidy-up. |
-| `colour_names.py` | The fixed colour vocabulary — 13 families and a closed list of plain names, assigned from CIELAB LCh plus the engine's relative chroma. `python3 content/tools/colour_names.py` prints a self-test. |
+| `colour_names.py` | The fixed colour vocabulary — 13 families and a closed list of plain names. Family follows CIELAB hue and chroma, with named exceptions for cream, camel, coral and teal; below C* 12 the original rows decide. `python3 content/tools/colour_names.py` prints a self-test. |
 | `cluster_products.py` | Clusters product screenshots into shop **batches** (layout change + legible-brand change) and, inside a batch, into **products** (adjacent shots of one garment). Writes `content/catalogue/batches.json`. Caches per-image signatures in `content/catalogue/_signatures.json`. |
 | `render_views.py` | Renders one readable image per product for the viewing pass. |
 | `make_assets.py` | One usable image per product: flat cut-out → on-model cut-out → crop tile, as WebP under 1200px. Driven by the `shot_type` recorded in the viewing pass. |
@@ -83,7 +83,8 @@ Two design notes worth keeping:
 | Script | What it does |
 |---|---|
 | `build_studio.py` | builds `studio/data/` and the web-sized images the desk serves |
-| `collect_outfits.py` | reads `content/outfits/` and writes `used_in` back into the catalogue |
+| `build_palettes.py` | builds `content/palettes/palettes.json` from the frameworks, the engine's generators and the AW26/27 seed; `build_studio.py` runs it and copies the result |
+| `collect_outfits.py` | reads `content/outfits/` (and `content/swipe/outfits/`, where some boards landed) and writes `used_in` back into the catalogue |
 
 `build_studio.py` is the only thing that writes into `studio/data/`,
 `studio/assets/`, `studio/thumbs/`, `studio/inspiration/` and `studio/fonts/`.
@@ -330,3 +331,32 @@ recolour is applied only when the owner has looked at the preview and said yes.
 
 Order: `read_grids.py --render` → readers → `read_grids.py --ingest` →
 `build_products.py` → `shelf_checks.py` → `build_studio.py`.
+
+## Added 24 September 2026 — page text first, colourway pictures, the filter picks the picture
+
+| Script | What it does |
+|---|---|
+| `page_text.py` | reads what a product page says about itself, per screenshot: the **name** (the line set above the first price in the buy panel, or below it where the price comes first), the **colour or wash** (after "Colour"/"Farbe"/"Wash", or after " \| " in "FRANKIE … Jacket \| Olive"), a **product number** ("Referenz", "Ref.", "Product ID", "Art.-Nr.") and the **shop** (url_bar.py; Safari shows the domain only). OCR lines are cached with their positions in `_page_text.json`, so the fields can be re-read without tesseract. `disagree(a, b)` names the legible fields two pages contradict each other on. |
+| `name_split.py` | splits a product-page row whose screenshots disagree on name, colour, number or shop (point 4 of 24 Sept). Where none of name/colour/number is legible on both pages, lightness over 8 L* or a silhouette overlap under 0.9 splits — **only between pictures of one kind**: see its docstring for the measured cases that made that condition necessary, and `literal_would_also_split` in `_name_splits.json` for what the thresholds alone would have split. `KEEP` and `BY_EYE` hold the rows a person decided from a contact sheet. Applies through `split_mixed.apply()`, which it now shares with the colour split; the group holding the first screenshot keeps the row's id. New rows take their name from their own page only when the name was what differed, a price only from a page whose name was read beside it, and never the parent's material or (across shops) brand. |
+| `colourway_pictures.py` | every colourway family (a style and its `-V`, `-sw`, `-cw` rows) shares out its pictures by colour: a picture within dE2000 12 of the row it came from stays, else it goes to the nearest row within 12, else it stays and is listed as unassigned. A grid cell's only picture is its own cell. A row whose cut-out is **the same picture as another row's in its family** (split_mixed.py copied the parent's) gets a cut of its own colour when one passes the flat-lay questions, else goes to Review. Writes `_picture_owners.json` (every run kept under `runs`); `build_studio.py` applies it. `_picture_colours.json` caches the readings. |
+
+Changed:
+
+- `cluster_products.py --append` asks the page text first: two pages that contradict each other are two products however alike their layout; two that agree on a field are one; only where neither says anything does layout decide. A batch never spans two shops (the address bar cuts it), a runt never joins a batch across a shop change, and neighbouring batches of one shop are one.
+- `build_products.py` keeps a filed row as filed: colours, notes, validated and the brand guess of any row whose screenshots, cut-out path and recolour source are unchanged come from the products.csv it is replacing (`FROZEN`). A change of vocabulary or reader is a decision to re-read, not a side effect of adding a product — to re-read on purpose, delete the rows first. Rebuilding on 24 Sept without this would have renamed 156 colours (the vocabulary change of 9b624c7 was never applied to the catalogue). A brand guessed from a domain is spelt as a page of that shop printed it.
+- `build_studio.py` applies `_picture_owners.json`, and writes `studio/data/picture-migration.json`: where each picture the desk last had went, one version per build that moved any. The desk moves a box or whole-picture decision with its picture, once; hiding, the cut-out and a slot stay with their row.
+- `read_grids.py --ingest` leaves the rows of pages it did not read in `_grid_cells_compare.json`; it used to write only its own.
+
+Order for an ingest: `cluster_products.py --append` → viewing rows → `build_products.py` → `make_assets.py SHOTMAP --new` (SHOTMAP: `{product_id: shot_type}` from products.csv) → `build_products.py` → `crop_figures.py` → `asset_quality.py` → `flat_lays.py` → `build_review_images.py` → `panels.py` → `name_split.py --only <new multi-screenshot rows>` → `read_grids.py --render` → readers → `--ingest` → `extract_colours.py --new` → `build_products.py` → `colourway_pictures.py` → `shelf_checks.py` → `build_studio.py`. Run `build_products.py` from the products.csv on main (git checkout it first) so rows made earlier in the same run are not frozen half-built.
+
+## Added 24 September 2026 (afternoon) — the eye-read gate, the vocabulary applied
+
+| Script | What it does |
+|---|---|
+| `eye_gate.py` | the shelf gate for listing-grid cells **read by eye**. Drops two of flat_lays.py's questions that only ever said no for the wrong reason on a shop's category tiles: the skin share (tan, brown, camel and burgundy leather and pink linings sit in the skin band) and "clear of the frame" (shops crop tight). Keeps one piece, no text inside, not a sliver (fills ≥ 0.2 of its box, no longer than 1:8), not too small (≥ 60 px). A person then looks at every cell it would move, 30 a contact sheet (`--sheets DIR`), and lists in `HELD` / `HELD_GRIDS` what is on a model, worn, a prop in the cut or otherwise not a single product. Writes `gate: "eye"` into `_grid_cells.json` and the verdict into `_flat_lays.json`. Geometric cells keep flat_lays.py's gate. |
+
+- **The premise holds for most shops, not all.** Of the 521 cells the gate would have moved, 190 were on a model: CLOSED, Toteme, Lemaire, Studio Nicholson, Arket, A.P.C. and others show their category pages on people. They are in `HELD_GRIDS` and stay in Review. Run the contact-sheet pass on every new grid.
+- `build_products.py` names every colour from its hex on every build (`name_from_hex`): the family and the name are a function of the hex and the vocabulary in `colour_names.py`, so they are no longer frozen with the reading. Hexes, shares, lightness and the neutral flag still are.
+- `build_studio.py` exports `hold`, the reason the gate kept a row in Review; the desk shows it under the cell.
+
+Order after a grid ingest: `read_grids.py --ingest` → `eye_gate.py --sheets DIR` → the contact-sheet pass into `HELD` → `eye_gate.py` → `build_products.py` → `shelf_checks.py` → `build_studio.py`.

@@ -43,6 +43,8 @@ page.on('console', (m) => { if (m.type() === 'error') errors.push(m.text()); });
 console.log('\n1. load');
 await page.goto(`${base}/index.html`);
 await page.waitForFunction(() => window.__studio?.products?.length > 0, null, { timeout: 15000 });
+// the shelf renders after the products load; count it once it has
+await page.waitForFunction(() => document.querySelectorAll('#grid .cell').length > 0, null, { timeout: 15000 });
 const counts = await page.evaluate(() => ({
   products: window.__studio.products.length,
   inspiration: window.__studio.inspiration.length,
@@ -58,8 +60,10 @@ const cleanCount = await page.evaluate(() =>
     && !p.duplicate_of).length);
 ok('only measured-clean cut-outs on the shelf by default',
   counts.cells === cleanCount && cleanCount > 0, `${counts.cells} cells, ${cleanCount} clean`);
+// since the eye-read gate of 24 Sept more than half the catalogue is on the
+// shelf; the guard is that the gate still holds some of it back
 ok('the shelf is a real slice of the catalogue, not all of it',
-  counts.cells < counts.products / 2,
+  counts.cells < counts.products * 0.75,
   `${counts.cells} cells`);
 ok('no page errors on load', errors.length === 0, errors.join(' | '));
 
@@ -273,6 +277,105 @@ const round = await page.evaluate(async () => {
 ok('reopen restores every element', round.after === round.before, JSON.stringify(round));
 ok('reopen restores placement', Math.abs(round.reopenedX - round.firstX) < 0.0002, JSON.stringify(round));
 ok('reopen restores the title and toggles', round.title.startsWith('Rust twice') && round.labels === true);
+
+console.log('\n11b. palette');
+{
+  const pos = () => page.evaluate(() => JSON.stringify(window.__studio.board.elements
+    .map((e) => [e.uid, e.x, e.y, e.w, e.rot, e.z])));
+  const before = await pos();
+  const groups = await page.evaluate(() => [...document.querySelectorAll('#palCat optgroup')].map((g) => g.label));
+  ok('the category dropdown lists season, family and this season', groups.length === 3, groups.join(' / '));
+  await page.selectOption('#palCat', 'season:soft_autumn');
+  await page.waitForTimeout(150);
+  const rows = await page.evaluate(() => ({
+    shown: !document.querySelector('#palList').classList.contains('hidden'),
+    n: document.querySelectorAll('#palList .pal-row').length,
+    swatches: document.querySelectorAll('#palList .pal-row .pal-sw i').length,
+  }));
+  ok('the palettes appear as swatch rows', rows.shown && rows.n > 3 && rows.swatches >= rows.n * 3, JSON.stringify(rows));
+  await page.click('#palList .pal-row[data-palette="season-soft_autumn-teal-and-ochre"]');
+  await page.waitForTimeout(300);
+  const ref = await page.evaluate(() => ({
+    id: window.__studio.board.palette?.id,
+    ref: !document.querySelector('#palRef').hidden,
+    items: [...document.querySelectorAll('#palRef li')].map((li) => li.textContent),
+    listClosed: document.querySelector('#palList').classList.contains('hidden'),
+    onBoard: document.querySelectorAll('.board-strip.palette').length,
+  }));
+  ok('picking one shows it beside the canvas', ref.id === 'season-soft_autumn-teal-and-ochre' && ref.ref
+    && ref.items.length === 3 && ref.listClosed, JSON.stringify(ref));
+  ok('names, shares and roles in the reference', ref.items.some((t) => /deep teal · 50%/.test(t) && /dominant/.test(t)),
+    ref.items.join(' | '));
+  ok('not on the board unless asked', ref.onBoard === 0);
+  ok('choosing a palette moves nothing on the canvas', (await pos()) === before);
+
+  await page.check('#fPalette');
+  await page.waitForTimeout(250);
+  const rank = await page.evaluate(async () => {
+    const { hexToOklab, productDistanceToLook } = await import('./js/colour.js');
+    const S = window.__studio;
+    const labs = S.board.palette.colours.map((c) => hexToOklab(c.hex));
+    const ds = S.shown.slice(0, 30).map((p) => productDistanceToLook(p, labs));
+    return { sorted: ds.every((d, i) => !i || d >= ds[i - 1] - 1e-12), look: document.querySelector('#fMatch').checked };
+  });
+  ok('"Matches this palette" ranks the shelf by distance to its colours', rank.sorted && !rank.look, JSON.stringify(rank));
+
+  const read = await page.evaluate(() => ({
+    rows: document.querySelectorAll('#paletteRead .pr-item').length,
+    shares: window.__studio.outfitShares(),
+  }));
+  const total = read.shares.rows.reduce((a, r) => a + r.actual, 0) + read.shares.outside;
+  ok('the readout divides the outfit against the palette', read.rows === 4 && Math.abs(total - 100) < 0.5,
+    JSON.stringify(read.shares));
+
+  await page.check('#oPalette');
+  await page.waitForTimeout(200);
+  const strip = await page.evaluate(() => document.querySelectorAll('.board-strip.palette i').length);
+  ok('the toggle puts it on the board as a strip', strip === 3, String(strip));
+  const png = await page.evaluate(async () => (await window.__studio.renderCanvas()).width);
+  ok('the export still renders with it', png === 2160);
+  ok('the strip moves nothing', (await pos()) === before);
+
+  const saved = await page.evaluate(async () => {
+    const S = window.__studio;
+    const info = S.buildInfo();
+    const { buildMarkdown } = await import('./js/export.js');
+    return { info, md: buildMarkdown(info) };
+  });
+  const pal = saved.info.palette;
+  ok('the info file records the palette', pal && pal.id === 'season-soft_autumn-teal-and-ochre'
+    && pal.name === 'Teal and Ochre' && pal.category === 'season' && pal.colours.length === 3
+    && pal.colours.every((c) => c.hex && c.name && c.role && typeof c.share === 'number') && pal.source?.ref,
+    JSON.stringify(pal));
+  ok('the piece list names it in one line', saved.md.split('\n').filter((l) => /Palette/.test(l)).length === 1);
+
+  // change it, then reopen the saved outfit: the saved palette comes back
+  await page.selectOption('#palCat', 'trend:aw26-27');
+  await page.waitForTimeout(150);
+  await page.click('#palList .pal-row[data-palette="trend-aw2627-t11"]');
+  await page.waitForTimeout(200);
+  ok('changing it moves nothing', (await pos()) === before);
+  await page.evaluate(async (info) => { await window.__studio.openInfo(JSON.stringify(info)); }, saved.info);
+  await page.waitForTimeout(300);
+  const back = await page.evaluate(() => ({
+    id: window.__studio.board.palette?.id, strip: window.__studio.board.showPalette,
+    cat: document.querySelector('#palCat').value,
+    ref: document.querySelector('#palRef h3')?.textContent,
+  }));
+  ok('reopening restores the selection', back.id === 'season-soft_autumn-teal-and-ochre' && back.strip === true
+    && back.cat === 'season:soft_autumn' && back.ref === 'Teal and Ochre', JSON.stringify(back));
+
+  const beforeClear = await pos();
+  await page.click('#palClear');
+  await page.waitForTimeout(250);
+  const cleared = await page.evaluate(() => ({
+    p: window.__studio.board.palette, ref: document.querySelector('#palRef').hidden,
+    rank: document.querySelector('#fPalette').checked, strip: document.querySelectorAll('.board-strip.palette').length,
+  }));
+  ok('clearing it removes the reference, the ranking and the strip', cleared.p === null && cleared.ref
+    && !cleared.rank && cleared.strip === 0, JSON.stringify(cleared));
+  ok('clearing moves nothing', (await pos()) === beforeClear);
+}
 
 console.log('\n12. autosave');
 // wait for the save to have landed before reloading: autosave runs off the

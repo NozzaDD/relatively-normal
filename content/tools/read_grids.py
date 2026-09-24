@@ -375,7 +375,14 @@ def ingest(eyedir):
     json.dump(out, open(DEST, 'w'), indent=1)
     json.dump(geom, open(GEOM, 'w'), indent=1)
     json.dump(flats, open(FLATS, 'w'), indent=1)
-    json.dump(compare, open(CAT + '/_grid_cells_compare.json', 'w'), indent=1)
+    # the pages this run did not read keep their rows
+    try:
+        prev = json.load(open(CAT + '/_grid_cells_compare.json'))
+    except (FileNotFoundError, json.JSONDecodeError):
+        prev = []
+    done = {x['key'] for x in compare}
+    json.dump([x for x in prev if x['key'] not in done] + compare,
+              open(CAT + '/_grid_cells_compare.json', 'w'), indent=1)
     cells = [c for v in out.values() if v.get('source') == 'eye' for c in v.get('cells', [])]
     print('eye cells:', len(cells), '| clean:', sum(1 for c in cells if c.get('clean')),
           '| with a name:', sum(1 for c in cells if c.get('name')),

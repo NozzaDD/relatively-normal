@@ -41,6 +41,7 @@ on the hunt for things worth buying.
 - brands/ one YAML per brand; schema in brands/README.md
 - content/ calendar.md, note-bank.md, posts/
 - content/swipe/ inspiration — formats, visuals, products, artworks, and notes.md
+- content/palettes/ the desk's palettes — palettes.json is built by content/tools/build_palettes.py; README says what it found
 - consultations/ one folder per beta participant, never published without consent noted
 - staples/ the staples catalogue — one YAML per slot; schema in staples/README.md
 - engine/ the deterministic colour engine in Python; the frameworks are its specification, tests in engine/tests/

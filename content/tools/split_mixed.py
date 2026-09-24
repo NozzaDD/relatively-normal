@@ -153,6 +153,19 @@ def main():
             print('  ', pid, gs)
         return
 
+    apply(plan, batches, review, panels, flats, assets, colours, rows, cache)
+
+
+def apply(plan, batches, review, panels, flats, assets, colours, rows, cache,
+          new_id=None, viewing_name='rows_split.txt', why='by colour'):
+    """Give every group in `plan` ({pid: [[screenshot indices], ...]}) a row.
+
+    The group holding screenshot 0 keeps the id, so the decisions and outfits
+    that name it still point at the garment they were made on. `new_id(pid, k)`
+    names the k-th other group (default `{pid}-V{k+1}`). Shared by
+    split_mixed.py (split by colour) and name_split.py (split by what the page
+    says)."""
+    new_id = new_id or (lambda pid, k: f'{pid}-V{k + 1}')
     # ---- apply. Every file is copied under its new name through a staging
     # folder, so a name that is both a source and a destination cannot clobber.
     os.makedirs(STAGE, exist_ok=True)
@@ -170,7 +183,7 @@ def main():
         # pictures, which is how V2 ended up holding V1's photograph
         orig = list(review.get(pid, {}).get('images') or [])
         for k, g in enumerate(gs):
-            npid = pid if k == 0 else f'{pid}-V{k + 1}'
+            npid = pid if k == 0 else new_id(pid, k)
             new_batches.append(dict(batch_id=b['batch_id'], product_id=npid,
                                     images=[b['images'][i] for i in g]))
             imgs = []
@@ -214,7 +227,7 @@ def main():
             if npid != pid:
                 made += 1
                 review[npid] = dict(review.get(pid, {}), images=imgs)
-                seed(npid, pid, g, imgs, panels, flats, assets, colours, cache, rows, viewing)
+                seed(npid, pid, g, imgs, panels, flats, assets, colours, cache, rows, viewing, why)
             else:
                 review[pid] = dict(review.get(pid, {}), images=imgs)
                 reseat(pid, g, imgs, panels, flats, assets, colours, cache)
@@ -229,12 +242,22 @@ def main():
     json.dump(assets, open(CAT + '/_assets.json', 'w'), indent=1)
     json.dump(colours, open(CAT + '/_colours.json', 'w'), indent=1)
     if viewing:
-        with open(CAT + '/_viewing_rows/rows_split.txt', 'w') as f:
-            f.write('\n'.join(viewing) + '\n')
+        vf = CAT + '/_viewing_rows/' + viewing_name
+        old = [ln.rstrip('\n') for ln in open(vf)] if os.path.exists(vf) else []
+        mine = {v.split(' | ')[0] for v in viewing}
+        with open(vf, 'w') as f:
+            f.write('\n'.join([ln for ln in old if ln and ln.split(' | ')[0] not in mine] + viewing) + '\n')
     os.makedirs(ROOT + '/studio/data', exist_ok=True)
-    json.dump({'version': 1, 'moved': migration},
-              open(ROOT + '/studio/data/split-migration.json', 'w'), indent=1)
+    mf = ROOT + '/studio/data/split-migration.json'
+    try:
+        prev = json.load(open(mf)).get('moved', {})
+    except (FileNotFoundError, json.JSONDecodeError):
+        prev = {}
+    prev.update(migration)
+    json.dump({'version': 1, 'moved': prev}, open(mf, 'w'), indent=1)
     print(f'{made} new product rows; {len(migration)} screenshots re-seated')
+
+
 
 
 def colour_record(cols, skin, kept, shot):
@@ -256,7 +279,7 @@ def best_of(pid, g, cache):
     return None
 
 
-def seed(npid, pid, g, imgs, panels, flats, assets, colours, cache, rows, viewing):
+def seed(npid, pid, g, imgs, panels, flats, assets, colours, cache, rows, viewing, why='by colour'):
     """Give a new row everything an ordinary product has."""
     got = best_of(pid, g, cache)
     parent = rows.get(pid, {})
@@ -297,9 +320,9 @@ def seed(npid, pid, g, imgs, panels, flats, assets, colours, cache, rows, viewin
                                shot, v.get('complete_in_frame', ''), v.get('shop', ''),
                                v.get('brand', ''), v.get('product_name', ''), 'NONE',
                                v.get('material', ''), v.get('price', ''),
-                               'split out of %s by colour; slot and garment type are '
+                               'split out of %s %s; slot and garment type are '
                                'the parent\'s and may describe the parent\'s garment '
-                               '— worth a look' % pid]))
+                               '— worth a look' % (pid, why)]))
 
 
 def reseat(pid, g, imgs, panels, flats, assets, colours, cache):

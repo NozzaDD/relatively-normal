@@ -5,13 +5,14 @@
 
 import { createStaticSource, indexById, indexInspiration, emptyFilters,
   filterProducts, onShelf, effectiveChoice, isReviewed, derivedProducts,
-  WEIGHT_LABELS, FORMALITY_LABELS, isDetail, applySlots, SLOT_PICK, shelfView, sameView,
+  WEIGHT_LABELS, FORMALITY_LABELS, isDetail, applySlots, SLOT_PICK, shelfView, sameView, pictureChoices,
   isSeveral } from './data.js';
 import * as M from './model.js';
-import { metrics, isTile, matOf } from './render.js';
+import { metrics, isTile, matOf, stripRows } from './render.js';
 import { rankByLook } from './colour.js';
 import * as X from './export.js';
-import { createReview, loadChoices, saveChoices, choicesFile, applyCrop, migrateChoices } from './review.js';
+import { createReview, loadChoices, saveChoices, choicesFile, applyCrop, migrateChoices, migratePictures } from './review.js';
+import { indexPalettes, palettesIn, paletteSnapshot, placementText, outfitShares } from './palette.js';
 
 const $ = (id) => document.getElementById(id);
 const STORE = 'rn.studio.board.v2';
@@ -28,6 +29,9 @@ const S = {
   choices: {},
   settings: { frame: { ...M.DEFAULT_FRAME } },
   matchSort: false,
+  paletteSort: false,                     // "Matches this palette" on the shelf
+  palIndex: indexPalettes(null),
+  palGroup: '',                           // "category:group" chosen in the first dropdown
   view: 'grid',
   selected: null,
   shown: [],
@@ -47,14 +51,21 @@ async function init() {
   S.inspiration = cat.inspiration;
   S.productsById = indexById(S.products);
   S.inspById = indexInspiration(S.inspiration);
+  S.palIndex = indexPalettes(cat.palettes);
   S.choices = loadChoices();
   try {
     const mig = await fetch('data/trim-migration.json').then((r) => (r.ok ? r.json() : null));
     const moved = migrateChoices(S.choices, mig);
     if (moved) { saveChoices(S.choices); toast(`Moved ${moved} box(es) onto the new trim.`, 4000); }
   } catch (e) { /* no migration file: nothing to move */ }
+  try {
+    const mig = await fetch('data/picture-migration.json').then((r) => (r.ok ? r.json() : null));
+    const moved = migratePictures(S.choices, mig);
+    if (moved) { saveChoices(S.choices); toast(`${moved} decision(s) moved with their picture.`, 4000); }
+  } catch (e) { /* no migration file: nothing to move */ }
   loadSettings();
   buildFilterOptions(cat.meta);
+  buildPaletteOptions();
   refreshDerived();
   restore();
   S.review = createReview({
@@ -105,6 +116,7 @@ function readFilters() {
     search: $('search').value, showUnreviewed: $('fUnreviewed').checked,
   };
   S.matchSort = $('fMatch').checked;
+  S.paletteSort = $('fPalette').checked && !!S.board.palette;
 }
 
 /** Category buttons with counts. Counts respect every other filter and the
@@ -145,7 +157,9 @@ const imageRank = (p) => (p.asset_type === 'tile' ? 2 : 0)
 function currentList() {
   let list = filterProducts(S.products, S.filters, S.choices);
   const look = S.board.inspiration ? S.inspById[S.board.inspiration] : null;
-  if (S.matchSort && look) list = rankByLook(list, look);
+  // the palette's colours rank the shelf exactly as a look's do: nearest first
+  if (S.paletteSort && S.board.palette) list = rankByLook(list, S.board.palette);
+  else if (S.matchSort && look) list = rankByLook(list, look);
   else list = list.map((p, i) => ({ p, i })).sort((a, b) => imageRank(a.p) - imageRank(b.p) || a.i - b.i)
     .map((x) => x.p);
   return list;
@@ -168,9 +182,10 @@ function renderShelf() {
     img.alt = p.garment_type || p.product_id;
     const pics = X_pictures(p);
     const shown = S.shelfPicture[p.product_id];
-    // The tile shows exactly what a tap places: both read shelfView. The built
-    // thumbnail is used only while it is a picture of that same view.
-    const view = shelfView(p, S.choices, shown);
+    // The tile shows exactly what a tap places: both read shelfView, with the
+    // image filter's picture type. The built thumbnail is used only while it
+    // is a picture of that same view.
+    const view = shelfView(p, S.choices, shown, S.filters.assetType);
     img.dataset.view = JSON.stringify(view);
     if (p.thumb && sameView(view, shelfView(p, null))) {
       img.src = S.source.thumbUrl(p);
@@ -197,13 +212,13 @@ function renderShelf() {
     const flag = p.recoloured ? 'simulated' : p.local ? 'new' : p.parent_id ? 'cut'
       : (!p.clean && !isReviewed(p, S.choices)) ? 'unreviewed'
       : p.asset_quality === 'weak' ? 'weak' : '';
-    if (pics.length > 1) {
+    if (pics.length > 0) {
       const b = document.createElement('button');
       b.className = 'pic-flip';
       b.dataset.pic = p.product_id;
-      b.title = 'Show another picture of this product';
       // 1 is the shelf's own picture; the others are the product's pictures
-      const k = shown === undefined ? 0 : pics.findIndex((q) => q.i === shown) + 1;
+      const k = shown === undefined ? 0 : pics.findIndex((q) => q.pick === shown) + 1;
+      b.title = `Show another picture of this product (next: ${pics[k % pics.length].label})`;
       b.textContent = `${k + 1}/${pics.length + 1}`;
       cell.appendChild(b);
     }
@@ -378,22 +393,20 @@ function renderBoard() {
     l.textContent = S.board.line;
     ov.appendChild(l);
   }
-  if (S.board.showSwatches) {
-    const chips = M.swatchStrip(S.board, S.productsById);
-    if (chips.length) {
-      const strip = document.createElement('div');
-      strip.className = 'board-strip';
-      strip.style.bottom = `${m.margin}px`;
-      strip.style.height = `${m.strip}px`;
-      const total = chips.reduce((a, c) => a + (c.share || 1), 0) || 1;
-      chips.forEach((c) => {
-        const i = document.createElement('i');
-        i.style.background = c.hex;
-        i.style.width = `${((c.share || 1) / total) * 100}%`;
-        strip.appendChild(i);
-      });
-      ov.appendChild(strip);
-    }
+  // the pieces' own colours, and the palette above them when it is on the board
+  for (const row of stripRows(S.board, S.productsById, m, H)) {
+    const strip = document.createElement('div');
+    strip.className = `board-strip ${row.kind}`;
+    strip.style.top = `${row.top}px`;
+    strip.style.height = `${m.strip}px`;
+    const total = row.chips.reduce((a, c) => a + (c.share || 1), 0) || 1;
+    row.chips.forEach((c) => {
+      const i = document.createElement('i');
+      i.style.background = c.hex;
+      i.style.width = `${((c.share || 1) / total) * 100}%`;
+      strip.appendChild(i);
+    });
+    ov.appendChild(strip);
   }
   if (S.board.showLabels) {
     M.labelOrder(S.board).forEach((el, i) => {
@@ -475,6 +488,210 @@ function renderHelpers() {
   $('axesRead').textContent = a.n
     ? `${a.n} piece${a.n > 1 ? 's' : ''} · weight ${a.weight.toFixed(1)} of 4 · formality ${a.formality.toFixed(1)} of 4`
     : 'nothing on the canvas yet';
+  renderPaletteRead();
+}
+
+// ---------------------------------------------------------------- palette
+// A working reference. Choosing, changing or clearing it never touches an
+// element on the board: it sets board.palette and redraws what reads it.
+
+const swatchRow = (colours) => {
+  const sw = document.createElement('span');
+  sw.className = 'pal-sw';
+  for (const c of colours || []) {
+    const i = document.createElement('i');
+    i.style.background = c.hex;
+    i.style.width = `${Math.max(4, c.share || 0) * 1.2}px`;
+    i.title = `${c.name} · ${c.share}%`;
+    sw.appendChild(i);
+  }
+  return sw;
+};
+
+function buildPaletteOptions() {
+  const sel = $('palCat');
+  for (const c of S.palIndex.categories) {
+    const og = document.createElement('optgroup');
+    og.label = c.label;
+    for (const g of c.groups) {
+      const o = document.createElement('option');
+      o.value = `${c.key}:${g.key}`;
+      o.textContent = `${g.label} (${g.count})`;
+      og.appendChild(o);
+    }
+    sel.appendChild(og);
+  }
+  if (!S.palIndex.palettes.length) {
+    sel.disabled = true;
+    $('palPickName').textContent = 'no palettes built';
+  }
+}
+
+function paletteGroupOf(p) {
+  return p ? `${p.category}:${p.group || ''}` : '';
+}
+
+function renderPaletteControls() {
+  const p = S.board.palette;
+  if (p && !S.palGroup) S.palGroup = paletteGroupOf(p);
+  const sel = $('palCat');
+  if ([...sel.options].some((o) => o.value === S.palGroup)) sel.value = S.palGroup;
+  $('palPick').disabled = !S.palGroup;
+  const sw = $('palPickSw');
+  sw.replaceWith(Object.assign(swatchRow(p?.colours), { id: 'palPickSw' }));
+  $('palPickName').textContent = p ? p.name : (S.palGroup ? 'choose a palette' : 'choose a category');
+  $('palClear').hidden = !p;
+  $('oPalette').disabled = !p;
+  $('oPalette').checked = !!(p && S.board.showPalette);
+  $('fPalette').disabled = !p;
+  if (!p) { $('fPalette').checked = false; S.paletteSort = false; }
+  renderPaletteRef();
+}
+
+function renderPaletteList() {
+  const list = $('palList');
+  list.replaceChildren();
+  const [cat, group] = S.palGroup.split(':');
+  const ps = palettesIn(S.palIndex, cat, group);
+  if (!ps.length) {
+    const d = document.createElement('div');
+    d.className = 'pal-empty';
+    d.textContent = 'Nothing in this group.';
+    list.appendChild(d);
+  }
+  for (const p of ps) {
+    const b = document.createElement('button');
+    b.className = 'ghost pal-row' + (S.board.palette?.id === p.id ? ' on' : '');
+    b.dataset.palette = p.id;
+    b.setAttribute('role', 'option');
+    b.appendChild(swatchRow(p.colours));
+    const n = document.createElement('span');
+    n.textContent = p.name;
+    b.appendChild(n);
+    const k = document.createElement('small');
+    k.textContent = p.colours.map((c) => c.name).join(' · ');
+    b.appendChild(k);
+    list.appendChild(b);
+  }
+}
+
+function togglePaletteList(open) {
+  const list = $('palList');
+  const show = open ?? list.classList.contains('hidden');
+  if (show) renderPaletteList();
+  list.classList.toggle('hidden', !show);
+  $('palPick').setAttribute('aria-expanded', String(show));
+}
+
+/** Choose a palette by id, or clear it with null. Nothing on the board moves. */
+function setPalette(id) {
+  const p = id ? S.palIndex.byId[id] : null;
+  if (id && !p) return false;
+  M.commit(S.history, S.board);
+  S.board.palette = paletteSnapshot(p);
+  if (p) S.palGroup = paletteGroupOf(p);
+  togglePaletteList(false);
+  readFilters();
+  renderPaletteControls();
+  layoutStage();
+  renderBoard();
+  renderShelf();
+  return true;
+}
+
+function renderPaletteRef() {
+  const ref = $('palRef');
+  const p = S.board.palette;
+  const was = !ref.hidden;
+  ref.hidden = !p;
+  ref.replaceChildren();
+  if (p) {
+    const h = document.createElement('h3');
+    h.textContent = p.name;
+    ref.appendChild(h);
+    if (p.when) {
+      const w = document.createElement('p');
+      w.className = 'pal-when';
+      w.textContent = p.when;
+      ref.appendChild(w);
+    }
+    const ul = document.createElement('ul');
+    for (const c of p.colours) {
+      const li = document.createElement('li');
+      const i = document.createElement('i');
+      i.style.background = c.hex;
+      li.appendChild(i);
+      const t = document.createElement('div');
+      const b = document.createElement('b');
+      b.textContent = `${c.name} · ${c.share}%`;
+      const sp = document.createElement('span');
+      const pl = placementText(c.placement);
+      sp.textContent = [c.role, pl && `placement: ${pl}`, c.hex.toUpperCase()].filter(Boolean).join(' · ');
+      t.append(b, sp);
+      li.appendChild(t);
+      ul.appendChild(li);
+    }
+    ref.appendChild(ul);
+    const src = document.createElement('div');
+    src.className = 'pal-src';
+    src.textContent = p.source ? `${p.source.confidence}${p.derived ? ', derived' : ''} · ${p.source.ref}` : '';
+    ref.appendChild(src);
+  }
+  // the reference takes width from the canvas area: resize the stage when it
+  // appears or goes. The board is in normalised coordinates, so nothing moves.
+  if (was !== !ref.hidden && S.ready) requestAnimationFrame(() => { layoutStage(); renderBoard(); });
+}
+
+function renderPaletteRead() {
+  const box = $('paletteRead');
+  const p = S.board.palette;
+  box.hidden = !p;
+  box.replaceChildren();
+  if (!p) return;
+  const r = outfitShares(S.board, S.productsById, p);
+  // two thin bars, one above the other: what the palette suggests, and how the
+  // pieces on the canvas actually divide — then the numbers in one line
+  const bar = (label, parts) => {
+    const d = document.createElement('div');
+    d.className = 'pr-line';
+    const l = document.createElement('span');
+    l.textContent = label;
+    const b = document.createElement('div');
+    b.className = 'pr-bar';
+    for (const [hex, v, name] of parts) {
+      if (!(v > 0)) continue;
+      const i = document.createElement('i');
+      i.style.width = `${v}%`;
+      if (hex) i.style.background = hex; else i.className = 'outside';
+      i.title = `${name} ${v}%`;
+      b.appendChild(i);
+    }
+    d.append(l, b);
+    return d;
+  };
+  box.appendChild(bar('palette', r.rows.map((c) => [c.hex, c.suggested, c.name])));
+  if (!r.pieces) {
+    const n = document.createElement('div');
+    n.className = 'pr-nums';
+    n.textContent = 'nothing on the canvas to read against it yet';
+    box.appendChild(n);
+    return;
+  }
+  box.appendChild(bar('outfit', [...r.rows.map((c) => [c.hex, c.actual, c.name]), ['', r.outside, 'outside']]));
+  const nums = document.createElement('div');
+  nums.className = 'pr-nums';
+  for (const c of r.rows) {
+    const it = document.createElement('span');
+    it.className = 'pr-item';
+    it.dataset.hex = c.hex;
+    it.textContent = `${c.name} ${c.actual}% of ${c.suggested}%`;
+    nums.appendChild(it);
+  }
+  const out = document.createElement('span');
+  out.className = 'pr-item';
+  out.textContent = `outside the palette ${r.outside}%`;
+  nums.appendChild(out);
+  box.appendChild(nums);
 }
 
 // ---------------------------------------------------------------- placing
@@ -501,11 +718,11 @@ function nextPicture(el) {
   const p = S.productsById[el.product_id];
   const pics = X_pictures(p);
   if (!pics.length) return;
-  const at = el.variant === 'cutout' || el.picture === undefined ? 0
-    : pics.findIndex((q) => q.i === el.picture) + 1;
+  const at = el.picture === undefined ? 0 : pics.findIndex((q) => q.pick === el.picture) + 1;
   const k = (at + 1) % (pics.length + 1);
-  const view = k === 0 ? shelfView(p, S.choices) : shelfView(p, S.choices, pics[k - 1].i);
-  Object.assign(el, view, { picture: k === 0 ? undefined : pics[k - 1].i });
+  const pick = k === 0 ? undefined : pics[k - 1].pick;
+  const view = shelfView(p, S.choices, pick, S.filters.assetType);
+  Object.assign(el, view, { picture: pick });
   // the width the stylist set is kept; the height follows the new picture's
   // pixels as soon as it has loaded (syncAspect)
   el.aspect = M.shownAspect(p, el.variant, el.crop, el.image, el.base) || el.aspect;
@@ -551,21 +768,26 @@ function renderPieceSlots() {
 
 function showPictureButton(uid) {
   const el = uid ? M.byId(S.board, uid) : null;
-  $('elPicture').hidden = !(el && el.kind === 'product'
-    && X_pictures(S.productsById[el.product_id]).length > 0);
+  const p = el && el.kind === 'product' ? S.productsById[el.product_id] : null;
+  const pics = p ? X_pictures(p) : [];
+  const b = $('elPicture');
+  b.hidden = !pics.length;
+  if (!pics.length) return;
+  // say what the next picture is: "cut-out" where the piece is a box whose
+  // picture has a cut-out in the catalogue
+  const at = el.picture === undefined ? 0 : pics.findIndex((q) => q.pick === el.picture) + 1;
+  const next = at + 1 > pics.length ? 'own picture' : pics[at].label;
+  b.textContent = `Other picture · ${next}`;
 }
 
-// Every picture of a product except fabric close-ups and page text, when
-// there is more than one of them to switch between.
-const X_pictures = (p) => {
-  const keep = ((p && p.images) || []).map((e, i) => ({ i, type: e.type || 'whole page', entry: e }))
-    .filter((x) => !isDetail(x.entry));
-  return keep.length > 1 ? keep : [];
-};
+// What Other picture and the badge cycle through: every picture of a product
+// except fabric close-ups and page text, when there is more than one, and the
+// cut-out of the shelf picture when that is a box or a crop tile.
+const X_pictures = (p) => (p ? pictureChoices(p, S.choices, S.filters.assetType) : []);
 
 /** What a tap places: exactly what the tile shows (shelfView, one reading). */
 function placement(p) {
-  return shelfView(p, S.choices, S.shelfPicture[p.product_id]);
+  return shelfView(p, S.choices, S.shelfPicture[p.product_id], S.filters.assetType);
 }
 
 /** The aspect of the tile's picture, if the tile has it decoded. A first guess. */
@@ -664,8 +886,11 @@ function lift(ev) {
   const p = S.productsById[d.pid];
   const g = $('drag');
   g.replaceChildren();
+  // the ghost is the tile's own picture, not the built thumbnail: under a
+  // filter or a badge they differ
+  const tileImg = d.cell.querySelector('img');
   const img = document.createElement('img');
-  img.src = S.source.thumbUrl(p);
+  img.src = tileImg ? tileImg.currentSrc || tileImg.src : S.source.thumbUrl(p);
   g.appendChild(img);
   g.style.left = `${ev.clientX}px`;
   g.style.top = `${ev.clientY}px`;
@@ -876,6 +1101,14 @@ async function openInfo(text) {
   b.ground = info.canvas?.ground || M.GROUND;
   b.frame = { ...M.DEFAULT_FRAME, ...(info.canvas?.frame || S.settings.frame) };
   const shown = info.elements_shown || {};
+  // the palette comes back as chosen: from the built palettes when it is still
+  // there, otherwise from what the file recorded
+  if (info.palette) {
+    const cur = S.palIndex.byId[info.palette.id];
+    b.palette = cur ? paletteSnapshot(cur) : { ...info.palette, colours: [...(info.palette.colours || [])] };
+    S.palGroup = paletteGroupOf(b.palette);
+  }
+  b.showPalette = !!shown.palette_strip;
   b.showTitle = shown.title !== false;
   b.showLine = shown.line !== false;
   b.showSwatches = shown.swatch_strip !== false;
@@ -898,6 +1131,7 @@ async function openInfo(text) {
   S.board = b;
   S.selected = null;
   syncControls();
+  readFilters();
   $('fMatch').disabled = !b.inspiration;
   layoutStage();
   renderBoard();
@@ -950,6 +1184,7 @@ function syncControls() {
   $('oLine').checked = S.board.showLine;
   $('oSwatch').checked = S.board.showSwatches;
   $('oLabels').checked = S.board.showLabels;
+  renderPaletteControls();
   const f = S.board.frame || M.DEFAULT_FRAME;
   $('frBorder').checked = !!f.border;
   $('frMat').checked = !!f.mat;
@@ -960,9 +1195,30 @@ function wire() {
   syncControls();
   $('fMatch').disabled = !S.board.inspiration;
 
-  for (const id of ['fFamily', 'fWeight', 'fFormality', 'fAsset', 'fBrand', 'fUnreviewed', 'fMatch']) {
+  // one ranking at a time: the look's colours or the palette's
+  $('fMatch').addEventListener('change', () => { if ($('fMatch').checked) $('fPalette').checked = false; });
+  $('fPalette').addEventListener('change', () => { if ($('fPalette').checked) $('fMatch').checked = false; });
+  for (const id of ['fFamily', 'fWeight', 'fFormality', 'fAsset', 'fBrand', 'fUnreviewed', 'fMatch', 'fPalette']) {
     $(id).addEventListener('change', () => { readFilters(); renderSlotBar(); renderShelf(); if (S.view === 'matrix') renderMatrix(); });
   }
+
+  // the palette picker
+  $('palCat').addEventListener('change', (e) => {
+    S.palGroup = e.target.value;
+    renderPaletteControls();
+    togglePaletteList(!!S.palGroup);
+  });
+  $('palPick').addEventListener('click', () => togglePaletteList());
+  $('palList').addEventListener('click', (ev) => {
+    const b = ev.target.closest('[data-palette]');
+    if (b) setPalette(b.dataset.palette);
+  });
+  $('palClear').addEventListener('click', () => setPalette(null));
+  $('oPalette').addEventListener('change', (e) => {
+    M.commit(S.history, S.board);
+    S.board.showPalette = e.target.checked;
+    renderBoard();
+  });
   let t;
   $('search').addEventListener('input', () => {
     clearTimeout(t);
@@ -971,6 +1227,7 @@ function wire() {
   $('clearFilters').addEventListener('click', () => {
     for (const id of ['fFamily', 'fWeight', 'fFormality', 'fAsset', 'fBrand']) $(id).value = '';
     $('search').value = ''; $('fUnreviewed').checked = false; $('fMatch').checked = false;
+    $('fPalette').checked = false;
     readFilters(); S.filters.slot = ''; renderSlotBar(); renderShelf(); renderMatrix(); renderHelpers();
   });
   document.querySelectorAll('.tab').forEach((b) => b.addEventListener('click', () => setView(b.dataset.view)));
@@ -1023,10 +1280,10 @@ function wire() {
     if (!pics.length) return;
     // the shelf's own picture, then each picture in turn, then back
     const cur = S.shelfPicture[p.product_id];
-    const at = cur === undefined ? 0 : pics.findIndex((q) => q.i === cur) + 1;
+    const at = cur === undefined ? 0 : pics.findIndex((q) => q.pick === cur) + 1;
     const k = (at + 1) % (pics.length + 1);
     if (k === 0) delete S.shelfPicture[p.product_id];
-    else S.shelfPicture[p.product_id] = pics[k - 1].i;
+    else S.shelfPicture[p.product_id] = pics[k - 1].pick;
     renderShelf();
   });
 
@@ -1063,11 +1320,11 @@ function wire() {
 
   $('undo').addEventListener('click', () => {
     const b = M.undo(S.history, S.board);
-    if (b) { S.board = b; S.selected = null; syncControls(); layoutStage(); renderBoard(); }
+    if (b) { S.board = b; S.selected = null; syncControls(); readFilters(); layoutStage(); renderBoard(); renderShelf(); }
   });
   $('redo').addEventListener('click', () => {
     const b = M.redo(S.history, S.board);
-    if (b) { S.board = b; S.selected = null; syncControls(); layoutStage(); renderBoard(); }
+    if (b) { S.board = b; S.selected = null; syncControls(); readFilters(); layoutStage(); renderBoard(); renderShelf(); }
   });
   $('newBoard').addEventListener('click', () => {
     if (S.board.elements.length && !confirm('Start a new board? The current one is not saved to a file.')) return;
@@ -1076,7 +1333,7 @@ function wire() {
     S.board.frame = { ...S.settings.frame };
     S.selected = null;
     S.taps = 0;
-    syncControls(); renderBoard();
+    syncControls(); readFilters(); layoutStage(); renderBoard(); renderShelf();
   });
   $('save').addEventListener('click', save);
   $('openBoard').addEventListener('click', () => $('openFile').click());
@@ -1161,6 +1418,7 @@ function toast(msg, ms = 2600) {
 
 // exposed for the headless test
 Object.assign(S, { placeProduct, placeByTap, placeInspiration, renderShelf, renderBoard, save, openInfo,
+  setPalette, outfitShares: () => outfitShares(S.board, S.productsById, S.board.palette),
   setSlot, setView, exportChoices, saveChoices: () => saveChoices(S.choices),
   buildInfo: () => X.buildInfo(S.board, S.productsById, S.inspById),
   placement, nextPicture,

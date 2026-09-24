@@ -18,6 +18,7 @@ python3 content/tools/build_studio.py --no-images # JSON only, much faster
 | `js/data.js` | **the only file that knows where items come from.** Swap the source and the desk reads a user's own wardrobe instead of the catalogue. |
 | `js/model.js` | the board — pure data and pure functions |
 | `js/colour.js` | OKLab distance, used to *rank* suggestions and nothing else |
+| `js/palette.js` | the chosen palette: its snapshot, and the outfit's colour share against it |
 | `js/render.js` | draws a board onto a canvas; the export path |
 | `js/export.js` | PNG, JPEG, the info JSON, the markdown list, the share sheet |
 | `js/app.js` | the UI, and the only file that touches the DOM |
@@ -77,6 +78,30 @@ picture picked with the badge, else your choice (this browser's, then the
 catalogue's), else the cut-out. The built thumbnail is shown only while it is a
 picture of that same view; a choice made since the last rebuild is cut live from
 the picture itself.
+
+**The image filter picks the picture.** With *Any image* set to a picture
+type, every tile shows that product's picture of that type, and a tap places
+exactly that picture: *flat cut-out* shows the cut-out of its flat lay (or of
+its grid cell), *on-model cut-out* the cut-out of the photo on a person, *tile*
+the crop tile. A product is under the filter when it has a picture of that
+type, whatever its catalogue cut-out is. With no filter, the tile and the tap
+both use the product's primary picture: your choice, else the cut-out.
+
+**The cut-out is offered.** Where the shelf picture is a box or a crop tile
+and the catalogue holds a cut-out of that same picture, **Other picture** (and
+the badge on the tile) lists it as *cut-out*; the button says what the next
+picture is. A colourway row's pictures are only those of its own colour, and a
+listing-grid cell's only picture is its own cell.
+
+**A grid cut into cells is its cells.** In Review a listing grid that has
+been cut reads "N cells: M on the shelf, K in Review", with the K underneath,
+each saying why it is there (on a model, more than one piece, …), and **Accept
+all cells** for them. It is no longer a "Several garments, Adjust box" card.
+
+**Decisions follow their picture.** When a split moves a picture to another
+row, a box or whole-picture choice made on it in this browser moves with it
+the next time the desk loads (`data/picture-migration.json`), once. Hiding,
+taking the cut-out and a slot stay with the row.
 
 **Proportions come from pixels.** A piece's aspect is measured on the decoded
 image it shows (`pixelAspect()` in `model.js`) when it is placed, when Other
@@ -167,6 +192,39 @@ repository's **Actions** tab, workflow *Apply shelf choices*.
 **Frame…** on the canvas bar is one setting for every framed image on the
 board — the inspiration image, page tiles and every box: thin border, white
 mat, corner radius. It is saved with the board and remembered for the next.
+
+## Palettes
+
+Above the canvas, the first dropdown picks a category and group: a colour
+season, a colour family, or this season's AW26/27 palettes and their Soft
+Summer versions. The button beside it opens that group's palettes as swatch
+rows; tap one. It appears **beside** the canvas as a working reference, with
+names, shares, roles and placement. **On board** puts it on the board as a
+strip, above the pieces' own strip, and is off by default.
+
+While a palette is chosen, **Matches this palette** on the shelf ranks pieces
+by distance to its colours, using the same OKLab comparison as *Matches this
+look*. Only one of the two is on at a time. Under the canvas, two bars compare
+what the palette suggests with how the pieces divide by colour share. Each
+piece is weighted by slot as matching.md §3 weights tier balance: top and
+bottom double, a dress four. A colour further than 0.12 (OKLab) from every
+palette colour counts as *outside*. The bars are a reading aid, not a verdict.
+
+Choosing, changing or clearing a palette never moves anything on the canvas.
+The info file records it (`palette`: id, name, category, colours, source) and
+whether the strip was shown. The `.md` piece list names it in one line.
+Reopening a saved outfit brings the selection back. The palettes come from
+`content/palettes/palettes.json`, which `build_studio.py` rebuilds and copies to
+`data/palettes.json`. Without that file the desk still works, with no palettes.
+
+## Where saved outfits go
+
+**Save** hands over four files with one name (`.png`, `.jpg`, `.json`, `.md`).
+Put all four in **`content/outfits/`**, not `content/swipe/outfits/`.
+`content/swipe/` holds inspiration, not boards. `collect_outfits.py` reads both
+folders, so nothing already saved there is lost, and it names each board it
+finds in the wrong one so you can move it. `content/outfits/README.md` has the
+rest.
 
 ## Touch
 

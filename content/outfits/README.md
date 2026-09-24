@@ -10,7 +10,9 @@ date-slug name:
 2026-09-21-rust-twice.md     the numbered piece list, ready to paste
 ```
 
-Put the files here as they come off the iPad, then run:
+Put the files here as they come off the iPad — here, not in
+`content/swipe/outfits/`. The collector reads that folder too, so a board saved
+there by mistake still counts, and it tells you to move it. Then run:
 
 ```
 python3 content/tools/collect_outfits.py          # fills used_in

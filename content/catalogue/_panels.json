@@ -828,88 +828,6 @@
    }
   ]
  },
- "B011-P005#0": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0771,
-     1.0,
-     0.3944
-    ],
-    "type": "flat lay",
-    "path": "review/B011-P005p0.jpg",
-    "w": 485,
-    "h": 473,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0,
-    "components": 1,
-    "edge_pixels": 0,
-    "words_inside": 0,
-    "clean": true,
-    "why": "",
-    "cut": "review/B011-P005p0-cut.webp"
-   },
-   {
-    "box": [
-     0.0,
-     0.4716,
-     1.0,
-     0.488
-    ],
-    "type": "on-model",
-    "path": "review/B011-P005p1.jpg",
-    "w": 485,
-    "h": 586,
-    "text_share": 0.0,
-    "skin": 0.0569,
-    "badges_painted": 0
-   }
-  ]
- },
- "B011-P005#1": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0759,
-     1.0,
-     0.3932
-    ],
-    "type": "flat lay",
-    "path": "review/B011-P005-1p0.jpg",
-    "w": 485,
-    "h": 471,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0,
-    "components": 1,
-    "edge_pixels": 0,
-    "words_inside": 0,
-    "clean": true,
-    "why": "",
-    "cut": "review/B011-P005-1p0-cut.webp"
-   },
-   {
-    "box": [
-     0.0,
-     0.469,
-     1.0,
-     0.4918
-    ],
-    "type": "on-model",
-    "path": "review/B011-P005-1p1.jpg",
-    "w": 485,
-    "h": 590,
-    "text_share": 0.0,
-    "skin": 0.0546,
-    "badges_painted": 0
-   }
-  ]
- },
  "B011-P006#0": {
   "split": true,
   "panels": [
@@ -1084,474 +1002,9 @@
    }
   ]
  },
- "B012-P003#0": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0822,
-     0.3781,
-     0.3742
-    ],
-    "type": "detail",
-    "path": "review/B012-P003p0.jpg",
-    "w": 183,
-    "h": 449,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.6875,
-     0.0822,
-     0.3125,
-     0.3742
-    ],
-    "type": "detail",
-    "path": "review/B012-P003p3.jpg",
-    "w": 152,
-    "h": 449,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.0,
-     0.4564,
-     1.0,
-     0.5032
-    ],
-    "type": "on-model",
-    "path": "review/B012-P003p4.jpg",
-    "w": 485,
-    "h": 604,
-    "text_share": 0.0,
-    "skin": 0.0251,
-    "badges_painted": 0
-   }
-  ]
- },
- "B012-P003#1": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0759,
-     1.0,
-     0.3881
-    ],
-    "type": "flat lay",
-    "path": "review/B012-P003-1p0.jpg",
-    "w": 485,
-    "h": 465,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0,
-    "components": 1,
-    "edge_pixels": 0,
-    "words_inside": 0,
-    "clean": true,
-    "why": "",
-    "cut": "review/B012-P003-1p0-cut.webp"
-   },
-   {
-    "box": [
-     0.0,
-     0.464,
-     1.0,
-     0.4968
-    ],
-    "type": "on-model",
-    "path": "review/B012-P003-1p1.jpg",
-    "w": 485,
-    "h": 596,
-    "text_share": 0.0,
-    "skin": 0.0834,
-    "badges_painted": 0
-   }
-  ]
- },
- "B012-P003#2": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.065,
-     1.0,
-     0.4215
-    ],
-    "type": "on-model",
-    "path": "review/B012-P003-2p0.jpg",
-    "w": 416,
-    "h": 505,
-    "text_share": 0.0,
-    "skin": 0.111,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.0,
-     0.4865,
-     1.0,
-     0.39
-    ],
-    "type": "other",
-    "path": "review/B012-P003-2p1.jpg",
-    "w": 416,
-    "h": 468,
-    "text_share": 0.0,
-    "skin": 0.0135,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.0,
-     0.8765,
-     1.0,
-     0.1235
-    ],
-    "type": "on-model",
-    "path": "review/B012-P003-2p2.jpg",
-    "w": 416,
-    "h": 149,
-    "text_share": 0.0,
-    "skin": 0.5519,
-    "badges_painted": 0
-   }
-  ]
- },
  "B012-P004#0": {
   "split": false,
   "why": "no clear gutter"
- },
- "B013-P001#0": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0465,
-     0.4375,
-     0.401
-    ],
-    "type": "flat lay",
-    "path": "review/B013-P001p0.jpg",
-    "w": 409,
-    "h": 481,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0,
-    "components": 1,
-    "edge_pixels": 0,
-    "words_inside": 0,
-    "clean": true,
-    "why": "",
-    "cut": "review/B013-P001p0-cut.webp"
-   },
-   {
-    "box": [
-     0.4375,
-     0.0465,
-     0.5625,
-     0.401
-    ],
-    "type": "other",
-    "path": "review/B013-P001p1.jpg",
-    "w": 528,
-    "h": 481,
-    "text_share": 0.058,
-    "skin": 0.0,
-    "badges_painted": 17
-   },
-   {
-    "box": [
-     0.0,
-     0.4988,
-     0.4062,
-     0.3619
-    ],
-    "type": "on-model",
-    "path": "review/B013-P001p2.jpg",
-    "w": 380,
-    "h": 434,
-    "text_share": 0.0,
-    "skin": 0.1228,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.4062,
-     0.4988,
-     0.5938,
-     0.3619
-    ],
-    "type": "flat lay",
-    "path": "review/B013-P001p3.jpg",
-    "w": 557,
-    "h": 434,
-    "text_share": 0.097,
-    "skin": 0.0,
-    "badges_painted": 36,
-    "components": 2,
-    "edge_pixels": 36,
-    "words_inside": 28,
-    "clean": false,
-    "why": "more than one piece, touches the frame, text inside it"
-   }
-  ]
- },
- "B013-P001#1": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.1222,
-     0.4375,
-     0.2689
-    ],
-    "type": "flat lay",
-    "path": "review/B013-P001-1p0.jpg",
-    "w": 409,
-    "h": 323,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0,
-    "components": 1,
-    "edge_pixels": 0,
-    "words_inside": 0,
-    "clean": true,
-    "why": "",
-    "cut": "review/B013-P001-1p0-cut.webp"
-   },
-   {
-    "box": [
-     0.4375,
-     0.1222,
-     0.5625,
-     0.2689
-    ],
-    "type": "other",
-    "path": "review/B013-P001-1p1.jpg",
-    "w": 528,
-    "h": 323,
-    "text_share": 0.024,
-    "skin": 0.0,
-    "badges_painted": 5
-   },
-   {
-    "box": [
-     0.0,
-     0.4768,
-     0.4094,
-     0.4474
-    ],
-    "type": "on-model",
-    "path": "review/B013-P001-1p2.jpg",
-    "w": 383,
-    "h": 537,
-    "text_share": 0.0,
-    "skin": 0.0692,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.4094,
-     0.4768,
-     0.4344,
-     0.4474
-    ],
-    "type": "other",
-    "path": "review/B013-P001-1p3.jpg",
-    "w": 407,
-    "h": 537,
-    "text_share": 0.074,
-    "skin": 0.0,
-    "badges_painted": 49
-   },
-   {
-    "box": [
-     0.8438,
-     0.4768,
-     0.1562,
-     0.4474
-    ],
-    "type": "detail",
-    "path": "review/B013-P001-1p4.jpg",
-    "w": 147,
-    "h": 537,
-    "text_share": 0.039,
-    "skin": 0.0,
-    "badges_painted": 14
-   }
-  ]
- },
- "B013-P001#2": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.1222,
-     0.4375,
-     0.2689
-    ],
-    "type": "flat lay",
-    "path": "review/B013-P001-2p0.jpg",
-    "w": 409,
-    "h": 323,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0,
-    "components": 1,
-    "edge_pixels": 0,
-    "words_inside": 0,
-    "clean": true,
-    "why": "",
-    "cut": "review/B013-P001-2p0-cut.webp"
-   },
-   {
-    "box": [
-     0.4375,
-     0.1222,
-     0.5625,
-     0.2689
-    ],
-    "type": "other",
-    "path": "review/B013-P001-2p1.jpg",
-    "w": 528,
-    "h": 323,
-    "text_share": 0.024,
-    "skin": 0.0,
-    "badges_painted": 5
-   },
-   {
-    "box": [
-     0.0,
-     0.4768,
-     0.4094,
-     0.4474
-    ],
-    "type": "on-model",
-    "path": "review/B013-P001-2p2.jpg",
-    "w": 383,
-    "h": 537,
-    "text_share": 0.0,
-    "skin": 0.0692,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.4094,
-     0.4768,
-     0.4344,
-     0.4474
-    ],
-    "type": "other",
-    "path": "review/B013-P001-2p3.jpg",
-    "w": 407,
-    "h": 537,
-    "text_share": 0.074,
-    "skin": 0.0,
-    "badges_painted": 49
-   },
-   {
-    "box": [
-     0.8438,
-     0.4768,
-     0.1562,
-     0.4474
-    ],
-    "type": "detail",
-    "path": "review/B013-P001-2p4.jpg",
-    "w": 147,
-    "h": 537,
-    "text_share": 0.039,
-    "skin": 0.0,
-    "badges_painted": 14
-   }
-  ]
- },
- "B013-P001#3": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.1222,
-     0.4344,
-     0.2689
-    ],
-    "type": "flat lay",
-    "path": "review/B013-P001-3p0.jpg",
-    "w": 407,
-    "h": 323,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0,
-    "components": 1,
-    "edge_pixels": 0,
-    "words_inside": 0,
-    "clean": true,
-    "why": "",
-    "cut": "review/B013-P001-3p0-cut.webp"
-   },
-   {
-    "box": [
-     0.4344,
-     0.1222,
-     0.5656,
-     0.2689
-    ],
-    "type": "other",
-    "path": "review/B013-P001-3p1.jpg",
-    "w": 530,
-    "h": 323,
-    "text_share": 0.027,
-    "skin": 0.0,
-    "badges_painted": 7
-   },
-   {
-    "box": [
-     0.0,
-     0.4841,
-     0.4094,
-     0.3741
-    ],
-    "type": "on-model",
-    "path": "review/B013-P001-3p2.jpg",
-    "w": 383,
-    "h": 449,
-    "text_share": 0.0,
-    "skin": 0.4326,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.4094,
-     0.4841,
-     0.5906,
-     0.3741
-    ],
-    "type": "flat lay",
-    "path": "review/B013-P001-3p3.jpg",
-    "w": 554,
-    "h": 449,
-    "text_share": 0.104,
-    "skin": 0.0,
-    "badges_painted": 40,
-    "components": 3,
-    "edge_pixels": 263,
-    "words_inside": 33,
-    "clean": false,
-    "why": "more than one piece, touches the frame, text inside it"
-   }
-  ]
  },
  "B014-P001#0": {
   "split": true,
@@ -1767,144 +1220,6 @@
     "h": 616,
     "text_share": 0.0,
     "skin": 0.0261,
-    "badges_painted": 0
-   }
-  ]
- },
- "B015-P001#0": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0771,
-     1.0,
-     0.3881
-    ],
-    "type": "flat lay",
-    "path": "review/B015-P001p0.jpg",
-    "w": 485,
-    "h": 466,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0,
-    "components": 1,
-    "edge_pixels": 0,
-    "words_inside": 0,
-    "clean": true,
-    "why": "",
-    "cut": "review/B015-P001p0-cut.webp"
-   },
-   {
-    "box": [
-     0.0,
-     0.4652,
-     1.0,
-     0.4968
-    ],
-    "type": "on-model",
-    "path": "review/B015-P001p1.jpg",
-    "w": 485,
-    "h": 596,
-    "text_share": 0.0,
-    "skin": 0.0536,
-    "badges_painted": 0
-   }
-  ]
- },
- "B015-P001#1": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0585,
-     1.0,
-     0.3451
-    ],
-    "type": "flat lay",
-    "path": "review/B015-P001-1p0.jpg",
-    "w": 468,
-    "h": 414,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0,
-    "components": 1,
-    "edge_pixels": 0,
-    "words_inside": 0,
-    "clean": true,
-    "why": "",
-    "cut": "review/B015-P001-1p0-cut.webp"
-   },
-   {
-    "box": [
-     0.0,
-     0.4037,
-     1.0,
-     0.4878
-    ],
-    "type": "on-model",
-    "path": "review/B015-P001-1p1.jpg",
-    "w": 468,
-    "h": 585,
-    "text_share": 0.0,
-    "skin": 0.2004,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.0,
-     0.8915,
-     1.0,
-     0.1085
-    ],
-    "type": "detail",
-    "path": "review/B015-P001-1p2.jpg",
-    "w": 468,
-    "h": 131,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0
-   }
-  ]
- },
- "B015-P001#2": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0607,
-     1.0,
-     0.4185
-    ],
-    "type": "flat lay",
-    "path": "review/B015-P001-2p0.jpg",
-    "w": 485,
-    "h": 502,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0,
-    "components": 1,
-    "edge_pixels": 0,
-    "words_inside": 0,
-    "clean": true,
-    "why": "",
-    "cut": "review/B015-P001-2p0-cut.webp"
-   },
-   {
-    "box": [
-     0.0,
-     0.4791,
-     1.0,
-     0.4829
-    ],
-    "type": "on-model",
-    "path": "review/B015-P001-2p1.jpg",
-    "w": 485,
-    "h": 580,
-    "text_share": 0.0,
-    "skin": 0.0658,
     "badges_painted": 0
    }
   ]
@@ -2184,303 +1499,6 @@
    }
   ]
  },
- "B017-P001#0": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0834,
-     1.0,
-     0.3856
-    ],
-    "type": "on-model",
-    "path": "review/B017-P001p0.jpg",
-    "w": 485,
-    "h": 462,
-    "text_share": 0.0,
-    "skin": 0.0682,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.0,
-     0.469,
-     1.0,
-     0.4918
-    ],
-    "type": "on-model",
-    "path": "review/B017-P001p1.jpg",
-    "w": 485,
-    "h": 590,
-    "text_share": 0.0,
-    "skin": 0.096,
-    "badges_painted": 0
-   }
-  ]
- },
- "B017-P001#1": {
-  "split": false,
-  "why": "too many panels"
- },
- "B017-P001#2": {
-  "split": false,
-  "why": "too many panels"
- },
- "B017-P001#3": {
-  "split": false,
-  "why": "no clear gutter"
- },
- "B018-P001#0": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.1205,
-     0.4313,
-     0.3036
-    ],
-    "type": "flat lay",
-    "path": "review/B018-P001p0.jpg",
-    "w": 398,
-    "h": 364,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0,
-    "components": 1,
-    "edge_pixels": 0,
-    "words_inside": 0,
-    "clean": true,
-    "why": "",
-    "cut": "review/B018-P001p0-cut.webp"
-   },
-   {
-    "box": [
-     0.4313,
-     0.1205,
-     0.5687,
-     0.3036
-    ],
-    "type": "other",
-    "path": "review/B018-P001p1.jpg",
-    "w": 526,
-    "h": 364,
-    "text_share": 0.012,
-    "skin": 0.0,
-    "badges_painted": 2
-   },
-   {
-    "box": [
-     0.0,
-     0.4867,
-     0.4062,
-     0.4169
-    ],
-    "type": "on-model",
-    "path": "review/B018-P001p2.jpg",
-    "w": 375,
-    "h": 500,
-    "text_share": 0.0,
-    "skin": 0.0819,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.4062,
-     0.4867,
-     0.5938,
-     0.4169
-    ],
-    "type": "flat lay",
-    "path": "review/B018-P001p3.jpg",
-    "w": 549,
-    "h": 500,
-    "text_share": 0.037,
-    "skin": 0.0,
-    "badges_painted": 33,
-    "components": 1,
-    "edge_pixels": 0,
-    "words_inside": 0,
-    "clean": true,
-    "why": "",
-    "cut": "review/B018-P001p3-cut.webp"
-   }
-  ]
- },
- "B018-P001#1": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0796,
-     1.0,
-     0.3805
-    ],
-    "type": "flat lay",
-    "path": "review/B018-P001-1p0.jpg",
-    "w": 485,
-    "h": 457,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0,
-    "components": 1,
-    "edge_pixels": 0,
-    "words_inside": 0,
-    "clean": true,
-    "why": "",
-    "cut": "review/B018-P001-1p0-cut.webp"
-   },
-   {
-    "box": [
-     0.0,
-     0.4602,
-     1.0,
-     0.4994
-    ],
-    "type": "on-model",
-    "path": "review/B018-P001-1p1.jpg",
-    "w": 485,
-    "h": 599,
-    "text_share": 0.0,
-    "skin": 0.0558,
-    "badges_painted": 0
-   }
-  ]
- },
- "B018-P001#2": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0796,
-     1.0,
-     0.3805
-    ],
-    "type": "flat lay",
-    "path": "review/B018-P001-2p0.jpg",
-    "w": 485,
-    "h": 457,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0,
-    "components": 1,
-    "edge_pixels": 0,
-    "words_inside": 0,
-    "clean": true,
-    "why": "",
-    "cut": "review/B018-P001-2p0-cut.webp"
-   },
-   {
-    "box": [
-     0.0,
-     0.4602,
-     1.0,
-     0.4994
-    ],
-    "type": "on-model",
-    "path": "review/B018-P001-2p1.jpg",
-    "w": 485,
-    "h": 599,
-    "text_share": 0.0,
-    "skin": 0.0558,
-    "badges_painted": 0
-   }
-  ]
- },
- "B018-P001#3": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0477,
-     0.4281,
-     0.3794
-    ],
-    "type": "flat lay",
-    "path": "review/B018-P001-3p0.jpg",
-    "w": 412,
-    "h": 455,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0,
-    "components": 1,
-    "edge_pixels": 0,
-    "words_inside": 0,
-    "clean": true,
-    "why": "",
-    "cut": "review/B018-P001-3p0-cut.webp"
-   },
-   {
-    "box": [
-     0.4281,
-     0.0477,
-     0.5719,
-     0.3794
-    ],
-    "type": "other",
-    "path": "review/B018-P001-3p1.jpg",
-    "w": 551,
-    "h": 455,
-    "text_share": 0.051,
-    "skin": 0.0,
-    "badges_painted": 11
-   },
-   {
-    "box": [
-     0.0,
-     0.4598,
-     0.4094,
-     0.4698
-    ],
-    "type": "on-model",
-    "path": "review/B018-P001-3p2.jpg",
-    "w": 394,
-    "h": 564,
-    "text_share": 0.0,
-    "skin": 0.0847,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.4688,
-     0.4598,
-     0.3406,
-     0.4698
-    ],
-    "type": "flat lay",
-    "path": "review/B018-P001-3p3.jpg",
-    "w": 328,
-    "h": 564,
-    "text_share": 0.081,
-    "skin": 0.0,
-    "badges_painted": 39,
-    "components": 1,
-    "edge_pixels": 243,
-    "words_inside": 0,
-    "clean": false,
-    "why": "touches the frame"
-   },
-   {
-    "box": [
-     0.8094,
-     0.4598,
-     0.1906,
-     0.4698
-    ],
-    "type": "detail",
-    "path": "review/B018-P001-3p4.jpg",
-    "w": 184,
-    "h": 564,
-    "text_share": 0.038,
-    "skin": 0.0,
-    "badges_painted": 13
-   }
-  ]
- },
  "B018-P002#0": {
   "split": true,
   "panels": [
@@ -2512,153 +1530,6 @@
     "h": 548,
     "text_share": 0.0,
     "skin": 0.0438,
-    "badges_painted": 0
-   }
-  ]
- },
- "B019-P001#0": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.1244,
-     0.4375,
-     0.2761
-    ],
-    "type": "flat lay",
-    "path": "review/B019-P001p0.jpg",
-    "w": 417,
-    "h": 331,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0,
-    "components": 1,
-    "edge_pixels": 0,
-    "words_inside": 0,
-    "clean": true,
-    "why": "",
-    "cut": "review/B019-P001p0-cut.webp"
-   },
-   {
-    "box": [
-     0.4375,
-     0.1244,
-     0.5625,
-     0.2761
-    ],
-    "type": "other",
-    "path": "review/B019-P001p1.jpg",
-    "w": 538,
-    "h": 331,
-    "text_share": 0.024,
-    "skin": 0.0,
-    "badges_painted": 5
-   },
-   {
-    "box": [
-     0.0,
-     0.4876,
-     0.4156,
-     0.4378
-    ],
-    "type": "on-model",
-    "path": "review/B019-P001p2.jpg",
-    "w": 396,
-    "h": 525,
-    "text_share": 0.0,
-    "skin": 0.0681,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.4156,
-     0.4876,
-     0.5844,
-     0.4378
-    ],
-    "type": "other",
-    "path": "review/B019-P001p3.jpg",
-    "w": 559,
-    "h": 525,
-    "text_share": 0.072,
-    "skin": 0.0,
-    "badges_painted": 57
-   }
-  ]
- },
- "B019-P001#1": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0537,
-     1.0,
-     0.461
-    ],
-    "type": "on-model",
-    "path": "review/B019-P001-1p0.jpg",
-    "w": 468,
-    "h": 553,
-    "text_share": 0.0,
-    "skin": 0.0758,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.0,
-     0.5146,
-     1.0,
-     0.4402
-    ],
-    "type": "on-model",
-    "path": "review/B019-P001-1p1.jpg",
-    "w": 468,
-    "h": 528,
-    "text_share": 0.0,
-    "skin": 0.0156,
-    "badges_painted": 0
-   }
-  ]
- },
- "B019-P001#2": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0607,
-     1.0,
-     0.4172
-    ],
-    "type": "flat lay",
-    "path": "review/B019-P001-2p0.jpg",
-    "w": 485,
-    "h": 501,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0,
-    "components": 1,
-    "edge_pixels": 0,
-    "words_inside": 0,
-    "clean": true,
-    "why": "",
-    "cut": "review/B019-P001-2p0-cut.webp"
-   },
-   {
-    "box": [
-     0.0,
-     0.4779,
-     1.0,
-     0.4817
-    ],
-    "type": "on-model",
-    "path": "review/B019-P001-2p1.jpg",
-    "w": 485,
-    "h": 578,
-    "text_share": 0.0,
-    "skin": 0.0749,
     "badges_painted": 0
    }
   ]
@@ -2910,123 +1781,6 @@
     "words_inside": 0,
     "clean": false,
     "why": "touches the frame"
-   }
-  ]
- },
- "B021-P001#0": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.1029,
-     1.0,
-     0.4865
-    ],
-    "type": "flat lay",
-    "path": "review/B021-P001p0.jpg",
-    "w": 449,
-    "h": 584,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0,
-    "components": 1,
-    "edge_pixels": 0,
-    "words_inside": 0,
-    "clean": true,
-    "why": "",
-    "cut": "review/B021-P001p0-cut.webp"
-   },
-   {
-    "box": [
-     0.0,
-     0.5895,
-     1.0,
-     0.4105
-    ],
-    "type": "flat lay",
-    "path": "review/B021-P001p1.jpg",
-    "w": 449,
-    "h": 493,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0,
-    "components": 1,
-    "edge_pixels": 0,
-    "words_inside": 0,
-    "clean": true,
-    "why": "",
-    "cut": "review/B021-P001p1-cut.webp"
-   }
-  ]
- },
- "B021-P001#1": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0943,
-     1.0,
-     0.4716
-    ],
-    "type": "on-model",
-    "path": "review/B021-P001-1p0.jpg",
-    "w": 436,
-    "h": 566,
-    "text_share": 0.0,
-    "skin": 0.0231,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.0,
-     0.5659,
-     1.0,
-     0.4341
-    ],
-    "type": "on-model",
-    "path": "review/B021-P001-1p1.jpg",
-    "w": 436,
-    "h": 521,
-    "text_share": 0.0,
-    "skin": 0.0449,
-    "badges_painted": 0
-   }
-  ]
- },
- "B021-P001#2": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0943,
-     1.0,
-     0.4716
-    ],
-    "type": "on-model",
-    "path": "review/B021-P001-2p0.jpg",
-    "w": 436,
-    "h": 566,
-    "text_share": 0.0,
-    "skin": 0.0231,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.0,
-     0.5659,
-     1.0,
-     0.4341
-    ],
-    "type": "on-model",
-    "path": "review/B021-P001-2p1.jpg",
-    "w": 436,
-    "h": 521,
-    "text_share": 0.0,
-    "skin": 0.0449,
-    "badges_painted": 0
    }
   ]
  },
@@ -3308,84 +2062,6 @@
   "split": false,
   "why": "no clear gutter"
  },
- "B021-P011#0": {
-  "split": false,
-  "why": "no clear gutter"
- },
- "B021-P011#1": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0,
-     1.0,
-     0.5548
-    ],
-    "type": "on-model",
-    "path": "review/B021-P011-1p0.jpg",
-    "w": 438,
-    "h": 665,
-    "text_share": 0.0,
-    "skin": 0.0833,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.0,
-     0.5548,
-     1.0,
-     0.4452
-    ],
-    "type": "on-model",
-    "path": "review/B021-P011-1p1.jpg",
-    "w": 438,
-    "h": 535,
-    "text_share": 0.0,
-    "skin": 0.0325,
-    "badges_painted": 0
-   }
-  ]
- },
- "B021-P011#2": {
-  "split": false,
-  "why": "no clear gutter"
- },
- "B021-P011#3": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0,
-     1.0,
-     0.5548
-    ],
-    "type": "on-model",
-    "path": "review/B021-P011-3p0.jpg",
-    "w": 438,
-    "h": 665,
-    "text_share": 0.0,
-    "skin": 0.0833,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.0,
-     0.5548,
-     1.0,
-     0.4452
-    ],
-    "type": "on-model",
-    "path": "review/B021-P011-3p1.jpg",
-    "w": 438,
-    "h": 535,
-    "text_share": 0.0,
-    "skin": 0.0325,
-    "badges_painted": 0
-   }
-  ]
- },
  "B021-P012#0": {
   "split": false,
   "why": "no clear gutter"
@@ -3524,85 +2200,6 @@
   "why": "no clear gutter"
  },
  "B023-P012#0": {
-  "split": false,
-  "why": "no clear gutter"
- },
- "B023-P013#0": {
-  "split": false,
-  "why": "no clear gutter"
- },
- "B023-P013#1": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0668,
-     1.0,
-     0.4134
-    ],
-    "type": "on-model",
-    "path": "review/B023-P013-1p0.jpg",
-    "w": 950,
-    "h": 496,
-    "text_share": 0.008,
-    "skin": 0.1931,
-    "badges_painted": 12
-   },
-   {
-    "box": [
-     0.0,
-     0.4802,
-     0.3,
-     0.4777
-    ],
-    "type": "flat lay",
-    "path": "review/B023-P013-1p1.jpg",
-    "w": 285,
-    "h": 573,
-    "text_share": 0.003,
-    "skin": 0.0003,
-    "badges_painted": 3,
-    "components": 1,
-    "edge_pixels": 0,
-    "words_inside": 0,
-    "clean": true,
-    "why": "",
-    "cut": "review/B023-P013-1p1-cut.webp"
-   },
-   {
-    "box": [
-     0.3,
-     0.4802,
-     0.3969,
-     0.4777
-    ],
-    "type": "on-model",
-    "path": "review/B023-P013-1p2.jpg",
-    "w": 377,
-    "h": 573,
-    "text_share": 0.004,
-    "skin": 0.1215,
-    "badges_painted": 4
-   },
-   {
-    "box": [
-     0.6969,
-     0.4802,
-     0.2625,
-     0.4777
-    ],
-    "type": "on-model",
-    "path": "review/B023-P013-1p3.jpg",
-    "w": 249,
-    "h": 573,
-    "text_share": 0.0,
-    "skin": 0.3102,
-    "badges_painted": 0
-   }
-  ]
- },
- "B023-P013#2": {
   "split": false,
   "why": "no clear gutter"
  },
@@ -3807,14 +2404,6 @@
   "why": "no clear gutter"
  },
  "B028-P008#0": {
-  "split": false,
-  "why": "no clear gutter"
- },
- "B028-P012#0": {
-  "split": false,
-  "why": "no clear gutter"
- },
- "B028-P012#1": {
   "split": false,
   "why": "no clear gutter"
  },
@@ -4099,126 +2688,6 @@
    }
   ]
  },
- "B035-P004#0": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0,
-     1.0,
-     0.5155
-    ],
-    "type": "other",
-    "path": "review/B035-P004p0.jpg",
-    "w": 1200,
-    "h": 499,
-    "text_share": 0.002,
-    "skin": 0.0,
-    "badges_painted": 3
-   },
-   {
-    "box": [
-     0.0,
-     0.5155,
-     1.0,
-     0.2054
-    ],
-    "type": "detail",
-    "path": "review/B035-P004p1.jpg",
-    "w": 1200,
-    "h": 198,
-    "text_share": 0.046,
-    "skin": 0.0,
-    "badges_painted": 2
-   },
-   {
-    "box": [
-     0.0,
-     0.7209,
-     1.0,
-     0.1783
-    ],
-    "type": "detail",
-    "path": "review/B035-P004p2.jpg",
-    "w": 1200,
-    "h": 173,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.2281,
-     0.8992,
-     0.7719,
-     0.1008
-    ],
-    "type": "detail",
-    "path": "review/B035-P004p4.jpg",
-    "w": 927,
-    "h": 98,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0
-   }
-  ]
- },
- "B035-P004#1": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0,
-     0.65,
-     0.3743
-    ],
-    "type": "flat lay",
-    "path": "review/B035-P004-1p0.jpg",
-    "w": 455,
-    "h": 273,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0,
-    "components": 1,
-    "edge_pixels": 342,
-    "words_inside": 0,
-    "clean": false,
-    "why": "touches the frame"
-   },
-   {
-    "box": [
-     0.65,
-     0.0,
-     0.35,
-     0.3743
-    ],
-    "type": "detail",
-    "path": "review/B035-P004-1p1.jpg",
-    "w": 245,
-    "h": 273,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.0,
-     0.3743,
-     1.0,
-     0.6257
-    ],
-    "type": "other",
-    "path": "review/B035-P004-1p2.jpg",
-    "w": 700,
-    "h": 458,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0
-   }
-  ]
- },
  "B037-P001#0": {
   "split": false,
   "why": "no clear gutter"
@@ -4434,133 +2903,6 @@
     "text_share": 0.0,
     "skin": 0.0504,
     "badges_painted": 0
-   }
-  ]
- },
- "B038-P001#0": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0226,
-     0.4906,
-     0.5714
-    ],
-    "type": "on-model",
-    "path": "review/B038-P001p0.jpg",
-    "w": 471,
-    "h": 685,
-    "text_share": 0.0,
-    "skin": 0.0315,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.4906,
-     0.0226,
-     0.5094,
-     0.5714
-    ],
-    "type": "flat lay",
-    "path": "review/B038-P001p1.jpg",
-    "w": 491,
-    "h": 685,
-    "text_share": 0.007,
-    "skin": 0.0,
-    "badges_painted": 3,
-    "components": 1,
-    "edge_pixels": 0,
-    "words_inside": 0,
-    "clean": true,
-    "why": "",
-    "cut": "review/B038-P001p1-cut.webp"
-   },
-   {
-    "box": [
-     0.0,
-     0.594,
-     0.3344,
-     0.3709
-    ],
-    "type": "on-model",
-    "path": "review/B038-P001p2.jpg",
-    "w": 321,
-    "h": 445,
-    "text_share": 0.0,
-    "skin": 0.0493,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.3344,
-     0.594,
-     0.3125,
-     0.3709
-    ],
-    "type": "other",
-    "path": "review/B038-P001p3.jpg",
-    "w": 301,
-    "h": 445,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.6469,
-     0.594,
-     0.3531,
-     0.3709
-    ],
-    "type": "on-model",
-    "path": "review/B038-P001p4.jpg",
-    "w": 340,
-    "h": 445,
-    "text_share": 0.0,
-    "skin": 0.0271,
-    "badges_painted": 0
-   }
-  ]
- },
- "B038-P001#1": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0,
-     0.4906,
-     1.0
-    ],
-    "type": "on-model",
-    "path": "review/B038-P001-1p0.jpg",
-    "w": 490,
-    "h": 731,
-    "text_share": 0.0,
-    "skin": 0.0479,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.4906,
-     0.0,
-     0.5094,
-     1.0
-    ],
-    "type": "flat lay",
-    "path": "review/B038-P001-1p1.jpg",
-    "w": 509,
-    "h": 731,
-    "text_share": 0.006,
-    "skin": 0.0075,
-    "badges_painted": 3,
-    "components": 1,
-    "edge_pixels": 0,
-    "words_inside": 0,
-    "clean": true,
-    "why": "",
-    "cut": "review/B038-P001-1p1-cut.webp"
    }
   ]
  },
@@ -5555,98 +3897,6 @@
   "split": false,
   "why": "no clear gutter"
  },
- "B043-P004#0": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0,
-     0.45,
-     1.0
-    ],
-    "type": "flat lay",
-    "path": "review/B043-P004p0.jpg",
-    "w": 374,
-    "h": 1200,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0,
-    "components": 1,
-    "edge_pixels": 905,
-    "words_inside": 0,
-    "clean": false,
-    "why": "touches the frame"
-   },
-   {
-    "box": [
-     0.45,
-     0.0,
-     0.1688,
-     1.0
-    ],
-    "type": "flat lay",
-    "path": "review/B043-P004p1.jpg",
-    "w": 141,
-    "h": 1200,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0,
-    "components": 1,
-    "edge_pixels": 1873,
-    "words_inside": 0,
-    "clean": false,
-    "why": "touches the frame"
-   },
-   {
-    "box": [
-     0.6188,
-     0.0,
-     0.1781,
-     1.0
-    ],
-    "type": "detail",
-    "path": "review/B043-P004p2.jpg",
-    "w": 148,
-    "h": 1200,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.7969,
-     0.0,
-     0.2031,
-     1.0
-    ],
-    "type": "flat lay",
-    "path": "review/B043-P004p3.jpg",
-    "w": 170,
-    "h": 1200,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0,
-    "components": 1,
-    "edge_pixels": 1821,
-    "words_inside": 0,
-    "clean": false,
-    "why": "touches the frame"
-   }
-  ]
- },
- "B043-P004#1": {
-  "split": false,
-  "why": "no clear gutter"
- },
- "B043-P004#2": {
-  "split": false,
-  "why": "no clear gutter"
- },
- "B043-P004#3": {
-  "split": false,
-  "why": "no clear gutter"
- },
  "B043-P005#0": {
   "split": false,
   "why": "no clear gutter"
@@ -5768,18 +4018,6 @@
   "why": "no clear gutter"
  },
  "B048-P004#0": {
-  "split": false,
-  "why": "no clear gutter"
- },
- "B049-P001#0": {
-  "split": false,
-  "why": "no clear gutter"
- },
- "B049-P001#1": {
-  "split": false,
-  "why": "no clear gutter"
- },
- "B049-P001#2": {
   "split": false,
   "why": "no clear gutter"
  },
@@ -6183,26 +4421,6 @@
   "why": "no clear gutter"
  },
  "B055-P002#0": {
-  "split": false,
-  "why": "no clear gutter"
- },
- "B055-P003#0": {
-  "split": false,
-  "why": "no clear gutter"
- },
- "B055-P003#1": {
-  "split": false,
-  "why": "no clear gutter"
- },
- "B055-P003#2": {
-  "split": false,
-  "why": "no clear gutter"
- },
- "B055-P003#3": {
-  "split": false,
-  "why": "no clear gutter"
- },
- "B055-P003#4": {
   "split": false,
   "why": "no clear gutter"
  },
@@ -7016,130 +5234,6 @@
    }
   ]
  },
- "B057-P005#0": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0,
-     1.0,
-     0.6605
-    ],
-    "type": "on-model",
-    "path": "review/B057-P005p0.jpg",
-    "w": 891,
-    "h": 792,
-    "text_share": 0.0,
-    "skin": 0.0872,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.0,
-     0.6977,
-     0.2594,
-     0.2488
-    ],
-    "type": "flat lay",
-    "path": "review/B057-P005p1.jpg",
-    "w": 231,
-    "h": 298,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0,
-    "components": 1,
-    "edge_pixels": 0,
-    "words_inside": 0,
-    "clean": true,
-    "why": "",
-    "cut": "review/B057-P005p1-cut.webp"
-   },
-   {
-    "box": [
-     0.2594,
-     0.6977,
-     0.2531,
-     0.2488
-    ],
-    "type": "flat lay",
-    "path": "review/B057-P005p2.jpg",
-    "w": 225,
-    "h": 298,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0,
-    "components": 1,
-    "edge_pixels": 0,
-    "words_inside": 0,
-    "clean": true,
-    "why": "",
-    "cut": "review/B057-P005p2-cut.webp"
-   },
-   {
-    "box": [
-     0.7375,
-     0.6977,
-     0.2625,
-     0.2488
-    ],
-    "type": "flat lay",
-    "path": "review/B057-P005p3.jpg",
-    "w": 234,
-    "h": 298,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0,
-    "components": 1,
-    "edge_pixels": 0,
-    "words_inside": 0,
-    "clean": true,
-    "why": "",
-    "cut": "review/B057-P005p3-cut.webp"
-   }
-  ]
- },
- "B057-P005#1": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.1742,
-     0.3812,
-     0.6774
-    ],
-    "type": "flat lay",
-    "path": "review/B057-P005-1p1.jpg",
-    "w": 457,
-    "h": 396,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0,
-    "components": 1,
-    "edge_pixels": 0,
-    "words_inside": 0,
-    "clean": true,
-    "why": "",
-    "cut": "review/B057-P005-1p1-cut.webp"
-   },
-   {
-    "box": [
-     0.3812,
-     0.1742,
-     0.6188,
-     0.6774
-    ],
-    "type": "other",
-    "path": "review/B057-P005-1p2.jpg",
-    "w": 743,
-    "h": 396,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0
-   }
-  ]
- },
  "B057-P006#0": {
   "split": true,
   "panels": [
@@ -7853,14 +5947,6 @@
   "split": false,
   "why": "too many panels"
  },
- "B062-P008#0": {
-  "split": false,
-  "why": "no clear gutter"
- },
- "B062-P008#1": {
-  "split": false,
-  "why": "no clear gutter"
- },
  "B062-P009#0": {
   "split": true,
   "panels": [
@@ -7985,181 +6071,6 @@
    }
   ]
  },
- "B062-P012#0": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0,
-     1.0,
-     0.7332
-    ],
-    "type": "flat lay",
-    "path": "review/B062-P012p0.jpg",
-    "w": 536,
-    "h": 879,
-    "text_share": 0.005,
-    "skin": 0.0089,
-    "badges_painted": 0,
-    "components": 1,
-    "edge_pixels": 302,
-    "words_inside": 0,
-    "clean": false,
-    "why": "touches the frame"
-   },
-   {
-    "box": [
-     0.1219,
-     0.7332,
-     0.8781,
-     0.2668
-    ],
-    "type": "flat lay",
-    "path": "review/B062-P012p2.jpg",
-    "w": 471,
-    "h": 321,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0,
-    "components": 1,
-    "edge_pixels": 166,
-    "words_inside": 0,
-    "clean": false,
-    "why": "touches the frame"
-   }
-  ]
- },
- "B062-P012#1": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0241,
-     1.0,
-     0.5858
-    ],
-    "type": "on-model",
-    "path": "review/B062-P012-1p0.jpg",
-    "w": 544,
-    "h": 703,
-    "text_share": 0.0,
-    "skin": 0.0421,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.0,
-     0.6099,
-     0.575,
-     0.1376
-    ],
-    "type": "on-model",
-    "path": "review/B062-P012-1p1.jpg",
-    "w": 312,
-    "h": 166,
-    "text_share": 0.0,
-    "skin": 0.1952,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.5969,
-     0.6099,
-     0.4031,
-     0.1376
-    ],
-    "type": "other",
-    "path": "review/B062-P012-1p2.jpg",
-    "w": 220,
-    "h": 166,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.0,
-     0.7475,
-     1.0,
-     0.2525
-    ],
-    "type": "other",
-    "path": "review/B062-P012-1p3.jpg",
-    "w": 544,
-    "h": 303,
-    "text_share": 0.0,
-    "skin": 0.0136,
-    "badges_painted": 0
-   }
-  ]
- },
- "B062-P012#2": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0241,
-     1.0,
-     0.5858
-    ],
-    "type": "on-model",
-    "path": "review/B062-P012-2p0.jpg",
-    "w": 544,
-    "h": 703,
-    "text_share": 0.0,
-    "skin": 0.0421,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.0,
-     0.6099,
-     0.575,
-     0.1376
-    ],
-    "type": "on-model",
-    "path": "review/B062-P012-2p1.jpg",
-    "w": 312,
-    "h": 166,
-    "text_share": 0.0,
-    "skin": 0.1952,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.5969,
-     0.6099,
-     0.4031,
-     0.1376
-    ],
-    "type": "other",
-    "path": "review/B062-P012-2p2.jpg",
-    "w": 220,
-    "h": 166,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.0,
-     0.7475,
-     1.0,
-     0.2525
-    ],
-    "type": "other",
-    "path": "review/B062-P012-2p3.jpg",
-    "w": 544,
-    "h": 303,
-    "text_share": 0.0,
-    "skin": 0.0136,
-    "badges_painted": 0
-   }
-  ]
- },
  "B062-P013#0": {
   "split": true,
   "panels": [
@@ -8212,76 +6123,6 @@
     "words_inside": 0,
     "clean": false,
     "why": "touches the frame"
-   }
-  ]
- },
- "B062-P014#0": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0,
-     0.1313,
-     1.0
-    ],
-    "type": "detail",
-    "path": "review/B062-P014p0.jpg",
-    "w": 126,
-    "h": 1200,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.1313,
-     0.0,
-     0.8688,
-     1.0
-    ],
-    "type": "on-model",
-    "path": "review/B062-P014p1.jpg",
-    "w": 835,
-    "h": 1200,
-    "text_share": 0.001,
-    "skin": 0.1026,
-    "badges_painted": 1
-   }
-  ]
- },
- "B062-P014#1": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0,
-     0.2219,
-     1.0
-    ],
-    "type": "detail",
-    "path": "review/B062-P014-1p0.jpg",
-    "w": 244,
-    "h": 1091,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.2219,
-     0.0,
-     0.7781,
-     1.0
-    ],
-    "type": "on-model",
-    "path": "review/B062-P014-1p1.jpg",
-    "w": 858,
-    "h": 1091,
-    "text_share": 0.008,
-    "skin": 0.1006,
-    "badges_painted": 1
    }
   ]
  },
@@ -8668,112 +6509,6 @@
     "words_inside": 4,
     "clean": false,
     "why": "more than one piece, touches the frame, text inside it"
-   }
-  ]
- },
- "B010-P005-V4#0": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.1443,
-     0.4375,
-     0.2714
-    ],
-    "type": "flat lay",
-    "path": "review/B010-P005-V4p0.jpg",
-    "w": 409,
-    "h": 325,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0,
-    "components": 1,
-    "edge_pixels": 0,
-    "words_inside": 0,
-    "clean": true,
-    "why": "",
-    "cut": "review/B010-P005-V4p0-cut.webp"
-   },
-   {
-    "box": [
-     0.4375,
-     0.1443,
-     0.5625,
-     0.2714
-    ],
-    "type": "other",
-    "path": "review/B010-P005-V4p1.jpg",
-    "w": 528,
-    "h": 325,
-    "text_share": 0.027,
-    "skin": 0.0,
-    "badges_painted": 7
-   },
-   {
-    "box": [
-     0.0,
-     0.5452,
-     0.4062,
-     0.3765
-    ],
-    "type": "on-model",
-    "path": "review/B010-P005-V4p2.jpg",
-    "w": 380,
-    "h": 452,
-    "text_share": 0.0,
-    "skin": 0.0946,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.4062,
-     0.5452,
-     0.45,
-     0.3765
-    ],
-    "type": "other",
-    "path": "review/B010-P005-V4p3.jpg",
-    "w": 422,
-    "h": 452,
-    "text_share": 0.071,
-    "skin": 0.0,
-    "badges_painted": 44
-   }
-  ]
- },
- "B010-P005-V4#1": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0433,
-     1.0,
-     0.3998
-    ],
-    "type": "on-model",
-    "path": "review/B010-P005-V4-1p0.jpg",
-    "w": 416,
-    "h": 479,
-    "text_share": 0.0,
-    "skin": 0.0663,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.0,
-     0.4431,
-     1.0,
-     0.5569
-    ],
-    "type": "on-model",
-    "path": "review/B010-P005-V4-1p1.jpg",
-    "w": 416,
-    "h": 669,
-    "text_share": 0.0,
-    "skin": 0.078,
-    "badges_painted": 0
    }
   ]
  },
@@ -11942,22 +9677,6 @@
   "split": false,
   "why": "no clear gutter"
  },
- "B075-P002#0": {
-  "split": false,
-  "why": "no clear gutter"
- },
- "B075-P002#1": {
-  "split": false,
-  "why": "no clear gutter"
- },
- "B075-P002#2": {
-  "split": false,
-  "why": "no clear gutter"
- },
- "B075-P002#3": {
-  "split": false,
-  "why": "no clear gutter"
- },
  "B075-P004#0": {
   "split": false,
   "why": "no clear gutter"
@@ -11965,136 +9684,6 @@
  "B075-P006#0": {
   "split": false,
   "why": "no clear gutter"
- },
- "B075-P007#0": {
-  "split": false,
-  "why": "too many panels"
- },
- "B075-P007#1": {
-  "split": false,
-  "why": "no clear gutter"
- },
- "B075-P007#2": {
-  "split": false,
-  "why": "too many panels"
- },
- "B076-P001#0": {
-  "split": false,
-  "why": "too many panels"
- },
- "B076-P001#1": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0,
-     0.675,
-     0.6435
-    ],
-    "type": "detail",
-    "path": "review/B076-P001-1p0.jpg",
-    "w": 222,
-    "h": 772,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.0,
-     0.7284,
-     1.0,
-     0.2716
-    ],
-    "type": "flat lay",
-    "path": "review/B076-P001-1p2.jpg",
-    "w": 329,
-    "h": 326,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0,
-    "components": 1,
-    "edge_pixels": 167,
-    "words_inside": 0,
-    "clean": false,
-    "why": "touches the frame"
-   }
-  ]
- },
- "B076-P001#2": {
-  "split": false,
-  "why": "no clear gutter"
- },
- "B076-P001#3": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0,
-     0.8594,
-     1.0
-    ],
-    "type": "other",
-    "path": "review/B076-P001-3p0.jpg",
-    "w": 586,
-    "h": 1200,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.8594,
-     0.0,
-     0.1406,
-     1.0
-    ],
-    "type": "detail",
-    "path": "review/B076-P001-3p1.jpg",
-    "w": 97,
-    "h": 1200,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0
-   }
-  ]
- },
- "B076-P001#4": {
-  "split": true,
-  "panels": [
-   {
-    "box": [
-     0.0,
-     0.0,
-     1.0,
-     0.4608
-    ],
-    "type": "other",
-    "path": "review/B076-P001-4p0.jpg",
-    "w": 1102,
-    "h": 465,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0
-   },
-   {
-    "box": [
-     0.0,
-     0.4608,
-     1.0,
-     0.5392
-    ],
-    "type": "other",
-    "path": "review/B076-P001-4p1.jpg",
-    "w": 1102,
-    "h": 546,
-    "text_share": 0.0,
-    "skin": 0.0,
-    "badges_painted": 0
-   }
-  ]
  },
  "B076-P005#0": {
   "split": false,
@@ -12366,43 +9955,7 @@
   "split": false,
   "why": "no clear gutter"
  },
- "B088-P009#0": {
-  "split": false,
-  "why": "no clear gutter"
- },
- "B088-P009#1": {
-  "split": false,
-  "why": "no clear gutter"
- },
- "B089-P001#0": {
-  "split": false,
-  "why": "no clear gutter"
- },
- "B089-P001#1": {
-  "split": false,
-  "why": "no clear gutter"
- },
- "B089-P002#0": {
-  "split": false,
-  "why": "no clear gutter"
- },
- "B089-P002#1": {
-  "split": false,
-  "why": "no clear gutter"
- },
- "B089-P002#2": {
-  "split": false,
-  "why": "no clear gutter"
- },
  "B089-P003#0": {
-  "split": false,
-  "why": "no clear gutter"
- },
- "B090-P001#0": {
-  "split": false,
-  "why": "no clear gutter"
- },
- "B090-P001#1": {
   "split": false,
   "why": "no clear gutter"
  },
@@ -12422,11 +9975,1951 @@
   "split": false,
   "why": "no clear gutter"
  },
+ "B010-P005-V4#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.1443,
+     0.4375,
+     0.2714
+    ],
+    "type": "flat lay",
+    "path": "review/B010-P005-V4p0.jpg",
+    "w": 409,
+    "h": 325,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0,
+    "components": 1,
+    "edge_pixels": 0,
+    "words_inside": 0,
+    "clean": true,
+    "why": "",
+    "cut": "review/B010-P005-V4p0-cut.webp"
+   },
+   {
+    "box": [
+     0.4375,
+     0.1443,
+     0.5625,
+     0.2714
+    ],
+    "type": "other",
+    "path": "review/B010-P005-V4p1.jpg",
+    "w": 528,
+    "h": 325,
+    "text_share": 0.027,
+    "skin": 0.0,
+    "badges_painted": 7
+   },
+   {
+    "box": [
+     0.0,
+     0.5452,
+     0.4062,
+     0.3765
+    ],
+    "type": "on-model",
+    "path": "review/B010-P005-V4p2.jpg",
+    "w": 380,
+    "h": 452,
+    "text_share": 0.0,
+    "skin": 0.0946,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.4062,
+     0.5452,
+     0.45,
+     0.3765
+    ],
+    "type": "other",
+    "path": "review/B010-P005-V4p3.jpg",
+    "w": 422,
+    "h": 452,
+    "text_share": 0.071,
+    "skin": 0.0,
+    "badges_painted": 44
+   }
+  ]
+ },
+ "B010-P005-V5#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0433,
+     1.0,
+     0.3998
+    ],
+    "type": "on-model",
+    "path": "review/B010-P005-V5p0.jpg",
+    "w": 416,
+    "h": 479,
+    "text_share": 0.0,
+    "skin": 0.0663,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.0,
+     0.4431,
+     1.0,
+     0.5569
+    ],
+    "type": "on-model",
+    "path": "review/B010-P005-V5p1.jpg",
+    "w": 416,
+    "h": 669,
+    "text_share": 0.0,
+    "skin": 0.078,
+    "badges_painted": 0
+   }
+  ]
+ },
+ "B011-P005#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0771,
+     1.0,
+     0.3944
+    ],
+    "type": "flat lay",
+    "path": "review/B011-P005p0.jpg",
+    "w": 485,
+    "h": 473,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0,
+    "components": 1,
+    "edge_pixels": 0,
+    "words_inside": 0,
+    "clean": true,
+    "why": "",
+    "cut": "review/B011-P005p0-cut.webp"
+   },
+   {
+    "box": [
+     0.0,
+     0.4716,
+     1.0,
+     0.488
+    ],
+    "type": "on-model",
+    "path": "review/B011-P005p1.jpg",
+    "w": 485,
+    "h": 586,
+    "text_share": 0.0,
+    "skin": 0.0569,
+    "badges_painted": 0
+   }
+  ]
+ },
+ "B011-P005-V2#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0759,
+     1.0,
+     0.3932
+    ],
+    "type": "flat lay",
+    "path": "review/B011-P005-V2p0.jpg",
+    "w": 485,
+    "h": 471,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0,
+    "components": 1,
+    "edge_pixels": 0,
+    "words_inside": 0,
+    "clean": true,
+    "why": "",
+    "cut": "review/B011-P005-V2p0-cut.webp"
+   },
+   {
+    "box": [
+     0.0,
+     0.469,
+     1.0,
+     0.4918
+    ],
+    "type": "on-model",
+    "path": "review/B011-P005-V2p1.jpg",
+    "w": 485,
+    "h": 590,
+    "text_share": 0.0,
+    "skin": 0.0546,
+    "badges_painted": 0
+   }
+  ]
+ },
+ "B012-P003#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0822,
+     0.3781,
+     0.3742
+    ],
+    "type": "detail",
+    "path": "review/B012-P003p0.jpg",
+    "w": 183,
+    "h": 449,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.6875,
+     0.0822,
+     0.3125,
+     0.3742
+    ],
+    "type": "detail",
+    "path": "review/B012-P003p3.jpg",
+    "w": 152,
+    "h": 449,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.0,
+     0.4564,
+     1.0,
+     0.5032
+    ],
+    "type": "on-model",
+    "path": "review/B012-P003p4.jpg",
+    "w": 485,
+    "h": 604,
+    "text_share": 0.0,
+    "skin": 0.0251,
+    "badges_painted": 0
+   }
+  ]
+ },
+ "B012-P003-V3#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0759,
+     1.0,
+     0.3881
+    ],
+    "type": "flat lay",
+    "path": "review/B012-P003-V3p0.jpg",
+    "w": 485,
+    "h": 465,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0,
+    "components": 1,
+    "edge_pixels": 0,
+    "words_inside": 0,
+    "clean": true,
+    "why": "",
+    "cut": "review/B012-P003-V3p0-cut.webp"
+   },
+   {
+    "box": [
+     0.0,
+     0.464,
+     1.0,
+     0.4968
+    ],
+    "type": "on-model",
+    "path": "review/B012-P003-V3p1.jpg",
+    "w": 485,
+    "h": 596,
+    "text_share": 0.0,
+    "skin": 0.0834,
+    "badges_painted": 0
+   }
+  ]
+ },
+ "B013-P001#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0465,
+     0.4375,
+     0.401
+    ],
+    "type": "flat lay",
+    "path": "review/B013-P001p0.jpg",
+    "w": 409,
+    "h": 481,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0,
+    "components": 1,
+    "edge_pixels": 0,
+    "words_inside": 0,
+    "clean": true,
+    "why": "",
+    "cut": "review/B013-P001p0-cut.webp"
+   },
+   {
+    "box": [
+     0.4375,
+     0.0465,
+     0.5625,
+     0.401
+    ],
+    "type": "other",
+    "path": "review/B013-P001p1.jpg",
+    "w": 528,
+    "h": 481,
+    "text_share": 0.058,
+    "skin": 0.0,
+    "badges_painted": 17
+   },
+   {
+    "box": [
+     0.0,
+     0.4988,
+     0.4062,
+     0.3619
+    ],
+    "type": "on-model",
+    "path": "review/B013-P001p2.jpg",
+    "w": 380,
+    "h": 434,
+    "text_share": 0.0,
+    "skin": 0.1228,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.4062,
+     0.4988,
+     0.5938,
+     0.3619
+    ],
+    "type": "flat lay",
+    "path": "review/B013-P001p3.jpg",
+    "w": 557,
+    "h": 434,
+    "text_share": 0.097,
+    "skin": 0.0,
+    "badges_painted": 36,
+    "components": 2,
+    "edge_pixels": 36,
+    "words_inside": 28,
+    "clean": false,
+    "why": "more than one piece, touches the frame, text inside it"
+   }
+  ]
+ },
+ "B013-P001-V4#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.1222,
+     0.4375,
+     0.2689
+    ],
+    "type": "flat lay",
+    "path": "review/B013-P001-V4p0.jpg",
+    "w": 409,
+    "h": 323,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0,
+    "components": 1,
+    "edge_pixels": 0,
+    "words_inside": 0,
+    "clean": true,
+    "why": "",
+    "cut": "review/B013-P001-V4p0-cut.webp"
+   },
+   {
+    "box": [
+     0.4375,
+     0.1222,
+     0.5625,
+     0.2689
+    ],
+    "type": "other",
+    "path": "review/B013-P001-V4p1.jpg",
+    "w": 528,
+    "h": 323,
+    "text_share": 0.024,
+    "skin": 0.0,
+    "badges_painted": 5
+   },
+   {
+    "box": [
+     0.0,
+     0.4768,
+     0.4094,
+     0.4474
+    ],
+    "type": "on-model",
+    "path": "review/B013-P001-V4p2.jpg",
+    "w": 383,
+    "h": 537,
+    "text_share": 0.0,
+    "skin": 0.0692,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.4094,
+     0.4768,
+     0.4344,
+     0.4474
+    ],
+    "type": "other",
+    "path": "review/B013-P001-V4p3.jpg",
+    "w": 407,
+    "h": 537,
+    "text_share": 0.074,
+    "skin": 0.0,
+    "badges_painted": 49
+   },
+   {
+    "box": [
+     0.8438,
+     0.4768,
+     0.1562,
+     0.4474
+    ],
+    "type": "detail",
+    "path": "review/B013-P001-V4p4.jpg",
+    "w": 147,
+    "h": 537,
+    "text_share": 0.039,
+    "skin": 0.0,
+    "badges_painted": 14
+   }
+  ]
+ },
+ "B015-P001#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0771,
+     1.0,
+     0.3881
+    ],
+    "type": "flat lay",
+    "path": "review/B015-P001p0.jpg",
+    "w": 485,
+    "h": 466,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0,
+    "components": 1,
+    "edge_pixels": 0,
+    "words_inside": 0,
+    "clean": true,
+    "why": "",
+    "cut": "review/B015-P001p0-cut.webp"
+   },
+   {
+    "box": [
+     0.0,
+     0.4652,
+     1.0,
+     0.4968
+    ],
+    "type": "on-model",
+    "path": "review/B015-P001p1.jpg",
+    "w": 485,
+    "h": 596,
+    "text_share": 0.0,
+    "skin": 0.0536,
+    "badges_painted": 0
+   }
+  ]
+ },
+ "B015-P001-V2#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0585,
+     1.0,
+     0.3451
+    ],
+    "type": "flat lay",
+    "path": "review/B015-P001-V2p0.jpg",
+    "w": 468,
+    "h": 414,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0,
+    "components": 1,
+    "edge_pixels": 0,
+    "words_inside": 0,
+    "clean": true,
+    "why": "",
+    "cut": "review/B015-P001-V2p0-cut.webp"
+   },
+   {
+    "box": [
+     0.0,
+     0.4037,
+     1.0,
+     0.4878
+    ],
+    "type": "on-model",
+    "path": "review/B015-P001-V2p1.jpg",
+    "w": 468,
+    "h": 585,
+    "text_share": 0.0,
+    "skin": 0.2004,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.0,
+     0.8915,
+     1.0,
+     0.1085
+    ],
+    "type": "detail",
+    "path": "review/B015-P001-V2p2.jpg",
+    "w": 468,
+    "h": 131,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0
+   }
+  ]
+ },
+ "B015-P001-V3#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0607,
+     1.0,
+     0.4185
+    ],
+    "type": "flat lay",
+    "path": "review/B015-P001-V3p0.jpg",
+    "w": 485,
+    "h": 502,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0,
+    "components": 1,
+    "edge_pixels": 0,
+    "words_inside": 0,
+    "clean": true,
+    "why": "",
+    "cut": "review/B015-P001-V3p0-cut.webp"
+   },
+   {
+    "box": [
+     0.0,
+     0.4791,
+     1.0,
+     0.4829
+    ],
+    "type": "on-model",
+    "path": "review/B015-P001-V3p1.jpg",
+    "w": 485,
+    "h": 580,
+    "text_share": 0.0,
+    "skin": 0.0658,
+    "badges_painted": 0
+   }
+  ]
+ },
+ "B017-P001#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0834,
+     1.0,
+     0.3856
+    ],
+    "type": "on-model",
+    "path": "review/B017-P001p0.jpg",
+    "w": 485,
+    "h": 462,
+    "text_share": 0.0,
+    "skin": 0.0682,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.0,
+     0.469,
+     1.0,
+     0.4918
+    ],
+    "type": "on-model",
+    "path": "review/B017-P001p1.jpg",
+    "w": 485,
+    "h": 590,
+    "text_share": 0.0,
+    "skin": 0.096,
+    "badges_painted": 0
+   }
+  ]
+ },
+ "B017-P001-V4#0": {
+  "split": false,
+  "why": "too many panels"
+ },
+ "B018-P001#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.1205,
+     0.4313,
+     0.3036
+    ],
+    "type": "flat lay",
+    "path": "review/B018-P001p0.jpg",
+    "w": 398,
+    "h": 364,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0,
+    "components": 1,
+    "edge_pixels": 0,
+    "words_inside": 0,
+    "clean": true,
+    "why": "",
+    "cut": "review/B018-P001p0-cut.webp"
+   },
+   {
+    "box": [
+     0.4313,
+     0.1205,
+     0.5687,
+     0.3036
+    ],
+    "type": "other",
+    "path": "review/B018-P001p1.jpg",
+    "w": 526,
+    "h": 364,
+    "text_share": 0.012,
+    "skin": 0.0,
+    "badges_painted": 2
+   },
+   {
+    "box": [
+     0.0,
+     0.4867,
+     0.4062,
+     0.4169
+    ],
+    "type": "on-model",
+    "path": "review/B018-P001p2.jpg",
+    "w": 375,
+    "h": 500,
+    "text_share": 0.0,
+    "skin": 0.0819,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.4062,
+     0.4867,
+     0.5938,
+     0.4169
+    ],
+    "type": "flat lay",
+    "path": "review/B018-P001p3.jpg",
+    "w": 549,
+    "h": 500,
+    "text_share": 0.037,
+    "skin": 0.0,
+    "badges_painted": 33,
+    "components": 1,
+    "edge_pixels": 0,
+    "words_inside": 0,
+    "clean": true,
+    "why": "",
+    "cut": "review/B018-P001p3-cut.webp"
+   }
+  ]
+ },
+ "B018-P001-V4#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0796,
+     1.0,
+     0.3805
+    ],
+    "type": "flat lay",
+    "path": "review/B018-P001-V4p0.jpg",
+    "w": 485,
+    "h": 457,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0,
+    "components": 1,
+    "edge_pixels": 0,
+    "words_inside": 0,
+    "clean": true,
+    "why": "",
+    "cut": "review/B018-P001-V4p0-cut.webp"
+   },
+   {
+    "box": [
+     0.0,
+     0.4602,
+     1.0,
+     0.4994
+    ],
+    "type": "on-model",
+    "path": "review/B018-P001-V4p1.jpg",
+    "w": 485,
+    "h": 599,
+    "text_share": 0.0,
+    "skin": 0.0558,
+    "badges_painted": 0
+   }
+  ]
+ },
+ "B019-P001#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.1244,
+     0.4375,
+     0.2761
+    ],
+    "type": "flat lay",
+    "path": "review/B019-P001p0.jpg",
+    "w": 417,
+    "h": 331,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0,
+    "components": 1,
+    "edge_pixels": 0,
+    "words_inside": 0,
+    "clean": true,
+    "why": "",
+    "cut": "review/B019-P001p0-cut.webp"
+   },
+   {
+    "box": [
+     0.4375,
+     0.1244,
+     0.5625,
+     0.2761
+    ],
+    "type": "other",
+    "path": "review/B019-P001p1.jpg",
+    "w": 538,
+    "h": 331,
+    "text_share": 0.024,
+    "skin": 0.0,
+    "badges_painted": 5
+   },
+   {
+    "box": [
+     0.0,
+     0.4876,
+     0.4156,
+     0.4378
+    ],
+    "type": "on-model",
+    "path": "review/B019-P001p2.jpg",
+    "w": 396,
+    "h": 525,
+    "text_share": 0.0,
+    "skin": 0.0681,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.4156,
+     0.4876,
+     0.5844,
+     0.4378
+    ],
+    "type": "other",
+    "path": "review/B019-P001p3.jpg",
+    "w": 559,
+    "h": 525,
+    "text_share": 0.072,
+    "skin": 0.0,
+    "badges_painted": 57
+   }
+  ]
+ },
+ "B019-P001-V2#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0537,
+     1.0,
+     0.461
+    ],
+    "type": "on-model",
+    "path": "review/B019-P001-V2p0.jpg",
+    "w": 468,
+    "h": 553,
+    "text_share": 0.0,
+    "skin": 0.0758,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.0,
+     0.5146,
+     1.0,
+     0.4402
+    ],
+    "type": "on-model",
+    "path": "review/B019-P001-V2p1.jpg",
+    "w": 468,
+    "h": 528,
+    "text_share": 0.0,
+    "skin": 0.0156,
+    "badges_painted": 0
+   }
+  ]
+ },
+ "B019-P001-V2#1": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0607,
+     1.0,
+     0.4172
+    ],
+    "type": "flat lay",
+    "path": "review/B019-P001-V2-1p0.jpg",
+    "w": 485,
+    "h": 501,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0,
+    "components": 1,
+    "edge_pixels": 0,
+    "words_inside": 0,
+    "clean": true,
+    "why": "",
+    "cut": "review/B019-P001-V2-1p0-cut.webp"
+   },
+   {
+    "box": [
+     0.0,
+     0.4779,
+     1.0,
+     0.4817
+    ],
+    "type": "on-model",
+    "path": "review/B019-P001-V2-1p1.jpg",
+    "w": 485,
+    "h": 578,
+    "text_share": 0.0,
+    "skin": 0.0749,
+    "badges_painted": 0
+   }
+  ]
+ },
+ "B021-P001#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.1029,
+     1.0,
+     0.4865
+    ],
+    "type": "flat lay",
+    "path": "review/B021-P001p0.jpg",
+    "w": 449,
+    "h": 584,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0,
+    "components": 1,
+    "edge_pixels": 0,
+    "words_inside": 0,
+    "clean": true,
+    "why": "",
+    "cut": "review/B021-P001p0-cut.webp"
+   },
+   {
+    "box": [
+     0.0,
+     0.5895,
+     1.0,
+     0.4105
+    ],
+    "type": "flat lay",
+    "path": "review/B021-P001p1.jpg",
+    "w": 449,
+    "h": 493,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0,
+    "components": 1,
+    "edge_pixels": 0,
+    "words_inside": 0,
+    "clean": true,
+    "why": "",
+    "cut": "review/B021-P001p1-cut.webp"
+   }
+  ]
+ },
+ "B021-P001-V3#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0943,
+     1.0,
+     0.4716
+    ],
+    "type": "on-model",
+    "path": "review/B021-P001-V3p0.jpg",
+    "w": 436,
+    "h": 566,
+    "text_share": 0.0,
+    "skin": 0.0231,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.0,
+     0.5659,
+     1.0,
+     0.4341
+    ],
+    "type": "on-model",
+    "path": "review/B021-P001-V3p1.jpg",
+    "w": 436,
+    "h": 521,
+    "text_share": 0.0,
+    "skin": 0.0449,
+    "badges_painted": 0
+   }
+  ]
+ },
+ "B021-P011#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B021-P011-V4#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0,
+     1.0,
+     0.5548
+    ],
+    "type": "on-model",
+    "path": "review/B021-P011-V4p0.jpg",
+    "w": 438,
+    "h": 665,
+    "text_share": 0.0,
+    "skin": 0.0833,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.0,
+     0.5548,
+     1.0,
+     0.4452
+    ],
+    "type": "on-model",
+    "path": "review/B021-P011-V4p1.jpg",
+    "w": 438,
+    "h": 535,
+    "text_share": 0.0,
+    "skin": 0.0325,
+    "badges_painted": 0
+   }
+  ]
+ },
+ "B023-P013#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B023-P013#1": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B023-P013-V2#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0668,
+     1.0,
+     0.4134
+    ],
+    "type": "on-model",
+    "path": "review/B023-P013-V2p0.jpg",
+    "w": 950,
+    "h": 496,
+    "text_share": 0.008,
+    "skin": 0.1931,
+    "badges_painted": 12
+   },
+   {
+    "box": [
+     0.0,
+     0.4802,
+     0.3,
+     0.4777
+    ],
+    "type": "flat lay",
+    "path": "review/B023-P013-V2p1.jpg",
+    "w": 285,
+    "h": 573,
+    "text_share": 0.003,
+    "skin": 0.0003,
+    "badges_painted": 3,
+    "components": 1,
+    "edge_pixels": 0,
+    "words_inside": 0,
+    "clean": true,
+    "why": "",
+    "cut": "review/B023-P013-V2p1-cut.webp"
+   },
+   {
+    "box": [
+     0.3,
+     0.4802,
+     0.3969,
+     0.4777
+    ],
+    "type": "on-model",
+    "path": "review/B023-P013-V2p2.jpg",
+    "w": 377,
+    "h": 573,
+    "text_share": 0.004,
+    "skin": 0.1215,
+    "badges_painted": 4
+   },
+   {
+    "box": [
+     0.6969,
+     0.4802,
+     0.2625,
+     0.4777
+    ],
+    "type": "on-model",
+    "path": "review/B023-P013-V2p3.jpg",
+    "w": 249,
+    "h": 573,
+    "text_share": 0.0,
+    "skin": 0.3102,
+    "badges_painted": 0
+   }
+  ]
+ },
+ "B028-P012#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B028-P012-V2#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B035-P004#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0,
+     1.0,
+     0.5155
+    ],
+    "type": "other",
+    "path": "review/B035-P004p0.jpg",
+    "w": 1200,
+    "h": 499,
+    "text_share": 0.002,
+    "skin": 0.0,
+    "badges_painted": 3
+   },
+   {
+    "box": [
+     0.0,
+     0.5155,
+     1.0,
+     0.2054
+    ],
+    "type": "detail",
+    "path": "review/B035-P004p1.jpg",
+    "w": 1200,
+    "h": 198,
+    "text_share": 0.046,
+    "skin": 0.0,
+    "badges_painted": 2
+   },
+   {
+    "box": [
+     0.0,
+     0.7209,
+     1.0,
+     0.1783
+    ],
+    "type": "detail",
+    "path": "review/B035-P004p2.jpg",
+    "w": 1200,
+    "h": 173,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.2281,
+     0.8992,
+     0.7719,
+     0.1008
+    ],
+    "type": "detail",
+    "path": "review/B035-P004p4.jpg",
+    "w": 927,
+    "h": 98,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0
+   }
+  ]
+ },
+ "B035-P004-V2#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0,
+     0.65,
+     0.3743
+    ],
+    "type": "flat lay",
+    "path": "review/B035-P004-V2p0.jpg",
+    "w": 455,
+    "h": 273,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0,
+    "components": 1,
+    "edge_pixels": 342,
+    "words_inside": 0,
+    "clean": false,
+    "why": "touches the frame"
+   },
+   {
+    "box": [
+     0.65,
+     0.0,
+     0.35,
+     0.3743
+    ],
+    "type": "detail",
+    "path": "review/B035-P004-V2p1.jpg",
+    "w": 245,
+    "h": 273,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.0,
+     0.3743,
+     1.0,
+     0.6257
+    ],
+    "type": "other",
+    "path": "review/B035-P004-V2p2.jpg",
+    "w": 700,
+    "h": 458,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0
+   }
+  ]
+ },
+ "B038-P001#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0226,
+     0.4906,
+     0.5714
+    ],
+    "type": "on-model",
+    "path": "review/B038-P001p0.jpg",
+    "w": 471,
+    "h": 685,
+    "text_share": 0.0,
+    "skin": 0.0315,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.4906,
+     0.0226,
+     0.5094,
+     0.5714
+    ],
+    "type": "flat lay",
+    "path": "review/B038-P001p1.jpg",
+    "w": 491,
+    "h": 685,
+    "text_share": 0.007,
+    "skin": 0.0,
+    "badges_painted": 3,
+    "components": 1,
+    "edge_pixels": 0,
+    "words_inside": 0,
+    "clean": true,
+    "why": "",
+    "cut": "review/B038-P001p1-cut.webp"
+   },
+   {
+    "box": [
+     0.0,
+     0.594,
+     0.3344,
+     0.3709
+    ],
+    "type": "on-model",
+    "path": "review/B038-P001p2.jpg",
+    "w": 321,
+    "h": 445,
+    "text_share": 0.0,
+    "skin": 0.0493,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.3344,
+     0.594,
+     0.3125,
+     0.3709
+    ],
+    "type": "other",
+    "path": "review/B038-P001p3.jpg",
+    "w": 301,
+    "h": 445,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.6469,
+     0.594,
+     0.3531,
+     0.3709
+    ],
+    "type": "on-model",
+    "path": "review/B038-P001p4.jpg",
+    "w": 340,
+    "h": 445,
+    "text_share": 0.0,
+    "skin": 0.0271,
+    "badges_painted": 0
+   }
+  ]
+ },
+ "B038-P001-V2#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0,
+     0.4906,
+     1.0
+    ],
+    "type": "on-model",
+    "path": "review/B038-P001-V2p0.jpg",
+    "w": 490,
+    "h": 731,
+    "text_share": 0.0,
+    "skin": 0.0479,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.4906,
+     0.0,
+     0.5094,
+     1.0
+    ],
+    "type": "flat lay",
+    "path": "review/B038-P001-V2p1.jpg",
+    "w": 509,
+    "h": 731,
+    "text_share": 0.006,
+    "skin": 0.0075,
+    "badges_painted": 3,
+    "components": 1,
+    "edge_pixels": 0,
+    "words_inside": 0,
+    "clean": true,
+    "why": "",
+    "cut": "review/B038-P001-V2p1-cut.webp"
+   }
+  ]
+ },
+ "B043-P004#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0,
+     0.45,
+     1.0
+    ],
+    "type": "flat lay",
+    "path": "review/B043-P004p0.jpg",
+    "w": 374,
+    "h": 1200,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0,
+    "components": 1,
+    "edge_pixels": 905,
+    "words_inside": 0,
+    "clean": false,
+    "why": "touches the frame"
+   },
+   {
+    "box": [
+     0.45,
+     0.0,
+     0.1688,
+     1.0
+    ],
+    "type": "flat lay",
+    "path": "review/B043-P004p1.jpg",
+    "w": 141,
+    "h": 1200,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0,
+    "components": 1,
+    "edge_pixels": 1873,
+    "words_inside": 0,
+    "clean": false,
+    "why": "touches the frame"
+   },
+   {
+    "box": [
+     0.6188,
+     0.0,
+     0.1781,
+     1.0
+    ],
+    "type": "detail",
+    "path": "review/B043-P004p2.jpg",
+    "w": 148,
+    "h": 1200,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.7969,
+     0.0,
+     0.2031,
+     1.0
+    ],
+    "type": "flat lay",
+    "path": "review/B043-P004p3.jpg",
+    "w": 170,
+    "h": 1200,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0,
+    "components": 1,
+    "edge_pixels": 1821,
+    "words_inside": 0,
+    "clean": false,
+    "why": "touches the frame"
+   }
+  ]
+ },
+ "B043-P004-V4#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B049-P001#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B049-P001#1": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B049-P001-V2#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B055-P003#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B055-P003-V4#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B055-P003-V5#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B057-P005#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0,
+     1.0,
+     0.6605
+    ],
+    "type": "on-model",
+    "path": "review/B057-P005p0.jpg",
+    "w": 891,
+    "h": 792,
+    "text_share": 0.0,
+    "skin": 0.0872,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.0,
+     0.6977,
+     0.2594,
+     0.2488
+    ],
+    "type": "flat lay",
+    "path": "review/B057-P005p1.jpg",
+    "w": 231,
+    "h": 298,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0,
+    "components": 1,
+    "edge_pixels": 0,
+    "words_inside": 0,
+    "clean": true,
+    "why": "",
+    "cut": "review/B057-P005p1-cut.webp"
+   },
+   {
+    "box": [
+     0.2594,
+     0.6977,
+     0.2531,
+     0.2488
+    ],
+    "type": "flat lay",
+    "path": "review/B057-P005p2.jpg",
+    "w": 225,
+    "h": 298,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0,
+    "components": 1,
+    "edge_pixels": 0,
+    "words_inside": 0,
+    "clean": true,
+    "why": "",
+    "cut": "review/B057-P005p2-cut.webp"
+   },
+   {
+    "box": [
+     0.7375,
+     0.6977,
+     0.2625,
+     0.2488
+    ],
+    "type": "flat lay",
+    "path": "review/B057-P005p3.jpg",
+    "w": 234,
+    "h": 298,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0,
+    "components": 1,
+    "edge_pixels": 0,
+    "words_inside": 0,
+    "clean": true,
+    "why": "",
+    "cut": "review/B057-P005p3-cut.webp"
+   }
+  ]
+ },
+ "B057-P005-V2#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.1742,
+     0.3812,
+     0.6774
+    ],
+    "type": "flat lay",
+    "path": "review/B057-P005-V2p1.jpg",
+    "w": 457,
+    "h": 396,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0,
+    "components": 1,
+    "edge_pixels": 0,
+    "words_inside": 0,
+    "clean": true,
+    "why": "",
+    "cut": "review/B057-P005-V2p1-cut.webp"
+   },
+   {
+    "box": [
+     0.3812,
+     0.1742,
+     0.6188,
+     0.6774
+    ],
+    "type": "other",
+    "path": "review/B057-P005-V2p2.jpg",
+    "w": 743,
+    "h": 396,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0
+   }
+  ]
+ },
+ "B062-P008#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B062-P008-V2#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B062-P012#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0,
+     1.0,
+     0.7332
+    ],
+    "type": "flat lay",
+    "path": "review/B062-P012p0.jpg",
+    "w": 536,
+    "h": 879,
+    "text_share": 0.005,
+    "skin": 0.0089,
+    "badges_painted": 0,
+    "components": 1,
+    "edge_pixels": 302,
+    "words_inside": 0,
+    "clean": false,
+    "why": "touches the frame"
+   },
+   {
+    "box": [
+     0.1219,
+     0.7332,
+     0.8781,
+     0.2668
+    ],
+    "type": "flat lay",
+    "path": "review/B062-P012p2.jpg",
+    "w": 471,
+    "h": 321,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0,
+    "components": 1,
+    "edge_pixels": 166,
+    "words_inside": 0,
+    "clean": false,
+    "why": "touches the frame"
+   }
+  ]
+ },
+ "B062-P012-V3#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0241,
+     1.0,
+     0.5858
+    ],
+    "type": "on-model",
+    "path": "review/B062-P012-V3p0.jpg",
+    "w": 544,
+    "h": 703,
+    "text_share": 0.0,
+    "skin": 0.0421,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.0,
+     0.6099,
+     0.575,
+     0.1376
+    ],
+    "type": "on-model",
+    "path": "review/B062-P012-V3p1.jpg",
+    "w": 312,
+    "h": 166,
+    "text_share": 0.0,
+    "skin": 0.1952,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.5969,
+     0.6099,
+     0.4031,
+     0.1376
+    ],
+    "type": "other",
+    "path": "review/B062-P012-V3p2.jpg",
+    "w": 220,
+    "h": 166,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.0,
+     0.7475,
+     1.0,
+     0.2525
+    ],
+    "type": "other",
+    "path": "review/B062-P012-V3p3.jpg",
+    "w": 544,
+    "h": 303,
+    "text_share": 0.0,
+    "skin": 0.0136,
+    "badges_painted": 0
+   }
+  ]
+ },
+ "B062-P014#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0,
+     0.1313,
+     1.0
+    ],
+    "type": "detail",
+    "path": "review/B062-P014p0.jpg",
+    "w": 126,
+    "h": 1200,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.1313,
+     0.0,
+     0.8688,
+     1.0
+    ],
+    "type": "on-model",
+    "path": "review/B062-P014p1.jpg",
+    "w": 835,
+    "h": 1200,
+    "text_share": 0.001,
+    "skin": 0.1026,
+    "badges_painted": 1
+   }
+  ]
+ },
+ "B062-P014-V2#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0,
+     0.2219,
+     1.0
+    ],
+    "type": "detail",
+    "path": "review/B062-P014-V2p0.jpg",
+    "w": 244,
+    "h": 1091,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.2219,
+     0.0,
+     0.7781,
+     1.0
+    ],
+    "type": "on-model",
+    "path": "review/B062-P014-V2p1.jpg",
+    "w": 858,
+    "h": 1091,
+    "text_share": 0.008,
+    "skin": 0.1006,
+    "badges_painted": 1
+   }
+  ]
+ },
+ "B075-P002#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B075-P002-V2#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B075-P002-V3#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B075-P002-V4#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B075-P007#0": {
+  "split": false,
+  "why": "too many panels"
+ },
+ "B075-P007#1": {
+  "split": false,
+  "why": "too many panels"
+ },
+ "B075-P007-V2#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B076-P001#0": {
+  "split": false,
+  "why": "too many panels"
+ },
+ "B076-P001#1": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0,
+     0.8594,
+     1.0
+    ],
+    "type": "other",
+    "path": "review/B076-P001-1p0.jpg",
+    "w": 586,
+    "h": 1200,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.8594,
+     0.0,
+     0.1406,
+     1.0
+    ],
+    "type": "detail",
+    "path": "review/B076-P001-1p1.jpg",
+    "w": 97,
+    "h": 1200,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0
+   }
+  ]
+ },
+ "B076-P001#2": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0,
+     1.0,
+     0.4608
+    ],
+    "type": "other",
+    "path": "review/B076-P001-2p0.jpg",
+    "w": 1102,
+    "h": 465,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.0,
+     0.4608,
+     1.0,
+     0.5392
+    ],
+    "type": "other",
+    "path": "review/B076-P001-2p1.jpg",
+    "w": 1102,
+    "h": 546,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0
+   }
+  ]
+ },
+ "B076-P001-V2#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0,
+     0.675,
+     0.6435
+    ],
+    "type": "detail",
+    "path": "review/B076-P001-V2p0.jpg",
+    "w": 222,
+    "h": 772,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.0,
+     0.7284,
+     1.0,
+     0.2716
+    ],
+    "type": "flat lay",
+    "path": "review/B076-P001-V2p2.jpg",
+    "w": 329,
+    "h": 326,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0,
+    "components": 1,
+    "edge_pixels": 167,
+    "words_inside": 0,
+    "clean": false,
+    "why": "touches the frame"
+   }
+  ]
+ },
+ "B076-P001-V2#1": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B088-P009#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B088-P009-V2#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B089-P001#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B089-P001-V2#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B089-P002#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B089-P002-V2#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B089-P002-V3#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B090-P001#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B090-P001-V2#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
  "B090-P009#0": {
   "split": false,
   "why": "no clear gutter"
  },
- "B090-P009#1": {
+ "B090-P009-V2#0": {
   "split": false,
   "why": "no clear gutter"
  },
@@ -12434,19 +11927,19 @@
   "split": false,
   "why": "no clear gutter"
  },
- "B090-P010#1": {
+ "B090-P010-V2#0": {
   "split": false,
   "why": "no clear gutter"
  },
- "B090-P010#2": {
+ "B090-P010-V2#1": {
   "split": false,
   "why": "no clear gutter"
  },
- "B090-P010#3": {
+ "B090-P010-V2#2": {
   "split": false,
   "why": "no clear gutter"
  },
- "B090-P010#4": {
+ "B090-P010-V3#0": {
   "split": false,
   "why": "no clear gutter"
  },
@@ -12491,11 +11984,11 @@
    }
   ]
  },
- "B090-P013#1": {
+ "B090-P013-V2#0": {
   "split": false,
   "why": "no clear gutter"
  },
- "B090-P013#2": {
+ "B090-P013-V3#0": {
   "split": true,
   "panels": [
    {
@@ -12506,7 +11999,7 @@
      1.0
     ],
     "type": "detail",
-    "path": "review/B090-P013-2p0.jpg",
+    "path": "review/B090-P013-V3p0.jpg",
     "w": 164,
     "h": 864,
     "text_share": 0.0,
@@ -12521,7 +12014,7 @@
      1.0
     ],
     "type": "other",
-    "path": "review/B090-P013-2p1.jpg",
+    "path": "review/B090-P013-V3p1.jpg",
     "w": 711,
     "h": 864,
     "text_share": 0.0,
@@ -12530,11 +12023,360 @@
    }
   ]
  },
- "B090-P013#3": {
+ "B090-P013-V4#0": {
   "split": false,
   "why": "no clear gutter"
  },
- "B090-P013#4": {
+ "B090-P013-V5#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B091-P001#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B091-P002#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0989,
+     1.0,
+     0.6198
+    ],
+    "type": "flat lay",
+    "path": "review/B091-P002p0.jpg",
+    "w": 843,
+    "h": 744,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0,
+    "components": 1,
+    "edge_pixels": 0,
+    "words_inside": 0,
+    "clean": true,
+    "why": "",
+    "cut": "review/B091-P002p0-cut.webp"
+   },
+   {
+    "box": [
+     0.2281,
+     0.7187,
+     0.3469,
+     0.1495
+    ],
+    "type": "detail",
+    "path": "review/B091-P002p1.jpg",
+    "w": 292,
+    "h": 179,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.575,
+     0.7187,
+     0.3594,
+     0.1495
+    ],
+    "type": "detail",
+    "path": "review/B091-P002p2.jpg",
+    "w": 303,
+    "h": 179,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0
+   }
+  ]
+ },
+ "B091-P004#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.1126,
+     1.0,
+     0.6358
+    ],
+    "type": "on-model",
+    "path": "review/B091-P004p0.jpg",
+    "w": 846,
+    "h": 763,
+    "text_share": 0.0,
+    "skin": 0.0234,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.225,
+     0.7483,
+     0.35,
+     0.1501
+    ],
+    "type": "detail",
+    "path": "review/B091-P004p1.jpg",
+    "w": 296,
+    "h": 180,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.575,
+     0.7483,
+     0.3594,
+     0.1501
+    ],
+    "type": "detail",
+    "path": "review/B091-P004p2.jpg",
+    "w": 304,
+    "h": 180,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0
+   }
+  ]
+ },
+ "B091-P005#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B092-P001#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B092-P002#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B092-P002#1": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0,
+     0.85,
+     1.0
+    ],
+    "type": "on-model",
+    "path": "review/B092-P002-1p0.jpg",
+    "w": 745,
+    "h": 1200,
+    "text_share": 0.004,
+    "skin": 0.0297,
+    "badges_painted": 1
+   },
+   {
+    "box": [
+     0.85,
+     0.0,
+     0.15,
+     1.0
+    ],
+    "type": "detail",
+    "path": "review/B092-P002-1p1.jpg",
+    "w": 132,
+    "h": 1200,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0
+   }
+  ]
+ },
+ "B092-P004#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B092-P005#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0,
+     0.8375,
+     1.0
+    ],
+    "type": "on-model",
+    "path": "review/B092-P005p0.jpg",
+    "w": 761,
+    "h": 1200,
+    "text_share": 0.0,
+    "skin": 0.041,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.8375,
+     0.0,
+     0.1625,
+     1.0
+    ],
+    "type": "detail",
+    "path": "review/B092-P005p1.jpg",
+    "w": 148,
+    "h": 1200,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0
+   }
+  ]
+ },
+ "B092-P005#1": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B092-P006#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B092-P007#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B092-P008#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B092-P008#1": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0,
+     0.8438,
+     1.0
+    ],
+    "type": "on-model",
+    "path": "review/B092-P008-1p0.jpg",
+    "w": 755,
+    "h": 1200,
+    "text_share": 0.0,
+    "skin": 0.2221,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.8438,
+     0.0,
+     0.1562,
+     1.0
+    ],
+    "type": "detail",
+    "path": "review/B092-P008-1p1.jpg",
+    "w": 140,
+    "h": 1200,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0
+   }
+  ]
+ },
+ "B092-P008#2": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B092-P008#3": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B092-P009#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B092-P010#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B093-P001#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B092-P002-V2#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0,
+     0.85,
+     1.0
+    ],
+    "type": "on-model",
+    "path": "review/B092-P002-V2p0.jpg",
+    "w": 745,
+    "h": 1200,
+    "text_share": 0.004,
+    "skin": 0.0297,
+    "badges_painted": 1
+   },
+   {
+    "box": [
+     0.85,
+     0.0,
+     0.15,
+     1.0
+    ],
+    "type": "detail",
+    "path": "review/B092-P002-V2p1.jpg",
+    "w": 132,
+    "h": 1200,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0
+   }
+  ]
+ },
+ "B092-P005-V2#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B092-P008-V2#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0,
+     0.8438,
+     1.0
+    ],
+    "type": "on-model",
+    "path": "review/B092-P008-V2p0.jpg",
+    "w": 755,
+    "h": 1200,
+    "text_share": 0.0,
+    "skin": 0.2221,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.8438,
+     0.0,
+     0.1562,
+     1.0
+    ],
+    "type": "detail",
+    "path": "review/B092-P008-V2p1.jpg",
+    "w": 140,
+    "h": 1200,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0
+   }
+  ]
+ },
+ "B092-P008-V2#1": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B092-P008-V3#0": {
   "split": false,
   "why": "no clear gutter"
  }

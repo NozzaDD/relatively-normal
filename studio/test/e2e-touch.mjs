@@ -281,8 +281,10 @@ await page.waitForFunction(() => window.__studio?.products?.length > 0 && window
 await page.waitForTimeout(300);
 const multi = await page.evaluate(async () => {
   const { productVersions } = await import('./js/data.js');
+  // not a grid that has been cut into cells: Review shows those as their cells
+  const cut = new Set(window.__studio.products.map((x) => x.parent_id).filter(Boolean));
   const p = window.__studio.products.find((x) => !x.clean && x.images && x.images.length >= 3
-    && x.images[1] && x.images[1].item);
+    && x.images[1] && x.images[1].item && !cut.has(x.product_id));
   if (!p) return null;
   const v = productVersions(p);
   return { pid: p.product_id, n: p.images.length, vers: v.length, item1: p.images[1].item,
@@ -328,10 +330,18 @@ ok('placing it crops the chosen screenshot, not the first', placed2.image === 1 
 
 console.log('\n10. several products in one image');
 const gridPid = await page.evaluate(() => {
-  const p = window.__studio.products.find((x) => !x.clean && x.images && x.images.some((e) => e.suggested && e.suggested.length >= 4));
+  // a grid not yet cut into cells: one that has cells shows them instead
+  const cut = new Set(window.__studio.products.map((x) => x.parent_id).filter(Boolean));
+  const p = window.__studio.products.find((x) => !x.clean && !cut.has(x.product_id)
+    && x.images && x.images.some((e) => e.suggested && e.suggested.length >= 4));
   return p ? p.product_id : null;
 });
-ok('cell detection found at least one listing grid', !!gridPid, String(gridPid));
+// since 24 Sept every listing grid with detected cells has been cut; one
+// left uncut would still be boxed here, and the cut ones show as their cells
+const gridCards = await page.evaluate(() => { window.__studio.setView('review');
+  return document.querySelectorAll('#reviewCards .gridcard').length; });
+ok('a listing grid is either cut into cells or still offers its suggested boxes', !!gridPid || gridCards > 0,
+  `${gridPid} / ${gridCards} grid cards`);
 const target = gridPid || multi.pid;
 await page.evaluate((pid) => {
   const card = document.querySelector(`#reviewCards .rcard[data-pid="${pid}"]`);
@@ -474,8 +484,12 @@ const nBefore = await page.$$eval('#reviewCards .rcard', (e) => e.length);
 await page.check('#rMulti');
 await page.waitForTimeout(300);
 const nAfter = await page.$$eval('#reviewCards .rcard', (e) => e.length);
-const multiCount = await page.evaluate(() => window.__studio.products.filter((p) => (!p.clean || (p.several || []).length) && p.full && !p.parent_id
-  && (p.images || []).length > 1).length);
+// a grid cut into cells is shown as its cells, not as a card
+const multiCount = await page.evaluate(() => {
+  const cut = new Set(window.__studio.products.map((x) => x.parent_id).filter(Boolean));
+  return window.__studio.products.filter((p) => (!p.clean || (p.several || []).length) && p.full && !p.parent_id
+    && !cut.has(p.product_id) && (p.images || []).length > 1).length;
+});
 ok('"more than one photo" narrows to those', nAfter === multiCount && nAfter < nBefore, `${nBefore} → ${nAfter} (expect ${multiCount})`);
 await page.uncheck('#rMulti');
 await page.waitForTimeout(200);
@@ -781,11 +795,14 @@ const took = await page.evaluate(() => {
   // a cell whose picture holds several garments is never taken whole
   const S = window.__studio;
   const left = [...after.querySelectorAll('.cellpick:not(.chosen)')].map((b) => b.dataset.pid);
+  // accepted cells go to the shelf and leave the list; the heading counts them
   return { n, chosen: after.querySelectorAll('.cellpick.chosen').length,
-    leftAreSeveral: left.every((pid) => (S.productsById[pid].several || []).length > 0), left };
+    leftAreSeveral: left.every((pid) => (S.productsById[pid].several || []).length > 0), left,
+    head: after.querySelector('.rwho').textContent };
 });
 ok('"accept all cells" takes the whole grid in one tap, except several-garment cells',
-  took.chosen + took.left.length === took.n && took.chosen > 0 && took.leftAreSeveral, JSON.stringify(took));
+  took.n > 0 && took.left.length < took.n && took.leftAreSeveral
+  && took.head.includes(`${took.left.length} in Review`), JSON.stringify(took));
 
 
 
@@ -845,7 +862,9 @@ const sp = await page.evaluate(() => {
   }).filter(Boolean);
   const sameName = pairs.filter(({ a, b }) => a.product_name && a.product_name === b.product_name);
   const diffColour = pairs.filter(({ a, b }) => (a.colours[0] || {}).hex !== (b.colours[0] || {}).hex);
-  const ownPics = sib.filter((p) => (p.images || []).length > 0);
+  // a split row that measured clean is its own screenshot's cut-out and, like
+  // every clean flat lay, needs no pictures to review
+  const ownPics = sib.filter((p) => (p.images || []).length > 0 || p.clean);
   return { siblings: sib.length, pairs: pairs.length, sameName: sameName.length,
     diffColour: diffColour.length, ownPics: ownPics.length,
     derived: sib.filter((p) => p.parent_id).length };

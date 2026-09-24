@@ -128,6 +128,17 @@ def image_list(rv, sources, pid='', panels=None, shot=''):
 DETAIL_TYPES = ('detail', 'text', 'other')
 
 
+def is_detail_type(t):
+    return t in DETAIL_TYPES
+
+
+def load_json_safe(path, default=None):
+    try:
+        return json.load(open(path))
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {} if default is None else default
+
+
 def primary_picture(images):
     """The picture the shelf shows: flat lay first, the person wearing it next.
 
@@ -197,6 +208,14 @@ def build_products(rows, review):
 
     panels = load_panels()
     by_id = {r['product_id']: r for r in rows}
+    # every row's pictures as its screenshots give them, then who owns which:
+    # a colourway row carries only the pictures of its own colour and a grid
+    # cell only its own cell (colourway_pictures.py)
+    owners = load_json_safe(CAT + '/_picture_owners.json')
+    raw = {r['product_id']: image_list(review.get(r['product_id']) or {}, r['image_paths'].split(';'),
+                                       r['product_id'], panels, n(r.get('shot_type')))
+           for r in rows if not n(r.get('parent_id'))}
+    pool = {e['path']: e for imgs in raw.values() for e in imgs}
     for r in rows:
         if not n(r['asset_path']):
             continue
@@ -219,10 +238,21 @@ def build_products(rows, review):
         images = image_list(rv, (parent or r)['image_paths'].split(';'),
                             (parent or r)['product_id'], panels, n(r.get('shot_type')))
         idx = int(n(r.get('asset_image')) or 0)
+        own = (owners.get('rows') or {}).get(r['product_id'])
+        cell = (owners.get('cells') or {}).get(r['product_id'])
+        first = None
+        if cell:
+            images, idx = [cell], 0
+        elif own is not None:
+            was = images[idx]['path'] if idx < len(images) else None
+            images = [pool[x] for x in own['pictures'] if x in pool]
+            paths = [e['path'] for e in images]
+            idx = paths.index(was) if was in paths else 0
+            first = paths.index(own['primary']) if own.get('primary') in paths else None
         entry = images[idx] if idx < len(images) else (images[0] if images else None)
         out.append(dict(
             product_id=r['product_id'],
-            primary=primary_picture(images),
+            primary=first if first is not None else primary_picture(images),
             # a cell that looks like a product already filed; never merged
             twin=n(r.get('validated')) == 'possible duplicate',
             # measured by shelf_checks.py on the picture the shelf shows: a row
@@ -262,8 +292,10 @@ def build_products(rows, review):
             # review: a clean flat cut-out needs no decision; everything else
             # gets a full photo and two boxes to choose from
             clean=clean,
+            # why the shelf gate kept it in Review, as the gate wrote it
+            hold='' if clean else ((flats.get(src) or {}).get('why') or ''),
             full=dict(path=entry['path'], w=entry['w'], h=entry['h']) if (has_full and entry) else None,
-            boxes=dict(item=rv['item'], person=rv['person']) if has_full else None,
+            boxes=dict(item=rv['item'], person=rv['person']) if (has_full and not cell) else None,
             images=images or None,
             image=idx,
             parent_id=n(r.get('parent_id')),
@@ -414,6 +446,41 @@ def folder_size(p):
                for dp, _, fs in os.walk(p) for f in fs)
 
 
+def picture_key(e):
+    return '%s|%s' % (e.get('source', ''), ','.join('%.3f' % v for v in (e.get('panel_box') or [0, 0, 1, 1])))
+
+
+def write_picture_migration(products):
+    """Where every picture the desk last had went: a decision the stylist made
+    on picture k of a product (kept in her browser, keyed by product and
+    picture) follows the picture when a split or a colourway assignment moves
+    it to another row or another place. The desk applies each version once.
+    Compared against the products.json being replaced."""
+    mf = DATA + '/picture-migration.json'
+    mig = load_json_safe(mf) or {}
+    versions = mig.get('versions', [])
+    try:
+        old = json.load(open(DATA + '/products.json'))
+    except (FileNotFoundError, json.JSONDecodeError):
+        return
+    where = {}
+    for p in products:
+        for k, e in enumerate(p['images'] or []):
+            where.setdefault(picture_key(e), (p['product_id'], k))
+    moved = {}
+    for p in old:
+        if p.get('parent_id'):
+            continue                                   # a cell's decisions are on the cell
+        for k, e in enumerate(p.get('images') or []):
+            to = where.get(picture_key(e))
+            if to and to != (p['product_id'], k):
+                moved[f"{p['product_id']}#{k}"] = dict(product_id=to[0], image=to[1])
+    if moved:
+        versions.append(dict(version=(versions[-1]['version'] + 1) if versions else 1, moved=moved))
+        json.dump(dict(versions=versions), open(mf, 'w'), indent=1)
+        print('pictures that moved since the last build:', len(moved))
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--no-images', action='store_true',
@@ -448,9 +515,15 @@ def main():
                 whole_cutouts=sum(1 for p in products for e in (p['images'] or []) if e.get('whole')),
                 several=sum(1 for p in products if p['several']),
                 duplicates=sum(1 for p in products if p['duplicate_of']))
+    write_picture_migration(products)
     json.dump(products, open(DATA + '/products.json', 'w'), separators=(',', ':'))
     json.dump(inspiration, open(DATA + '/inspiration.json', 'w'), separators=(',', ':'))
     json.dump(meta, open(DATA + '/meta.json', 'w'), indent=1)
+    # the palettes beside the canvas: rebuilt from the frameworks and the
+    # AW26/27 seed, then copied as they are
+    import build_palettes
+    build_palettes.main()
+    shutil.copyfile(ROOT + '/content/palettes/palettes.json', DATA + '/palettes.json')
 
     if not a.no_images:
         copy_assets(products, {r['product_id']: r for r in prod_rows})
