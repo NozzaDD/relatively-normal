@@ -8,7 +8,7 @@
 
 import { cropLayout, SLOT_ORDER } from './model.js';
 import { isReviewed, effectiveChoice, imageEntry, splitId, productVersions,
-  SLOT_PICK, choiceBox, choiceBase, isSeveral, isDuplicate } from './data.js';
+  SLOT_PICK, choiceBox, choiceBase, isSeveral, isDuplicate, onShelf } from './data.js';
 
 /** Every screenshot of a product the desk can draw on, best first. */
 export function productImages(p) {
@@ -342,10 +342,15 @@ export function createReview(api) {
     const todo = list.filter((p) => !isReviewed(p, api.choices));
     const doneList = list.filter((p) => isReviewed(p, api.choices));
     for (const p of [...todo, ...doneList]) {
-      cards.appendChild(card(p));
+      // a grid that has been cut into cells is its cells now, not a picture of
+      // several garments to box: say where they are and show the ones left
       const mine = cells[p.product_id];
-      const g = mine && mine.length ? cellGroup(p, mine) : null;
-      if (g) cards.appendChild(g);
+      if (mine && mine.length) {
+        const g = gridCard(p, mine);
+        if (g) cards.appendChild(g);
+        continue;
+      }
+      cards.appendChild(card(p));
     }
   }
 
@@ -354,11 +359,30 @@ export function createReview(api) {
    * the whole grid: a shop's page of twelve is twelve decisions otherwise, and
    * they are the same decision twelve times.
    */
-  function cellGroup(parent, all) {
+  /**
+   * A grid already cut into cells: "N cells: M on the shelf, K in Review",
+   * the K underneath with Accept all cells. A cell is on the shelf when the
+   * gate passed it or she accepted it; the rest wait here, each saying why.
+   */
+  function gridCard(parent, all) {
+    const shelf = all.filter((c) => onShelf(c, api.choices, false));
+    const waiting = all.filter((c) => !onShelf(c, api.choices, false) && !isDuplicate(c, api.choices)
+      && !effectiveChoice(c, api.choices)?.hidden);
+    const shown = (state.noSlot || state.checkSlot || state.slot) ? waiting.filter(matchesSlotFilters) : waiting;
+    if (!shown.length && (state.noSlot || state.checkSlot || state.slot)) return null;
+    const head = `${all.length} cell${all.length === 1 ? '' : 's'}: ${shelf.length} on the shelf, `
+      + `${waiting.length} in Review`;
+    const g = cellGroup(parent, shown, head);
+    g.classList.add('gridcard');
+    g.dataset.pid = parent.product_id;
+    return g;
+  }
+
+  function cellGroup(parent, all, heading) {
     // the slot filters reach the cells too: they are where the missing slots are
-    const cells = (state.noSlot || state.checkSlot || state.slot)
+    const cells = heading ? all : (state.noSlot || state.checkSlot || state.slot)
       ? all.filter(matchesSlotFilters) : all;
-    if (!cells.length) return null;
+    if (!cells.length && !heading) return null;
     const wrap = document.createElement('div');
     wrap.className = 'cellgroup';
     const head = document.createElement('div');
@@ -366,7 +390,8 @@ export function createReview(api) {
     const left = cells.filter((c) => !isReviewed(c, api.choices)).length;
     const who = document.createElement('span');
     who.className = 'rwho';
-    who.textContent = `${cells.length} cell${cells.length === 1 ? '' : 's'} cut from this grid`
+    who.textContent = heading ? `${parent.product_id} · ${heading}`
+      : `${cells.length} cell${cells.length === 1 ? '' : 's'} cut from this grid`
       + (left ? `, ${left} still to decide` : ', all decided');
     head.appendChild(who);
     const takeAll = document.createElement('button');
@@ -376,7 +401,7 @@ export function createReview(api) {
       for (const c of cells) api.choices[c.product_id] = { ...(api.choices[c.product_id] || {}), choice: 'cutout' };
       saveChoices(api.choices); api.onChange(); render();
     });
-    head.appendChild(takeAll);
+    if (cells.length) head.appendChild(takeAll);
     wrap.appendChild(head);
     const row = document.createElement('div');
     row.className = 'cells';
@@ -404,7 +429,13 @@ export function createReview(api) {
         b.appendChild(d);
       }
       b.appendChild(t);
-      b.title = [c.product_name, c.price].filter(Boolean).join(' — ') || c.product_id;
+      if (c.hold && !isReviewed(c, api.choices)) {
+        const w = document.createElement('span');
+        w.className = 'cellcap';
+        w.textContent = c.hold;                  // why the gate kept it here
+        b.appendChild(w);
+      }
+      b.title = [c.product_name, c.price, c.hold].filter(Boolean).join(' — ') || c.product_id;
       b.addEventListener('click', () => {
         const had = isReviewed(c, api.choices);
         if (had) delete api.choices[c.product_id];

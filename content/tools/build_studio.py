@@ -292,6 +292,8 @@ def build_products(rows, review):
             # review: a clean flat cut-out needs no decision; everything else
             # gets a full photo and two boxes to choose from
             clean=clean,
+            # why the shelf gate kept it in Review, as the gate wrote it
+            hold='' if clean else ((flats.get(src) or {}).get('why') or ''),
             full=dict(path=entry['path'], w=entry['w'], h=entry['h']) if (has_full and entry) else None,
             boxes=dict(item=rv['item'], person=rv['person']) if (has_full and not cell) else None,
             images=images or None,

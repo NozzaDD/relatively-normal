@@ -348,3 +348,15 @@ Changed:
 - `read_grids.py --ingest` leaves the rows of pages it did not read in `_grid_cells_compare.json`; it used to write only its own.
 
 Order for an ingest: `cluster_products.py --append` → viewing rows → `build_products.py` → `make_assets.py SHOTMAP --new` (SHOTMAP: `{product_id: shot_type}` from products.csv) → `build_products.py` → `crop_figures.py` → `asset_quality.py` → `flat_lays.py` → `build_review_images.py` → `panels.py` → `name_split.py --only <new multi-screenshot rows>` → `read_grids.py --render` → readers → `--ingest` → `extract_colours.py --new` → `build_products.py` → `colourway_pictures.py` → `shelf_checks.py` → `build_studio.py`. Run `build_products.py` from the products.csv on main (git checkout it first) so rows made earlier in the same run are not frozen half-built.
+
+## Added 24 September 2026 (afternoon) — the eye-read gate, the vocabulary applied
+
+| Script | What it does |
+|---|---|
+| `eye_gate.py` | the shelf gate for listing-grid cells **read by eye**. Drops two of flat_lays.py's questions that only ever said no for the wrong reason on a shop's category tiles: the skin share (tan, brown, camel and burgundy leather and pink linings sit in the skin band) and "clear of the frame" (shops crop tight). Keeps one piece, no text inside, not a sliver (fills ≥ 0.2 of its box, no longer than 1:8), not too small (≥ 60 px). A person then looks at every cell it would move, 30 a contact sheet (`--sheets DIR`), and lists in `HELD` / `HELD_GRIDS` what is on a model, worn, a prop in the cut or otherwise not a single product. Writes `gate: "eye"` into `_grid_cells.json` and the verdict into `_flat_lays.json`. Geometric cells keep flat_lays.py's gate. |
+
+- **The premise holds for most shops, not all.** Of the 521 cells the gate would have moved, 190 were on a model: CLOSED, Toteme, Lemaire, Studio Nicholson, Arket, A.P.C. and others show their category pages on people. They are in `HELD_GRIDS` and stay in Review. Run the contact-sheet pass on every new grid.
+- `build_products.py` names every colour from its hex on every build (`name_from_hex`): the family and the name are a function of the hex and the vocabulary in `colour_names.py`, so they are no longer frozen with the reading. Hexes, shares, lightness and the neutral flag still are.
+- `build_studio.py` exports `hold`, the reason the gate kept a row in Review; the desk shows it under the cell.
+
+Order after a grid ingest: `read_grids.py --ingest` → `eye_gate.py --sheets DIR` → the contact-sheet pass into `HELD` → `eye_gate.py` → `build_products.py` → `shelf_checks.py` → `build_studio.py`.
