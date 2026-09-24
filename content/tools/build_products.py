@@ -680,6 +680,14 @@ def split_rows(choices, by_id, review, filed=None):
 
 
 def main():
+    # the share sheet's copies (asset-choices-2.json …) and stubs (text.txt)
+    # first: merged and deleted, or — if one is broken — nothing built at all
+    import tidy_exports
+    try:
+        tidy_exports.tidy()
+    except tidy_exports.BrokenExport as e:
+        print(f'::error::Export not applied, nothing changed — {e}')
+        sys.exit(1)
     filed = filed_rows()
     rows = read_rows()
     keep = kept_columns()

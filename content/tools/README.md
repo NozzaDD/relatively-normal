@@ -394,3 +394,10 @@ Changed:
 - `shelf_checks.py`: a cut that measures one piece in fewer than three colour regions is not "the style's all-colours photo", whatever screenshot it came from.
 
 Order for a re-cut: `recut_hidden.py --cut` → `--sheets` and a person reading them into `LOOKS_RIGHT` → `--send` → drop the re-cut rows from `products.csv` and their `_colours.json` entries, `extract_colours.py --new` → `build_products.py` → `shelf_checks.py` → `build_studio.py`. Needs `rembg` with `isnet-general-use`, `u2net` and `u2net_cloth_seg` (each ~170 MB, downloaded on first use), `scipy`, `numpy`.
+## Added 24 September 2026 (night) — exports tidy themselves
+
+| Script | What it does |
+|---|---|
+| `tidy_exports.py` | merges every `content/catalogue/asset-choices*.json` (the copies the iPad's Files app makes when the name is taken) into `asset-choices.json`, keyed by product ID, the newest export winning — by the `exported` time inside the file, not the name; deletes the copies and the share sheet's `text.txt`, `text-2.txt` … in `content/catalogue/` and `content/outfits/`. A broken or unreadable export stops it before anything is changed. `build_products.py` runs it first; so does the *Apply shelf choices* workflow, whose path filter now watches `asset-choices*.json`. `test_tidy_exports.py` tests it. |
+
+The desk now writes the full export time (`2026-09-24T18:30:00.000Z`), not the day: two exports of one day could not be told apart. Older date-only exports of the same day count the copy as newer than `asset-choices.json`, since a copy only exists because a new export was saved beside it.

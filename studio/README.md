@@ -198,11 +198,21 @@ one by one. Each Review card says how many photos the product has, and
 than thrown away — in `content/catalogue/asset-choices.json` by
 `migrate_trim.py`, and in this browser's own storage when the desk next loads.
 
-**Pull in Working Copy before saving an export.** A push of
-`asset-choices.json` to `main` makes GitHub rebuild the shelf and commit the
-result back as *Apply shelf choices (auto)*; pulling first keeps your next
-commit on top of it. A failed rebuild commits nothing — see it under the
-repository's **Actions** tab, workflow *Apply shelf choices*.
+**Saving an export: save, commit, push, then pull.** Save the export into
+`content/catalogue/` under whatever name the Files app offers —
+`asset-choices.json`, `asset-choices-2.json`, `asset-choices 3.json` are all
+fine — then commit and push, then pull. Never rename or delete one by hand.
+The push makes GitHub merge every `asset-choices*.json` into
+`asset-choices.json`, product by product, the newest export winning where two
+disagree (by the export time written inside each file, not by its name);
+delete the extra copies and the share sheet's `text.txt` stubs in
+`content/catalogue/` and `content/outfits/`; rebuild the shelf; and commit it
+all back as *Apply shelf choices (auto)*. Pulling afterwards brings that tidy
+commit down, so your next save starts from it. If an export is broken or
+unreadable the run stops, changes nothing and names the file — see it under
+the repository's **Actions** tab, workflow *Apply shelf choices*. A local
+build (`build_products.py`) does the same tidying first
+(`content/tools/tidy_exports.py`).
 
 **Frame…** on the canvas bar is one setting for every framed image on the
 board — the inspiration image, page tiles and every box: thin border, white

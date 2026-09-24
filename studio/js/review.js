@@ -127,7 +127,9 @@ export function choicesFile(choices) {
     if (e) out[pid] = e;
   }
   return { kind: 'relatively-normal.asset-choices', version: 1,
-    exported: new Date().toISOString().slice(0, 10), choices: out };
+    // the full time, not the day: tidy_exports.py merges several exports
+    // saved under different names, and the newest one wins
+    exported: new Date().toISOString(), choices: out };
 }
 
 // choiceBox and choiceBase live in data.js now, next to shelfView, which the
