@@ -246,8 +246,8 @@
    "image": 0
   },
   "B032-P001#1": {
-   "product_id": "B032-P001",
-   "image": 1
+   "product_id": "B032-P001-V3",
+   "image": 0
   },
   "B032-P001#2": {
    "product_id": "B032-P001-V2",
@@ -662,7 +662,7 @@
    "image": 1
   },
   "B075-P007#1": {
-   "product_id": "B075-P007-V2",
+   "product_id": "B075-P007-V3",
    "image": 0
   },
   "B076-P001#0": {
@@ -678,11 +678,11 @@
    "image": 2
   },
   "B076-P001#1": {
-   "product_id": "B076-P001-V2",
+   "product_id": "B076-P001-V3",
    "image": 0
   },
   "B076-P001#2": {
-   "product_id": "B076-P001-V2",
+   "product_id": "B076-P001-V3",
    "image": 1
   },
   "B086-P001#0": {
@@ -828,6 +828,26 @@
   "B092-P008#3": {
    "product_id": "B092-P008-V3",
    "image": 0
+  },
+  "B077-P007#0": {
+   "product_id": "B077-P007",
+   "image": 0
+  },
+  "B077-P007#1": {
+   "product_id": "B077-P007-V2",
+   "image": 0
+  },
+  "B090-P010-V2#0": {
+   "product_id": "B090-P010-V2",
+   "image": 0
+  },
+  "B090-P010-V2#1": {
+   "product_id": "B090-P010-V4",
+   "image": 0
+  },
+  "B090-P010-V2#2": {
+   "product_id": "B090-P010-V4",
+   "image": 1
   }
  }
 }

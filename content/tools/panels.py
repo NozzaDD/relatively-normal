@@ -42,6 +42,15 @@ MARGIN = 0.10            # the strip down each side where the page shows through
 TONE_STEP = 6            # two backdrops differ when their margin tones differ by this
 TONE_RUN = 0.05          # ...held steady over this much of the side, each way
 TONE_SHARP = 10          # ...and the change happens IN ONE LINE, not over many
+# The subtle join (24 Sept): a flat lay and a model shot on two greys only a
+# few levels apart — B015-P003, B016-P003, B037-P007 and the rest the owner hid
+# as "panels not split". A smaller step is allowed only when both sides are
+# much steadier than TONE_STEP asks and nearly all of the step is in one line:
+# a studio wall shading into the floor fails the steadiness, and that is the
+# case the tight test above was written against.
+SUBTLE_STEP = 2.0        # two greys this far apart (mean margin level)...
+SUBTLE_STEADY = 1.2      # ...each side flat to within this...
+SUBTLE_SHARP = 0.6       # ...and at least this share of the step in one line
 PANEL_MIN = 0.10         # a panel is at least this much of the side
 AREA_MIN = 0.035        # ...and this much of the picture, once the two splits are made
 MAX_PANELS = 6
@@ -76,7 +85,7 @@ def gutter_runs(im, axis):
     return runs, n
 
 
-def tone_joins(im, axis):
+def tone_joins(im, axis, subtle=False):
     """Where one backdrop ends and a different one begins, with no band between.
 
     A packshot on one grey above a shot on another grey has no gutter at all:
@@ -105,7 +114,10 @@ def tone_joins(im, axis):
         line = px[i * w:(i + 1) * w] if axis == 0 else [px[j * w + i] for j in range(h)]
         side = sorted(line[:k] + line[-k:])
         q = len(side)
-        prof.append((side[q // 2], side[int(q * 0.9)] - side[int(q * 0.1)]))
+        # the mean of the middle of the margin: a median is a whole level, and
+        # the subtle join is two or three levels deep
+        mid = side[int(q * 0.2):int(q * 0.8)] or side
+        prof.append((sum(mid) / len(mid) if subtle else side[q // 2], side[int(q * 0.9)] - side[int(q * 0.1)]))
     need = max(3, int(n * TONE_RUN))
     joins = []
     for i in range(need, n - need):
@@ -114,6 +126,14 @@ def tone_joins(im, axis):
         if len(before) < need * 0.8 or len(after) < need * 0.8:
             continue          # the margin is busy here: it is photograph, not page
         a, b = sum(before) / len(before), sum(after) / len(after)
+        if subtle:
+            # bilinear scaling spreads a one-line step over two lines: read
+            # the step across i-2 .. i+1
+            one = abs(prof[min(n - 1, i + 1)][0] - prof[max(0, i - 2)][0])
+            if (abs(a - b) >= SUBTLE_STEP and max(before) - min(before) <= SUBTLE_STEADY
+                    and max(after) - min(after) <= SUBTLE_STEADY and one >= SUBTLE_SHARP * abs(a - b)):
+                joins.append(i)
+            continue
         if abs(a - b) < TONE_STEP:
             continue
         if max(before) - min(before) > TONE_STEP or max(after) - min(after) > TONE_STEP:
@@ -128,11 +148,38 @@ def tone_joins(im, axis):
     return out
 
 
-def split_axis(im, axis):
+def straight_joins(im, axis, level=8, share=0.85):
+    """Where one photograph abuts the next across the whole width, with no
+    gutter and a busy margin (the lower photo fills the frame, so tone_joins
+    has no steady margin to read). The edge between two photographs is a
+    straight line through nearly every column; a hem, a stripe or a shadow
+    inside one photograph is not, or not across 85% of it. Used only in the
+    subtle pass, on pictures a person has already said hold two panels."""
+    import numpy as np
+    w = SMALL
+    h = max(8, int(im.height * SMALL / im.width))
+    a = np.asarray(im.convert('L').resize((w, h), Image.BILINEAR)).astype(float)
+    if axis == 1:
+        a = a.T
+    d = np.abs(a[2:] - a[:-2]) > level          # row i+1 against its neighbours
+    frac = d.mean(1)
+    out = []
+    for i in np.nonzero(frac >= share)[0]:
+        j = int(i) + 1
+        if not out or j - out[-1] > 3:
+            out.append(j)
+    return out
+
+
+def split_axis(im, axis, subtle=False):
     """-> [(lo, hi), ...] as fractions along `axis`, or [] to leave it whole."""
     runs, n = gutter_runs(im, axis)
     deep = [r for r in runs if (r[1] - r[0]) / n >= GUTTER_MIN]
     joins = [j for j in tone_joins(im, axis) if PANEL_MIN < j / n < 1 - PANEL_MIN]
+    if subtle:
+        joins += [j for j in tone_joins(im, axis, subtle=True) + straight_joins(im, axis)
+                  if PANEL_MIN < j / n < 1 - PANEL_MIN and all(abs(j - k) > n * GUTTER_MIN for k in joins)]
+        joins = sorted(set(joins))
     # Cut through the MIDDLE of each gutter, not at its edges. A panel that
     # begins where the backdrop stops has the garment against its frame from
     # the first row, and the "clear of the frame" measurement then rejects
@@ -156,7 +203,7 @@ def split_axis(im, axis):
     return panels
 
 
-def find_panels(im):
+def find_panels(im, subtle=False):
     """-> (boxes as fractions of the picture, why it was left whole).
 
     Rows first, then columns inside each band. A product page is usually a
@@ -165,11 +212,11 @@ def find_panels(im):
     which is what made a good flat lay read as "other" and go to Review.
     """
     W, H = im.size
-    bands = split_axis(im, 0) or [(0.0, 1.0)]
+    bands = split_axis(im, 0, subtle) or [(0.0, 1.0)]
     out = []
     for a, b in bands:
         sub = im.crop((0, int(a * H), W, int(b * H)))
-        cols = split_axis(sub, 1) if min(sub.size) >= 60 else []
+        cols = split_axis(sub, 1, subtle) if min(sub.size) >= 60 else []
         if cols:
             out += [[c, a, d - c, b - a] for c, d in cols]
         else:

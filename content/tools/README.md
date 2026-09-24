@@ -376,3 +376,21 @@ Changed:
 - `build_studio.py` exports `review` (why it is back in Review) and `removed` (removed by the owner, as against hidden by the build), and copies `review-sends.json`.
 
 Order after a push of `asset-choices.json`: `build_products.py` → `shelf_checks.py` → `build_studio.py`. After an ingest, `shelf_text.py` → `send_to_review.py` for what it finds.
+
+## Added 24 September 2026 (evening) — better cut-outs, row splits, the hidden products
+
+| Script | What it does |
+|---|---|
+| `soft_cut.py` | the new cut. Runs on the **screenshot at full resolution** (the review copy's `origin` crop, then the panel's box), keeps the model's **soft alpha**, takes the backdrop's colour back out of the edge pixels, and scales down premultiplied at the end, so the edge is anti-aliased instead of a staircase. `isnet-general-use` rather than u2net (finer structure: straps, handles); where it plainly failed — it kept nearly nothing on a page the garment fills — u2net, then a border flood-fill on a plain backdrop. Everything well inside the outline is made opaque (`solid_core`: on Lilysilk's cream pages isnet gave a dark cardigan 0.3 alpha all over). A piece touching or overlapping the main one is kept whatever its size (`keep_attached`); an enclosed region of the backdrop's colour, flat, big enough to be a gap between legs, is removed (`punch_holes`), but never when the garment is itself within 12 ΔE of the backdrop — colour cannot tell a cream coat from a cream page. A garment on a person is cut off them with `u2net_cloth_seg` by slot (top: upper body; bottom: lower; dress: full; layer: upper + full), whose class map is read straight off the model and scaled NEAREST (rembg's own `predict` scales the class indices with LANCZOS and draws one-pixel outlines round the legs). Shoes, bags and accessories on a person cannot be separated, and are said to be. |
+| `recut_hidden.py` | re-cuts the products in `_hidden_reasons.json` from their best picture (a packshot, then a cell, the page, a photo worn; a panel split out with `panels.find_panels(subtle=True)`; the same picture where the fault was only the cut: jagged, holes, handles). `--cut` writes the cut and `_recut.json`, keeps the old cut in `assets-before-recut/`; `--sheets` before/after sheets; `--send` puts the old cut back on everything not in `LOOKS_RIGHT` and sends `LOOKS_RIGHT` back to Review through `send_to_review.py`. |
+| `cut_audit.py` | the same faults counted on the shelf, by slot: hard-edged cut-outs, backdrop left inside, bags whose handles a new cut finds. Measures, re-cuts nothing. |
+
+`_hidden_reasons.json` is the owner's 206 hidden products, one reason each, read by eye from contact sheets (point 4). Reading them showed the list of reasons was missing its largest group: **119 were whole people** — the cut was the model and the outfit, not the piece.
+
+Changed:
+
+- `name_split.py`: a name both pages print and agree on no longer settles that two screenshots are one product — a style's name is the same on every colourway's page; only an agreeing colour or product number does, and otherwise the pictures decide. Two untyped cuts that are plainly packshots (skin under 1% once the garment's own colours are left out) are now compared by silhouette too: the burgundy cami read as "worn" because burgundy is in the skin band, and was never compared with the burgundy trousers in its row. Tan leather still reads as skin; B090-P010-V2 and B076-P001 are split by eye (`BY_EYE`), B077-P013 kept whole (`KEEP`, the one row the new test got wrong).
+- `panels.py`: `find_panels(subtle=True)` also finds a join between two greys a couple of levels apart when both sides are steady, and a straight line across 85% of the width where one photograph abuts the next. Only the re-cut uses it.
+- `shelf_checks.py`: a cut that measures one piece in fewer than three colour regions is not "the style's all-colours photo", whatever screenshot it came from.
+
+Order for a re-cut: `recut_hidden.py --cut` → `--sheets` and a person reading them into `LOOKS_RIGHT` → `--send` → drop the re-cut rows from `products.csv` and their `_colours.json` entries, `extract_colours.py --new` → `build_products.py` → `shelf_checks.py` → `build_studio.py`. Needs `rembg` with `isnet-general-use`, `u2net` and `u2net_cloth_seg` (each ~170 MB, downloaded on first use), `scipy`, `numpy`.

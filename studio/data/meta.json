@@ -1,6 +1,6 @@
 {
  "built_from": "content/catalogue",
- "products": 2167,
+ "products": 2172,
  "inspiration": 112,
  "slots": [
   "accessory",
@@ -95,7 +95,6 @@
   "extreme cashmere",
   "extreme cashmere x",
   "lemaire",
-  "lilysilk",
   "massimo alba",
   "rachel comey",
   "soeur",
@@ -112,13 +111,13 @@
   "tile"
  ],
  "clean": 1253,
- "with_full": 1846,
- "hidden": 459,
- "back_in_review": 5,
+ "with_full": 1851,
+ "hidden": 386,
+ "back_in_review": 78,
  "recoloured": 193,
  "derived": 1084,
  "images": 1209,
  "whole_cutouts": 1576,
- "several": 11,
+ "several": 10,
  "duplicates": 56
 }

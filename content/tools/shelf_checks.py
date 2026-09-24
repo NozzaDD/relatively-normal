@@ -175,14 +175,18 @@ def several(rows):
         elif r.get('shot_type') == 'listing grid':
             why.append('grid page: the picture is a listing-grid page of several products')
         imgs = [x for x in (r.get('image_paths') or '').split(';') if x]
-        # a variant cut from that photo is one garment lying alone on it
-        if imgs and set(imgs) <= cp and not r.get('recolour_source'):
-            why.append('all-colours: the picture is the style\'s all-colours photo')
         try:
             a = load(r, 200)
         except (FileNotFoundError, OSError):
             continue
         pc = pieces(a)
+        cr0 = colour_regions(a)
+        # a variant cut from that photo is one garment lying alone on it; so
+        # is a cut that measures one piece in fewer than three colour regions
+        # (B073-P006, B073-P009 re-cut from their flat lays, 24 Sept)
+        single = pc == 1 and not (cr0 and cr0[0] >= 3)
+        if imgs and set(imgs) <= cp and not r.get('recolour_source') and not single:
+            why.append('all-colours: the picture is the style\'s all-colours photo')
         if pc is not None and (pc >= 3 or (pc == 2 and r.get('slot') not in PAIR_SLOTS)):
             why.append(f'pieces: the cut-out is {pc} separate pieces')
         cr = colour_regions(a)

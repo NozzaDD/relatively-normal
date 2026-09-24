@@ -707,6 +707,335 @@
      "image": 0
     }
    }
+  },
+  {
+   "rows": {
+    "B032-P001": {
+     "groups": [
+      [
+       0
+      ],
+      [
+       1
+      ]
+     ],
+     "pairs": {
+      "1-0": "lightness 14.0"
+     },
+     "literal": [
+      [
+       0
+      ],
+      [
+       1
+      ]
+     ],
+     "pages": [
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": ""
+      },
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": ""
+      }
+     ]
+    },
+    "B075-P007": {
+     "groups": [
+      [
+       0
+      ],
+      [
+       1
+      ]
+     ],
+     "pairs": {
+      "1-0": "silhouette 0.83"
+     },
+     "literal": [
+      [
+       0
+      ],
+      [
+       1
+      ]
+     ],
+     "pages": [
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "lilysilk.com"
+      },
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "lilysilk.com"
+      }
+     ]
+    },
+    "B076-P001": {
+     "groups": [
+      [
+       0
+      ],
+      [
+       1,
+       2
+      ]
+     ],
+     "pairs": {
+      "1-0": "silhouette 0.39",
+      "2-0": "no picture to compare"
+     },
+     "literal": [
+      [
+       0,
+       2
+      ],
+      [
+       1
+      ]
+     ],
+     "pages": [
+      {
+       "name": "",
+       "colour": "Lilienweif",
+       "pid": "",
+       "domain": ""
+      },
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "lilysilk.com"
+      },
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": ""
+      }
+     ],
+     "by_eye": "IMG_1190 is the belted cream jacket; IMG_1193-1194 a cream tank top, the second scrolled to its buy panel. 1194 has no cut to compare, so complete-link put it with the jacket (contact sheet, 24 Sept evening)"
+    },
+    "B077-P007": {
+     "groups": [
+      [
+       0
+      ],
+      [
+       1
+      ]
+     ],
+     "pairs": {
+      "1-0": "silhouette 0.85"
+     },
+     "literal": [
+      [
+       0
+      ],
+      [
+       1
+      ]
+     ],
+     "pages": [
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": ""
+      },
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "lilysilk.com"
+      }
+     ]
+    },
+    "B090-P010-V2": {
+     "groups": [
+      [
+       0
+      ],
+      [
+       1,
+       2
+      ]
+     ],
+     "pairs": {
+      "1-0": "page agrees on name only; pictures not of one known kind (model, flat), not compared",
+      "2-0": "page agrees on name only; pictures not of one known kind (model, flat), not compared",
+      "2-1": "page agrees on name/colour"
+     },
+     "literal": [
+      [
+       0,
+       1
+      ],
+      [
+       2
+      ]
+     ],
+     "pages": [
+      {
+       "name": "TOWN AND COUNTRY COLLECTION",
+       "colour": "",
+       "pid": "",
+       "domain": ""
+      },
+      {
+       "name": "TOWN AND COUNTRY COLLECTION",
+       "colour": "Aw26cottection iy)",
+       "pid": "",
+       "domain": "fairfaxandfavor.com"
+      },
+      {
+       "name": "TOWN AND COUNTRY COLLECTION",
+       "colour": "coltection iy)",
+       "pid": "",
+       "domain": "fairfaxandfavor.com"
+      }
+     ],
+     "by_eye": "IMG_1364 is the Town and Country bag in dark brown; IMG_1365-1366 the same bag in tan. The pages agree on the name only; the tan leather reads as skin, so the cut is typed as worn and not compared (contact sheet, 24 Sept evening; the owner hid the row for it)"
+    }
+   },
+   "plan": {
+    "B032-P001": [
+     [
+      0
+     ],
+     [
+      1
+     ]
+    ],
+    "B075-P007": [
+     [
+      0
+     ],
+     [
+      1
+     ]
+    ],
+    "B076-P001": [
+     [
+      0
+     ],
+     [
+      1,
+      2
+     ]
+    ],
+    "B077-P007": [
+     [
+      0
+     ],
+     [
+      1
+     ]
+    ],
+    "B090-P010-V2": [
+     [
+      0
+     ],
+     [
+      1,
+      2
+     ]
+    ]
+   },
+   "made": {
+    "B032-P001-V3": [
+     "content/swipe/products/IMG_0435.png"
+    ],
+    "B075-P007-V3": [
+     "content/swipe/products/IMG_1189.png"
+    ],
+    "B076-P001-V3": [
+     "content/swipe/products/IMG_1193.png",
+     "content/swipe/products/IMG_1194.png"
+    ],
+    "B077-P007-V2": [
+     "content/swipe/products/IMG_1212.png"
+    ],
+    "B090-P010-V4": [
+     "content/swipe/products/IMG_1365.png",
+     "content/swipe/products/IMG_1366.png"
+    ]
+   },
+   "moved": {
+    "B032-P001#0": {
+     "product_id": "B032-P001",
+     "image": 0
+    },
+    "B032-P001#1": {
+     "product_id": "B032-P001-V3",
+     "image": 0
+    },
+    "B032-P001#2": {
+     "product_id": "B032-P001-V2",
+     "image": 0
+    },
+    "B075-P007#0": {
+     "product_id": "B075-P007",
+     "image": 0
+    },
+    "B075-P007#2": {
+     "product_id": "B075-P007",
+     "image": 1
+    },
+    "B075-P007#1": {
+     "product_id": "B075-P007-V3",
+     "image": 0
+    },
+    "B076-P001#0": {
+     "product_id": "B076-P001",
+     "image": 0
+    },
+    "B076-P001#3": {
+     "product_id": "B076-P001",
+     "image": 1
+    },
+    "B076-P001#4": {
+     "product_id": "B076-P001",
+     "image": 2
+    },
+    "B076-P001#1": {
+     "product_id": "B076-P001-V3",
+     "image": 0
+    },
+    "B076-P001#2": {
+     "product_id": "B076-P001-V3",
+     "image": 1
+    },
+    "B077-P007#0": {
+     "product_id": "B077-P007",
+     "image": 0
+    },
+    "B077-P007#1": {
+     "product_id": "B077-P007-V2",
+     "image": 0
+    },
+    "B090-P010-V2#0": {
+     "product_id": "B090-P010-V2",
+     "image": 0
+    },
+    "B090-P010-V2#1": {
+     "product_id": "B090-P010-V4",
+     "image": 0
+    },
+    "B090-P010-V2#2": {
+     "product_id": "B090-P010-V4",
+     "image": 1
+    }
+   }
   }
  ]
 }
