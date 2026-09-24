@@ -1,0 +1,4 @@
+# What the shelf rebuild needs: build_products.py + build_studio.py.
+# The image-making scripts (rembg, numpy, scipy) are not part of that run.
+pillow>=10
+pyyaml>=6

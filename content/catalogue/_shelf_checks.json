@@ -1,0 +1,1465 @@
+{
+ "duplicates": {
+  "B008-P003-V2": {
+   "cause": "colourway split",
+   "cluster": [
+    "B008-P003",
+    "B008-P003-V2"
+   ],
+   "keeper": "B008-P003",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B009-P001": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B001-P001",
+    "B009-P001"
+   ],
+   "keeper": "B001-P001",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B009-P003": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B001-P003",
+    "B009-P003"
+   ],
+   "keeper": "B001-P003",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B009-P004": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B001-P004",
+    "B009-P004"
+   ],
+   "keeper": "B001-P004",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B010-P001-V2": {
+   "cause": "colourway split",
+   "cluster": [
+    "B010-P001",
+    "B010-P001-V2",
+    "B010-P001-V3"
+   ],
+   "keeper": "B010-P001",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B010-P001-V3": {
+   "cause": "colourway split",
+   "cluster": [
+    "B010-P001",
+    "B010-P001-V2",
+    "B010-P001-V3"
+   ],
+   "keeper": "B010-P001",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B010-P003-V2": {
+   "cause": "colourway split",
+   "cluster": [
+    "B010-P003",
+    "B010-P003-V2"
+   ],
+   "keeper": "B010-P003",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B010-P005-V2": {
+   "cause": "colourway split",
+   "cluster": [
+    "B010-P005",
+    "B010-P005-V2",
+    "B010-P005-V3",
+    "B010-P005-V4"
+   ],
+   "keeper": "B010-P005",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B010-P005-V3": {
+   "cause": "colourway split",
+   "cluster": [
+    "B010-P005",
+    "B010-P005-V2",
+    "B010-P005-V3",
+    "B010-P005-V4"
+   ],
+   "keeper": "B010-P005",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B010-P005-V4": {
+   "cause": "colourway split",
+   "cluster": [
+    "B010-P005",
+    "B010-P005-V2",
+    "B010-P005-V3",
+    "B010-P005-V4"
+   ],
+   "keeper": "B010-P005",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B011-P004": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B011-P003",
+    "B011-P004"
+   ],
+   "keeper": "B011-P003",
+   "measured": {
+    "de": 0.18,
+    "iou": 0.992,
+    "struct": 0.24
+   }
+  },
+  "B012-P003-V2": {
+   "cause": "colourway split",
+   "cluster": [
+    "B012-P003",
+    "B012-P003-V2"
+   ],
+   "keeper": "B012-P003",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B013-P001-V2": {
+   "cause": "colourway split",
+   "cluster": [
+    "B013-P001",
+    "B013-P001-V2",
+    "B013-P001-V3"
+   ],
+   "keeper": "B013-P001",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B013-P001-V3": {
+   "cause": "colourway split",
+   "cluster": [
+    "B013-P001",
+    "B013-P001-V2",
+    "B013-P001-V3"
+   ],
+   "keeper": "B013-P001",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B014-P001-V2": {
+   "cause": "colourway split",
+   "cluster": [
+    "B014-P001",
+    "B014-P001-V2",
+    "B014-P001-V3",
+    "B014-P001-V4"
+   ],
+   "keeper": "B014-P001",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B014-P001-V3": {
+   "cause": "colourway split",
+   "cluster": [
+    "B014-P001",
+    "B014-P001-V2",
+    "B014-P001-V3",
+    "B014-P001-V4"
+   ],
+   "keeper": "B014-P001",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B014-P001-V4": {
+   "cause": "colourway split",
+   "cluster": [
+    "B014-P001",
+    "B014-P001-V2",
+    "B014-P001-V3",
+    "B014-P001-V4"
+   ],
+   "keeper": "B014-P001",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B016-P001-V2": {
+   "cause": "colourway split",
+   "cluster": [
+    "B016-P001",
+    "B016-P001-V2"
+   ],
+   "keeper": "B016-P001",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B017-P001-V2": {
+   "cause": "colourway split",
+   "cluster": [
+    "B017-P001",
+    "B017-P001-V2",
+    "B017-P001-V3"
+   ],
+   "keeper": "B017-P001",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B017-P001-V3": {
+   "cause": "colourway split",
+   "cluster": [
+    "B017-P001",
+    "B017-P001-V2",
+    "B017-P001-V3"
+   ],
+   "keeper": "B017-P001",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B018-P001-V2": {
+   "cause": "colourway split",
+   "cluster": [
+    "B018-P001",
+    "B018-P001-V2",
+    "B018-P001-V3"
+   ],
+   "keeper": "B018-P001",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B018-P001-V3": {
+   "cause": "colourway split",
+   "cluster": [
+    "B018-P001",
+    "B018-P001-V2",
+    "B018-P001-V3"
+   ],
+   "keeper": "B018-P001",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B020-P006-V2": {
+   "cause": "colourway split",
+   "cluster": [
+    "B020-P006",
+    "B020-P006-V2",
+    "B021-P001",
+    "B021-P001-V2"
+   ],
+   "keeper": "B020-P006",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B021-P001": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B020-P006",
+    "B020-P006-V2",
+    "B021-P001",
+    "B021-P001-V2"
+   ],
+   "keeper": "B020-P006",
+   "measured": {
+    "de": 0.37,
+    "iou": 0.988,
+    "struct": 0.2
+   }
+  },
+  "B021-P001-V2": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B020-P006",
+    "B020-P006-V2",
+    "B021-P001",
+    "B021-P001-V2"
+   ],
+   "keeper": "B020-P006",
+   "measured": {
+    "de": 0.37,
+    "iou": 0.988,
+    "struct": 0.2
+   }
+  },
+  "B021-P002-V2": {
+   "cause": "colourway split",
+   "cluster": [
+    "B021-P002",
+    "B021-P002-V2",
+    "B021-P002-V3"
+   ],
+   "keeper": "B021-P002",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B021-P002-V3": {
+   "cause": "colourway split",
+   "cluster": [
+    "B021-P002",
+    "B021-P002-V2",
+    "B021-P002-V3"
+   ],
+   "keeper": "B021-P002",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B021-P005-V2": {
+   "cause": "colourway split",
+   "cluster": [
+    "B021-P005",
+    "B021-P005-V2"
+   ],
+   "keeper": "B021-P005",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B021-P006-V2": {
+   "cause": "colourway split",
+   "cluster": [
+    "B021-P006",
+    "B021-P006-V2"
+   ],
+   "keeper": "B021-P006",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B021-P011-V2": {
+   "cause": "colourway split",
+   "cluster": [
+    "B021-P011",
+    "B021-P011-V2",
+    "B021-P011-V3"
+   ],
+   "keeper": "B021-P011",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B021-P011-V3": {
+   "cause": "colourway split",
+   "cluster": [
+    "B021-P011",
+    "B021-P011-V2",
+    "B021-P011-V3"
+   ],
+   "keeper": "B021-P011",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B023-P003-C0": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B023-P002-C0",
+    "B023-P003-C0"
+   ],
+   "keeper": "B023-P002-C0",
+   "measured": {
+    "de": 0.05,
+    "iou": 0.998,
+    "struct": 0.11
+   }
+  },
+  "B023-P003-C1": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B023-P002-C1",
+    "B023-P003-C1"
+   ],
+   "keeper": "B023-P002-C1",
+   "measured": {
+    "de": 0.03,
+    "iou": 0.997,
+    "struct": 0.08
+   }
+  },
+  "B023-P003-C2": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B023-P002-C2",
+    "B023-P003-C2"
+   ],
+   "keeper": "B023-P002-C2",
+   "measured": {
+    "de": 0.08,
+    "iou": 0.992,
+    "struct": 0.31
+   }
+  },
+  "B023-P003-C3": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B023-P002-C3",
+    "B023-P003-C3"
+   ],
+   "keeper": "B023-P002-C3",
+   "measured": {
+    "de": 0.1,
+    "iou": 0.999,
+    "struct": 0.1
+   }
+  },
+  "B023-P003-C4": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B023-P002-C4",
+    "B023-P003-C4"
+   ],
+   "keeper": "B023-P002-C4",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.14
+   }
+  },
+  "B023-P003-C5": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B023-P002-C5",
+    "B023-P003-C5"
+   ],
+   "keeper": "B023-P002-C5",
+   "measured": {
+    "de": 0.13,
+    "iou": 0.992,
+    "struct": 0.47
+   }
+  },
+  "B023-P008-C0": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B023-P007-C0",
+    "B023-P008-C0"
+   ],
+   "keeper": "B023-P007-C0",
+   "measured": {
+    "de": 0.03,
+    "iou": 1.0,
+    "struct": 0.06
+   }
+  },
+  "B023-P008-C1": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B023-P007-C1",
+    "B023-P008-C1"
+   ],
+   "keeper": "B023-P007-C1",
+   "measured": {
+    "de": 0.02,
+    "iou": 0.989,
+    "struct": 0.22
+   }
+  },
+  "B024-P005-I1-C0": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B024-P005-C3",
+    "B024-P005-I1-C0"
+   ],
+   "keeper": "B024-P005-C3",
+   "measured": {
+    "de": 0.0,
+    "iou": 0.998,
+    "struct": 0.08
+   }
+  },
+  "B024-P005-I1-C1": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B024-P005-C4",
+    "B024-P005-I1-C1"
+   ],
+   "keeper": "B024-P005-C4",
+   "measured": {
+    "de": 0.1,
+    "iou": 0.992,
+    "struct": 0.42
+   }
+  },
+  "B024-P005-I1-C2": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B024-P005-C5",
+    "B024-P005-I1-C2"
+   ],
+   "keeper": "B024-P005-C5",
+   "measured": {
+    "de": 0.15,
+    "iou": 0.992,
+    "struct": 0.29
+   }
+  },
+  "B025-P001-V2": {
+   "cause": "colourway split",
+   "cluster": [
+    "B025-P001",
+    "B025-P001-V2"
+   ],
+   "keeper": "B025-P001",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B025-P003-V2": {
+   "cause": "colourway split",
+   "cluster": [
+    "B025-P003",
+    "B025-P003-V2"
+   ],
+   "keeper": "B025-P003",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B025-P006-I1-C0": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B025-P006-C3",
+    "B025-P006-I1-C0"
+   ],
+   "keeper": "B025-P006-C3",
+   "measured": {
+    "de": 2.14,
+    "iou": 0.966,
+    "struct": 1.21
+   }
+  },
+  "B025-P008-V2": {
+   "cause": "colourway split",
+   "cluster": [
+    "B025-P008",
+    "B025-P008-V2"
+   ],
+   "keeper": "B025-P008",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B030-P007-C4": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B030-P007-C4",
+    "B031-P001"
+   ],
+   "keeper": "B031-P001",
+   "measured": {
+    "de": 0.02,
+    "iou": 0.999,
+    "struct": 0.15
+   }
+  },
+  "B031-P002-V2": {
+   "cause": "colourway split",
+   "cluster": [
+    "B031-P002",
+    "B031-P002-V2"
+   ],
+   "keeper": "B031-P002",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B032-P001": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B031-P009",
+    "B032-P001",
+    "B032-P001-V2"
+   ],
+   "keeper": "B031-P009",
+   "measured": {
+    "de": 0.07,
+    "iou": 0.994,
+    "struct": 0.25
+   }
+  },
+  "B032-P001-V2": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B031-P009",
+    "B032-P001",
+    "B032-P001-V2"
+   ],
+   "keeper": "B031-P009",
+   "measured": {
+    "de": 0.07,
+    "iou": 0.994,
+    "struct": 0.25
+   }
+  },
+  "B036-P002-C0": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B036-P001-C0",
+    "B036-P002-C0"
+   ],
+   "keeper": "B036-P001-C0",
+   "measured": {
+    "de": 0.18,
+    "iou": 0.998,
+    "struct": 0.2
+   }
+  },
+  "B036-P009-I1-C0": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B036-P009-C0",
+    "B036-P009-I1-C0"
+   ],
+   "keeper": "B036-P009-C0",
+   "measured": {
+    "de": 0.06,
+    "iou": 1.0,
+    "struct": 0.06
+   }
+  },
+  "B037-P006-V2": {
+   "cause": "colourway split",
+   "cluster": [
+    "B037-P006",
+    "B037-P006-V2"
+   ],
+   "keeper": "B037-P006",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B042-P014": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B042-P012-C1",
+    "B042-P014"
+   ],
+   "keeper": "B042-P012-C1",
+   "measured": {
+    "de": 0.0,
+    "iou": 0.998,
+    "struct": 0.35
+   }
+  },
+  "B042-P032-V2": {
+   "cause": "colourway split",
+   "cluster": [
+    "B042-P032",
+    "B042-P032-V2"
+   ],
+   "keeper": "B042-P032",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B042-P035": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B042-P035",
+    "B042-P036-C0"
+   ],
+   "keeper": "B042-P036-C0",
+   "measured": {
+    "de": 0.32,
+    "iou": 0.98,
+    "struct": 0.39
+   }
+  },
+  "B042-P037-V2": {
+   "cause": "colourway split",
+   "cluster": [
+    "B042-P037",
+    "B042-P037-V2"
+   ],
+   "keeper": "B042-P037",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B043-P004-V2": {
+   "cause": "colourway split",
+   "cluster": [
+    "B043-P004",
+    "B043-P004-V2",
+    "B043-P004-V3"
+   ],
+   "keeper": "B043-P004",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B043-P004-V3": {
+   "cause": "colourway split",
+   "cluster": [
+    "B043-P004",
+    "B043-P004-V2",
+    "B043-P004-V3"
+   ],
+   "keeper": "B043-P004",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B044-P005-I1-C2": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B044-P005-C0",
+    "B044-P005-I1-C2"
+   ],
+   "keeper": "B044-P005-C0",
+   "measured": {
+    "de": 0.0,
+    "iou": 0.996,
+    "struct": 0.15
+   }
+  },
+  "B044-P005-I1-C3": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B044-P005-C1",
+    "B044-P005-I1-C3"
+   ],
+   "keeper": "B044-P005-C1",
+   "measured": {
+    "de": 0.0,
+    "iou": 0.999,
+    "struct": 0.18
+   }
+  },
+  "B044-P007-C0": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B044-P006-C0",
+    "B044-P007-C0"
+   ],
+   "keeper": "B044-P006-C0",
+   "measured": {
+    "de": 0.01,
+    "iou": 0.997,
+    "struct": 0.09
+   }
+  },
+  "B044-P010-V2": {
+   "cause": "colourway split",
+   "cluster": [
+    "B044-P010",
+    "B044-P010-V2"
+   ],
+   "keeper": "B044-P010",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B053-P001-V2": {
+   "cause": "colourway split",
+   "cluster": [
+    "B053-P001",
+    "B053-P001-V2",
+    "B053-P001-V3"
+   ],
+   "keeper": "B053-P001",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B053-P001-V3": {
+   "cause": "colourway split",
+   "cluster": [
+    "B053-P001",
+    "B053-P001-V2",
+    "B053-P001-V3"
+   ],
+   "keeper": "B053-P001",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B053-P003-V2": {
+   "cause": "colourway split",
+   "cluster": [
+    "B053-P003",
+    "B053-P003-V2"
+   ],
+   "keeper": "B053-P003",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B054-P005-V2": {
+   "cause": "colourway split",
+   "cluster": [
+    "B054-P005",
+    "B054-P005-V2",
+    "B054-P005-V3"
+   ],
+   "keeper": "B054-P005",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B054-P005-V3": {
+   "cause": "colourway split",
+   "cluster": [
+    "B054-P005",
+    "B054-P005-V2",
+    "B054-P005-V3"
+   ],
+   "keeper": "B054-P005",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B055-P003-V2": {
+   "cause": "colourway split",
+   "cluster": [
+    "B055-P003",
+    "B055-P003-V2",
+    "B055-P003-V3"
+   ],
+   "keeper": "B055-P003",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B055-P003-V3": {
+   "cause": "colourway split",
+   "cluster": [
+    "B055-P003",
+    "B055-P003-V2",
+    "B055-P003-V3"
+   ],
+   "keeper": "B055-P003",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B055-P004-V2": {
+   "cause": "colourway split",
+   "cluster": [
+    "B055-P004",
+    "B055-P004-V2",
+    "B055-P004-V3"
+   ],
+   "keeper": "B055-P004",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B055-P004-V3": {
+   "cause": "colourway split",
+   "cluster": [
+    "B055-P004",
+    "B055-P004-V2",
+    "B055-P004-V3"
+   ],
+   "keeper": "B055-P004",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B057-P001-V2": {
+   "cause": "colourway split",
+   "cluster": [
+    "B057-P001",
+    "B057-P001-V2"
+   ],
+   "keeper": "B057-P001",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B057-P003-V2": {
+   "cause": "colourway split",
+   "cluster": [
+    "B057-P003",
+    "B057-P003-V2"
+   ],
+   "keeper": "B057-P003",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B062-P001-V2": {
+   "cause": "colourway split",
+   "cluster": [
+    "B062-P001",
+    "B062-P001-V2"
+   ],
+   "keeper": "B062-P001",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B062-P012-V2": {
+   "cause": "colourway split",
+   "cluster": [
+    "B062-P012",
+    "B062-P012-V2"
+   ],
+   "keeper": "B062-P012",
+   "measured": {
+    "de": 0.17,
+    "iou": 0.996,
+    "struct": 0.21
+   }
+  },
+  "B063-P005-C0": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B063-P001-C0",
+    "B063-P005-C0"
+   ],
+   "keeper": "B063-P001-C0",
+   "measured": {
+    "de": 0.01,
+    "iou": 1.0,
+    "struct": 0.06
+   }
+  },
+  "B063-P005-C1": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B063-P001-C1",
+    "B063-P005-C1"
+   ],
+   "keeper": "B063-P001-C1",
+   "measured": {
+    "de": 0.0,
+    "iou": 0.999,
+    "struct": 0.07
+   }
+  },
+  "B068-P001": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B068-P001",
+    "B068-P013"
+   ],
+   "keeper": "B068-P013",
+   "measured": {
+    "de": 0.02,
+    "iou": 0.999,
+    "struct": 0.09
+   }
+  },
+  "B078-P008-C0": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B078-P007-C1",
+    "B078-P008-C0"
+   ],
+   "keeper": "B078-P007-C1",
+   "measured": {
+    "de": 0.28,
+    "iou": 0.992,
+    "struct": 0.16
+   }
+  },
+  "B078-P008-C1": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B078-P007-C2",
+    "B078-P008-C1"
+   ],
+   "keeper": "B078-P007-C2",
+   "measured": {
+    "de": 0.02,
+    "iou": 0.998,
+    "struct": 0.09
+   }
+  },
+  "B078-P008-C2": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B078-P007-C4",
+    "B078-P008-C2"
+   ],
+   "keeper": "B078-P007-C4",
+   "measured": {
+    "de": 0.02,
+    "iou": 0.991,
+    "struct": 0.33
+   }
+  },
+  "B078-P008-C3": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B078-P007-C5",
+    "B078-P008-C3"
+   ],
+   "keeper": "B078-P007-C5",
+   "measured": {
+    "de": 0.01,
+    "iou": 1.0,
+    "struct": 0.04
+   }
+  },
+  "B078-P010-C1": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B078-P009-C0",
+    "B078-P010-C1"
+   ],
+   "keeper": "B078-P009-C0",
+   "measured": {
+    "de": 0.02,
+    "iou": 0.986,
+    "struct": 0.2
+   }
+  },
+  "B078-P010-C2": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B078-P009-C1",
+    "B078-P010-C2"
+   ],
+   "keeper": "B078-P009-C1",
+   "measured": {
+    "de": 0.08,
+    "iou": 1.0,
+    "struct": 0.18
+   }
+  },
+  "B078-P010-C4": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B078-P009-C3",
+    "B078-P010-C4"
+   ],
+   "keeper": "B078-P009-C3",
+   "measured": {
+    "de": 0.12,
+    "iou": 0.993,
+    "struct": 0.43
+   }
+  },
+  "B078-P010-C5": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B078-P009-C4",
+    "B078-P010-C5"
+   ],
+   "keeper": "B078-P009-C4",
+   "measured": {
+    "de": 0.17,
+    "iou": 0.996,
+    "struct": 0.2
+   }
+  },
+  "B080-P002-I2-C0": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B080-P002-I1-C0",
+    "B080-P002-I2-C0"
+   ],
+   "keeper": "B080-P002-I1-C0",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B080-P002-I2-C1": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B080-P002-I1-C1",
+    "B080-P002-I2-C1"
+   ],
+   "keeper": "B080-P002-I1-C1",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B080-P002-I2-C3": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B080-P002-I1-C3",
+    "B080-P002-I2-C3",
+    "B080-P002-I3-C1"
+   ],
+   "keeper": "B080-P002-I1-C3",
+   "measured": {
+    "de": 0.0,
+    "iou": 1.0,
+    "struct": 0.0
+   }
+  },
+  "B080-P002-I3-C0": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B080-P002-I2-C2",
+    "B080-P002-I3-C0"
+   ],
+   "keeper": "B080-P002-I2-C2",
+   "measured": {
+    "de": 0.09,
+    "iou": 0.991,
+    "struct": 0.37
+   }
+  },
+  "B080-P002-I3-C1": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B080-P002-I1-C3",
+    "B080-P002-I2-C3",
+    "B080-P002-I3-C1"
+   ],
+   "keeper": "B080-P002-I1-C3",
+   "measured": {
+    "de": 0.09,
+    "iou": 1.0,
+    "struct": 0.15
+   }
+  },
+  "B082-P002": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B082-P002",
+    "B083-P010"
+   ],
+   "keeper": "B083-P010",
+   "measured": {
+    "de": 2.94,
+    "iou": 0.999,
+    "struct": 0.19
+   }
+  },
+  "B090-P008-I1-C2": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B090-P004-C1",
+    "B090-P008-I1-C2"
+   ],
+   "keeper": "B090-P004-C1",
+   "measured": {
+    "de": 0.04,
+    "iou": 0.992,
+    "struct": 0.23
+   }
+  }
+ },
+ "several": {
+  "B006-P001-C1": {
+   "group": "B006-P001",
+   "why": [
+    "pieces: the cut-out is 7 separate pieces",
+    "colour regions: 3 separate colour regions and no skin \u2014 a fan of colourways"
+   ]
+  },
+  "B011-P002": {
+   "group": "B011-P002",
+   "why": [
+    "grid page: the picture is a listing-grid page of several products"
+   ]
+  },
+  "B011-P006": {
+   "group": "B011-P006",
+   "why": [
+    "pieces: the cut-out is 6 separate pieces"
+   ]
+  },
+  "B012-P002": {
+   "group": "B012-P002",
+   "why": [
+    "pieces: the cut-out is 2 separate pieces"
+   ]
+  },
+  "B015-P002": {
+   "group": "B015-P002",
+   "why": [
+    "pieces: the cut-out is 3 separate pieces"
+   ]
+  },
+  "B015-P003": {
+   "group": "B015-P003",
+   "why": [
+    "pieces: the cut-out is 2 separate pieces"
+   ]
+  },
+  "B016-P002": {
+   "group": "B016-P002",
+   "why": [
+    "pieces: the cut-out is 3 separate pieces",
+    "colour regions: 3 separate colour regions and no skin \u2014 a fan of colourways"
+   ]
+  },
+  "B022-P013-C0": {
+   "group": "B022-P013",
+   "why": [
+    "pieces: the cut-out is 2 separate pieces"
+   ]
+  },
+  "B022-P015-C3": {
+   "group": "B022-P015",
+   "why": [
+    "pieces: the cut-out is 2 separate pieces"
+   ]
+  },
+  "B026-P009": {
+   "group": "B026-P009",
+   "why": [
+    "pieces: the cut-out is 2 separate pieces"
+   ]
+  },
+  "B036-P005-C0": {
+   "group": "B036-P005",
+   "why": [
+    "colour regions: 4 separate colour regions and no skin \u2014 a fan of colourways"
+   ]
+  },
+  "B037-P002": {
+   "group": "B037-P002",
+   "why": [
+    "pieces: the cut-out is 2 separate pieces"
+   ]
+  },
+  "B037-P007": {
+   "group": "B037-P007",
+   "why": [
+    "pieces: the cut-out is 3 separate pieces"
+   ]
+  },
+  "B038-P002": {
+   "group": "B038-P002",
+   "why": [
+    "pieces: the cut-out is 2 separate pieces"
+   ]
+  },
+  "B044-P009": {
+   "group": "B044-P009",
+   "why": [
+    "grid page: the picture is a listing-grid page of several products"
+   ]
+  },
+  "B044-P020-C5": {
+   "group": "B044-P020",
+   "why": [
+    "colour regions: 3 separate colour regions and no skin \u2014 a fan of colourways"
+   ]
+  },
+  "B045-P001-I1-C4": {
+   "group": "B045-P001",
+   "why": [
+    "colour regions: 3 separate colour regions and no skin \u2014 a fan of colourways"
+   ]
+  },
+  "B045-P001-I2-C4": {
+   "group": "B045-P001",
+   "why": [
+    "colour regions: 3 separate colour regions and no skin \u2014 a fan of colourways"
+   ]
+  },
+  "B045-P004": {
+   "group": "B045-P004",
+   "why": [
+    "colour regions: 3 separate colour regions and no skin \u2014 a fan of colourways"
+   ]
+  },
+  "B046-P010-C3": {
+   "group": "B046-P010",
+   "why": [
+    "pieces: the cut-out is 2 separate pieces"
+   ]
+  },
+  "B062-P001": {
+   "group": "B062-P001",
+   "why": [
+    "colour regions: 3 separate colour regions and no skin \u2014 a fan of colourways"
+   ]
+  },
+  "B062-P001-V2": {
+   "group": "B062-P001",
+   "why": [
+    "colour regions: 3 separate colour regions and no skin \u2014 a fan of colourways"
+   ]
+  },
+  "B063-P002": {
+   "group": "B063-P002",
+   "why": [
+    "grid page: the picture is a listing-grid page of several products"
+   ]
+  },
+  "B065-P006": {
+   "group": "B065-P006",
+   "why": [
+    "colour regions: 3 separate colour regions and no skin \u2014 a fan of colourways"
+   ]
+  },
+  "B070-P011": {
+   "group": "B070-P011",
+   "why": [
+    "pieces: the cut-out is 2 separate pieces"
+   ]
+  },
+  "B070-P012": {
+   "group": "B070-P012",
+   "why": [
+    "pieces: the cut-out is 2 separate pieces"
+   ]
+  },
+  "B070-P014": {
+   "group": "B070-P014",
+   "why": [
+    "pieces: the cut-out is 2 separate pieces"
+   ]
+  },
+  "B073-P006": {
+   "group": "B073-P006",
+   "why": [
+    "all-colours: the picture is the style's all-colours photo"
+   ]
+  },
+  "B073-P009": {
+   "group": "B073-P009",
+   "why": [
+    "all-colours: the picture is the style's all-colours photo"
+   ]
+  },
+  "B073-P010": {
+   "group": "B073-P010",
+   "why": [
+    "all-colours: the picture is the style's all-colours photo"
+   ]
+  },
+  "B077-P005": {
+   "group": "B077-P005",
+   "why": [
+    "pieces: the cut-out is 2 separate pieces"
+   ]
+  }
+ },
+ "thresholds": {
+  "de2000": 3.0,
+  "iou": 0.96,
+  "structure": 2.0
+ }
+}

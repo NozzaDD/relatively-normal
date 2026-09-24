@@ -1,0 +1,4649 @@
+{
+ "content/swipe/products/IMG_1040.png": {
+  "image": "content/swipe/products/IMG_1040.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1041.png": {
+  "image": "content/swipe/products/IMG_1041.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1053.png": {
+  "image": "content/swipe/products/IMG_1053.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1042.png": {
+  "image": "content/swipe/products/IMG_1042.png",
+  "shop": "colorfulstandard.com",
+  "colour": "Soft Yellow",
+  "swatches": [
+   {
+    "x": 64,
+    "y": 2411,
+    "w": 104,
+    "h": 130,
+    "frame": 246.0,
+    "spread": 9.0,
+    "kind": "photo",
+    "garment_share": 0.538,
+    "tile": [
+     68,
+     2415,
+     164,
+     2537
+    ],
+    "hex": "D7D3D4",
+    "lab": [
+     84.89,
+     1.55,
+     -0.01
+    ],
+    "family": "cool neutral",
+    "name": "pale grey",
+    "selected": false
+   },
+   {
+    "x": 176,
+    "y": 2411,
+    "w": 104,
+    "h": 130,
+    "frame": 246.0,
+    "spread": 14.6,
+    "kind": "photo",
+    "garment_share": 0.549,
+    "tile": [
+     180,
+     2415,
+     276,
+     2537
+    ],
+    "hex": "949395",
+    "lab": [
+     61.07,
+     0.75,
+     -0.93
+    ],
+    "family": "grey",
+    "name": "mid grey",
+    "selected": false
+   },
+   {
+    "x": 288,
+    "y": 2411,
+    "w": 103,
+    "h": 130,
+    "frame": 246.0,
+    "spread": 23.1,
+    "kind": "photo",
+    "garment_share": 0.558,
+    "tile": [
+     292,
+     2415,
+     387,
+     2537
+    ],
+    "hex": "1B1B1B",
+    "lab": [
+     9.77,
+     -0.0,
+     0.0
+    ],
+    "family": "black",
+    "name": "black",
+    "selected": false
+   },
+   {
+    "x": 399,
+    "y": 2411,
+    "w": 104,
+    "h": 130,
+    "frame": 246.0,
+    "spread": 9.0,
+    "kind": "photo",
+    "garment_share": 0.547,
+    "tile": [
+     403,
+     2415,
+     499,
+     2537
+    ],
+    "hex": "D2BDAA",
+    "lab": [
+     77.88,
+     4.39,
+     12.32
+    ],
+    "family": "warm neutral",
+    "name": "oatmeal",
+    "selected": false
+   },
+   {
+    "x": 511,
+    "y": 2411,
+    "w": 104,
+    "h": 130,
+    "frame": 246.0,
+    "spread": 7.3,
+    "kind": "photo",
+    "garment_share": 0.539,
+    "tile": [
+     515,
+     2415,
+     611,
+     2537
+    ],
+    "hex": "ECD2D1",
+    "lab": [
+     86.27,
+     8.87,
+     3.8
+    ],
+    "family": "pink",
+    "name": "blush",
+    "selected": false
+   },
+   {
+    "x": 623,
+    "y": 2411,
+    "w": 104,
+    "h": 130,
+    "frame": 246.0,
+    "spread": 12.1,
+    "kind": "photo",
+    "garment_share": 0.546,
+    "tile": [
+     627,
+     2415,
+     723,
+     2537
+    ],
+    "hex": "E9ABC7",
+    "lab": [
+     76.42,
+     26.89,
+     -5.26
+    ],
+    "family": "pink",
+    "name": "dusty rose",
+    "selected": false
+   },
+   {
+    "x": 735,
+    "y": 2411,
+    "w": 103,
+    "h": 130,
+    "frame": 246.0,
+    "spread": 12.6,
+    "kind": "photo",
+    "garment_share": 0.557,
+    "tile": [
+     739,
+     2415,
+     834,
+     2537
+    ],
+    "hex": "EB6989",
+    "lab": [
+     61.29,
+     53.16,
+     7.51
+    ],
+    "family": "red",
+    "name": "red",
+    "selected": false
+   },
+   {
+    "x": 846,
+    "y": 2411,
+    "w": 104,
+    "h": 130,
+    "frame": 246.0,
+    "spread": 18.1,
+    "kind": "photo",
+    "garment_share": 0.557,
+    "tile": [
+     850,
+     2415,
+     946,
+     2537
+    ],
+    "hex": "CA2927",
+    "lab": [
+     44.65,
+     61.14,
+     42.0
+    ],
+    "family": "orange",
+    "name": "rust",
+    "selected": false
+   },
+   {
+    "x": 958,
+    "y": 2411,
+    "w": 104,
+    "h": 130,
+    "frame": 246.0,
+    "spread": 18.5,
+    "kind": "photo",
+    "garment_share": 0.557,
+    "tile": [
+     962,
+     2415,
+     1058,
+     2537
+    ],
+    "hex": "C41C2B",
+    "lab": [
+     42.38,
+     62.73,
+     37.05
+    ],
+    "family": "red",
+    "name": "brick",
+    "selected": false
+   },
+   {
+    "x": 1055,
+    "y": 2411,
+    "w": 104,
+    "h": 130,
+    "frame": 245.66666666666666,
+    "spread": 82.0,
+    "kind": "photo",
+    "garment_share": 0.535,
+    "tile": [
+     1059,
+     2415,
+     1155,
+     2537
+    ],
+    "hex": "3A121A",
+    "lab": [
+     12.0,
+     20.65,
+     4.59
+    ],
+    "family": "red",
+    "name": "oxblood",
+    "selected": false
+   },
+   {
+    "x": 1167,
+    "y": 2411,
+    "w": 104,
+    "h": 130,
+    "frame": 28.0,
+    "spread": 14.2,
+    "kind": "photo",
+    "garment_share": 0.528,
+    "tile": [
+     1171,
+     2415,
+     1267,
+     2537
+    ],
+    "hex": "F1D6B6",
+    "lab": [
+     87.08,
+     4.55,
+     19.25
+    ],
+    "family": "yellow",
+    "name": "butter",
+    "selected": true
+   },
+   {
+    "x": 1279,
+    "y": 2411,
+    "w": 104,
+    "h": 130,
+    "frame": 245.33333333333334,
+    "spread": 66.4,
+    "kind": "photo",
+    "garment_share": 0.542,
+    "tile": [
+     1283,
+     2415,
+     1379,
+     2537
+    ],
+    "hex": "027A53",
+    "lab": [
+     45.02,
+     -39.02,
+     13.37
+    ],
+    "family": "green",
+    "name": "emerald",
+    "selected": false
+   },
+   {
+    "x": 1405,
+    "y": 2411,
+    "w": 104,
+    "h": 130,
+    "frame": 246.0,
+    "spread": 17.1,
+    "kind": "photo",
+    "garment_share": 0.556,
+    "tile": [
+     1409,
+     2415,
+     1505,
+     2537
+    ],
+    "hex": "675F55",
+    "lab": [
+     40.77,
+     1.32,
+     6.88
+    ],
+    "family": "warm neutral",
+    "name": "taupe",
+    "selected": false
+   },
+   {
+    "x": 1517,
+    "y": 2411,
+    "w": 104,
+    "h": 130,
+    "frame": 246.0,
+    "spread": 21.0,
+    "kind": "photo",
+    "garment_share": 0.558,
+    "tile": [
+     1521,
+     2415,
+     1617,
+     2537
+    ],
+    "hex": "113E4C",
+    "lab": [
+     23.95,
+     -9.8,
+     -12.93
+    ],
+    "family": "blue",
+    "name": "petrol",
+    "selected": false
+   },
+   {
+    "x": 1629,
+    "y": 2411,
+    "w": 103,
+    "h": 130,
+    "frame": 246.0,
+    "spread": 11.4,
+    "kind": "photo",
+    "garment_share": 0.552,
+    "tile": [
+     1633,
+     2415,
+     1728,
+     2537
+    ],
+    "hex": "AFBBCC",
+    "lab": [
+     75.46,
+     -0.68,
+     -9.96
+    ],
+    "family": "blue",
+    "name": "sky",
+    "selected": false
+   },
+   {
+    "x": 1740,
+    "y": 2411,
+    "w": 104,
+    "h": 130,
+    "frame": 246.0,
+    "spread": 12.5,
+    "kind": "photo",
+    "garment_share": 0.551,
+    "tile": [
+     1744,
+     2415,
+     1840,
+     2537
+    ],
+    "hex": "84A9CC",
+    "lab": [
+     67.75,
+     -4.0,
+     -21.86
+    ],
+    "family": "blue",
+    "name": "steel blue",
+    "selected": false
+   },
+   {
+    "x": 64,
+    "y": 2549,
+    "w": 104,
+    "h": 130,
+    "frame": 246.0,
+    "spread": 15.1,
+    "kind": "photo",
+    "garment_share": 0.555,
+    "tile": [
+     68,
+     2553,
+     164,
+     2675
+    ],
+    "hex": "4E77CA",
+    "lab": [
+     50.78,
+     11.52,
+     -47.43
+    ],
+    "family": "purple",
+    "name": "violet",
+    "selected": false
+   },
+   {
+    "x": 176,
+    "y": 2549,
+    "w": 104,
+    "h": 130,
+    "frame": 246.0,
+    "spread": 22.1,
+    "kind": "photo",
+    "garment_share": 0.557,
+    "tile": [
+     180,
+     2553,
+     276,
+     2675
+    ],
+    "hex": "1D223A",
+    "lab": [
+     13.89,
+     5.48,
+     -16.23
+    ],
+    "family": "blue",
+    "name": "navy",
+    "selected": false
+   },
+   {
+    "x": 288,
+    "y": 2549,
+    "w": 103,
+    "h": 130,
+    "frame": 246.0,
+    "spread": 19.0,
+    "kind": "photo",
+    "garment_share": 0.559,
+    "tile": [
+     292,
+     2553,
+     387,
+     2675
+    ],
+    "hex": "34425D",
+    "lab": [
+     27.89,
+     2.31,
+     -17.81
+    ],
+    "family": "blue",
+    "name": "navy",
+    "selected": false
+   },
+   {
+    "x": 399,
+    "y": 2549,
+    "w": 104,
+    "h": 130,
+    "frame": 246.0,
+    "spread": 22.9,
+    "kind": "photo",
+    "garment_share": 0.557,
+    "tile": [
+     403,
+     2553,
+     499,
+     2675
+    ],
+    "hex": "1A1C2B",
+    "lab": [
+     10.74,
+     3.63,
+     -10.4
+    ],
+    "family": "blue",
+    "name": "navy",
+    "selected": false
+   },
+   {
+    "x": 511,
+    "y": 2549,
+    "w": 104,
+    "h": 130,
+    "frame": 246.0,
+    "spread": 7.3,
+    "kind": "photo",
+    "garment_share": 0.54,
+    "tile": [
+     515,
+     2553,
+     611,
+     2675
+    ],
+    "hex": "DACCE0",
+    "lab": [
+     83.69,
+     8.45,
+     -8.13
+    ],
+    "family": "purple",
+    "name": "lilac",
+    "selected": false
+   },
+   {
+    "x": 623,
+    "y": 2549,
+    "w": 104,
+    "h": 130,
+    "frame": 246.0,
+    "spread": 20.0,
+    "kind": "photo",
+    "garment_share": 0.557,
+    "tile": [
+     627,
+     2553,
+     723,
+     2675
+    ],
+    "hex": "3F2F5D",
+    "lab": [
+     23.27,
+     18.6,
+     -24.98
+    ],
+    "family": "purple",
+    "name": "aubergine",
+    "selected": false
+   }
+  ],
+  "why": "",
+  "band": [
+   0,
+   2391,
+   1908,
+   2746
+  ]
+ },
+ "content/swipe/products/IMG_1043.png": {
+  "image": "content/swipe/products/IMG_1043.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1044.png": {
+  "image": "content/swipe/products/IMG_1044.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1045.png": {
+  "image": "content/swipe/products/IMG_1045.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1046.png": {
+  "image": "content/swipe/products/IMG_1046.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1047.png": {
+  "image": "content/swipe/products/IMG_1047.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1048.png": {
+  "image": "content/swipe/products/IMG_1048.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1049.png": {
+  "image": "content/swipe/products/IMG_1049.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1050.png": {
+  "image": "content/swipe/products/IMG_1050.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1051.png": {
+  "image": "content/swipe/products/IMG_1051.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1052.png": {
+  "image": "content/swipe/products/IMG_1052.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1054.png": {
+  "image": "content/swipe/products/IMG_1054.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1055.png": {
+  "image": "content/swipe/products/IMG_1055.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1056.png": {
+  "image": "content/swipe/products/IMG_1056.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1057.png": {
+  "image": "content/swipe/products/IMG_1057.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1058.png": {
+  "image": "content/swipe/products/IMG_1058.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1059.png": {
+  "image": "content/swipe/products/IMG_1059.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1060.png": {
+  "image": "content/swipe/products/IMG_1060.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1061.png": {
+  "image": "content/swipe/products/IMG_1061.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1062.png": {
+  "image": "content/swipe/products/IMG_1062.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1063.png": {
+  "image": "content/swipe/products/IMG_1063.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1064.png": {
+  "image": "content/swipe/products/IMG_1064.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1065.png": {
+  "image": "content/swipe/products/IMG_1065.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1066.png": {
+  "image": "content/swipe/products/IMG_1066.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1069.png": {
+  "image": "content/swipe/products/IMG_1069.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1068.png": {
+  "image": "content/swipe/products/IMG_1068.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1067.png": {
+  "image": "content/swipe/products/IMG_1067.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1070.png": {
+  "image": "content/swipe/products/IMG_1070.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1071.png": {
+  "image": "content/swipe/products/IMG_1071.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1072.png": {
+  "image": "content/swipe/products/IMG_1072.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1073.png": {
+  "image": "content/swipe/products/IMG_1073.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1074.png": {
+  "image": "content/swipe/products/IMG_1074.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1075.png": {
+  "image": "content/swipe/products/IMG_1075.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1076.png": {
+  "image": "content/swipe/products/IMG_1076.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1077.png": {
+  "image": "content/swipe/products/IMG_1077.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1078.png": {
+  "image": "content/swipe/products/IMG_1078.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1079.png": {
+  "image": "content/swipe/products/IMG_1079.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1080.png": {
+  "image": "content/swipe/products/IMG_1080.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1081.png": {
+  "image": "content/swipe/products/IMG_1081.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1082.png": {
+  "image": "content/swipe/products/IMG_1082.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1083.png": {
+  "image": "content/swipe/products/IMG_1083.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1084.png": {
+  "image": "content/swipe/products/IMG_1084.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1088.png": {
+  "image": "content/swipe/products/IMG_1088.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1085.png": {
+  "image": "content/swipe/products/IMG_1085.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1086.png": {
+  "image": "content/swipe/products/IMG_1086.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1087.png": {
+  "image": "content/swipe/products/IMG_1087.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1089.png": {
+  "image": "content/swipe/products/IMG_1089.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1090.png": {
+  "image": "content/swipe/products/IMG_1090.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1091.png": {
+  "image": "content/swipe/products/IMG_1091.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1092.png": {
+  "image": "content/swipe/products/IMG_1092.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1093.png": {
+  "image": "content/swipe/products/IMG_1093.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1094.png": {
+  "image": "content/swipe/products/IMG_1094.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1095.png": {
+  "image": "content/swipe/products/IMG_1095.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1096.png": {
+  "image": "content/swipe/products/IMG_1096.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1097.png": {
+  "image": "content/swipe/products/IMG_1097.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1098.png": {
+  "image": "content/swipe/products/IMG_1098.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1099.png": {
+  "image": "content/swipe/products/IMG_1099.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1100.png": {
+  "image": "content/swipe/products/IMG_1100.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1101.png": {
+  "image": "content/swipe/products/IMG_1101.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1102.png": {
+  "image": "content/swipe/products/IMG_1102.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1103.png": {
+  "image": "content/swipe/products/IMG_1103.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1104.png": {
+  "image": "content/swipe/products/IMG_1104.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1105.png": {
+  "image": "content/swipe/products/IMG_1105.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1106.png": {
+  "image": "content/swipe/products/IMG_1106.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1107.png": {
+  "image": "content/swipe/products/IMG_1107.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1108.png": {
+  "image": "content/swipe/products/IMG_1108.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1109.png": {
+  "image": "content/swipe/products/IMG_1109.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1110.png": {
+  "image": "content/swipe/products/IMG_1110.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1111.png": {
+  "image": "content/swipe/products/IMG_1111.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1112.png": {
+  "image": "content/swipe/products/IMG_1112.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1113.png": {
+  "image": "content/swipe/products/IMG_1113.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1114.png": {
+  "image": "content/swipe/products/IMG_1114.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1115.png": {
+  "image": "content/swipe/products/IMG_1115.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1116.png": {
+  "image": "content/swipe/products/IMG_1116.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1117.png": {
+  "image": "content/swipe/products/IMG_1117.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1118.png": {
+  "image": "content/swipe/products/IMG_1118.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1119.png": {
+  "image": "content/swipe/products/IMG_1119.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1120.png": {
+  "image": "content/swipe/products/IMG_1120.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1121.png": {
+  "image": "content/swipe/products/IMG_1121.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1122.png": {
+  "image": "content/swipe/products/IMG_1122.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1123.png": {
+  "image": "content/swipe/products/IMG_1123.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1124.png": {
+  "image": "content/swipe/products/IMG_1124.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1125.png": {
+  "image": "content/swipe/products/IMG_1125.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1126.png": {
+  "image": "content/swipe/products/IMG_1126.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1127.png": {
+  "image": "content/swipe/products/IMG_1127.png",
+  "shop": "colorfulstandard.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1130.png": {
+  "image": "content/swipe/products/IMG_1130.png",
+  "shop": "eu.toa.st",
+  "colour": "Willow Green",
+  "swatches": [
+   {
+    "x": 1193,
+    "y": 1000,
+    "w": 100,
+    "h": 140,
+    "frame": 235.0,
+    "spread": 61.0,
+    "kind": "photo",
+    "garment_share": 0.444,
+    "tile": [
+     1197,
+     1004,
+     1289,
+     1136
+    ],
+    "hex": "21342D",
+    "lab": [
+     19.92,
+     -9.6,
+     1.98
+    ],
+    "family": "green",
+    "name": "forest",
+    "selected": false
+   },
+   {
+    "x": 1301,
+    "y": 1000,
+    "w": 100,
+    "h": 140,
+    "frame": 235.0,
+    "spread": 58.0,
+    "kind": "photo",
+    "garment_share": 0.471,
+    "tile": [
+     1305,
+     1004,
+     1397,
+     1136
+    ],
+    "hex": "411A18",
+    "lab": [
+     15.11,
+     18.74,
+     10.49
+    ],
+    "family": "brown",
+    "name": "espresso",
+    "selected": false
+   },
+   {
+    "x": 1409,
+    "y": 1000,
+    "w": 100,
+    "h": 140,
+    "frame": 235.0,
+    "spread": 57.9,
+    "kind": "photo",
+    "garment_share": 0.476,
+    "tile": [
+     1413,
+     1004,
+     1505,
+     1136
+    ],
+    "hex": "1B1C24",
+    "lab": [
+     10.49,
+     1.78,
+     -5.62
+    ],
+    "family": "blue",
+    "name": "navy",
+    "selected": false
+   },
+   {
+    "x": 1517,
+    "y": 1000,
+    "w": 100,
+    "h": 140,
+    "frame": 235.0,
+    "spread": 39.5,
+    "kind": "photo",
+    "garment_share": 0.475,
+    "tile": [
+     1521,
+     1004,
+     1613,
+     1136
+    ],
+    "hex": "A46055",
+    "lab": [
+     48.15,
+     26.38,
+     18.19
+    ],
+    "family": "orange",
+    "name": "rust",
+    "selected": false
+   },
+   {
+    "x": 1625,
+    "y": 1000,
+    "w": 100,
+    "h": 140,
+    "frame": 235.0,
+    "spread": 47.0,
+    "kind": "photo",
+    "garment_share": 0.463,
+    "tile": [
+     1629,
+     1004,
+     1721,
+     1136
+    ],
+    "hex": "7C5C2E",
+    "lab": [
+     41.43,
+     7.61,
+     31.12
+    ],
+    "family": "yellow",
+    "name": "ochre",
+    "selected": false
+   },
+   {
+    "x": 1733,
+    "y": 1000,
+    "w": 100,
+    "h": 140,
+    "frame": 0.0,
+    "spread": 50.2,
+    "kind": "photo",
+    "garment_share": 0.471,
+    "tile": [
+     1737,
+     1004,
+     1829,
+     1136
+    ],
+    "hex": "545D32",
+    "lab": [
+     37.74,
+     -11.19,
+     23.47
+    ],
+    "family": "green",
+    "name": "moss",
+    "selected": true
+   }
+  ],
+  "why": "",
+  "band": [
+   1049,
+   974,
+   1908,
+   1195
+  ]
+ },
+ "content/swipe/products/IMG_1137.png": {
+  "image": "content/swipe/products/IMG_1137.png",
+  "shop": "eu.toa.st",
+  "colour": "Willow Green",
+  "swatches": [
+   {
+    "x": 1911,
+    "y": 1032,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 61.5,
+    "kind": "photo",
+    "garment_share": 0.438,
+    "tile": [
+     1915,
+     1036,
+     2027,
+     1196
+    ],
+    "hex": "21352D",
+    "lab": [
+     20.28,
+     -10.22,
+     2.5
+    ],
+    "family": "green",
+    "name": "forest",
+    "selected": false
+   },
+   {
+    "x": 2039,
+    "y": 1032,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 58.7,
+    "kind": "photo",
+    "garment_share": 0.464,
+    "tile": [
+     2043,
+     1036,
+     2155,
+     1196
+    ],
+    "hex": "411B19",
+    "lab": [
+     15.37,
+     18.23,
+     10.12
+    ],
+    "family": "brown",
+    "name": "espresso",
+    "selected": false
+   },
+   {
+    "x": 2167,
+    "y": 1032,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 58.4,
+    "kind": "photo",
+    "garment_share": 0.469,
+    "tile": [
+     2171,
+     1036,
+     2283,
+     1196
+    ],
+    "hex": "1C1C25",
+    "lab": [
+     10.64,
+     2.51,
+     -6.12
+    ],
+    "family": "blue",
+    "name": "navy",
+    "selected": false
+   },
+   {
+    "x": 2295,
+    "y": 1032,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 39.9,
+    "kind": "photo",
+    "garment_share": 0.467,
+    "tile": [
+     2299,
+     1036,
+     2411,
+     1196
+    ],
+    "hex": "A46055",
+    "lab": [
+     48.15,
+     26.38,
+     18.19
+    ],
+    "family": "orange",
+    "name": "rust",
+    "selected": false
+   },
+   {
+    "x": 2423,
+    "y": 1032,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 47.5,
+    "kind": "photo",
+    "garment_share": 0.456,
+    "tile": [
+     2427,
+     1036,
+     2539,
+     1196
+    ],
+    "hex": "7C5C2F",
+    "lab": [
+     41.45,
+     7.69,
+     30.59
+    ],
+    "family": "yellow",
+    "name": "ochre",
+    "selected": false
+   },
+   {
+    "x": 1911,
+    "y": 1208,
+    "w": 120,
+    "h": 168,
+    "frame": 1.0,
+    "spread": 50.7,
+    "kind": "photo",
+    "garment_share": 0.465,
+    "tile": [
+     1915,
+     1212,
+     2027,
+     1372
+    ],
+    "hex": "545D33",
+    "lab": [
+     37.76,
+     -11.07,
+     22.92
+    ],
+    "family": "green",
+    "name": "moss",
+    "selected": true
+   }
+  ],
+  "why": "",
+  "band": [
+   1510,
+   1006,
+   2746,
+   1431
+  ]
+ },
+ "content/swipe/products/IMG_1131.png": {
+  "image": "content/swipe/products/IMG_1131.png",
+  "shop": "eu.toa.st",
+  "colour": "Emerald",
+  "swatches": [
+   {
+    "x": 1193,
+    "y": 902,
+    "w": 100,
+    "h": 140,
+    "frame": 0.0,
+    "spread": 61.0,
+    "kind": "photo",
+    "garment_share": 0.444,
+    "tile": [
+     1197,
+     906,
+     1289,
+     1038
+    ],
+    "hex": "21342D",
+    "lab": [
+     19.92,
+     -9.6,
+     1.98
+    ],
+    "family": "green",
+    "name": "forest",
+    "selected": true
+   },
+   {
+    "x": 1301,
+    "y": 902,
+    "w": 100,
+    "h": 140,
+    "frame": 235.0,
+    "spread": 58.0,
+    "kind": "photo",
+    "garment_share": 0.471,
+    "tile": [
+     1305,
+     906,
+     1397,
+     1038
+    ],
+    "hex": "411A18",
+    "lab": [
+     15.11,
+     18.74,
+     10.49
+    ],
+    "family": "brown",
+    "name": "espresso",
+    "selected": false
+   },
+   {
+    "x": 1409,
+    "y": 902,
+    "w": 100,
+    "h": 140,
+    "frame": 235.0,
+    "spread": 57.9,
+    "kind": "photo",
+    "garment_share": 0.476,
+    "tile": [
+     1413,
+     906,
+     1505,
+     1038
+    ],
+    "hex": "1B1C24",
+    "lab": [
+     10.49,
+     1.78,
+     -5.62
+    ],
+    "family": "blue",
+    "name": "navy",
+    "selected": false
+   },
+   {
+    "x": 1517,
+    "y": 902,
+    "w": 100,
+    "h": 140,
+    "frame": 235.0,
+    "spread": 39.5,
+    "kind": "photo",
+    "garment_share": 0.475,
+    "tile": [
+     1521,
+     906,
+     1613,
+     1038
+    ],
+    "hex": "A46055",
+    "lab": [
+     48.15,
+     26.38,
+     18.19
+    ],
+    "family": "orange",
+    "name": "rust",
+    "selected": false
+   },
+   {
+    "x": 1625,
+    "y": 902,
+    "w": 100,
+    "h": 140,
+    "frame": 235.0,
+    "spread": 47.0,
+    "kind": "photo",
+    "garment_share": 0.463,
+    "tile": [
+     1629,
+     906,
+     1721,
+     1038
+    ],
+    "hex": "7C5C2E",
+    "lab": [
+     41.43,
+     7.61,
+     31.12
+    ],
+    "family": "yellow",
+    "name": "ochre",
+    "selected": false
+   },
+   {
+    "x": 1733,
+    "y": 902,
+    "w": 100,
+    "h": 140,
+    "frame": 235.0,
+    "spread": 50.2,
+    "kind": "photo",
+    "garment_share": 0.471,
+    "tile": [
+     1737,
+     906,
+     1829,
+     1038
+    ],
+    "hex": "545D32",
+    "lab": [
+     37.74,
+     -11.19,
+     23.47
+    ],
+    "family": "green",
+    "name": "moss",
+    "selected": false
+   }
+  ],
+  "why": "",
+  "band": [
+   1049,
+   876,
+   1908,
+   1097
+  ]
+ },
+ "content/swipe/products/IMG_1132.png": {
+  "image": "content/swipe/products/IMG_1132.png",
+  "shop": "eu.toa.st",
+  "colour": "Emerald",
+  "swatches": [
+   {
+    "x": 1911,
+    "y": 934,
+    "w": 120,
+    "h": 168,
+    "frame": 0.0,
+    "spread": 61.8,
+    "kind": "photo",
+    "garment_share": 0.438,
+    "tile": [
+     1915,
+     938,
+     2027,
+     1098
+    ],
+    "hex": "20342C",
+    "lab": [
+     19.82,
+     -10.24,
+     2.51
+    ],
+    "family": "green",
+    "name": "forest",
+    "selected": true
+   },
+   {
+    "x": 2039,
+    "y": 934,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 59.0,
+    "kind": "photo",
+    "garment_share": 0.464,
+    "tile": [
+     2043,
+     938,
+     2155,
+     1098
+    ],
+    "hex": "411A18",
+    "lab": [
+     15.11,
+     18.74,
+     10.49
+    ],
+    "family": "brown",
+    "name": "espresso",
+    "selected": false
+   },
+   {
+    "x": 2167,
+    "y": 934,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 58.8,
+    "kind": "photo",
+    "garment_share": 0.469,
+    "tile": [
+     2171,
+     938,
+     2283,
+     1098
+    ],
+    "hex": "1B1B24",
+    "lab": [
+     10.14,
+     2.52,
+     -6.15
+    ],
+    "family": "blue",
+    "name": "navy",
+    "selected": false
+   },
+   {
+    "x": 2295,
+    "y": 934,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 39.9,
+    "kind": "photo",
+    "garment_share": 0.467,
+    "tile": [
+     2299,
+     938,
+     2411,
+     1098
+    ],
+    "hex": "A46055",
+    "lab": [
+     48.15,
+     26.38,
+     18.19
+    ],
+    "family": "orange",
+    "name": "rust",
+    "selected": false
+   },
+   {
+    "x": 2423,
+    "y": 934,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 47.7,
+    "kind": "photo",
+    "garment_share": 0.456,
+    "tile": [
+     2427,
+     938,
+     2539,
+     1098
+    ],
+    "hex": "7C5C2E",
+    "lab": [
+     41.43,
+     7.61,
+     31.12
+    ],
+    "family": "yellow",
+    "name": "ochre",
+    "selected": false
+   },
+   {
+    "x": 1911,
+    "y": 1110,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 50.8,
+    "kind": "photo",
+    "garment_share": 0.465,
+    "tile": [
+     1915,
+     1114,
+     2027,
+     1274
+    ],
+    "hex": "545D32",
+    "lab": [
+     37.74,
+     -11.19,
+     23.47
+    ],
+    "family": "green",
+    "name": "moss",
+    "selected": false
+   }
+  ],
+  "why": "",
+  "band": [
+   1510,
+   908,
+   2746,
+   1333
+  ]
+ },
+ "content/swipe/products/IMG_1133.png": {
+  "image": "content/swipe/products/IMG_1133.png",
+  "shop": "eu.toa.st",
+  "colour": "Bordeaux",
+  "swatches": [
+   {
+    "x": 1911,
+    "y": 934,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 61.8,
+    "kind": "photo",
+    "garment_share": 0.438,
+    "tile": [
+     1915,
+     938,
+     2027,
+     1098
+    ],
+    "hex": "20342C",
+    "lab": [
+     19.82,
+     -10.24,
+     2.51
+    ],
+    "family": "green",
+    "name": "forest",
+    "selected": false
+   },
+   {
+    "x": 2039,
+    "y": 934,
+    "w": 120,
+    "h": 168,
+    "frame": 0.0,
+    "spread": 59.0,
+    "kind": "photo",
+    "garment_share": 0.464,
+    "tile": [
+     2043,
+     938,
+     2155,
+     1098
+    ],
+    "hex": "411A18",
+    "lab": [
+     15.11,
+     18.74,
+     10.49
+    ],
+    "family": "brown",
+    "name": "espresso",
+    "selected": true
+   },
+   {
+    "x": 2167,
+    "y": 934,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 58.8,
+    "kind": "photo",
+    "garment_share": 0.469,
+    "tile": [
+     2171,
+     938,
+     2283,
+     1098
+    ],
+    "hex": "1B1B24",
+    "lab": [
+     10.14,
+     2.52,
+     -6.15
+    ],
+    "family": "blue",
+    "name": "navy",
+    "selected": false
+   },
+   {
+    "x": 2295,
+    "y": 934,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 39.9,
+    "kind": "photo",
+    "garment_share": 0.467,
+    "tile": [
+     2299,
+     938,
+     2411,
+     1098
+    ],
+    "hex": "A46055",
+    "lab": [
+     48.15,
+     26.38,
+     18.19
+    ],
+    "family": "orange",
+    "name": "rust",
+    "selected": false
+   },
+   {
+    "x": 2423,
+    "y": 934,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 47.7,
+    "kind": "photo",
+    "garment_share": 0.456,
+    "tile": [
+     2427,
+     938,
+     2539,
+     1098
+    ],
+    "hex": "7C5C2E",
+    "lab": [
+     41.43,
+     7.61,
+     31.12
+    ],
+    "family": "yellow",
+    "name": "ochre",
+    "selected": false
+   },
+   {
+    "x": 1911,
+    "y": 1110,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 50.8,
+    "kind": "photo",
+    "garment_share": 0.465,
+    "tile": [
+     1915,
+     1114,
+     2027,
+     1274
+    ],
+    "hex": "545D32",
+    "lab": [
+     37.74,
+     -11.19,
+     23.47
+    ],
+    "family": "green",
+    "name": "moss",
+    "selected": false
+   }
+  ],
+  "why": "",
+  "band": [
+   1510,
+   908,
+   2746,
+   1333
+  ]
+ },
+ "content/swipe/products/IMG_1134.png": {
+  "image": "content/swipe/products/IMG_1134.png",
+  "shop": "eu.toa.st",
+  "colour": "Navy",
+  "swatches": [
+   {
+    "x": 1911,
+    "y": 934,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 61.8,
+    "kind": "photo",
+    "garment_share": 0.438,
+    "tile": [
+     1915,
+     938,
+     2027,
+     1098
+    ],
+    "hex": "20342C",
+    "lab": [
+     19.82,
+     -10.24,
+     2.51
+    ],
+    "family": "green",
+    "name": "forest",
+    "selected": false
+   },
+   {
+    "x": 2039,
+    "y": 934,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 59.0,
+    "kind": "photo",
+    "garment_share": 0.464,
+    "tile": [
+     2043,
+     938,
+     2155,
+     1098
+    ],
+    "hex": "411A18",
+    "lab": [
+     15.11,
+     18.74,
+     10.49
+    ],
+    "family": "brown",
+    "name": "espresso",
+    "selected": false
+   },
+   {
+    "x": 2167,
+    "y": 934,
+    "w": 120,
+    "h": 168,
+    "frame": 0.0,
+    "spread": 58.8,
+    "kind": "photo",
+    "garment_share": 0.469,
+    "tile": [
+     2171,
+     938,
+     2283,
+     1098
+    ],
+    "hex": "1B1B24",
+    "lab": [
+     10.14,
+     2.52,
+     -6.15
+    ],
+    "family": "blue",
+    "name": "navy",
+    "selected": true
+   },
+   {
+    "x": 2295,
+    "y": 934,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 39.9,
+    "kind": "photo",
+    "garment_share": 0.467,
+    "tile": [
+     2299,
+     938,
+     2411,
+     1098
+    ],
+    "hex": "A46055",
+    "lab": [
+     48.15,
+     26.38,
+     18.19
+    ],
+    "family": "orange",
+    "name": "rust",
+    "selected": false
+   },
+   {
+    "x": 2423,
+    "y": 934,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 47.7,
+    "kind": "photo",
+    "garment_share": 0.456,
+    "tile": [
+     2427,
+     938,
+     2539,
+     1098
+    ],
+    "hex": "7C5C2E",
+    "lab": [
+     41.43,
+     7.61,
+     31.12
+    ],
+    "family": "yellow",
+    "name": "ochre",
+    "selected": false
+   },
+   {
+    "x": 1911,
+    "y": 1110,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 50.8,
+    "kind": "photo",
+    "garment_share": 0.465,
+    "tile": [
+     1915,
+     1114,
+     2027,
+     1274
+    ],
+    "hex": "545D32",
+    "lab": [
+     37.74,
+     -11.19,
+     23.47
+    ],
+    "family": "green",
+    "name": "moss",
+    "selected": false
+   }
+  ],
+  "why": "",
+  "band": [
+   1510,
+   915,
+   2746,
+   1333
+  ]
+ },
+ "content/swipe/products/IMG_1135.png": {
+  "image": "content/swipe/products/IMG_1135.png",
+  "shop": "eu.toa.st",
+  "colour": "Corallite",
+  "swatches": [
+   {
+    "x": 1911,
+    "y": 1032,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 61.8,
+    "kind": "photo",
+    "garment_share": 0.438,
+    "tile": [
+     1915,
+     1036,
+     2027,
+     1196
+    ],
+    "hex": "20342C",
+    "lab": [
+     19.82,
+     -10.24,
+     2.51
+    ],
+    "family": "green",
+    "name": "forest",
+    "selected": false
+   },
+   {
+    "x": 2039,
+    "y": 1032,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 59.0,
+    "kind": "photo",
+    "garment_share": 0.464,
+    "tile": [
+     2043,
+     1036,
+     2155,
+     1196
+    ],
+    "hex": "411A18",
+    "lab": [
+     15.11,
+     18.74,
+     10.49
+    ],
+    "family": "brown",
+    "name": "espresso",
+    "selected": false
+   },
+   {
+    "x": 2167,
+    "y": 1032,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 58.8,
+    "kind": "photo",
+    "garment_share": 0.469,
+    "tile": [
+     2171,
+     1036,
+     2283,
+     1196
+    ],
+    "hex": "1B1B24",
+    "lab": [
+     10.14,
+     2.52,
+     -6.15
+    ],
+    "family": "blue",
+    "name": "navy",
+    "selected": false
+   },
+   {
+    "x": 2295,
+    "y": 1032,
+    "w": 120,
+    "h": 168,
+    "frame": 0.0,
+    "spread": 39.9,
+    "kind": "photo",
+    "garment_share": 0.467,
+    "tile": [
+     2299,
+     1036,
+     2411,
+     1196
+    ],
+    "hex": "A46055",
+    "lab": [
+     48.15,
+     26.38,
+     18.19
+    ],
+    "family": "orange",
+    "name": "rust",
+    "selected": true
+   },
+   {
+    "x": 2423,
+    "y": 1032,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 47.7,
+    "kind": "photo",
+    "garment_share": 0.456,
+    "tile": [
+     2427,
+     1036,
+     2539,
+     1196
+    ],
+    "hex": "7C5C2E",
+    "lab": [
+     41.43,
+     7.61,
+     31.12
+    ],
+    "family": "yellow",
+    "name": "ochre",
+    "selected": false
+   },
+   {
+    "x": 1911,
+    "y": 1208,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 50.8,
+    "kind": "photo",
+    "garment_share": 0.465,
+    "tile": [
+     1915,
+     1212,
+     2027,
+     1372
+    ],
+    "hex": "545D32",
+    "lab": [
+     37.74,
+     -11.19,
+     23.47
+    ],
+    "family": "green",
+    "name": "moss",
+    "selected": false
+   }
+  ],
+  "why": "",
+  "band": [
+   1510,
+   1006,
+   2746,
+   1431
+  ]
+ },
+ "content/swipe/products/IMG_1136.png": {
+  "image": "content/swipe/products/IMG_1136.png",
+  "shop": "eu.toa.st",
+  "colour": "Straw",
+  "swatches": [
+   {
+    "x": 1911,
+    "y": 1032,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 61.8,
+    "kind": "photo",
+    "garment_share": 0.438,
+    "tile": [
+     1915,
+     1036,
+     2027,
+     1196
+    ],
+    "hex": "20342C",
+    "lab": [
+     19.82,
+     -10.24,
+     2.51
+    ],
+    "family": "green",
+    "name": "forest",
+    "selected": false
+   },
+   {
+    "x": 2039,
+    "y": 1032,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 59.0,
+    "kind": "photo",
+    "garment_share": 0.464,
+    "tile": [
+     2043,
+     1036,
+     2155,
+     1196
+    ],
+    "hex": "411A18",
+    "lab": [
+     15.11,
+     18.74,
+     10.49
+    ],
+    "family": "brown",
+    "name": "espresso",
+    "selected": false
+   },
+   {
+    "x": 2167,
+    "y": 1032,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 58.8,
+    "kind": "photo",
+    "garment_share": 0.469,
+    "tile": [
+     2171,
+     1036,
+     2283,
+     1196
+    ],
+    "hex": "1B1B24",
+    "lab": [
+     10.14,
+     2.52,
+     -6.15
+    ],
+    "family": "blue",
+    "name": "navy",
+    "selected": false
+   },
+   {
+    "x": 2295,
+    "y": 1032,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 39.9,
+    "kind": "photo",
+    "garment_share": 0.467,
+    "tile": [
+     2299,
+     1036,
+     2411,
+     1196
+    ],
+    "hex": "A46055",
+    "lab": [
+     48.15,
+     26.38,
+     18.19
+    ],
+    "family": "orange",
+    "name": "rust",
+    "selected": false
+   },
+   {
+    "x": 2423,
+    "y": 1032,
+    "w": 120,
+    "h": 168,
+    "frame": 0.0,
+    "spread": 47.7,
+    "kind": "photo",
+    "garment_share": 0.456,
+    "tile": [
+     2427,
+     1036,
+     2539,
+     1196
+    ],
+    "hex": "7C5C2E",
+    "lab": [
+     41.43,
+     7.61,
+     31.12
+    ],
+    "family": "yellow",
+    "name": "ochre",
+    "selected": true
+   },
+   {
+    "x": 1911,
+    "y": 1208,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 50.8,
+    "kind": "photo",
+    "garment_share": 0.465,
+    "tile": [
+     1915,
+     1212,
+     2027,
+     1372
+    ],
+    "hex": "545D32",
+    "lab": [
+     37.74,
+     -11.19,
+     23.47
+    ],
+    "family": "green",
+    "name": "moss",
+    "selected": false
+   }
+  ],
+  "why": "",
+  "band": [
+   1510,
+   1006,
+   2746,
+   1431
+  ]
+ },
+ "content/swipe/products/IMG_1138.png": {
+  "image": "content/swipe/products/IMG_1138.png",
+  "shop": "eu.toa.st",
+  "colour": "Dark Navy",
+  "swatches": [],
+  "why": "no swatches found in the band under \"Colour:\"",
+  "band": [
+   1510,
+   1097,
+   2746,
+   1335
+  ]
+ },
+ "content/swipe/products/IMG_1139.png": {
+  "image": "content/swipe/products/IMG_1139.png",
+  "shop": "eu.toa.st",
+  "colour": "NavyBlue",
+  "swatches": [
+   {
+    "x": 1911,
+    "y": 1068,
+    "w": 120,
+    "h": 168,
+    "frame": 0.0,
+    "spread": 58.2,
+    "kind": "photo",
+    "garment_share": 0.461,
+    "tile": [
+     1915,
+     1072,
+     2027,
+     1232
+    ],
+    "hex": "202731",
+    "lab": [
+     15.38,
+     -0.15,
+     -7.54
+    ],
+    "family": "blue",
+    "name": "navy",
+    "selected": true
+   },
+   {
+    "x": 2039,
+    "y": 1068,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 39.4,
+    "kind": "photo",
+    "garment_share": 0.473,
+    "tile": [
+     2043,
+     1072,
+     2155,
+     1232
+    ],
+    "hex": "A96E26",
+    "lab": [
+     51.53,
+     17.26,
+     47.45
+    ],
+    "family": "yellow",
+    "name": "ochre",
+    "selected": false
+   }
+  ],
+  "why": "",
+  "band": [
+   1510,
+   1049,
+   2746,
+   1291
+  ]
+ },
+ "content/swipe/products/IMG_1140.png": {
+  "image": "content/swipe/products/IMG_1140.png",
+  "shop": "eu.toa.st",
+  "colour": "Darkest Navy",
+  "swatches": [
+   {
+    "x": 1911,
+    "y": 1018,
+    "w": 120,
+    "h": 168,
+    "frame": 0.0,
+    "spread": 87.7,
+    "kind": "photo",
+    "garment_share": 0.401,
+    "tile": [
+     1915,
+     1022,
+     2027,
+     1182
+    ],
+    "hex": "E0E3D9",
+    "lab": [
+     89.76,
+     -2.78,
+     4.52
+    ],
+    "family": "cool neutral",
+    "name": "pale grey",
+    "selected": true
+   },
+   {
+    "x": 2039,
+    "y": 1018,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 75.4,
+    "kind": "photo",
+    "garment_share": 0.413,
+    "tile": [
+     2043,
+     1022,
+     2155,
+     1182
+    ],
+    "hex": "E0E3DA",
+    "lab": [
+     89.79,
+     -2.6,
+     4.04
+    ],
+    "family": "cool neutral",
+    "name": "pale grey",
+    "selected": false
+   }
+  ],
+  "why": "",
+  "band": [
+   1510,
+   999,
+   2746,
+   1241
+  ]
+ },
+ "content/swipe/products/IMG_1141.png": {
+  "image": "content/swipe/products/IMG_1141.png",
+  "shop": "eu.toa.st",
+  "colour": "Olive Melange",
+  "swatches": [
+   {
+    "x": 1911,
+    "y": 1018,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 87.7,
+    "kind": "photo",
+    "garment_share": 0.401,
+    "tile": [
+     1915,
+     1022,
+     2027,
+     1182
+    ],
+    "hex": "E0E3D9",
+    "lab": [
+     89.76,
+     -2.78,
+     4.52
+    ],
+    "family": "cool neutral",
+    "name": "pale grey",
+    "selected": false
+   },
+   {
+    "x": 2039,
+    "y": 1018,
+    "w": 120,
+    "h": 168,
+    "frame": 0.0,
+    "spread": 75.4,
+    "kind": "photo",
+    "garment_share": 0.413,
+    "tile": [
+     2043,
+     1022,
+     2155,
+     1182
+    ],
+    "hex": "E0E3DA",
+    "lab": [
+     89.79,
+     -2.6,
+     4.04
+    ],
+    "family": "cool neutral",
+    "name": "pale grey",
+    "selected": true
+   }
+  ],
+  "why": "",
+  "band": [
+   1510,
+   999,
+   2746,
+   1241
+  ]
+ },
+ "content/swipe/products/IMG_1142.png": {
+  "image": "content/swipe/products/IMG_1142.png",
+  "shop": "eu.toa.st",
+  "colour": "Bordeaux",
+  "swatches": [
+   {
+    "x": 1911,
+    "y": 1116,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 18.4,
+    "kind": "photo",
+    "garment_share": 0.527,
+    "tile": [
+     1915,
+     1120,
+     2027,
+     1280
+    ],
+    "hex": "AE9D8E",
+    "lab": [
+     65.8,
+     3.72,
+     10.11
+    ],
+    "family": "warm neutral",
+    "name": "oatmeal",
+    "selected": false
+   },
+   {
+    "x": 2039,
+    "y": 1116,
+    "w": 120,
+    "h": 168,
+    "frame": 0.0,
+    "spread": 32.5,
+    "kind": "photo",
+    "garment_share": 0.523,
+    "tile": [
+     2043,
+     1120,
+     2155,
+     1280
+    ],
+    "hex": "692D2C",
+    "lab": [
+     26.91,
+     26.78,
+     13.72
+    ],
+    "family": "orange",
+    "name": "rust",
+    "selected": true
+   },
+   {
+    "x": 2167,
+    "y": 1116,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 47.5,
+    "kind": "photo",
+    "garment_share": 0.491,
+    "tile": [
+     2171,
+     1120,
+     2283,
+     1280
+    ],
+    "hex": "1F1F1F",
+    "lab": [
+     11.76,
+     -0.0,
+     0.0
+    ],
+    "family": "black",
+    "name": "black",
+    "selected": false
+   }
+  ],
+  "why": "",
+  "band": [
+   1510,
+   1090,
+   2746,
+   1339
+  ]
+ },
+ "content/swipe/products/IMG_1143.png": {
+  "image": "content/swipe/products/IMG_1143.png",
+  "shop": "eu.toa.st",
+  "colour": "Olivine",
+  "swatches": [
+   {
+    "x": 1911,
+    "y": 934,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 92.3,
+    "kind": "photo",
+    "garment_share": 0.376,
+    "tile": [
+     1915,
+     938,
+     2027,
+     1098
+    ],
+    "hex": "191F28",
+    "lab": [
+     11.55,
+     0.01,
+     -6.96
+    ],
+    "family": "blue",
+    "name": "navy",
+    "selected": false
+   },
+   {
+    "x": 2039,
+    "y": 934,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 36.7,
+    "kind": "photo",
+    "garment_share": 0.393,
+    "tile": [
+     2043,
+     938,
+     2155,
+     1098
+    ],
+    "hex": "BDAB9A",
+    "lab": [
+     71.06,
+     3.69,
+     11.12
+    ],
+    "family": "warm neutral",
+    "name": "oatmeal",
+    "selected": false
+   },
+   {
+    "x": 2167,
+    "y": 934,
+    "w": 120,
+    "h": 168,
+    "frame": 0.0,
+    "spread": 53.4,
+    "kind": "photo",
+    "garment_share": 0.314,
+    "tile": [
+     2171,
+     938,
+     2283,
+     1098
+    ],
+    "hex": "958A3C",
+    "lab": [
+     56.97,
+     -6.15,
+     42.38
+    ],
+    "family": "yellow",
+    "name": "mustard",
+    "selected": true
+   },
+   {
+    "x": 2295,
+    "y": 934,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 76.4,
+    "kind": "photo",
+    "garment_share": 0.311,
+    "tile": [
+     2299,
+     938,
+     2411,
+     1098
+    ],
+    "hex": "574840",
+    "lab": [
+     31.88,
+     4.93,
+     7.17
+    ],
+    "family": "brown",
+    "name": "chocolate",
+    "selected": false
+   },
+   {
+    "x": 2423,
+    "y": 934,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 46.2,
+    "kind": "photo",
+    "garment_share": 0.464,
+    "tile": [
+     2427,
+     938,
+     2539,
+     1098
+    ],
+    "hex": "7E3A34",
+    "lab": [
+     33.37,
+     28.9,
+     17.71
+    ],
+    "family": "orange",
+    "name": "rust",
+    "selected": false
+   }
+  ],
+  "why": "",
+  "band": [
+   1510,
+   908,
+   2746,
+   1157
+  ]
+ },
+ "content/swipe/products/IMG_1144.png": {
+  "image": "content/swipe/products/IMG_1144.png",
+  "shop": "eu.toa.st",
+  "colour": "Red Pitaya",
+  "swatches": [
+   {
+    "x": 1911,
+    "y": 934,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 92.0,
+    "kind": "photo",
+    "garment_share": 0.378,
+    "tile": [
+     1915,
+     938,
+     2027,
+     1098
+    ],
+    "hex": "1A2029",
+    "lab": [
+     12.04,
+     -0.0,
+     -6.93
+    ],
+    "family": "blue",
+    "name": "navy",
+    "selected": false
+   },
+   {
+    "x": 2039,
+    "y": 934,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 36.3,
+    "kind": "photo",
+    "garment_share": 0.397,
+    "tile": [
+     2043,
+     938,
+     2155,
+     1098
+    ],
+    "hex": "BEAC9B",
+    "lab": [
+     71.43,
+     3.68,
+     11.1
+    ],
+    "family": "warm neutral",
+    "name": "oatmeal",
+    "selected": false
+   },
+   {
+    "x": 2167,
+    "y": 934,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 53.1,
+    "kind": "photo",
+    "garment_share": 0.317,
+    "tile": [
+     2171,
+     938,
+     2283,
+     1098
+    ],
+    "hex": "978C3F",
+    "lab": [
+     57.75,
+     -6.12,
+     41.85
+    ],
+    "family": "yellow",
+    "name": "mustard",
+    "selected": false
+   },
+   {
+    "x": 2295,
+    "y": 934,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 76.0,
+    "kind": "photo",
+    "garment_share": 0.313,
+    "tile": [
+     2299,
+     938,
+     2411,
+     1098
+    ],
+    "hex": "61574D",
+    "lab": [
+     37.65,
+     2.22,
+     7.3
+    ],
+    "family": "brown",
+    "name": "tobacco",
+    "selected": false
+   },
+   {
+    "x": 2423,
+    "y": 934,
+    "w": 120,
+    "h": 168,
+    "frame": 0.0,
+    "spread": 45.9,
+    "kind": "photo",
+    "garment_share": 0.465,
+    "tile": [
+     2427,
+     938,
+     2539,
+     1098
+    ],
+    "hex": "7E3A34",
+    "lab": [
+     33.37,
+     28.9,
+     17.71
+    ],
+    "family": "orange",
+    "name": "rust",
+    "selected": true
+   }
+  ],
+  "why": "",
+  "band": [
+   1510,
+   915,
+   2746,
+   1157
+  ]
+ },
+ "content/swipe/products/IMG_1145.png": {
+  "image": "content/swipe/products/IMG_1145.png",
+  "shop": "eu.toa.st",
+  "colour": "Green Multi",
+  "swatches": [],
+  "why": "no swatches found in the band under \"Colour:\"",
+  "band": [
+   1510,
+   1090,
+   2746,
+   1339
+  ]
+ },
+ "content/swipe/products/IMG_1146.png": {
+  "image": "content/swipe/products/IMG_1146.png",
+  "shop": "eu.toa.st",
+  "colour": "Ginger",
+  "swatches": [
+   {
+    "x": 1911,
+    "y": 1068,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 47.6,
+    "kind": "photo",
+    "garment_share": 0.493,
+    "tile": [
+     1915,
+     1072,
+     2027,
+     1232
+    ],
+    "hex": "28354C",
+    "lab": [
+     22.01,
+     1.74,
+     -15.83
+    ],
+    "family": "blue",
+    "name": "navy",
+    "selected": false
+   },
+   {
+    "x": 2039,
+    "y": 1068,
+    "w": 120,
+    "h": 168,
+    "frame": 0.0,
+    "spread": 48.1,
+    "kind": "photo",
+    "garment_share": 0.444,
+    "tile": [
+     2043,
+     1072,
+     2155,
+     1232
+    ],
+    "hex": "874A23",
+    "lab": [
+     38.15,
+     22.52,
+     33.76
+    ],
+    "family": "warm neutral",
+    "name": "taupe",
+    "selected": true
+   }
+  ],
+  "why": "",
+  "band": [
+   1510,
+   1049,
+   2746,
+   1291
+  ]
+ },
+ "content/swipe/products/IMG_1147.png": {
+  "image": "content/swipe/products/IMG_1147.png",
+  "shop": "eu.toa.st",
+  "colour": "Midnight",
+  "swatches": [
+   {
+    "x": 1911,
+    "y": 970,
+    "w": 120,
+    "h": 168,
+    "frame": 0.0,
+    "spread": 47.6,
+    "kind": "photo",
+    "garment_share": 0.493,
+    "tile": [
+     1915,
+     974,
+     2027,
+     1134
+    ],
+    "hex": "28354C",
+    "lab": [
+     22.01,
+     1.74,
+     -15.83
+    ],
+    "family": "blue",
+    "name": "navy",
+    "selected": true
+   },
+   {
+    "x": 2039,
+    "y": 970,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 48.1,
+    "kind": "photo",
+    "garment_share": 0.444,
+    "tile": [
+     2043,
+     974,
+     2155,
+     1134
+    ],
+    "hex": "874A23",
+    "lab": [
+     38.15,
+     22.52,
+     33.76
+    ],
+    "family": "warm neutral",
+    "name": "taupe",
+    "selected": false
+   }
+  ],
+  "why": "",
+  "band": [
+   1510,
+   951,
+   2746,
+   1193
+  ]
+ },
+ "content/swipe/products/IMG_1148.png": {
+  "image": "content/swipe/products/IMG_1148.png",
+  "shop": "eu.toa.st",
+  "colour": "Apple Green",
+  "swatches": [
+   {
+    "x": 1911,
+    "y": 934,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 36.6,
+    "kind": "photo",
+    "garment_share": 0.509,
+    "tile": [
+     1915,
+     938,
+     2027,
+     1098
+    ],
+    "hex": "735C6D",
+    "lab": [
+     41.85,
+     12.53,
+     -6.1
+    ],
+    "family": "purple",
+    "name": "plum",
+    "selected": false
+   },
+   {
+    "x": 2039,
+    "y": 934,
+    "w": 120,
+    "h": 168,
+    "frame": 0.0,
+    "spread": 38.4,
+    "kind": "photo",
+    "garment_share": 0.504,
+    "tile": [
+     2043,
+     938,
+     2155,
+     1098
+    ],
+    "hex": "70723E",
+    "lab": [
+     46.75,
+     -9.14,
+     28.46
+    ],
+    "family": "green",
+    "name": "olive",
+    "selected": true
+   }
+  ],
+  "why": "",
+  "band": [
+   1510,
+   915,
+   2746,
+   1157
+  ]
+ },
+ "content/swipe/products/IMG_1149.png": {
+  "image": "content/swipe/products/IMG_1149.png",
+  "shop": "eu.toa.st",
+  "colour": "Wisteria",
+  "swatches": [
+   {
+    "x": 1911,
+    "y": 934,
+    "w": 120,
+    "h": 168,
+    "frame": 0.0,
+    "spread": 36.3,
+    "kind": "photo",
+    "garment_share": 0.51,
+    "tile": [
+     1915,
+     938,
+     2027,
+     1098
+    ],
+    "hex": "735D6E",
+    "lab": [
+     42.15,
+     12.12,
+     -6.26
+    ],
+    "family": "purple",
+    "name": "plum",
+    "selected": true
+   },
+   {
+    "x": 2039,
+    "y": 934,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 38.1,
+    "kind": "photo",
+    "garment_share": 0.505,
+    "tile": [
+     2043,
+     938,
+     2155,
+     1098
+    ],
+    "hex": "70723E",
+    "lab": [
+     46.75,
+     -9.14,
+     28.46
+    ],
+    "family": "green",
+    "name": "olive",
+    "selected": false
+   }
+  ],
+  "why": "",
+  "band": [
+   1510,
+   908,
+   2746,
+   1153
+  ]
+ },
+ "content/swipe/products/IMG_1150.png": {
+  "image": "content/swipe/products/IMG_1150.png",
+  "shop": "eu.toa.st",
+  "colour": "Stormy Blue",
+  "swatches": [
+   {
+    "x": 1911,
+    "y": 1018,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 92.3,
+    "kind": "photo",
+    "garment_share": 0.381,
+    "tile": [
+     1915,
+     1022,
+     2027,
+     1182
+    ],
+    "hex": "1D2229",
+    "lab": [
+     13.02,
+     -0.25,
+     -5.43
+    ],
+    "family": "blue",
+    "name": "navy",
+    "selected": false
+   },
+   {
+    "x": 2039,
+    "y": 1018,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 55.1,
+    "kind": "photo",
+    "garment_share": 0.341,
+    "tile": [
+     2043,
+     1022,
+     2155,
+     1182
+    ],
+    "hex": "848745",
+    "lab": [
+     54.72,
+     -11.19,
+     34.85
+    ],
+    "family": "green",
+    "name": "moss",
+    "selected": false
+   },
+   {
+    "x": 2167,
+    "y": 1018,
+    "w": 120,
+    "h": 168,
+    "frame": 235.0,
+    "spread": 52.2,
+    "kind": "photo",
+    "garment_share": 0.458,
+    "tile": [
+     2171,
+     1022,
+     2283,
+     1182
+    ],
+    "hex": "A2262D",
+    "lab": [
+     36.48,
+     50.27,
+     27.36
+    ],
+    "family": "red",
+    "name": "brick",
+    "selected": false
+   },
+   {
+    "x": 2295,
+    "y": 1018,
+    "w": 120,
+    "h": 168,
+    "frame": 0.0,
+    "spread": 55.4,
+    "kind": "photo",
+    "garment_share": 0.447,
+    "tile": [
+     2299,
+     1022,
+     2411,
+     1182
+    ],
+    "hex": "394552",
+    "lab": [
+     28.73,
+     -1.34,
+     -9.37
+    ],
+    "family": "blue",
+    "name": "denim blue",
+    "selected": true
+   }
+  ],
+  "why": "",
+  "band": [
+   1510,
+   999,
+   2746,
+   1241
+  ]
+ },
+ "content/swipe/products/IMG_1156.png": {
+  "image": "content/swipe/products/IMG_1156.png",
+  "shop": "johnstonsofelgin.com",
+  "colour": "",
+  "swatches": [],
+  "why": "no \"Colour:\" line on the page"
+ },
+ "content/swipe/products/IMG_1157.png": {
+  "image": "content/swipe/products/IMG_1157.png",
+  "shop": "johnstonsofelgin.com",
+  "colour": "PURPLE",
+  "swatches": [
+   {
+    "x": 1060,
+    "y": 940,
+    "w": 90,
+    "h": 90,
+    "frame": 134.33333333333334,
+    "spread": 4.8,
+    "kind": "fabric",
+    "hex": "352236",
+    "lab": [
+     16.34,
+     13.27,
+     -9.4
+    ],
+    "family": "purple",
+    "name": "aubergine",
+    "selected": true
+   },
+   {
+    "x": 1171,
+    "y": 941,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 17.4,
+    "kind": "fabric",
+    "hex": "70716C",
+    "lab": [
+     47.41,
+     -1.39,
+     2.64
+    ],
+    "family": "grey",
+    "name": "mid grey",
+    "selected": false
+   },
+   {
+    "x": 1281,
+    "y": 941,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 7.0,
+    "kind": "fabric",
+    "hex": "121514",
+    "lab": [
+     6.46,
+     -1.48,
+     0.19
+    ],
+    "family": "black",
+    "name": "black",
+    "selected": false
+   },
+   {
+    "x": 1391,
+    "y": 941,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 4.1,
+    "kind": "fabric",
+    "hex": "111217",
+    "lab": [
+     5.54,
+     0.77,
+     -3.28
+    ],
+    "family": "black",
+    "name": "black",
+    "selected": false
+   },
+   {
+    "x": 1501,
+    "y": 941,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 12.2,
+    "kind": "fabric",
+    "hex": "BAA995",
+    "lab": [
+     70.17,
+     2.86,
+     12.56
+    ],
+    "family": "brown",
+    "name": "tan",
+    "selected": false
+   }
+  ],
+  "why": "",
+  "band": [
+   992,
+   920,
+   1908,
+   1078
+  ]
+ },
+ "content/swipe/products/IMG_1158.png": {
+  "image": "content/swipe/products/IMG_1158.png",
+  "shop": "johnstonsofelgin.com",
+  "colour": "GREY",
+  "swatches": [
+   {
+    "x": 1060,
+    "y": 940,
+    "w": 90,
+    "h": 90,
+    "frame": 134.33333333333334,
+    "spread": 17.4,
+    "kind": "fabric",
+    "hex": "70716C",
+    "lab": [
+     47.41,
+     -1.39,
+     2.64
+    ],
+    "family": "grey",
+    "name": "mid grey",
+    "selected": true
+   },
+   {
+    "x": 1171,
+    "y": 941,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 4.8,
+    "kind": "fabric",
+    "hex": "352236",
+    "lab": [
+     16.34,
+     13.27,
+     -9.4
+    ],
+    "family": "purple",
+    "name": "aubergine",
+    "selected": false
+   },
+   {
+    "x": 1281,
+    "y": 941,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 7.0,
+    "kind": "fabric",
+    "hex": "121514",
+    "lab": [
+     6.46,
+     -1.48,
+     0.19
+    ],
+    "family": "black",
+    "name": "black",
+    "selected": false
+   },
+   {
+    "x": 1391,
+    "y": 941,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 4.1,
+    "kind": "fabric",
+    "hex": "111217",
+    "lab": [
+     5.54,
+     0.77,
+     -3.28
+    ],
+    "family": "black",
+    "name": "black",
+    "selected": false
+   },
+   {
+    "x": 1501,
+    "y": 941,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 12.2,
+    "kind": "fabric",
+    "hex": "BAA995",
+    "lab": [
+     70.17,
+     2.86,
+     12.56
+    ],
+    "family": "brown",
+    "name": "tan",
+    "selected": false
+   }
+  ],
+  "why": "",
+  "band": [
+   992,
+   920,
+   1908,
+   1078
+  ]
+ },
+ "content/swipe/products/IMG_1159.png": {
+  "image": "content/swipe/products/IMG_1159.png",
+  "shop": "johnstonsofelgin.com",
+  "colour": "BLUE",
+  "swatches": [
+   {
+    "x": 1060,
+    "y": 940,
+    "w": 90,
+    "h": 90,
+    "frame": 134.33333333333334,
+    "spread": 5.7,
+    "kind": "fabric",
+    "hex": "20364B",
+    "lab": [
+     21.77,
+     -1.63,
+     -15.58
+    ],
+    "family": "blue",
+    "name": "navy",
+    "selected": true
+   },
+   {
+    "x": 1171,
+    "y": 941,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 6.7,
+    "kind": "fabric",
+    "hex": "DDDBA6",
+    "lab": [
+     86.4,
+     -7.67,
+     26.39
+    ],
+    "family": "yellow",
+    "name": "butter",
+    "selected": false
+   },
+   {
+    "x": 1281,
+    "y": 941,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 6.5,
+    "kind": "fabric",
+    "hex": "602D68",
+    "lab": [
+     27.75,
+     32.92,
+     -24.78
+    ],
+    "family": "purple",
+    "name": "plum",
+    "selected": false
+   },
+   {
+    "x": 1391,
+    "y": 941,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 7.4,
+    "kind": "fabric",
+    "hex": "27387D",
+    "lab": [
+     25.98,
+     17.6,
+     -41.31
+    ],
+    "family": "blue",
+    "name": "navy",
+    "selected": false
+   },
+   {
+    "x": 1501,
+    "y": 941,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 1.7,
+    "kind": "fabric",
+    "hex": "19323B",
+    "lab": [
+     19.24,
+     -6.63,
+     -8.67
+    ],
+    "family": "blue",
+    "name": "petrol",
+    "selected": false
+   },
+   {
+    "x": 1611,
+    "y": 941,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 5.7,
+    "kind": "fabric",
+    "hex": "B2092E",
+    "lab": [
+     37.59,
+     61.12,
+     28.87
+    ],
+    "family": "red",
+    "name": "brick",
+    "selected": false
+   },
+   {
+    "x": 1721,
+    "y": 941,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 9.7,
+    "kind": "fabric",
+    "hex": "BCC0BA",
+    "lab": [
+     77.24,
+     -2.49,
+     2.53
+    ],
+    "family": "grey",
+    "name": "light grey",
+    "selected": false
+   },
+   {
+    "x": 1061,
+    "y": 1045,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 7.4,
+    "kind": "fabric",
+    "hex": "CFAFB0",
+    "lab": [
+     74.23,
+     11.72,
+     3.8
+    ],
+    "family": "pink",
+    "name": "dusty rose",
+    "selected": false
+   },
+   {
+    "x": 1171,
+    "y": 1045,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 9.3,
+    "kind": "fabric",
+    "hex": "D7CCBC",
+    "lab": [
+     82.52,
+     1.12,
+     9.34
+    ],
+    "family": "warm neutral",
+    "name": "cream",
+    "selected": false
+   },
+   {
+    "x": 1281,
+    "y": 1045,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 5.3,
+    "kind": "fabric",
+    "hex": "1B2131",
+    "lab": [
+     12.88,
+     2.33,
+     -11.42
+    ],
+    "family": "blue",
+    "name": "navy",
+    "selected": false
+   },
+   {
+    "x": 1391,
+    "y": 1045,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 7.5,
+    "kind": "fabric",
+    "hex": "ADADA1",
+    "lab": [
+     70.42,
+     -2.19,
+     6.16
+    ],
+    "family": "warm neutral",
+    "name": "oatmeal",
+    "selected": false
+   },
+   {
+    "x": 1501,
+    "y": 1045,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 3.0,
+    "kind": "fabric",
+    "hex": "E9ECE5",
+    "lab": [
+     93.0,
+     -2.24,
+     3.04
+    ],
+    "family": "white",
+    "name": "white",
+    "selected": false
+   },
+   {
+    "x": 1611,
+    "y": 1045,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 8.2,
+    "kind": "fabric",
+    "hex": "DCC90B",
+    "lab": [
+     80.19,
+     -9.73,
+     79.82
+    ],
+    "family": "yellow",
+    "name": "butter",
+    "selected": false
+   }
+  ],
+  "why": "",
+  "band": [
+   992,
+   920,
+   1908,
+   1182
+  ]
+ },
+ "content/swipe/products/IMG_1160.png": {
+  "image": "content/swipe/products/IMG_1160.png",
+  "shop": "johnstonsofelgin.com",
+  "colour": "YELLOW",
+  "swatches": [
+   {
+    "x": 1060,
+    "y": 940,
+    "w": 90,
+    "h": 90,
+    "frame": 134.33333333333334,
+    "spread": 6.7,
+    "kind": "fabric",
+    "hex": "DDDBA6",
+    "lab": [
+     86.4,
+     -7.67,
+     26.39
+    ],
+    "family": "yellow",
+    "name": "butter",
+    "selected": true
+   },
+   {
+    "x": 1171,
+    "y": 941,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 5.7,
+    "kind": "fabric",
+    "hex": "20364B",
+    "lab": [
+     21.77,
+     -1.63,
+     -15.58
+    ],
+    "family": "blue",
+    "name": "navy",
+    "selected": false
+   },
+   {
+    "x": 1281,
+    "y": 941,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 6.5,
+    "kind": "fabric",
+    "hex": "602D68",
+    "lab": [
+     27.75,
+     32.92,
+     -24.78
+    ],
+    "family": "purple",
+    "name": "plum",
+    "selected": false
+   },
+   {
+    "x": 1391,
+    "y": 941,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 7.4,
+    "kind": "fabric",
+    "hex": "27387D",
+    "lab": [
+     25.98,
+     17.6,
+     -41.31
+    ],
+    "family": "blue",
+    "name": "navy",
+    "selected": false
+   },
+   {
+    "x": 1501,
+    "y": 941,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 1.7,
+    "kind": "fabric",
+    "hex": "19323B",
+    "lab": [
+     19.24,
+     -6.63,
+     -8.67
+    ],
+    "family": "blue",
+    "name": "petrol",
+    "selected": false
+   },
+   {
+    "x": 1611,
+    "y": 941,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 5.7,
+    "kind": "fabric",
+    "hex": "B2092E",
+    "lab": [
+     37.59,
+     61.12,
+     28.87
+    ],
+    "family": "red",
+    "name": "brick",
+    "selected": false
+   },
+   {
+    "x": 1721,
+    "y": 941,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 9.7,
+    "kind": "fabric",
+    "hex": "BCC0BA",
+    "lab": [
+     77.24,
+     -2.49,
+     2.53
+    ],
+    "family": "grey",
+    "name": "light grey",
+    "selected": false
+   },
+   {
+    "x": 1061,
+    "y": 1045,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 7.4,
+    "kind": "fabric",
+    "hex": "CFAFB0",
+    "lab": [
+     74.23,
+     11.72,
+     3.8
+    ],
+    "family": "pink",
+    "name": "dusty rose",
+    "selected": false
+   },
+   {
+    "x": 1171,
+    "y": 1045,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 9.3,
+    "kind": "fabric",
+    "hex": "D7CCBC",
+    "lab": [
+     82.52,
+     1.12,
+     9.34
+    ],
+    "family": "warm neutral",
+    "name": "cream",
+    "selected": false
+   },
+   {
+    "x": 1281,
+    "y": 1045,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 5.3,
+    "kind": "fabric",
+    "hex": "1B2131",
+    "lab": [
+     12.88,
+     2.33,
+     -11.42
+    ],
+    "family": "blue",
+    "name": "navy",
+    "selected": false
+   },
+   {
+    "x": 1391,
+    "y": 1045,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 7.5,
+    "kind": "fabric",
+    "hex": "ADADA1",
+    "lab": [
+     70.42,
+     -2.19,
+     6.16
+    ],
+    "family": "warm neutral",
+    "name": "oatmeal",
+    "selected": false
+   },
+   {
+    "x": 1501,
+    "y": 1045,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 3.0,
+    "kind": "fabric",
+    "hex": "E9ECE5",
+    "lab": [
+     93.0,
+     -2.24,
+     3.04
+    ],
+    "family": "white",
+    "name": "white",
+    "selected": false
+   },
+   {
+    "x": 1611,
+    "y": 1045,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 8.2,
+    "kind": "fabric",
+    "hex": "DCC90B",
+    "lab": [
+     80.19,
+     -9.73,
+     79.82
+    ],
+    "family": "yellow",
+    "name": "butter",
+    "selected": false
+   }
+  ],
+  "why": "",
+  "band": [
+   992,
+   920,
+   1908,
+   1388
+  ]
+ },
+ "content/swipe/products/IMG_1161.png": {
+  "image": "content/swipe/products/IMG_1161.png",
+  "shop": "johnstonsofelgin.com",
+  "colour": "PURPLE",
+  "swatches": [
+   {
+    "x": 1060,
+    "y": 940,
+    "w": 90,
+    "h": 90,
+    "frame": 134.33333333333334,
+    "spread": 8.3,
+    "kind": "fabric",
+    "hex": "602D68",
+    "lab": [
+     27.75,
+     32.92,
+     -24.78
+    ],
+    "family": "purple",
+    "name": "plum",
+    "selected": true
+   },
+   {
+    "x": 1171,
+    "y": 941,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 8.6,
+    "kind": "fabric",
+    "hex": "DDDBA6",
+    "lab": [
+     86.4,
+     -7.67,
+     26.39
+    ],
+    "family": "yellow",
+    "name": "butter",
+    "selected": false
+   },
+   {
+    "x": 1281,
+    "y": 941,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 7.3,
+    "kind": "fabric",
+    "hex": "20364B",
+    "lab": [
+     21.77,
+     -1.63,
+     -15.58
+    ],
+    "family": "blue",
+    "name": "navy",
+    "selected": false
+   },
+   {
+    "x": 1391,
+    "y": 941,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 13.8,
+    "kind": "fabric",
+    "hex": "26377B",
+    "lab": [
+     25.48,
+     17.35,
+     -40.85
+    ],
+    "family": "blue",
+    "name": "navy",
+    "selected": false
+   },
+   {
+    "x": 1501,
+    "y": 941,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 2.9,
+    "kind": "fabric",
+    "hex": "19323B",
+    "lab": [
+     19.24,
+     -6.63,
+     -8.67
+    ],
+    "family": "blue",
+    "name": "petrol",
+    "selected": false
+   },
+   {
+    "x": 1611,
+    "y": 941,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 8.3,
+    "kind": "fabric",
+    "hex": "B2072D",
+    "lab": [
+     37.5,
+     61.31,
+     29.38
+    ],
+    "family": "red",
+    "name": "brick",
+    "selected": false
+   },
+   {
+    "x": 1721,
+    "y": 941,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 11.3,
+    "kind": "fabric",
+    "hex": "BCC0BB",
+    "lab": [
+     77.27,
+     -2.31,
+     2.03
+    ],
+    "family": "grey",
+    "name": "light grey",
+    "selected": false
+   },
+   {
+    "x": 1061,
+    "y": 1045,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 9.6,
+    "kind": "fabric",
+    "hex": "CFAFB1",
+    "lab": [
+     74.25,
+     11.88,
+     3.29
+    ],
+    "family": "pink",
+    "name": "dusty rose",
+    "selected": false
+   },
+   {
+    "x": 1171,
+    "y": 1045,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 11.7,
+    "kind": "fabric",
+    "hex": "D6CCBB",
+    "lab": [
+     82.42,
+     0.6,
+     9.71
+    ],
+    "family": "warm neutral",
+    "name": "cream",
+    "selected": false
+   },
+   {
+    "x": 1281,
+    "y": 1045,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 6.6,
+    "kind": "fabric",
+    "hex": "1B2131",
+    "lab": [
+     12.88,
+     2.33,
+     -11.42
+    ],
+    "family": "blue",
+    "name": "navy",
+    "selected": false
+   },
+   {
+    "x": 1391,
+    "y": 1045,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 16.4,
+    "kind": "fabric",
+    "hex": "ADADA1",
+    "lab": [
+     70.42,
+     -2.19,
+     6.16
+    ],
+    "family": "warm neutral",
+    "name": "oatmeal",
+    "selected": false
+   },
+   {
+    "x": 1501,
+    "y": 1045,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 13.5,
+    "kind": "fabric",
+    "hex": "E5E8E1",
+    "lab": [
+     91.6,
+     -2.25,
+     3.05
+    ],
+    "family": "white",
+    "name": "white",
+    "selected": false
+   },
+   {
+    "x": 1611,
+    "y": 1045,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 10.3,
+    "kind": "fabric",
+    "hex": "DCC90B",
+    "lab": [
+     80.19,
+     -9.73,
+     79.82
+    ],
+    "family": "yellow",
+    "name": "butter",
+    "selected": false
+   }
+  ],
+  "why": "",
+  "band": [
+   992,
+   920,
+   1908,
+   1388
+  ]
+ },
+ "content/swipe/products/IMG_1162.png": {
+  "image": "content/swipe/products/IMG_1162.png",
+  "shop": "johnstonsofelgin.com",
+  "colour": "BOTTLE GREEN",
+  "swatches": [
+   {
+    "x": 1060,
+    "y": 940,
+    "w": 90,
+    "h": 90,
+    "frame": 134.33333333333334,
+    "spread": 1.7,
+    "kind": "fabric",
+    "hex": "19323B",
+    "lab": [
+     19.24,
+     -6.63,
+     -8.67
+    ],
+    "family": "blue",
+    "name": "petrol",
+    "selected": true
+   },
+   {
+    "x": 1171,
+    "y": 941,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 6.7,
+    "kind": "fabric",
+    "hex": "DDDBA6",
+    "lab": [
+     86.4,
+     -7.67,
+     26.39
+    ],
+    "family": "yellow",
+    "name": "butter",
+    "selected": false
+   },
+   {
+    "x": 1281,
+    "y": 941,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 5.7,
+    "kind": "fabric",
+    "hex": "20364B",
+    "lab": [
+     21.77,
+     -1.63,
+     -15.58
+    ],
+    "family": "blue",
+    "name": "navy",
+    "selected": false
+   },
+   {
+    "x": 1391,
+    "y": 941,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 6.5,
+    "kind": "fabric",
+    "hex": "602D68",
+    "lab": [
+     27.75,
+     32.92,
+     -24.78
+    ],
+    "family": "purple",
+    "name": "plum",
+    "selected": false
+   },
+   {
+    "x": 1501,
+    "y": 941,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 7.4,
+    "kind": "fabric",
+    "hex": "27387D",
+    "lab": [
+     25.98,
+     17.6,
+     -41.31
+    ],
+    "family": "blue",
+    "name": "navy",
+    "selected": false
+   },
+   {
+    "x": 1611,
+    "y": 941,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 5.7,
+    "kind": "fabric",
+    "hex": "B2092E",
+    "lab": [
+     37.59,
+     61.12,
+     28.87
+    ],
+    "family": "red",
+    "name": "brick",
+    "selected": false
+   },
+   {
+    "x": 1721,
+    "y": 941,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 9.7,
+    "kind": "fabric",
+    "hex": "BCC0BA",
+    "lab": [
+     77.24,
+     -2.49,
+     2.53
+    ],
+    "family": "grey",
+    "name": "light grey",
+    "selected": false
+   },
+   {
+    "x": 1061,
+    "y": 1045,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 7.4,
+    "kind": "fabric",
+    "hex": "CFAFB0",
+    "lab": [
+     74.23,
+     11.72,
+     3.8
+    ],
+    "family": "pink",
+    "name": "dusty rose",
+    "selected": false
+   },
+   {
+    "x": 1171,
+    "y": 1045,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 9.3,
+    "kind": "fabric",
+    "hex": "D7CCBC",
+    "lab": [
+     82.52,
+     1.12,
+     9.34
+    ],
+    "family": "warm neutral",
+    "name": "cream",
+    "selected": false
+   },
+   {
+    "x": 1281,
+    "y": 1045,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 5.3,
+    "kind": "fabric",
+    "hex": "1B2131",
+    "lab": [
+     12.88,
+     2.33,
+     -11.42
+    ],
+    "family": "blue",
+    "name": "navy",
+    "selected": false
+   },
+   {
+    "x": 1391,
+    "y": 1045,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 7.5,
+    "kind": "fabric",
+    "hex": "ADADA1",
+    "lab": [
+     70.42,
+     -2.19,
+     6.16
+    ],
+    "family": "warm neutral",
+    "name": "oatmeal",
+    "selected": false
+   },
+   {
+    "x": 1501,
+    "y": 1045,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 3.0,
+    "kind": "fabric",
+    "hex": "E9ECE5",
+    "lab": [
+     93.0,
+     -2.24,
+     3.04
+    ],
+    "family": "white",
+    "name": "white",
+    "selected": false
+   },
+   {
+    "x": 1611,
+    "y": 1045,
+    "w": 88,
+    "h": 88,
+    "frame": 229.66666666666666,
+    "spread": 8.2,
+    "kind": "fabric",
+    "hex": "DCC90B",
+    "lab": [
+     80.19,
+     -9.73,
+     79.82
+    ],
+    "family": "yellow",
+    "name": "butter",
+    "selected": false
+   }
+  ],
+  "why": "",
+  "band": [
+   992,
+   920,
+   1908,
+   1182
+  ]
+ }
+}

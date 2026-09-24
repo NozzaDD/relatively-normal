@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#F3EFE7">
+<title>Styling desk</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="bar">
+  <div class="bar-group">
+    <strong class="wordmark">Styling desk</strong>
+    <button id="toggleShelf" class="ghost" title="Show or hide the shelf">Shelf</button>
+  </div>
+  <div class="bar-group grow">
+    <input id="title" class="field title-field" placeholder="Title" autocomplete="off">
+    <input id="line" class="field" placeholder="One line under it" autocomplete="off">
+  </div>
+  <div class="bar-group">
+    <button id="undo" class="ghost" title="Undo">↶</button>
+    <button id="redo" class="ghost" title="Redo">↷</button>
+    <button id="openBoard" class="ghost">Open</button>
+    <button id="newBoard" class="ghost">New</button>
+    <button id="save" class="primary">Save</button>
+  </div>
+</header>
+
+<main id="main">
+  <!-- ------------------------------------------------------------- shelf -->
+  <aside id="shelf" class="shelf">
+    <div class="shelf-tabs">
+      <button class="tab on" data-view="grid">Shelf</button>
+      <button class="tab" data-view="matrix">Matrix</button>
+      <button class="tab" data-view="review">Review <span id="reviewBadge" class="badge-n"></span></button>
+      <span class="count" id="shelfCount"></span>
+    </div>
+
+    <div id="shelfPane">
+      <div id="slotBar" class="slot-bar" aria-label="Category"></div>
+      <div class="filters" id="filters">
+        <input id="search" class="field" type="search" placeholder="Search brand, piece, colour" autocomplete="off">
+        <div class="filter-row">
+          <select id="fFamily" class="field"><option value="">Any colour</option></select>
+          <select id="fBrand" class="field"><option value="">Any brand</option></select>
+        </div>
+        <div class="filter-row">
+          <select id="fWeight" class="field"><option value="">Any weight</option></select>
+          <select id="fFormality" class="field"><option value="">Any formality</option></select>
+          <select id="fAsset" class="field"><option value="">Any image</option></select>
+        </div>
+        <div class="filter-row switches">
+          <label class="switch"><input type="checkbox" id="fUnreviewed"> Show unreviewed</label>
+          <label class="switch"><input type="checkbox" id="fMatch" disabled> Matches this look</label>
+          <button id="clearFilters" class="ghost small">Clear</button>
+        </div>
+      </div>
+      <div id="grid" class="grid" aria-label="Products"></div>
+    </div>
+
+    <div id="matrix" class="matrix hidden">
+      <div class="matrix-note">casual → dressy across, light → heavy down. Tap a cell to filter the shelf.</div>
+      <div id="matrixGrid" class="matrix-grid"></div>
+    </div>
+
+    <div id="review" class="review hidden">
+      <div class="review-head">
+        <span id="reviewProgress" class="count"></span>
+        <button id="exportChoices" class="ghost small">Export choices</button>
+      </div>
+      <div id="reviewSlots" class="chips"></div>
+      <div class="chips">
+        <label class="switch"><input type="checkbox" id="rMulti"> More than one photo</label>
+        <label class="switch"><input type="checkbox" id="rNoSlot"> No slot</label>
+        <label class="switch"><input type="checkbox" id="rCheckSlot"> Slot worth a look</label>
+        <label class="switch"><input type="checkbox" id="rSeveral"> Several garments</label>
+        <label class="switch"><input type="checkbox" id="rDups"> Duplicates</label>
+      </div>
+      <div id="reviewCards" class="rcards"></div>
+    </div>
+  </aside>
+
+  <!-- ------------------------------------------------------------ canvas -->
+  <section class="deck">
+    <div class="deck-bar">
+      <div class="bar-group">
+        <select id="format" class="field">
+          <option value="portrait">4:5 portrait</option>
+          <option value="landscape">wide landscape</option>
+        </select>
+        <button id="pickInspiration" class="ghost">Inspiration…</button>
+        <label class="swatch-pick" title="Background">
+          <input type="color" id="ground" value="#F3EFE7">
+        </label>
+        <button id="frameBtn" class="ghost" title="How framed images are drawn">Frame…</button>
+      </div>
+      <div class="bar-group wrap">
+        <label class="switch"><input type="checkbox" id="oTitle" checked> Title</label>
+        <label class="switch"><input type="checkbox" id="oLine" checked> Line</label>
+        <label class="switch"><input type="checkbox" id="oSwatch" checked> Swatches</label>
+        <label class="switch"><input type="checkbox" id="oLabels"> Numbers</label>
+      </div>
+    </div>
+
+    <div id="framePop" class="pop hidden">
+      <label class="switch"><input type="checkbox" id="frBorder" checked> Thin border</label>
+      <label class="switch"><input type="checkbox" id="frMat" checked> White mat</label>
+      <label class="switch">Corners
+        <select id="frRadius" class="field small-field">
+          <option value="0">square</option>
+          <option value="10">soft</option>
+          <option value="22">round</option>
+        </select>
+      </label>
+      <span class="pop-note">Applies to the inspiration image and every box on the board.</span>
+    </div>
+
+    <div id="stageWrap" class="stage-wrap">
+      <div id="stage" class="stage">
+        <div id="layers" class="layers"></div>
+        <div id="overlay" class="overlay"></div>
+        <div id="hint" class="hint">Tap a piece on the shelf, or drag it here.</div>
+      </div>
+    </div>
+
+    <div class="element-bar" id="elementBar" hidden>
+      <button data-act="back" class="ghost">Send back</button>
+      <button data-act="forward" class="ghost">Bring forward</button>
+      <button data-act="flip" class="ghost">Flip</button>
+      <button data-act="picture" class="ghost" id="elPicture" hidden>Other picture</button>
+      <button data-act="duplicate" class="ghost">Duplicate</button>
+      <button data-act="delete" class="ghost danger">Delete</button>
+    </div>
+    <div class="element-bar piece-slots" id="pieceSlots" hidden></div>
+
+    <div class="helpers">
+      <div id="slotList" class="slot-list"></div>
+      <div id="axesRead" class="axes"></div>
+    </div>
+  </section>
+</main>
+
+<!-- inspiration picker -->
+<div id="picker" class="modal hidden">
+  <div class="modal-inner">
+    <div class="modal-bar">
+      <input id="pickerSearch" class="field" type="search" placeholder="Search house, colour, story">
+      <button id="pickerNone" class="ghost">No inspiration</button>
+      <button id="pickerClose" class="ghost">Close</button>
+    </div>
+    <div id="pickerGrid" class="picker-grid"></div>
+  </div>
+</div>
+
+<!-- draw your own boxes, on any of the product's screenshots -->
+<div id="adjust" class="modal hidden">
+  <div class="modal-inner adjust-inner">
+    <div class="modal-bar adjust-bar">
+      <button id="adjPrev" class="ghost" title="Previous version">◀</button>
+      <span id="adjCounter" class="count">1 of 1</span>
+      <button id="adjNext" class="ghost" title="Next version">▶</button>
+      <span id="adjVersion" class="adj-version"></span>
+      <span id="adjSelLabel" class="adj-sel" hidden></span>
+      <button id="adjZoom" class="ghost" title="Zoom in, or back to fit">fit</button>
+      <label class="switch small" id="adjDetailsWrap" hidden><input type="checkbox" id="adjDetails"> Show details</label>
+      <button id="adjUseImage" class="ghost">Use this one</button>
+      <button id="adjAddBox" class="ghost">Add box</button>
+      <button id="adjSuggest" class="ghost" hidden>Suggested boxes</button>
+      <span class="grow"></span>
+      <button id="adjustUse" class="primary">Done</button>
+      <button id="adjustCancel" class="ghost">Cancel</button>
+    </div>
+    <div id="adjStrip" class="adj-strip"></div>
+    <div id="adjustWrap" class="adjust-wrap"></div>
+    <div id="adjLoupe" class="adj-loupe" hidden><span id="adjNumbers"></span></div>
+    <div id="adjPanel" class="adj-panel"></div>
+  </div>
+</div>
+
+<input type="file" id="openFile" accept="application/json,.json" hidden>
+<div id="toast" class="toast" hidden></div>
+<div id="drag" class="drag-ghost" hidden></div>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

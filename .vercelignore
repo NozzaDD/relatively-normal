@@ -1,0 +1,10 @@
+# Only the styling desk is deployed. Everything else in this repository —
+# and in particular content/swipe/, which holds the original screenshots —
+# never leaves the machine it was uploaded to.
+/*
+!/studio
+!/vercel.json
+
+# not part of the desk
+studio/README.md
+studio/test/

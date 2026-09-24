@@ -1,0 +1,38 @@
+You are cataloguing a styling newsletter's product screenshots. READ-ONLY except one output file.
+
+Open EVERY .jpg in this directory with the Read tool, ONE AT A TIME. Run `ls` first to get the filenames. The filename (without .jpg) IS the product_id.
+
+DIR: {DIR}
+
+Each file is an iPad screenshot of a fashion web shop, rendered ~980px wide so product titles, colour names, composition lines and prices are readable. READ THE TEXT ON THE PAGE.
+
+For each image emit ONE pipe-delimited row with EXACTLY these 16 fields:
+
+product_id | slot | garment_type | material_visible | pattern | weight | formality | shot_type | complete_in_frame | shop_text | brand_text | product_name_text | colour_name_text | composition_text | price_text | notes
+
+FIELD RULES
+
+- `slot`: exactly one of `top`, `bottom`, `dress`, `layer`, `base`, `shoes`, `bag`, `accessory`, or `multiple` if the screenshot is a listing grid / several different products at once. (`layer` = coat, jacket, blazer, cardigan, parka, gilet. `base` = something worn under a top. `accessory` = scarf, bandana, hat, belt, gloves, jewellery, sunglasses, socks, hood, cape.)
+- `garment_type`: plain words, max 8, e.g. "double-breasted corduroy jacket", "wide-leg velvet trousers", "knee-high suede boots".
+- `material_visible`: what the surface LOOKS like, from the picture — e.g. "corduroy", "bouclé", "ribbed knit", "smooth leather", "satin", "nylon", "flannel", "denim", "suede-look". This is appearance, NOT a fibre claim. If unclear write `unclear`.
+- `pattern`: one of `solid`, `marl`, `print`, `check`, `stripe`, `mixed`.
+- `weight`: 1-4, 1 = lightest (fine poplin, silk), 4 = heaviest (melton coat, padded parka). Thermal warmth, not colour.
+- `formality`: 1-4, 1 = most casual, 4 = most dressy.
+- `shot_type`: one of `flat packshot`, `ghost mannequin`, `on model`, `detail`, `listing grid`.
+- `complete_in_frame`: `yes` if the whole garment is visible and uncropped; `no` if any part runs off the edge or is hidden.
+- `shop_text`: the shop / retailer name ONLY if legible (wordmark, URL bar, page title, browser tab). Otherwise `NONE`.
+- `brand_text`: the garment's BRAND ONLY if legible somewhere in this image. Otherwise `NONE`. On a multi-brand retailer the brand is often printed above the product name — that counts.
+- `product_name_text`: the product title EXACTLY as printed, otherwise `NONE`.
+- `colour_name_text`: the colour name EXACTLY as printed (e.g. "BARBERA", "Nugget Gold", "Colore NAVY" -> write NAVY), otherwise `NONE`.
+- `composition_text`: any fibre / composition text EXACTLY as printed, including partial ("100% cotton", "pura lana vergine", "wool-blend"). Otherwise `NONE`.
+- `price_text`: price exactly as printed with its currency symbol (e.g. "€530,00", "CHF190.00"). Otherwise `NONE`.
+- `notes`: anything useful in under 15 words — a watermark like AI-CREATED, a visible size/colour swatch row, "second colourway shown", "page is a lookbook". Otherwise `-`.
+
+ABSOLUTE RULES
+- NEVER invent or infer a brand, shop, product name, colour name, composition or price. `NONE` is the correct and expected answer whenever the text is not literally readable. A guess here poisons the whole catalogue.
+- Transcribe text EXACTLY. Do not translate, tidy or expand it.
+- Never describe an image you did not open.
+- Emit a row for EVERY file in the directory. Do not skip any.
+- No preamble, no summary table, just the rows.
+
+Write all rows to {OUT} with the Write tool, and also return them in your final message.

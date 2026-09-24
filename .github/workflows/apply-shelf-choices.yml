@@ -1,0 +1,79 @@
+# When a new content/catalogue/asset-choices.json lands on main — pushed from
+# Working Copy after "Export choices" on the desk — rebuild the shelf data and
+# commit it back. That commit is what Vercel deploys.
+#
+# The path filter is what stops the loop: the auto commit changes products.csv
+# and studio/, never asset-choices.json, so it cannot trigger this workflow.
+name: Apply shelf choices
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - content/catalogue/asset-choices.json
+
+permissions:
+  contents: write
+
+concurrency:
+  group: apply-shelf-choices
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out only what the build reads
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          # cone mode: these folders plus the files at the repository root.
+          # content/swipe (the original screenshots, ~2 GB) stays out.
+          sparse-checkout: |
+            content/catalogue
+            content/tools
+            content/boards/fonts
+            engine
+            frameworks
+            brands
+            studio
+
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: content/tools/requirements-build.txt
+
+      - name: Dependencies
+        run: pip install -r content/tools/requirements-build.txt
+
+      - name: Apply the choices and rebuild the shelf
+        # migrate_trim.py moves any box drawn under an older trim onto the
+        # current one. build_products.py then reads asset-choices.json: chosen
+        # versions, hidden products, and every drawn box becomes a row with
+        # colours read from the box. build_studio.py rebuilds studio/data and
+        # copies only the images that are new or have changed; the inspiration
+        # images are skipped because they need content/swipe.
+        #
+        # No model cache: this run never touches rembg. The cut-outs are made
+        # by build_review_images.py, which needs the original screenshots and
+        # so only ever runs on a machine that has content/swipe.
+        run: |
+          python3 content/tools/migrate_trim.py
+          python3 content/tools/build_products.py
+          python3 content/tools/build_studio.py --skip-inspiration
+
+      - name: Commit the result, if anything changed
+        run: |
+          git add -A content/catalogue/products.csv content/catalogue/inspiration.csv \
+            content/catalogue/asset-choices.json studio
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+            exit 0
+          fi
+          git config user.name "shelf-rebuild"
+          git config user.email "shelf-rebuild@users.noreply.github.com"
+          git commit -m "Apply shelf choices (auto)"
+          git push origin HEAD:main
