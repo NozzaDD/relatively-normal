@@ -145,6 +145,21 @@ never marks a product reviewed. Two filters find the ones that need it: **No
 slot**, and **Slot worth a look** — the rows whose slot came from a listing-grid
 caption or from the product they were split out of.
 
+**Remove and Back to Review.** Every shelf tile has a small **…** in its
+corner with **Remove** and **Back to Review**; the canvas bar has the same two
+beside Delete, for the selected piece. The **…** is its own target: tapping it
+never places the piece and pressing it never lifts it. Remove takes the piece
+off the shelf; Back to Review makes it undecided again. A piece already on the
+canvas stays there — Delete takes it off the board. Nothing leaves the
+catalogue: both are entries in `asset-choices.json` (`hidden`, `review` with a
+reason), and the slot and any boxes cut from the picture are kept. In Review,
+**Remove** (it used to say Hide) and the **Removed** filter, which lists what
+you removed; **Restore** sends one back to Review, undecided. A build can send
+products back too (a re-cut, page text in the picture): it writes
+`content/catalogue/review-sends.json`, and the desk applies each send once over
+a decision this browser still holds, so an iPad's old choice cannot hide it.
+The card says why it came back.
+
 Review shows each waiting product four ways — the cut-out, a box around the
 item, a box around the whole person, the full photo — and you tap the one you
 want. **Adjust box** lets you draw your own rectangle on the full photo.
@@ -183,11 +198,21 @@ one by one. Each Review card says how many photos the product has, and
 than thrown away — in `content/catalogue/asset-choices.json` by
 `migrate_trim.py`, and in this browser's own storage when the desk next loads.
 
-**Pull in Working Copy before saving an export.** A push of
-`asset-choices.json` to `main` makes GitHub rebuild the shelf and commit the
-result back as *Apply shelf choices (auto)*; pulling first keeps your next
-commit on top of it. A failed rebuild commits nothing — see it under the
-repository's **Actions** tab, workflow *Apply shelf choices*.
+**Saving an export: save, commit, push, then pull.** Save the export into
+`content/catalogue/` under whatever name the Files app offers —
+`asset-choices.json`, `asset-choices-2.json`, `asset-choices 3.json` are all
+fine — then commit and push, then pull. Never rename or delete one by hand.
+The push makes GitHub merge every `asset-choices*.json` into
+`asset-choices.json`, product by product, the newest export winning where two
+disagree (by the export time written inside each file, not by its name);
+delete the extra copies and the share sheet's `text.txt` stubs in
+`content/catalogue/` and `content/outfits/`; rebuild the shelf; and commit it
+all back as *Apply shelf choices (auto)*. Pulling afterwards brings that tidy
+commit down, so your next save starts from it. If an export is broken or
+unreadable the run stops, changes nothing and names the file — see it under
+the repository's **Actions** tab, workflow *Apply shelf choices*. A local
+build (`build_products.py`) does the same tidying first
+(`content/tools/tidy_exports.py`).
 
 **Frame…** on the canvas bar is one setting for every framed image on the
 board — the inspiration image, page tiles and every box: thin border, white
@@ -202,9 +227,22 @@ rows; tap one. It appears **beside** the canvas as a working reference, with
 names, shares, roles and placement. **On board** puts it on the board as a
 strip, above the pieces' own strip, and is off by default.
 
-While a palette is chosen, **Matches this palette** on the shelf ranks pieces
-by distance to its colours, using the same OKLab comparison as *Matches this
-look*. Only one of the two is on at a time. Under the canvas, two bars compare
+While a palette is chosen, **Matches this palette** on the shelf lists the
+pieces that match its **chromatic** colours first — the dominant colour's
+matches, then the secondary's, then the accent's, each closest first — and
+only then the pieces that match a **neutral** swatch. A neutral swatch
+(OKLab chroma under 0.035: stone, cream, grey) matches only a piece whose main
+colour is itself neutral; a chromatic swatch matches only a chromatic colour
+that covers at least a fifth of the piece. Pieces further than the threshold
+drop out instead of trailing at the bottom. The distance weights hue 2.5 times
+(`hueWeightedDistance` in `js/palette.js`): at soft plum's low chroma plain
+OKLab put navy, chocolate and olive as close as a real plum. The thresholds,
+set by eye on 24 September against Plum and Old Gold: **0.10** for a chromatic
+swatch, **0.07** for a neutral one. **Tap a swatch** in the palette panel to
+see only the pieces that match that colour, closest first; the number beside
+each swatch is how many that is under the shelf's other filters. Tap it again
+for the whole shelf. Only one of *Matches this look* and *Matches this palette*
+is on at a time. Under the canvas, two bars compare
 what the palette suggests with how the pieces divide by colour share. Each
 piece is weighted by slot as matching.md §3 weights tier balance: top and
 bottom double, a dress four. A colour further than 0.12 (OKLab) from every
@@ -298,7 +336,7 @@ Neither test folder is deployed.
 7. Open **Review**. Pick a slot, tap a card's *item box* — the card marks
    itself, the piece appears on the shelf, and the progress count moves.
    Try **Adjust box**: drag a rectangle, **Use this box**.
-8. Tap **Hide** on another card. It leaves the shelf. **Export choices** should
+8. Tap **Remove** on another card. It leaves the shelf, and **Removed** lists it. **Export choices** should
    offer `asset-choices.json` in the share sheet.
 9. Tap **Frame…**, turn the mat off and corners to *round*. The inspiration
    image and every box on the canvas change together. Save: the PNG shows

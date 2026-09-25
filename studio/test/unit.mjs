@@ -418,5 +418,68 @@ console.log('\ntile follows the filter, the cut-out is offered (24 Sept)');
   ok('a version is applied once', again === 0 && !ch.Z);
 }
 
+console.log('\npalette matching (24 Sept, evening)');
+{
+  const P = await import('../js/palette.js');
+  const D = await import('../js/data.js');
+  const pal = { colours: [
+    { hex: '#5C3A4E', name: 'soft plum', role: 'dominant', share: 50 },
+    { hex: '#D6CEC2', name: 'stone', role: 'secondary', share: 30 },
+    { hex: '#B8963E', name: 'old gold', role: 'accent', share: 20 } ] };
+  const prod = (id, cols) => ({ product_id: id, colours: cols.map(([hex, share]) => ({ hex, share })) });
+  const cream = prod('cream', [['#E2DCCC', 0.9]]);
+  const plum = prod('plum', [['#603A4C', 0.8]]);
+  const navy = prod('navy', [['#393F53', 0.9]]);          // plain OKLab put this 0.062 from soft plum
+  const choc = prod('choc', [['#562F25', 0.9]]);
+  const gold = prod('gold', [['#B7A253', 0.7]]);
+  const trim = prod('trim', [['#101010', 0.9], ['#D6CEC2', 0.08]]);   // a stone trim on black
+  const creamPlum = prod('creamplum', [['#F6F4EE', 0.7], ['#7A4560', 0.3]]);   // plum lining on white
+  const all = [cream, navy, choc, gold, trim, plum, creamPlum];
+  ok('stone is neutral, soft plum is not', P.isNeutralLab(C.hexToOklab('#D6CEC2')) && !P.isNeutralLab(C.hexToOklab('#5C3A4E')));
+  eq('matching order: chromatic by role, then neutrals', P.matchOrder(pal).map((c) => c.name), ['soft plum', 'old gold', 'stone']);
+  eq('"Matches this palette": plums, then gold, then the neutral; the rest drop out',
+    P.rankByPalette(all, pal).map((p) => p.product_id), ['plum', 'creamplum', 'gold', 'cream']);
+  ok('navy and chocolate are not soft plum', P.swatchDistance(navy, pal.colours[0]) === Infinity
+    && P.swatchDistance(choc, pal.colours[0]) === Infinity);
+  ok('a neutral swatch only matches a neutral piece', P.swatchDistance(gold, pal.colours[1]) === Infinity
+    && P.swatchDistance(cream, pal.colours[1]) < Infinity);
+  ok('a 8% trim does not make a match', P.swatchDistance(trim, pal.colours[1]) === Infinity);
+  eq('tapping a swatch: that colour only, closest first', P.matchSwatch(all, pal.colours[0]).map((p) => p.product_id),
+    ['plum', 'creamplum']);
+  eq('swatch counts', P.swatchCounts(all, pal), [2, 1, 1]);
+
+  console.log('\nremove and back to Review');
+  const p = { product_id: 'R1', clean: true, choice: 'item', hidden: false };
+  const local = {};
+  ok('a filed choice is on the shelf', D.onShelf(p, local, false));
+  local.R1 = D.backToReviewChoice({ choice: 'item', box: [0, 0, 1, 1], slot: 'top', splits: [{ n: 1 }] });
+  ok('back to Review: off the shelf, undecided', !D.onShelf(p, local, false) && !D.isReviewed(p, local)
+    && D.isBackToReview(p, local));
+  ok('…keeping the slot and the boxes cut from it', local.R1.slot === 'top' && local.R1.splits.length === 1 && !local.R1.choice);
+  local.R1 = D.removeChoice(local.R1);
+  ok('remove: off the shelf, listed as removed, decided', !D.onShelf(p, local, false) && D.isRemoved(p, local)
+    && D.isReviewed(p, local) && !local.R1.review);
+  local.R1 = D.restoreChoice(local.R1);
+  ok('restore: back in Review, not removed', D.isBackToReview(p, local) && !D.isRemoved(p, local));
+  const built = { product_id: 'R2', clean: true, review: 'page text in the picture' };
+  ok('a build send is off the shelf until decided', !D.onShelf(built, {}, false) && D.reviewReason(built, {}) === 'page text in the picture');
+  ok('…and deciding puts it back', D.onShelf(built, { R2: { choice: 'cutout' } }, false));
+  const hid = { product_id: 'R3', hidden: true, removed: true };
+  ok('removed by her in the catalogue is listed; hidden by the build is not',
+    D.isRemoved(hid, {}) && !D.isRemoved({ product_id: 'R4', hidden: true }, {}));
+  ok('a restored catalogue removal is back in Review', D.isBackToReview(hid, { R3: D.restoreChoice({ hidden: true }) }));
+  const ch = { A: { hidden: true }, B: { choice: 'item' } };
+  const sends = { versions: [{ version: '2026-09-24a', products: { A: 're-cut: look again', C: 'x' } }] };
+  const r1 = D.applyReviewSends(ch, sends, '');
+  ok('a send overrides a decision kept in the browser', r1.n === 1 && ch.A.review === 're-cut: look again' && !ch.A.hidden
+    && ch.B.choice === 'item' && !ch.C && r1.version === '2026-09-24a');
+  ch.A = { choice: 'cutout' };
+  const r2 = D.applyReviewSends(ch, sends, r1.version);
+  ok('…once: a decision made after it stands', r2.n === 0 && ch.A.choice === 'cutout');
+  const { choicesFile } = await import('../js/review.js');
+  const out = choicesFile({ X: { review: 'why', slot: 'bag' }, Y: { hidden: true } }).choices;
+  ok('asset-choices.json carries review and hidden', out.X.review === 'why' && out.X.slot === 'bag' && out.Y.hidden === true);
+}
+
 console.log(`\nafter 24 Sept: ${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);

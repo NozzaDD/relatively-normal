@@ -1,16 +1,21 @@
-# When a new content/catalogue/asset-choices.json lands on main — pushed from
-# Working Copy after "Export choices" on the desk — rebuild the shelf data and
-# commit it back. That commit is what Vercel deploys.
+# When an export from the desk lands on main — asset-choices.json, or the
+# asset-choices-2.json, asset-choices 3.json … the iPad's Files app makes when
+# the name is taken — merge every export into asset-choices.json (newest
+# export time wins), delete the copies and the share sheet's text.txt stubs,
+# rebuild the shelf data and commit it all back. That commit is what Vercel
+# deploys.
 #
-# The path filter is what stops the loop: the auto commit changes products.csv
-# and studio/, never asset-choices.json, so it cannot trigger this workflow.
+# The auto commit rewrites asset-choices.json, which the path filter watches,
+# so two things stop the loop: a push made with the workflow's own
+# GITHUB_TOKEN never starts another workflow run, and the job is skipped for a
+# commit whose message is the auto commit's own.
 name: Apply shelf choices
 
 on:
   push:
     branches: [main]
     paths:
-      - content/catalogue/asset-choices.json
+      - content/catalogue/asset-choices*.json
 
 permissions:
   contents: write
@@ -21,6 +26,7 @@ concurrency:
 
 jobs:
   rebuild:
+    if: ${{ !startsWith(github.event.head_commit.message, 'Apply shelf choices (auto)') }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -32,6 +38,7 @@ jobs:
           # content/swipe (the original screenshots, ~2 GB) stays out.
           sparse-checkout: |
             content/catalogue
+            content/outfits
             content/tools
             content/boards/fonts
             engine
@@ -48,6 +55,11 @@ jobs:
 
       - name: Dependencies
         run: pip install -r content/tools/requirements-build.txt
+
+      - name: Merge the exports, delete the copies and the text.txt stubs
+        # a broken or unreadable export stops the run here, before anything is
+        # changed; the error names the file on the run's page
+        run: python3 content/tools/tidy_exports.py
 
       - name: Apply the choices and rebuild the shelf
         # migrate_trim.py moves any box drawn under an older trim onto the
@@ -67,8 +79,8 @@ jobs:
 
       - name: Commit the result, if anything changed
         run: |
-          git add -A content/catalogue/products.csv content/catalogue/inspiration.csv \
-            content/catalogue/asset-choices.json studio
+          # -A under the two folders so the deleted copies and stubs go too
+          git add -A content/catalogue content/outfits studio
           if git diff --cached --quiet; then
             echo "Nothing changed."
             exit 0

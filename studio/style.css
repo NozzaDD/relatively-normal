@@ -392,7 +392,10 @@ button.on { background: var(--accent); color: #fff; border-color: var(--accent);
 .pal-ref h3 { font-size: 14px; margin: 0 0 3px; font-weight: 600; }
 .pal-ref .pal-when { color: var(--muted); margin: 0 0 10px; line-height: 1.35; }
 .pal-ref ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 7px; }
-.pal-ref li { display: grid; grid-template-columns: 34px 1fr; gap: 8px; align-items: center; }
+.pal-ref li { display: grid; grid-template-columns: 34px 1fr auto; gap: 8px; align-items: center; }
+.pal-ref li.pal-swatch { cursor: pointer; border-radius: 8px; padding: 3px; margin: -3px; touch-action: manipulation; }
+.pal-ref li.pal-swatch.on { background: var(--chrome); outline: 2px solid var(--ink); }
+.pal-ref li .pal-count { font-style: normal; font-size: 12px; font-weight: 600; min-width: 22px; text-align: right; }
 .pal-ref li i { display: block; width: 34px; height: 34px; border-radius: 6px; border: 1px solid var(--line); }
 .pal-ref li b { font-weight: 600; display: block; }
 .pal-ref li span { color: var(--muted); font-size: 12px; }
@@ -409,3 +412,18 @@ button.on { background: var(--accent); color: #fff; border-color: var(--accent);
   .stage-row { flex-direction: column; }
   .pal-ref { flex: 0 0 auto; width: auto; max-height: 30vh; border-left: 0; border-top: 1px solid var(--line); }
 }
+
+/* "…" on a shelf tile: Remove, Back to Review. Its own target, so a tap on it
+   never places the piece and a press on it never lifts it. */
+.cell .more { position: absolute; right: 2px; bottom: 2px; z-index: 2; min-height: 0; width: 30px; height: 24px;
+  padding: 0; font-size: 15px; line-height: 20px; letter-spacing: 1px; background: rgba(255,255,255,.94);
+  border: 1px solid var(--line); border-radius: 6px; color: var(--ink); touch-action: manipulation; cursor: pointer; }
+.cell .tag { right: 36px; }
+.tile-menu { position: fixed; z-index: 60; display: flex; flex-direction: column; min-width: 150px;
+  background: #fff; border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,.14); padding: 4px; }
+.tile-menu[hidden] { display: none; }
+.tile-menu button { text-align: left; background: none; border: 0; padding: 10px 12px; min-height: 40px;
+  font: inherit; border-radius: 7px; cursor: pointer; color: var(--ink); }
+.tile-menu button:hover { background: var(--chrome); }
+.tile-menu button.danger { color: #9a2f22; }
+.rcard .why.back { color: #7a4b10; background: #fbf3e4; border-radius: 6px; padding: 4px 6px; font-size: 12px; margin: 4px 0; }

@@ -8,7 +8,8 @@
 
 import { cropLayout, SLOT_ORDER } from './model.js';
 import { isReviewed, effectiveChoice, imageEntry, splitId, productVersions,
-  SLOT_PICK, choiceBox, choiceBase, isSeveral, isDuplicate, onShelf } from './data.js';
+  SLOT_PICK, choiceBox, choiceBase, isSeveral, isDuplicate, onShelf,
+  isBackToReview, reviewReason, isRemoved, removeChoice, restoreChoice } from './data.js';
 
 /** Every screenshot of a product the desk can draw on, best first. */
 export function productImages(p) {
@@ -113,6 +114,7 @@ export function choicesFile(choices) {
   for (const [pid, c] of Object.entries(choices)) {
     let e = null;
     if (c.hidden) e = { hidden: true };
+    else if (c.review) e = { review: typeof c.review === 'string' ? c.review : 'sent back to Review' };
     else if (c.choice) e = { choice: c.choice, ...(c.box ? { box: c.box.map((v) => Math.round(v * 1e4) / 1e4) } : {}),
       ...(c.image ? { image: c.image } : {}), ...(c.base && c.base !== 'photo' ? { base: c.base } : {}) };
     const splits = (c.splits || []).filter((s) => s.box && s.n).map((s) => ({
@@ -125,7 +127,9 @@ export function choicesFile(choices) {
     if (e) out[pid] = e;
   }
   return { kind: 'relatively-normal.asset-choices', version: 1,
-    exported: new Date().toISOString().slice(0, 10), choices: out };
+    // the full time, not the day: tidy_exports.py merges several exports
+    // saved under different names, and the newest one wins
+    exported: new Date().toISOString(), choices: out };
 }
 
 // choiceBox and choiceBase live in data.js now, next to shelfView, which the
@@ -167,11 +171,34 @@ export function applyCrop(img, crop, boxW, boxH, fullW, fullH) {
 export function createReview(api) {
   // api: { source, products(), choices, onChange(), toast() }
   const state = { slot: '', multi: false, noSlot: false, checkSlot: false,
-    several: false, dups: false, cellSel: null, adjusting: null };
+    several: false, dups: false, removed: false, cellSel: null, adjusting: null };
+
+  const isCell = (p) => !!p.parent_id && /-C\d+$/.test(p.product_id);
 
   function pending(list) {
     // a clean cut-out of several garments is back here: clean is not single
-    return list.filter((p) => (!p.clean || isSeveral(p, api.choices)) && p.full && !p.parent_id);
+    const out = list.filter((p) => (!p.clean || isSeveral(p, api.choices) || isBackToReview(p, api.choices))
+      && p.full && !p.parent_id);
+    // a piece sent back from the shelf gets its own card, wherever it came
+    // from — except a grid cell, which waits under its grid's card
+    const have = new Set(out.map((p) => p.product_id));
+    for (const p of list) {
+      if (!p.parent_id || have.has(p.product_id) || !isBackToReview(p, api.choices)) continue;
+      if (isCell(p) && have.has(p.parent_id)) continue;
+      out.push(p);
+    }
+    return out;
+  }
+
+  /** Everything she removed, to look at again and restore. */
+  function renderRemoved() {
+    const rows = api.products().filter((p) => isRemoved(p, api.choices));
+    $('reviewProgress').textContent = `${rows.length} removed — Restore sends one back to Review; `
+      + 'nothing is deleted from the catalogue';
+    $('reviewSlots').replaceChildren();
+    const cards = $('reviewCards');
+    cards.replaceChildren();
+    for (const p of rows) cards.appendChild(card(p));
   }
 
   /** A small picture of a row, with a caption, for the grouped views. */
@@ -301,6 +328,7 @@ export function createReview(api) {
   }
 
   function render() {
+    if (state.removed) { renderRemoved(); return; }
     if (state.dups) { renderDuplicates(); return; }
     if (state.several) { renderSeveral(); return; }
     const all = pending(api.products());
@@ -527,16 +555,29 @@ export function createReview(api) {
     cnt.textContent = `${nimg} photo${nimg === 1 ? '' : 's'}`;
     head.append(who, cnt);
     el.appendChild(head);
+    const back = reviewReason(p, api.choices) || (!eff?.hidden && !isReviewed(p, api.choices) && p.hold) || '';
+    if (back) {
+      const w = document.createElement('div');
+      w.className = 'why back';
+      w.textContent = back;
+      el.appendChild(w);
+    }
     if (isSeveral(p, api.choices)) {
       const w = document.createElement('div');
       w.className = 'why several';
-      w.textContent = `Several garments in this picture (${p.several.map((x) => x.split(':')[0]).join(', ')})`
-        + ' — not a single product. Adjust box, then Add box, one per garment.';
+      // a product page's colour-swatch thumbnails are one product's colour
+      // picker, not products: nothing to cut out of them
+      w.textContent = p.several.some((x) => x.startsWith('swatch row'))
+        ? 'Colour-swatch thumbnails on a product page — not products. Remove it, or keep the colour the page shows with Adjust box.'
+        : `Several garments in this picture (${p.several.map((x) => x.split(':')[0]).join(', ')})`
+          + ' — not a single product. Adjust box, then Add box, one per garment.';
       el.appendChild(w);
     }
     const row = document.createElement('div');
     row.className = 'versions';
-    const kinds = [['cutout', 'cut-out'], ['item', 'item box'], ['person', 'person box'], ['full', 'full']];
+    // a piece with no full photo (a clean flat cut-out sent back) has only its cut-out
+    const kinds = p.full ? [['cutout', 'cut-out'], ['item', 'item box'], ['person', 'person box'], ['full', 'full']]
+      : [['cutout', 'cut-out']];
     for (const [k, label] of kinds) {
       const v = version(p, k, label);
       if (eff?.choice === k) v.classList.add('chosen');
@@ -566,20 +607,31 @@ export function createReview(api) {
     const mk = (label, cls, fn) => {
       const b = document.createElement('button');
       b.className = 'ghost small ' + cls; b.textContent = label;
+      b.dataset.act = label.toLowerCase().replace(/\s+/g, '-');
       b.addEventListener('click', fn);
       acts.appendChild(b);
     };
-    mk('Adjust box', '', () => openAdjust(p));
-    mk(eff?.hidden ? 'Unhide' : 'Hide', 'danger', () => decide(p, eff?.hidden ? { hidden: false } : { hidden: true, choice: null }));
+    if (p.full || (p.images && p.images.length)) mk('Adjust box', '', () => openAdjust(p));
+    if (eff?.hidden) mk('Restore', '', () => setChoice(p, restoreChoice(api.choices[p.product_id])));
+    else mk('Remove', 'danger', () => setChoice(p, removeChoice(api.choices[p.product_id])));
     mk('Later', '', () => { api.choices[p.product_id] = { ...c, later: true }; saveChoices(api.choices); render(); });
-    if (eff && !eff.hidden && eff.choice) mk('Undo choice', '', () => { delete api.choices[p.product_id]; saveChoices(api.choices); api.onChange(); render(); });
+    if (eff && !eff.hidden && !eff.review && eff.choice) mk('Undo choice', '', () => { delete api.choices[p.product_id]; saveChoices(api.choices); api.onChange(); render(); });
     el.appendChild(acts);
     return el;
   }
 
+  function setChoice(p, c) {
+    api.choices[p.product_id] = c;
+    saveChoices(api.choices);
+    api.onChange();
+    render();
+  }
+
   function decide(p, patch) {
     const prev = api.choices[p.product_id] || {};
-    api.choices[p.product_id] = { ...prev, later: false, ...patch };
+    // any decision here answers "back to Review"
+    const { review, ...rest } = prev;
+    api.choices[p.product_id] = { ...rest, later: false, ...patch };
     saveChoices(api.choices);
     api.onChange();
     render();
@@ -1022,7 +1074,7 @@ export function createReview(api) {
   }
 
   for (const [id, key] of [['rMulti', 'multi'], ['rNoSlot', 'noSlot'], ['rCheckSlot', 'checkSlot'],
-    ['rSeveral', 'several'], ['rDups', 'dups']]) {
+    ['rSeveral', 'several'], ['rDups', 'dups'], ['rRemoved', 'removed']]) {
     document.getElementById(id).addEventListener('change', (ev) => {
       state[key] = ev.target.checked;
       render();

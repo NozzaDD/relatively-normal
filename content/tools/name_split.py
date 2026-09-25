@@ -58,12 +58,23 @@ SKIN_MODEL = 0.03
 KEEP = {
     'B051-P002': 'the same lace skirt worn and flat: 8.4 L* apart only because '
                  'the model photo is lit warmer (contact sheet, 24 Sept)',
+    'B077-P013': 'the same brown sleeveless knit twice; IMG_1219 is scrolled so the '
+                 'top is cut off, and the outline overlaps 0.56 for that reason only '
+                 '(contact sheet, 24 Sept evening — the first rule change that compares '
+                 'untyped bare cuts would have split it)',
 }    # skin share of a cut above which it is a picture of someone wearing it
 
 
 # Rows whose pages say nothing and whose pictures the two tests cannot tell
 # apart, split by the viewing pass (a person reading the contact sheet).
 BY_EYE = {
+    'B090-P010-V2': ([[0], [1, 2]], 'IMG_1364 is the Town and Country bag in dark brown; IMG_1365-1366 '
+                                    'the same bag in tan. The pages agree on the name only; the tan '
+                                    'leather reads as skin, so the cut is typed as worn and not compared '
+                                    '(contact sheet, 24 Sept evening; the owner hid the row for it)'),
+    'B076-P001': ([[0], [1, 2]], 'IMG_1190 is the belted cream jacket; IMG_1193-1194 a cream tank top, '
+                                 'the second scrolled to its buy panel. 1194 has no cut to compare, so '
+                                 'complete-link put it with the jacket (contact sheet, 24 Sept evening)'),
     'B092-P002': ([[0], [1]], 'IMG_1393 is the FRANKIE jacket in Olive laid flat; IMG_1394 is a model '
                               'in a black faux fur jacket. Flat against worn is not compared, and the '
                               'model photo has no text (contact sheet, 24 Sept)'),
@@ -118,10 +129,29 @@ def picture(pid, i, review, panels, cache):
     for pn in sp.get('panels') or []:
         if CAT + '/' + (pn.get('cut') or '') == path or CAT + '/' + pn['path'] == path:
             typed = {'flat lay': 'flat', 'on-model': 'model'}.get(pn['type'])
-    # an untyped page: someone is in it when the cut shows skin
-    kind = typed or ('model' if skin > SKIN_MODEL else 'flat')
-    return dict(lab=C.hex_to_lab(cols[0]['hex']), kind=kind, typed=typed, skin=round(skin, 3),
+    # an untyped page: someone is in it when the cut shows skin that is not
+    # the garment's own colour (soft_cut.skin_share); the old share counted a
+    # burgundy, rust or tan garment as skin
+    own = own_skin(path, [c['lab'] for c in cols if c.get('share', 0) >= 0.1]) if cut else None
+    s = skin if own is None else own
+    kind = typed or ('model' if s > SKIN_MODEL else 'flat')
+    return dict(lab=C.hex_to_lab(cols[0]['hex']), kind=kind, typed=typed, skin=round(s, 3),
+                bare=(not typed and own is not None and own <= BARE),
                 mask=silhouette(path) if cut else None, path=os.path.relpath(path, ROOT))
+
+
+BARE = 0.01          # an untyped cut with less skin than this is plainly a packshot
+
+
+def own_skin(path, colours=None):
+    """Skin share of a cut-out, the garment's own colours left out."""
+    from PIL import Image
+    import soft_cut
+    try:
+        im = np.asarray(Image.open(path).convert('RGBA'))
+    except Exception:
+        return None
+    return soft_cut.skin_share(im[..., :3], im[..., 3].astype(np.float32) / 255.0, colours)
 
 
 def compatible(fa, fb, pa, pb, literal=False):
@@ -131,24 +161,36 @@ def compatible(fa, fb, pa, pb, literal=False):
     d = T.disagree(fa, fb)
     if d:
         return False, 'page ' + '/'.join(d)
-    if T.legible_in_both(fa, fb):
-        return True, 'page agrees on ' + '/'.join(T.legible_in_both(fa, fb))
+    both = T.legible_in_both(fa, fb)
+    # A colour or a product number both pages print and agree on settles it.
+    # The NAME alone does not (24 Sept): a style's name is the same on every
+    # colourway's page, so "TOWN AND COUNTRY COLLECTION" kept a dark brown and
+    # a tan Fairfax & Favor bag in one row. Where only the name agrees, the
+    # pictures still decide the colour.
+    if set(both) & {'colour', 'pid'}:
+        return True, 'page agrees on ' + '/'.join(both)
+    agreed = ('page agrees on name only; ' if both else '')
     if not pa or not pb:
-        return True, 'no picture to compare'
+        return True, agreed + 'no picture to compare'
     dl = abs(pa['lab'][0] - pb['lab'][0])
     if not literal and pa['kind'] != pb['kind']:
         # a flat lay against the same garment worn: the light on a person
         # moves L* by more than 8 and the outline never matches, so neither
         # test says anything about whether it is the same product
-        return True, 'pictures not of one known kind (%s, %s), not compared' % (pa['kind'], pb['kind'])
+        return True, agreed + 'pictures not of one known kind (%s, %s), not compared' % (pa['kind'], pb['kind'])
     if dl > L_MAX:
-        return False, 'lightness %.1f' % dl
-    if pa['mask'] is not None and pb['mask'] is not None and (literal or (pa['typed'] and pb['typed'])):
+        return False, agreed + 'lightness %.1f' % dl
+    # the silhouette needs panels.py's typing on both, or — since 24 Sept — two
+    # untyped cuts that are plainly flat: no skin once the garment's own colour
+    # is left out (a burgundy cami read as "worn" because burgundy sits in the
+    # skin band, and so was never compared with the burgundy trousers beside it)
+    sure = (pa['typed'] and pb['typed']) or (pa.get('bare') and pb.get('bare'))
+    if pa['mask'] is not None and pb['mask'] is not None and (literal or sure):
         iou = float((pa['mask'] & pb['mask']).sum() / max(1, (pa['mask'] | pb['mask']).sum()))
         if iou < IOU_MIN:
-            return False, 'silhouette %.2f' % iou
-        return True, 'pictures agree (dL %.1f, IoU %.2f)' % (dl, iou)
-    return True, 'pictures agree (dL %.1f)' % dl
+            return False, agreed + 'silhouette %.2f' % iou
+        return True, agreed + 'pictures agree (dL %.1f, IoU %.2f)' % (dl, iou)
+    return True, agreed + 'pictures agree (dL %.1f)' % dl
 
 
 # the slot a product's own name gives it, in the languages the shops write in;

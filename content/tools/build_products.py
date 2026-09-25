@@ -30,7 +30,10 @@ FIELDS = ['product_id', 'batch_id', 'shop', 'shop_type', 'slot', 'garment_type',
           'slot_confidence',
           # the shop's own product number, which names the style: UNIQLO prints
           # it under Description ("Product ID: 485303")
-          'shop_product_id', 'shop_product_id_confidence']
+          'shop_product_id', 'shop_product_id_confidence',
+          # why a row is back in Review (shelf = review): her "Back to Review",
+          # or a build that found something wrong with its picture
+          'review_reason']
 
 
 def read_rows():
@@ -577,7 +580,28 @@ def flag_twins(cells, existing):
     return n
 
 
-def split_rows(choices, by_id, review):
+def apply_choice(d, ch):
+    """One asset-choices.json entry onto a products.csv row: the picture she
+    chose, removed (shelf = hidden), or back in Review (shelf = review, with
+    the reason). A row sent back to Review keeps no picture choice."""
+    if not ch:
+        return
+    if ch.get('review'):
+        d['shelf'] = 'review'
+        d['review_reason'] = ch['review'] if isinstance(ch['review'], str) else 'sent back to Review'
+        d['asset_choice'] = ''
+        d['asset_box'] = ''
+        return
+    d['asset_choice'] = ch.get('choice', '')
+    d['asset_box'] = ','.join(str(v) for v in ch['box']) if ch.get('box') else ''
+    if ch.get('choice') in ('custom', 'item', 'person', 'full', 'whole'):
+        d['asset_image'] = ch.get('image', 0)
+        d['asset_base'] = ch.get('base', 'photo')
+    if ch.get('hidden'):
+        d['shelf'] = 'hidden'
+
+
+def split_rows(choices, by_id, review, filed=None):
     """Rows for the boxes the stylist drew on other products' screenshots.
 
     Batch, shop and brand come from the parent, confidence inherited and never
@@ -601,6 +625,11 @@ def split_rows(choices, by_id, review):
                 continue
             base = sp.get('base', 'photo')
             src_entry = entry.get('whole') if base == 'whole' and entry.get('whole') else entry
+            # a box drawn on the CUT-OUT is a box on the parent's asset, not on
+            # the photo: cropping the photo with it took the page's size row and
+            # "Guida alle Taglie" instead of the swatch she boxed (B011-P002-S1..S3)
+            src_file = (ROOT + '/' + parent['asset_path'] if base == 'asset' and parent.get('asset_path')
+                        else CAT + '/' + src_entry['path'])
             box = [float(v) for v in sp['box']]
             d = dict(parent)
             rid = f"{pid}-S{sp['n']}"
@@ -614,7 +643,7 @@ def split_rows(choices, by_id, review):
                      product_url='', product_url_confidence='input needed',
                      shot_type='crop of ' + parent['shot_type'], complete_in_frame='',
                      asset_type='crop', asset_quality='good',
-                     asset_path='content/catalogue/' + src_entry['path'], asset_image=idx,
+                     asset_path=os.path.relpath(src_file, ROOT), asset_image=idx,
                      asset_base=base,
                      asset_choice='custom', asset_box=','.join(f'{v:.4f}' for v in box),
                      shelf='', recoloured='', recolour_source='',
@@ -628,12 +657,12 @@ def split_rows(choices, by_id, review):
             for k in ('colour1_L', 'colour1_C', 'colour1_h', 'colour1_rel_chroma', 'colour1_neutral'):
                 d[k] = ''
             try:
-                with Image.open(CAT + '/' + src_entry['path']) as im:
+                with Image.open(src_file) as im:
                     W, H = im.size
-                    mode = 'RGBA' if base == 'whole' else 'RGB'
+                    mode = 'RGBA' if base in ('whole', 'asset') else 'RGB'
                     crop = im.convert(mode).crop((int(box[0] * W), int(box[1] * H),
                                                   int((box[0] + box[2]) * W), int((box[1] + box[3]) * H)))
-                cols, skin, kept = X.colours_for_image(crop, is_cutout=(base == 'whole'))
+                cols, skin, kept = X.colours_for_image(crop, is_cutout=(base in ('whole', 'asset')))
                 for i, c in enumerate(cols[:3], 1):
                     fam, nm, L, Cc, h, rel, nt = classify(c['hex'])
                     d[f'colour{i}_hex'] = c['hex']; d[f'colour{i}_share'] = round(c['share'], 3)
@@ -651,6 +680,14 @@ def split_rows(choices, by_id, review):
 
 
 def main():
+    # the share sheet's copies (asset-choices-2.json …) and stubs (text.txt)
+    # first: merged and deleted, or — if one is broken — nothing built at all
+    import tidy_exports
+    try:
+        tidy_exports.tidy()
+    except tidy_exports.BrokenExport as e:
+        print(f'::error::Export not applied, nothing changed — {e}')
+        sys.exit(1)
     filed = filed_rows()
     rows = read_rows()
     keep = kept_columns()
@@ -751,14 +788,7 @@ def main():
             d['slot_confidence'] = 'guessed'
         elif 'slot and garment type are the parent' in (d.get('notes') or ''):
             d['slot_confidence'] = 'inherited'
-        if ch:
-            d['asset_choice'] = ch.get('choice', '')
-            d['asset_box'] = ','.join(str(v) for v in ch['box']) if ch.get('box') else ''
-            if ch.get('choice') in ('custom', 'item', 'person', 'full', 'whole'):
-                d['asset_image'] = ch.get('image', 0)
-                d['asset_base'] = ch.get('base', 'photo')
-            if ch.get('hidden'):
-                d['shelf'] = 'hidden'
+        apply_choice(d, ch)
         for i, col in enumerate(cl[:3], 1):
             d[f'colour{i}_hex'] = col['hex']
             d[f'colour{i}_share'] = col['share']
@@ -770,6 +800,7 @@ def main():
         out.append(d)
 
     by_id = {d['product_id']: d for d in out}
+    applied = set(by_id)                 # the screenshot rows had their choices above
     read = apply_pages(by_id)
     print('UNIQLO rows read off the page:', read)
     print('UNIQLO source rows switched to their measured cut:', measured_sources(by_id))
@@ -783,7 +814,7 @@ def main():
         v['used_in'] = keep.get(v['product_id'], {}).get('used_in', '')
         v['validated'] = keep.get(v['product_id'], {}).get('validated', '')
     out.extend(variants)
-    splits = split_rows(choices, by_id, review)
+    splits = split_rows(choices, by_id, review, filed)
     for d in splits:
         d['used_in'] = keep.get(d['product_id'], {}).get('used_in', '')
         d['validated'] = keep.get(d['product_id'], {}).get('validated', '')
@@ -803,6 +834,20 @@ def main():
             by_id[pid]['notes'] = (by_id[pid]['notes'] + '; cut into %d cells'
                                    % sum(1 for d in cells if d['parent_id'] == pid)).strip('; ')
     out.extend(cells)
+    # the desk's decisions reach every row, not only the screenshot rows: a
+    # colourway variant, a grid cell or a cut piece is removed, sent back to
+    # Review or given a picture the same way (47 variant decisions of 24 Sept
+    # were being dropped here)
+    late = 0
+    for d in out:
+        ch = choices.get(d['product_id'])
+        if ch and d['product_id'] not in applied:
+            if ch.get('slot'):
+                d['slot'] = ch['slot']
+                d['slot_confidence'] = 'given'
+            apply_choice(d, ch)
+            late += 1
+    print('choices applied to variant, cell and split rows:', late)
 
     # a brand guessed from a domain ("flattered") is spelt the way a page of
     # the same shop printed it ("Flattered"), so the desk lists it once

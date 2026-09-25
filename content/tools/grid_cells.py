@@ -230,7 +230,10 @@ def main():
     # products only (incremental.py), so no reviewed grid grows new cells
     import incremental as INC
     import build_review_images as BR
-    grids = [pid for pid in sorted(review) if rows.get(pid, {}).get('shot_type') == 'listing grid']
+    from shelf_checks import is_swatch_row
+    # a product page's colour-swatch thumbnails are not a grid (shelf_checks.is_swatch_row)
+    grids = [pid for pid in sorted(review) if rows.get(pid, {}).get('shot_type') == 'listing grid'
+             and not is_swatch_row(rows[pid])]
     fresh, fp = INC.select('grid_cells', grids, args.redo)
     relaxed = 0
     for pid in fresh:
