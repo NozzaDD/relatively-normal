@@ -492,6 +492,47 @@
      "image": 0
     }
    }
+  },
+  {
+   "version": 2,
+   "moved": {
+    "B032-P001#1": {
+     "product_id": "B032-P001-V3",
+     "image": 0
+    },
+    "B075-P007#1": {
+     "product_id": "B075-P007-V3",
+     "image": 0
+    },
+    "B076-P001#1": {
+     "product_id": "B076-P001-V3",
+     "image": 0
+    },
+    "B076-P001#2": {
+     "product_id": "B076-P001-V3",
+     "image": 1
+    },
+    "B076-P001#3": {
+     "product_id": "B076-P001-V3",
+     "image": 2
+    },
+    "B076-P001#4": {
+     "product_id": "B076-P001-V3",
+     "image": 3
+    },
+    "B077-P007#1": {
+     "product_id": "B077-P007-V2",
+     "image": 0
+    },
+    "B090-P010-V2#1": {
+     "product_id": "B090-P010-V4",
+     "image": 0
+    },
+    "B090-P010-V2#2": {
+     "product_id": "B090-P010-V4",
+     "image": 1
+    }
+   }
   }
  ]
 }

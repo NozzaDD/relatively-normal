@@ -183,6 +183,29 @@ def load_checks():
         return {}
 
 
+def removed_by_her():
+    """Rows she removed on the desk, from asset-choices.json — as opposed to
+    rows the build hides (a grid page once its cells exist). Review lists
+    only these under Removed."""
+    try:
+        ch = json.load(open(CAT + '/asset-choices.json')).get('choices', {})
+    except (FileNotFoundError, json.JSONDecodeError):
+        return set()
+    return {pid for pid, c in ch.items() if c.get('hidden')}
+
+
+def write_review_sends():
+    """content/catalogue/review-sends.json -> studio/data/review-sends.json.
+    The rows a build sent back to Review, by version: the desk applies each
+    version once over a decision kept in the browser, which would otherwise
+    hide the send."""
+    src = CAT + '/review-sends.json'
+    if os.path.exists(src):
+        shutil.copyfile(src, DATA + '/review-sends.json')
+    else:
+        json.dump(dict(versions=[]), open(DATA + '/review-sends.json', 'w'))
+
+
 def not_duplicates():
     """Rows the stylist said are not duplicates, from asset-choices.json."""
     try:
@@ -197,6 +220,7 @@ def build_products(rows, review):
     checks = load_checks()
     several, dups = checks.get('several', {}), checks.get('duplicates', {})
     kept = not_duplicates()
+    removed = removed_by_her()
     flats = load_flats()
     cuts = measured_cuts()
     by_id0 = {r['product_id']: r for r in rows}
@@ -274,7 +298,12 @@ def build_products(rows, review):
             colours=colours_of(r),
             colour_confidence=n(r['colour_confidence']),
             colour_stability=n(r['colour_stability']),
-            asset=(entry['path'] if n(r['asset_type']) == 'crop' and entry else f"assets/{r['product_id']}.webp"),
+            # a crop shows its parent's picture: the photo, or — for a box drawn
+            # on the cut-out — the parent's cut-out itself
+            asset=(f"assets/{n(r.get('parent_id'))}.webp"
+                   if n(r['asset_type']) == 'crop' and n(r.get('asset_base')) == 'asset' and n(r.get('parent_id'))
+                   else entry['path'] if n(r['asset_type']) == 'crop' and entry
+                   else f"assets/{r['product_id']}.webp"),
             thumb=f"thumbs/{r['product_id']}.webp",
             asset_type=n(r['asset_type']),
             asset_quality=n(r['asset_quality']),
@@ -303,6 +332,11 @@ def build_products(rows, review):
             custom_box=parse_box(r.get('asset_box')),
             base=n(r.get('asset_base')) or 'photo',
             hidden=n(r.get('shelf')) == 'hidden',
+            # removed by her on the desk (Review lists these under Removed)
+            removed=r['product_id'] in removed,
+            # back in Review, and why: her "Back to Review", or a build that
+            # found something wrong with the picture. Off the shelf until decided.
+            review=(n(r.get('review_reason')) or 'sent back to Review') if n(r.get('shelf')) == 'review' else '',
             recoloured=n(r.get('recoloured')) == 'yes',
             recolour_source=n(r.get('recolour_source')),
             shop_product_id=n(r.get('shop_product_id')),
@@ -509,6 +543,7 @@ def main():
                 clean=sum(1 for p in products if p['clean']),
                 with_full=sum(1 for p in products if p['full']),
                 hidden=sum(1 for p in products if p['hidden']),
+                back_in_review=sum(1 for p in products if p['review']),
                 recoloured=sum(1 for p in products if p['recoloured']),
                 derived=sum(1 for p in products if p['parent_id']),
                 images=sum(len(p['images'] or []) for p in products if not p['parent_id']),
@@ -516,6 +551,7 @@ def main():
                 several=sum(1 for p in products if p['several']),
                 duplicates=sum(1 for p in products if p['duplicate_of']))
     write_picture_migration(products)
+    write_review_sends()
     json.dump(products, open(DATA + '/products.json', 'w'), separators=(',', ':'))
     json.dump(inspiration, open(DATA + '/inspiration.json', 'w'), separators=(',', ':'))
     json.dump(meta, open(DATA + '/meta.json', 'w'), indent=1)

@@ -58,8 +58,23 @@ def lab_arr(rgb):
     return np.stack([116 * f[:, 1] - 16, 500 * (f[:, 0] - f[:, 1]), 200 * (f[:, 1] - f[:, 2])], 1)
 
 
-def load(path, side):
-    im = Image.open(path).convert('RGBA')
+def picture(r):
+    """The picture the shelf shows for a row: its asset, or — for a piece cut
+    by hand from another row's picture (asset_type crop) — the box of it. Every
+    such piece of one page shares that page as its asset_path, and measured
+    whole they were all "the same picture" as each other (24 Sept: the owner's
+    boxes on B022-P002 and B046-P010 were marked duplicates of their siblings)."""
+    im = Image.open(ROOT + '/' + r['asset_path']).convert('RGBA')
+    box = r.get('asset_box') if r.get('asset_type') == 'crop' else ''
+    if box:
+        x, y, w, h = [float(v) for v in box.split(',')]
+        W, H = im.size
+        im = im.crop((int(x * W), int(y * H), int((x + w) * W), int((y + h) * H)))
+    return im
+
+
+def load(r, side):
+    im = picture(r)
     im.thumbnail((side, side))
     return np.asarray(im)
 
@@ -131,6 +146,23 @@ def root_of(r):
     return re.sub(r'-V\d+$', '', r['product_id'])
 
 
+SWATCH_ROW = re.compile(r'shown in \w+ colou?rways|zoomed page[^;]*colou?r swatch row', re.I)
+
+
+def is_swatch_row(r):
+    """A product page zoomed onto its colour-swatch thumbnails, which the
+    viewing pass typed as a listing grid because it saw four small pictures of
+    trousers in a row (B011-P002: "wide-leg trousers shown in four colourways";
+    "zoomed page: price, colour swatch row, size row"). The thumbnails are the
+    one product's colourways as the shop draws its colour picker — never
+    products of their own, and never cut as a grid. A real listing grid names
+    several products or tiles; this names one garment and its swatch row."""
+    if r.get('shot_type') != 'listing grid':
+        return False
+    text = ' '.join([r.get('garment_type') or '', r.get('notes') or ''])
+    return bool(SWATCH_ROW.search(text)) and not re.search(r'\btiles?\b|listing|cut into', text, re.I)
+
+
 def several(rows):
     cp = colours_photos()
     out = {}
@@ -138,17 +170,23 @@ def several(rows):
         if r.get('shelf') == 'hidden' or not r.get('asset_path'):
             continue
         why = []
-        if r.get('shot_type') == 'listing grid':
+        if is_swatch_row(r):
+            why.append('swatch row: colour-swatch thumbnails on a product page — not products')
+        elif r.get('shot_type') == 'listing grid':
             why.append('grid page: the picture is a listing-grid page of several products')
         imgs = [x for x in (r.get('image_paths') or '').split(';') if x]
-        # a variant cut from that photo is one garment lying alone on it
-        if imgs and set(imgs) <= cp and not r.get('recolour_source'):
-            why.append('all-colours: the picture is the style\'s all-colours photo')
         try:
-            a = load(ROOT + '/' + r['asset_path'], 200)
+            a = load(r, 200)
         except (FileNotFoundError, OSError):
             continue
         pc = pieces(a)
+        cr0 = colour_regions(a)
+        # a variant cut from that photo is one garment lying alone on it; so
+        # is a cut that measures one piece in fewer than three colour regions
+        # (B073-P006, B073-P009 re-cut from their flat lays, 24 Sept)
+        single = pc == 1 and not (cr0 and cr0[0] >= 3)
+        if imgs and set(imgs) <= cp and not r.get('recolour_source') and not single:
+            why.append('all-colours: the picture is the style\'s all-colours photo')
         if pc is not None and (pc >= 3 or (pc == 2 and r.get('slot') not in PAIR_SLOTS)):
             why.append(f'pieces: the cut-out is {pc} separate pieces')
         cr = colour_regions(a)
@@ -163,8 +201,8 @@ def norm(s):
     return re.sub(r'[^a-z0-9]', '', (s or '').lower())
 
 
-def features(path, N=40):
-    im = Image.open(path).convert('RGBA')
+def features(r, N=40):
+    im = picture(r)
     w, h = im.size
     s = max(w, h)
     sq = Image.new('RGBA', (s, s), (0, 0, 0, 0))
@@ -207,7 +245,7 @@ def duplicates(rows, clean):
     feat = {}
     for r in live:
         try:
-            f = features(ROOT + '/' + r['asset_path'])
+            f = features(r)
         except (FileNotFoundError, OSError):
             f = None
         if f:

@@ -10654,19 +10654,14 @@
      0.5938,
      0.4169
     ],
-    "type": "flat lay",
+    "type": "text",
     "path": "review/B018-P001p3.jpg",
     "w": 549,
     "h": 500,
     "text_share": 0.037,
     "skin": 0.0,
     "badges_painted": 33,
-    "components": 1,
-    "edge_pixels": 0,
-    "words_inside": 0,
-    "clean": true,
-    "why": "",
-    "cut": "review/B018-P001p3-cut.webp"
+    "text_words": 36
    }
   ]
  },
@@ -12377,6 +12372,96 @@
   "why": "no clear gutter"
  },
  "B092-P008-V3#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B032-P001-V3#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B075-P007-V3#0": {
+  "split": false,
+  "why": "too many panels"
+ },
+ "B076-P001-V3#0": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0,
+     0.8594,
+     1.0
+    ],
+    "type": "other",
+    "path": "review/B076-P001-V3p0.jpg",
+    "w": 586,
+    "h": 1200,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.8594,
+     0.0,
+     0.1406,
+     1.0
+    ],
+    "type": "detail",
+    "path": "review/B076-P001-V3p1.jpg",
+    "w": 97,
+    "h": 1200,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0
+   }
+  ]
+ },
+ "B076-P001-V3#1": {
+  "split": true,
+  "panels": [
+   {
+    "box": [
+     0.0,
+     0.0,
+     1.0,
+     0.4608
+    ],
+    "type": "other",
+    "path": "review/B076-P001-V3-1p0.jpg",
+    "w": 1102,
+    "h": 465,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0
+   },
+   {
+    "box": [
+     0.0,
+     0.4608,
+     1.0,
+     0.5392
+    ],
+    "type": "other",
+    "path": "review/B076-P001-V3-1p1.jpg",
+    "w": 1102,
+    "h": 546,
+    "text_share": 0.0,
+    "skin": 0.0,
+    "badges_painted": 0
+   }
+  ]
+ },
+ "B077-P007-V2#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B090-P010-V4#0": {
+  "split": false,
+  "why": "no clear gutter"
+ },
+ "B090-P010-V4#1": {
   "split": false,
   "why": "no clear gutter"
  }

@@ -80,6 +80,7 @@
         <label class="switch"><input type="checkbox" id="rCheckSlot"> Slot worth a look</label>
         <label class="switch"><input type="checkbox" id="rSeveral"> Several garments</label>
         <label class="switch"><input type="checkbox" id="rDups"> Duplicates</label>
+        <label class="switch"><input type="checkbox" id="rRemoved"> Removed</label>
       </div>
       <div id="reviewCards" class="rcards"></div>
     </div>
@@ -152,6 +153,8 @@
       <button data-act="picture" class="ghost" id="elPicture" hidden>Other picture</button>
       <button data-act="duplicate" class="ghost">Duplicate</button>
       <button data-act="delete" class="ghost danger">Delete</button>
+      <button data-act="remove" class="ghost" id="elRemove" title="Take this piece off the shelf; Review → Removed brings it back">Remove</button>
+      <button data-act="review" class="ghost" id="elReview" title="Send this piece back to Review">Back to Review</button>
     </div>
     <div class="element-bar piece-slots" id="pieceSlots" hidden></div>
 
@@ -201,6 +204,10 @@
 </div>
 
 <input type="file" id="openFile" accept="application/json,.json" hidden>
+<div id="tileMenu" class="tile-menu" role="menu" hidden>
+  <button data-shelf-act="remove" role="menuitem" class="danger">Remove</button>
+  <button data-shelf-act="review" role="menuitem">Back to Review</button>
+</div>
 <div id="toast" class="toast" hidden></div>
 <div id="drag" class="drag-ghost" hidden></div>
 

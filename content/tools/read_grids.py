@@ -26,6 +26,7 @@ asset-choices.json) is never replaced: its geometric record is kept as it is,
 and the eye's version of that tile is dropped. The geometric record of every
 key that was replaced is kept in _grid_cells_geometry.json for comparison.
 """
+from shelf_checks import is_swatch_row   # a swatch row is not a grid
 import os, sys, re, json, csv, argparse, collections
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
@@ -83,7 +84,7 @@ def render(outdir):
     os.makedirs(outdir, exist_ok=True)
     pages = []
     for pid, r in sorted(rows.items()):
-        if r['shot_type'] != 'listing grid':
+        if r['shot_type'] != 'listing grid' or is_swatch_row(r):
             continue
         for i, e in enumerate(rv.get(pid, {}).get('images') or []):
             if not e or 'error' in e or not os.path.exists(f"{CAT}/{e['path']}"):

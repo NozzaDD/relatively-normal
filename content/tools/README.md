@@ -360,3 +360,44 @@ Order for an ingest: `cluster_products.py --append` → viewing rows → `build_
 - `build_studio.py` exports `hold`, the reason the gate kept a row in Review; the desk shows it under the cell.
 
 Order after a grid ingest: `read_grids.py --ingest` → `eye_gate.py --sheets DIR` → the contact-sheet pass into `HELD` → `eye_gate.py` → `build_products.py` → `shelf_checks.py` → `build_studio.py`.
+
+## Added 24 September 2026 (evening) — palette matching, remove and back to Review, page text
+
+| Script | What it does |
+|---|---|
+| `shelf_text.py` | OCR of every shelf tile as the desk shows it (the cut-out, or the box chosen on the photo), and of every other picture a tile can switch to. Page text is a page word ("colore", "taglia", "size", "add to cart", also cut off at the box's edge: "guid"), a price, or two or more size labels; a lone word is recorded, not acted on. `eng` only and 25 s per picture: the first run with three languages and a second layout pass sat fifteen minutes on one knit texture. Writes `_shelf_text.json`. |
+| `send_to_review.py` | `send(version, {pid: reason})`: the products go back to Review — their entry in `asset-choices.json` becomes `review` with the reason (slot, boxes and "not a duplicate" kept), and `review-sends.json` gets a version the desk applies once over a browser's own old decision. |
+
+Changed:
+
+- `build_products.py`: `split_rows` took an undefined `filed` and crashed on the first box drawn since 24 Sept, which is why no *Apply shelf choices (auto)* commit followed the owner's review push. Choices now reach variant, cell and split rows too, and `review` becomes `shelf = review` with `review_reason`. A box drawn on the **cut-out** (`base: asset`) is cut from the parent's cut-out; it used to be cut from the full photo at the same fractions, which is how "Guida alle Taglie" and a size row reached the shelf as Aspesi trousers (B011-P002-S1..S3). The desk's `derivedProducts` had the same mistake.
+- `shelf_checks.py`: a product page zoomed onto its colour-swatch row is `swatch row`, never a listing grid (`is_swatch_row`: the viewing pass names one garment "shown in N colourways" or a "colour swatch row", and no tiles). `grid_cells.py` and `read_grids.py` skip it. A piece cut by hand is measured by its own box, not its parent's whole page — measured whole, every box on B022-P002 and B046-P010 was a "duplicate" of its siblings.
+- `panels.py`: a panel with eight or more confident words is `text`, whatever area they cover. B018-P001's "Composizione" block covered 3.7% of its panel, cut into one clean piece, and was the product's shelf picture.
+- `build_studio.py` exports `review` (why it is back in Review) and `removed` (removed by the owner, as against hidden by the build), and copies `review-sends.json`.
+
+Order after a push of `asset-choices.json`: `build_products.py` → `shelf_checks.py` → `build_studio.py`. After an ingest, `shelf_text.py` → `send_to_review.py` for what it finds.
+
+## Added 24 September 2026 (evening) — better cut-outs, row splits, the hidden products
+
+| Script | What it does |
+|---|---|
+| `soft_cut.py` | the new cut. Runs on the **screenshot at full resolution** (the review copy's `origin` crop, then the panel's box), keeps the model's **soft alpha**, takes the backdrop's colour back out of the edge pixels, and scales down premultiplied at the end, so the edge is anti-aliased instead of a staircase. `isnet-general-use` rather than u2net (finer structure: straps, handles); where it plainly failed — it kept nearly nothing on a page the garment fills — u2net, then a border flood-fill on a plain backdrop. Everything well inside the outline is made opaque (`solid_core`: on Lilysilk's cream pages isnet gave a dark cardigan 0.3 alpha all over). A piece touching or overlapping the main one is kept whatever its size (`keep_attached`); an enclosed region of the backdrop's colour, flat, big enough to be a gap between legs, is removed (`punch_holes`), but never when the garment is itself within 12 ΔE of the backdrop — colour cannot tell a cream coat from a cream page. A garment on a person is cut off them with `u2net_cloth_seg` by slot (top: upper body; bottom: lower; dress: full; layer: upper + full), whose class map is read straight off the model and scaled NEAREST (rembg's own `predict` scales the class indices with LANCZOS and draws one-pixel outlines round the legs). Shoes, bags and accessories on a person cannot be separated, and are said to be. |
+| `recut_hidden.py` | re-cuts the products in `_hidden_reasons.json` from their best picture (a packshot, then a cell, the page, a photo worn; a panel split out with `panels.find_panels(subtle=True)`; the same picture where the fault was only the cut: jagged, holes, handles). `--cut` writes the cut and `_recut.json`, keeps the old cut in `assets-before-recut/`; `--sheets` before/after sheets; `--send` puts the old cut back on everything not in `LOOKS_RIGHT` and sends `LOOKS_RIGHT` back to Review through `send_to_review.py`. |
+| `cut_audit.py` | the same faults counted on the shelf, by slot: hard-edged cut-outs, backdrop left inside, bags whose handles a new cut finds. Measures, re-cuts nothing. |
+
+`_hidden_reasons.json` is the owner's 206 hidden products, one reason each, read by eye from contact sheets (point 4). Reading them showed the list of reasons was missing its largest group: **119 were whole people** — the cut was the model and the outfit, not the piece.
+
+Changed:
+
+- `name_split.py`: a name both pages print and agree on no longer settles that two screenshots are one product — a style's name is the same on every colourway's page; only an agreeing colour or product number does, and otherwise the pictures decide. Two untyped cuts that are plainly packshots (skin under 1% once the garment's own colours are left out) are now compared by silhouette too: the burgundy cami read as "worn" because burgundy is in the skin band, and was never compared with the burgundy trousers in its row. Tan leather still reads as skin; B090-P010-V2 and B076-P001 are split by eye (`BY_EYE`), B077-P013 kept whole (`KEEP`, the one row the new test got wrong).
+- `panels.py`: `find_panels(subtle=True)` also finds a join between two greys a couple of levels apart when both sides are steady, and a straight line across 85% of the width where one photograph abuts the next. Only the re-cut uses it.
+- `shelf_checks.py`: a cut that measures one piece in fewer than three colour regions is not "the style's all-colours photo", whatever screenshot it came from.
+
+Order for a re-cut: `recut_hidden.py --cut` → `--sheets` and a person reading them into `LOOKS_RIGHT` → `--send` → drop the re-cut rows from `products.csv` and their `_colours.json` entries, `extract_colours.py --new` → `build_products.py` → `shelf_checks.py` → `build_studio.py`. Needs `rembg` with `isnet-general-use`, `u2net` and `u2net_cloth_seg` (each ~170 MB, downloaded on first use), `scipy`, `numpy`.
+## Added 24 September 2026 (night) — exports tidy themselves
+
+| Script | What it does |
+|---|---|
+| `tidy_exports.py` | merges every `content/catalogue/asset-choices*.json` (the copies the iPad's Files app makes when the name is taken) into `asset-choices.json`, keyed by product ID, the newest export winning — by the `exported` time inside the file, not the name; deletes the copies and the share sheet's `text.txt`, `text-2.txt` … in `content/catalogue/` and `content/outfits/`. A broken or unreadable export stops it before anything is changed. `build_products.py` runs it first; so does the *Apply shelf choices* workflow, whose path filter now watches `asset-choices*.json`. `test_tidy_exports.py` tests it. |
+
+The desk now writes the full export time (`2026-09-24T18:30:00.000Z`), not the day: two exports of one day could not be told apart. Older date-only exports of the same day count the copy as newer than `asset-choices.json`, since a copy only exists because a new export was saved beside it.
