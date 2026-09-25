@@ -110,14 +110,14 @@
   "cutout_model",
   "tile"
  ],
- "clean": 1253,
+ "clean": 1202,
  "with_full": 1851,
  "hidden": 386,
- "back_in_review": 78,
+ "back_in_review": 87,
  "recoloured": 193,
  "derived": 1084,
  "images": 1209,
- "whole_cutouts": 1576,
- "several": 10,
- "duplicates": 56
+ "whole_cutouts": 1578,
+ "several": 11,
+ "duplicates": 45
 }

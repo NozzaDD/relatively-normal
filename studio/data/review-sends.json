@@ -87,6 +87,59 @@
     "B088-P003": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again.",
     "B088-P004": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
    }
+  },
+  {
+   "version": "2026-09-25-recrop",
+   "products": {
+    "B050-P005": "re-cut 25 Sept: the crop cut the piece off at bottom; the new cut-out takes in what the old crop left out, and changed more than its edges. Decide again.",
+    "B068-P026": "re-cut 25 Sept: the picture it came from was widened to the whole piece; the new cut-out takes in what the old crop left out, and changed more than its edges. Decide again."
+   }
+  },
+  {
+   "version": "2026-09-25-recrop-browser",
+   "only_chosen": true,
+   "products": {
+    "B022-P015-C3": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B022-P016-C7": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B023-P009-I1-C1": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B023-P015-C0": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B025-P004-C0": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B026-P001-I1-C1": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B026-P001-I2-C0": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B026-P002-C0": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B026-P003-C1": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B026-P004-C0": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B026-P005-C0": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B026-P005-C1": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B026-P006-C0": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B026-P006-C1": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B026-P007-C0": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B026-P007-C1": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B026-P008-C1": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B028-P010-I3-C1": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B028-P011-C0": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B033-P005-C0": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B034-P001-C1": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B044-P015-C1": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B046-P010-C3": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B057-P004-C0": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B078-P013-C5": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B079-P002-I2-C1": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B080-P001-C0": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B080-P011-C10": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B080-P011-C9": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B081-P002-I1-C1": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B023-P009-C3": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B081-P001-C1": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B081-P002-C1": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B017-P001-V2": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B020-P006-V2": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B037-P007": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B048-P001": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B058-P007-V2": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B075-P007-V3": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again.",
+    "B077-P007": "re-cut 25 Sept: the crop had cut the piece off; the new cut-out takes in what it left out, and changed more than its edges. Decide again."
+   }
   }
  ]
 }

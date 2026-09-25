@@ -13,32 +13,6 @@
     "struct": 0.0
    }
   },
-  "B010-P001-V3": {
-   "cause": "colourway split",
-   "cluster": [
-    "B010-P001",
-    "B010-P001-V3"
-   ],
-   "keeper": "B010-P001",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
-   }
-  },
-  "B010-P005-V4": {
-   "cause": "colourway split",
-   "cluster": [
-    "B010-P005",
-    "B010-P005-V4"
-   ],
-   "keeper": "B010-P005",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
-   }
-  },
   "B011-P002-S1": {
    "cause": "already in the catalogue",
    "cluster": [
@@ -97,51 +71,10 @@
     "struct": 0.24
    }
   },
-  "B014-P001-V3": {
-   "cause": "colourway split",
-   "cluster": [
-    "B014-P001",
-    "B014-P001-V3"
-   ],
-   "keeper": "B014-P001",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
-   }
-  },
-  "B016-P001-V2": {
-   "cause": "colourway split",
-   "cluster": [
-    "B016-P001",
-    "B016-P001-V2"
-   ],
-   "keeper": "B016-P001",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
-   }
-  },
-  "B020-P006-V2": {
-   "cause": "colourway split",
-   "cluster": [
-    "B020-P006",
-    "B020-P006-V2",
-    "B021-P001"
-   ],
-   "keeper": "B020-P006",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
-   }
-  },
   "B021-P001": {
    "cause": "already in the catalogue",
    "cluster": [
     "B020-P006",
-    "B020-P006-V2",
     "B021-P001"
    ],
    "keeper": "B020-P006",
@@ -237,9 +170,9 @@
    ],
    "keeper": "B023-P007-C0",
    "measured": {
-    "de": 0.03,
-    "iou": 1.0,
-    "struct": 0.06
+    "de": 0.4,
+    "iou": 0.993,
+    "struct": 0.31
    }
   },
   "B023-P008-C1": {
@@ -250,9 +183,9 @@
    ],
    "keeper": "B023-P007-C1",
    "measured": {
-    "de": 0.02,
-    "iou": 0.989,
-    "struct": 0.22
+    "de": 0.01,
+    "iou": 0.992,
+    "struct": 0.15
    }
   },
   "B024-P005-I1-C0": {
@@ -276,9 +209,9 @@
    ],
    "keeper": "B024-P005-C4",
    "measured": {
-    "de": 0.1,
-    "iou": 0.992,
-    "struct": 0.42
+    "de": 0.02,
+    "iou": 0.989,
+    "struct": 0.21
    }
   },
   "B024-P005-I1-C2": {
@@ -289,9 +222,22 @@
    ],
    "keeper": "B024-P005-C5",
    "measured": {
-    "de": 0.15,
-    "iou": 0.992,
-    "struct": 0.29
+    "de": 0.26,
+    "iou": 0.984,
+    "struct": 0.13
+   }
+  },
+  "B025-P003-V2": {
+   "cause": "already in the catalogue",
+   "cluster": [
+    "B025-P003-V2",
+    "B025-P004-C3"
+   ],
+   "keeper": "B025-P004-C3",
+   "measured": {
+    "de": 0.3,
+    "iou": 0.996,
+    "struct": 0.32
    }
   },
   "B025-P006-I1-C0": {
@@ -307,19 +253,6 @@
     "struct": 1.21
    }
   },
-  "B028-P012-V2": {
-   "cause": "colourway split",
-   "cluster": [
-    "B028-P012",
-    "B028-P012-V2"
-   ],
-   "keeper": "B028-P012",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
-   }
-  },
   "B030-P007-C4": {
    "cause": "already in the catalogue",
    "cluster": [
@@ -329,8 +262,8 @@
    "keeper": "B031-P001",
    "measured": {
     "de": 0.02,
-    "iou": 0.999,
-    "struct": 0.15
+    "iou": 0.997,
+    "struct": 0.16
    }
   },
   "B036-P002-C0": {
@@ -407,8 +340,8 @@
    "keeper": "B044-P005-C1",
    "measured": {
     "de": 0.0,
-    "iou": 0.999,
-    "struct": 0.18
+    "iou": 0.996,
+    "struct": 0.19
    }
   },
   "B044-P007-C0": {
@@ -461,19 +394,6 @@
     "de": 0.02,
     "iou": 0.999,
     "struct": 0.09
-   }
-  },
-  "B075-P002-V2": {
-   "cause": "colourway split",
-   "cluster": [
-    "B075-P002",
-    "B075-P002-V2"
-   ],
-   "keeper": "B075-P002",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
    }
   },
   "B078-P008-C0": {
@@ -660,19 +580,6 @@
     "struct": 0.19
    }
   },
-  "B090-P001-V2": {
-   "cause": "colourway split",
-   "cluster": [
-    "B090-P001",
-    "B090-P001-V2"
-   ],
-   "keeper": "B090-P001",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
-   }
-  },
   "B090-P008-I1-C2": {
    "cause": "already in the catalogue",
    "cluster": [
@@ -684,58 +591,6 @@
     "de": 0.04,
     "iou": 0.992,
     "struct": 0.23
-   }
-  },
-  "B090-P009-V2": {
-   "cause": "colourway split",
-   "cluster": [
-    "B090-P009",
-    "B090-P009-V2"
-   ],
-   "keeper": "B090-P009",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
-   }
-  },
-  "B092-P002-V2": {
-   "cause": "colourway split",
-   "cluster": [
-    "B092-P002",
-    "B092-P002-V2"
-   ],
-   "keeper": "B092-P002",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
-   }
-  },
-  "B092-P005": {
-   "cause": "colourway split",
-   "cluster": [
-    "B092-P005",
-    "B092-P005-V2"
-   ],
-   "keeper": "B092-P005-V2",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
-   }
-  },
-  "B092-P008-V3": {
-   "cause": "colourway split",
-   "cluster": [
-    "B092-P008-V2",
-    "B092-P008-V3"
-   ],
-   "keeper": "B092-P008-V2",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
    }
   }
  },
@@ -753,14 +608,14 @@
     "swatch row: colour-swatch thumbnails on a product page \u2014 not products"
    ]
   },
-  "B022-P013-C0": {
-   "group": "B022-P013",
+  "B017-P001-V2": {
+   "group": "B017-P001",
    "why": [
     "pieces: the cut-out is 2 separate pieces"
    ]
   },
-  "B022-P015-C3": {
-   "group": "B022-P015",
+  "B022-P013-C0": {
+   "group": "B022-P013",
    "why": [
     "pieces: the cut-out is 2 separate pieces"
    ]
@@ -769,6 +624,12 @@
    "group": "B036-P005",
    "why": [
     "colour regions: 4 separate colour regions and no skin \u2014 a fan of colourways"
+   ]
+  },
+  "B037-P007": {
+   "group": "B037-P007",
+   "why": [
+    "pieces: the cut-out is 2 separate pieces"
    ]
   },
   "B044-P020-C5": {
@@ -789,10 +650,10 @@
     "colour regions: 3 separate colour regions and no skin \u2014 a fan of colourways"
    ]
   },
-  "B046-P010-C3": {
-   "group": "B046-P010",
+  "B049-P002-C0": {
+   "group": "B049-P002",
    "why": [
-    "pieces: the cut-out is 2 separate pieces"
+    "colour regions: 3 separate colour regions and no skin \u2014 a fan of colourways"
    ]
   },
   "B070-P014": {

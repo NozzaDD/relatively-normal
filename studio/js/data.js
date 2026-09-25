@@ -408,6 +408,9 @@ export function applyReviewSends(local, sends, applied = '') {
     for (const [pid, reason] of Object.entries(v.products || {})) {
       const l = local[pid];
       if (!l) continue;                  // nothing decided here: the catalogue says it
+      // a send that asks only about pictures she took (a re-cut that changed
+      // more than its edges) leaves a removed piece removed and a slot alone
+      if (v.only_chosen && !l.choice) continue;
       local[pid] = backToReviewChoice(l, reason);
       n++;
     }

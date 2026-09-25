@@ -4,22 +4,30 @@
  "exported": "2026-09-24",
  "choices": {
   "B001-P001": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B001-P002": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B001-P003": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B001-P004": {
    "choice": "custom",
    "box": [
-    0,
-    0,
-    1,
-    1
-   ]
+    0.0712,
+    0.0058,
+    0.9257,
+    0.9581
+   ],
+   "splits": [],
+   "trim": 3
   },
   "B002-P001": {
    "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
@@ -28,10 +36,14 @@
    "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
   },
   "B004-P001": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
+   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again.",
+   "splits": [],
+   "trim": 3
   },
   "B005-P001": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B006-P001": {
    "hidden": true
@@ -55,19 +67,29 @@
    "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
   },
   "B009-P001": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B009-P002": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B009-P003": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B009-P004": {
-   "choice": "person"
+   "choice": "person",
+   "splits": [],
+   "trim": 3
   },
   "B010-P001": {
-   "choice": "cutout"
+   "review": "re-cut 25 Sept: the picture it came from was widened to the whole piece; the new cut-out takes in what the old crop left out, and changed more than its edges. Decide again.",
+   "splits": [],
+   "trim": 3
   },
   "B010-P002": {
    "choice": "cutout"
@@ -146,11 +168,13 @@
   "B011-P007": {
    "choice": "custom",
    "box": [
-    0.181,
-    0.1186,
-    0.6259,
-    0.3177
-   ]
+    0.0896,
+    0.1185,
+    0.3044,
+    0.3174
+   ],
+   "splits": [],
+   "trim": 3
   },
   "B011-P008": {
    "choice": "cutout"
@@ -337,8 +361,7 @@
    ]
   },
   "B016-P001-V2": {
-   "choice": "cutout",
-   "base": "asset"
+   "review": "re-cut 25 Sept: the cut-out was B016-P001's, not this row's own picture; the new cut-out takes in what the old crop left out, and changed more than its edges. Decide again."
   },
   "B010-P003-V2": {
    "hidden": true
@@ -371,7 +394,9 @@
    "review": "re-cut 24 Sept \u2014 you hid it for: panels not split; now cut from its own panel of the page. Decide again."
   },
   "B016-P002": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B016-P003": {
    "review": "re-cut 24 Sept \u2014 you hid it for: panels not split; now cut from its own panel of the page. Decide again."
@@ -390,16 +415,22 @@
    "hidden": true
   },
   "B017-P001-V2": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: jagged outline; now a soft, anti-aliased edge. Decide again."
+   "review": "re-cut 24 Sept \u2014 you hid it for: jagged outline; now a soft, anti-aliased edge. Decide again.",
+   "splits": [],
+   "trim": 3
   },
   "B019-P004": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
+   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again.",
+   "splits": [],
+   "trim": 3
   },
   "B019-P005": {
    "hidden": true
   },
   "B020-P001": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B020-P003": {
    "hidden": true
@@ -426,7 +457,9 @@
    "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
   },
   "B021-P006": {
-   "choice": "cutout"
+   "choice": "cutout",
+   "splits": [],
+   "trim": 3
   },
   "B021-P005-V2": {
    "hidden": true
@@ -447,7 +480,9 @@
    "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
   },
   "B021-P014": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
+   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again.",
+   "splits": [],
+   "trim": 3
   },
   "B021-P016": {
    "hidden": true
@@ -462,7 +497,9 @@
    "choice": "cutout"
   },
   "B021-P020": {
-   "choice": "cutout"
+   "choice": "cutout",
+   "splits": [],
+   "trim": 3
   },
   "B021-P021": {
    "choice": "cutout"
@@ -480,10 +517,14 @@
    "choice": "cutout"
   },
   "B023-P012": {
-   "choice": "cutout"
+   "choice": "cutout",
+   "splits": [],
+   "trim": 3
   },
   "B023-P013": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B025-P001": {
    "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
@@ -510,7 +551,9 @@
    "choice": "cutout"
   },
   "B027-P002": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B027-P003": {
    "choice": "custom",
@@ -525,10 +568,14 @@
    "choice": "person"
   },
   "B027-P005": {
-   "choice": "cutout"
+   "choice": "cutout",
+   "splits": [],
+   "trim": 3
   },
   "B027-P006": {
-   "choice": "cutout"
+   "choice": "cutout",
+   "splits": [],
+   "trim": 3
   },
   "B027-P007": {
    "choice": "cutout"
@@ -537,19 +584,27 @@
    "choice": "cutout"
   },
   "B028-P001": {
-   "choice": "cutout"
+   "choice": "cutout",
+   "splits": [],
+   "trim": 3
   },
   "B028-P002": {
-   "choice": "cutout"
+   "choice": "cutout",
+   "splits": [],
+   "trim": 3
   },
   "B028-P003": {
    "choice": "cutout"
   },
   "B028-P007": {
-   "choice": "cutout"
+   "choice": "cutout",
+   "splits": [],
+   "trim": 3
   },
   "B028-P008": {
-   "choice": "cutout"
+   "choice": "cutout",
+   "splits": [],
+   "trim": 3
   },
   "B028-P012": {
    "choice": "cutout"
@@ -585,7 +640,9 @@
    ]
   },
   "B030-P009": {
-   "choice": "person"
+   "choice": "person",
+   "splits": [],
+   "trim": 3
   },
   "B031-P002": {
    "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
@@ -597,10 +654,14 @@
    "hidden": true
   },
   "B031-P005": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
+   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again.",
+   "splits": [],
+   "trim": 3
   },
   "B031-P007": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
+   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again.",
+   "splits": [],
+   "trim": 3
   },
   "B031-P008": {
    "choice": "cutout"
@@ -615,7 +676,9 @@
    "choice": "cutout"
   },
   "B032-P004": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B033-P004": {
    "choice": "cutout"
@@ -630,7 +693,9 @@
    ]
   },
   "B035-P001": {
-   "choice": "cutout"
+   "choice": "cutout",
+   "splits": [],
+   "trim": 3
   },
   "B035-P003": {
    "hidden": true
@@ -651,7 +716,9 @@
    "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
   },
   "B037-P004": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
+   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again.",
+   "splits": [],
+   "trim": 3
   },
   "B037-P007": {
    "review": "re-cut 24 Sept \u2014 you hid it for: panels not split; now cut from its own panel of the page. Decide again."
@@ -678,7 +745,9 @@
    ]
   },
   "B039-P007": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B040-P001": {
    "choice": "cutout"
@@ -687,16 +756,22 @@
    "hidden": true
   },
   "B040-P003": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
+   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again.",
+   "splits": [],
+   "trim": 3
   },
   "B040-P006": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B041-P001": {
    "choice": "cutout"
   },
   "B041-P002": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B041-P004": {
    "hidden": true
@@ -711,7 +786,9 @@
    "hidden": true
   },
   "B041-P009": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B042-P001": {
    "choice": "cutout"
@@ -726,7 +803,9 @@
    "choice": "cutout"
   },
   "B042-P009": {
-   "choice": "cutout"
+   "choice": "cutout",
+   "splits": [],
+   "trim": 3
   },
   "B042-P010": {
    "hidden": true
@@ -735,7 +814,9 @@
    "choice": "cutout"
   },
   "B042-P013": {
-   "choice": "cutout"
+   "choice": "cutout",
+   "splits": [],
+   "trim": 3
   },
   "B042-P015": {
    "hidden": true
@@ -753,10 +834,14 @@
    "choice": "cutout"
   },
   "B042-P021": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B042-P022": {
-   "choice": "cutout"
+   "choice": "cutout",
+   "splits": [],
+   "trim": 3
   },
   "B042-P023": {
    "hidden": true,
@@ -802,7 +887,9 @@
    "hidden": true
   },
   "B042-P041": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B042-P042": {
    "hidden": true
@@ -829,7 +916,9 @@
    "hidden": true
   },
   "B044-P008": {
-   "choice": "item"
+   "choice": "item",
+   "splits": [],
+   "trim": 3
   },
   "B044-P009": {
    "hidden": true
@@ -844,7 +933,9 @@
    "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
   },
   "B045-P003": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
+   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again.",
+   "splits": [],
+   "trim": 3
   },
   "B045-P004": {
    "hidden": true
@@ -859,7 +950,9 @@
    "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
   },
   "B048-P001": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
+   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again.",
+   "splits": [],
+   "trim": 3
   },
   "B048-P002": {
    "choice": "item"
@@ -887,7 +980,9 @@
    "image": 1
   },
   "B050-P005": {
-   "choice": "cutout"
+   "review": "re-cut 25 Sept: the crop cut the piece off at bottom; the new cut-out takes in what the old crop left out, and changed more than its edges. Decide again.",
+   "splits": [],
+   "trim": 3
   },
   "B050-P006": {
    "choice": "item"
@@ -940,19 +1035,25 @@
    "hidden": true
   },
   "B051-P004": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
+   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again.",
+   "splits": [],
+   "trim": 3
   },
   "B052-P001": {
    "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
   },
   "B052-P002": {
-   "choice": "cutout"
+   "choice": "cutout",
+   "splits": [],
+   "trim": 3
   },
   "B052-P003": {
    "review": "re-cut 24 Sept \u2014 you hid it for: cut off at the edge of the picture; now cut again from the full screenshot, whole. Decide again."
   },
   "B052-P004": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B052-P006": {
    "choice": "custom",
@@ -978,7 +1079,9 @@
    ]
   },
   "B053-P001": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B053-P003": {
    "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
@@ -987,7 +1090,9 @@
    "hidden": true
   },
   "B053-P004": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B053-P005": {
    "hidden": true
@@ -1051,7 +1156,9 @@
    "hidden": true
   },
   "B055-P008": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
+   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again.",
+   "splits": [],
+   "trim": 3
   },
   "B055-P009": {
    "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
@@ -1069,10 +1176,14 @@
    "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
   },
   "B056-P001": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
+   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again.",
+   "splits": [],
+   "trim": 3
   },
   "B056-P002": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B056-P003": {
    "choice": "custom",
@@ -1135,7 +1246,9 @@
    "choice": "cutout"
   },
   "B068-P003": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B068-P005": {
    "choice": "cutout"
@@ -1195,10 +1308,14 @@
    "choice": "cutout"
   },
   "B068-P026": {
-   "choice": "cutout"
+   "review": "re-cut 25 Sept: the picture it came from was widened to the whole piece; the new cut-out takes in what the old crop left out, and changed more than its edges. Decide again.",
+   "splits": [],
+   "trim": 3
   },
   "B068-P027": {
-   "choice": "cutout"
+   "choice": "cutout",
+   "splits": [],
+   "trim": 3
   },
   "B068-P035": {
    "choice": "cutout"
@@ -1216,7 +1333,9 @@
    "choice": "cutout"
   },
   "B068-P055": {
-   "choice": "cutout"
+   "choice": "cutout",
+   "splits": [],
+   "trim": 3
   },
   "B068-P058": {
    "choice": "cutout"
@@ -1249,7 +1368,9 @@
    "choice": "cutout"
   },
   "B068-P077": {
-   "choice": "cutout"
+   "choice": "cutout",
+   "splits": [],
+   "trim": 3
   },
   "B068-P082": {
    "choice": "cutout"
@@ -1301,16 +1422,22 @@
    "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
   },
   "B075-P001": {
-   "choice": "cutout"
+   "choice": "cutout",
+   "splits": [],
+   "trim": 3
   },
   "B075-P002": {
    "choice": "cutout"
   },
   "B075-P002-V2": {
-   "choice": "cutout"
+   "review": "re-cut 25 Sept: the cut-out was B075-P002's, not this row's own picture; the new cut-out takes in what the old crop left out, and changed more than its edges. Decide again.",
+   "splits": [],
+   "trim": 3
   },
   "B075-P002-V3": {
-   "choice": "cutout"
+   "choice": "cutout",
+   "splits": [],
+   "trim": 3
   },
   "B075-P002-V4": {
    "choice": "cutout"
@@ -1319,22 +1446,34 @@
    "hidden": true
   },
   "B075-P006": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B075-P007": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B075-P007-V2": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B076-P001": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B076-P005": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
+   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again.",
+   "splits": [],
+   "trim": 3
   },
   "B076-P007": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B077-P002": {
    "choice": "cutout"
@@ -1349,7 +1488,9 @@
    "review": "re-cut 24 Sept \u2014 you hid it for: the cut lost the garment; now cut again from the full screenshot. Decide again."
   },
   "B077-P007": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: row mixed different products; now the row is split; cut from its own picture. Decide again."
+   "review": "re-cut 24 Sept \u2014 you hid it for: row mixed different products; now the row is split; cut from its own picture. Decide again.",
+   "splits": [],
+   "trim": 3
   },
   "B077-P008": {
    "review": "re-cut 24 Sept \u2014 you hid it for: background left inside the garment; now the backdrop between the legs removed. Decide again."
@@ -1386,9 +1527,9 @@
    "base": "asset"
   },
   "B078-P014": {
-   "choice": "whole",
-   "image": 1,
-   "base": "whole"
+   "review": "re-cut 25 Sept: the picture it came from was widened to the whole piece; the new cut-out takes in what the old crop left out, and changed more than its edges. Decide again.",
+   "splits": [],
+   "trim": 3
   },
   "B079-P001": {
    "choice": "cutout"
@@ -1452,22 +1593,32 @@
    "hidden": true
   },
   "B088-P009": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B088-P009-V2": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B089-P001": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B089-P001-V2": {
    "choice": "cutout"
   },
   "B089-P002": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B089-P002-V3": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B089-P003": {
    "choice": "whole",
@@ -1483,22 +1634,34 @@
    "choice": "item"
   },
   "B090-P006": {
-   "choice": "cutout"
+   "choice": "cutout",
+   "splits": [],
+   "trim": 3
   },
   "B090-P007": {
-   "choice": "cutout"
+   "choice": "cutout",
+   "splits": [],
+   "trim": 3
   },
   "B090-P009": {
-   "choice": "cutout"
+   "choice": "cutout",
+   "splits": [],
+   "trim": 3
   },
   "B090-P009-V2": {
-   "choice": "cutout"
+   "review": "re-cut 25 Sept: the cut-out was B090-P009's, not this row's own picture; the new cut-out takes in what the old crop left out, and changed more than its edges. Decide again.",
+   "splits": [],
+   "trim": 3
   },
   "B090-P010": {
-   "choice": "cutout"
+   "choice": "cutout",
+   "splits": [],
+   "trim": 3
   },
   "B090-P010-V2": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B090-P013-V3": {
    "hidden": true
@@ -1519,7 +1682,7 @@
    "choice": "cutout"
   },
   "B092-P002-V2": {
-   "choice": "cutout"
+   "review": "re-cut 25 Sept: the cut-out was B092-P002's, not this row's own picture; the new cut-out takes in what the old crop left out, and changed more than its edges. Decide again."
   },
   "B092-P004": {
    "choice": "cutout"
@@ -1528,13 +1691,15 @@
    "choice": "cutout"
   },
   "B092-P005-V2": {
-   "choice": "cutout"
+   "review": "re-cut 25 Sept: the cut-out was B092-P005's, not this row's own picture; the new cut-out takes in what the old crop left out, and changed more than its edges. Decide again."
   },
   "B092-P006": {
    "choice": "cutout"
   },
   "B092-P007": {
-   "hidden": true
+   "hidden": true,
+   "splits": [],
+   "trim": 3
   },
   "B092-P008": {
    "choice": "cutout"

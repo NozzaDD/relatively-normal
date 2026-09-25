@@ -584,7 +584,7 @@ export function createReview(api) {
     if (clip.length) {
       const w = document.createElement('div');
       w.className = 'why clip';
-      w.textContent = `Clipped at the edge — the piece runs out of every photo (${clip.join(', ')}); no picture shows it whole.`;
+      w.textContent = `Clipped at the edge — the piece runs out of the screenshot itself (${clip.join(', ')}) in every picture; no screenshot shows it whole.`;
       el.appendChild(w);
     }
     if (isSeveral(p, api.choices)) {

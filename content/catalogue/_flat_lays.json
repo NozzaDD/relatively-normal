@@ -8299,7 +8299,7 @@
   "why": "more than one piece",
   "flat": true,
   "from_cell": "review/B006-P001c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B006-P001-C1": {
   "clean": false,
@@ -8330,11 +8330,11 @@
   "measured_by": "eye_gate"
  },
  "B006-P001-C5": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B006-P001c5-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B016-P004-C0": {
   "clean": true,
@@ -8359,31 +8359,31 @@
  },
  "B019-P006-C0": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B019-P006c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B019-P006-C1": {
-  "clean": false,
-  "why": "held by eye: on a model",
+  "clean": true,
+  "why": "",
   "flat": true,
   "from_cell": "review/B019-P006c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B019-P006-C2": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B019-P006c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B019-P006-C3": {
-  "clean": false,
-  "why": "held by eye: on a model",
+  "clean": true,
+  "why": "",
   "flat": true,
   "from_cell": "review/B019-P006c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B019-P006-C4": {
   "clean": false,
@@ -8401,17 +8401,17 @@
  },
  "B019-P006-I1-C0": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B019-P006-1c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B019-P006-I1-C1": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B019-P006-1c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B019-P006-I1-C2": {
   "clean": false,
@@ -8421,11 +8421,11 @@
   "measured_by": "eye_gate"
  },
  "B019-P006-I1-C3": {
-  "clean": false,
-  "why": "held by eye: on a model",
+  "clean": true,
+  "why": "",
   "flat": true,
   "from_cell": "review/B019-P006-1c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B019-P007-C0": {
   "clean": false,
@@ -8470,32 +8470,32 @@
   "measured_by": "eye_gate"
  },
  "B020-P002-C0": {
-  "clean": false,
-  "why": "held by eye: on a model",
+  "clean": true,
+  "why": "",
   "flat": true,
   "from_cell": "review/B020-P002c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B020-P002-C1": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B020-P002c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B020-P002-C2": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B020-P002c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B020-P002-C3": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B020-P002c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B020-P002-C4": {
   "clean": true,
@@ -8506,10 +8506,10 @@
  },
  "B020-P002-C5": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B020-P002c5-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B020-P002-I1-C0": {
   "clean": false,
@@ -8642,14 +8642,14 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B022-P002c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B022-P002-C1": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B022-P002c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B022-P002-C2": {
   "clean": true,
@@ -8726,7 +8726,7 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B022-P005c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B022-P005-C2": {
   "clean": true,
@@ -8929,7 +8929,7 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B022-P012c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B022-P012-C3": {
   "clean": true,
@@ -8950,7 +8950,7 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B022-P013c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B022-P013-C2": {
   "clean": true,
@@ -8960,11 +8960,11 @@
   "measured_by": "eye_gate"
  },
  "B022-P013-C3": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B022-P013c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B022-P013-C4": {
   "clean": true,
@@ -8985,28 +8985,28 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B022-P013c6-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B022-P013-C7": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B022-P013c7-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B022-P014-C0": {
   "clean": false,
   "why": "more than one piece",
   "flat": true,
   "from_cell": "review/B022-P014c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B022-P014-C1": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B022-P014c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B022-P014-C2": {
   "clean": true,
@@ -9017,31 +9017,31 @@
  },
  "B022-P014-C3": {
   "clean": false,
-  "why": "more than one piece",
+  "why": "more than one piece, someone is wearing it",
   "flat": true,
   "from_cell": "review/B022-P014c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B022-P014-C4": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B022-P014c4-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B022-P014-C5": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B022-P014c5-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B022-P014-C6": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B022-P014c6-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B022-P014-C7": {
   "clean": true,
@@ -9051,11 +9051,11 @@
   "measured_by": "eye_gate"
  },
  "B022-P015-C0": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B022-P015c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B022-P015-C1": {
   "clean": true,
@@ -9065,18 +9065,18 @@
   "measured_by": "eye_gate"
  },
  "B022-P015-C2": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
+  "from_cell": "review/B022-P015c2-cut.webp",
+  "measured_by": "recrop"
+ },
+ "B022-P015-C3": {
   "clean": true,
   "why": "",
   "flat": true,
-  "from_cell": "review/B022-P015c2-cut.webp",
-  "measured_by": "eye_gate"
- },
- "B022-P015-C3": {
-  "clean": false,
-  "why": "more than one piece, text inside it",
-  "flat": true,
   "from_cell": "review/B022-P015c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B022-P015-C4": {
   "clean": true,
@@ -9087,10 +9087,10 @@
  },
  "B022-P015-C5": {
   "clean": false,
-  "why": "more than one piece",
+  "why": "more than one piece, someone is wearing it",
   "flat": true,
   "from_cell": "review/B022-P015c5-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B022-P015-C6": {
   "clean": true,
@@ -9100,11 +9100,11 @@
   "measured_by": "eye_gate"
  },
  "B022-P015-C7": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B022-P015c7-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B022-P016-C0": {
   "clean": true,
@@ -9146,7 +9146,7 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B022-P016c5-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B022-P016-C6": {
   "clean": true,
@@ -9156,11 +9156,11 @@
   "measured_by": "eye_gate"
  },
  "B022-P016-C7": {
-  "clean": false,
-  "why": "more than one piece, text inside it",
+  "clean": true,
+  "why": "",
   "flat": true,
   "from_cell": "review/B022-P016c7-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B022-P017-C0": {
   "clean": true,
@@ -9773,24 +9773,24 @@
  },
  "B023-P008-C0": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B023-P008c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B023-P008-C1": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B023-P008c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B023-P009-C0": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B023-P009c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B023-P009-C1": {
   "clean": false,
@@ -9808,17 +9808,17 @@
  },
  "B023-P009-C3": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B023-P009c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B023-P009-C4": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B023-P009c4-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B023-P009-C5": {
   "clean": false,
@@ -9832,35 +9832,35 @@
   "why": "held by eye: on a model",
   "flat": true,
   "from_cell": "review/B023-P009-1c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B023-P009-I1-C1": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B023-P009-1c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B023-P010-C0": {
   "clean": false,
-  "why": "more than one piece",
+  "why": "touches the frame, someone is wearing it",
   "flat": true,
   "from_cell": "review/B023-P010c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B023-P010-C1": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B023-P010c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B023-P010-C2": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B023-P010c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B023-P010-C3": {
   "clean": true,
@@ -9885,17 +9885,17 @@
  },
  "B023-P011-C0": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B023-P011c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B023-P011-C1": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B023-P011c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B023-P014-C0": {
   "clean": true,
@@ -9906,10 +9906,10 @@
  },
  "B023-P014-C1": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B023-P014c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B023-P014-C2": {
   "clean": false,
@@ -9923,7 +9923,7 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B023-P014c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B023-P014-C4": {
   "clean": false,
@@ -9941,17 +9941,17 @@
  },
  "B023-P015-C0": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "more than one piece, someone is wearing it",
   "flat": true,
   "from_cell": "review/B023-P015c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B023-P015-C1": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B023-P015c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B023-P015-C2": {
   "clean": true,
@@ -9962,17 +9962,17 @@
  },
  "B023-P015-C3": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B023-P015c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B023-P015-C4": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B023-P015c4-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B023-P015-C5": {
   "clean": false,
@@ -9983,31 +9983,31 @@
  },
  "B023-P015-I1-C0": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B023-P015-1c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B023-P015-I1-C1": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B023-P015-1c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B023-P015-I1-C2": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B023-P015-1c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B023-P015-I1-C3": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B023-P015-1c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B023-P015-I1-C4": {
   "clean": true,
@@ -10025,24 +10025,24 @@
  },
  "B023-P016-C0": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B023-P016c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B023-P016-C1": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B023-P016c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B023-P016-C2": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B023-P016c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B023-P016-C3": {
   "clean": true,
@@ -10053,45 +10053,45 @@
  },
  "B023-P017-C0": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "touches the frame, someone is wearing it",
   "flat": true,
   "from_cell": "review/B023-P017c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B023-P017-C1": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B023-P017c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B023-P017-C2": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B023-P017c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B023-P017-C3": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "touches the frame, someone is wearing it",
   "flat": true,
   "from_cell": "review/B023-P017c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B023-P017-C4": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B023-P017c4-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B023-P017-C5": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B023-P017c5-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B024-P001-C0": {
   "clean": true,
@@ -10102,17 +10102,17 @@
  },
  "B024-P001-C1": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B024-P001c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B024-P001-C2": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B024-P001c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B024-P001-C3": {
   "clean": true,
@@ -10123,10 +10123,10 @@
  },
  "B024-P001-C4": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B024-P001c4-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B024-P001-C5": {
   "clean": true,
@@ -10151,24 +10151,24 @@
  },
  "B024-P002-C2": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B024-P002c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B024-P002-C3": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B024-P002c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B024-P002-C4": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B024-P002c4-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B024-P002-C5": {
   "clean": true,
@@ -10179,52 +10179,52 @@
  },
  "B024-P003-C0": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B024-P003c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B024-P003-C1": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B024-P003c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B024-P003-C2": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B024-P003c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B024-P003-C3": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B024-P003c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B024-P003-C4": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B024-P003c4-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B024-P003-C5": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B024-P003c5-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B024-P004-C0": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B024-P004c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B024-P004-C1": {
   "clean": true,
@@ -10263,24 +10263,24 @@
  },
  "B024-P005-C0": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B024-P005c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B024-P005-C1": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B024-P005c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B024-P005-C2": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B024-P005c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B024-P005-C3": {
   "clean": true,
@@ -10291,17 +10291,17 @@
  },
  "B024-P005-C4": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B024-P005c4-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B024-P005-C5": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B024-P005c5-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B024-P005-I1-C0": {
   "clean": true,
@@ -10312,24 +10312,24 @@
  },
  "B024-P005-I1-C1": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B024-P005-1c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B024-P005-I1-C2": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B024-P005-1c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B024-P005-I1-C3": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B024-P005-1c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B024-P005-I1-C4": {
   "clean": true,
@@ -10340,10 +10340,10 @@
  },
  "B024-P005-I1-C5": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B024-P005-1c5-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B024-P006-C0": {
   "clean": true,
@@ -10361,10 +10361,10 @@
  },
  "B024-P006-C2": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B024-P006c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B024-P006-C3": {
   "clean": true,
@@ -10476,14 +10476,14 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B024-P009c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B024-P009-C4": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B024-P009c4-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B024-P009-C5": {
   "clean": true,
@@ -10497,56 +10497,56 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B025-P004c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B025-P004-C1": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B025-P004c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B025-P004-C2": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B025-P004c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B025-P004-C3": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B025-P004c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B025-P004-C4": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B025-P004c4-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B025-P004-C5": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B025-P004c5-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B025-P005-C0": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B025-P005c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B025-P005-C1": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B025-P005c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B025-P005-C2": {
   "clean": true,
@@ -10574,7 +10574,7 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B025-P005c5-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B025-P006-C0": {
   "clean": true,
@@ -10609,7 +10609,7 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B025-P006c4-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B025-P006-C5": {
   "clean": true,
@@ -10679,42 +10679,42 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B025-P007c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B025-P007-C3": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B025-P007c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B025-P007-C4": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B025-P007c4-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B025-P007-C5": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B025-P007c5-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B025-P007-I1-C0": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B025-P007-1c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B025-P007-I1-C1": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B025-P007-1c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B025-P007-I1-C2": {
   "clean": true,
@@ -10749,21 +10749,21 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B025-P007-2c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B025-P007-I2-C1": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B025-P007-2c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B025-P007-I2-C2": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B025-P007-2c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B025-P007-I2-C3": {
   "clean": true,
@@ -10788,45 +10788,45 @@
  },
  "B026-P001-I1-C0": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B026-P001-1c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B026-P001-I1-C1": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B026-P001-1c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B026-P001-I2-C0": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B026-P001-2c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B026-P001-I2-C1": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B026-P001-2c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B026-P002-C0": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B026-P002c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B026-P002-C1": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B026-P002c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B026-P003-C0": {
   "clean": false,
@@ -10837,80 +10837,80 @@
  },
  "B026-P003-C1": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B026-P003c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B026-P004-C0": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B026-P004c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B026-P004-C1": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B026-P004c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B026-P005-C0": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "touches the frame, someone is wearing it",
   "flat": true,
   "from_cell": "review/B026-P005c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B026-P005-C1": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B026-P005c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B026-P006-C0": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B026-P006c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B026-P006-C1": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B026-P006c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B026-P007-C0": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B026-P007c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B026-P007-C1": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B026-P007c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B026-P008-C0": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B026-P008c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B026-P008-C1": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B026-P008c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B026-P011-C0": {
   "clean": false,
@@ -11047,24 +11047,24 @@
  },
  "B028-P010-I3-C1": {
   "clean": false,
-  "why": "more than one piece, too small",
+  "why": "more than one piece, touches the frame, too small",
   "flat": true,
   "from_cell": "review/B028-P010-3c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B028-P011-C0": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B028-P011c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B028-P011-C1": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B028-P011c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B030-P005-C0": {
   "clean": true,
@@ -11096,59 +11096,59 @@
  },
  "B030-P007-C0": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B030-P007c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B030-P007-C1": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B030-P007c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B030-P007-C2": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B030-P007c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B030-P007-C3": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B030-P007c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B030-P007-C4": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B030-P007c4-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B030-P007-C5": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B030-P007c5-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B032-P003-C0": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B032-P003c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B032-P003-C1": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B032-P003c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B033-P002-C0": {
   "clean": true,
@@ -11166,10 +11166,10 @@
  },
  "B033-P002-I1-C0": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B033-P002-1c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B033-P002-I1-C1": {
   "clean": true,
@@ -11180,24 +11180,24 @@
  },
  "B033-P003-C0": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B033-P003c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B033-P003-C1": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B033-P003c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B033-P005-C0": {
   "clean": false,
   "why": "more than one piece",
   "flat": true,
   "from_cell": "review/B033-P005c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B033-P005-C1": {
   "clean": true,
@@ -11208,17 +11208,17 @@
  },
  "B034-P001-C0": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B034-P001c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B034-P001-C1": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B034-P001c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B034-P003-C0": {
   "clean": true,
@@ -11229,10 +11229,10 @@
  },
  "B034-P003-C1": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B034-P003c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B034-P004-C0": {
   "clean": true,
@@ -11243,10 +11243,10 @@
  },
  "B034-P004-C1": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B034-P004c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B036-P001-C0": {
   "clean": true,
@@ -11257,10 +11257,10 @@
  },
  "B036-P001-C1": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B036-P001c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B036-P002-C0": {
   "clean": true,
@@ -11383,66 +11383,66 @@
  },
  "B039-P004-C0": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B039-P004c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B039-P004-C1": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B039-P004c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B039-P004-C2": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "touches the frame, someone is wearing it",
   "flat": true,
   "from_cell": "review/B039-P004c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B039-P004-C3": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B039-P004c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B039-P004-C4": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B039-P004c4-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B039-P004-C5": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "touches the frame, someone is wearing it",
   "flat": true,
   "from_cell": "review/B039-P004c5-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B039-P004-C6": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B039-P004c6-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B039-P004-C7": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B039-P004c7-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B039-P004-C8": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B039-P004c8-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B039-P004-I1-C0": {
   "clean": true,
@@ -11592,11 +11592,11 @@
   "measured_by": "eye_gate"
  },
  "B043-P007-I1-C0": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "more than one piece",
   "flat": true,
   "from_cell": "review/B043-P007-1c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B043-P007-I1-C1": {
   "clean": true,
@@ -11606,11 +11606,11 @@
   "measured_by": "eye_gate"
  },
  "B043-P007-I1-C2": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "more than one piece",
   "flat": true,
   "from_cell": "review/B043-P007-1c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B043-P007-I1-C3": {
   "clean": true,
@@ -11631,7 +11631,7 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B044-P001c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B044-P001-C2": {
   "clean": false,
@@ -11652,7 +11652,7 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B044-P002c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B044-P002-C1": {
   "clean": true,
@@ -11764,7 +11764,7 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B044-P004-1c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B044-P004-I1-C1": {
   "clean": true,
@@ -11781,11 +11781,11 @@
   "measured_by": "eye_gate"
  },
  "B044-P004-I1-C3": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B044-P004-1c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B044-P005-C0": {
   "clean": true,
@@ -11799,21 +11799,21 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B044-P005c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B044-P005-I1-C0": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B044-P005-1c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B044-P005-I1-C1": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B044-P005-1c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B044-P005-I1-C2": {
   "clean": true,
@@ -11827,7 +11827,7 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B044-P005-1c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B044-P005-I2-C0": {
   "clean": true,
@@ -11848,7 +11848,7 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B044-P005-2c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B044-P005-I2-C3": {
   "clean": true,
@@ -11964,10 +11964,10 @@
  },
  "B044-P015-C1": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B044-P015c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B044-P016-C0": {
   "clean": true,
@@ -12006,10 +12006,10 @@
  },
  "B044-P020-C1": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B044-P020c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B044-P020-C2": {
   "clean": false,
@@ -12027,10 +12027,10 @@
  },
  "B044-P020-C4": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "touches the frame, someone is wearing it",
   "flat": true,
   "from_cell": "review/B044-P020c4-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B044-P020-C5": {
   "clean": false,
@@ -12146,10 +12146,10 @@
  },
  "B045-P001-I2-C0": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B045-P001-2c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B045-P001-I2-C1": {
   "clean": true,
@@ -12181,10 +12181,10 @@
  },
  "B045-P001-I2-C5": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "touches the frame, someone is wearing it",
   "flat": true,
   "from_cell": "review/B045-P001-2c5-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B045-P001-I3-C0": {
   "clean": false,
@@ -12373,28 +12373,28 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B046-P010c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B046-P010-C1": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B046-P010c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B046-P010-C2": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B046-P010c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B046-P010-C3": {
   "clean": false,
-  "why": "more than one piece",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B046-P010c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B046-P011-C0": {
   "clean": true,
@@ -12443,70 +12443,70 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B049-P002c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B049-P002-C1": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B049-P002c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B049-P003-C0": {
   "clean": false,
-  "why": "more than one piece",
+  "why": "more than one piece, someone is wearing it",
   "flat": true,
   "from_cell": "review/B049-P003c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B049-P003-C1": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B049-P003c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B049-P003-I1-C0": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B049-P003-1c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B049-P003-I1-C1": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B049-P003-1c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B049-P003-I2-C0": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B049-P003-2c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B049-P003-I2-C1": {
   "clean": false,
   "why": "more than one piece",
   "flat": true,
   "from_cell": "review/B049-P003-2c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B049-P003-I2-C2": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B049-P003-2c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B049-P003-I2-C3": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B049-P003-2c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B050-P001-I1-C0": {
   "clean": true,
@@ -12580,59 +12580,59 @@
  },
  "B052-P007-C0": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B052-P007c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B052-P007-C1": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B052-P007c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B052-P007-C2": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B052-P007c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B052-P007-C3": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B052-P007c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B052-P007-C4": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B052-P007c4-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B052-P007-C5": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B052-P007c5-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B052-P007-C6": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B052-P007c6-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B052-P007-C7": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B052-P007c7-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B053-P002-C0": {
   "clean": false,
@@ -12674,7 +12674,7 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B056-P005c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B056-P006-C0": {
   "clean": true,
@@ -12692,10 +12692,10 @@
  },
  "B057-P004-C0": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B057-P004c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B057-P004-C1": {
   "clean": false,
@@ -12884,7 +12884,7 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B064-P003c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B064-P003-C1": {
   "clean": true,
@@ -12902,31 +12902,31 @@
  },
  "B065-P001-C0": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B065-P001c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B065-P001-C1": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B065-P001c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B065-P004-C0": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B065-P004c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B065-P004-C1": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B065-P004c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B066-P001-C0": {
   "clean": true,
@@ -13356,11 +13356,11 @@
   "measured_by": "eye_gate"
  },
  "B069-P001-C1": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B069-P001c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B069-P001-C2": {
   "clean": true,
@@ -13381,7 +13381,7 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B069-P001c4-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B069-P001-C5": {
   "clean": true,
@@ -13444,14 +13444,14 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B071-P002c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B071-P002-C2": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B071-P002c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B071-P002-C3": {
   "clean": false,
@@ -13465,14 +13465,14 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B071-P002c4-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B071-P002-C5": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B071-P002c5-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B071-P003-C0": {
   "clean": true,
@@ -13486,14 +13486,14 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B071-P003c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B071-P003-C2": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B071-P003c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B071-P003-C3": {
   "clean": true,
@@ -13507,14 +13507,14 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B071-P003c4-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B071-P003-C5": {
   "clean": false,
-  "why": "held by eye: on a model",
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B071-P003c5-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B071-P004-C0": {
   "clean": true,
@@ -13528,7 +13528,7 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B071-P004c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B071-P004-C2": {
   "clean": false,
@@ -13545,11 +13545,11 @@
   "measured_by": "eye_gate"
  },
  "B071-P004-C4": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B071-P004c4-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B071-P004-C5": {
   "clean": true,
@@ -13570,7 +13570,7 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B071-P005c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B071-P005-C2": {
   "clean": true,
@@ -13591,14 +13591,14 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B071-P005c4-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B071-P005-C5": {
-  "clean": false,
-  "why": "held by eye: a shop badge is left in the cut-out",
+  "clean": true,
+  "why": "",
   "flat": true,
   "from_cell": "review/B071-P005c5-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B076-P003-C0": {
   "clean": false,
@@ -13906,126 +13906,126 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B078-P011c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B078-P011-C1": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "touches the frame",
   "flat": true,
   "from_cell": "review/B078-P011c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B078-P011-C2": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B078-P011c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B078-P011-C3": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B078-P011c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B078-P011-C4": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B078-P011c4-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B078-P011-C5": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B078-P011c5-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B078-P012-C0": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B078-P012c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B078-P012-C1": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
   "flat": true,
   "from_cell": "review/B078-P012c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B078-P012-C2": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B078-P012c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B078-P012-C3": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B078-P012c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B078-P012-C4": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "touches the frame",
   "flat": true,
   "from_cell": "review/B078-P012c4-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B078-P012-C5": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B078-P012c5-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B078-P013-C0": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B078-P013c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B078-P013-C1": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "touches the frame, someone is wearing it",
   "flat": true,
   "from_cell": "review/B078-P013c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B078-P013-C2": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B078-P013c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B078-P013-C3": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B078-P013c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B078-P013-C4": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "touches the frame",
   "flat": true,
   "from_cell": "review/B078-P013c4-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B078-P013-C5": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B078-P013c5-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B079-P002-C0": {
   "clean": false,
@@ -14039,42 +14039,42 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B079-P002c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B079-P002-C2": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B079-P002c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B079-P002-C3": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B079-P002c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B079-P002-I1-C0": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B079-P002-1c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B079-P002-I1-C1": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B079-P002-1c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B079-P002-I1-C2": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B079-P002-1c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B079-P002-I1-C3": {
   "clean": false,
@@ -14088,49 +14088,49 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B079-P002-2c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B079-P002-I2-C1": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B079-P002-2c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B079-P002-I2-C2": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B079-P002-2c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B079-P002-I2-C3": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B079-P002-2c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B079-P003-C0": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B079-P003c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B079-P003-C1": {
   "clean": false,
   "why": "more than one piece",
   "flat": true,
   "from_cell": "review/B079-P003c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B079-P003-C2": {
   "clean": false,
-  "why": "more than one piece",
+  "why": "more than one piece, someone is wearing it",
   "flat": true,
   "from_cell": "review/B079-P003c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B079-P003-C3": {
   "clean": false,
@@ -14141,45 +14141,45 @@
  },
  "B079-P004-C0": {
   "clean": false,
-  "why": "more than one piece",
+  "why": "more than one piece, someone is wearing it",
   "flat": true,
   "from_cell": "review/B079-P004c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B079-P004-C1": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B079-P004c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B079-P004-C2": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B079-P004c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B079-P004-C3": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B079-P004c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B080-P001-C0": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B080-P001c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B080-P001-C1": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B080-P001c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B080-P001-C2": {
   "clean": false,
@@ -14196,32 +14196,32 @@
   "measured_by": "eye_gate"
  },
  "B080-P001-I1-C0": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B080-P001-1c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B080-P001-I1-C1": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B080-P001-1c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B080-P001-I1-C2": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B080-P001-1c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B080-P001-I1-C3": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B080-P001-1c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B080-P001-I2-C0": {
   "clean": false,
@@ -14452,14 +14452,14 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B080-P006c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B080-P006-C1": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B080-P006c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B080-P006-C2": {
   "clean": true,
@@ -14473,21 +14473,21 @@
   "why": "more than one piece",
   "flat": true,
   "from_cell": "review/B080-P006c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B080-P006-C4": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "more than one piece",
   "flat": true,
   "from_cell": "review/B080-P006c4-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B080-P006-C5": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B080-P006c5-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B080-P006-C6": {
   "clean": true,
@@ -14501,7 +14501,7 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B080-P006c7-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B080-P006-C8": {
   "clean": true,
@@ -14536,28 +14536,28 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B080-P007c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B080-P007-C1": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B080-P007c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B080-P007-C2": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B080-P007c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B080-P007-C3": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B080-P007c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B080-P007-C4": {
   "clean": true,
@@ -14634,7 +14634,7 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B080-P008c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B080-P008-C3": {
   "clean": true,
@@ -14837,84 +14837,84 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B080-P011c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B080-P011-C1": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B080-P011c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B080-P011-C2": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B080-P011c2-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B080-P011-C3": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B080-P011c3-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B080-P011-C4": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B080-P011c4-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B080-P011-C5": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B080-P011c5-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B080-P011-C6": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B080-P011c6-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B080-P011-C7": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B080-P011c7-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B080-P011-C8": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B080-P011c8-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B080-P011-C9": {
-  "clean": true,
-  "why": "",
-  "flat": true,
-  "from_cell": "review/B080-P011c9-cut.webp",
-  "measured_by": "eye_gate"
- },
- "B080-P011-C10": {
   "clean": false,
   "why": "more than one piece",
   "flat": true,
+  "from_cell": "review/B080-P011c9-cut.webp",
+  "measured_by": "recrop"
+ },
+ "B080-P011-C10": {
+  "clean": false,
+  "why": "someone is wearing it",
+  "flat": true,
   "from_cell": "review/B080-P011c10-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B080-P011-C11": {
   "clean": false,
-  "why": "more than one piece, a sliver",
+  "why": "more than one piece, someone is wearing it",
   "flat": true,
   "from_cell": "review/B080-P011c11-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B080-P012-C0": {
   "clean": true,
@@ -14959,11 +14959,11 @@
   "measured_by": "eye_gate"
  },
  "B080-P012-C6": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B080-P012c6-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B080-P012-C7": {
   "clean": true,
@@ -15082,7 +15082,7 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B081-P001c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B081-P002-C0": {
   "clean": true,
@@ -15096,7 +15096,7 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B081-P002c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B081-P002-I1-C0": {
   "clean": true,
@@ -15110,7 +15110,7 @@
   "why": "",
   "flat": true,
   "from_cell": "review/B081-P002-1c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B082-P001-C0": {
   "clean": false,
@@ -15124,7 +15124,7 @@
   "why": "more than one piece",
   "flat": true,
   "from_cell": "review/B082-P001c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B082-P001-C2": {
   "clean": true,
@@ -15288,18 +15288,18 @@
   "measured_by": "eye_gate"
  },
  "B090-P008-I1-C0": {
-  "clean": true,
-  "why": "",
+  "clean": false,
+  "why": "someone is wearing it",
   "flat": true,
   "from_cell": "review/B090-P008-1c0-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B090-P008-I1-C1": {
   "clean": true,
   "why": "",
   "flat": true,
   "from_cell": "review/B090-P008-1c1-cut.webp",
-  "measured_by": "eye_gate"
+  "measured_by": "recrop"
  },
  "B090-P008-I1-C2": {
   "clean": true,

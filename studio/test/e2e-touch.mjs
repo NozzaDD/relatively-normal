@@ -556,7 +556,9 @@ const widen = await page.evaluate(async () => {
     if (p.clean || p.parent_id || !(p.images || []).length) continue;
     const v = productVersions(p);
     const i = v.findIndex((x) => x.base === 'photo' && x.kind !== 'full'
-      && (p.images[x.image] || {})[x.kind] && p.images[x.image][x.kind][3] < 0.9);
+      && (p.images[x.image] || {})[x.kind] && p.images[x.image][x.kind][3] < 0.9
+      // room below the box to pull its handle into
+      && p.images[x.image][x.kind][1] + p.images[x.image][x.kind][3] < 0.75);
     if (i >= 0) return { pid: p.product_id, idx: i };
   }
   return null;
@@ -1306,22 +1308,32 @@ console.log('\n25 Sept: clipped at the edge');
 {
   await page.click('.tab[data-view="review"]');
   await page.waitForTimeout(300);
-  // Fairfax & Favor B090-P010-V4: the top handles run out of the top of both photos
+  // Fairfax & Favor B090-P010-V4: the handle and strap are whole in both
+  // screenshots — the old crop cut them, not the photo — so it is NOT clipped
   await revealCard('B090-P010-V4');
   await page.waitForTimeout(200);
-  const clip = await page.evaluate(() => document.querySelector('#reviewCards .rcard[data-pid="B090-P010-V4"] .why.clip')?.textContent || '');
-  ok('a bag clipped in every photo says "clipped at the edge" in Review', /Clipped at the edge/.test(clip) && /top/.test(clip), clip);
+  const notClip = await page.evaluate(() => ({
+    card: !!document.querySelector('#reviewCards .rcard[data-pid="B090-P010-V4"]'),
+    why: document.querySelector('#reviewCards .rcard[data-pid="B090-P010-V4"] .why.clip')?.textContent || '',
+    clipped: window.__studio.productsById['B090-P010-V4'].clipped }));
+  ok('B090-P010-V4, whole in its screenshots, is not called clipped', notClip.card && !notClip.why && !notClip.clipped,
+    JSON.stringify(notClip));
+  // B077-P005: the pullover's top runs out of the top of the screenshot itself
+  await revealCard('B077-P005');
+  await page.waitForTimeout(200);
+  const clip = await page.evaluate(() => document.querySelector('#reviewCards .rcard[data-pid="B077-P005"] .why.clip')?.textContent || '');
+  ok('a piece clipped at the screenshot\'s own edge says "clipped at the edge" in Review', /Clipped at the edge/.test(clip)
+    && /top/.test(clip), clip);
   const order = await page.evaluate(async () => {
     const { productVersions, productPictures, firstPicture } = await import('./js/data.js');
-    // B076-P007: its first photo runs the piece out of the top, its second does not
-    const p = window.__studio.productsById['B076-P007'];
-    const clean = window.__studio.products.find((x) => !x.clipped && (x.images || []).length === 1);
+    // two pictures, the first running the piece out of the screenshot's top
+    const p = { product_id: 'T', asset: 'x', asset_type: 'cutout_flat',
+      images: [{ type: 'whole page', clipped: ['top'], item: [0, 0, 1, 1] }, { type: 'whole page', item: [0, 0, 1, 1] }] };
     return { first: firstPicture(p), pics: productPictures(p).map((x) => x.i),
-      vers: productVersions(p).filter((v) => v.kind === 'full').map((v) => v.image),
-      clipped: !!p.clipped, cleanMarked: !!(clean.images[0].clipped) };
+      vers: productVersions(p).filter((v) => v.kind === 'full').map((v) => v.image) };
   });
-  ok('the photo clear of the frame is offered first', order.first === 1 && order.pics[0] === 1 && order.vers[0] === 1
-    && !order.clipped, JSON.stringify(order));
+  ok('the picture clear of the edge is offered first', order.first === 1 && order.pics[0] === 1 && order.vers[0] === 1,
+    JSON.stringify(order));
   await showWaiting();
   await page.click('.tab[data-view="grid"]');
 }

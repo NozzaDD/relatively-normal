@@ -135,10 +135,17 @@ def build(product, shot_type):
     with Image.open(src) as im0:
         page = im0.convert('RGB')
         page = page.crop(imglib.trim_chrome(page))
+    ch = imglib.trim_chrome(Image.open(src))
     box = imglib.product_box(page)
     found = box is not None
     if not found:
         box = photo_region(page)
+    if found and shot_type != 'listing grid':
+        # the crop rule (crop_fix.widen): the whole piece plus a margin — the
+        # content box loses thin handles and straps at 200 px wide
+        import crop_fix
+        w, _ = crop_fix.widen(product['images'][0], [box[0] + ch[0], box[1] + ch[1], box[2] + ch[0], box[3] + ch[1]])
+        box = (max(0, w[0] - ch[0]), max(0, w[1] - ch[1]), min(page.width, w[2] - ch[0]), min(page.height, w[3] - ch[1]))
     crop = page.crop(box)
     want_cut = shot_type in ('flat packshot', 'ghost mannequin', 'on model', 'detail')
     if want_cut and min(crop.size) >= 100:

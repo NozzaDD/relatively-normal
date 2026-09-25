@@ -279,11 +279,21 @@ shelf, out of Removed. **Restore** still sends one back to Review, undecided.
 
 ## Clipped at the edge (25 Sept)
 
-`content/tools/edge_clip.py` measures, for every picture, whether the piece
-runs out of the frame. A picture where it does is offered after one where it
-does not — on the Review card, in the Adjust box filmstrip and in **Other
-picture**. A product clipped in every picture says *Clipped at the edge* on its
-Review card (and *clipped at the edge* on a grid cell): no photo shows it whole.
+`content/tools/edge_clip.py` measures every picture **on its original
+screenshot**: a piece is clipped only where it touches the screenshot's own
+edge. (The first version, 25 Sept morning, measured the picture itself, which
+was already a crop, and called bags clipped whose handles the crop had cut.)
+A picture where the piece is clipped is offered after one where it is not — on
+the Review card, in the Adjust box filmstrip and in **Other picture**. A product
+clipped in every picture says *Clipped at the edge* on its Review card (and
+*clipped at the edge* on a grid cell): no screenshot shows it whole.
+
+**A crop holds the whole piece plus a margin** (`crop_fix.widen`). The review
+copy, a grid cell and a new product's first cut-out are widened until the
+piece clears every edge that is not the screenshot's own, or its photograph's
+where the page stacks several. `recrop.py` re-cut everything the old crops
+had lost; `content/catalogue/_recrop.json` says what, and what became of each
+decision.
 
 ## Touch
 
