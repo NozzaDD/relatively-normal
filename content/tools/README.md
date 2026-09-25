@@ -466,3 +466,42 @@ Superseded the same day by the section above: measured on the screenshots, 7
 products are clipped at the screenshot's own edge (B012-P002, B061-P004,
 B076-P001, B076-P006, B077-P003, B077-P005, B077-P010), each checked by eye, and
 no bag.
+
+## Ingest, 25 September 2026 — batches B100–B109
+
+85 new product screenshots became 63 products in ten batches, and
+`name_split.py` split 7 of the multi-screenshot rows by colour into 9 more:
+**72 new products** — top 48, bottom 19, layer 3, bag 1, accessory 1. Every one
+was sent to Review (`review-sends.json`, version `2026-09-25-new`); none is on
+the shelf until decided. Viewing rows: `_viewing_rows/rows_n13.txt`.
+
+**Identical files are one, by content.** `cluster_products.py --append` no
+longer skips a file for the `-2` in its name: it hashes each new file and drops
+it when it is a byte-for-byte copy of an image already filed anywhere in
+`content/swipe/`, or of another new file. 80 were skipped that way — the 79
+`IMG_1271-2.png` … `IMG_1360-2.png` exports and IMG_1337 (a fashion-show
+picture). Nine older files in `products/` that the swipe index types as
+`format` or `visual` were, as before, not taken for products.
+
+Things this ingest ran into, so the next one does not:
+
+- An ingest's incremental tools (`crop_figures`, `asset_quality`,
+  `flat_lays`, `panels`) also processed nine existing rows whose fingerprints
+  were not in `_processed.json`, and rewrote their cut-outs. Those were put
+  back from the commit before the ingest; `_processed.json` now stamps them, so
+  it will not happen again. **Check `git status content/catalogue/assets` for
+  anything outside the new batches before committing an ingest.**
+- `build_products.py` freezes the colour fields of rows it has written: run it
+  from the committed `products.csv` (`git checkout` it first) once colours
+  exist, or new rows keep empty colours (55 did, until rebuilt).
+- `split_mixed.seed` found no picture to cut for the ten new colourway rows
+  (their review copies did not exist yet), so they had no cut-out: run
+  `make_assets.py SHOTMAP --new` and the per-product tools again after
+  `name_split.py`.
+- B109-P007 (Coccinelle): the first cut-out was the browser's tab bar and its
+  review copy the model photo above the bag; both redone by eye from the
+  flat-lay photograph.
+- `name_split.py` split B104-P001 (ME+EM Leg Elongator Jean) on 8.0 L* of
+  light between two views of one page; undone by hand and put in `KEEP`.
+- `colourway_pictures.py` re-assigned pictures of 19 existing rows (B059-P006-V2
+  lost its own); their entries in `_picture_owners.json` were put back.

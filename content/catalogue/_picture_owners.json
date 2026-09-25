@@ -2251,6 +2251,108 @@
     "full/B092-P008-V3.jpg"
    ],
    "primary": "full/B092-P008-V3.jpg"
+  },
+  "B107-P025": {
+   "pictures": [
+    "full/B107-P025.jpg"
+   ],
+   "primary": "full/B107-P025.jpg"
+  },
+  "B107-P025-V2": {
+   "pictures": [
+    "full/B107-P025-V2.jpg"
+   ],
+   "primary": "full/B107-P025-V2.jpg"
+  },
+  "B107-P031": {
+   "pictures": [
+    "full/B107-P031.jpg"
+   ],
+   "primary": "full/B107-P031.jpg"
+  },
+  "B107-P031-V2": {
+   "pictures": [
+    "full/B107-P031-V2.jpg"
+   ],
+   "primary": "full/B107-P031-V2.jpg"
+  },
+  "B107-P031-V3": {
+   "pictures": [
+    "full/B107-P031-V3.jpg",
+    "full/B107-P031-V3-1.jpg"
+   ],
+   "primary": "full/B107-P031-V3.jpg"
+  },
+  "B107-P032": {
+   "pictures": [
+    "full/B107-P032.jpg"
+   ],
+   "primary": "full/B107-P032.jpg"
+  },
+  "B107-P032-V2": {
+   "pictures": [
+    "full/B107-P032-V2.jpg"
+   ],
+   "primary": "full/B107-P032-V2.jpg"
+  },
+  "B107-P032-V3": {
+   "pictures": [
+    "full/B107-P032-V3.jpg"
+   ],
+   "primary": "full/B107-P032-V3.jpg"
+  },
+  "B107-P033": {
+   "pictures": [
+    "full/B107-P033.jpg",
+    "full/B107-P033-1.jpg"
+   ],
+   "primary": "full/B107-P033.jpg"
+  },
+  "B107-P033-V2": {
+   "pictures": [
+    "full/B107-P033-V2.jpg"
+   ],
+   "primary": "full/B107-P033-V2.jpg"
+  },
+  "B107-P035": {
+   "pictures": [
+    "full/B107-P035.jpg"
+   ],
+   "primary": "full/B107-P035.jpg"
+  },
+  "B107-P035-V2": {
+   "pictures": [
+    "full/B107-P035-V2.jpg"
+   ],
+   "primary": "full/B107-P035-V2.jpg"
+  },
+  "B107-P037": {
+   "pictures": [
+    "full/B107-P037.jpg"
+   ],
+   "primary": "full/B107-P037.jpg"
+  },
+  "B107-P037-V2": {
+   "pictures": [
+    "full/B107-P037-V2p0.jpg",
+    "full/B107-P037-V2p1.jpg",
+    "full/B107-P037-V2p2.jpg",
+    "full/B107-P037-V2p3.jpg"
+   ],
+   "primary": null
+  },
+  "B107-P039": {
+   "pictures": [
+    "full/B107-P039.jpg",
+    "full/B107-P039-1.jpg"
+   ],
+   "primary": "full/B107-P039.jpg"
+  },
+  "B107-P039-V2": {
+   "pictures": [
+    "full/B107-P039-V2.jpg"
+   ],
+   "primary": "full/B107-P039-V2.jpg"
   }
  },
  "cells": {
@@ -26003,6 +26105,20 @@
    "stays_with": "B070-P014",
    "nearest": "B070-P014-cw02",
    "de": 18.4
+  },
+  {
+   "family": "B107-P033",
+   "picture": "full/B107-P033-1.jpg",
+   "stays_with": "B107-P033",
+   "nearest": "B107-P033-V2",
+   "de": 20.0
+  },
+  {
+   "family": "B107-P039",
+   "picture": "full/B107-P039-1.jpg",
+   "stays_with": "B107-P039",
+   "nearest": "B107-P039",
+   "de": 14.7
   }
  ],
  "asset_fix": [
@@ -26433,6 +26549,61 @@
     "B062-P012-V3",
     "B090-P001-V2"
    ]
+  },
+  {
+   "report": {
+    "pictures moved to the row of their colour": 28,
+    "rows whose pictures changed": 48,
+    "cells given their own picture": 1071
+   },
+   "unassigned": 29,
+   "inherited": 0,
+   "replaced": [],
+   "to_review": []
+  },
+  {
+   "report": {
+    "pictures moved to the row of their colour": 28,
+    "rows whose pictures changed": 48,
+    "cells given their own picture": 1071
+   },
+   "unassigned": 29,
+   "inherited": 0,
+   "replaced": [],
+   "to_review": []
+  },
+  {
+   "report": {
+    "pictures moved to the row of their colour": 28,
+    "rows whose pictures changed": 48,
+    "cells given their own picture": 1071
+   },
+   "unassigned": 29,
+   "inherited": 0,
+   "replaced": [],
+   "to_review": []
+  },
+  {
+   "report": {
+    "pictures moved to the row of their colour": 28,
+    "rows whose pictures changed": 48,
+    "cells given their own picture": 1071
+   },
+   "unassigned": 29,
+   "inherited": 0,
+   "replaced": [],
+   "to_review": []
+  },
+  {
+   "report": {
+    "pictures moved to the row of their colour": 28,
+    "rows whose pictures changed": 48,
+    "cells given their own picture": 1071
+   },
+   "unassigned": 29,
+   "inherited": 0,
+   "replaced": [],
+   "to_review": []
   }
  ]
 }
