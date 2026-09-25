@@ -401,3 +401,13 @@ Order for a re-cut: `recut_hidden.py --cut` → `--sheets` and a person reading 
 | `tidy_exports.py` | merges every `content/catalogue/asset-choices*.json` (the copies the iPad's Files app makes when the name is taken) into `asset-choices.json`, keyed by product ID, the newest export winning — by the `exported` time inside the file, not the name; deletes the copies and the share sheet's `text.txt`, `text-2.txt` … in `content/catalogue/` and `content/outfits/`. A broken or unreadable export stops it before anything is changed. `build_products.py` runs it first; so does the *Apply shelf choices* workflow, whose path filter now watches `asset-choices*.json`. `test_tidy_exports.py` tests it. |
 
 The desk now writes the full export time (`2026-09-24T18:30:00.000Z`), not the day: two exports of one day could not be told apart. Older date-only exports of the same day count the copy as newer than `asset-choices.json`, since a copy only exists because a new export was saved beside it.
+
+## Added 25 September 2026 — clipped at the edge
+
+| Script | What it does |
+|---|---|
+| `edge_clip.py` | for every picture of every product (fabric close-ups, page panels and listing-grid pages aside), and for the shelf cut-out: does the piece run out of the frame? Finds each picture's whole cut-out back in its photo by its own pixels and reads the photo's border; the shelf cut-out is found the same way, which also names the picture it was cut from. Writes `_edge_clips.json`: the sides each picture touches, `clipped` when every picture does, `prefer` when another picture is clear and the shelf cut-out's is not. A picture on a model is measured but never counts (the head or a foot reaches the frame, not the piece); `ON_MODEL_BY_EYE` and `NO_PIECE_BY_EYE` hold the by-eye exceptions. `--apply` makes the clear picture's whole cut-out the shelf cut-out, for flat cut-outs only, keeping the old one in `assets-before-edge/`. `build_studio.py` reads it: `clipped` on each picture and on the product, and a clear picture first. |
+
+Order: `build_studio.py` → `edge_clip.py` → `build_studio.py` (it reads the built `studio/data/products.json` and the images under `studio/`). About four minutes for the catalogue. Needs `numpy`.
+
+What it found on 25 September: 176 of 1518 measured products are clipped in every picture, 20 of them bags; no flat cut-out had a clearer picture to switch to, and two on-model rows (B007-P003, B076-P007) now offer their clear photo first.

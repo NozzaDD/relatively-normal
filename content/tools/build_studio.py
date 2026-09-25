@@ -143,16 +143,37 @@ def primary_picture(images):
     """The picture the shelf shows: flat lay first, the person wearing it next.
 
     Never a fabric close-up or a panel of page type. Those are kept, because
-    they are part of the page, but the shelf is showing the garment.
+    they are part of the page, but the shelf is showing the garment. Within a
+    type, a picture where the piece is clear of the frame comes before one
+    that cuts it off at the edge (edge_clip.py).
     """
     for want in ('flat lay', 'on-model', 'whole page'):
-        for i, e in enumerate(images):
-            if e.get('type') == want:
-                return i
+        for clear in (True, False):
+            for i, e in enumerate(images):
+                if e.get('type') == want and bool(e.get('clipped')) != clear:
+                    return i
     for i, e in enumerate(images):
         if e.get('type') not in DETAIL_TYPES:
             return i
     return 0
+
+
+def load_clips():
+    """edge_clip.py's measurements: which pictures cut the piece off at the edge."""
+    return load_json_safe(CAT + '/_edge_clips.json')
+
+
+def with_clips(images, clip):
+    """Each picture with the sides of the frame its piece runs out of, where measured."""
+    sides = (clip or {}).get('pictures') or {}
+    on_model = set((clip or {}).get('on_model') or [])
+    out = []
+    for i, e in enumerate(images):
+        s = sides.get(str(i))
+        if s and i not in on_model:
+            e = dict(e, clipped=s)
+        out.append(e)
+    return out
 
 
 def load_flats():
@@ -222,6 +243,7 @@ def build_products(rows, review):
     kept = not_duplicates()
     removed = removed_by_her()
     flats = load_flats()
+    clips = load_clips()
     cuts = measured_cuts()
     by_id0 = {r['product_id']: r for r in rows}
 
@@ -273,6 +295,8 @@ def build_products(rows, review):
             paths = [e['path'] for e in images]
             idx = paths.index(was) if was in paths else 0
             first = paths.index(own['primary']) if own.get('primary') in paths else None
+        clip = clips.get(r['product_id']) or {}
+        images = with_clips(images, clip)
         entry = images[idx] if idx < len(images) else (images[0] if images else None)
         out.append(dict(
             product_id=r['product_id'],
@@ -323,6 +347,9 @@ def build_products(rows, review):
             clean=clean,
             # why the shelf gate kept it in Review, as the gate wrote it
             hold='' if clean else ((flats.get(src) or {}).get('why') or ''),
+            # every picture of it runs the piece out of the frame (edge_clip.py):
+            # no photo shows it whole, which Review says as "clipped at the edge"
+            clipped=bool(clip.get('clipped')),
             full=dict(path=entry['path'], w=entry['w'], h=entry['h']) if (has_full and entry) else None,
             boxes=dict(item=rv['item'], person=rv['person']) if (has_full and not cell) else None,
             images=images or None,

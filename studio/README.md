@@ -264,6 +264,27 @@ folders, so nothing already saved there is lost, and it names each board it
 finds in the wrong one so you can move it. `content/outfits/README.md` has the
 rest.
 
+## A tap in Review is a decision (25 Sept)
+
+Tapping a version on a Review card chooses it: the version is marked, the
+piece goes to the shelf, and the card leaves the list. **Decided** lists the
+decided cards, each with its version marked; a tap there chooses again. A
+single cell on a grid card works the same way, including a cell the
+several-garments check flagged — a tap on that one cell is her decision;
+**Accept all cells** still leaves those out.
+
+Removed cards are listed only under **Removed**, never in the main list.
+Tapping a version on a removed card restores it with that version: on the
+shelf, out of Removed. **Restore** still sends one back to Review, undecided.
+
+## Clipped at the edge (25 Sept)
+
+`content/tools/edge_clip.py` measures, for every picture, whether the piece
+runs out of the frame. A picture where it does is offered after one where it
+does not — on the Review card, in the Adjust box filmstrip and in **Other
+picture**. A product clipped in every picture says *Clipped at the edge* on its
+Review card (and *clipped at the edge* on a grid cell): no photo shows it whole.
+
 ## Touch
 
 - A vertical swipe on the shelf scrolls it.
@@ -333,8 +354,9 @@ Neither test folder is deployed.
 5. Put two fingers on a selected piece and spread and turn them. It should
    grow and rotate; the round handles still work on their own.
 6. Tap **shoes** in the checklist under the canvas. The shelf filters to shoes.
-7. Open **Review**. Pick a slot, tap a card's *item box* — the card marks
-   itself, the piece appears on the shelf, and the progress count moves.
+7. Open **Review**. Pick a slot, tap a card's *item box* — the piece appears
+   on the shelf, the card leaves the list (**Decided** shows it, with that
+   version marked, to choose again), and the progress count moves.
    Try **Adjust box**: drag a rectangle, **Use this box**.
 8. Tap **Remove** on another card. It leaves the shelf, and **Removed** lists it. **Export choices** should
    offer `asset-choices.json` in the share sheet.

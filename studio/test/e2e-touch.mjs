@@ -51,6 +51,26 @@ async function touch(points, { steps = 8, holdMs = 0 } = {}) {
 const tap = async (x, y) => touch([[x, y]]);
 const count = (sel) => page.$$eval(sel, (e) => e.length);
 const pieces = () => page.evaluate(() => window.__studio.board.elements.filter((e) => e.kind === 'product').length);
+// A decided card leaves Review's list and a removed one is listed only under
+// Removed: to open a given product's card, tick whichever of the two lists it
+// (neither, when it is still waiting).
+async function showWaiting() {
+  await page.evaluate(() => { for (const id of ['rRemoved', 'rDecided']) {
+    const box = document.getElementById(id);
+    if (box.checked) { box.checked = false; box.dispatchEvent(new Event('change')); } } });
+}
+async function revealCard(pid) {
+  await page.evaluate(async (pid) => {
+    const { isRemoved, isReviewed } = await import('./js/data.js');
+    const S = window.__studio;
+    const p = S.productsById[pid];
+    const want = { rRemoved: isRemoved(p, S.choices), rDecided: !isRemoved(p, S.choices) && isReviewed(p, S.choices) };
+    for (const [id, on] of Object.entries(want)) {
+      const box = document.getElementById(id);
+      if (box.checked !== on) { box.checked = on; box.dispatchEvent(new Event('change')); }
+    }
+  }, pid);
+}
 
 await page.goto(`${base}/index.html`);
 await page.waitForFunction(() => window.__studio?.products?.length > 0 && window.__studio.review, null, { timeout: 20000 });
@@ -176,7 +196,11 @@ const rv = await page.evaluate(() => ({
     .find((pid) => { const p = window.__studio.productsById[pid];
       return p && !p.duplicate_of && !(p.several || []).length; }),
 }));
-ok('review lists every product that needs a decision', rv.cards > 300, JSON.stringify(rv));
+// a decided card leaves the list and a removed one is only under Removed:
+// every card here is waiting for a decision
+const rvLeft = await page.evaluate(() => [...document.querySelectorAll('#reviewCards .rcard')]
+  .every((c) => !c.classList.contains('decided') && !c.classList.contains('hidden-card')));
+ok('review lists every product that needs a decision, and only those', rv.cards > 50 && rvLeft, JSON.stringify(rv));
 ok('a card shows four versions', rv.versions === 4, String(rv.versions));
 const decided0 = Number((rv.progress.match(/^(\d+) of/) || [])[1]);
 // with nothing chosen in this browser, the only products already decided are
@@ -184,11 +208,16 @@ const decided0 = Number((rv.progress.match(/^(\d+) of/) || [])[1]);
 // cells is hidden, and so is a UNIQLO image a recoloured variant replaced, and
 // so is every product asset-choices.json has a choice for (a several-garment
 // picture counts only when hidden, as on the desk)
-const settled = await page.evaluate(() => window.__studio.products.filter((p) => {
-  const several = (p.several || []).length && p.choice !== 'custom';
-  return (!p.clean || several) && p.full && !p.parent_id && !p.review && !window.__studio.choices[p.product_id]?.review
-    && (p.hidden || (p.choice && !several));
-}).length);
+// (a removed product is not counted: it is under Removed, not here; a grid
+// hidden once its cells exist is its cells' card, and counts as decided)
+const settled = await page.evaluate(() => {
+  const cut = new Set(window.__studio.products.map((x) => x.parent_id).filter(Boolean));
+  return window.__studio.products.filter((p) => {
+    const several = (p.several || []).length && p.choice !== 'custom';
+    return (!p.clean || several) && p.full && !p.parent_id && !p.review && !window.__studio.choices[p.product_id]?.review
+      && ((p.hidden && cut.has(p.product_id)) || (!p.hidden && p.choice && !several));
+  }).length;
+});
 ok('progress counts only what is filed as decided', decided0 === settled,
   `${rv.progress} — ${settled} settled by the catalogue`);
 await page.click(`#reviewCards .rcard[data-pid="${rv.first}"] .version[data-kind="item"]`);
@@ -308,6 +337,7 @@ const multi = await page.evaluate(async () => {
 ok('products with several screenshots carry them all', !!multi && multi.n >= 3, JSON.stringify(multi));
 await page.evaluate(() => window.__studio.setView('review'));
 await page.waitForTimeout(400);
+await revealCard(multi.pid);
 await page.evaluate((pid) => {
   const card = document.querySelector(`#reviewCards .rcard[data-pid="${pid}"]`);
   card.scrollIntoView();
@@ -358,6 +388,8 @@ const gridCards = await page.evaluate(() => { window.__studio.setView('review');
 ok('a listing grid is either cut into cells or still offers its suggested boxes', !!gridPid || gridCards > 0,
   `${gridPid} / ${gridCards} grid cards`);
 const target = gridPid || multi.pid;
+// section 9 decided it, so its card has left the list: "Decided" lists it
+await revealCard(target);
 await page.evaluate((pid) => {
   const card = document.querySelector(`#reviewCards .rcard[data-pid="${pid}"]`);
   card.scrollIntoView();
@@ -432,6 +464,7 @@ const wp = await page.evaluate(async () => {
 });
 ok('products carry whole cut-outs', !!wp, JSON.stringify(wp));
 ok('a one-photo product now has five versions, not one', wp.n >= 5, JSON.stringify(wp));
+await revealCard(wp.pid);
 await page.evaluate((pid) => {
   const c = document.querySelector(`#reviewCards .rcard[data-pid="${pid}"]`);
   c.scrollIntoView(); c.querySelector('.racts button').click();
@@ -495,6 +528,7 @@ await page.evaluate(() => window.__studio.setView('review'));
 await page.waitForTimeout(300);
 const heads = await page.$$eval('#reviewCards .rhead .rphotos', (e) => e.slice(0, 5).map((x) => x.textContent));
 ok('every card says how many photos', heads.length === 5 && heads.every((h) => /^\d+ photos?$/.test(h)), heads[0]);
+await showWaiting();
 const nBefore = await page.$$eval('#reviewCards .rcard', (e) => e.length);
 await page.check('#rMulti');
 await page.waitForTimeout(300);
@@ -504,8 +538,12 @@ const multiCount = await page.evaluate(() => {
   // a grid's cells are its -C rows; a box cut by hand (-S) leaves its parent a card
   const cut = new Set(window.__studio.products.filter((x) => /-C\d+$/.test(x.product_id))
     .map((x) => x.parent_id).filter(Boolean));
-  return window.__studio.products.filter((p) => (!p.clean || ((p.several || []).length && p.choice !== 'custom') || p.review)
-    && p.full && !p.parent_id && !cut.has(p.product_id) && (p.images || []).length > 1).length;
+  // only what still waits: a removed card is under Removed, a decided one under Decided
+  return window.__studio.products.filter((p) => {
+    const several = (p.several || []).length && p.choice !== 'custom';
+    return (!p.clean || several || p.review) && p.full && !p.parent_id && !cut.has(p.product_id)
+      && (p.images || []).length > 1 && !p.hidden && (p.review || several || !p.choice);
+  }).length;
 });
 ok('"more than one photo" narrows to those', nAfter === multiCount && nAfter < nBefore, `${nBefore} → ${nAfter} (expect ${multiCount})`);
 await page.uncheck('#rMulti');
@@ -525,6 +563,7 @@ const widen = await page.evaluate(async () => {
 });
 ok('there is a crop to widen', !!widen, JSON.stringify(widen));
 if (widen) {
+  await revealCard(widen.pid);
   await page.evaluate((pid) => {
     const c = document.querySelector(`#reviewCards .rcard[data-pid="${pid}"]`);
     c.scrollIntoView(); c.querySelector('.racts button').click();
@@ -599,6 +638,7 @@ const rp = await page.evaluate(async () => {
   const p = window.__studio.products.find((x) => !x.clean && !x.parent_id && (x.images || []).length);
   return { pid: p.product_id, full: productVersions(p).findIndex((v) => v.kind === 'full') };
 });
+await revealCard(rp.pid);
 await page.evaluate((pid) => {
   const c = document.querySelector(`#reviewCards .rcard[data-pid="${pid}"]`);
   c.scrollIntoView(); c.querySelector('.racts button').click();
@@ -807,8 +847,12 @@ ok('Review groups the cells under their grid, with one tap for all', !!grp && gr
 const took = await page.evaluate(() => {
   const g = document.querySelector('#reviewCards .cellgroup');
   const n = g.querySelectorAll('.cellpick').length;
+  const gid = g.dataset.pid;
   [...g.querySelectorAll('button')].find((b) => b.textContent === 'Accept all cells').click();
-  const after = document.querySelector('#reviewCards .cellgroup');
+  // a grid with nothing left waiting leaves the list: "Decided" shows it
+  let after = document.querySelector(`#reviewCards .cellgroup[data-pid="${gid}"]`);
+  if (!after) { const d = document.getElementById('rDecided'); d.checked = true; d.dispatchEvent(new Event('change'));
+    after = document.querySelector(`#reviewCards .cellgroup[data-pid="${gid}"]`); }
   // a cell whose picture holds several garments is never taken whole
   const S = window.__studio;
   const left = [...after.querySelectorAll('.cellpick:not(.chosen)')].map((b) => b.dataset.pid);
@@ -853,6 +897,7 @@ ok('the close-ups are kept in the data, not thrown away', detPics.all > detPics.
 // the toggle brings them back in Adjust box
 await page.evaluate(() => window.__studio.setView('review'));
 await page.waitForTimeout(500);
+await revealCard(det.pid);
 const opened = await page.evaluate((pid) => {
   const c = document.querySelector(`#reviewCards .rcard[data-pid="${pid}"]`);
   if (!c) return false;
@@ -1101,6 +1146,185 @@ ok('deciding it again puts it back on the shelf', await page.evaluate((pid) => {
 await page.click('.tab[data-view="grid"]');
 await page.waitForTimeout(300);
 ok('…where it shows again', await page.evaluate((pid) => window.__studio.shown.some((p) => p.product_id === pid), pidA));
+
+
+console.log('\n25 Sept: a tap in Review chooses, removed cards only under Removed (iPad, real taps)');
+// her own state: every decision in asset-choices.json kept in this browser,
+// the removed ones included — the state in which a tap stopped choosing
+{
+  const saved = JSON.parse(await readFile(join(ROOT, '../content/catalogue/asset-choices.json'), 'utf8')).choices;
+  await page.evaluate((c) => { localStorage.clear(); localStorage.setItem('rn.studio.choices.v1', JSON.stringify(c)); }, saved);
+  await page.reload();
+  await page.waitForFunction(() => window.__studio?.products?.length > 0 && window.__studio.review, null, { timeout: 20000 });
+  await page.waitForTimeout(300);
+  await page.click('.tab[data-view="review"]');
+  await page.waitForTimeout(500);
+  // a real finger on the element's middle (or a point inside it)
+  const tapEl = async (sel, fy = 0.5) => {
+    const h = await page.$(sel);
+    if (!h) return false;
+    await h.scrollIntoViewIfNeeded();
+    const b = await h.boundingBox();
+    await tap(b.x + b.width / 2, b.y + b.height * fy);
+    await page.waitForTimeout(300);
+    return true;
+  };
+  const state = (pid) => page.evaluate(async (pid) => {
+    const { onShelf, isRemoved } = await import('./js/data.js');
+    const S = window.__studio;
+    const p = S.productsById[pid];
+    const card = document.querySelector(`#reviewCards [data-pid="${pid}"]`);
+    return { c: S.choices[pid] || null, shelf: onShelf(p, S.choices, false), removed: isRemoved(p, S.choices),
+      listed: !!card, chosen: card?.querySelector('.version.chosen')?.dataset.kind || null };
+  }, pid);
+  const setList = (id, on) => page.evaluate(([id, on]) => {
+    const b = document.getElementById(id);
+    if (b.checked !== on) { b.checked = on; b.dispatchEvent(new Event('change')); }
+  }, [id, on]);
+
+  // point 2: removed cards are not in the list unless "Removed" is ticked
+  const main = await page.evaluate(async () => {
+    const { isRemoved } = await import('./js/data.js');
+    const S = window.__studio;
+    const pids = [...document.querySelectorAll('#reviewCards .rcard')].map((c) => c.dataset.pid);
+    return { n: pids.length, removed: pids.filter((pid) => isRemoved(S.productsById[pid], S.choices)),
+      faded: document.querySelectorAll('#reviewCards .rcard.hidden-card').length,
+      decided: document.querySelectorAll('#reviewCards .rcard.decided').length };
+  });
+  ok('no removed card in Review without "Removed" ticked', main.n > 0 && !main.removed.length && !main.faded,
+    JSON.stringify({ ...main, removed: main.removed.slice(0, 4) }));
+  ok('…and no decided one: a decision takes the card out of the list', main.decided === 0, String(main.decided));
+
+  // point 1: a tap on a version chooses it — marked, on the shelf, out of the list
+  const pid1 = await page.evaluate(() => [...document.querySelectorAll('#reviewCards .rcard')].map((c) => c.dataset.pid)
+    .find((pid) => { const p = window.__studio.productsById[pid];
+      return p.full && !p.duplicate_of && !(p.several || []).length; }));
+  const s0 = await state(pid1);
+  await tapEl(`#reviewCards .rcard[data-pid="${pid1}"] .version[data-kind="item"]`);
+  const s1 = await state(pid1);
+  ok('a tap on a version records it', s1.c?.choice === 'item' && !s1.c.review && !s1.c.hidden,
+    JSON.stringify({ pid1, before: s0.c, after: s1.c }));
+  ok('…the piece goes to the shelf', s1.shelf, pid1);
+  ok('…and the card leaves the list', s0.listed && !s1.listed, JSON.stringify([s0.listed, s1.listed]));
+  await setList('rDecided', true);
+  await page.waitForTimeout(200);
+  const s2 = await state(pid1);
+  ok('"Decided" lists it with that version marked', s2.listed && s2.chosen === 'item', JSON.stringify(s2));
+  await tapEl(`#reviewCards .rcard[data-pid="${pid1}"] .version[data-kind="cutout"]`);
+  const s3 = await state(pid1);
+  ok('a tap there chooses again', s3.c?.choice === 'cutout' && s3.chosen === 'cutout' && s3.shelf, JSON.stringify(s3));
+  await setList('rDecided', false);
+  await page.waitForTimeout(200);
+
+  // a piece the build sent back ("Decide again") — the case in her list today
+  const pidSent = await page.evaluate(() => [...document.querySelectorAll('#reviewCards .rcard')].map((c) => c.dataset.pid)
+    .find((pid) => window.__studio.choices[pid]?.review && !(window.__studio.productsById[pid].several || []).length
+      && !window.__studio.productsById[pid].duplicate_of));
+  if (pidSent) {
+    await tapEl(`#reviewCards .rcard[data-pid="${pidSent}"] .version[data-kind="cutout"]`);
+    const ss = await state(pidSent);
+    ok('a piece sent back to Review: a tap decides it again', ss.c?.choice === 'cutout' && !ss.c.review && ss.shelf && !ss.listed,
+      JSON.stringify({ pidSent, ...ss }));
+  } else ok('a piece sent back to Review is in the list', false);
+
+  // single cells on grid cards
+  const cellPid = await page.evaluate(() => {
+    const b = [...document.querySelectorAll('#reviewCards .gridcard .cellpick:not(.chosen)')]
+      .find((x) => !(window.__studio.productsById[x.dataset.pid].several || []).length);
+    return b && b.dataset.pid;
+  });
+  const c0 = await state(cellPid);
+  await tapEl(`#reviewCards .cellpick[data-pid="${cellPid}"] img`, 0.3);
+  const c1 = await state(cellPid);
+  ok('a tap on a single cell chooses it', c1.c?.choice === 'cutout', JSON.stringify({ cellPid, before: c0.c, after: c1.c }));
+  ok('…the cell goes to the shelf', c1.shelf, cellPid);
+  ok('…and leaves its grid card', c0.listed && !c1.listed, JSON.stringify([c0.listed, c1.listed]));
+  // a cell the several-garments check flagged: her tap on that one cell counts
+  const sevCell = await page.evaluate(() => [...document.querySelectorAll('#reviewCards .gridcard .cellpick:not(.chosen)')]
+    .map((x) => x.dataset.pid).find((pid) => (window.__studio.productsById[pid].several || []).length));
+  if (sevCell) {
+    await tapEl(`#reviewCards .cellpick[data-pid="${sevCell}"] img`, 0.3);
+    const sc = await state(sevCell);
+    ok('a tap on a flagged cell counts too: on the shelf, out of the card', sc.c?.choice === 'cutout' && sc.shelf && !sc.listed,
+      JSON.stringify({ sevCell, ...sc }));
+  }
+  // a cell sent back to Review
+  const sentCell = await page.evaluate(() => {
+    const S = window.__studio;
+    const c = S.products.find((p) => /-C\d+$/.test(p.product_id) && p.clean && !(p.several || []).length
+      && !p.duplicate_of && !S.choices[p.product_id]);
+    S.shelfAction(c.product_id, 'review');
+    return c.product_id;
+  });
+  await page.waitForTimeout(300);
+  const sb0 = await state(sentCell);
+  await tapEl(`#reviewCards .cellpick[data-pid="${sentCell}"] img`, 0.3);
+  const sb1 = await state(sentCell);
+  ok('a cell sent back from the shelf: a tap puts it back', sb0.listed && !sb0.shelf && sb1.c?.choice === 'cutout'
+    && !sb1.c.review && sb1.shelf && !sb1.listed, JSON.stringify({ sentCell, sb0, sb1 }));
+
+  // point 2: "Removed" lists them, and a tap on a version restores with it
+  await setList('rRemoved', true);
+  await page.waitForTimeout(300);
+  const pidR = await page.evaluate(() => [...document.querySelectorAll('#reviewCards .rcard')].map((c) => c.dataset.pid)
+    .find((pid) => { const p = window.__studio.productsById[pid];
+      return window.__studio.choices[pid]?.hidden && p.full && !p.duplicate_of && !(p.several || []).length; }));
+  const r0 = await state(pidR);
+  ok('"Removed" lists a card she removed', !!pidR && r0.listed && r0.removed, JSON.stringify({ pidR, ...r0 }));
+  await tapEl(`#reviewCards .rcard[data-pid="${pidR}"] .version[data-kind="person"]`);
+  const r1 = await state(pidR);
+  ok('a tap on a version of a removed card restores it with that version',
+    r1.c?.choice === 'person' && !r1.c.hidden && !r1.removed, JSON.stringify({ pidR, before: r0.c, after: r1.c }));
+  ok('…on the shelf, and out of Removed', r1.shelf && !r1.listed, JSON.stringify(r1));
+  await setList('rRemoved', false);
+  await page.waitForTimeout(300);
+  ok('…and not back in the waiting list either', !(await state(pidR)).listed);
+  // one the catalogue has as removed, with nothing kept in this browser
+  const pidCat = await page.evaluate(() => {
+    const S = window.__studio;
+    const p = S.products.find((x) => x.removed && x.hidden && x.full && !x.duplicate_of && !(x.several || []).length);
+    delete S.choices[p.product_id];
+    localStorage.setItem('rn.studio.choices.v1', JSON.stringify(S.choices));
+    S.review.render();
+    return p.product_id;
+  });
+  ok('a removed card filed in the catalogue is not in the list either', !(await state(pidCat)).listed, pidCat);
+  await setList('rRemoved', true);
+  await page.waitForTimeout(300);
+  await tapEl(`#reviewCards .rcard[data-pid="${pidCat}"] .version[data-kind="cutout"]`);
+  const k1 = await state(pidCat);
+  ok('…and under Removed a tap restores it too', k1.c?.choice === 'cutout' && k1.shelf && !k1.listed && !k1.removed,
+    JSON.stringify({ pidCat, ...k1 }));
+  await setList('rRemoved', false);
+  await page.click('.tab[data-view="grid"]');
+  await page.waitForTimeout(300);
+  ok('both show on the shelf', await page.evaluate((ids) => ids.every((id) => window.__studio.shown.some((p) => p.product_id === id)),
+    [pidR, pidCat, pid1]));
+}
+
+console.log('\n25 Sept: clipped at the edge');
+{
+  await page.click('.tab[data-view="review"]');
+  await page.waitForTimeout(300);
+  // Fairfax & Favor B090-P010-V4: the top handles run out of the top of both photos
+  await revealCard('B090-P010-V4');
+  await page.waitForTimeout(200);
+  const clip = await page.evaluate(() => document.querySelector('#reviewCards .rcard[data-pid="B090-P010-V4"] .why.clip')?.textContent || '');
+  ok('a bag clipped in every photo says "clipped at the edge" in Review', /Clipped at the edge/.test(clip) && /top/.test(clip), clip);
+  const order = await page.evaluate(async () => {
+    const { productVersions, productPictures, firstPicture } = await import('./js/data.js');
+    // B076-P007: its first photo runs the piece out of the top, its second does not
+    const p = window.__studio.productsById['B076-P007'];
+    const clean = window.__studio.products.find((x) => !x.clipped && (x.images || []).length === 1);
+    return { first: firstPicture(p), pics: productPictures(p).map((x) => x.i),
+      vers: productVersions(p).filter((v) => v.kind === 'full').map((v) => v.image),
+      clipped: !!p.clipped, cleanMarked: !!(clean.images[0].clipped) };
+  });
+  ok('the photo clear of the frame is offered first', order.first === 1 && order.pics[0] === 1 && order.vers[0] === 1
+    && !order.clipped, JSON.stringify(order));
+  await showWaiting();
+  await page.click('.tab[data-view="grid"]');
+}
 
 console.log(`\n${pass} passed, ${fail} failed`);
 if (errors.length) console.log('page errors:\n  ' + errors.slice(0, 6).join('\n  '));
