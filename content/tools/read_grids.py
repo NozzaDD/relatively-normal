@@ -342,6 +342,23 @@ def ingest(eyedir):
                 stats['cells too small'] += 1; continue
             nb, how = snap(im, b)
             stats['snapped' if how == 'snapped' else 'box kept as read'] += 1
+            # the crop rule: the snap keeps only the topmost photo-sized run
+            # and never leaves the reader's box, so a handle above the bag was
+            # cut off; widen to the whole piece, measured on the screenshot
+            org = e.get('origin')
+            if org and batches.get(pid) and idx < len(batches[pid]['images']):
+                import crop_fix
+                kx, ky = org[2] / W, org[3] / H
+                sb = [org[0] + nb[0] * kx, org[1] + nb[1] * ky, org[0] + nb[2] * kx, org[1] + nb[3] * ky]
+                # the other tiles on the page, in the screenshot's pixels
+                tiles = [[org[0] + (q[0] - off) * kx, org[1] + (q[1] - off) * ky,
+                          org[0] + (q[2] - off) * kx, org[1] + (q[3] - off) * ky]
+                         for q in boxes if q is not c.get('box')]
+                wb, _m = crop_fix.widen(batches[pid]['images'][idx], sb, others=tiles)
+                if wb != [int(round(v)) for v in sb]:
+                    nb = [max(0, (wb[0] - org[0]) / kx), max(0, (wb[1] - org[1]) / ky),
+                          min(W, (wb[2] - org[0]) / kx), min(H, (wb[3] - org[1]) / ky)]
+                    stats['widened to the whole piece'] += 1
             frac = [round(nb[0] / W, 4), round(nb[1] / H, 4), round((nb[2] - nb[0]) / W, 4), round((nb[3] - nb[1]) / H, 4)]
             j = j0 + len(cells) - len(kept)
             rec = {'box': frac, 'read_box': [round(b[0] / W, 4), round(b[1] / H, 4), round((b[2] - b[0]) / W, 4), round((b[3] - b[1]) / H, 4)],

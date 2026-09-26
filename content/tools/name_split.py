@@ -56,6 +56,8 @@ SKIN_MODEL = 0.03
 # Rows the thresholds split and the contact sheet says are one product; kept
 # whole, as same_product.py keeps its DROPPED list.
 KEEP = {
+    'B104-P001': 'the same ME+EM Leg Elongator Jean, Authentic Dark Wash, same REF: two views '
+                 'of one page, 8.0 L* apart only by light (screenshots read, 25 Sept)',
     'B051-P002': 'the same lace skirt worn and flat: 8.4 L* apart only because '
                  'the model photo is lit warmer (contact sheet, 24 Sept)',
     'B077-P013': 'the same brown sleeveless knit twice; IMG_1219 is scrolled so the '

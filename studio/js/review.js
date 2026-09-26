@@ -9,7 +9,7 @@
 import { cropLayout, SLOT_ORDER } from './model.js';
 import { isReviewed, effectiveChoice, imageEntry, splitId, productVersions,
   SLOT_PICK, choiceBox, choiceBase, isSeveral, isDuplicate, onShelf,
-  isBackToReview, reviewReason, isRemoved, removeChoice, restoreChoice } from './data.js';
+  isBackToReview, reviewReason, isRemoved, removeChoice, restoreChoice, firstPicture, clippedSides } from './data.js';
 
 /** Every screenshot of a product the desk can draw on, best first. */
 export function productImages(p) {
@@ -171,9 +171,13 @@ export function applyCrop(img, crop, boxW, boxH, fullW, fullH) {
 export function createReview(api) {
   // api: { source, products(), choices, onChange(), toast() }
   const state = { slot: '', multi: false, noSlot: false, checkSlot: false,
-    several: false, dups: false, removed: false, cellSel: null, adjusting: null };
+    several: false, dups: false, removed: false, decided: false, cellSel: null, adjusting: null };
 
   const isCell = (p) => !!p.parent_id && /-C\d+$/.test(p.product_id);
+  // removed by her or hidden by the build: listed under Removed, never here —
+  // except a grid page hidden once its cells exist, which is its cells' card
+  const isOff = (p, cells) => !!effectiveChoice(p, api.choices)?.hidden
+    && !((cells[p.product_id] || []).length);
 
   function pending(list) {
     // a clean cut-out of several garments is back here: clean is not single
@@ -331,7 +335,8 @@ export function createReview(api) {
     if (state.removed) { renderRemoved(); return; }
     if (state.dups) { renderDuplicates(); return; }
     if (state.several) { renderSeveral(); return; }
-    const all = pending(api.products());
+    const cells = cellsByParent(api.products());
+    const all = pending(api.products()).filter((p) => !isOff(p, cells));
     let list = state.slot ? all.filter((p) => p.slot === state.slot) : all;
     if (state.multi) list = list.filter((p) => productImages(p).length > 1);
     if (state.noSlot) list = list.filter((p) => !p.slot);
@@ -355,7 +360,6 @@ export function createReview(api) {
     }
     const cards = $('reviewCards');
     cards.replaceChildren();
-    const cells = cellsByParent(api.products());
     // A slot filter is about products, and a grid's cells are products even
     // though the grid itself is one row: keep a grid whose cells match, or the
     // filter that finds the missing slots would find nothing, because every
@@ -367,9 +371,14 @@ export function createReview(api) {
         if ((cells[p.product_id] || []).some((c) => matchesSlotFilters(c))) list.push(p);
       }
     }
-    const todo = list.filter((p) => !isReviewed(p, api.choices));
-    const doneList = list.filter((p) => isReviewed(p, api.choices));
-    for (const p of [...todo, ...doneList]) {
+    // a decision takes the card out of the list; "Decided" shows those, to
+    // choose again. A grid's card stays while any of its cells wait.
+    const waitingCells = (p) => (cells[p.product_id] || []).some((c) => !onShelf(c, api.choices, false)
+      && !isDuplicate(c, api.choices) && !effectiveChoice(c, api.choices)?.hidden);
+    const shown = list.filter((p) => (cells[p.product_id] || []).length
+      ? (state.decided ? !waitingCells(p) : waitingCells(p))
+      : (state.decided ? isReviewed(p, api.choices) : !isReviewed(p, api.choices)));
+    for (const p of shown) {
       // a grid that has been cut into cells is its cells now, not a picture of
       // several garments to box: say where they are and show the ones left
       const mine = cells[p.product_id];
@@ -426,7 +435,11 @@ export function createReview(api) {
     takeAll.className = 'ghost small';
     takeAll.textContent = 'Accept all cells';
     takeAll.addEventListener('click', () => {
-      for (const c of cells) api.choices[c.product_id] = { ...(api.choices[c.product_id] || {}), choice: 'cutout' };
+      // a cell whose picture holds several garments is never taken in bulk;
+      // a tap on that one cell is what takes it
+      for (const c of cells) {
+        if (!(c.several || []).length) api.choices[c.product_id] = takeCell(api.choices[c.product_id]);
+      }
       saveChoices(api.choices); api.onChange(); render();
     });
     if (cells.length) head.appendChild(takeAll);
@@ -457,17 +470,20 @@ export function createReview(api) {
         b.appendChild(d);
       }
       b.appendChild(t);
-      if (c.hold && !isReviewed(c, api.choices)) {
+      const why = [c.hold && !isReviewed(c, api.choices) ? c.hold : '',   // why the gate kept it here
+        c.clipped ? 'clipped at the edge' : ''].filter(Boolean).join(' · ');
+      if (why) {
         const w = document.createElement('span');
-        w.className = 'cellcap';
-        w.textContent = c.hold;                  // why the gate kept it here
+        w.className = 'cellcap' + (c.clipped ? ' clip' : '');
+        w.textContent = why;
         b.appendChild(w);
       }
-      b.title = [c.product_name, c.price, c.hold].filter(Boolean).join(' — ') || c.product_id;
+      b.title = [c.product_name, c.price, c.hold, c.clipped ? 'clipped at the edge' : ''].filter(Boolean).join(' — ')
+        || c.product_id;
       b.addEventListener('click', () => {
         const had = isReviewed(c, api.choices);
         if (had) delete api.choices[c.product_id];
-        else api.choices[c.product_id] = { choice: 'cutout' };
+        else api.choices[c.product_id] = takeCell(api.choices[c.product_id]);
         saveChoices(api.choices); api.onChange(); render();
       });
       row.appendChild(b);
@@ -512,7 +528,9 @@ export function createReview(api) {
   }
 
   function version(p, kind, label) {
-    const e = imageEntry(p, 0);
+    // the boxes are shown on the first picture clear of the frame
+    const pic = firstPicture(p);
+    const e = imageEntry(p, pic);
     const box = kind === 'cutout' ? null : kind === 'full' ? [0, 0, 1, 1]
       : (e && e[kind]) || (p.boxes && p.boxes[kind]) || [0, 0, 1, 1];
     const v = document.createElement('button');
@@ -524,8 +542,8 @@ export function createReview(api) {
     img.loading = 'lazy';
     img.alt = label;
     if (box) {
-      img.src = api.source.fullUrl(p);
-      img.onload = () => applyCrop(img, box, 72, 88, p.full.w, p.full.h);
+      img.src = api.source.fullUrl(p, pic);
+      img.onload = () => applyCrop(img, box, 72, 88, (e || p.full).w, (e || p.full).h);
     } else {
       img.src = api.source.thumbUrl(p);
       img.className = 'contain';
@@ -562,6 +580,13 @@ export function createReview(api) {
       w.textContent = back;
       el.appendChild(w);
     }
+    const clip = clippedSides(p);
+    if (clip.length) {
+      const w = document.createElement('div');
+      w.className = 'why clip';
+      w.textContent = `Clipped at the edge — the piece runs out of the screenshot itself (${clip.join(', ')}) in every picture; no screenshot shows it whole.`;
+      el.appendChild(w);
+    }
     if (isSeveral(p, api.choices)) {
       const w = document.createElement('div');
       w.className = 'why several';
@@ -581,7 +606,9 @@ export function createReview(api) {
     for (const [k, label] of kinds) {
       const v = version(p, k, label);
       if (eff?.choice === k) v.classList.add('chosen');
-      v.addEventListener('click', () => decide(p, { choice: k, box: null }));
+      // a box is on the picture the card shows it on; the cut-out is the cut-out
+      v.addEventListener('click', () => decide(p, { choice: k, box: null,
+        image: k === 'cutout' ? 0 : firstPicture(p) }));
       row.appendChild(v);
     }
     if (eff?.choice === 'custom') {
@@ -620,6 +647,12 @@ export function createReview(api) {
     return el;
   }
 
+  /** A cell taken whole: its slot kept, and whatever sent it back or removed it answered. */
+  function takeCell(prev) {
+    const { review, hidden, later, box, base, image, ...keep } = prev || {};
+    return { ...keep, choice: 'cutout' };
+  }
+
   function setChoice(p, c) {
     api.choices[p.product_id] = c;
     saveChoices(api.choices);
@@ -629,8 +662,9 @@ export function createReview(api) {
 
   function decide(p, patch) {
     const prev = api.choices[p.product_id] || {};
-    // any decision here answers "back to Review"
-    const { review, ...rest } = prev;
+    // any decision here answers "back to Review", and a version tapped on a
+    // removed card restores it with that version
+    const { review, hidden, ...rest } = prev;
     api.choices[p.product_id] = { ...rest, later: false, ...patch };
     saveChoices(api.choices);
     api.onChange();
@@ -1074,7 +1108,7 @@ export function createReview(api) {
   }
 
   for (const [id, key] of [['rMulti', 'multi'], ['rNoSlot', 'noSlot'], ['rCheckSlot', 'checkSlot'],
-    ['rSeveral', 'several'], ['rDups', 'dups'], ['rRemoved', 'removed']]) {
+    ['rSeveral', 'several'], ['rDups', 'dups'], ['rRemoved', 'removed'], ['rDecided', 'decided']]) {
     document.getElementById(id).addEventListener('change', (ev) => {
       state[key] = ev.target.checked;
       render();

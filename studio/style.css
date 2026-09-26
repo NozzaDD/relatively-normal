@@ -427,3 +427,5 @@ button.on { background: var(--accent); color: #fff; border-color: var(--accent);
 .tile-menu button:hover { background: var(--chrome); }
 .tile-menu button.danger { color: #9a2f22; }
 .rcard .why.back { color: #7a4b10; background: #fbf3e4; border-radius: 6px; padding: 4px 6px; font-size: 12px; margin: 4px 0; }
+.rcard .why.clip { color: #8a2f22; background: #fbeae6; border-radius: 6px; padding: 4px 6px; font-size: 12px; margin: 4px 0; }
+.cellpick .cellcap.clip { color: #8a2f22; }
