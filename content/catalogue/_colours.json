@@ -29625,5 +29625,586 @@
   "kept_share": 0.505,
   "colour_confidence": "high",
   "colour_stability": "stable"
+ },
+ "B110-P001": {
+  "colours": [
+   {
+    "hex": "C05D5D",
+    "share": 0.736,
+    "L": 51.6,
+    "C": 43.9,
+    "h": 25.4,
+    "rel": 0.503,
+    "neutral": false,
+    "family": "red",
+    "name": "red"
+   },
+   {
+    "hex": "9D2F33",
+    "share": 0.236,
+    "L": 36.8,
+    "C": 51.5,
+    "h": 27.6,
+    "rel": 0.741,
+    "neutral": false,
+    "family": "red",
+    "name": "brick"
+   }
+  ],
+  "skin_share": 0.057,
+  "kept_share": 0.688,
+  "colour_confidence": "high",
+  "colour_stability": "stable"
+ },
+ "B110-P002": {
+  "colours": [
+   {
+    "hex": "24252D",
+    "share": 0.956,
+    "L": 14.9,
+    "C": 5.7,
+    "h": 287.2,
+    "rel": 0.164,
+    "neutral": false,
+    "family": "blue",
+    "name": "navy"
+   }
+  ],
+  "skin_share": 0.0,
+  "kept_share": 0.837,
+  "colour_confidence": "high",
+  "colour_stability": "stable"
+ },
+ "B110-P003": {
+  "colours": [
+   {
+    "hex": "202127",
+    "share": 0.951,
+    "L": 12.9,
+    "C": 4.3,
+    "h": 285.3,
+    "rel": 0.143,
+    "neutral": true,
+    "family": "black",
+    "name": "off-black"
+   }
+  ],
+  "skin_share": 0.0,
+  "kept_share": 0.835,
+  "colour_confidence": "high",
+  "colour_stability": "stable"
+ },
+ "B110-P004": {
+  "colours": [
+   {
+    "hex": "232326",
+    "share": 0.967,
+    "L": 13.8,
+    "C": 2.1,
+    "h": 290.8,
+    "rel": 0.056,
+    "neutral": true,
+    "family": "black",
+    "name": "black"
+   }
+  ],
+  "skin_share": 0.0,
+  "kept_share": 0.809,
+  "colour_confidence": "high",
+  "colour_stability": "stable"
+ },
+ "B110-P005": {
+  "colours": [
+   {
+    "hex": "A68064",
+    "share": 0.942,
+    "L": 56.6,
+    "C": 23.5,
+    "h": 62.6,
+    "rel": 0.324,
+    "neutral": false,
+    "family": "brown",
+    "name": "tan"
+   },
+   {
+    "hex": "846349",
+    "share": 0.051,
+    "L": 44.7,
+    "C": 22.2,
+    "h": 63.9,
+    "rel": 0.372,
+    "neutral": false,
+    "family": "brown",
+    "name": "tobacco"
+   }
+  ],
+  "skin_share": 0.827,
+  "kept_share": 0.153,
+  "colour_confidence": "low",
+  "colour_stability": "stable"
+ },
+ "B110-P006": {
+  "colours": [
+   {
+    "hex": "8AA2BA",
+    "share": 0.686,
+    "L": 65.6,
+    "C": 15.4,
+    "h": 259.3,
+    "rel": 0.315,
+    "neutral": false,
+    "family": "blue",
+    "name": "steel blue"
+   },
+   {
+    "hex": "6D87A3",
+    "share": 0.249,
+    "L": 55.3,
+    "C": 18.0,
+    "h": 262.6,
+    "rel": 0.401,
+    "neutral": false,
+    "family": "blue",
+    "name": "steel blue"
+   }
+  ],
+  "skin_share": 0.0,
+  "kept_share": 0.747,
+  "colour_confidence": "high",
+  "colour_stability": "stable"
+ },
+ "B111-P001": {
+  "colours": [
+   {
+    "hex": "9DA6A9",
+    "share": 0.353,
+    "L": 67.5,
+    "C": 3.7,
+    "h": 225.8,
+    "rel": 0.097,
+    "neutral": true,
+    "family": "grey",
+    "name": "light grey"
+   },
+   {
+    "hex": "CECBBB",
+    "share": 0.312,
+    "L": 81.5,
+    "C": 8.5,
+    "h": 101.8,
+    "rel": 0.102,
+    "neutral": true,
+    "family": "warm neutral",
+    "name": "cream"
+   },
+   {
+    "hex": "6F7B84",
+    "share": 0.293,
+    "L": 50.9,
+    "C": 6.8,
+    "h": 249.2,
+    "rel": 0.193,
+    "neutral": false,
+    "family": "blue",
+    "name": "steel blue"
+   }
+  ],
+  "skin_share": 0.0,
+  "kept_share": 0.597,
+  "colour_confidence": "high",
+  "colour_stability": "stable"
+ },
+ "B111-P002": {
+  "colours": [
+   {
+    "hex": "615F5D",
+    "share": 0.447,
+    "L": 40.4,
+    "C": 1.5,
+    "h": 75.0,
+    "rel": 0.029,
+    "neutral": true,
+    "family": "warm neutral",
+    "name": "taupe"
+   },
+   {
+    "hex": "787573",
+    "share": 0.306,
+    "L": 49.4,
+    "C": 1.7,
+    "h": 63.5,
+    "rel": 0.026,
+    "neutral": true,
+    "family": "warm neutral",
+    "name": "stone"
+   },
+   {
+    "hex": "F8F8F8",
+    "share": 0.151,
+    "L": 97.6,
+    "C": 0.0,
+    "h": 158.2,
+    "rel": 0.0,
+    "neutral": true,
+    "family": "white",
+    "name": "white"
+   }
+  ],
+  "skin_share": 0.0,
+  "kept_share": 0.836,
+  "colour_confidence": "high",
+  "colour_stability": "stable"
+ },
+ "B112-P001": {
+  "colours": [
+   {
+    "hex": "26292C",
+    "share": 0.98,
+    "L": 16.4,
+    "C": 2.5,
+    "h": 256.9,
+    "rel": 0.132,
+    "neutral": true,
+    "family": "black",
+    "name": "black"
+   }
+  ],
+  "skin_share": 0.0,
+  "kept_share": 0.749,
+  "colour_confidence": "high",
+  "colour_stability": "stable"
+ },
+ "B112-P002": {
+  "colours": [
+   {
+    "hex": "5B5954",
+    "share": 0.36,
+    "L": 37.9,
+    "C": 3.2,
+    "h": 93.9,
+    "rel": 0.07,
+    "neutral": true,
+    "family": "warm neutral",
+    "name": "taupe"
+   },
+   {
+    "hex": "898883",
+    "share": 0.246,
+    "L": 56.6,
+    "C": 2.9,
+    "h": 101.9,
+    "rel": 0.046,
+    "neutral": true,
+    "family": "warm neutral",
+    "name": "stone"
+   },
+   {
+    "hex": "E3D698",
+    "share": 0.206,
+    "L": 85.3,
+    "C": 32.6,
+    "h": 98.2,
+    "rel": 0.38,
+    "neutral": false,
+    "family": "yellow",
+    "name": "butter"
+   }
+  ],
+  "skin_share": 0.002,
+  "kept_share": 0.662,
+  "colour_confidence": "high",
+  "colour_stability": "stable"
+ },
+ "B112-P003": {
+  "colours": [
+   {
+    "hex": "1A191D",
+    "share": 0.994,
+    "L": 9.0,
+    "C": 3.0,
+    "h": 300.6,
+    "rel": 0.062,
+    "neutral": true,
+    "family": "black",
+    "name": "black"
+   }
+  ],
+  "skin_share": 0.0,
+  "kept_share": 0.836,
+  "colour_confidence": "high",
+  "colour_stability": "stable"
+ },
+ "B112-P004": {
+  "colours": [
+   {
+    "hex": "262C3B",
+    "share": 0.896,
+    "L": 18.0,
+    "C": 10.6,
+    "h": 279.4,
+    "rel": 0.349,
+    "neutral": false,
+    "family": "blue",
+    "name": "navy"
+   },
+   {
+    "hex": "7A7477",
+    "share": 0.072,
+    "L": 49.4,
+    "C": 3.0,
+    "h": 344.0,
+    "rel": 0.036,
+    "neutral": true,
+    "family": "grey",
+    "name": "mid grey"
+   }
+  ],
+  "skin_share": 0.003,
+  "kept_share": 0.441,
+  "colour_confidence": "high",
+  "colour_stability": "stable"
+ },
+ "B112-P005": {
+  "colours": [
+   {
+    "hex": "AC8A71",
+    "share": 0.78,
+    "L": 60.0,
+    "C": 20.5,
+    "h": 63.1,
+    "rel": 0.272,
+    "neutral": false,
+    "family": "brown",
+    "name": "tan"
+   },
+   {
+    "hex": "4A2C1F",
+    "share": 0.122,
+    "L": 21.4,
+    "C": 18.7,
+    "h": 49.2,
+    "rel": 0.451,
+    "neutral": false,
+    "family": "brown",
+    "name": "espresso"
+   },
+   {
+    "hex": "876A54",
+    "share": 0.065,
+    "L": 47.1,
+    "C": 18.7,
+    "h": 63.7,
+    "rel": 0.301,
+    "neutral": false,
+    "family": "brown",
+    "name": "tobacco"
+   }
+  ],
+  "skin_share": 0.75,
+  "kept_share": 0.183,
+  "colour_confidence": "low",
+  "colour_stability": "stable"
+ },
+ "B112-P006": {
+  "colours": [
+   {
+    "hex": "795458",
+    "share": 0.614,
+    "L": 39.8,
+    "C": 16.5,
+    "h": 13.5,
+    "rel": 0.244,
+    "neutral": false,
+    "family": "pink",
+    "name": "raspberry"
+   },
+   {
+    "hex": "492E32",
+    "share": 0.386,
+    "L": 22.3,
+    "C": 13.3,
+    "h": 11.0,
+    "rel": 0.288,
+    "neutral": false,
+    "family": "red",
+    "name": "oxblood"
+   }
+  ],
+  "skin_share": 0.007,
+  "kept_share": 0.782,
+  "colour_confidence": "high",
+  "colour_stability": "stable"
+ },
+ "B113-P001": {
+  "colours": [
+   {
+    "hex": "322623",
+    "share": 0.539,
+    "L": 16.4,
+    "C": 6.5,
+    "h": 39.2,
+    "rel": 0.165,
+    "neutral": false,
+    "family": "brown",
+    "name": "espresso"
+   },
+   {
+    "hex": "4F4241",
+    "share": 0.309,
+    "L": 29.3,
+    "C": 6.0,
+    "h": 26.5,
+    "rel": 0.102,
+    "neutral": true,
+    "family": "grey",
+    "name": "dark grey"
+   },
+   {
+    "hex": "C79D7D",
+    "share": 0.12,
+    "L": 67.8,
+    "C": 25.3,
+    "h": 63.7,
+    "rel": 0.306,
+    "neutral": false,
+    "family": "brown",
+    "name": "tan"
+   }
+  ],
+  "skin_share": 0.419,
+  "kept_share": 0.133,
+  "colour_confidence": "low",
+  "colour_stability": "stable"
+ },
+ "B114-P001": {
+  "colours": [
+   {
+    "hex": "101010",
+    "share": 0.573,
+    "L": 4.7,
+    "C": 0.0,
+    "h": 158.2,
+    "rel": 0.0,
+    "neutral": true,
+    "family": "black",
+    "name": "black"
+   },
+   {
+    "hex": "494846",
+    "share": 0.176,
+    "L": 30.6,
+    "C": 1.3,
+    "h": 90.7,
+    "rel": 0.034,
+    "neutral": true,
+    "family": "warm neutral",
+    "name": "taupe"
+   },
+   {
+    "hex": "2A2928",
+    "share": 0.165,
+    "L": 16.7,
+    "C": 0.8,
+    "h": 75.0,
+    "rel": 0.033,
+    "neutral": true,
+    "family": "black",
+    "name": "black"
+   }
+  ],
+  "skin_share": 0.032,
+  "kept_share": 0.81,
+  "colour_confidence": "low",
+  "colour_stability": "stable"
+ },
+ "B114-P002": {
+  "colours": [
+   {
+    "hex": "38220C",
+    "share": 0.632,
+    "L": 15.5,
+    "C": 19.7,
+    "h": 66.0,
+    "rel": 0.781,
+    "neutral": false,
+    "family": "brown",
+    "name": "espresso"
+   },
+   {
+    "hex": "4A413D",
+    "share": 0.261,
+    "L": 28.3,
+    "C": 4.9,
+    "h": 51.5,
+    "rel": 0.097,
+    "neutral": true,
+    "family": "warm neutral",
+    "name": "taupe"
+   },
+   {
+    "hex": "6B6663",
+    "share": 0.092,
+    "L": 43.6,
+    "C": 2.8,
+    "h": 60.2,
+    "rel": 0.045,
+    "neutral": true,
+    "family": "warm neutral",
+    "name": "taupe"
+   }
+  ],
+  "skin_share": 0.005,
+  "kept_share": 0.756,
+  "colour_confidence": "high",
+  "colour_stability": "stable"
+ },
+ "B115-P001": {
+  "colours": [
+   {
+    "hex": "412D25",
+    "share": 0.982,
+    "L": 20.6,
+    "C": 11.9,
+    "h": 48.0,
+    "rel": 0.289,
+    "neutral": false,
+    "family": "brown",
+    "name": "espresso"
+   }
+  ],
+  "skin_share": 0.208,
+  "kept_share": 0.718,
+  "colour_confidence": "medium",
+  "colour_stability": "stable"
+ },
+ "B115-P002": {
+  "colours": [
+   {
+    "hex": "2B1619",
+    "share": 0.848,
+    "L": 10.2,
+    "C": 11.4,
+    "h": 12.4,
+    "rel": 0.36,
+    "neutral": false,
+    "family": "red",
+    "name": "oxblood"
+   },
+   {
+    "hex": "120707",
+    "share": 0.123,
+    "L": 2.7,
+    "C": 3.6,
+    "h": 19.4,
+    "rel": 0.282,
+    "neutral": false,
+    "family": "black",
+    "name": "black"
+   }
+  ],
+  "skin_share": 0.003,
+  "kept_share": 0.854,
+  "colour_confidence": "high",
+  "colour_stability": "stable"
  }
 }

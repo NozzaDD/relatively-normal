@@ -19098,5 +19098,160 @@
   },
   "prefer": null,
   "still_cut": []
+ },
+ "B110-P001": {
+  "clipped": false,
+  "on_model": [],
+  "photo_edge": {},
+  "pictures": {
+   "0": []
+  },
+  "prefer": null,
+  "still_cut": []
+ },
+ "B110-P002": {
+  "clipped": false,
+  "on_model": [],
+  "photo_edge": {},
+  "pictures": {
+   "0": [],
+   "1": []
+  },
+  "prefer": null,
+  "still_cut": []
+ },
+ "B110-P005": {
+  "clipped": false,
+  "on_model": [
+   0
+  ],
+  "photo_edge": {},
+  "pictures": {
+   "0": []
+  },
+  "prefer": null,
+  "still_cut": []
+ },
+ "B111-P002": {
+  "clipped": false,
+  "on_model": [],
+  "photo_edge": {},
+  "pictures": {
+   "0": []
+  },
+  "prefer": null,
+  "still_cut": []
+ },
+ "B112-P001": {
+  "clipped": false,
+  "on_model": [],
+  "photo_edge": {},
+  "pictures": {
+   "0": []
+  },
+  "prefer": null,
+  "still_cut": []
+ },
+ "B112-P002": {
+  "clipped": false,
+  "on_model": [],
+  "photo_edge": {},
+  "pictures": {
+   "0": []
+  },
+  "prefer": null,
+  "still_cut": []
+ },
+ "B112-P003": {
+  "clipped": false,
+  "on_model": [],
+  "photo_edge": {},
+  "pictures": {
+   "0": []
+  },
+  "prefer": null,
+  "still_cut": []
+ },
+ "B112-P004": {
+  "clipped": false,
+  "on_model": [],
+  "photo_edge": {
+   "3": [
+    "top"
+   ]
+  },
+  "pictures": {
+   "3": []
+  },
+  "prefer": null,
+  "still_cut": []
+ },
+ "B112-P005": {
+  "clipped": false,
+  "on_model": [
+   0
+  ],
+  "photo_edge": {},
+  "pictures": {
+   "0": []
+  },
+  "prefer": null,
+  "still_cut": []
+ },
+ "B113-P001": {
+  "clipped": false,
+  "on_model": [
+   0
+  ],
+  "photo_edge": {
+   "0": [
+    "top",
+    "right"
+   ]
+  },
+  "pictures": {
+   "0": []
+  },
+  "prefer": null,
+  "still_cut": []
+ },
+ "B114-P001": {
+  "clipped": false,
+  "on_model": [
+   0,
+   1,
+   3
+  ],
+  "photo_edge": {},
+  "pictures": {
+   "0": [],
+   "1": [],
+   "3": []
+  },
+  "prefer": null,
+  "still_cut": []
+ },
+ "B114-P002": {
+  "clipped": false,
+  "on_model": [],
+  "photo_edge": {},
+  "pictures": {
+   "0": [],
+   "1": []
+  },
+  "prefer": null,
+  "still_cut": []
+ },
+ "B115-P001": {
+  "clipped": false,
+  "on_model": [
+   0
+  ],
+  "photo_edge": {},
+  "pictures": {
+   "0": []
+  },
+  "prefer": null,
+  "still_cut": []
  }
 }
