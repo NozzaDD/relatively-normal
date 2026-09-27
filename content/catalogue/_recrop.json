@@ -1,0 +1,10532 @@
+{
+ "pictures": {
+  "full/B001-P001.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    0,
+    281,
+    1833,
+    2419
+   ],
+   "after": [
+    0,
+    245,
+    1908,
+    2419
+   ],
+   "source": "content/swipe/formats/IMG_0041.png"
+  },
+  "full/B001-P002.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    0,
+    274,
+    1833,
+    2603
+   ],
+   "after": [
+    0,
+    175,
+    1908,
+    2611
+   ],
+   "source": "content/swipe/formats/IMG_0042.png"
+  },
+  "full/B001-P003.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    0,
+    274,
+    1680,
+    2631
+   ],
+   "after": [
+    0,
+    187,
+    1908,
+    2653
+   ],
+   "source": "content/swipe/formats/IMG_0043.png"
+  },
+  "full/B001-P004.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    360,
+    980,
+    659,
+    1803
+   ],
+   "after": [
+    337,
+    975,
+    660,
+    1834
+   ],
+   "source": "content/swipe/formats/IMG_0045.png"
+  },
+  "full/B005-P001.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    0,
+    19,
+    1908,
+    1565
+   ],
+   "after": [
+    0,
+    18,
+    1908,
+    2576
+   ],
+   "source": "content/swipe/products/IMG_0007.png"
+  },
+  "full/B006-P001c0.jpg": {
+   "kind": "cell",
+   "cell": "B006-P001-C0",
+   "before": [
+    21,
+    6,
+    506,
+    593
+   ],
+   "after": [
+    11,
+    6,
+    1403,
+    595
+   ],
+   "source": "content/swipe/products/IMG_0008.jpeg",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.003,
+    "added_past_old_crop": 0.97
+   },
+   "decision": "undecided"
+  },
+  "full/B009-P001.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    0,
+    281,
+    1833,
+    2419
+   ],
+   "after": [
+    0,
+    245,
+    1908,
+    2419
+   ],
+   "source": "content/swipe/products/IMG_0041.png"
+  },
+  "full/B009-P002.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    0,
+    274,
+    1833,
+    2603
+   ],
+   "after": [
+    0,
+    175,
+    1908,
+    2611
+   ],
+   "source": "content/swipe/products/IMG_0042.png"
+  },
+  "full/B009-P003.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    0,
+    274,
+    1680,
+    2631
+   ],
+   "after": [
+    0,
+    187,
+    1908,
+    2653
+   ],
+   "source": "content/swipe/products/IMG_0043.png"
+  },
+  "full/B009-P004.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    360,
+    980,
+    659,
+    1803
+   ],
+   "after": [
+    337,
+    975,
+    660,
+    1834
+   ],
+   "source": "content/swipe/products/IMG_0045.png"
+  },
+  "full/B010-P001.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    1351,
+    188,
+    1868,
+    2521
+   ],
+   "after": [
+    1319,
+    188,
+    1868,
+    2521
+   ],
+   "source": "content/swipe/products/IMG_0171.png"
+  },
+  "full/B011-P007.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    3,
+    362,
+    931,
+    2657
+   ],
+   "after": [
+    0,
+    362,
+    1908,
+    2659
+   ],
+   "source": "content/swipe/products/IMG_0190.png"
+  },
+  "full/B016-P002.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    523,
+    845,
+    1852,
+    1411
+   ],
+   "after": [
+    123,
+    845,
+    1853,
+    1411
+   ],
+   "source": "content/swipe/products/IMG_0215.png"
+  },
+  "full/B017-P001-V2.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    3,
+    362,
+    931,
+    2657
+   ],
+   "after": [
+    0,
+    362,
+    1908,
+    2659
+   ],
+   "source": "content/swipe/products/IMG_0219.png"
+  },
+  "full/B019-P004-1.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    546,
+    703,
+    1247,
+    2746
+   ],
+   "after": [
+    507,
+    680,
+    1286,
+    2747
+   ],
+   "source": "content/swipe/products/IMG_0236.png"
+  },
+  "full/B019-P006c0.jpg": {
+   "kind": "cell",
+   "cell": "B019-P006-C0",
+   "before": [
+    139,
+    530,
+    482,
+    1398
+   ],
+   "after": [
+    139,
+    530,
+    482,
+    1444
+   ],
+   "source": "content/swipe/products/IMG_0238.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.002,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B019-P006c1.jpg": {
+   "kind": "cell",
+   "cell": "B019-P006-C1",
+   "before": [
+    781,
+    532,
+    1122,
+    1398
+   ],
+   "after": [
+    781,
+    532,
+    1122,
+    1444
+   ],
+   "source": "content/swipe/products/IMG_0238.png",
+   "compare": {
+    "kept": 0.992,
+    "added": 0.004,
+    "added_past_old_crop": 0.079
+   },
+   "decision": "undecided"
+  },
+  "full/B019-P006c2.jpg": {
+   "kind": "cell",
+   "cell": "B019-P006-C2",
+   "before": [
+    1431,
+    537,
+    1731,
+    1398
+   ],
+   "after": [
+    1431,
+    537,
+    1731,
+    1438
+   ],
+   "source": "content/swipe/products/IMG_0238.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B019-P006c3.jpg": {
+   "kind": "cell",
+   "cell": "B019-P006-C3",
+   "before": [
+    118,
+    1496,
+    497,
+    2353
+   ],
+   "after": [
+    118,
+    1496,
+    497,
+    2420
+   ],
+   "source": "content/swipe/products/IMG_0238.png",
+   "compare": {
+    "kept": 0.997,
+    "added": 0.016,
+    "added_past_old_crop": 0.621
+   },
+   "decision": "undecided"
+  },
+  "full/B019-P006-1c0.jpg": {
+   "kind": "cell",
+   "cell": "B019-P006-I1-C0",
+   "before": [
+    56,
+    485,
+    641,
+    1376
+   ],
+   "after": [
+    56,
+    464,
+    641,
+    1419
+   ],
+   "source": "content/swipe/products/IMG_0239.png",
+   "compare": {
+    "kept": 1.0,
+    "added": 0.025,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B019-P006-1c1.jpg": {
+   "kind": "cell",
+   "cell": "B019-P006-I1-C1",
+   "before": [
+    626,
+    485,
+    1282,
+    1376
+   ],
+   "after": [
+    626,
+    464,
+    1282,
+    1419
+   ],
+   "source": "content/swipe/products/IMG_0239.png",
+   "compare": {
+    "kept": 0.912,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B019-P006-1c3.jpg": {
+   "kind": "cell",
+   "cell": "B019-P006-I1-C3",
+   "before": [
+    1273,
+    1366,
+    1908,
+    2330
+   ],
+   "after": [
+    1273,
+    1365,
+    1908,
+    2376
+   ],
+   "source": "content/swipe/products/IMG_0239.png",
+   "compare": {
+    "kept": 1.0,
+    "added": 0.026,
+    "added_past_old_crop": 0.13
+   },
+   "decision": "undecided"
+  },
+  "full/B020-P002c0.jpg": {
+   "kind": "cell",
+   "cell": "B020-P002-C0",
+   "before": [
+    102,
+    512,
+    500,
+    1376
+   ],
+   "after": [
+    102,
+    512,
+    500,
+    1439
+   ],
+   "source": "content/swipe/products/IMG_0242.png",
+   "compare": {
+    "kept": 0.996,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B020-P002c1.jpg": {
+   "kind": "cell",
+   "cell": "B020-P002-C1",
+   "before": [
+    638,
+    478,
+    1083,
+    1376
+   ],
+   "after": [
+    638,
+    478,
+    1083,
+    1411
+   ],
+   "source": "content/swipe/products/IMG_0242.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.003,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B020-P002c2.jpg": {
+   "kind": "cell",
+   "cell": "B020-P002-C2",
+   "before": [
+    1424,
+    478,
+    1908,
+    1376
+   ],
+   "after": [
+    1424,
+    478,
+    1908,
+    1413
+   ],
+   "source": "content/swipe/products/IMG_0242.png",
+   "compare": {
+    "kept": 0.996,
+    "added": 0.0,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B020-P002c3.jpg": {
+   "kind": "cell",
+   "cell": "B020-P002-C3",
+   "before": [
+    152,
+    1466,
+    491,
+    2330
+   ],
+   "after": [
+    152,
+    1466,
+    491,
+    2367
+   ],
+   "source": "content/swipe/products/IMG_0242.png",
+   "compare": {
+    "kept": 0.989,
+    "added": 0.002,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B020-P002c5.jpg": {
+   "kind": "cell",
+   "cell": "B020-P002-C5",
+   "before": [
+    1445,
+    1466,
+    1726,
+    2330
+   ],
+   "after": [
+    1445,
+    1466,
+    1726,
+    2367
+   ],
+   "source": "content/swipe/products/IMG_0242.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.001,
+    "added_past_old_crop": 0.012
+   },
+   "decision": "undecided"
+  },
+  "full/B021-P006.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    1,
+    306,
+    990,
+    1800
+   ],
+   "after": [
+    0,
+    304,
+    1908,
+    1820
+   ],
+   "source": "content/swipe/products/IMG_0259.png"
+  },
+  "full/B021-P011-V3.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    1,
+    306,
+    980,
+    1800
+   ],
+   "after": [
+    0,
+    304,
+    1908,
+    1820
+   ],
+   "source": "content/swipe/products/IMG_0269.png"
+  },
+  "full/B021-P014.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    10,
+    50,
+    1479,
+    2305
+   ],
+   "after": [
+    8,
+    18,
+    1908,
+    2307
+   ],
+   "source": "content/swipe/products/IMG_0274.png"
+  },
+  "full/B021-P020.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    0,
+    49,
+    1357,
+    2390
+   ],
+   "after": [
+    0,
+    48,
+    1908,
+    2390
+   ],
+   "source": "content/swipe/products/IMG_0281.png"
+  },
+  "full/B022-P002c0.jpg": {
+   "kind": "cell",
+   "cell": "B022-P002-C0",
+   "before": [
+    323,
+    483,
+    814,
+    1007
+   ],
+   "after": [
+    323,
+    431,
+    814,
+    1007
+   ],
+   "source": "content/swipe/products/IMG_0290.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.019,
+    "added_past_old_crop": 0.771
+   },
+   "decision": "undecided"
+  },
+  "full/B022-P002c1.jpg": {
+   "kind": "cell",
+   "cell": "B022-P002-C1",
+   "before": [
+    1063,
+    483,
+    1614,
+    1023
+   ],
+   "after": [
+    1063,
+    431,
+    1614,
+    1023
+   ],
+   "source": "content/swipe/products/IMG_0290.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.012,
+    "added_past_old_crop": 0.958
+   },
+   "decision": "undecided"
+  },
+  "full/B022-P005c1.jpg": {
+   "kind": "cell",
+   "cell": "B022-P005-C1",
+   "before": [
+    1128,
+    480,
+    1553,
+    1368
+   ],
+   "after": [
+    1128,
+    404,
+    1553,
+    1368
+   ],
+   "source": "content/swipe/products/IMG_0293.png",
+   "compare": {
+    "kept": 0.997,
+    "added": 0.013,
+    "added_past_old_crop": 0.902
+   },
+   "decision": "undecided"
+  },
+  "full/B022-P012c2.jpg": {
+   "kind": "cell",
+   "cell": "B022-P012-C2",
+   "before": [
+    342,
+    1742,
+    796,
+    2666
+   ],
+   "after": [
+    342,
+    1682,
+    796,
+    2666
+   ],
+   "source": "content/swipe/products/IMG_0300.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.004,
+    "added_past_old_crop": 0.812
+   },
+   "decision": "undecided"
+  },
+  "full/B022-P013c1.jpg": {
+   "kind": "cell",
+   "cell": "B022-P013-C1",
+   "before": [
+    489,
+    1062,
+    962,
+    1607
+   ],
+   "after": [
+    489,
+    1029,
+    962,
+    1607
+   ],
+   "source": "content/swipe/products/IMG_0301.png",
+   "compare": {
+    "kept": 0.995,
+    "added": 0.002,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B022-P013c3.jpg": {
+   "kind": "cell",
+   "cell": "B022-P013-C3",
+   "before": [
+    1417,
+    1062,
+    1897,
+    1607
+   ],
+   "after": [
+    1417,
+    1062,
+    1897,
+    1609
+   ],
+   "source": "content/swipe/products/IMG_0301.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.002,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B022-P013c6.jpg": {
+   "kind": "cell",
+   "cell": "B022-P013-C6",
+   "before": [
+    953,
+    1933,
+    1315,
+    2451
+   ],
+   "after": [
+    953,
+    1897,
+    1315,
+    2451
+   ],
+   "source": "content/swipe/products/IMG_0301.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B022-P013c7.jpg": {
+   "kind": "cell",
+   "cell": "B022-P013-C7",
+   "before": [
+    1417,
+    1933,
+    1897,
+    2537
+   ],
+   "after": [
+    1417,
+    1900,
+    1897,
+    2537
+   ],
+   "source": "content/swipe/products/IMG_0301.png",
+   "compare": {
+    "kept": 0.994,
+    "added": 0.004,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B022-P014c0.jpg": {
+   "kind": "cell",
+   "cell": "B022-P014-C0",
+   "before": [
+    119,
+    796,
+    405,
+    1301
+   ],
+   "after": [
+    119,
+    773,
+    405,
+    1301
+   ],
+   "source": "content/swipe/products/IMG_0302.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B022-P014c1.jpg": {
+   "kind": "cell",
+   "cell": "B022-P014-C1",
+   "before": [
+    488,
+    796,
+    949,
+    1355
+   ],
+   "after": [
+    488,
+    775,
+    949,
+    1355
+   ],
+   "source": "content/swipe/products/IMG_0302.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B022-P014c3.jpg": {
+   "kind": "cell",
+   "cell": "B022-P014-C3",
+   "before": [
+    1493,
+    796,
+    1882,
+    1303
+   ],
+   "after": [
+    1493,
+    773,
+    1882,
+    1303
+   ],
+   "source": "content/swipe/products/IMG_0302.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.0,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B022-P014c4.jpg": {
+   "kind": "cell",
+   "cell": "B022-P014-C4",
+   "before": [
+    93,
+    1641,
+    483,
+    2234
+   ],
+   "after": [
+    93,
+    1591,
+    483,
+    2234
+   ],
+   "source": "content/swipe/products/IMG_0302.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.005,
+    "added_past_old_crop": 0.579
+   },
+   "decision": "undecided"
+  },
+  "full/B022-P015c0.jpg": {
+   "kind": "cell",
+   "cell": "B022-P015-C0",
+   "before": [
+    25,
+    953,
+    507,
+    1492
+   ],
+   "after": [
+    25,
+    916,
+    507,
+    1492
+   ],
+   "source": "content/swipe/products/IMG_0303.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.01,
+    "added_past_old_crop": 0.371
+   },
+   "decision": "undecided"
+  },
+  "full/B022-P015c3.jpg": {
+   "kind": "cell",
+   "cell": "B022-P015-C3",
+   "before": [
+    1422,
+    953,
+    1903,
+    1560
+   ],
+   "after": [
+    1422,
+    916,
+    1903,
+    1560
+   ],
+   "source": "content/swipe/products/IMG_0303.png",
+   "compare": {
+    "kept": 0.679,
+    "added": 0.005,
+    "added_past_old_crop": 0.061
+   },
+   "decision": "undecided"
+  },
+  "full/B022-P015c5.jpg": {
+   "kind": "cell",
+   "cell": "B022-P015-C5",
+   "before": [
+    584,
+    1828,
+    959,
+    2314
+   ],
+   "after": [
+    584,
+    1784,
+    959,
+    2314
+   ],
+   "source": "content/swipe/products/IMG_0303.png",
+   "compare": {
+    "kept": 1.0,
+    "added": 0.004,
+    "added_past_old_crop": 0.29
+   },
+   "decision": "undecided"
+  },
+  "full/B022-P015c7.jpg": {
+   "kind": "cell",
+   "cell": "B022-P015-C7",
+   "before": [
+    1422,
+    1828,
+    1892,
+    2364
+   ],
+   "after": [
+    1422,
+    1784,
+    1892,
+    2364
+   ],
+   "source": "content/swipe/products/IMG_0303.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.002,
+    "added_past_old_crop": 0.482
+   },
+   "decision": "undecided"
+  },
+  "full/B022-P016c5.jpg": {
+   "kind": "cell",
+   "cell": "B022-P016-C5",
+   "before": [
+    490,
+    1659,
+    971,
+    2203
+   ],
+   "after": [
+    490,
+    1594,
+    971,
+    2204
+   ],
+   "source": "content/swipe/products/IMG_0304.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.045,
+    "added_past_old_crop": 0.984
+   },
+   "decision": "undecided"
+  },
+  "full/B022-P016c7.jpg": {
+   "kind": "cell",
+   "cell": "B022-P016-C7",
+   "before": [
+    1420,
+    1659,
+    1901,
+    2276
+   ],
+   "after": [
+    1420,
+    1626,
+    1901,
+    2276
+   ],
+   "source": "content/swipe/products/IMG_0304.png",
+   "compare": {
+    "kept": 0.663,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B023-P008c0.jpg": {
+   "kind": "cell",
+   "cell": "B023-P008-C0",
+   "before": [
+    0,
+    301,
+    649,
+    1273
+   ],
+   "after": [
+    0,
+    301,
+    670,
+    1471
+   ],
+   "source": "content/swipe/products/IMG_0318.png",
+   "compare": {
+    "kept": 0.997,
+    "added": 0.003,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B023-P009c4.jpg": {
+   "kind": "cell",
+   "cell": "B023-P009-C4",
+   "before": [
+    619,
+    1368,
+    1284,
+    2369
+   ],
+   "after": [
+    618,
+    1366,
+    1908,
+    2370
+   ],
+   "source": "content/swipe/products/IMG_0319.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.001,
+    "added_past_old_crop": 0.817
+   },
+   "decision": "undecided"
+  },
+  "full/B023-P009-1c0.jpg": {
+   "kind": "cell",
+   "cell": "B023-P009-I1-C0",
+   "before": [
+    1256,
+    408,
+    1908,
+    1385
+   ],
+   "after": [
+    424,
+    408,
+    1908,
+    1386
+   ],
+   "source": "content/swipe/products/IMG_0320.png",
+   "kept_old": "the widened cell took in a neighbouring tile; the old cut kept",
+   "compare": {
+    "kept": 1.0,
+    "added": 0.0,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B023-P009-1c1.jpg": {
+   "kind": "cell",
+   "cell": "B023-P009-I1-C1",
+   "before": [
+    0,
+    1491,
+    1861,
+    2500
+   ],
+   "after": [
+    0,
+    1366,
+    1861,
+    2539
+   ],
+   "source": "content/swipe/products/IMG_0320.png",
+   "compare": null,
+   "decision": "undecided",
+   "kept_old": "the widened cell took in a neighbouring tile; the old cut kept"
+  },
+  "full/B023-P010c0.jpg": {
+   "kind": "cell",
+   "cell": "B023-P010-C0",
+   "before": [
+    0,
+    223,
+    649,
+    1230
+   ],
+   "after": [
+    0,
+    211,
+    1908,
+    1258
+   ],
+   "source": "content/swipe/products/IMG_0321.png",
+   "compare": {
+    "kept": 1.0,
+    "added": 0.128,
+    "added_past_old_crop": 1.0
+   },
+   "decision": "undecided"
+  },
+  "full/B023-P010c1.jpg": {
+   "kind": "cell",
+   "cell": "B023-P010-C1",
+   "before": [
+    619,
+    244,
+    1284,
+    1230
+   ],
+   "after": [
+    0,
+    211,
+    1908,
+    1258
+   ],
+   "source": "content/swipe/products/IMG_0321.png",
+   "compare": {
+    "kept": 0.996,
+    "added": 0.002,
+    "added_past_old_crop": 0.791
+   },
+   "decision": "undecided"
+  },
+  "full/B023-P010c2.jpg": {
+   "kind": "cell",
+   "cell": "B023-P010-C2",
+   "before": [
+    1255,
+    223,
+    1908,
+    1230
+   ],
+   "after": [
+    0,
+    211,
+    1908,
+    1258
+   ],
+   "source": "content/swipe/products/IMG_0321.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.002,
+    "added_past_old_crop": 0.979
+   },
+   "decision": "undecided"
+  },
+  "full/B023-P014c1.jpg": {
+   "kind": "cell",
+   "cell": "B023-P014-C1",
+   "before": [
+    619,
+    269,
+    1284,
+    1264
+   ],
+   "after": [
+    572,
+    269,
+    1908,
+    1265
+   ],
+   "source": "content/swipe/products/IMG_0327.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.003,
+    "added_past_old_crop": 0.912
+   },
+   "decision": "undecided"
+  },
+  "full/B023-P014c3.jpg": {
+   "kind": "cell",
+   "cell": "B023-P014-C3",
+   "before": [
+    5,
+    1407,
+    649,
+    2380
+   ],
+   "after": [
+    5,
+    1406,
+    650,
+    2382
+   ],
+   "source": "content/swipe/products/IMG_0327.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.0,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B023-P015c0.jpg": {
+   "kind": "cell",
+   "cell": "B023-P015-C0",
+   "before": [
+    0,
+    349,
+    650,
+    1295
+   ],
+   "after": [
+    0,
+    332,
+    1908,
+    1318
+   ],
+   "source": "content/swipe/products/IMG_0328.png",
+   "compare": {
+    "kept": 0.773,
+    "added": 0.002,
+    "added_past_old_crop": 0.829
+   },
+   "decision": "undecided"
+  },
+  "full/B023-P015c3.jpg": {
+   "kind": "cell",
+   "cell": "B023-P015-C3",
+   "before": [
+    0,
+    1435,
+    650,
+    2413
+   ],
+   "after": [
+    0,
+    1434,
+    670,
+    2415
+   ],
+   "source": "content/swipe/products/IMG_0328.png",
+   "compare": {
+    "kept": 0.995,
+    "added": 0.002,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B023-P015c4.jpg": {
+   "kind": "cell",
+   "cell": "B023-P015-C4",
+   "before": [
+    622,
+    1572,
+    1286,
+    2415
+   ],
+   "after": [
+    0,
+    1572,
+    1908,
+    2431
+   ],
+   "source": "content/swipe/products/IMG_0328.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.002,
+    "added_past_old_crop": 0.886
+   },
+   "decision": "undecided"
+  },
+  "full/B023-P015-1c1.jpg": {
+   "kind": "cell",
+   "cell": "B023-P015-I1-C1",
+   "before": [
+    624,
+    419,
+    1280,
+    1352
+   ],
+   "after": [
+    0,
+    417,
+    1280,
+    1352
+   ],
+   "source": "content/swipe/products/IMG_0329.png",
+   "compare": {
+    "kept": 1.0,
+    "added": 0.0,
+    "added_past_old_crop": 0.692
+   },
+   "decision": "undecided"
+  },
+  "full/B023-P016c0.jpg": {
+   "kind": "cell",
+   "cell": "B023-P016-C0",
+   "before": [
+    0,
+    480,
+    670,
+    1471
+   ],
+   "after": [
+    0,
+    427,
+    670,
+    1471
+   ],
+   "source": "content/swipe/products/IMG_0330.png",
+   "compare": {
+    "kept": 0.997,
+    "added": 0.008,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B023-P017c1.jpg": {
+   "kind": "cell",
+   "cell": "B023-P017-C1",
+   "before": [
+    624,
+    442,
+    1280,
+    1386
+   ],
+   "after": [
+    623,
+    324,
+    1893,
+    1386
+   ],
+   "source": "content/swipe/products/IMG_0331.png",
+   "compare": {
+    "kept": 0.996,
+    "added": 0.002,
+    "added_past_old_crop": 0.515
+   },
+   "decision": "undecided"
+  },
+  "full/B023-P017c3.jpg": {
+   "kind": "cell",
+   "cell": "B023-P017-C3",
+   "before": [
+    0,
+    1504,
+    644,
+    2499
+   ],
+   "after": [
+    0,
+    1441,
+    645,
+    2499
+   ],
+   "source": "content/swipe/products/IMG_0331.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.009,
+    "added_past_old_crop": 0.862
+   },
+   "decision": "undecided"
+  },
+  "full/B023-P017c4.jpg": {
+   "kind": "cell",
+   "cell": "B023-P017-C4",
+   "before": [
+    624,
+    1504,
+    1280,
+    2499
+   ],
+   "after": [
+    623,
+    1441,
+    1908,
+    2499
+   ],
+   "source": "content/swipe/products/IMG_0331.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.02,
+    "added_past_old_crop": 0.749
+   },
+   "decision": "undecided"
+  },
+  "full/B023-P017c5.jpg": {
+   "kind": "cell",
+   "cell": "B023-P017-C5",
+   "before": [
+    1259,
+    1504,
+    1908,
+    2499
+   ],
+   "after": [
+    1258,
+    1441,
+    1908,
+    2499
+   ],
+   "source": "content/swipe/products/IMG_0331.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.005,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B024-P001c2.jpg": {
+   "kind": "cell",
+   "cell": "B024-P001-C2",
+   "before": [
+    1259,
+    347,
+    1908,
+    1341
+   ],
+   "after": [
+    635,
+    291,
+    1908,
+    1341
+   ],
+   "source": "content/swipe/products/IMG_0332.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.001,
+    "added_past_old_crop": 0.676
+   },
+   "decision": "undecided"
+  },
+  "full/B024-P002c3.jpg": {
+   "kind": "cell",
+   "cell": "B024-P002-C3",
+   "before": [
+    0,
+    1402,
+    644,
+    2397
+   ],
+   "after": [
+    0,
+    1349,
+    1273,
+    2397
+   ],
+   "source": "content/swipe/products/IMG_0333.png",
+   "compare": {
+    "kept": 0.997,
+    "added": 0.002,
+    "added_past_old_crop": 0.749
+   },
+   "decision": "undecided"
+  },
+  "full/B024-P003c0.jpg": {
+   "kind": "cell",
+   "cell": "B024-P003-C0",
+   "before": [
+    0,
+    324,
+    644,
+    1318
+   ],
+   "after": [
+    0,
+    256,
+    1273,
+    1318
+   ],
+   "source": "content/swipe/products/IMG_0334.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.01,
+    "added_past_old_crop": 0.925
+   },
+   "decision": "undecided"
+  },
+  "full/B024-P005c0.jpg": {
+   "kind": "cell",
+   "cell": "B024-P005-C0",
+   "before": [
+    0,
+    290,
+    644,
+    1289
+   ],
+   "after": [
+    0,
+    228,
+    1908,
+    1290
+   ],
+   "source": "content/swipe/products/IMG_0336.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.005,
+    "added_past_old_crop": 0.997
+   },
+   "decision": "undecided"
+  },
+  "full/B024-P005c1.jpg": {
+   "kind": "cell",
+   "cell": "B024-P005-C1",
+   "before": [
+    624,
+    290,
+    1280,
+    1289
+   ],
+   "after": [
+    0,
+    239,
+    1908,
+    1290
+   ],
+   "source": "content/swipe/products/IMG_0336.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.007,
+    "added_past_old_crop": 0.743
+   },
+   "decision": "undecided"
+  },
+  "full/B024-P005c2.jpg": {
+   "kind": "cell",
+   "cell": "B024-P005-C2",
+   "before": [
+    1259,
+    290,
+    1908,
+    1289
+   ],
+   "after": [
+    0,
+    239,
+    1908,
+    1290
+   ],
+   "source": "content/swipe/products/IMG_0336.png",
+   "compare": {
+    "kept": 0.996,
+    "added": 0.0,
+    "added_past_old_crop": 1.0
+   },
+   "decision": "undecided"
+  },
+  "full/B024-P005c4.jpg": {
+   "kind": "cell",
+   "cell": "B024-P005-C4",
+   "before": [
+    753,
+    1413,
+    1280,
+    2369
+   ],
+   "after": [
+    635,
+    1346,
+    1908,
+    2370
+   ],
+   "source": "content/swipe/products/IMG_0336.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.007,
+    "added_past_old_crop": 0.975
+   },
+   "decision": "undecided"
+  },
+  "full/B024-P005c5.jpg": {
+   "kind": "cell",
+   "cell": "B024-P005-C5",
+   "before": [
+    1259,
+    1413,
+    1908,
+    2408
+   ],
+   "after": [
+    635,
+    1346,
+    1908,
+    2410
+   ],
+   "source": "content/swipe/products/IMG_0336.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.002,
+    "added_past_old_crop": 0.745
+   },
+   "decision": "undecided"
+  },
+  "full/B024-P005-1c1.jpg": {
+   "kind": "cell",
+   "cell": "B024-P005-I1-C1",
+   "before": [
+    754,
+    467,
+    1276,
+    1433
+   ],
+   "after": [
+    738,
+    412,
+    1908,
+    1433
+   ],
+   "source": "content/swipe/products/IMG_0337.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.002,
+    "added_past_old_crop": 0.765
+   },
+   "decision": "undecided"
+  },
+  "full/B024-P005-1c2.jpg": {
+   "kind": "cell",
+   "cell": "B024-P005-I1-C2",
+   "before": [
+    1256,
+    467,
+    1908,
+    1481
+   ],
+   "after": [
+    738,
+    412,
+    1908,
+    1481
+   ],
+   "source": "content/swipe/products/IMG_0337.png",
+   "compare": {
+    "kept": 0.996,
+    "added": 0.0,
+    "added_past_old_crop": 0.659
+   },
+   "decision": "undecided"
+  },
+  "full/B024-P009c4.jpg": {
+   "kind": "cell",
+   "cell": "B024-P009-C4",
+   "before": [
+    737,
+    1771,
+    1153,
+    2366
+   ],
+   "after": [
+    736,
+    1771,
+    1155,
+    2367
+   ],
+   "source": "content/swipe/products/IMG_0341.png",
+   "compare": {
+    "kept": 1.0,
+    "added": 0.002,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B025-P001-V2.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    355,
+    662,
+    1066,
+    1578
+   ],
+   "after": [
+    314,
+    655,
+    1074,
+    1597
+   ],
+   "source": "content/swipe/products/IMG_0344.png"
+  },
+  "full/B025-P004c0.jpg": {
+   "kind": "cell",
+   "cell": "B025-P004-C0",
+   "before": [
+    91,
+    658,
+    613,
+    1092
+   ],
+   "after": [
+    91,
+    551,
+    613,
+    1092
+   ],
+   "source": "content/swipe/products/IMG_0348.png",
+   "compare": {
+    "kept": 1.0,
+    "added": 0.239,
+    "added_past_old_crop": 0.425
+   },
+   "decision": "undecided"
+  },
+  "full/B025-P004c1.jpg": {
+   "kind": "cell",
+   "cell": "B025-P004-C1",
+   "before": [
+    695,
+    658,
+    1220,
+    1108
+   ],
+   "after": [
+    695,
+    558,
+    1220,
+    1108
+   ],
+   "source": "content/swipe/products/IMG_0348.png",
+   "compare": {
+    "kept": 0.995,
+    "added": 0.094,
+    "added_past_old_crop": 0.998
+   },
+   "decision": "undecided"
+  },
+  "full/B025-P004c2.jpg": {
+   "kind": "cell",
+   "cell": "B025-P004-C2",
+   "before": [
+    1286,
+    658,
+    1903,
+    1174
+   ],
+   "after": [
+    1286,
+    549,
+    1903,
+    1174
+   ],
+   "source": "content/swipe/products/IMG_0348.png",
+   "compare": {
+    "kept": 1.0,
+    "added": 0.142,
+    "added_past_old_crop": 0.995
+   },
+   "decision": "undecided"
+  },
+  "full/B025-P004c3.jpg": {
+   "kind": "cell",
+   "cell": "B025-P004-C3",
+   "before": [
+    86,
+    1567,
+    606,
+    1994
+   ],
+   "after": [
+    86,
+    1436,
+    606,
+    1994
+   ],
+   "source": "content/swipe/products/IMG_0348.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.15,
+    "added_past_old_crop": 0.979
+   },
+   "decision": "undecided"
+  },
+  "full/B025-P004c4.jpg": {
+   "kind": "cell",
+   "cell": "B025-P004-C4",
+   "before": [
+    713,
+    1567,
+    1199,
+    1985
+   ],
+   "after": [
+    713,
+    1439,
+    1199,
+    1985
+   ],
+   "source": "content/swipe/products/IMG_0348.png",
+   "compare": {
+    "kept": 0.996,
+    "added": 0.14,
+    "added_past_old_crop": 0.999
+   },
+   "decision": "undecided"
+  },
+  "full/B025-P004c5.jpg": {
+   "kind": "cell",
+   "cell": "B025-P004-C5",
+   "before": [
+    1324,
+    1567,
+    1813,
+    1987
+   ],
+   "after": [
+    1324,
+    1439,
+    1813,
+    1987
+   ],
+   "source": "content/swipe/products/IMG_0348.png",
+   "compare": {
+    "kept": 0.997,
+    "added": 0.141,
+    "added_past_old_crop": 0.998
+   },
+   "decision": "undecided"
+  },
+  "full/B025-P005c1.jpg": {
+   "kind": "cell",
+   "cell": "B025-P005-C1",
+   "before": [
+    692,
+    546,
+    1209,
+    1080
+   ],
+   "after": [
+    692,
+    520,
+    1209,
+    1080
+   ],
+   "source": "content/swipe/products/IMG_0349.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.0,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B025-P005c5.jpg": {
+   "kind": "cell",
+   "cell": "B025-P005-C5",
+   "before": [
+    1377,
+    1407,
+    1754,
+    2020
+   ],
+   "after": [
+    1377,
+    1304,
+    1754,
+    2020
+   ],
+   "source": "content/swipe/products/IMG_0349.png",
+   "compare": {
+    "kept": 1.0,
+    "added": 0.084,
+    "added_past_old_crop": 0.967
+   },
+   "decision": "undecided"
+  },
+  "full/B025-P006c4.jpg": {
+   "kind": "cell",
+   "cell": "B025-P006-C4",
+   "before": [
+    769,
+    1411,
+    1184,
+    1927
+   ],
+   "after": [
+    752,
+    1411,
+    1184,
+    1927
+   ],
+   "source": "content/swipe/products/IMG_0350.png",
+   "compare": {
+    "kept": 0.997,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B025-P007c2.jpg": {
+   "kind": "cell",
+   "cell": "B025-P007-C2",
+   "before": [
+    1296,
+    510,
+    1833,
+    1071
+   ],
+   "after": [
+    1296,
+    486,
+    1833,
+    1071
+   ],
+   "source": "content/swipe/products/IMG_0352.png",
+   "compare": {
+    "kept": 1.0,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B025-P007c3.jpg": {
+   "kind": "cell",
+   "cell": "B025-P007-C3",
+   "before": [
+    73,
+    1386,
+    619,
+    1940
+   ],
+   "after": [
+    73,
+    1352,
+    619,
+    1940
+   ],
+   "source": "content/swipe/products/IMG_0352.png",
+   "compare": {
+    "kept": 0.997,
+    "added": 0.0,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B025-P007c4.jpg": {
+   "kind": "cell",
+   "cell": "B025-P007-C4",
+   "before": [
+    694,
+    1386,
+    1214,
+    1940
+   ],
+   "after": [
+    694,
+    1358,
+    1214,
+    1940
+   ],
+   "source": "content/swipe/products/IMG_0352.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.002,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B025-P007c5.jpg": {
+   "kind": "cell",
+   "cell": "B025-P007-C5",
+   "before": [
+    1341,
+    1386,
+    1788,
+    1994
+   ],
+   "after": [
+    1341,
+    1281,
+    1788,
+    1994
+   ],
+   "source": "content/swipe/products/IMG_0352.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.076,
+    "added_past_old_crop": 0.993
+   },
+   "decision": "undecided"
+  },
+  "full/B025-P007-1c0.jpg": {
+   "kind": "cell",
+   "cell": "B025-P007-I1-C0",
+   "before": [
+    116,
+    533,
+    572,
+    1161
+   ],
+   "after": [
+    116,
+    434,
+    572,
+    1161
+   ],
+   "source": "content/swipe/products/IMG_0353.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.08,
+    "added_past_old_crop": 0.982
+   },
+   "decision": "undecided"
+  },
+  "full/B025-P007-1c1.jpg": {
+   "kind": "cell",
+   "cell": "B025-P007-I1-C1",
+   "before": [
+    728,
+    533,
+    1180,
+    1159
+   ],
+   "after": [
+    728,
+    440,
+    1180,
+    1159
+   ],
+   "source": "content/swipe/products/IMG_0353.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.075,
+    "added_past_old_crop": 0.941
+   },
+   "decision": "undecided"
+  },
+  "full/B025-P007-2c0.jpg": {
+   "kind": "cell",
+   "cell": "B025-P007-I2-C0",
+   "before": [
+    114,
+    658,
+    581,
+    1076
+   ],
+   "after": [
+    114,
+    599,
+    581,
+    1076
+   ],
+   "source": "content/swipe/products/IMG_0354.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.036,
+    "added_past_old_crop": 0.944
+   },
+   "decision": "undecided"
+  },
+  "full/B025-P007-2c1.jpg": {
+   "kind": "cell",
+   "cell": "B025-P007-I2-C1",
+   "before": [
+    706,
+    658,
+    1206,
+    1099
+   ],
+   "after": [
+    706,
+    614,
+    1206,
+    1099
+   ],
+   "source": "content/swipe/products/IMG_0354.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.016,
+    "added_past_old_crop": 0.82
+   },
+   "decision": "undecided"
+  },
+  "full/B025-P007-2c2.jpg": {
+   "kind": "cell",
+   "cell": "B025-P007-I2-C2",
+   "before": [
+    1320,
+    658,
+    1813,
+    1096
+   ],
+   "after": [
+    1320,
+    614,
+    1813,
+    1096
+   ],
+   "source": "content/swipe/products/IMG_0354.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.011,
+    "added_past_old_crop": 0.887
+   },
+   "decision": "undecided"
+  },
+  "full/B026-P001-1c0.jpg": {
+   "kind": "cell",
+   "cell": "B026-P001-I1-C0",
+   "before": [
+    263,
+    170,
+    696,
+    1538
+   ],
+   "after": [
+    263,
+    118,
+    696,
+    1538
+   ],
+   "source": "content/swipe/products/IMG_0358.png",
+   "compare": {
+    "kept": 0.989,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B026-P001-1c1.jpg": {
+   "kind": "cell",
+   "cell": "B026-P001-I1-C1",
+   "before": [
+    939,
+    170,
+    1908,
+    1609
+   ],
+   "after": [
+    939,
+    118,
+    1908,
+    1609
+   ],
+   "source": "content/swipe/products/IMG_0358.png",
+   "compare": null,
+   "decision": "undecided"
+  },
+  "full/B026-P001-2c0.jpg": {
+   "kind": "cell",
+   "cell": "B026-P001-I2-C0",
+   "before": [
+    170,
+    170,
+    835,
+    1604
+   ],
+   "after": [
+    170,
+    126,
+    835,
+    1604
+   ],
+   "source": "content/swipe/products/IMG_0359.png",
+   "compare": null,
+   "decision": "undecided"
+  },
+  "full/B026-P001-2c1.jpg": {
+   "kind": "cell",
+   "cell": "B026-P001-I2-C1",
+   "before": [
+    1207,
+    170,
+    1908,
+    1554
+   ],
+   "after": [
+    1207,
+    126,
+    1908,
+    1554
+   ],
+   "source": "content/swipe/products/IMG_0359.png",
+   "compare": {
+    "kept": 0.974,
+    "added": 0.003,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B026-P002c0.jpg": {
+   "kind": "cell",
+   "cell": "B026-P002-C0",
+   "before": [
+    0,
+    517,
+    862,
+    1927
+   ],
+   "after": [
+    0,
+    454,
+    862,
+    1927
+   ],
+   "source": "content/swipe/products/IMG_0360.png",
+   "compare": null,
+   "decision": "undecided"
+  },
+  "full/B026-P002c1.jpg": {
+   "kind": "cell",
+   "cell": "B026-P002-C1",
+   "before": [
+    1125,
+    517,
+    1908,
+    1881
+   ],
+   "after": [
+    1125,
+    454,
+    1908,
+    1881
+   ],
+   "source": "content/swipe/products/IMG_0360.png",
+   "compare": {
+    "kept": 0.973,
+    "added": 0.006,
+    "added_past_old_crop": 0.378
+   },
+   "decision": "undecided"
+  },
+  "full/B026-P003c1.jpg": {
+   "kind": "cell",
+   "cell": "B026-P003-C1",
+   "before": [
+    1182,
+    789,
+    1908,
+    2204
+   ],
+   "after": [
+    1182,
+    728,
+    1908,
+    2204
+   ],
+   "source": "content/swipe/products/IMG_0361.png",
+   "compare": null,
+   "decision": "undecided"
+  },
+  "full/B026-P004c0.jpg": {
+   "kind": "cell",
+   "cell": "B026-P004-C0",
+   "before": [
+    82,
+    969,
+    826,
+    2389
+   ],
+   "after": [
+    82,
+    903,
+    826,
+    2389
+   ],
+   "source": "content/swipe/products/IMG_0362.png",
+   "compare": null,
+   "decision": "undecided"
+  },
+  "full/B026-P004c1.jpg": {
+   "kind": "cell",
+   "cell": "B026-P004-C1",
+   "before": [
+    1221,
+    1032,
+    1908,
+    2344
+   ],
+   "after": [
+    1221,
+    969,
+    1908,
+    2344
+   ],
+   "source": "content/swipe/products/IMG_0362.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.001,
+    "added_past_old_crop": 0.325
+   },
+   "decision": "undecided"
+  },
+  "full/B026-P005c0.jpg": {
+   "kind": "cell",
+   "cell": "B026-P005-C0",
+   "before": [
+    0,
+    1016,
+    966,
+    2440
+   ],
+   "after": [
+    0,
+    957,
+    1173,
+    2440
+   ],
+   "source": "content/swipe/products/IMG_0363.png",
+   "compare": null,
+   "decision": "undecided"
+  },
+  "full/B026-P005c1.jpg": {
+   "kind": "cell",
+   "cell": "B026-P005-C1",
+   "before": [
+    939,
+    1016,
+    1908,
+    2440
+   ],
+   "after": [
+    939,
+    957,
+    1908,
+    2440
+   ],
+   "source": "content/swipe/products/IMG_0363.png",
+   "compare": null,
+   "decision": "undecided"
+  },
+  "full/B026-P006c0.jpg": {
+   "kind": "cell",
+   "cell": "B026-P006-C0",
+   "before": [
+    0,
+    862,
+    966,
+    2285
+   ],
+   "after": [
+    0,
+    801,
+    966,
+    2285
+   ],
+   "source": "content/swipe/products/IMG_0364.png",
+   "compare": null,
+   "decision": "undecided"
+  },
+  "full/B026-P006c1.jpg": {
+   "kind": "cell",
+   "cell": "B026-P006-C1",
+   "before": [
+    1057,
+    862,
+    1872,
+    2274
+   ],
+   "after": [
+    1057,
+    801,
+    1872,
+    2274
+   ],
+   "source": "content/swipe/products/IMG_0364.png",
+   "compare": null,
+   "decision": "undecided"
+  },
+  "full/B026-P007c0.jpg": {
+   "kind": "cell",
+   "cell": "B026-P007-C0",
+   "before": [
+    0,
+    744,
+    966,
+    2165
+   ],
+   "after": [
+    0,
+    678,
+    966,
+    2165
+   ],
+   "source": "content/swipe/products/IMG_0365.png",
+   "compare": null,
+   "decision": "undecided"
+  },
+  "full/B026-P007c1.jpg": {
+   "kind": "cell",
+   "cell": "B026-P007-C1",
+   "before": [
+    939,
+    744,
+    1908,
+    2165
+   ],
+   "after": [
+    939,
+    678,
+    1908,
+    2165
+   ],
+   "source": "content/swipe/products/IMG_0365.png",
+   "compare": null,
+   "decision": "undecided"
+  },
+  "full/B026-P008c0.jpg": {
+   "kind": "cell",
+   "cell": "B026-P008-C0",
+   "before": [
+    327,
+    994,
+    706,
+    2353
+   ],
+   "after": [
+    327,
+    926,
+    706,
+    2353
+   ],
+   "source": "content/swipe/products/IMG_0366.png",
+   "compare": {
+    "kept": 0.968,
+    "added": 0.008,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B026-P008c1.jpg": {
+   "kind": "cell",
+   "cell": "B026-P008-C1",
+   "before": [
+    1112,
+    994,
+    1908,
+    2401
+   ],
+   "after": [
+    1112,
+    926,
+    1908,
+    2401
+   ],
+   "source": "content/swipe/products/IMG_0366.png",
+   "compare": null,
+   "decision": "undecided"
+  },
+  "full/B027-P002.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    634,
+    203,
+    1277,
+    2747
+   ],
+   "after": [
+    533,
+    201,
+    1282,
+    2747
+   ],
+   "source": "content/swipe/products/IMG_0371.png"
+  },
+  "full/B027-P005.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    0,
+    22,
+    1908,
+    2723
+   ],
+   "after": [
+    0,
+    20,
+    1908,
+    2736
+   ],
+   "source": "content/swipe/products/IMG_0375.png"
+  },
+  "full/B027-P006.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    406,
+    159,
+    1292,
+    2386
+   ],
+   "after": [
+    0,
+    158,
+    1293,
+    2388
+   ],
+   "source": "content/swipe/products/IMG_0376.png"
+  },
+  "full/B028-P001.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    411,
+    105,
+    1753,
+    2669
+   ],
+   "after": [
+    411,
+    103,
+    1753,
+    2736
+   ],
+   "source": "content/swipe/products/IMG_0384.png"
+  },
+  "full/B028-P002.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    22,
+    105,
+    1908,
+    2669
+   ],
+   "after": [
+    22,
+    103,
+    1908,
+    2736
+   ],
+   "source": "content/swipe/products/IMG_0385.png"
+  },
+  "full/B028-P008.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    0,
+    19,
+    1908,
+    2713
+   ],
+   "after": [
+    0,
+    18,
+    1908,
+    2747
+   ],
+   "source": "content/swipe/products/IMG_0392.png"
+  },
+  "full/B028-P010-3c1.jpg": {
+   "kind": "cell",
+   "cell": "B028-P010-I3-C1",
+   "before": [
+    948,
+    853,
+    1908,
+    1098
+   ],
+   "after": [
+    917,
+    853,
+    1908,
+    1167
+   ],
+   "source": "content/swipe/products/IMG_0398.png",
+   "compare": null,
+   "decision": "undecided"
+  },
+  "full/B028-P011c0.jpg": {
+   "kind": "cell",
+   "cell": "B028-P011-C0",
+   "before": [
+    0,
+    797,
+    888,
+    1992
+   ],
+   "after": [
+    0,
+    537,
+    902,
+    1992
+   ],
+   "source": "content/swipe/products/IMG_0399.png",
+   "compare": null,
+   "decision": "undecided"
+  },
+  "full/B028-P011c1.jpg": {
+   "kind": "cell",
+   "cell": "B028-P011-C1",
+   "before": [
+    1084,
+    670,
+    1833,
+    2008
+   ],
+   "after": [
+    1084,
+    600,
+    1833,
+    2008
+   ],
+   "source": "content/swipe/products/IMG_0399.png",
+   "compare": {
+    "kept": 1.0,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B030-P007c3.jpg": {
+   "kind": "cell",
+   "cell": "B030-P007-C3",
+   "before": [
+    11,
+    1766,
+    645,
+    2423
+   ],
+   "after": [
+    0,
+    1700,
+    645,
+    2423
+   ],
+   "source": "content/swipe/products/IMG_0413.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.014,
+    "added_past_old_crop": 0.889
+   },
+   "decision": "undecided"
+  },
+  "full/B030-P007c4.jpg": {
+   "kind": "cell",
+   "cell": "B030-P007-C4",
+   "before": [
+    636,
+    1766,
+    1270,
+    2525
+   ],
+   "after": [
+    635,
+    1700,
+    1270,
+    2525
+   ],
+   "source": "content/swipe/products/IMG_0413.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.002,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B030-P009.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    1,
+    665,
+    980,
+    1756
+   ],
+   "after": [
+    0,
+    522,
+    982,
+    1757
+   ],
+   "source": "content/swipe/products/IMG_0418.png"
+  },
+  "full/B031-P005.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    208,
+    536,
+    764,
+    1741
+   ],
+   "after": [
+    168,
+    522,
+    778,
+    1742
+   ],
+   "source": "content/swipe/products/IMG_0429.png"
+  },
+  "full/B031-P007.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    208,
+    546,
+    754,
+    1741
+   ],
+   "after": [
+    206,
+    545,
+    777,
+    1742
+   ],
+   "source": "content/swipe/products/IMG_0431.png"
+  },
+  "full/B032-P003c0.jpg": {
+   "kind": "cell",
+   "cell": "B032-P003-C0",
+   "before": [
+    170,
+    595,
+    850,
+    1944
+   ],
+   "after": [
+    170,
+    532,
+    850,
+    1944
+   ],
+   "source": "content/swipe/products/IMG_0438.png",
+   "compare": {
+    "kept": 0.996,
+    "added": 0.019,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B032-P003c1.jpg": {
+   "kind": "cell",
+   "cell": "B032-P003-C1",
+   "before": [
+    940,
+    658,
+    1876,
+    1924
+   ],
+   "after": [
+    940,
+    595,
+    1876,
+    1924
+   ],
+   "source": "content/swipe/products/IMG_0438.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.006,
+    "added_past_old_crop": 0.936
+   },
+   "decision": "undecided"
+  },
+  "full/B032-P004.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    504,
+    287,
+    1318,
+    1876
+   ],
+   "after": [
+    466,
+    286,
+    1319,
+    1878
+   ],
+   "source": "content/swipe/products/IMG_0440.png"
+  },
+  "full/B033-P002-1c0.jpg": {
+   "kind": "cell",
+   "cell": "B033-P002-I1-C0",
+   "before": [
+    266,
+    703,
+    713,
+    1994
+   ],
+   "after": [
+    266,
+    643,
+    713,
+    1994
+   ],
+   "source": "content/swipe/products/IMG_0443.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.0,
+    "added_past_old_crop": 0.103
+   },
+   "decision": "undecided"
+  },
+  "full/B033-P003c0.jpg": {
+   "kind": "cell",
+   "cell": "B033-P003-C0",
+   "before": [
+    259,
+    1023,
+    706,
+    2331
+   ],
+   "after": [
+    259,
+    957,
+    706,
+    2331
+   ],
+   "source": "content/swipe/products/IMG_0444.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.002,
+    "added_past_old_crop": 0.164
+   },
+   "decision": "undecided"
+  },
+  "full/B033-P003c1.jpg": {
+   "kind": "cell",
+   "cell": "B033-P003-C1",
+   "before": [
+    962,
+    1023,
+    1860,
+    2331
+   ],
+   "after": [
+    962,
+    957,
+    1860,
+    2331
+   ],
+   "source": "content/swipe/products/IMG_0444.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.002,
+    "added_past_old_crop": 0.187
+   },
+   "decision": "undecided"
+  },
+  "full/B033-P005c0.jpg": {
+   "kind": "cell",
+   "cell": "B033-P005-C0",
+   "before": [
+    53,
+    911,
+    965,
+    2251
+   ],
+   "after": [
+    21,
+    852,
+    965,
+    2251
+   ],
+   "source": "content/swipe/products/IMG_0446.png",
+   "compare": {
+    "kept": 0.988,
+    "added": 0.195,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B034-P001c0.jpg": {
+   "kind": "cell",
+   "cell": "B034-P001-C0",
+   "before": [
+    279,
+    921,
+    699,
+    2233
+   ],
+   "after": [
+    279,
+    864,
+    699,
+    2233
+   ],
+   "source": "content/swipe/products/IMG_0447.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B034-P001c1.jpg": {
+   "kind": "cell",
+   "cell": "B034-P001-C1",
+   "before": [
+    962,
+    861,
+    1860,
+    2235
+   ],
+   "after": [
+    962,
+    800,
+    1860,
+    2235
+   ],
+   "source": "content/swipe/products/IMG_0447.png",
+   "compare": null,
+   "decision": "undecided"
+  },
+  "full/B034-P003c1.jpg": {
+   "kind": "cell",
+   "cell": "B034-P003-C1",
+   "before": [
+    1116,
+    671,
+    1631,
+    1970
+   ],
+   "after": [
+    1116,
+    613,
+    1631,
+    1970
+   ],
+   "source": "content/swipe/products/IMG_0449.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.001,
+    "added_past_old_crop": 0.012
+   },
+   "decision": "undecided"
+  },
+  "full/B034-P004c1.jpg": {
+   "kind": "cell",
+   "cell": "B034-P004-C1",
+   "before": [
+    962,
+    1103,
+    1860,
+    2422
+   ],
+   "after": [
+    962,
+    1047,
+    1860,
+    2422
+   ],
+   "source": "content/swipe/products/IMG_0450.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.002,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B035-P001.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    543,
+    425,
+    1326,
+    2746
+   ],
+   "after": [
+    504,
+    424,
+    1328,
+    2747
+   ],
+   "source": "content/swipe/products/IMG_0451.png"
+  },
+  "full/B036-P001c1.jpg": {
+   "kind": "cell",
+   "cell": "B036-P001-C1",
+   "before": [
+    959,
+    1278,
+    1865,
+    2592
+   ],
+   "after": [
+    959,
+    1220,
+    1865,
+    2592
+   ],
+   "source": "content/swipe/products/IMG_0456.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.004,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B037-P004-1.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    253,
+    1218,
+    1654,
+    1794
+   ],
+   "after": [
+    225,
+    1184,
+    1673,
+    1803
+   ],
+   "source": "content/swipe/products/IMG_0471.png"
+  },
+  "full/B039-P004c0.jpg": {
+   "kind": "cell",
+   "cell": "B039-P004-C0",
+   "before": [
+    246,
+    328,
+    675,
+    997
+   ],
+   "after": [
+    246,
+    261,
+    675,
+    997
+   ],
+   "source": "content/swipe/products/IMG_0498.png",
+   "compare": {
+    "kept": 1.0,
+    "added": 0.038,
+    "added_past_old_crop": 0.901
+   },
+   "decision": "undecided"
+  },
+  "full/B039-P004c1.jpg": {
+   "kind": "cell",
+   "cell": "B039-P004-C1",
+   "before": [
+    761,
+    328,
+    1328,
+    999
+   ],
+   "after": [
+    761,
+    261,
+    1328,
+    999
+   ],
+   "source": "content/swipe/products/IMG_0498.png",
+   "compare": {
+    "kept": 1.0,
+    "added": 0.041,
+    "added_past_old_crop": 0.95
+   },
+   "decision": "undecided"
+  },
+  "full/B039-P004c3.jpg": {
+   "kind": "cell",
+   "cell": "B039-P004-C3",
+   "before": [
+    237,
+    1164,
+    673,
+    1819
+   ],
+   "after": [
+    200,
+    1087,
+    673,
+    1819
+   ],
+   "source": "content/swipe/products/IMG_0498.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.04,
+    "added_past_old_crop": 0.961
+   },
+   "decision": "undecided"
+  },
+  "full/B039-P004c4.jpg": {
+   "kind": "cell",
+   "cell": "B039-P004-C4",
+   "before": [
+    829,
+    1164,
+    1260,
+    1819
+   ],
+   "after": [
+    829,
+    1087,
+    1260,
+    1819
+   ],
+   "source": "content/swipe/products/IMG_0498.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.042,
+    "added_past_old_crop": 0.952
+   },
+   "decision": "undecided"
+  },
+  "full/B039-P004c5.jpg": {
+   "kind": "cell",
+   "cell": "B039-P004-C5",
+   "before": [
+    1346,
+    1164,
+    1854,
+    1821
+   ],
+   "after": [
+    1316,
+    1087,
+    1854,
+    1821
+   ],
+   "source": "content/swipe/products/IMG_0498.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.049,
+    "added_past_old_crop": 0.968
+   },
+   "decision": "undecided"
+  },
+  "full/B039-P004c6.jpg": {
+   "kind": "cell",
+   "cell": "B039-P004-C6",
+   "before": [
+    251,
+    1991,
+    472,
+    2506
+   ],
+   "after": [
+    251,
+    1913,
+    472,
+    2506
+   ],
+   "source": "content/swipe/products/IMG_0498.png",
+   "compare": {
+    "kept": 0.997,
+    "added": 0.036,
+    "added_past_old_crop": 0.993
+   },
+   "decision": "undecided"
+  },
+  "full/B039-P004c7.jpg": {
+   "kind": "cell",
+   "cell": "B039-P004-C7",
+   "before": [
+    840,
+    1991,
+    1066,
+    2506
+   ],
+   "after": [
+    840,
+    1913,
+    1066,
+    2506
+   ],
+   "source": "content/swipe/products/IMG_0498.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.033,
+    "added_past_old_crop": 0.964
+   },
+   "decision": "undecided"
+  },
+  "full/B039-P004c8.jpg": {
+   "kind": "cell",
+   "cell": "B039-P004-C8",
+   "before": [
+    1346,
+    1991,
+    1847,
+    2506
+   ],
+   "after": [
+    1346,
+    1913,
+    1847,
+    2506
+   ],
+   "source": "content/swipe/products/IMG_0498.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.053,
+    "added_past_old_crop": 0.95
+   },
+   "decision": "undecided"
+  },
+  "full/B039-P007.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    659,
+    501,
+    1391,
+    2651
+   ],
+   "after": [
+    0,
+    471,
+    1908,
+    2651
+   ],
+   "source": "content/swipe/products/IMG_0502.png"
+  },
+  "full/B040-P003.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    122,
+    112,
+    1908,
+    2596
+   ],
+   "after": [
+    0,
+    110,
+    1908,
+    2598
+   ],
+   "source": "content/swipe/products/IMG_0505.png"
+  },
+  "full/B040-P006.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    593,
+    514,
+    1324,
+    2572
+   ],
+   "after": [
+    0,
+    487,
+    1908,
+    2573
+   ],
+   "source": "content/swipe/products/IMG_0510.png"
+  },
+  "full/B041-P002.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    558,
+    98,
+    1908,
+    2686
+   ],
+   "after": [
+    0,
+    98,
+    1908,
+    2686
+   ],
+   "source": "content/swipe/products/IMG_0512.png"
+  },
+  "full/B042-P022.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    357,
+    660,
+    1531,
+    1936
+   ],
+   "after": [
+    339,
+    631,
+    1554,
+    1998
+   ],
+   "source": "content/swipe/products/IMG_0546.png"
+  },
+  "full/B042-P041.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    0,
+    22,
+    1908,
+    1141
+   ],
+   "after": [
+    0,
+    20,
+    1908,
+    1403
+   ],
+   "source": "content/swipe/products/IMG_0573.png"
+  },
+  "full/B043-P004-V2.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    1041,
+    1800,
+    1782,
+    2264
+   ],
+   "after": [
+    913,
+    1562,
+    1819,
+    2280
+   ],
+   "source": "content/swipe/products/IMG_0581.png"
+  },
+  "full/B043-P007-1c0.jpg": {
+   "kind": "cell",
+   "cell": "B043-P007-I1-C0",
+   "before": [
+    294,
+    435,
+    976,
+    1096
+   ],
+   "after": [
+    218,
+    435,
+    976,
+    1096
+   ],
+   "source": "content/swipe/products/IMG_0587.png",
+   "compare": {
+    "kept": 0.997,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B043-P007-1c2.jpg": {
+   "kind": "cell",
+   "cell": "B043-P007-I1-C2",
+   "before": [
+    294,
+    1530,
+    797,
+    2214
+   ],
+   "after": [
+    218,
+    1530,
+    797,
+    2214
+   ],
+   "source": "content/swipe/products/IMG_0587.png",
+   "compare": {
+    "kept": 0.997,
+    "added": 0.002,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B044-P001c1.jpg": {
+   "kind": "cell",
+   "cell": "B044-P001-C1",
+   "before": [
+    945,
+    164,
+    1908,
+    1114
+   ],
+   "after": [
+    945,
+    163,
+    1908,
+    1114
+   ],
+   "source": "content/swipe/products/IMG_0588.png",
+   "compare": {
+    "kept": 0.997,
+    "added": 0.0,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B044-P002c0.jpg": {
+   "kind": "cell",
+   "cell": "B044-P002-C0",
+   "before": [
+    7,
+    162,
+    974,
+    1229
+   ],
+   "after": [
+    7,
+    105,
+    974,
+    1229
+   ],
+   "source": "content/swipe/products/IMG_0589.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.05,
+    "added_past_old_crop": 0.979
+   },
+   "decision": "undecided"
+  },
+  "full/B044-P004-1c0.jpg": {
+   "kind": "cell",
+   "cell": "B044-P004-I1-C0",
+   "before": [
+    7,
+    164,
+    974,
+    1073
+   ],
+   "after": [
+    7,
+    140,
+    974,
+    1073
+   ],
+   "source": "content/swipe/products/IMG_0593.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B044-P005c1.jpg": {
+   "kind": "cell",
+   "cell": "B044-P005-C1",
+   "before": [
+    994,
+    1358,
+    1867,
+    2569
+   ],
+   "after": [
+    113,
+    1298,
+    1868,
+    2571
+   ],
+   "source": "content/swipe/products/IMG_0594.png",
+   "compare": {
+    "kept": 0.997,
+    "added": 0.001,
+    "added_past_old_crop": 1.0
+   },
+   "decision": "undecided"
+  },
+  "full/B044-P005-1c0.jpg": {
+   "kind": "cell",
+   "cell": "B044-P005-I1-C0",
+   "before": [
+    224,
+    340,
+    871,
+    892
+   ],
+   "after": [
+    224,
+    269,
+    871,
+    892
+   ],
+   "source": "content/swipe/products/IMG_0595.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.063,
+    "added_past_old_crop": 0.985
+   },
+   "decision": "undecided"
+  },
+  "full/B044-P005-1c3.jpg": {
+   "kind": "cell",
+   "cell": "B044-P005-I1-C3",
+   "before": [
+    994,
+    1324,
+    1788,
+    2433
+   ],
+   "after": [
+    166,
+    1260,
+    1790,
+    2435
+   ],
+   "source": "content/swipe/products/IMG_0595.png",
+   "compare": {
+    "kept": 0.997,
+    "added": 0.001,
+    "added_past_old_crop": 1.0
+   },
+   "decision": "undecided"
+  },
+  "full/B044-P005-2c2.jpg": {
+   "kind": "cell",
+   "cell": "B044-P005-I2-C2",
+   "before": [
+    190,
+    1742,
+    870,
+    2259
+   ],
+   "after": [
+    138,
+    1742,
+    870,
+    2259
+   ],
+   "source": "content/swipe/products/IMG_0596.png",
+   "compare": {
+    "kept": 0.997,
+    "added": 0.0,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B044-P008.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    541,
+    193,
+    1366,
+    2734
+   ],
+   "after": [
+    501,
+    158,
+    1407,
+    2736
+   ],
+   "source": "content/swipe/products/IMG_0599.png"
+  },
+  "full/B044-P015c1.jpg": {
+   "kind": "cell",
+   "cell": "B044-P015-C1",
+   "before": [
+    972,
+    605,
+    1908,
+    2078
+   ],
+   "after": [
+    946,
+    536,
+    1908,
+    2078
+   ],
+   "source": "content/swipe/products/IMG_0608.png",
+   "compare": null,
+   "decision": "undecided"
+  },
+  "full/B044-P020c4.jpg": {
+   "kind": "cell",
+   "cell": "B044-P020-C4",
+   "before": [
+    627,
+    1594,
+    1281,
+    2483
+   ],
+   "after": [
+    609,
+    1592,
+    1299,
+    2485
+   ],
+   "source": "content/swipe/products/IMG_0613.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.003,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B045-P001-2c0.jpg": {
+   "kind": "cell",
+   "cell": "B045-P001-I2-C0",
+   "before": [
+    0,
+    393,
+    588,
+    1286
+   ],
+   "after": [
+    0,
+    392,
+    628,
+    1288
+   ],
+   "source": "content/swipe/products/IMG_0617.png",
+   "compare": {
+    "kept": 1.0,
+    "added": 0.004,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B045-P001-2c5.jpg": {
+   "kind": "cell",
+   "cell": "B045-P001-I2-C5",
+   "before": [
+    1264,
+    1423,
+    1908,
+    2316
+   ],
+   "after": [
+    1263,
+    1268,
+    1908,
+    2317
+   ],
+   "source": "content/swipe/products/IMG_0617.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.002,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B045-P003.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    0,
+    202,
+    1468,
+    2553
+   ],
+   "after": [
+    0,
+    201,
+    1908,
+    2601
+   ],
+   "source": "content/swipe/products/IMG_0620.png"
+  },
+  "full/B046-P010c0.jpg": {
+   "kind": "cell",
+   "cell": "B046-P010-C0",
+   "before": [
+    186,
+    428,
+    1023,
+    1286
+   ],
+   "after": [
+    153,
+    428,
+    1023,
+    1286
+   ],
+   "source": "content/swipe/products/IMG_0633.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.004,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B046-P010c1.jpg": {
+   "kind": "cell",
+   "cell": "B046-P010-C1",
+   "before": [
+    1012,
+    428,
+    1795,
+    1293
+   ],
+   "after": [
+    941,
+    410,
+    1795,
+    1293
+   ],
+   "source": "content/swipe/products/IMG_0633.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.018,
+    "added_past_old_crop": 0.754
+   },
+   "decision": "undecided"
+  },
+  "full/B046-P010c2.jpg": {
+   "kind": "cell",
+   "cell": "B046-P010-C2",
+   "before": [
+    110,
+    1569,
+    1024,
+    2693
+   ],
+   "after": [
+    47,
+    1519,
+    1831,
+    2693
+   ],
+   "source": "content/swipe/products/IMG_0633.png",
+   "compare": {
+    "kept": 0.993,
+    "added": 0.014,
+    "added_past_old_crop": 0.706
+   },
+   "decision": "undecided"
+  },
+  "full/B046-P010c3.jpg": {
+   "kind": "cell",
+   "cell": "B046-P010-C3",
+   "before": [
+    1009,
+    1569,
+    1808,
+    2696
+   ],
+   "after": [
+    901,
+    1519,
+    1808,
+    2696
+   ],
+   "source": "content/swipe/products/IMG_0633.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.311,
+    "added_past_old_crop": 0.007
+   },
+   "decision": "undecided"
+  },
+  "full/B048-P001.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    580,
+    459,
+    1378,
+    2747
+   ],
+   "after": [
+    560,
+    349,
+    1378,
+    2747
+   ],
+   "source": "content/swipe/products/IMG_0640.png"
+  },
+  "full/B048-P001-1.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    247,
+    720,
+    783,
+    1615
+   ],
+   "after": [
+    208,
+    711,
+    813,
+    1634
+   ],
+   "source": "content/swipe/products/IMG_0641.png"
+  },
+  "full/B049-P002c0.jpg": {
+   "kind": "cell",
+   "cell": "B049-P002-C0",
+   "before": [
+    63,
+    699,
+    1045,
+    1612
+   ],
+   "after": [
+    30,
+    699,
+    1045,
+    1612
+   ],
+   "source": "content/swipe/products/IMG_0648.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.008,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B049-P002c1.jpg": {
+   "kind": "cell",
+   "cell": "B049-P002-C1",
+   "before": [
+    1031,
+    680,
+    1672,
+    1612
+   ],
+   "after": [
+    920,
+    680,
+    1672,
+    1612
+   ],
+   "source": "content/swipe/products/IMG_0648.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B049-P003c0.jpg": {
+   "kind": "cell",
+   "cell": "B049-P003-C0",
+   "before": [
+    63,
+    1780,
+    1040,
+    2442
+   ],
+   "after": [
+    25,
+    1780,
+    1040,
+    2442
+   ],
+   "source": "content/swipe/products/IMG_0649.png",
+   "compare": {
+    "kept": 0.995,
+    "added": 0.005,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B049-P003c1.jpg": {
+   "kind": "cell",
+   "cell": "B049-P003-C1",
+   "before": [
+    1026,
+    1600,
+    1623,
+    2445
+   ],
+   "after": [
+    923,
+    1600,
+    1623,
+    2445
+   ],
+   "source": "content/swipe/products/IMG_0649.png",
+   "compare": {
+    "kept": 0.996,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B049-P003-1c0.jpg": {
+   "kind": "cell",
+   "cell": "B049-P003-I1-C0",
+   "before": [
+    161,
+    1858,
+    998,
+    2340
+   ],
+   "after": [
+    135,
+    1858,
+    998,
+    2340
+   ],
+   "source": "content/swipe/products/IMG_0650.png",
+   "compare": {
+    "kept": 0.993,
+    "added": 0.0,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B049-P003-1c1.jpg": {
+   "kind": "cell",
+   "cell": "B049-P003-I1-C1",
+   "before": [
+    985,
+    1634,
+    1668,
+    2345
+   ],
+   "after": [
+    921,
+    1634,
+    1668,
+    2345
+   ],
+   "source": "content/swipe/products/IMG_0650.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.003,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B049-P003-2c0.jpg": {
+   "kind": "cell",
+   "cell": "B049-P003-I2-C0",
+   "before": [
+    231,
+    996,
+    987,
+    1263
+   ],
+   "after": [
+    205,
+    996,
+    987,
+    1263
+   ],
+   "source": "content/swipe/products/IMG_0651.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B049-P003-2c1.jpg": {
+   "kind": "cell",
+   "cell": "B049-P003-I2-C1",
+   "before": [
+    973,
+    580,
+    1564,
+    1320
+   ],
+   "after": [
+    878,
+    515,
+    1564,
+    1320
+   ],
+   "source": "content/swipe/products/IMG_0651.png",
+   "compare": {
+    "kept": 0.994,
+    "added": 0.014,
+    "added_past_old_crop": 0.283
+   },
+   "decision": "undecided"
+  },
+  "full/B049-P003-2c2.jpg": {
+   "kind": "cell",
+   "cell": "B049-P003-I2-C2",
+   "before": [
+    305,
+    1643,
+    987,
+    2372
+   ],
+   "after": [
+    231,
+    1574,
+    987,
+    2372
+   ],
+   "source": "content/swipe/products/IMG_0651.png",
+   "compare": {
+    "kept": 0.991,
+    "added": 0.002,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B049-P003-2c3.jpg": {
+   "kind": "cell",
+   "cell": "B049-P003-I2-C3",
+   "before": [
+    973,
+    1643,
+    1539,
+    2385
+   ],
+   "after": [
+    866,
+    1574,
+    1539,
+    2385
+   ],
+   "source": "content/swipe/products/IMG_0651.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.015,
+    "added_past_old_crop": 0.065
+   },
+   "decision": "undecided"
+  },
+  "full/B051-P004.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    0,
+    34,
+    1908,
+    2734
+   ],
+   "after": [
+    0,
+    28,
+    1908,
+    2734
+   ],
+   "source": "content/swipe/products/IMG_0669.png"
+  },
+  "full/B052-P002.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    377,
+    613,
+    1530,
+    2180
+   ],
+   "after": [
+    374,
+    594,
+    1537,
+    2270
+   ],
+   "source": "content/swipe/products/IMG_0671.png"
+  },
+  "full/B052-P004.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    0,
+    209,
+    1908,
+    2277
+   ],
+   "after": [
+    0,
+    201,
+    1908,
+    2277
+   ],
+   "source": "content/swipe/products/IMG_0673.png"
+  },
+  "full/B052-P007c0.jpg": {
+   "kind": "cell",
+   "cell": "B052-P007-C0",
+   "before": [
+    0,
+    688,
+    474,
+    1426
+   ],
+   "after": [
+    0,
+    670,
+    498,
+    1454
+   ],
+   "source": "content/swipe/products/IMG_0676.png",
+   "compare": {
+    "kept": 0.996,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B052-P007c1.jpg": {
+   "kind": "cell",
+   "cell": "B052-P007-C1",
+   "before": [
+    469,
+    688,
+    978,
+    1426
+   ],
+   "after": [
+    429,
+    670,
+    1479,
+    1457
+   ],
+   "source": "content/swipe/products/IMG_0676.png",
+   "compare": {
+    "kept": 0.997,
+    "added": 0.002,
+    "added_past_old_crop": 0.683
+   },
+   "decision": "undecided"
+  },
+  "full/B052-P007c2.jpg": {
+   "kind": "cell",
+   "cell": "B052-P007-C2",
+   "before": [
+    946,
+    688,
+    1439,
+    1426
+   ],
+   "after": [
+    429,
+    670,
+    1479,
+    1457
+   ],
+   "source": "content/swipe/products/IMG_0676.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.005,
+    "added_past_old_crop": 0.911
+   },
+   "decision": "undecided"
+  },
+  "full/B052-P007c3.jpg": {
+   "kind": "cell",
+   "cell": "B052-P007-C3",
+   "before": [
+    1413,
+    688,
+    1908,
+    1426
+   ],
+   "after": [
+    1410,
+    670,
+    1908,
+    1457
+   ],
+   "source": "content/swipe/products/IMG_0676.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.002,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B052-P007c4.jpg": {
+   "kind": "cell",
+   "cell": "B052-P007-C4",
+   "before": [
+    0,
+    1813,
+    474,
+    2551
+   ],
+   "after": [
+    0,
+    1797,
+    498,
+    2581
+   ],
+   "source": "content/swipe/products/IMG_0676.png",
+   "compare": {
+    "kept": 0.995,
+    "added": 0.002,
+    "added_past_old_crop": 0.566
+   },
+   "decision": "undecided"
+  },
+  "full/B052-P007c5.jpg": {
+   "kind": "cell",
+   "cell": "B052-P007-C5",
+   "before": [
+    454,
+    1813,
+    939,
+    2551
+   ],
+   "after": [
+    429,
+    1797,
+    1479,
+    2584
+   ],
+   "source": "content/swipe/products/IMG_0676.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.006,
+    "added_past_old_crop": 0.927
+   },
+   "decision": "undecided"
+  },
+  "full/B052-P007c6.jpg": {
+   "kind": "cell",
+   "cell": "B052-P007-C6",
+   "before": [
+    946,
+    1813,
+    1416,
+    2551
+   ],
+   "after": [
+    429,
+    1797,
+    1479,
+    2584
+   ],
+   "source": "content/swipe/products/IMG_0676.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.013,
+    "added_past_old_crop": 0.989
+   },
+   "decision": "undecided"
+  },
+  "full/B052-P007c7.jpg": {
+   "kind": "cell",
+   "cell": "B052-P007-C7",
+   "before": [
+    1421,
+    1813,
+    1908,
+    2551
+   ],
+   "after": [
+    1410,
+    1797,
+    1908,
+    2584
+   ],
+   "source": "content/swipe/products/IMG_0676.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.011,
+    "added_past_old_crop": 0.376
+   },
+   "decision": "undecided"
+  },
+  "full/B053-P001.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    39,
+    149,
+    1868,
+    1166
+   ],
+   "after": [
+    39,
+    149,
+    1868,
+    1605
+   ],
+   "source": "content/swipe/products/IMG_0677.png"
+  },
+  "full/B053-P004.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    39,
+    1477,
+    1286,
+    2270
+   ],
+   "after": [
+    22,
+    982,
+    1301,
+    2302
+   ],
+   "source": "content/swipe/products/IMG_0685.png"
+  },
+  "full/B056-P001.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    165,
+    253,
+    1618,
+    2244
+   ],
+   "after": [
+    127,
+    206,
+    1632,
+    2244
+   ],
+   "source": "content/swipe/products/IMG_0720.png"
+  },
+  "full/B056-P002.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    329,
+    162,
+    1473,
+    2297
+   ],
+   "after": [
+    329,
+    161,
+    1908,
+    2297
+   ],
+   "source": "content/swipe/products/IMG_0721.png"
+  },
+  "full/B056-P004-2.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    941,
+    1555,
+    1796,
+    2039
+   ],
+   "after": [
+    929,
+    1277,
+    1802,
+    2059
+   ],
+   "source": "content/swipe/products/IMG_0725.png"
+  },
+  "full/B056-P005c1.jpg": {
+   "kind": "cell",
+   "cell": "B056-P005-C1",
+   "before": [
+    938,
+    1093,
+    1908,
+    2212
+   ],
+   "after": [
+    480,
+    1093,
+    1908,
+    2214
+   ],
+   "source": "content/swipe/products/IMG_0727.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.004,
+    "added_past_old_crop": 0.645
+   },
+   "decision": "undecided"
+  },
+  "full/B057-P003.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    221,
+    171,
+    1670,
+    2297
+   ],
+   "after": [
+    171,
+    171,
+    1908,
+    2323
+   ],
+   "source": "content/swipe/products/IMG_0732.png"
+  },
+  "full/B057-P004c0.jpg": {
+   "kind": "cell",
+   "cell": "B057-P004-C0",
+   "before": [
+    0,
+    769,
+    968,
+    2244
+   ],
+   "after": [
+    0,
+    769,
+    1208,
+    2244
+   ],
+   "source": "content/swipe/products/IMG_0736.png",
+   "compare": null,
+   "decision": "undecided"
+  },
+  "full/B058-P001.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    242,
+    860,
+    902,
+    1611
+   ],
+   "after": [
+    211,
+    835,
+    929,
+    1633
+   ],
+   "source": "content/swipe/products/IMG_0741.png"
+  },
+  "full/B059-P008.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    75,
+    498,
+    1116,
+    1980
+   ],
+   "after": [
+    45,
+    497,
+    1117,
+    1992
+   ],
+   "source": "content/swipe/products/IMG_0759.png"
+  },
+  "full/B059-P008-V2.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    0,
+    1744,
+    1129,
+    2746
+   ],
+   "after": [
+    0,
+    1597,
+    1130,
+    2747
+   ],
+   "source": "content/swipe/products/IMG_0760.png"
+  },
+  "full/B060-P002-V2.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    161,
+    985,
+    944,
+    1725
+   ],
+   "after": [
+    156,
+    965,
+    984,
+    1766
+   ],
+   "source": "content/swipe/products/IMG_0763.png"
+  },
+  "full/B061-P004-V2.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    130,
+    349,
+    975,
+    1789
+   ],
+   "after": [
+    45,
+    349,
+    1087,
+    1987
+   ],
+   "source": "content/swipe/products/IMG_0775.png"
+  },
+  "full/B062-P011.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    283,
+    417,
+    870,
+    1045
+   ],
+   "after": [
+    247,
+    392,
+    890,
+    1047
+   ],
+   "source": "content/swipe/products/IMG_0791.png"
+  },
+  "full/B064-P003c0.jpg": {
+   "kind": "cell",
+   "cell": "B064-P003-C0",
+   "before": [
+    23,
+    600,
+    646,
+    1545
+   ],
+   "after": [
+    20,
+    569,
+    648,
+    1546
+   ],
+   "source": "content/swipe/products/IMG_1025.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B065-P001c1.jpg": {
+   "kind": "cell",
+   "cell": "B065-P001-C1",
+   "before": [
+    1047,
+    537,
+    1908,
+    1943
+   ],
+   "after": [
+    974,
+    537,
+    1908,
+    1943
+   ],
+   "source": "content/swipe/products/IMG_1026.png",
+   "compare": {
+    "kept": 0.995,
+    "added": 0.002,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B065-P004c0.jpg": {
+   "kind": "cell",
+   "cell": "B065-P004-C0",
+   "before": [
+    54,
+    431,
+    938,
+    1753
+   ],
+   "after": [
+    53,
+    377,
+    939,
+    1753
+   ],
+   "source": "content/swipe/products/IMG_1029.png",
+   "compare": {
+    "kept": 1.0,
+    "added": 0.01,
+    "added_past_old_crop": 0.802
+   },
+   "decision": "undecided"
+  },
+  "full/B065-P004c1.jpg": {
+   "kind": "cell",
+   "cell": "B065-P004-C1",
+   "before": [
+    970,
+    431,
+    1854,
+    1753
+   ],
+   "after": [
+    969,
+    374,
+    1855,
+    1753
+   ],
+   "source": "content/swipe/products/IMG_1029.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.019,
+    "added_past_old_crop": 0.96
+   },
+   "decision": "undecided"
+  },
+  "full/B068-P003.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    222,
+    237,
+    1675,
+    1535
+   ],
+   "after": [
+    0,
+    236,
+    1908,
+    1546
+   ],
+   "source": "content/swipe/products/IMG_1042.png"
+  },
+  "full/B068-P027-1.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    332,
+    22,
+    1661,
+    2435
+   ],
+   "after": [
+    0,
+    20,
+    1908,
+    2482
+   ],
+   "source": "content/swipe/products/IMG_1069.png"
+  },
+  "full/B068-P077-1.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    418,
+    22,
+    1489,
+    2371
+   ],
+   "after": [
+    0,
+    20,
+    1908,
+    2393
+   ],
+   "source": "content/swipe/products/IMG_1117.png"
+  },
+  "full/B069-P001c1.jpg": {
+   "kind": "cell",
+   "cell": "B069-P001-C1",
+   "before": [
+    635,
+    542,
+    1291,
+    1361
+   ],
+   "after": [
+    609,
+    523,
+    1299,
+    1382
+   ],
+   "source": "content/swipe/products/IMG_1128.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.0,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B069-P001c4.jpg": {
+   "kind": "cell",
+   "cell": "B069-P001-C4",
+   "before": [
+    635,
+    1597,
+    1291,
+    2417
+   ],
+   "after": [
+    609,
+    1575,
+    1299,
+    2437
+   ],
+   "source": "content/swipe/products/IMG_1128.png",
+   "compare": {
+    "kept": 0.997,
+    "added": 0.0,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B071-P002c1.jpg": {
+   "kind": "cell",
+   "cell": "B071-P002-C1",
+   "before": [
+    636,
+    532,
+    1292,
+    1360
+   ],
+   "after": [
+    609,
+    516,
+    1299,
+    1375
+   ],
+   "source": "content/swipe/products/IMG_1152.png",
+   "compare": {
+    "kept": 1.0,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B071-P002c2.jpg": {
+   "kind": "cell",
+   "cell": "B071-P002-C2",
+   "before": [
+    1279,
+    532,
+    1908,
+    1360
+   ],
+   "after": [
+    1252,
+    516,
+    1908,
+    1377
+   ],
+   "source": "content/swipe/products/IMG_1152.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B071-P002c4.jpg": {
+   "kind": "cell",
+   "cell": "B071-P002-C4",
+   "before": [
+    636,
+    1585,
+    1292,
+    2410
+   ],
+   "after": [
+    609,
+    1568,
+    1299,
+    2429
+   ],
+   "source": "content/swipe/products/IMG_1152.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B071-P002c5.jpg": {
+   "kind": "cell",
+   "cell": "B071-P002-C5",
+   "before": [
+    1279,
+    1585,
+    1908,
+    2410
+   ],
+   "after": [
+    1252,
+    1568,
+    1908,
+    2429
+   ],
+   "source": "content/swipe/products/IMG_1152.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.0,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B071-P003c1.jpg": {
+   "kind": "cell",
+   "cell": "B071-P003-C1",
+   "before": [
+    640,
+    596,
+    1298,
+    1423
+   ],
+   "after": [
+    609,
+    584,
+    1299,
+    1442
+   ],
+   "source": "content/swipe/products/IMG_1153.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.0,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B071-P003c2.jpg": {
+   "kind": "cell",
+   "cell": "B071-P003-C2",
+   "before": [
+    1282,
+    596,
+    1908,
+    1423
+   ],
+   "after": [
+    1252,
+    584,
+    1908,
+    1442
+   ],
+   "source": "content/swipe/products/IMG_1153.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.003,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B071-P003c4.jpg": {
+   "kind": "cell",
+   "cell": "B071-P003-C4",
+   "before": [
+    640,
+    1647,
+    1298,
+    2474
+   ],
+   "after": [
+    609,
+    1635,
+    1299,
+    2497
+   ],
+   "source": "content/swipe/products/IMG_1153.png",
+   "compare": {
+    "kept": 0.997,
+    "added": 0.0,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B071-P003c5.jpg": {
+   "kind": "cell",
+   "cell": "B071-P003-C5",
+   "before": [
+    1282,
+    1647,
+    1908,
+    2474
+   ],
+   "after": [
+    1252,
+    1635,
+    1908,
+    2497
+   ],
+   "source": "content/swipe/products/IMG_1153.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B071-P004c1.jpg": {
+   "kind": "cell",
+   "cell": "B071-P004-C1",
+   "before": [
+    635,
+    451,
+    1275,
+    1259
+   ],
+   "after": [
+    609,
+    420,
+    1299,
+    1282
+   ],
+   "source": "content/swipe/products/IMG_1154.png",
+   "compare": {
+    "kept": 0.997,
+    "added": 0.0,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B071-P004c4.jpg": {
+   "kind": "cell",
+   "cell": "B071-P004-C4",
+   "before": [
+    635,
+    1495,
+    1275,
+    2308
+   ],
+   "after": [
+    609,
+    1475,
+    1299,
+    2334
+   ],
+   "source": "content/swipe/products/IMG_1154.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B071-P005c1.jpg": {
+   "kind": "cell",
+   "cell": "B071-P005-C1",
+   "before": [
+    633,
+    558,
+    1271,
+    1371
+   ],
+   "after": [
+    609,
+    533,
+    1299,
+    1392
+   ],
+   "source": "content/swipe/products/IMG_1155.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.002,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B071-P005c4.jpg": {
+   "kind": "cell",
+   "cell": "B071-P005-C4",
+   "before": [
+    633,
+    1602,
+    1271,
+    2424
+   ],
+   "after": [
+    609,
+    1588,
+    1299,
+    2447
+   ],
+   "source": "content/swipe/products/IMG_1155.png",
+   "compare": {
+    "kept": 0.997,
+    "added": 0.0,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B071-P005c5.jpg": {
+   "kind": "cell",
+   "cell": "B071-P005-C5",
+   "before": [
+    1266,
+    1602,
+    1908,
+    2424
+   ],
+   "after": [
+    1252,
+    1586,
+    1908,
+    2476
+   ],
+   "source": "content/swipe/products/IMG_1155.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.005,
+    "added_past_old_crop": 0.451
+   },
+   "decision": "undecided"
+  },
+  "full/B073-P002.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    242,
+    704,
+    902,
+    1496
+   ],
+   "after": [
+    208,
+    699,
+    929,
+    1497
+   ],
+   "source": "content/swipe/products/IMG_1164.png"
+  },
+  "full/B075-P001.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    325,
+    1020,
+    1572,
+    2040
+   ],
+   "after": [
+    300,
+    961,
+    1608,
+    2074
+   ],
+   "source": "content/swipe/products/IMG_1176.png"
+  },
+  "full/B075-P002-V2.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    325,
+    1168,
+    1582,
+    2044
+   ],
+   "after": [
+    302,
+    1085,
+    1608,
+    2071
+   ],
+   "source": "content/swipe/products/IMG_1180.png"
+  },
+  "full/B075-P002-V3.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    325,
+    1168,
+    1582,
+    2044
+   ],
+   "after": [
+    299,
+    1096,
+    1611,
+    2057
+   ],
+   "source": "content/swipe/products/IMG_1181.png"
+  },
+  "full/B075-P006.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    272,
+    84,
+    1673,
+    1446
+   ],
+   "after": [
+    0,
+    83,
+    1908,
+    1462
+   ],
+   "source": "content/swipe/products/IMG_1186.png"
+  },
+  "full/B075-P007.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    915,
+    293,
+    1440,
+    2649
+   ],
+   "after": [
+    467,
+    279,
+    1466,
+    2677
+   ],
+   "source": "content/swipe/products/IMG_1187.png"
+  },
+  "full/B075-P007-V2.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    965,
+    83,
+    1439,
+    1456
+   ],
+   "after": [
+    0,
+    83,
+    1908,
+    1467
+   ],
+   "source": "content/swipe/products/IMG_1188.png"
+  },
+  "full/B075-P007-V3.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    158,
+    537,
+    1806,
+    2482
+   ],
+   "after": [
+    134,
+    422,
+    1824,
+    2507
+   ],
+   "source": "content/swipe/products/IMG_1189.png"
+  },
+  "full/B076-P001.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    148,
+    79,
+    1807,
+    1565
+   ],
+   "after": [
+    0,
+    78,
+    1908,
+    1580
+   ],
+   "source": "content/swipe/products/IMG_1190.png"
+  },
+  "full/B076-P005.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    0,
+    105,
+    1908,
+    2676
+   ],
+   "after": [
+    0,
+    103,
+    1908,
+    2721
+   ],
+   "source": "content/swipe/products/IMG_1199.png"
+  },
+  "full/B076-P005-1.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    500,
+    110,
+    1407,
+    2557
+   ],
+   "after": [
+    466,
+    105,
+    1474,
+    2629
+   ],
+   "source": "content/swipe/products/IMG_1200.png"
+  },
+  "full/B076-P007.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    587,
+    105,
+    1908,
+    2513
+   ],
+   "after": [
+    0,
+    103,
+    1908,
+    2544
+   ],
+   "source": "content/swipe/products/IMG_1202.png"
+  },
+  "full/B076-P007-1.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    0,
+    208,
+    1908,
+    2249
+   ],
+   "after": [
+    0,
+    173,
+    1908,
+    2249
+   ],
+   "source": "content/swipe/products/IMG_1203.png"
+  },
+  "full/B077-P007.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    418,
+    839,
+    1489,
+    2449
+   ],
+   "after": [
+    401,
+    511,
+    1530,
+    2480
+   ],
+   "source": "content/swipe/products/IMG_1211.png"
+  },
+  "full/B078-P011c0.jpg": {
+   "kind": "cell",
+   "cell": "B078-P011-C0",
+   "before": [
+    79,
+    1110,
+    711,
+    1297
+   ],
+   "after": [
+    19,
+    1110,
+    1212,
+    1297
+   ],
+   "source": "content/swipe/products/IMG_1234.png",
+   "compare": {
+    "kept": 0.993,
+    "added": 0.009,
+    "added_past_old_crop": 0.84
+   },
+   "decision": "undecided"
+  },
+  "full/B078-P011c1.jpg": {
+   "kind": "cell",
+   "cell": "B078-P011-C1",
+   "before": [
+    690,
+    1110,
+    1322,
+    1300
+   ],
+   "after": [
+    616,
+    1037,
+    1820,
+    1305
+   ],
+   "source": "content/swipe/products/IMG_1234.png",
+   "compare": {
+    "kept": 0.994,
+    "added": 0.008,
+    "added_past_old_crop": 0.819
+   },
+   "decision": "undecided"
+  },
+  "full/B078-P011c2.jpg": {
+   "kind": "cell",
+   "cell": "B078-P011-C2",
+   "before": [
+    1304,
+    1024,
+    1908,
+    1315
+   ],
+   "after": [
+    1267,
+    1024,
+    1908,
+    1315
+   ],
+   "source": "content/swipe/products/IMG_1234.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.007,
+    "added_past_old_crop": 0.82
+   },
+   "decision": "undecided"
+  },
+  "full/B078-P011c3.jpg": {
+   "kind": "cell",
+   "cell": "B078-P011-C3",
+   "before": [
+    79,
+    2175,
+    711,
+    2359
+   ],
+   "after": [
+    16,
+    2175,
+    1201,
+    2359
+   ],
+   "source": "content/swipe/products/IMG_1234.png",
+   "compare": {
+    "kept": 0.994,
+    "added": 0.007,
+    "added_past_old_crop": 0.627
+   },
+   "decision": "undecided"
+  },
+  "full/B078-P011c4.jpg": {
+   "kind": "cell",
+   "cell": "B078-P011-C4",
+   "before": [
+    690,
+    2171,
+    1322,
+    2356
+   ],
+   "after": [
+    624,
+    2171,
+    1811,
+    2356
+   ],
+   "source": "content/swipe/products/IMG_1234.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.003,
+    "added_past_old_crop": 0.518
+   },
+   "decision": "undecided"
+  },
+  "full/B078-P011c5.jpg": {
+   "kind": "cell",
+   "cell": "B078-P011-C5",
+   "before": [
+    1304,
+    2171,
+    1908,
+    2359
+   ],
+   "after": [
+    1264,
+    2171,
+    1908,
+    2359
+   ],
+   "source": "content/swipe/products/IMG_1234.png",
+   "compare": {
+    "kept": 0.995,
+    "added": 0.007,
+    "added_past_old_crop": 0.91
+   },
+   "decision": "undecided"
+  },
+  "full/B078-P012c0.jpg": {
+   "kind": "cell",
+   "cell": "B078-P012-C0",
+   "before": [
+    147,
+    904,
+    791,
+    1108
+   ],
+   "after": [
+    92,
+    904,
+    1282,
+    1108
+   ],
+   "source": "content/swipe/products/IMG_1235.png",
+   "compare": {
+    "kept": 0.997,
+    "added": 0.004,
+    "added_past_old_crop": 0.82
+   },
+   "decision": "undecided"
+  },
+  "full/B078-P012c1.jpg": {
+   "kind": "cell",
+   "cell": "B078-P012-C1",
+   "before": [
+    770,
+    879,
+    1403,
+    1106
+   ],
+   "after": [
+    699,
+    839,
+    1897,
+    1106
+   ],
+   "source": "content/swipe/products/IMG_1235.png",
+   "compare": {
+    "kept": 0.985,
+    "added": 0.018,
+    "added_past_old_crop": 0.1
+   },
+   "decision": "undecided"
+  },
+  "full/B078-P012c2.jpg": {
+   "kind": "cell",
+   "cell": "B078-P012-C2",
+   "before": [
+    1385,
+    827,
+    1881,
+    1113
+   ],
+   "after": [
+    1329,
+    827,
+    1881,
+    1113
+   ],
+   "source": "content/swipe/products/IMG_1235.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.012,
+    "added_past_old_crop": 0.792
+   },
+   "decision": "undecided"
+  },
+  "full/B078-P012c3.jpg": {
+   "kind": "cell",
+   "cell": "B078-P012-C3",
+   "before": [
+    147,
+    1956,
+    791,
+    2160
+   ],
+   "after": [
+    96,
+    1956,
+    1297,
+    2160
+   ],
+   "source": "content/swipe/products/IMG_1235.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.002,
+    "added_past_old_crop": 0.614
+   },
+   "decision": "undecided"
+  },
+  "full/B078-P012c4.jpg": {
+   "kind": "cell",
+   "cell": "B078-P012-C4",
+   "before": [
+    770,
+    1953,
+    1403,
+    2160
+   ],
+   "after": [
+    689,
+    1953,
+    1890,
+    2160
+   ],
+   "source": "content/swipe/products/IMG_1235.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.001,
+    "added_past_old_crop": 0.741
+   },
+   "decision": "undecided"
+  },
+  "full/B078-P012c5.jpg": {
+   "kind": "cell",
+   "cell": "B078-P012-C5",
+   "before": [
+    1385,
+    1949,
+    1872,
+    2162
+   ],
+   "after": [
+    1345,
+    1949,
+    1872,
+    2162
+   ],
+   "source": "content/swipe/products/IMG_1235.png",
+   "compare": {
+    "kept": 0.994,
+    "added": 0.015,
+    "added_past_old_crop": 0.752
+   },
+   "decision": "undecided"
+  },
+  "full/B078-P013c0.jpg": {
+   "kind": "cell",
+   "cell": "B078-P013-C0",
+   "before": [
+    148,
+    1023,
+    793,
+    1216
+   ],
+   "after": [
+    97,
+    1023,
+    1279,
+    1216
+   ],
+   "source": "content/swipe/products/IMG_1236.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.004,
+    "added_past_old_crop": 0.652
+   },
+   "decision": "undecided"
+  },
+  "full/B078-P013c1.jpg": {
+   "kind": "cell",
+   "cell": "B078-P013-C1",
+   "before": [
+    772,
+    1021,
+    1406,
+    1214
+   ],
+   "after": [
+    702,
+    1021,
+    1889,
+    1214
+   ],
+   "source": "content/swipe/products/IMG_1236.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.003,
+    "added_past_old_crop": 0.592
+   },
+   "decision": "undecided"
+  },
+  "full/B078-P013c2.jpg": {
+   "kind": "cell",
+   "cell": "B078-P013-C2",
+   "before": [
+    1388,
+    1023,
+    1874,
+    1216
+   ],
+   "after": [
+    1332,
+    1023,
+    1874,
+    1216
+   ],
+   "source": "content/swipe/products/IMG_1236.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.022,
+    "added_past_old_crop": 0.694
+   },
+   "decision": "undecided"
+  },
+  "full/B078-P013c3.jpg": {
+   "kind": "cell",
+   "cell": "B078-P013-C3",
+   "before": [
+    148,
+    2076,
+    793,
+    2269
+   ],
+   "after": [
+    92,
+    2076,
+    1282,
+    2269
+   ],
+   "source": "content/swipe/products/IMG_1236.png",
+   "compare": {
+    "kept": 1.0,
+    "added": 0.014,
+    "added_past_old_crop": 0.918
+   },
+   "decision": "undecided"
+  },
+  "full/B078-P013c4.jpg": {
+   "kind": "cell",
+   "cell": "B078-P013-C4",
+   "before": [
+    772,
+    2069,
+    1406,
+    2273
+   ],
+   "after": [
+    704,
+    2069,
+    1902,
+    2273
+   ],
+   "source": "content/swipe/products/IMG_1236.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.005,
+    "added_past_old_crop": 0.91
+   },
+   "decision": "undecided"
+  },
+  "full/B078-P013c5.jpg": {
+   "kind": "cell",
+   "cell": "B078-P013-C5",
+   "before": [
+    1388,
+    2078,
+    1883,
+    2271
+   ],
+   "after": [
+    1331,
+    2078,
+    1883,
+    2271
+   ],
+   "source": "content/swipe/products/IMG_1236.png",
+   "compare": {
+    "kept": 0.995,
+    "added": 0.033,
+    "added_past_old_crop": 0.591
+   },
+   "decision": "undecided"
+  },
+  "full/B078-P014.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    39,
+    529,
+    1272,
+    1464
+   ],
+   "after": [
+    0,
+    444,
+    1272,
+    1825
+   ],
+   "source": "content/swipe/products/IMG_1237.png"
+  },
+  "full/B079-P002c1.jpg": {
+   "kind": "cell",
+   "cell": "B079-P002-C1",
+   "before": [
+    1038,
+    373,
+    1763,
+    1287
+   ],
+   "after": [
+    964,
+    373,
+    1763,
+    1287
+   ],
+   "source": "content/swipe/products/IMG_1240.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.004,
+    "added_past_old_crop": 0.796
+   },
+   "decision": "undecided"
+  },
+  "full/B079-P002c2.jpg": {
+   "kind": "cell",
+   "cell": "B079-P002-C2",
+   "before": [
+    258,
+    1660,
+    1051,
+    2381
+   ],
+   "after": [
+    222,
+    1660,
+    1051,
+    2381
+   ],
+   "source": "content/swipe/products/IMG_1240.png",
+   "compare": {
+    "kept": 0.985,
+    "added": 0.001,
+    "added_past_old_crop": 0.017
+   },
+   "decision": "undecided"
+  },
+  "full/B079-P002c3.jpg": {
+   "kind": "cell",
+   "cell": "B079-P002-C3",
+   "before": [
+    1038,
+    1651,
+    1772,
+    2668
+   ],
+   "after": [
+    964,
+    1651,
+    1772,
+    2668
+   ],
+   "source": "content/swipe/products/IMG_1240.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.002,
+    "added_past_old_crop": 0.098
+   },
+   "decision": "undecided"
+  },
+  "full/B079-P002-1c0.jpg": {
+   "kind": "cell",
+   "cell": "B079-P002-I1-C0",
+   "before": [
+    214,
+    286,
+    1052,
+    1266
+   ],
+   "after": [
+    188,
+    266,
+    1717,
+    1266
+   ],
+   "source": "content/swipe/products/IMG_1241.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.051,
+    "added_past_old_crop": 0.972
+   },
+   "decision": "undecided",
+   "kept_old": "the widened cell took in a neighbouring tile; the old cut kept"
+  },
+  "full/B079-P002-1c1.jpg": {
+   "kind": "cell",
+   "cell": "B079-P002-I1-C1",
+   "before": [
+    1038,
+    287,
+    1775,
+    1232
+   ],
+   "after": [
+    964,
+    218,
+    1775,
+    1232
+   ],
+   "source": "content/swipe/products/IMG_1241.png",
+   "compare": {
+    "kept": 0.988,
+    "added": 0.041,
+    "added_past_old_crop": 0.906
+   },
+   "decision": "undecided"
+  },
+  "full/B079-P002-1c2.jpg": {
+   "kind": "cell",
+   "cell": "B079-P002-I1-C2",
+   "before": [
+    258,
+    1798,
+    938,
+    2103
+   ],
+   "after": [
+    217,
+    1798,
+    938,
+    2103
+   ],
+   "source": "content/swipe/products/IMG_1241.png",
+   "compare": {
+    "kept": 1.0,
+    "added": 0.004,
+    "added_past_old_crop": 0.697
+   },
+   "decision": "undecided"
+  },
+  "full/B079-P002-2c0.jpg": {
+   "kind": "cell",
+   "cell": "B079-P002-I2-C0",
+   "before": [
+    216,
+    221,
+    1052,
+    1112
+   ],
+   "after": [
+    188,
+    221,
+    1717,
+    1112
+   ],
+   "source": "content/swipe/products/IMG_1242.png",
+   "compare": {
+    "kept": 0.994,
+    "added": 0.003,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B079-P002-2c1.jpg": {
+   "kind": "cell",
+   "cell": "B079-P002-I2-C1",
+   "before": [
+    1038,
+    289,
+    1772,
+    1178
+   ],
+   "after": [
+    964,
+    289,
+    1772,
+    1178
+   ],
+   "source": "content/swipe/products/IMG_1242.png",
+   "compare": null,
+   "decision": "undecided"
+  },
+  "full/B079-P002-2c2.jpg": {
+   "kind": "cell",
+   "cell": "B079-P002-I2-C2",
+   "before": [
+    202,
+    1614,
+    1051,
+    2443
+   ],
+   "after": [
+    188,
+    1614,
+    1717,
+    2443
+   ],
+   "source": "content/swipe/products/IMG_1242.png",
+   "compare": {
+    "kept": 0.991,
+    "added": 0.006,
+    "added_past_old_crop": 0.796
+   },
+   "decision": "undecided"
+  },
+  "full/B079-P002-2c3.jpg": {
+   "kind": "cell",
+   "cell": "B079-P002-I2-C3",
+   "before": [
+    1038,
+    1382,
+    1775,
+    2524
+   ],
+   "after": [
+    964,
+    1382,
+    1775,
+    2524
+   ],
+   "source": "content/swipe/products/IMG_1242.png",
+   "compare": {
+    "kept": 0.996,
+    "added": 0.005,
+    "added_past_old_crop": 0.892
+   },
+   "decision": "undecided"
+  },
+  "full/B079-P003c0.jpg": {
+   "kind": "cell",
+   "cell": "B079-P003-C0",
+   "before": [
+    258,
+    291,
+    945,
+    782
+   ],
+   "after": [
+    229,
+    291,
+    945,
+    782
+   ],
+   "source": "content/swipe/products/IMG_1243.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B079-P003c1.jpg": {
+   "kind": "cell",
+   "cell": "B079-P003-C1",
+   "before": [
+    1038,
+    287,
+    1768,
+    1239
+   ],
+   "after": [
+    1038,
+    219,
+    1768,
+    1239
+   ],
+   "source": "content/swipe/products/IMG_1243.png",
+   "compare": {
+    "kept": 1.0,
+    "added": 0.002,
+    "added_past_old_crop": 0.472
+   },
+   "decision": "undecided"
+  },
+  "full/B079-P004c0.jpg": {
+   "kind": "cell",
+   "cell": "B079-P004-C0",
+   "before": [
+    258,
+    458,
+    1052,
+    1365
+   ],
+   "after": [
+    188,
+    392,
+    1054,
+    1366
+   ],
+   "source": "content/swipe/products/IMG_1244.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.09,
+    "added_past_old_crop": 0.972
+   },
+   "decision": "undecided"
+  },
+  "full/B079-P004c1.jpg": {
+   "kind": "cell",
+   "cell": "B079-P004-C1",
+   "before": [
+    1039,
+    458,
+    1774,
+    1325
+   ],
+   "after": [
+    965,
+    458,
+    1774,
+    1325
+   ],
+   "source": "content/swipe/products/IMG_1244.png",
+   "compare": {
+    "kept": 0.994,
+    "added": 0.037,
+    "added_past_old_crop": 0.824
+   },
+   "decision": "undecided"
+  },
+  "full/B079-P004c2.jpg": {
+   "kind": "cell",
+   "cell": "B079-P004-C2",
+   "before": [
+    258,
+    1539,
+    1052,
+    2705
+   ],
+   "after": [
+    188,
+    1464,
+    1054,
+    2706
+   ],
+   "source": "content/swipe/products/IMG_1244.png",
+   "compare": {
+    "kept": 0.983,
+    "added": 0.037,
+    "added_past_old_crop": 0.699
+   },
+   "decision": "undecided"
+  },
+  "full/B079-P004c3.jpg": {
+   "kind": "cell",
+   "cell": "B079-P004-C3",
+   "before": [
+    1039,
+    1820,
+    1774,
+    2446
+   ],
+   "after": [
+    964,
+    1466,
+    1775,
+    2591
+   ],
+   "source": "content/swipe/products/IMG_1244.png",
+   "compare": {
+    "kept": 0.98,
+    "added": 0.049,
+    "added_past_old_crop": 0.743
+   },
+   "decision": "undecided"
+  },
+  "full/B080-P001c0.jpg": {
+   "kind": "cell",
+   "cell": "B080-P001-C0",
+   "before": [
+    258,
+    287,
+    1051,
+    1232
+   ],
+   "after": [
+    188,
+    221,
+    1052,
+    1233
+   ],
+   "source": "content/swipe/products/IMG_1245.png",
+   "compare": {
+    "kept": 0.996,
+    "added": 0.157,
+    "added_past_old_crop": 0.15
+   },
+   "decision": "undecided"
+  },
+  "full/B080-P001c1.jpg": {
+   "kind": "cell",
+   "cell": "B080-P001-C1",
+   "before": [
+    1038,
+    287,
+    1772,
+    1191
+   ],
+   "after": [
+    1001,
+    287,
+    1772,
+    1191
+   ],
+   "source": "content/swipe/products/IMG_1245.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.003,
+    "added_past_old_crop": 0.484
+   },
+   "decision": "undecided"
+  },
+  "full/B080-P001-1c0.jpg": {
+   "kind": "cell",
+   "cell": "B080-P001-I1-C0",
+   "before": [
+    258,
+    384,
+    1051,
+    685
+   ],
+   "after": [
+    214,
+    384,
+    1051,
+    685
+   ],
+   "source": "content/swipe/products/IMG_1246.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.009,
+    "added_past_old_crop": 0.75
+   },
+   "decision": "undecided"
+  },
+  "full/B080-P001-1c1.jpg": {
+   "kind": "cell",
+   "cell": "B080-P001-I1-C1",
+   "before": [
+    1038,
+    289,
+    1772,
+    1142
+   ],
+   "after": [
+    964,
+    289,
+    1772,
+    1142
+   ],
+   "source": "content/swipe/products/IMG_1246.png",
+   "compare": {
+    "kept": 0.983,
+    "added": 0.015,
+    "added_past_old_crop": 0.056
+   },
+   "decision": "undecided"
+  },
+  "full/B080-P001-1c2.jpg": {
+   "kind": "cell",
+   "cell": "B080-P001-I1-C2",
+   "before": [
+    258,
+    1721,
+    1051,
+    2015
+   ],
+   "after": [
+    225,
+    1721,
+    1051,
+    2015
+   ],
+   "source": "content/swipe/products/IMG_1246.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.001,
+    "added_past_old_crop": 0.105
+   },
+   "decision": "undecided"
+  },
+  "full/B080-P001-1c3.jpg": {
+   "kind": "cell",
+   "cell": "B080-P001-I1-C3",
+   "before": [
+    1038,
+    1574,
+    1772,
+    2094
+   ],
+   "after": [
+    964,
+    1574,
+    1772,
+    2094
+   ],
+   "source": "content/swipe/products/IMG_1246.png",
+   "compare": {
+    "kept": 0.995,
+    "added": 0.004,
+    "added_past_old_crop": 0.985
+   },
+   "decision": "undecided"
+  },
+  "full/B080-P006c0.jpg": {
+   "kind": "cell",
+   "cell": "B080-P006-C0",
+   "before": [
+    0,
+    147,
+    483,
+    739
+   ],
+   "after": [
+    0,
+    146,
+    485,
+    1027
+   ],
+   "source": "content/swipe/products/IMG_1255.png",
+   "compare": {
+    "kept": 0.992,
+    "added": 0.002,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B080-P006c1.jpg": {
+   "kind": "cell",
+   "cell": "B080-P006-C1",
+   "before": [
+    467,
+    147,
+    960,
+    837
+   ],
+   "after": [
+    0,
+    146,
+    962,
+    1027
+   ],
+   "source": "content/swipe/products/IMG_1255.png",
+   "compare": {
+    "kept": 0.994,
+    "added": 0.001,
+    "added_past_old_crop": 0.261
+   },
+   "decision": "undecided"
+  },
+  "full/B080-P006c3.jpg": {
+   "kind": "cell",
+   "cell": "B080-P006-C3",
+   "before": [
+    1420,
+    147,
+    1908,
+    837
+   ],
+   "after": [
+    1418,
+    146,
+    1908,
+    1027
+   ],
+   "source": "content/swipe/products/IMG_1255.png",
+   "compare": {
+    "kept": 0.993,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B080-P006c4.jpg": {
+   "kind": "cell",
+   "cell": "B080-P006-C4",
+   "before": [
+    16,
+    1032,
+    483,
+    1620
+   ],
+   "after": [
+    0,
+    1032,
+    485,
+    1905
+   ],
+   "source": "content/swipe/products/IMG_1255.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.018,
+    "added_past_old_crop": 0.621
+   },
+   "decision": "undecided"
+  },
+  "full/B080-P006c5.jpg": {
+   "kind": "cell",
+   "cell": "B080-P006-C5",
+   "before": [
+    467,
+    1032,
+    960,
+    1722
+   ],
+   "after": [
+    0,
+    1032,
+    962,
+    1905
+   ],
+   "source": "content/swipe/products/IMG_1255.png",
+   "compare": {
+    "kept": 0.996,
+    "added": 0.006,
+    "added_past_old_crop": 1.0
+   },
+   "decision": "undecided"
+  },
+  "full/B080-P006c7.jpg": {
+   "kind": "cell",
+   "cell": "B080-P006-C7",
+   "before": [
+    1420,
+    1032,
+    1872,
+    1722
+   ],
+   "after": [
+    1418,
+    1032,
+    1908,
+    1905
+   ],
+   "source": "content/swipe/products/IMG_1255.png",
+   "compare": {
+    "kept": 0.997,
+    "added": 0.004,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B080-P007c0.jpg": {
+   "kind": "cell",
+   "cell": "B080-P007-C0",
+   "before": [
+    36,
+    102,
+    483,
+    746
+   ],
+   "after": [
+    0,
+    100,
+    485,
+    929
+   ],
+   "source": "content/swipe/products/IMG_1256.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.004,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B080-P007c1.jpg": {
+   "kind": "cell",
+   "cell": "B080-P007-C1",
+   "before": [
+    467,
+    102,
+    960,
+    746
+   ],
+   "after": [
+    467,
+    100,
+    1428,
+    929
+   ],
+   "source": "content/swipe/products/IMG_1256.png",
+   "compare": {
+    "kept": 0.997,
+    "added": 0.003,
+    "added_past_old_crop": 0.984
+   },
+   "decision": "undecided"
+  },
+  "full/B080-P007c2.jpg": {
+   "kind": "cell",
+   "cell": "B080-P007-C2",
+   "before": [
+    944,
+    102,
+    1436,
+    746
+   ],
+   "after": [
+    480,
+    100,
+    1436,
+    929
+   ],
+   "source": "content/swipe/products/IMG_1256.png",
+   "compare": {
+    "kept": 0.992,
+    "added": 0.002,
+    "added_past_old_crop": 1.0
+   },
+   "decision": "undecided"
+  },
+  "full/B080-P007c3.jpg": {
+   "kind": "cell",
+   "cell": "B080-P007-C3",
+   "before": [
+    1420,
+    102,
+    1908,
+    746
+   ],
+   "after": [
+    1418,
+    100,
+    1908,
+    929
+   ],
+   "source": "content/swipe/products/IMG_1256.png",
+   "compare": {
+    "kept": 0.995,
+    "added": 0.012,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B080-P008c2.jpg": {
+   "kind": "cell",
+   "cell": "B080-P008-C2",
+   "before": [
+    940,
+    92,
+    1431,
+    707
+   ],
+   "after": [
+    480,
+    90,
+    1431,
+    957
+   ],
+   "source": "content/swipe/products/IMG_1257.png",
+   "compare": {
+    "kept": 0.993,
+    "added": 0.017,
+    "added_past_old_crop": 1.0
+   },
+   "decision": "undecided"
+  },
+  "full/B080-P011c0.jpg": {
+   "kind": "cell",
+   "cell": "B080-P011-C0",
+   "before": [
+    84,
+    664,
+    513,
+    971
+   ],
+   "after": [
+    7,
+    664,
+    513,
+    971
+   ],
+   "source": "content/swipe/products/IMG_1260.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.024,
+    "added_past_old_crop": 0.872
+   },
+   "decision": "undecided"
+  },
+  "full/B080-P011c1.jpg": {
+   "kind": "cell",
+   "cell": "B080-P011-C1",
+   "before": [
+    561,
+    521,
+    990,
+    1140
+   ],
+   "after": [
+    551,
+    488,
+    990,
+    1140
+   ],
+   "source": "content/swipe/products/IMG_1260.png",
+   "compare": {
+    "kept": 0.98,
+    "added": 0.007,
+    "added_past_old_crop": 0.784
+   },
+   "decision": "undecided"
+  },
+  "full/B080-P011c10.jpg": {
+   "kind": "cell",
+   "cell": "B080-P011-C10",
+   "before": [
+    1036,
+    2169,
+    1529,
+    2619
+   ],
+   "after": [
+    1016,
+    2169,
+    1529,
+    2619
+   ],
+   "source": "content/swipe/products/IMG_1260.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.098,
+    "added_past_old_crop": 0.004
+   },
+   "decision": "undecided"
+  },
+  "full/B080-P011c11.jpg": {
+   "kind": "cell",
+   "cell": "B080-P011-C11",
+   "before": [
+    1538,
+    2428,
+    1860,
+    2582
+   ],
+   "after": [
+    1493,
+    2428,
+    1860,
+    2582
+   ],
+   "source": "content/swipe/products/IMG_1260.png",
+   "compare": {
+    "kept": 0.988,
+    "added": 0.135,
+    "added_past_old_crop": 0.789
+   },
+   "decision": "undecided"
+  },
+  "full/B080-P011c2.jpg": {
+   "kind": "cell",
+   "cell": "B080-P011-C2",
+   "before": [
+    1036,
+    521,
+    1529,
+    1140
+   ],
+   "after": [
+    1018,
+    521,
+    1529,
+    1140
+   ],
+   "source": "content/swipe/products/IMG_1260.png",
+   "compare": {
+    "kept": 0.996,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B080-P011c3.jpg": {
+   "kind": "cell",
+   "cell": "B080-P011-C3",
+   "before": [
+    1538,
+    621,
+    1879,
+    962
+   ],
+   "after": [
+    1494,
+    621,
+    1879,
+    962
+   ],
+   "source": "content/swipe/products/IMG_1260.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.047,
+    "added_past_old_crop": 0.941
+   },
+   "decision": "undecided"
+  },
+  "full/B080-P011c4.jpg": {
+   "kind": "cell",
+   "cell": "B080-P011-C4",
+   "before": [
+    84,
+    1551,
+    513,
+    1785
+   ],
+   "after": [
+    64,
+    1551,
+    513,
+    1785
+   ],
+   "source": "content/swipe/products/IMG_1260.png",
+   "compare": {
+    "kept": 0.993,
+    "added": 0.026,
+    "added_past_old_crop": 0.018
+   },
+   "decision": "undecided"
+  },
+  "full/B080-P011c5.jpg": {
+   "kind": "cell",
+   "cell": "B080-P011-C5",
+   "before": [
+    561,
+    1328,
+    1029,
+    1946
+   ],
+   "after": [
+    542,
+    1328,
+    1029,
+    1946
+   ],
+   "source": "content/swipe/products/IMG_1260.png",
+   "compare": {
+    "kept": 0.993,
+    "added": 0.013,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B080-P011c6.jpg": {
+   "kind": "cell",
+   "cell": "B080-P011-C6",
+   "before": [
+    1036,
+    1587,
+    1529,
+    1946
+   ],
+   "after": [
+    1018,
+    1587,
+    1529,
+    1946
+   ],
+   "source": "content/swipe/products/IMG_1260.png",
+   "compare": {
+    "kept": 0.983,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B080-P011c7.jpg": {
+   "kind": "cell",
+   "cell": "B080-P011-C7",
+   "before": [
+    1538,
+    1610,
+    1865,
+    1751
+   ],
+   "after": [
+    1493,
+    1610,
+    1865,
+    1751
+   ],
+   "source": "content/swipe/products/IMG_1260.png",
+   "compare": {
+    "kept": 0.988,
+    "added": 0.0,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B080-P011c8.jpg": {
+   "kind": "cell",
+   "cell": "B080-P011-C8",
+   "before": [
+    84,
+    2432,
+    552,
+    2589
+   ],
+   "after": [
+    56,
+    2432,
+    552,
+    2589
+   ],
+   "source": "content/swipe/products/IMG_1260.png",
+   "kept_old": "the widened cell took in a neighbouring tile; the old cut kept",
+   "compare": {
+    "kept": 1.0,
+    "added": 0.0,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B080-P011c9.jpg": {
+   "kind": "cell",
+   "cell": "B080-P011-C9",
+   "before": [
+    561,
+    2421,
+    1029,
+    2746
+   ],
+   "after": [
+    520,
+    2421,
+    1029,
+    2746
+   ],
+   "source": "content/swipe/products/IMG_1260.png",
+   "compare": {
+    "kept": 0.995,
+    "added": 0.089,
+    "added_past_old_crop": 0.083
+   },
+   "decision": "undecided"
+  },
+  "full/B080-P012c6.jpg": {
+   "kind": "cell",
+   "cell": "B080-P012-C6",
+   "before": [
+    939,
+    924,
+    1428,
+    1755
+   ],
+   "after": [
+    480,
+    924,
+    1431,
+    1757
+   ],
+   "source": "content/swipe/products/IMG_1261.png",
+   "compare": {
+    "kept": 0.994,
+    "added": 0.005,
+    "added_past_old_crop": 0.794
+   },
+   "decision": "undecided"
+  },
+  "full/B081-P002-1c1.jpg": {
+   "kind": "cell",
+   "cell": "B081-P002-I1-C1",
+   "before": [
+    906,
+    542,
+    1908,
+    1810
+   ],
+   "after": [
+    906,
+    459,
+    1908,
+    2020
+   ],
+   "source": "content/swipe/products/IMG_1267.png",
+   "compare": null,
+   "decision": "undecided"
+  },
+  "full/B089-P001.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    459,
+    668,
+    1408,
+    1712
+   ],
+   "after": [
+    454,
+    321,
+    1451,
+    1763
+   ],
+   "source": "content/swipe/products/IMG_1340.png"
+  },
+  "full/B089-P002.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    459,
+    472,
+    1408,
+    1682
+   ],
+   "after": [
+    457,
+    304,
+    1448,
+    1707
+   ],
+   "source": "content/swipe/products/IMG_1342.png"
+  },
+  "full/B089-P002-V3.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    459,
+    472,
+    1408,
+    1672
+   ],
+   "after": [
+    454,
+    304,
+    1451,
+    1715
+   ],
+   "source": "content/swipe/products/IMG_1344.png"
+  },
+  "full/B090-P006.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    594,
+    1068,
+    1294,
+    1697
+   ],
+   "after": [
+    590,
+    584,
+    1300,
+    1719
+   ],
+   "source": "content/swipe/products/IMG_1356.png"
+  },
+  "full/B090-P007.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    654,
+    958,
+    1282,
+    1453
+   ],
+   "after": [
+    571,
+    353,
+    1322,
+    1485
+   ],
+   "source": "content/swipe/products/IMG_1357.png"
+  },
+  "full/B090-P008-1c0.jpg": {
+   "kind": "cell",
+   "cell": "B090-P008-I1-C0",
+   "before": [
+    140,
+    573,
+    806,
+    1191
+   ],
+   "after": [
+    140,
+    515,
+    806,
+    1191
+   ],
+   "source": "content/swipe/products/IMG_1359.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.014,
+    "added_past_old_crop": 0.705
+   },
+   "decision": "undecided"
+  },
+  "full/B090-P008-1c1.jpg": {
+   "kind": "cell",
+   "cell": "B090-P008-I1-C1",
+   "before": [
+    1098,
+    573,
+    1768,
+    1191
+   ],
+   "after": [
+    1098,
+    515,
+    1768,
+    1191
+   ],
+   "source": "content/swipe/products/IMG_1359.png",
+   "compare": {
+    "kept": 0.997,
+    "added": 0.013,
+    "added_past_old_crop": 0.897
+   },
+   "decision": "undecided"
+  },
+  "full/B090-P009.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    253,
+    1165,
+    1654,
+    2197
+   ],
+   "after": [
+    181,
+    948,
+    1733,
+    2230
+   ],
+   "source": "content/swipe/products/IMG_1361.png"
+  },
+  "full/B090-P009-V2.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    294,
+    881,
+    1613,
+    2129
+   ],
+   "after": [
+    162,
+    858,
+    1741,
+    2131
+   ],
+   "source": "content/swipe/products/IMG_1362.png"
+  },
+  "full/B090-P010.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    375,
+    1283,
+    1570,
+    2242
+   ],
+   "after": [
+    286,
+    1121,
+    1612,
+    2256
+   ],
+   "source": "content/swipe/products/IMG_1363.png"
+  },
+  "full/B090-P010-V2.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    375,
+    1630,
+    1570,
+    2370
+   ],
+   "after": [
+    258,
+    1413,
+    1642,
+    2413
+   ],
+   "source": "content/swipe/products/IMG_1364.png"
+  },
+  "full/B090-P010-V4.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    406,
+    1369,
+    1529,
+    2070
+   ],
+   "after": [
+    301,
+    1186,
+    1627,
+    2111
+   ],
+   "source": "content/swipe/products/IMG_1365.png"
+  },
+  "full/B090-P010-V4-1.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    459,
+    909,
+    1448,
+    1642
+   ],
+   "after": [
+    445,
+    723,
+    1473,
+    1662
+   ],
+   "source": "content/swipe/products/IMG_1366.png"
+  },
+  "full/B092-P007.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    284,
+    893,
+    1613,
+    2090
+   ],
+   "after": [
+    253,
+    224,
+    1655,
+    2135
+   ],
+   "source": "content/swipe/products/IMG_1400.png"
+  },
+  "full/B004-P001.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    22,
+    24,
+    367,
+    613
+   ],
+   "after": [
+    22,
+    24,
+    370,
+    644
+   ],
+   "source": "content/swipe/products/IMG_0006.jpeg"
+  },
+  "full/B006-P001c5.jpg": {
+   "kind": "cell",
+   "cell": "B006-P001-C5",
+   "before": [
+    949,
+    558,
+    1402,
+    1159
+   ],
+   "after": [
+    11,
+    6,
+    1403,
+    1229
+   ],
+   "source": "content/swipe/products/IMG_0008.jpeg",
+   "compare": {
+    "kept": 0.996,
+    "added": 0.0,
+    "added_past_old_crop": 1.0
+   },
+   "decision": "undecided"
+  },
+  "full/B020-P001.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    464,
+    425,
+    1329,
+    2746
+   ],
+   "after": [
+    450,
+    424,
+    1373,
+    2747
+   ],
+   "source": "content/swipe/products/IMG_0241.png"
+  },
+  "full/B022-P014c5.jpg": {
+   "kind": "cell",
+   "cell": "B022-P014-C5",
+   "before": [
+    488,
+    1641,
+    949,
+    2193
+   ],
+   "after": [
+    488,
+    1614,
+    949,
+    2193
+   ],
+   "source": "content/swipe/products/IMG_0302.png",
+   "compare": {
+    "kept": 0.997,
+    "added": 0.0,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B022-P014c6.jpg": {
+   "kind": "cell",
+   "cell": "B022-P014-C6",
+   "before": [
+    955,
+    1641,
+    1416,
+    2193
+   ],
+   "after": [
+    955,
+    1591,
+    1416,
+    2193
+   ],
+   "source": "content/swipe/products/IMG_0302.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.005,
+    "added_past_old_crop": 0.48
+   },
+   "decision": "undecided"
+  },
+  "full/B022-P015c2.jpg": {
+   "kind": "cell",
+   "cell": "B022-P015-C2",
+   "before": [
+    956,
+    953,
+    1429,
+    1492
+   ],
+   "after": [
+    956,
+    916,
+    1429,
+    1492
+   ],
+   "source": "content/swipe/products/IMG_0303.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.004,
+    "added_past_old_crop": 0.44
+   },
+   "decision": "undecided"
+  },
+  "full/B023-P008c1.jpg": {
+   "kind": "cell",
+   "cell": "B023-P008-C1",
+   "before": [
+    54,
+    1559,
+    649,
+    2390
+   ],
+   "after": [
+    54,
+    1418,
+    650,
+    2390
+   ],
+   "source": "content/swipe/products/IMG_0318.png",
+   "compare": {
+    "kept": 1.0,
+    "added": 0.003,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B023-P009c0.jpg": {
+   "kind": "cell",
+   "cell": "B023-P009-C0",
+   "before": [
+    18,
+    351,
+    649,
+    1257
+   ],
+   "after": [
+    0,
+    279,
+    1908,
+    1258
+   ],
+   "source": "content/swipe/products/IMG_0319.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.0,
+    "added_past_old_crop": 0.944
+   },
+   "decision": "undecided"
+  },
+  "full/B023-P009c3.jpg": {
+   "kind": "cell",
+   "cell": "B023-P009-C3",
+   "before": [
+    0,
+    1368,
+    649,
+    2369
+   ],
+   "after": [
+    0,
+    1348,
+    1908,
+    2403
+   ],
+   "source": "content/swipe/products/IMG_0319.png",
+   "compare": {
+    "kept": 0.876,
+    "added": 0.0,
+    "added_past_old_crop": 0.915
+   },
+   "decision": "undecided"
+  },
+  "full/B023-P011c0.jpg": {
+   "kind": "cell",
+   "cell": "B023-P011-C0",
+   "before": [
+    0,
+    351,
+    650,
+    1319
+   ],
+   "after": [
+    0,
+    349,
+    1102,
+    1349
+   ],
+   "source": "content/swipe/products/IMG_0322.png",
+   "compare": {
+    "kept": 0.996,
+    "added": 0.007,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B023-P011c1.jpg": {
+   "kind": "cell",
+   "cell": "B023-P011-C1",
+   "before": [
+    36,
+    1505,
+    649,
+    2437
+   ],
+   "after": [
+    36,
+    1464,
+    650,
+    2438
+   ],
+   "source": "content/swipe/products/IMG_0322.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.0,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B023-P012.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    489,
+    190,
+    1685,
+    2746
+   ],
+   "after": [
+    0,
+    181,
+    1895,
+    2747
+   ],
+   "source": "content/swipe/products/IMG_0323.png"
+  },
+  "full/B023-P013.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    489,
+    229,
+    1685,
+    1824
+   ],
+   "after": [
+    0,
+    208,
+    1908,
+    1824
+   ],
+   "source": "content/swipe/products/IMG_0324.png"
+  },
+  "full/B023-P015c1.jpg": {
+   "kind": "cell",
+   "cell": "B023-P015-C1",
+   "before": [
+    622,
+    351,
+    1286,
+    1295
+   ],
+   "after": [
+    0,
+    332,
+    1908,
+    1318
+   ],
+   "source": "content/swipe/products/IMG_0328.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.001,
+    "added_past_old_crop": 0.972
+   },
+   "decision": "undecided"
+  },
+  "full/B023-P015-1c0.jpg": {
+   "kind": "cell",
+   "cell": "B023-P015-I1-C0",
+   "before": [
+    0,
+    369,
+    644,
+    1325
+   ],
+   "after": [
+    0,
+    325,
+    670,
+    1325
+   ],
+   "source": "content/swipe/products/IMG_0329.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.002,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B023-P015-1c2.jpg": {
+   "kind": "cell",
+   "cell": "B023-P015-I1-C2",
+   "before": [
+    1259,
+    369,
+    1908,
+    1325
+   ],
+   "after": [
+    1238,
+    322,
+    1908,
+    1325
+   ],
+   "source": "content/swipe/products/IMG_0329.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B023-P015-1c3.jpg": {
+   "kind": "cell",
+   "cell": "B023-P015-I1-C3",
+   "before": [
+    0,
+    1482,
+    644,
+    2444
+   ],
+   "after": [
+    0,
+    1418,
+    670,
+    2444
+   ],
+   "source": "content/swipe/products/IMG_0329.png",
+   "compare": {
+    "kept": 1.0,
+    "added": 0.01,
+    "added_past_old_crop": 0.79
+   },
+   "decision": "undecided"
+  },
+  "full/B023-P016c1.jpg": {
+   "kind": "cell",
+   "cell": "B023-P016-C1",
+   "before": [
+    622,
+    560,
+    1275,
+    1470
+   ],
+   "after": [
+    0,
+    427,
+    1275,
+    1470
+   ],
+   "source": "content/swipe/products/IMG_0330.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.001,
+    "added_past_old_crop": 0.605
+   },
+   "decision": "undecided"
+  },
+  "full/B023-P016c2.jpg": {
+   "kind": "cell",
+   "cell": "B023-P016-C2",
+   "before": [
+    1255,
+    481,
+    1908,
+    1432
+   ],
+   "after": [
+    1241,
+    407,
+    1908,
+    1432
+   ],
+   "source": "content/swipe/products/IMG_0330.png",
+   "compare": {
+    "kept": 0.993,
+    "added": 0.03,
+    "added_past_old_crop": 0.927
+   },
+   "decision": "undecided"
+  },
+  "full/B023-P017c0.jpg": {
+   "kind": "cell",
+   "cell": "B023-P017-C0",
+   "before": [
+    0,
+    392,
+    644,
+    1350
+   ],
+   "after": [
+    0,
+    324,
+    670,
+    1350
+   ],
+   "source": "content/swipe/products/IMG_0331.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.023,
+    "added_past_old_crop": 0.938
+   },
+   "decision": "undecided"
+  },
+  "full/B023-P017c2.jpg": {
+   "kind": "cell",
+   "cell": "B023-P017-C2",
+   "before": [
+    1259,
+    392,
+    1908,
+    1347
+   ],
+   "after": [
+    1238,
+    324,
+    1908,
+    1347
+   ],
+   "source": "content/swipe/products/IMG_0331.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B024-P001c1.jpg": {
+   "kind": "cell",
+   "cell": "B024-P001-C1",
+   "before": [
+    624,
+    347,
+    1280,
+    1305
+   ],
+   "after": [
+    623,
+    291,
+    1908,
+    1305
+   ],
+   "source": "content/swipe/products/IMG_0332.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.001,
+    "added_past_old_crop": 0.107
+   },
+   "decision": "undecided"
+  },
+  "full/B024-P001c4.jpg": {
+   "kind": "cell",
+   "cell": "B024-P001-C4",
+   "before": [
+    656,
+    1470,
+    1280,
+    2424
+   ],
+   "after": [
+    656,
+    1398,
+    1280,
+    2424
+   ],
+   "source": "content/swipe/products/IMG_0332.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.018,
+    "added_past_old_crop": 0.953
+   },
+   "decision": "undecided"
+  },
+  "full/B024-P002c2.jpg": {
+   "kind": "cell",
+   "cell": "B024-P002-C2",
+   "before": [
+    1259,
+    279,
+    1908,
+    1237
+   ],
+   "after": [
+    1238,
+    208,
+    1908,
+    1237
+   ],
+   "source": "content/swipe/products/IMG_0333.png",
+   "compare": {
+    "kept": 0.971,
+    "added": 0.021,
+    "added_past_old_crop": 0.75
+   },
+   "decision": "undecided"
+  },
+  "full/B024-P002c4.jpg": {
+   "kind": "cell",
+   "cell": "B024-P002-C4",
+   "before": [
+    624,
+    1402,
+    1280,
+    2353
+   ],
+   "after": [
+    0,
+    1349,
+    1336,
+    2353
+   ],
+   "source": "content/swipe/products/IMG_0333.png",
+   "compare": {
+    "kept": 0.996,
+    "added": 0.001,
+    "added_past_old_crop": 0.921
+   },
+   "decision": "undecided"
+  },
+  "full/B024-P003c1.jpg": {
+   "kind": "cell",
+   "cell": "B024-P003-C1",
+   "before": [
+    624,
+    324,
+    1280,
+    1279
+   ],
+   "after": [
+    623,
+    277,
+    1305,
+    1279
+   ],
+   "source": "content/swipe/products/IMG_0334.png",
+   "compare": {
+    "kept": 0.997,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B024-P003c2.jpg": {
+   "kind": "cell",
+   "cell": "B024-P003-C2",
+   "before": [
+    1259,
+    358,
+    1908,
+    1318
+   ],
+   "after": [
+    1258,
+    311,
+    1908,
+    1318
+   ],
+   "source": "content/swipe/products/IMG_0334.png",
+   "compare": {
+    "kept": 0.998,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B024-P003c3.jpg": {
+   "kind": "cell",
+   "cell": "B024-P003-C3",
+   "before": [
+    0,
+    1447,
+    644,
+    2396
+   ],
+   "after": [
+    0,
+    1389,
+    670,
+    2396
+   ],
+   "source": "content/swipe/products/IMG_0334.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.002,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B024-P003c4.jpg": {
+   "kind": "cell",
+   "cell": "B024-P003-C4",
+   "before": [
+    624,
+    1447,
+    1280,
+    2437
+   ],
+   "after": [
+    624,
+    1395,
+    1280,
+    2437
+   ],
+   "source": "content/swipe/products/IMG_0334.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B024-P003c5.jpg": {
+   "kind": "cell",
+   "cell": "B024-P003-C5",
+   "before": [
+    1259,
+    1447,
+    1908,
+    2396
+   ],
+   "after": [
+    1238,
+    1397,
+    1908,
+    2396
+   ],
+   "source": "content/swipe/products/IMG_0334.png",
+   "compare": {
+    "kept": 0.996,
+    "added": 0.0,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B024-P004c0.jpg": {
+   "kind": "cell",
+   "cell": "B024-P004-C0",
+   "before": [
+    0,
+    313,
+    644,
+    1271
+   ],
+   "after": [
+    0,
+    244,
+    670,
+    1271
+   ],
+   "source": "content/swipe/products/IMG_0335.png",
+   "compare": {
+    "kept": 0.997,
+    "added": 0.024,
+    "added_past_old_crop": 0.928
+   },
+   "decision": "undecided"
+  },
+  "full/B024-P005-1c3.jpg": {
+   "kind": "cell",
+   "cell": "B024-P005-I1-C3",
+   "before": [
+    0,
+    1587,
+    643,
+    2549
+   ],
+   "after": [
+    0,
+    1542,
+    645,
+    2549
+   ],
+   "source": "content/swipe/products/IMG_0337.png",
+   "compare": {
+    "kept": 0.997,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B024-P005-1c5.jpg": {
+   "kind": "cell",
+   "cell": "B024-P005-I1-C5",
+   "before": [
+    1256,
+    1587,
+    1908,
+    2549
+   ],
+   "after": [
+    1255,
+    1545,
+    1908,
+    2549
+   ],
+   "source": "content/swipe/products/IMG_0337.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B024-P006c2.jpg": {
+   "kind": "cell",
+   "cell": "B024-P006-C2",
+   "before": [
+    1259,
+    301,
+    1908,
+    1266
+   ],
+   "after": [
+    1258,
+    259,
+    1908,
+    1266
+   ],
+   "source": "content/swipe/products/IMG_0338.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B024-P009c3.jpg": {
+   "kind": "cell",
+   "cell": "B024-P009-C3",
+   "before": [
+    90,
+    1566,
+    545,
+    2508
+   ],
+   "after": [
+    90,
+    1521,
+    545,
+    2508
+   ],
+   "source": "content/swipe/products/IMG_0341.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.001,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B025-P005c0.jpg": {
+   "kind": "cell",
+   "cell": "B025-P005-C0",
+   "before": [
+    95,
+    546,
+    610,
+    1093
+   ],
+   "after": [
+    95,
+    546,
+    610,
+    1127
+   ],
+   "source": "content/swipe/products/IMG_0349.png",
+   "compare": {
+    "kept": 0.962,
+    "added": 0.0,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B028-P007.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    325,
+    234,
+    1334,
+    2733
+   ],
+   "after": [
+    229,
+    203,
+    1370,
+    2747
+   ],
+   "source": "content/swipe/products/IMG_0391.png"
+  },
+  "full/B029-P002.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    492,
+    689,
+    1368,
+    2257
+   ],
+   "after": [
+    482,
+    681,
+    1531,
+    2274
+   ],
+   "source": "content/swipe/products/IMG_0405.png"
+  },
+  "full/B030-P007c0.jpg": {
+   "kind": "cell",
+   "cell": "B030-P007-C0",
+   "before": [
+    11,
+    755,
+    645,
+    1510
+   ],
+   "after": [
+    11,
+    685,
+    645,
+    1510
+   ],
+   "source": "content/swipe/products/IMG_0413.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.019,
+    "added_past_old_crop": 0.911
+   },
+   "decision": "undecided"
+  },
+  "full/B030-P007c1.jpg": {
+   "kind": "cell",
+   "cell": "B030-P007-C1",
+   "before": [
+    636,
+    755,
+    1270,
+    1510
+   ],
+   "after": [
+    636,
+    685,
+    1270,
+    1510
+   ],
+   "source": "content/swipe/products/IMG_0413.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.013,
+    "added_past_old_crop": 0.891
+   },
+   "decision": "undecided"
+  },
+  "full/B030-P007c2.jpg": {
+   "kind": "cell",
+   "cell": "B030-P007-C2",
+   "before": [
+    1261,
+    755,
+    1894,
+    1510
+   ],
+   "after": [
+    1261,
+    685,
+    1894,
+    1510
+   ],
+   "source": "content/swipe/products/IMG_0413.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.026,
+    "added_past_old_crop": 0.958
+   },
+   "decision": "undecided"
+  },
+  "full/B030-P007c5.jpg": {
+   "kind": "cell",
+   "cell": "B030-P007-C5",
+   "before": [
+    1261,
+    1766,
+    1894,
+    2525
+   ],
+   "after": [
+    1261,
+    1700,
+    1894,
+    2525
+   ],
+   "source": "content/swipe/products/IMG_0413.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.019,
+    "added_past_old_crop": 0.736
+   },
+   "decision": "undecided"
+  },
+  "full/B039-P004c2.jpg": {
+   "kind": "cell",
+   "cell": "B039-P004-C2",
+   "before": [
+    1346,
+    328,
+    1854,
+    999
+   ],
+   "after": [
+    1238,
+    227,
+    1854,
+    999
+   ],
+   "source": "content/swipe/products/IMG_0498.png",
+   "compare": {
+    "kept": 0.999,
+    "added": 0.246,
+    "added_past_old_crop": 0.948
+   },
+   "decision": "undecided"
+  },
+  "full/B041-P009.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    0,
+    23,
+    1908,
+    2604
+   ],
+   "after": [
+    0,
+    23,
+    1908,
+    2616
+   ],
+   "source": "content/swipe/products/IMG_0519.png"
+  },
+  "full/B042-P009.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    61,
+    463,
+    988,
+    1843
+   ],
+   "after": [
+    61,
+    462,
+    989,
+    2011
+   ],
+   "source": "content/swipe/products/IMG_0529.png"
+  },
+  "full/B042-P013.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    0,
+    31,
+    1438,
+    2746
+   ],
+   "after": [
+    0,
+    20,
+    1908,
+    2747
+   ],
+   "source": "content/swipe/products/IMG_0535.png"
+  },
+  "full/B042-P021.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    0,
+    31,
+    1349,
+    2746
+   ],
+   "after": [
+    0,
+    20,
+    1908,
+    2747
+   ],
+   "source": "content/swipe/products/IMG_0545.png"
+  },
+  "full/B044-P004-1c3.jpg": {
+   "kind": "cell",
+   "cell": "B044-P004-I1-C3",
+   "before": [
+    945,
+    1245,
+    1908,
+    2569
+   ],
+   "after": [
+    909,
+    1245,
+    1908,
+    2637
+   ],
+   "source": "content/swipe/products/IMG_0593.png",
+   "compare": {
+    "kept": 0.995,
+    "added": 0.007,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B044-P005-1c1.jpg": {
+   "kind": "cell",
+   "cell": "B044-P005-I1-C1",
+   "before": [
+    994,
+    340,
+    1738,
+    1175
+   ],
+   "after": [
+    992,
+    284,
+    1738,
+    1175
+   ],
+   "source": "content/swipe/products/IMG_0595.png",
+   "compare": {
+    "kept": 0.997,
+    "added": 0.024,
+    "added_past_old_crop": 0.971
+   },
+   "decision": "undecided"
+  },
+  "full/B044-P020c1.jpg": {
+   "kind": "cell",
+   "cell": "B044-P020-C1",
+   "before": [
+    627,
+    571,
+    1281,
+    1460
+   ],
+   "after": [
+    0,
+    535,
+    1908,
+    1492
+   ],
+   "source": "content/swipe/products/IMG_0613.png",
+   "compare": {
+    "kept": 0.997,
+    "added": 0.002,
+    "added_past_old_crop": 0.952
+   },
+   "decision": "undecided"
+  },
+  "full/B050-P005.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    0,
+    187,
+    1908,
+    2746
+   ],
+   "after": [
+    0,
+    173,
+    1908,
+    2747
+   ],
+   "source": "content/swipe/products/IMG_0661.png"
+  },
+  "full/B055-P008.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    180,
+    273,
+    1736,
+    2419
+   ],
+   "after": [
+    163,
+    258,
+    1815,
+    2489
+   ],
+   "source": "content/swipe/products/IMG_0711.png"
+  },
+  "full/B058-P006-1.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    154,
+    497,
+    1123,
+    961
+   ],
+   "after": [
+    138,
+    492,
+    1125,
+    964
+   ],
+   "source": "content/swipe/products/IMG_0748.png"
+  },
+  "full/B059-P006-V2.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    35,
+    1507,
+    1128,
+    2746
+   ],
+   "after": [
+    0,
+    200,
+    1137,
+    2747
+   ],
+   "source": "content/swipe/products/IMG_0757.png"
+  },
+  "full/B061-P003-V2.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    0,
+    2190,
+    1109,
+    2746
+   ],
+   "after": [
+    0,
+    377,
+    1137,
+    2747
+   ],
+   "source": "content/swipe/products/IMG_0773.png"
+  },
+  "full/B065-P001c0.jpg": {
+   "kind": "cell",
+   "cell": "B065-P001-C0",
+   "before": [
+    133,
+    607,
+    1040,
+    1956
+   ],
+   "after": [
+    58,
+    540,
+    1755,
+    1956
+   ],
+   "source": "content/swipe/products/IMG_1026.png",
+   "compare": {
+    "kept": 0.993,
+    "added": 0.012,
+    "added_past_old_crop": 0.144
+   },
+   "decision": "undecided"
+  },
+  "full/B068-P026.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    170,
+    208,
+    1737,
+    2306
+   ],
+   "after": [
+    0,
+    206,
+    1895,
+    2307
+   ],
+   "source": "content/swipe/products/IMG_1065.png"
+  },
+  "full/B068-P055.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    243,
+    229,
+    1664,
+    2282
+   ],
+   "after": [
+    0,
+    228,
+    1895,
+    2282
+   ],
+   "source": "content/swipe/products/IMG_1094.png"
+  },
+  "full/B079-P003c2.jpg": {
+   "kind": "cell",
+   "cell": "B079-P003-C2",
+   "before": [
+    258,
+    1438,
+    1051,
+    2614
+   ],
+   "after": [
+    188,
+    1438,
+    1680,
+    2614
+   ],
+   "source": "content/swipe/products/IMG_1243.png",
+   "compare": {
+    "kept": 1.0,
+    "added": 0.007,
+    "added_past_old_crop": 0.361
+   },
+   "decision": "undecided"
+  },
+  "full/B081-P001c1.jpg": {
+   "kind": "cell",
+   "cell": "B081-P001-C1",
+   "before": [
+    931,
+    482,
+    1908,
+    1706
+   ],
+   "after": [
+    906,
+    387,
+    1908,
+    1900
+   ],
+   "source": "content/swipe/products/IMG_1265.png",
+   "compare": null,
+   "decision": "undecided"
+  },
+  "full/B081-P002c1.jpg": {
+   "kind": "cell",
+   "cell": "B081-P002-C1",
+   "before": [
+    937,
+    830,
+    1908,
+    2097
+   ],
+   "after": [
+    906,
+    569,
+    1908,
+    2219
+   ],
+   "source": "content/swipe/products/IMG_1266.png",
+   "compare": null,
+   "decision": "undecided"
+  },
+  "full/B082-P001c1.jpg": {
+   "kind": "cell",
+   "cell": "B082-P001-C1",
+   "before": [
+    944,
+    344,
+    1908,
+    1245
+   ],
+   "after": [
+    906,
+    329,
+    1908,
+    2148
+   ],
+   "source": "content/swipe/products/IMG_1268.png",
+   "compare": {
+    "kept": 0.989,
+    "added": 0.017,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "full/B088-P009.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    593,
+    831,
+    1314,
+    1676
+   ],
+   "after": [
+    590,
+    304,
+    1316,
+    1707
+   ],
+   "source": "content/swipe/products/IMG_1338.png"
+  },
+  "full/B088-P009-V2.jpg": {
+   "kind": "page",
+   "done": true,
+   "before": [
+    584,
+    826,
+    1285,
+    1649
+   ],
+   "after": [
+    581,
+    279,
+    1324,
+    1685
+   ],
+   "source": "content/swipe/products/IMG_1339.png"
+  }
+ },
+ "products": {
+  "B005-P001": {
+   "why": "the picture it came from was widened to the whole piece",
+   "picture": 0,
+   "rect": [
+    0,
+    18,
+    1908,
+    2576
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#E5E5E5",
+    "worn": false,
+    "skin": 0.0,
+    "pieces_kept": 2,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.909,
+    "fill": 0.345,
+    "size": [
+     1182,
+     1174
+    ]
+   },
+   "decision": "removed: stays removed"
+  },
+  "B010-P001": {
+   "why": "the picture it came from was widened to the whole piece",
+   "picture": 0,
+   "rect": [
+    1319,
+    188,
+    1868,
+    2521
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#DFE1E5",
+    "worn": false,
+    "skin": 0.0,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.763,
+    "fill": 0.347,
+    "size": [
+     198,
+     1200
+    ]
+   },
+   "decision": "back to Review"
+  },
+  "B010-P001-V2": {
+   "why": "the cut-out was B010-P001's, not this row's own picture",
+   "picture": 1,
+   "rect": [
+    3,
+    888,
+    931,
+    1684
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#FFFFFF",
+    "worn": true,
+    "skin": 0.247,
+    "worn_note": "the clothes model found no garment for this slot",
+    "pieces_kept": 1,
+    "holes_removed": 0.3744,
+    "pieces": 2,
+    "soft_edge": 0.714,
+    "fill": 0.265,
+    "size": [
+     300,
+     249
+    ]
+   },
+   "decision": "removed: stays removed"
+  },
+  "B010-P001-V3": {
+   "why": "the cut-out was B010-P001's, not this row's own picture",
+   "picture": 0,
+   "rect": [
+    3,
+    452,
+    931,
+    1323
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#FFFFFF",
+    "worn": false,
+    "skin": 0.0,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.68,
+    "fill": 0.669,
+    "size": [
+     580,
+     642
+    ]
+   },
+   "compare": {
+    "kept": 0.996,
+    "added": 0.008,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "B010-P003-V2": {
+   "why": "the cut-out was B010-P003's, not this row's own picture",
+   "picture": 1,
+   "rect": [
+    3,
+    918,
+    931,
+    2295
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#FFFFFF",
+    "worn": false,
+    "skin": 0.039,
+    "pieces_kept": 1,
+    "holes_removed": 0.004,
+    "pieces": 1,
+    "soft_edge": 0.626,
+    "fill": 0.503,
+    "size": [
+     341,
+     809
+    ]
+   },
+   "decision": "removed: stays removed"
+  },
+  "B010-P005-V2": {
+   "why": "the cut-out was B010-P005's, not this row's own picture",
+   "picture": 2,
+   "rect": [
+    308,
+    570,
+    803,
+    2104
+   ],
+   "info": {
+    "model": "u2net",
+    "backdrop": "#DFE1E5",
+    "worn": false,
+    "skin": 0.034,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.554,
+    "fill": 0.534,
+    "size": [
+     439,
+     1149
+    ]
+   },
+   "decision": "removed: stays removed"
+  },
+  "B010-P005-V4": {
+   "why": "the cut-out was B010-P005's, not this row's own picture",
+   "picture": 0,
+   "rect": [
+    0,
+    643,
+    835,
+    1306
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#EFF0F2",
+    "worn": false,
+    "skin": 0.0,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.87,
+    "fill": 0.626,
+    "size": [
+     575,
+     560
+    ]
+   },
+   "compare": {
+    "kept": 0.997,
+    "added": 0.015,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "B010-P005-V5": {
+   "why": "the cut-out was B010-P005's, not this row's own picture",
+   "picture": 0,
+   "rect": [
+    3,
+    176,
+    931,
+    1245
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#FFFFFF",
+    "worn": true,
+    "skin": 0.064,
+    "worn_note": "the clothes model found no garment for this slot",
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.652,
+    "fill": 0.524,
+    "size": [
+     356,
+     1035
+    ]
+   },
+   "decision": "removed: stays removed"
+  },
+  "B012-P003-V2": {
+   "why": "the cut-out was B012-P003's, not this row's own picture",
+   "picture": 0,
+   "rect": [
+    3,
+    234,
+    931,
+    1361
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#FFFFFF",
+    "worn": true,
+    "skin": 0.135,
+    "cloth": true,
+    "pieces_kept": 2,
+    "holes_removed": 0.0,
+    "pieces": 2,
+    "soft_edge": 0.413,
+    "fill": 0.42,
+    "size": [
+     360,
+     429
+    ]
+   },
+   "decision": "removed: stays removed"
+  },
+  "B012-P003-V3": {
+   "why": "the cut-out was B012-P003's, not this row's own picture",
+   "picture": 0,
+   "rect": [
+    3,
+    536,
+    931,
+    1427
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#FFFFFF",
+    "worn": false,
+    "skin": 0.0,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.843,
+    "fill": 0.663,
+    "size": [
+     486,
+     676
+    ]
+   },
+   "compare": {
+    "kept": 1.0,
+    "added": 0.016,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "B014-P001-V3": {
+   "why": "the cut-out was B014-P001's, not this row's own picture",
+   "picture": 0,
+   "rect": [
+    3,
+    548,
+    931,
+    1436
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#FFFFFF",
+    "worn": false,
+    "skin": 0.0,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.777,
+    "fill": 0.745,
+    "size": [
+     564,
+     627
+    ]
+   },
+   "compare": {
+    "kept": 0.993,
+    "added": 0.002,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "B016-P001-V2": {
+   "why": "the cut-out was B016-P001's, not this row's own picture",
+   "picture": 0,
+   "rect": [
+    3,
+    548,
+    931,
+    1415
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#FFFFFF",
+    "worn": false,
+    "skin": 0.004,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.673,
+    "fill": 0.603,
+    "size": [
+     589,
+     638
+    ]
+   },
+   "decision": "back to Review"
+  },
+  "B017-P001-V2": {
+   "why": "the picture it came from was widened to the whole piece",
+   "picture": 0,
+   "rect": [
+    0,
+    362,
+    1908,
+    2659
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#E8E8E8",
+    "worn": false,
+    "skin": 0.026,
+    "pieces_kept": 2,
+    "holes_removed": 0.0,
+    "pieces": 2,
+    "soft_edge": 0.648,
+    "fill": 0.363,
+    "size": [
+     359,
+     1200
+    ]
+   },
+   "decision": "undecided"
+  },
+  "B020-P006-V2": {
+   "why": "the cut-out was B020-P006's, not this row's own picture",
+   "picture": 0,
+   "rect": [
+    0,
+    554,
+    982,
+    1828
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#ECEAE6",
+    "worn": false,
+    "skin": 0.0,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.86,
+    "fill": 0.349,
+    "size": [
+     724,
+     914
+    ]
+   },
+   "compare": {
+    "kept": 0.991,
+    "added": 0.032,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "B021-P002-V2": {
+   "why": "the cut-out was B021-P002's, not this row's own picture",
+   "picture": 0,
+   "rect": [
+    0,
+    33,
+    992,
+    1535
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#9B9C97",
+    "worn": true,
+    "skin": 0.127,
+    "cloth": true,
+    "pieces_kept": 2,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.605,
+    "fill": 0.666,
+    "size": [
+     643,
+     829
+    ]
+   },
+   "decision": "removed: stays removed"
+  },
+  "B021-P006-V2": {
+   "why": "the cut-out was B021-P006's, not this row's own picture",
+   "picture": 0,
+   "rect": [
+    927,
+    82,
+    1701,
+    1578
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#F5F5F5",
+    "worn": true,
+    "skin": 0.07,
+    "cloth": true,
+    "pieces_kept": 1,
+    "holes_removed": 0.5479,
+    "pieces": 2,
+    "soft_edge": 0.712,
+    "fill": 0.199,
+    "size": [
+     484,
+     621
+    ]
+   },
+   "decision": "removed: stays removed"
+  },
+  "B021-P011-V2": {
+   "why": "the cut-out was B021-P011's, not this row's own picture",
+   "picture": 0,
+   "rect": [
+    0,
+    1496,
+    992,
+    2746
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#F2F3ED",
+    "worn": true,
+    "skin": 0.203,
+    "cloth": true,
+    "pieces_kept": 2,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.457,
+    "fill": 0.544,
+    "size": [
+     472,
+     351
+    ]
+   },
+   "decision": "removed: stays removed"
+  },
+  "B025-P001-V2": {
+   "why": "the crop cut the piece off at left",
+   "picture": 0,
+   "rect": [
+    314,
+    655,
+    1074,
+    1597
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#F2F3F0",
+    "worn": false,
+    "skin": 0.0,
+    "pieces_kept": 1,
+    "holes_removed": 0.1531,
+    "pieces": 1,
+    "soft_edge": 0.841,
+    "fill": 0.649,
+    "size": [
+     714,
+     917
+    ]
+   },
+   "compare": {
+    "kept": 0.998,
+    "added": 0.024,
+    "added_past_old_crop": 0.03
+   },
+   "decision": "undecided"
+  },
+  "B025-P008-V2": {
+   "why": "the cut-out was B025-P008's, not this row's own picture",
+   "picture": 0,
+   "rect": [
+    0,
+    40,
+    1908,
+    445
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#8E8E8E",
+    "worn": false,
+    "skin": 0.0,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.757,
+    "fill": 0.553,
+    "size": [
+     1200,
+     295
+    ]
+   },
+   "decision": "removed: stays removed"
+  },
+  "B027-P002": {
+   "why": "the crop cut the piece off at left",
+   "picture": 0,
+   "rect": [
+    533,
+    201,
+    1282,
+    2747
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#EAECEB",
+    "worn": true,
+    "skin": 0.133,
+    "cloth": true,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.646,
+    "fill": 0.413,
+    "size": [
+     641,
+     1200
+    ]
+   },
+   "decision": "removed: stays removed"
+  },
+  "B028-P012-V2": {
+   "why": "the cut-out was B028-P012's, not this row's own picture",
+   "picture": 0,
+   "rect": [
+    293,
+    362,
+    1633,
+    1443
+   ],
+   "info": {
+    "model": "u2net",
+    "backdrop": "#EFEFEF",
+    "worn": true,
+    "skin": 0.07,
+    "cloth": true,
+    "pieces_kept": 26,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.542,
+    "fill": 0.716,
+    "size": [
+     1200,
+     801
+    ]
+   },
+   "decision": "kept: person is a box on the photo, moved to the same pixels"
+  },
+  "B030-P009": {
+   "why": "the crop cut the piece off at top",
+   "picture": 0,
+   "rect": [
+    0,
+    522,
+    982,
+    1757
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#FFFFFF",
+    "worn": false,
+    "skin": 0.029,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.664,
+    "fill": 0.463,
+    "size": [
+     447,
+     1172
+    ]
+   },
+   "compare": {
+    "kept": 0.996,
+    "added": 0.192,
+    "added_past_old_crop": 0.22
+   },
+   "decision": "kept: person is a box on the photo, moved to the same pixels"
+  },
+  "B035-P004-V2": {
+   "why": "the cut-out was B035-P004's, not this row's own picture",
+   "picture": 0,
+   "rect": [
+    1052,
+    1441,
+    1507,
+    1715
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#F6F6F6",
+    "worn": false,
+    "skin": 0.0,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.723,
+    "fill": 0.503,
+    "size": [
+     421,
+     260
+    ]
+   },
+   "decision": "removed: stays removed"
+  },
+  "B037-P007": {
+   "why": "the picture it came from was widened to the whole piece",
+   "picture": 1,
+   "rect": [
+    335,
+    1172,
+    647,
+    1656
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#F3F4F0",
+    "worn": false,
+    "skin": 0.005,
+    "pieces_kept": 113,
+    "holes_removed": 0.108,
+    "pieces": 2,
+    "soft_edge": 0.757,
+    "fill": 0.176,
+    "size": [
+     312,
+     477
+    ]
+   },
+   "decision": "undecided"
+  },
+  "B037-P008": {
+   "why": "the picture it came from was widened to the whole piece",
+   "result": "on a person, and the piece cannot be cut off them: kept the old cut-out",
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#F3F4F0",
+    "worn": false,
+    "skin": 0.034,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.607,
+    "fill": 0.523,
+    "size": [
+     224,
+     606
+    ]
+   }
+  },
+  "B042-P032-V2": {
+   "why": "the cut-out was B042-P032's, not this row's own picture",
+   "picture": 0,
+   "rect": [
+    371,
+    258,
+    1422,
+    646
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#8F9091",
+    "worn": false,
+    "skin": 0.0,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.7,
+    "fill": 0.581,
+    "size": [
+     911,
+     325
+    ]
+   },
+   "decision": "removed: stays removed"
+  },
+  "B043-P004-V2": {
+   "why": "the crop cut the piece off at top",
+   "picture": 0,
+   "rect": [
+    913,
+    1562,
+    1819,
+    2280
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#E9E9E9",
+    "worn": false,
+    "skin": 0.0,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.736,
+    "fill": 0.551,
+    "size": [
+     755,
+     675
+    ]
+   },
+   "compare": {
+    "kept": 0.993,
+    "added": 0.059,
+    "added_past_old_crop": 0.817
+   },
+   "decision": "undecided"
+  },
+  "B043-P004-V4": {
+   "why": "the cut-out was B043-P004's, not this row's own picture",
+   "picture": 0,
+   "rect": [
+    954,
+    1123,
+    1868,
+    1759
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#EAEAEA",
+    "worn": false,
+    "skin": 0.0,
+    "pieces_kept": 9,
+    "holes_removed": 0.0,
+    "pieces": 6,
+    "soft_edge": 0.679,
+    "fill": 0.071,
+    "size": [
+     814,
+     636
+    ]
+   },
+   "decision": "removed: stays removed"
+  },
+  "B043-P005": {
+   "why": "worn bag cropped to a fixed band",
+   "picture": 0,
+   "rect": [
+    380,
+    625,
+    1115,
+    2525
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#717171",
+    "worn": false,
+    "skin": 0.001,
+    "pieces_kept": 3,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.66,
+    "fill": 0.73,
+    "size": [
+     464,
+     1200
+    ]
+   },
+   "compare": {
+    "kept": 0.743,
+    "added": 0.348,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "removed: stays removed"
+  },
+  "B043-P006": {
+   "why": "worn bag cropped to a fixed band",
+   "picture": 0,
+   "rect": [
+    752,
+    1388,
+    1145,
+    1696
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#79797A",
+    "worn": true,
+    "skin": 0.138,
+    "worn_note": "a bag on a person: the clothes model cannot separate it",
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.837,
+    "fill": 0.552,
+    "size": [
+     393,
+     308
+    ]
+   },
+   "compare": {
+    "kept": 0.121,
+    "added": 0.006,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "removed: stays removed"
+  },
+  "B044-P008": {
+   "why": "the crop cut the piece off at left",
+   "picture": 0,
+   "rect": [
+    501,
+    158,
+    1407,
+    2736
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#FBFAFA",
+    "worn": false,
+    "skin": 0.0,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.7,
+    "fill": 0.77,
+    "size": [
+     433,
+     1200
+    ]
+   },
+   "compare": {
+    "kept": 0.99,
+    "added": 0.434,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "kept: item is a box on the photo, moved to the same pixels"
+  },
+  "B044-P010-V2": {
+   "why": "the cut-out was B044-P010's, not this row's own picture",
+   "picture": 0,
+   "rect": [
+    0,
+    40,
+    1908,
+    445
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#4E4E4F",
+    "worn": false,
+    "skin": 0.0,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.665,
+    "fill": 0.549,
+    "size": [
+     1200,
+     295
+    ]
+   },
+   "decision": "removed: stays removed"
+  },
+  "B048-P001": {
+   "why": "the crop cut the piece off at left, right",
+   "picture": 1,
+   "rect": [
+    208,
+    711,
+    813,
+    1634
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#F8F8F8",
+    "worn": false,
+    "skin": 0.0,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.977,
+    "fill": 0.598,
+    "size": [
+     587,
+     878
+    ]
+   },
+   "compare": {
+    "kept": 0.995,
+    "added": 0.065,
+    "added_past_old_crop": 0.034
+   },
+   "decision": "undecided"
+  },
+  "B052-P002": {
+   "why": "the crop cut the piece off at bottom",
+   "picture": 0,
+   "rect": [
+    374,
+    594,
+    1537,
+    2270
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#FAFAFA",
+    "worn": true,
+    "skin": 0.136,
+    "cloth": true,
+    "pieces_kept": 2,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.613,
+    "fill": 0.524,
+    "size": [
+     847,
+     1200
+    ]
+   },
+   "compare": {
+    "kept": 0.955,
+    "added": 0.009,
+    "added_past_old_crop": 0.01
+   },
+   "decision": "kept: only the edges improved"
+  },
+  "B053-P001": {
+   "why": "the picture it came from was widened to the whole piece",
+   "picture": 0,
+   "rect": [
+    39,
+    149,
+    1868,
+    1605
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#FAFAFA",
+    "worn": true,
+    "skin": 0.174,
+    "worn_note": "a shoes on a person: the clothes model cannot separate it",
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.722,
+    "fill": 0.408,
+    "size": [
+     1200,
+     368
+    ]
+   },
+   "decision": "removed: stays removed"
+  },
+  "B053-P004": {
+   "why": "the crop cut the piece off at top",
+   "picture": 0,
+   "rect": [
+    22,
+    982,
+    1301,
+    2302
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#FBFBF6",
+    "worn": false,
+    "skin": 0.0,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.852,
+    "fill": 0.404,
+    "size": [
+     727,
+     1049
+    ]
+   },
+   "compare": {
+    "kept": 1.0,
+    "added": 0.066,
+    "added_past_old_crop": 0.8
+   },
+   "decision": "removed: stays removed"
+  },
+  "B053-P005": {
+   "why": "worn bag cropped to a fixed band",
+   "picture": 0,
+   "rect": [
+    127,
+    1081,
+    933,
+    1940
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#E1E1E1",
+    "worn": false,
+    "skin": 0.002,
+    "pieces_kept": 7,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.732,
+    "fill": 0.67,
+    "size": [
+     806,
+     859
+    ]
+   },
+   "compare": {
+    "kept": 0.691,
+    "added": 0.105,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "removed: stays removed"
+  },
+  "B055-P003-V4": {
+   "why": "the cut-out was B055-P003's, not this row's own picture",
+   "picture": 0,
+   "rect": [
+    38,
+    414,
+    1048,
+    1825
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#FFFCF8",
+    "worn": false,
+    "skin": 0.026,
+    "pieces_kept": 1,
+    "holes_removed": 0.0851,
+    "pieces": 1,
+    "soft_edge": 0.831,
+    "fill": 0.356,
+    "size": [
+     654,
+     1200
+    ]
+   },
+   "decision": "removed: stays removed"
+  },
+  "B055-P003-V5": {
+   "why": "the cut-out was B055-P003's, not this row's own picture",
+   "picture": 0,
+   "rect": [
+    38,
+    414,
+    1048,
+    1825
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#FFFCF8",
+    "worn": true,
+    "skin": 0.092,
+    "cloth": true,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.497,
+    "fill": 0.536,
+    "size": [
+     606,
+     597
+    ]
+   },
+   "decision": "removed: stays removed"
+  },
+  "B055-P004-V3": {
+   "why": "the cut-out was B055-P004's, not this row's own picture",
+   "picture": 0,
+   "rect": [
+    0,
+    22,
+    1908,
+    2206
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#E9E8EC",
+    "worn": true,
+    "skin": 0.046,
+    "cloth": true,
+    "pieces_kept": 3,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.575,
+    "fill": 0.505,
+    "size": [
+     565,
+     701
+    ]
+   },
+   "decision": "removed: stays removed"
+  },
+  "B057-P001-V2": {
+   "why": "the cut-out was B057-P001's, not this row's own picture",
+   "picture": 0,
+   "rect": [
+    0,
+    1801,
+    1908,
+    2730
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#A5A4A6",
+    "worn": false,
+    "skin": 0.002,
+    "pieces_kept": 4,
+    "holes_removed": 0.0,
+    "pieces": 4,
+    "soft_edge": 0.682,
+    "fill": 0.461,
+    "size": [
+     1200,
+     434
+    ]
+   },
+   "decision": "removed: stays removed"
+  },
+  "B058-P007-V2": {
+   "why": "the cut-out was B058-P007's, not this row's own picture",
+   "picture": 0,
+   "rect": [
+    6,
+    292,
+    971,
+    971
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#FFFFFF",
+    "worn": false,
+    "skin": 0.013,
+    "pieces_kept": 2,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.794,
+    "fill": 0.674,
+    "size": [
+     943,
+     586
+    ]
+   },
+   "compare": {
+    "kept": 0.994,
+    "added": 0.068,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "B059-P006-V2": {
+   "why": "the cut-out was B059-P006's, not this row's own picture",
+   "picture": 0,
+   "rect": [
+    0,
+    200,
+    1137,
+    2747
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#FFFFFF",
+    "worn": false,
+    "skin": 0.03,
+    "pieces_kept": 15,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.79,
+    "fill": 0.391,
+    "size": [
+     1031,
+     1031
+    ]
+   },
+   "decision": "removed: stays removed"
+  },
+  "B059-P008-V2": {
+   "why": "the cut-out was B059-P008's, not this row's own picture",
+   "picture": 0,
+   "rect": [
+    0,
+    1597,
+    1130,
+    2747
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#FFFFFF",
+    "worn": false,
+    "skin": 0.029,
+    "pieces_kept": 15,
+    "holes_removed": 0.0,
+    "pieces": 2,
+    "soft_edge": 0.726,
+    "fill": 0.335,
+    "size": [
+     1101,
+     739
+    ]
+   },
+   "decision": "removed: stays removed"
+  },
+  "B061-P002-V2": {
+   "why": "the cut-out was B061-P002's, not this row's own picture",
+   "picture": 1,
+   "rect": [
+    6,
+    301,
+    1129,
+    1781
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#FFFFFF",
+    "worn": true,
+    "skin": 0.059,
+    "cloth": true,
+    "pieces_kept": 2,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.663,
+    "fill": 0.533,
+    "size": [
+     909,
+     1166
+    ]
+   },
+   "decision": "removed: stays removed"
+  },
+  "B062-P012-V3": {
+   "why": "the cut-out was B062-P012's, not this row's own picture",
+   "picture": 0,
+   "rect": [
+    6,
+    329,
+    1129,
+    1780
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#FFFFFF",
+    "worn": true,
+    "skin": 0.061,
+    "cloth": true,
+    "pieces_kept": 4,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.65,
+    "fill": 0.605,
+    "size": [
+     942,
+     832
+    ]
+   },
+   "decision": "removed: stays removed"
+  },
+  "B075-P001": {
+   "why": "the crop cut the piece off at top",
+   "picture": 0,
+   "rect": [
+    300,
+    961,
+    1608,
+    2074
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#F5F0E2",
+    "worn": false,
+    "skin": 0.023,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.784,
+    "fill": 0.49,
+    "size": [
+     1200,
+     1016
+    ]
+   },
+   "compare": {
+    "kept": 0.99,
+    "added": 0.017,
+    "added_past_old_crop": 0.05
+   },
+   "decision": "kept: only the edges improved"
+  },
+  "B075-P002-V2": {
+   "why": "the cut-out was B075-P002's, not this row's own picture",
+   "picture": 0,
+   "rect": [
+    302,
+    1085,
+    1608,
+    2071
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#F5F0E2",
+    "worn": true,
+    "skin": 0.107,
+    "worn_note": "a shoes on a person: the clothes model cannot separate it",
+    "pieces_kept": 2,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.778,
+    "fill": 0.507,
+    "size": [
+     1200,
+     906
+    ]
+   },
+   "decision": "back to Review"
+  },
+  "B075-P002-V3": {
+   "why": "the crop cut the piece off at top",
+   "picture": 0,
+   "rect": [
+    299,
+    1096,
+    1611,
+    2057
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#F5F0E2",
+    "worn": false,
+    "skin": 0.0,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.768,
+    "fill": 0.499,
+    "size": [
+     1200,
+     892
+    ]
+   },
+   "compare": {
+    "kept": 0.998,
+    "added": 0.018,
+    "added_past_old_crop": 0.316
+   },
+   "decision": "kept: only the edges improved"
+  },
+  "B075-P007-V3": {
+   "why": "the picture it came from was widened to the whole piece",
+   "picture": 0,
+   "rect": [
+    134,
+    422,
+    1824,
+    2507
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#F1F1E5",
+    "worn": false,
+    "skin": 0.0,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.683,
+    "fill": 0.668,
+    "size": [
+     958,
+     1200
+    ]
+   },
+   "decision": "undecided"
+  },
+  "B076-P007": {
+   "why": "the crop cut the piece off at top",
+   "picture": 0,
+   "rect": [
+    0,
+    103,
+    1908,
+    2544
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#BABAAE",
+    "worn": true,
+    "skin": 0.055,
+    "cloth": true,
+    "pieces_kept": 2,
+    "holes_removed": 0.1869,
+    "pieces": 1,
+    "soft_edge": 0.559,
+    "fill": 0.502,
+    "size": [
+     395,
+     1200
+    ]
+   },
+   "compare": {
+    "kept": 0.548,
+    "added": 0.267,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "removed: stays removed"
+  },
+  "B077-P007": {
+   "why": "the picture it came from was widened to the whole piece",
+   "picture": 0,
+   "rect": [
+    401,
+    511,
+    1530,
+    2480
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#F1F1E5",
+    "worn": false,
+    "skin": 0.001,
+    "pieces_kept": 2,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.701,
+    "fill": 0.638,
+    "size": [
+     696,
+     1200
+    ]
+   },
+   "decision": "undecided"
+  },
+  "B078-P014": {
+   "why": "the picture it came from was widened to the whole piece",
+   "picture": 0,
+   "rect": [
+    0,
+    444,
+    1272,
+    1825
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#F3F3F3",
+    "worn": true,
+    "skin": 0.112,
+    "worn_note": "a shoes on a person: the clothes model cannot separate it",
+    "pieces_kept": 2,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.772,
+    "fill": 0.572,
+    "size": [
+     1025,
+     368
+    ]
+   },
+   "decision": "back to Review"
+  },
+  "B089-P001": {
+   "why": "the crop cut the piece off at top",
+   "picture": 0,
+   "rect": [
+    454,
+    321,
+    1451,
+    1763
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#F0F0F0",
+    "worn": false,
+    "skin": 0.012,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.846,
+    "fill": 0.558,
+    "size": [
+     846,
+     1200
+    ]
+   },
+   "decision": "removed: stays removed"
+  },
+  "B089-P002": {
+   "why": "the crop cut the piece off at top",
+   "picture": 0,
+   "rect": [
+    457,
+    304,
+    1448,
+    1707
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#F0F0F0",
+    "worn": false,
+    "skin": 0.0,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.846,
+    "fill": 0.557,
+    "size": [
+     846,
+     1200
+    ]
+   },
+   "decision": "removed: stays removed"
+  },
+  "B089-P002-V2": {
+   "why": "the backdrop left inside the handle loop (the old hard cut kept it; soft_cut punches it)",
+   "picture": 0,
+   "rect": [
+    470,
+    313,
+    1428,
+    1726
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#F0F0F0",
+    "worn": false,
+    "skin": 0.004,
+    "pieces_kept": 2,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.835,
+    "fill": 0.556,
+    "size": [
+     817,
+     1200
+    ]
+   },
+   "compare": {
+    "kept": 0.934,
+    "added": 0.011,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "undecided"
+  },
+  "B089-P002-V3": {
+   "why": "the crop cut the piece off at top",
+   "picture": 0,
+   "rect": [
+    454,
+    304,
+    1451,
+    1715
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#F0F0F0",
+    "worn": false,
+    "skin": 0.0,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.834,
+    "fill": 0.558,
+    "size": [
+     846,
+     1200
+    ]
+   },
+   "decision": "removed: stays removed"
+  },
+  "B090-P001-V2": {
+   "why": "the cut-out was B090-P001's, not this row's own picture",
+   "picture": 0,
+   "rect": [
+    273,
+    334,
+    1634,
+    1695
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#F0F0F0",
+    "worn": false,
+    "skin": 0.0,
+    "pieces_kept": 237,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.902,
+    "fill": 0.377,
+    "size": [
+     1200,
+     1198
+    ]
+   },
+   "decision": "kept: item is a box on the photo, moved to the same pixels"
+  },
+  "B090-P006": {
+   "why": "the crop cut the piece off at top",
+   "picture": 0,
+   "rect": [
+    590,
+    584,
+    1300,
+    1719
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#F6F6F8",
+    "worn": false,
+    "skin": 0.012,
+    "pieces_kept": 2,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.743,
+    "fill": 0.343,
+    "size": [
+     690,
+     1071
+    ]
+   },
+   "compare": {
+    "kept": 0.988,
+    "added": 0.097,
+    "added_past_old_crop": 0.602
+   },
+   "decision": "kept: only the edges improved"
+  },
+  "B090-P007": {
+   "why": "the crop cut the piece off at top, left, right",
+   "picture": 0,
+   "rect": [
+    571,
+    353,
+    1322,
+    1485
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#F6F6F8",
+    "worn": true,
+    "skin": 0.089,
+    "worn_note": "a bag on a person: the clothes model cannot separate it",
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.673,
+    "fill": 0.335,
+    "size": [
+     726,
+     1074
+    ]
+   },
+   "compare": {
+    "kept": 0.998,
+    "added": 0.103,
+    "added_past_old_crop": 0.877
+   },
+   "decision": "kept: only the edges improved"
+  },
+  "B090-P009": {
+   "why": "the crop cut the piece off at top, left, right",
+   "picture": 0,
+   "rect": [
+    181,
+    948,
+    1733,
+    2230
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#F5F5F5",
+    "worn": false,
+    "skin": 0.004,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.73,
+    "fill": 0.577,
+    "size": [
+     1200,
+     995
+    ]
+   },
+   "compare": {
+    "kept": 0.998,
+    "added": 0.035,
+    "added_past_old_crop": 0.688
+   },
+   "decision": "kept: only the edges improved"
+  },
+  "B090-P009-V2": {
+   "why": "the cut-out was B090-P009's, not this row's own picture",
+   "picture": 0,
+   "rect": [
+    162,
+    858,
+    1741,
+    2131
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#F5F5F5",
+    "worn": true,
+    "skin": 0.149,
+    "worn_note": "a bag on a person: the clothes model cannot separate it",
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.71,
+    "fill": 0.57,
+    "size": [
+     1200,
+     974
+    ]
+   },
+   "decision": "back to Review"
+  },
+  "B090-P010": {
+   "why": "the crop cut the piece off at top, left",
+   "picture": 0,
+   "rect": [
+    286,
+    1121,
+    1612,
+    2256
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#F5F5F5",
+    "worn": true,
+    "skin": 0.061,
+    "worn_note": "a bag on a person: the clothes model cannot separate it",
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.748,
+    "fill": 0.57,
+    "size": [
+     1200,
+     1028
+    ]
+   },
+   "compare": {
+    "kept": 0.995,
+    "added": 0.032,
+    "added_past_old_crop": 0.693
+   },
+   "decision": "kept: only the edges improved"
+  },
+  "B090-P010-V2": {
+   "why": "the cut-out was B090-P010's, not this row's own picture",
+   "picture": 0,
+   "rect": [
+    258,
+    1413,
+    1642,
+    2413
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#F5F5F5",
+    "worn": false,
+    "skin": 0.0,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.74,
+    "fill": 0.598,
+    "size": [
+     1200,
+     878
+    ]
+   },
+   "decision": "removed: stays removed"
+  },
+  "B090-P010-V4": {
+   "why": "the crop cut the piece off at top",
+   "picture": 1,
+   "rect": [
+    445,
+    723,
+    1473,
+    1662
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#F5F5F5",
+    "worn": true,
+    "skin": 0.056,
+    "worn_note": "a bag on a person: the clothes model cannot separate it",
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.869,
+    "fill": 0.647,
+    "size": [
+     978,
+     843
+    ]
+   },
+   "compare": {
+    "kept": 0.997,
+    "added": 0.029,
+    "added_past_old_crop": 0.786
+   },
+   "decision": "undecided"
+  },
+  "B092-P002-V2": {
+   "why": "the cut-out was B092-P002's, not this row's own picture",
+   "picture": 0,
+   "rect": [
+    0,
+    129,
+    1622,
+    2739
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#E6E3E4",
+    "worn": false,
+    "skin": 0.029,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.623,
+    "fill": 0.488,
+    "size": [
+     467,
+     1200
+    ]
+   },
+   "decision": "back to Review"
+  },
+  "B092-P005-V2": {
+   "why": "the cut-out was B092-P005's, not this row's own picture",
+   "picture": 0,
+   "rect": [
+    284,
+    501,
+    1613,
+    1698
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#F5F5F5",
+    "worn": true,
+    "skin": 0.289,
+    "cloth": true,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.906,
+    "fill": 0.578,
+    "size": [
+     1200,
+     1059
+    ]
+   },
+   "decision": "back to Review"
+  },
+  "B092-P007": {
+   "why": "the crop cut the piece off at top",
+   "picture": 0,
+   "rect": [
+    253,
+    224,
+    1655,
+    2135
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#F3F3F3",
+    "worn": false,
+    "skin": 0.01,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.701,
+    "fill": 0.49,
+    "size": [
+     897,
+     1200
+    ]
+   },
+   "compare": {
+    "kept": 0.968,
+    "added": 0.062,
+    "added_past_old_crop": 0.88
+   },
+   "decision": "removed: stays removed"
+  },
+  "B092-P008-V2": {
+   "why": "the cut-out was B092-P008's, not this row's own picture",
+   "picture": 0,
+   "rect": [
+    0,
+    189,
+    1610,
+    2746
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#E7E5E3",
+    "worn": true,
+    "skin": 0.052,
+    "cloth": true,
+    "pieces_kept": 2,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.742,
+    "fill": 0.573,
+    "size": [
+     509,
+     1200
+    ]
+   },
+   "decision": "kept: item is a box on the photo, moved to the same pixels"
+  },
+  "B092-P008-V3": {
+   "why": "the cut-out was B092-P008's, not this row's own picture",
+   "picture": 0,
+   "rect": [
+    0,
+    189,
+    1908,
+    2746
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#E5E4E2",
+    "worn": true,
+    "skin": 0.112,
+    "cloth": true,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.664,
+    "fill": 0.619,
+    "size": [
+     580,
+     1200
+    ]
+   },
+   "decision": "kept: item is a box on the photo, moved to the same pixels"
+  },
+  "B020-P001": {
+   "why": "the crop cut the piece off at bottom",
+   "picture": 0,
+   "rect": [
+    450,
+    424,
+    1373,
+    2747
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#F6F6F6",
+    "worn": true,
+    "skin": 0.094,
+    "cloth": true,
+    "pieces_kept": 3,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.493,
+    "fill": 0.553,
+    "size": [
+     549,
+     1200
+    ]
+   },
+   "compare": {
+    "kept": 0.804,
+    "added": 0.034,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "removed: stays removed"
+  },
+  "B041-P009": {
+   "why": "the crop cut the piece off at left",
+   "picture": 0,
+   "rect": [
+    0,
+    23,
+    1908,
+    2616
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#343739",
+    "worn": true,
+    "skin": 0.136,
+    "worn_note": "the clothes model found no garment for this slot",
+    "pieces_kept": 15,
+    "holes_removed": 0.0033,
+    "pieces": 1,
+    "soft_edge": 0.654,
+    "fill": 0.54,
+    "size": [
+     883,
+     1200
+    ]
+   },
+   "compare": {
+    "kept": 0.942,
+    "added": 0.143,
+    "added_past_old_crop": 0.004
+   },
+   "decision": "removed: stays removed"
+  },
+  "B050-P005": {
+   "why": "the crop cut the piece off at bottom",
+   "picture": 0,
+   "rect": [
+    0,
+    173,
+    1908,
+    2747
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#5E6368",
+    "worn": true,
+    "skin": 0.151,
+    "cloth": true,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.556,
+    "fill": 0.575,
+    "size": [
+     791,
+     1200
+    ]
+   },
+   "compare": {
+    "kept": 0.574,
+    "added": 0.008,
+    "added_past_old_crop": 0.0
+   },
+   "decision": "back to Review"
+  },
+  "B068-P026": {
+   "why": "the picture it came from was widened to the whole piece",
+   "picture": 0,
+   "rect": [
+    0,
+    206,
+    1895,
+    2307
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#F6F6F6",
+    "worn": false,
+    "skin": 0.0,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.777,
+    "fill": 0.736,
+    "size": [
+     902,
+     1200
+    ]
+   },
+   "decision": "back to Review"
+  },
+  "B088-P009": {
+   "why": "the crop cut the piece off at top",
+   "picture": 0,
+   "rect": [
+    590,
+    304,
+    1316,
+    1707
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#F0F0F0",
+    "worn": false,
+    "skin": 0.001,
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.845,
+    "fill": 0.437,
+    "size": [
+     631,
+     1200
+    ]
+   },
+   "compare": {
+    "kept": 0.999,
+    "added": 0.04,
+    "added_past_old_crop": 0.863
+   },
+   "decision": "removed: stays removed"
+  },
+  "B088-P009-V2": {
+   "why": "the crop cut the piece off at top, right",
+   "picture": 0,
+   "rect": [
+    581,
+    279,
+    1324,
+    1685
+   ],
+   "info": {
+    "model": "isnet-general-use",
+    "backdrop": "#F0F0F0",
+    "worn": true,
+    "skin": 0.059,
+    "worn_note": "a bag on a person: the clothes model cannot separate it",
+    "pieces_kept": 1,
+    "holes_removed": 0.0,
+    "pieces": 1,
+    "soft_edge": 0.801,
+    "fill": 0.426,
+    "size": [
+     641,
+     1200
+    ]
+   },
+   "compare": {
+    "kept": 0.998,
+    "added": 0.048,
+    "added_past_old_crop": 0.884
+   },
+   "decision": "removed: stays removed"
+  }
+ },
+ "sent_to_review": [
+  "B010-P001",
+  "B016-P001-V2",
+  "B050-P005",
+  "B068-P026",
+  "B075-P002-V2",
+  "B078-P014",
+  "B090-P009-V2",
+  "B092-P002-V2",
+  "B092-P005-V2"
+ ],
+ "cells_sent_to_review": [],
+ "browser_sends": [
+  "B017-P001-V2",
+  "B020-P006-V2",
+  "B022-P015-C3",
+  "B022-P016-C7",
+  "B023-P009-C3",
+  "B023-P009-I1-C1",
+  "B023-P015-C0",
+  "B025-P004-C0",
+  "B026-P001-I1-C1",
+  "B026-P001-I2-C0",
+  "B026-P002-C0",
+  "B026-P003-C1",
+  "B026-P004-C0",
+  "B026-P005-C0",
+  "B026-P005-C1",
+  "B026-P006-C0",
+  "B026-P006-C1",
+  "B026-P007-C0",
+  "B026-P007-C1",
+  "B026-P008-C1",
+  "B028-P010-I3-C1",
+  "B028-P011-C0",
+  "B033-P005-C0",
+  "B034-P001-C1",
+  "B037-P007",
+  "B044-P015-C1",
+  "B046-P010-C3",
+  "B048-P001",
+  "B057-P004-C0",
+  "B058-P007-V2",
+  "B075-P007-V3",
+  "B077-P007",
+  "B078-P013-C5",
+  "B079-P002-I2-C1",
+  "B080-P001-C0",
+  "B080-P011-C10",
+  "B080-P011-C9",
+  "B081-P001-C1",
+  "B081-P002-C1",
+  "B081-P002-I1-C1"
+ ]
+}

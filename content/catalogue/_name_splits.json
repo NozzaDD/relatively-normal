@@ -1036,6 +1036,747 @@
      "image": 1
     }
    }
+  },
+  {
+   "rows": {
+    "B102-P004": {
+     "groups": [
+      [
+       0,
+       1
+      ]
+     ],
+     "pairs": {
+      "1-0": "pictures agree (dL 4.3, IoU 0.93)"
+     },
+     "literal": [
+      [
+       0,
+       1
+      ]
+     ],
+     "pages": [
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "yoox.com"
+      },
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "yoox.com"
+      }
+     ]
+    },
+    "B106-P001": {
+     "groups": [
+      [
+       0,
+       1
+      ]
+     ],
+     "pairs": {
+      "1-0": "no picture to compare"
+     },
+     "literal": [
+      [
+       0,
+       1
+      ]
+     ],
+     "pages": [
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "frame-store.com"
+      },
+      {
+       "name": "BEST SELLER The Gray 9",
+       "colour": "",
+       "pid": "",
+       "domain": "frame-store.com"
+      }
+     ]
+    },
+    "B106-P002": {
+     "groups": [
+      [
+       0,
+       1
+      ]
+     ],
+     "pairs": {
+      "1-0": "no picture to compare"
+     },
+     "literal": [
+      [
+       0,
+       1
+      ]
+     ],
+     "pages": [
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "frame-store.com"
+      },
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "frame-store.com"
+      }
+     ]
+    },
+    "B107-P006": {
+     "groups": [
+      [
+       0,
+       1
+      ]
+     ],
+     "pairs": {
+      "1-0": "page agrees on colour"
+     },
+     "literal": [
+      [
+       0,
+       1
+      ]
+     ],
+     "pages": [
+      {
+       "name": "",
+       "colour": "Braun - 9279 - TORTORA MELANGE",
+       "pid": "",
+       "domain": "falconeri.com"
+      },
+      {
+       "name": "",
+       "colour": "Braun - 9279 - TORTORA MELANGE",
+       "pid": "",
+       "domain": "falconeri.com"
+      }
+     ]
+    },
+    "B107-P014": {
+     "groups": [
+      [
+       0,
+       1
+      ]
+     ],
+     "pairs": {
+      "1-0": "page agrees on colour"
+     },
+     "literal": [
+      [
+       0,
+       1
+      ]
+     ],
+     "pages": [
+      {
+       "name": "",
+       "colour": "Wei - 8005 - Flockenweis",
+       "pid": "",
+       "domain": "falconeri.com"
+      },
+      {
+       "name": "",
+       "colour": "Wei - 8005 - Flockenweis",
+       "pid": "",
+       "domain": "falconeri.com"
+      }
+     ]
+    },
+    "B107-P015": {
+     "groups": [
+      [
+       0,
+       1
+      ]
+     ],
+     "pairs": {
+      "1-0": "pictures not of one known kind (model, flat), not compared"
+     },
+     "literal": [
+      [
+       0
+      ],
+      [
+       1
+      ]
+     ],
+     "pages": [
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "falconeri.com"
+      },
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "falconeri.com"
+      }
+     ]
+    },
+    "B107-P025": {
+     "groups": [
+      [
+       0
+      ],
+      [
+       1
+      ]
+     ],
+     "pairs": {
+      "1-0": "lightness 8.3"
+     },
+     "literal": [
+      [
+       0
+      ],
+      [
+       1
+      ]
+     ],
+     "pages": [
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "falconeri.com"
+      },
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "falconeri.com"
+      }
+     ]
+    },
+    "B107-P026": {
+     "groups": [
+      [
+       0,
+       1
+      ]
+     ],
+     "pairs": {
+      "1-0": "pictures agree (dL 2.2, IoU 1.00)"
+     },
+     "literal": [
+      [
+       0,
+       1
+      ]
+     ],
+     "pages": [
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "falconeri.com"
+      },
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "falconeri.com"
+      }
+     ]
+    },
+    "B107-P031": {
+     "groups": [
+      [
+       0
+      ],
+      [
+       1
+      ],
+      [
+       2,
+       3
+      ]
+     ],
+     "pairs": {
+      "1-0": "lightness 22.2",
+      "2-0": "lightness 26.1",
+      "2-1": "lightness 48.3",
+      "3-0": "lightness 32.6",
+      "3-1": "lightness 54.8",
+      "3-2": "pictures agree (dL 6.5, IoU 1.00)"
+     },
+     "literal": [
+      [
+       0
+      ],
+      [
+       1
+      ],
+      [
+       2,
+       3
+      ]
+     ],
+     "pages": [
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "falconeri.com"
+      },
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "falconeri.com"
+      },
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "falconeri.com"
+      },
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "falconeri.com"
+      }
+     ]
+    },
+    "B107-P032": {
+     "groups": [
+      [
+       0
+      ],
+      [
+       1
+      ],
+      [
+       2
+      ]
+     ],
+     "pairs": {
+      "1-0": "lightness 16.2",
+      "2-0": "lightness 37.1",
+      "2-1": "lightness 20.9"
+     },
+     "literal": [
+      [
+       0
+      ],
+      [
+       1
+      ],
+      [
+       2
+      ]
+     ],
+     "pages": [
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "falconeri.com"
+      },
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "falconeri.com"
+      },
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "falconeri.com"
+      }
+     ]
+    },
+    "B107-P033": {
+     "groups": [
+      [
+       0,
+       1
+      ],
+      [
+       2
+      ]
+     ],
+     "pairs": {
+      "1-0": "pictures agree (dL 3.4, IoU 0.97)",
+      "2-0": "lightness 8.1"
+     },
+     "literal": [
+      [
+       0,
+       1
+      ],
+      [
+       2
+      ]
+     ],
+     "pages": [
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "falconeri.com"
+      },
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "falconeri.com"
+      },
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "falconeri.com"
+      }
+     ]
+    },
+    "B107-P035": {
+     "groups": [
+      [
+       0
+      ],
+      [
+       1
+      ]
+     ],
+     "pairs": {
+      "1-0": "lightness 8.4"
+     },
+     "literal": [
+      [
+       0
+      ],
+      [
+       1
+      ]
+     ],
+     "pages": [
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "falconeri.com"
+      },
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "falconeri.com"
+      }
+     ]
+    },
+    "B107-P037": {
+     "groups": [
+      [
+       0
+      ],
+      [
+       1
+      ]
+     ],
+     "pairs": {
+      "1-0": "lightness 39.2"
+     },
+     "literal": [
+      [
+       0
+      ],
+      [
+       1
+      ]
+     ],
+     "pages": [
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "falconeri.com"
+      },
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "falconeri.com"
+      }
+     ]
+    },
+    "B107-P038": {
+     "groups": [
+      [
+       0,
+       1,
+       2
+      ]
+     ],
+     "pairs": {
+      "1-0": "no picture to compare",
+      "2-0": "no picture to compare",
+      "2-1": "no picture to compare"
+     },
+     "literal": [
+      [
+       0,
+       1,
+       2
+      ]
+     ],
+     "pages": [
+      {
+       "name": "",
+       "colour": "Blau - 9400 - Blu navy",
+       "pid": "",
+       "domain": "falconeri.com"
+      },
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "falconeri.com"
+      },
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "falconeri.com"
+      }
+     ]
+    },
+    "B107-P039": {
+     "groups": [
+      [
+       0,
+       1
+      ],
+      [
+       2
+      ]
+     ],
+     "pairs": {
+      "1-0": "pictures agree (dL 3.7)",
+      "2-0": "lightness 23.9"
+     },
+     "literal": [
+      [
+       0,
+       1
+      ],
+      [
+       2
+      ]
+     ],
+     "pages": [
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "falconeri.com"
+      },
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "falconeri.com"
+      },
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "falconeri.com"
+      }
+     ]
+    }
+   },
+   "plan": {
+    "B107-P025": [
+     [
+      0
+     ],
+     [
+      1
+     ]
+    ],
+    "B107-P031": [
+     [
+      0
+     ],
+     [
+      1
+     ],
+     [
+      2,
+      3
+     ]
+    ],
+    "B107-P032": [
+     [
+      0
+     ],
+     [
+      1
+     ],
+     [
+      2
+     ]
+    ],
+    "B107-P033": [
+     [
+      0,
+      1
+     ],
+     [
+      2
+     ]
+    ],
+    "B107-P035": [
+     [
+      0
+     ],
+     [
+      1
+     ]
+    ],
+    "B107-P037": [
+     [
+      0
+     ],
+     [
+      1
+     ]
+    ],
+    "B107-P039": [
+     [
+      0,
+      1
+     ],
+     [
+      2
+     ]
+    ]
+   },
+   "made": {
+    "B107-P025-V2": [
+     "content/swipe/products/IMG_1650.png"
+    ],
+    "B107-P031-V2": [
+     "content/swipe/products/IMG_1658.png"
+    ],
+    "B107-P031-V3": [
+     "content/swipe/products/IMG_1659.png",
+     "content/swipe/products/IMG_1660.png"
+    ],
+    "B107-P032-V2": [
+     "content/swipe/products/IMG_1662.png"
+    ],
+    "B107-P032-V3": [
+     "content/swipe/products/IMG_1663.png"
+    ],
+    "B107-P033-V2": [
+     "content/swipe/products/IMG_1666.png"
+    ],
+    "B107-P035-V2": [
+     "content/swipe/products/IMG_1669.png"
+    ],
+    "B107-P037-V2": [
+     "content/swipe/products/IMG_1672.png"
+    ],
+    "B107-P039-V2": [
+     "content/swipe/products/IMG_1678.png"
+    ]
+   },
+   "moved": {
+    "B107-P025#0": {
+     "product_id": "B107-P025",
+     "image": 0
+    },
+    "B107-P025#1": {
+     "product_id": "B107-P025-V2",
+     "image": 0
+    },
+    "B107-P031#0": {
+     "product_id": "B107-P031",
+     "image": 0
+    },
+    "B107-P031#1": {
+     "product_id": "B107-P031-V2",
+     "image": 0
+    },
+    "B107-P031#2": {
+     "product_id": "B107-P031-V3",
+     "image": 0
+    },
+    "B107-P031#3": {
+     "product_id": "B107-P031-V3",
+     "image": 1
+    },
+    "B107-P032#0": {
+     "product_id": "B107-P032",
+     "image": 0
+    },
+    "B107-P032#1": {
+     "product_id": "B107-P032-V2",
+     "image": 0
+    },
+    "B107-P032#2": {
+     "product_id": "B107-P032-V3",
+     "image": 0
+    },
+    "B107-P033#0": {
+     "product_id": "B107-P033",
+     "image": 0
+    },
+    "B107-P033#1": {
+     "product_id": "B107-P033",
+     "image": 1
+    },
+    "B107-P033#2": {
+     "product_id": "B107-P033-V2",
+     "image": 0
+    },
+    "B107-P035#0": {
+     "product_id": "B107-P035",
+     "image": 0
+    },
+    "B107-P035#1": {
+     "product_id": "B107-P035-V2",
+     "image": 0
+    },
+    "B107-P037#0": {
+     "product_id": "B107-P037",
+     "image": 0
+    },
+    "B107-P037#1": {
+     "product_id": "B107-P037-V2",
+     "image": 0
+    },
+    "B107-P039#0": {
+     "product_id": "B107-P039",
+     "image": 0
+    },
+    "B107-P039#1": {
+     "product_id": "B107-P039",
+     "image": 1
+    },
+    "B107-P039#2": {
+     "product_id": "B107-P039-V2",
+     "image": 0
+    }
+   }
   }
  ]
 }

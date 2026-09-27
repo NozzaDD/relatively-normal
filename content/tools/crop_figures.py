@@ -15,7 +15,10 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 FIGURE = 1.55                    # alpha bbox h/w above this is a person, not a packshot
 BAND = {'layer': (0.00, 0.80), 'dress': (0.00, 1.00), 'top': (0.04, 0.56),
         'base': (0.04, 0.56), 'bottom': (0.42, 1.00), 'shoes': (0.74, 1.00),
-        'bag': (0.22, 0.78), 'accessory': (0.00, 0.42), 'multiple': (0.00, 1.00)}
+        'accessory': (0.00, 0.42), 'multiple': (0.00, 1.00)}
+# No band for a bag: it hangs at the shoulder, the hip or in a hand, and a
+# fixed 22-78% band cut B043-P005's body off at the hip (25 Sept). A bag on a
+# figure keeps the whole figure until a box is drawn in Review.
 
 
 def main():

@@ -196,6 +196,15 @@ def full_photo(product, idx=0, shot_type=''):
         crop = page.crop(box)
     org = [ch[0] + box[0], ch[1] + box[1], box[2] - box[0], box[3] - box[1], OW, OH]
     prv = [ch[0] + prev[0], ch[1] + prev[1], prev[2] - prev[0], prev[3] - prev[1], OW, OH]
+    if shot_type != 'listing grid':
+        # the crop rule (crop_fix.widen): the whole piece plus a margin. The
+        # content finder works at 200 px wide, where a handle or a strap is a
+        # pixel or two and is dropped as type; the screenshot still has it.
+        import crop_fix
+        w, _ = crop_fix.widen(product['images'][idx], [org[0], org[1], org[0] + org[2], org[1] + org[3]])
+        if w != [org[0], org[1], org[0] + org[2], org[1] + org[3]]:
+            org = [w[0], w[1], w[2] - w[0], w[3] - w[1], OW, OH]
+            crop = orig.crop(tuple(w))
     return fit(crop, MAXSIDE), org, prv
 
 

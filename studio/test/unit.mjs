@@ -476,6 +476,12 @@ console.log('\npalette matching (24 Sept, evening)');
   ch.A = { choice: 'cutout' };
   const r2 = D.applyReviewSends(ch, sends, r1.version);
   ok('…once: a decision made after it stands', r2.n === 0 && ch.A.choice === 'cutout');
+  // a re-cut send asks only about pictures she took: removed stays removed
+  const ch3 = { A: { choice: 'cutout' }, B: { hidden: true }, C: { slot: 'bag' } };
+  const r3 = D.applyReviewSends(ch3, { versions: [{ version: '2026-09-25-recrop', only_chosen: true,
+    products: { A: 'recut', B: 'recut', C: 'recut' } }] }, '');
+  ok('an only_chosen send reaches a taken picture, not a removed piece or a slot', r3.n === 1
+    && ch3.A.review === 'recut' && ch3.B.hidden === true && !ch3.B.review && ch3.C.slot === 'bag' && !ch3.C.review);
   const { choicesFile } = await import('../js/review.js');
   const out = choicesFile({ X: { review: 'why', slot: 'bag' }, Y: { hidden: true } }).choices;
   ok('asset-choices.json carries review and hidden', out.X.review === 'why' && out.X.slot === 'bag' && out.Y.hidden === true);

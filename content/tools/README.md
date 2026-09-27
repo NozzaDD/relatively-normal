@@ -401,3 +401,107 @@ Order for a re-cut: `recut_hidden.py --cut` → `--sheets` and a person reading 
 | `tidy_exports.py` | merges every `content/catalogue/asset-choices*.json` (the copies the iPad's Files app makes when the name is taken) into `asset-choices.json`, keyed by product ID, the newest export winning — by the `exported` time inside the file, not the name; deletes the copies and the share sheet's `text.txt`, `text-2.txt` … in `content/catalogue/` and `content/outfits/`. A broken or unreadable export stops it before anything is changed. `build_products.py` runs it first; so does the *Apply shelf choices* workflow, whose path filter now watches `asset-choices*.json`. `test_tidy_exports.py` tests it. |
 
 The desk now writes the full export time (`2026-09-24T18:30:00.000Z`), not the day: two exports of one day could not be told apart. Older date-only exports of the same day count the copy as newer than `asset-choices.json`, since a copy only exists because a new export was saved beside it.
+
+## Added 25 September 2026 — crops that lose what is in the screenshot
+
+Every picture the desk shows is a rectangle of a screenshot, made in up to
+three steps: the review crop (`build_review_images.full_photo`: chrome off, then
+`imglib.product_box` — the largest blob that is not page colour and not type,
+found at **200 px wide** and padded 4% — then OCR eating type-heavy edges), a
+panel of a stacked page (`panels.py`, `panel_box`), or a grid cell
+(`read_grids.snap`). Every cut-out is cut from one of those. At 200 px a handle
+or a strap is a pixel or two whose cells are edge-dense enough to be taken for
+type, so the blob became the bag's body alone and the crop cut the rest:
+B090-P010-V4's top handle and shoulder strap, clear of every edge in IMG_1365
+and IMG_1366, were outside both crops. `read_grids.snap` kept only the topmost
+photo-sized run of rows and never let its margin leave the reader's box, which
+cut handles and chains off cells.
+
+| Script | What it does |
+|---|---|
+| `crop_fix.py` | **the crop rule.** `measure_rect` reads the screenshot itself: the photograph the crop sits in (its backdrop, connected, stopped at a gutter; a panel's own box), what in it is neither that backdrop nor the page's colour, gutters and rules dropped as lines, and the pieces the crop holds followed out past its edges. `ok`, `cut` (the piece runs past the crop but stops inside the screenshot: `widened` = its bounds plus 5%, at least 12 px), `photo_edge` (it runs to the shop photograph's own edge inside the page), `clipped` (it touches the screenshot's edge). `widen()` is what `build_review_images.full_photo`, `read_grids.ingest` and `make_assets.build` now call when they crop. `--measure` writes `_crop_fix.json` for every picture. |
+| `recrop.py` | re-cuts what `_crop_fix.json` says the crops lost: the review copy of a whole-page picture from its widened crop (`origin_prev` keeps the old one; `migrate_trim.py` moves her boxes), a grid cell with `read_grids.cut_cell`, and the shelf cut-out with `soft_cut.cut` from the full-resolution screenshot. Also the colourway rows `split_mixed.seed` gave their parent's cut-out file, the worn bags `crop_figures.py` cut to a fixed band (boxes read by eye), and B089-P002-V2's handle loop. Decisions: a box follows its pixels; an accepted cut-out stays accepted when the old cut is inside the new and what was added lies past the old crop's edge, else it goes back to Review (`review-sends.json`, version `2026-09-25-recrop`); a removed piece stays removed. Old files in `before-recrop/`; `--sheet DIR` draws before/after, bags first. |
+| `edge_clip.py` | redone on the screenshot: clipped only where the piece touches the screenshot's own edge. |
+
+Also changed: `split_mixed.seed` cuts a new row's own picture instead of copying
+the parent's cut-out (37 colourway rows had the parent's colour — B090-P009-V2
+burgundy beside a tan photo); `crop_figures.BAND` has no `bag` (a bag hangs at
+the shoulder, the hip or in a hand); `cluster_products.py --append` treats
+identical files as one by content, not by the `-2` in a name.
+
+What it did on 25 September: 389 pictures re-cut (283 grid cells, 106
+whole-page pictures) over two passes, 75 shelf cut-outs re-cut, 422 products
+touched — top 122, shoes 84, layer 74, bottom 58, bag 47, dress 17,
+accessory 15, base 3, multiple 1, no slot 1. Four cells kept their old cut
+because the widened one took in the next tile. Decisions: 13 kept (only the
+edges improved), 9 back to Review in the catalogue, 38 removed stay removed,
+and 40 pictures re-cut more than at their edges go out as a send the desk
+applies only where she had taken them in her own browser (`only_chosen`).
+Sheets: `content/catalogue/sheets/recrop/`, bags first.
+
+Measuring the screenshot has limits, and they are written into the code
+rather than guessed past: a white piece on a white page cannot be told from
+it (`empty`); a "piece" filling its own bounds is the whole photograph
+(`unmeasured`); a person reaching the frame says nothing about the garment,
+so a worn picture never counts as clipped; a grid on one seamless backdrop
+has no gutter, so a cell never reaches into another cell's tile
+(`clear_of`). Eighteen products the measurement called clipped were read by
+eye; eleven were not, and `edge_clip.NOT_CLIPPED_BY_EYE` says why.
+
+Order after this: `crop_fix.py --measure` → `recrop.py --run` → `migrate_trim.py`
+(with `TRIM_VERSION` bumped) → `build_products.py` → `shelf_checks.py` →
+`build_studio.py` → `edge_clip.py` → `build_studio.py --no-images`.
+
+## Added 25 September 2026 — clipped at the edge
+
+| Script | What it does |
+|---|---|
+| `edge_clip.py` | for every picture of every product (fabric close-ups, page panels and listing-grid pages aside), and for the shelf cut-out: does the piece run out of the frame? Finds each picture's whole cut-out back in its photo by its own pixels and reads the photo's border; the shelf cut-out is found the same way, which also names the picture it was cut from. Writes `_edge_clips.json`: the sides each picture touches, `clipped` when every picture does, `prefer` when another picture is clear and the shelf cut-out's is not. A picture on a model is measured but never counts (the head or a foot reaches the frame, not the piece); `ON_MODEL_BY_EYE` and `NO_PIECE_BY_EYE` hold the by-eye exceptions. `--apply` makes the clear picture's whole cut-out the shelf cut-out, for flat cut-outs only, keeping the old one in `assets-before-edge/`. `build_studio.py` reads it: `clipped` on each picture and on the product, and a clear picture first. |
+
+Order: `build_studio.py` → `edge_clip.py` → `build_studio.py` (it reads the built `studio/data/products.json` and the images under `studio/`). About four minutes for the catalogue. Needs `numpy`.
+
+What it found on 25 September morning — 176 of 1518 products "clipped", 20
+of them bags — was wrong: it measured pictures that were already crops.
+Superseded the same day by the section above: measured on the screenshots, 7
+products are clipped at the screenshot's own edge (B012-P002, B061-P004,
+B076-P001, B076-P006, B077-P003, B077-P005, B077-P010), each checked by eye, and
+no bag.
+
+## Ingest, 25 September 2026 — batches B100–B109
+
+85 new product screenshots became 63 products in ten batches, and
+`name_split.py` split 7 of the multi-screenshot rows by colour into 9 more:
+**72 new products** — top 48, bottom 19, layer 3, bag 1, accessory 1. Every one
+was sent to Review (`review-sends.json`, version `2026-09-25-new`); none is on
+the shelf until decided. Viewing rows: `_viewing_rows/rows_n13.txt`.
+
+**Identical files are one, by content.** `cluster_products.py --append` no
+longer skips a file for the `-2` in its name: it hashes each new file and drops
+it when it is a byte-for-byte copy of an image already filed anywhere in
+`content/swipe/`, or of another new file. 80 were skipped that way — the 79
+`IMG_1271-2.png` … `IMG_1360-2.png` exports and IMG_1337 (a fashion-show
+picture). Nine older files in `products/` that the swipe index types as
+`format` or `visual` were, as before, not taken for products.
+
+Things this ingest ran into, so the next one does not:
+
+- An ingest's incremental tools (`crop_figures`, `asset_quality`,
+  `flat_lays`, `panels`) also processed nine existing rows whose fingerprints
+  were not in `_processed.json`, and rewrote their cut-outs. Those were put
+  back from the commit before the ingest; `_processed.json` now stamps them, so
+  it will not happen again. **Check `git status content/catalogue/assets` for
+  anything outside the new batches before committing an ingest.**
+- `build_products.py` freezes the colour fields of rows it has written: run it
+  from the committed `products.csv` (`git checkout` it first) once colours
+  exist, or new rows keep empty colours (55 did, until rebuilt).
+- `split_mixed.seed` found no picture to cut for the ten new colourway rows
+  (their review copies did not exist yet), so they had no cut-out: run
+  `make_assets.py SHOTMAP --new` and the per-product tools again after
+  `name_split.py`.
+- B109-P007 (Coccinelle): the first cut-out was the browser's tab bar and its
+  review copy the model photo above the bag; both redone by eye from the
+  flat-lay photograph.
+- `name_split.py` split B104-P001 (ME+EM Leg Elongator Jean) on 8.0 L* of
+  light between two views of one page; undone by hand and put in `KEEP`.
+- `colourway_pictures.py` re-assigned pictures of 19 existing rows (B059-P006-V2
+  lost its own); their entries in `_picture_owners.json` were put back.

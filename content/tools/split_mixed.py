@@ -307,10 +307,18 @@ def seed(npid, pid, g, imgs, panels, flats, assets, colours, cache, rows, viewin
                             note='split out of %s: its own garment, its own colours' % pid)
         assets[npid].setdefault('asset_type', 'cutout_model')
         assets[npid].setdefault('asset_quality', 'good')
-    elif pid in assets:
-        shutil.copyfile(f'{CAT}/assets/{pid}.webp', f'{CAT}/assets/{npid}.webp')
-        assets[npid] = dict(assets[pid], asset_path=f'content/catalogue/assets/{npid}.webp',
-                            note='split out of %s' % pid)
+    elif imgs and imgs[0] and imgs[0].get('path') and os.path.exists(CAT + '/' + imgs[0]['path']):
+        # no clean panel and no whole cut-out yet: cut the row's OWN picture.
+        # Copying the parent's cut-out (as this did until 25 Sept) gave 37
+        # colourway rows the parent's colour — B090-P009-V2 burgundy on a tan page.
+        import soft_cut
+        with Image.open(CAT + '/' + imgs[0]['path']) as im:
+            out, _info = soft_cut.cut(im.convert('RGB'), slot=parent.get('slot', ''))
+        if out is not None:
+            out.save(f'{CAT}/assets/{npid}.webp', 'WEBP', quality=90, method=5)
+            assets[npid] = dict(assets.get(pid, {}), asset_path=f'content/catalogue/assets/{npid}.webp',
+                                bytes=os.path.getsize(f'{CAT}/assets/{npid}.webp'),
+                                note='split out of %s: cut from its own picture' % pid)
     # the viewing pass described the page, which is still true of every group;
     # the style name is kept on all of them so the rows stay findable together
     v = parent

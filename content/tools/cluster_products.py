@@ -190,13 +190,23 @@ def append(extra=()):
     idx = {r['path'] for r in csv.DictReader(open(ROOT + '/content/swipe/index.csv'))}
     folder = 'content/swipe/products'
     new = [folder + '/' + f for f in os.listdir(ROOT + '/' + folder)
-           if re.match(r'IMG_\d+\.(png|jpe?g)$', f, re.I)]
+           if re.match(r'IMG_\d+(-\d+)?\.(png|jpe?g)$', f, re.I)]
     new = [p for p in new if p not in idx and p not in have] + [p for p in extra if p not in have]
     new = sorted(set(new), key=seq)
     # a byte-identical copy of an image already filed — IMG_1337.png is the
     # same file as fashion shows ss27/IMG_1337.png — is not a new product.
-    # The "IMG_1271-2.png" exports are skipped by the name filter above.
+    # identical files are one, by content and never by name (25 Sept): iOS
+    # exports IMG_1357-2.png beside IMG_1357.png; two identical new files are
+    # one as well, the first in sequence kept
     same = copies(new)
+    import hashlib
+    seen = {}
+    for p in [q for q in new if q not in same]:
+        h = hashlib.sha1(open(ROOT + '/' + p, 'rb').read()).hexdigest()
+        if h in seen:
+            same[p] = seen[h]
+        else:
+            seen[h] = p
     if same:
         print('skipped as copies of a filed image:', ', '.join(f'{os.path.basename(a)} = {b}' for a, b in same.items()))
         new = [p for p in new if p not in same]

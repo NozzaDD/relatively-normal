@@ -65,7 +65,9 @@ export function productVersions(p, { details = false } = {}) {
     out.push({ kind: 'cutout', image: 0, base: 'asset', label: 'cut-out' });
   }
   const imgs = (p.images && p.images.length) ? p.images : (imageEntry(p, 0) ? [imageEntry(p, 0)] : []);
-  imgs.forEach((e, i) => {
+  // a picture that cuts the piece off at its edge is offered after the ones that do not
+  clearFirst(imgs.map((e, i) => i), imgs).forEach((i) => {
+    const e = imgs[i];
     // A fabric close-up is not a version of the garment — it is a swatch of it —
     // so it stays in the data and out of the filmstrip unless asked for.
     if (isDetail(e) && !details) return;
@@ -87,9 +89,33 @@ export const isDetail = (e) => e && (e.type === 'detail' || e.type === 'text' ||
 
 /** The pictures a piece can be switched between: one per picture of the product. */
 export function productPictures(p) {
-  const imgs = (p.images || []).map((e, i) => ({ i, type: e.type || 'whole page', entry: e }))
+  const all = p.images || [];
+  const imgs = clearFirst(all.map((e, i) => i), all).map((i) => ({ i, type: all[i].type || 'whole page', entry: all[i] }))
     .filter((x) => !isDetail(x.entry));
   return imgs.length > 1 ? imgs : [];
+}
+
+/**
+ * Picture indices, those where the piece is clear of the frame first — a bag
+ * whose handles run out of the top of one photo is offered from the other.
+ * `clipped` is measured by edge_clip.py; the order is otherwise kept.
+ */
+export function clearFirst(indices, images) {
+  const clipped = (i) => !!(images[i] && images[i].clipped && images[i].clipped.length);
+  return [...indices.filter((i) => !clipped(i)), ...indices.filter(clipped)];
+}
+
+/** The picture a Review card shows its boxes on: the first real one clear of the frame. */
+export function firstPicture(p) {
+  const imgs = p.images || [];
+  const real = imgs.map((e, i) => i).filter((i) => !isDetail(imgs[i]));
+  return clearFirst(real, imgs)[0] ?? 0;
+}
+
+/** The sides of the frame the piece runs out of in every picture, or [] when one shows it whole. */
+export function clippedSides(p) {
+  if (!p.clipped) return [];
+  return [...new Set((p.images || []).flatMap((e) => e.clipped || []))];
 }
 
 /** A stable id for the n-th box cut out of a product's image. */
@@ -321,7 +347,11 @@ export const sameView = (a, b) => a.variant === b.variant && a.image === b.image
 export function isSeveral(p, local) {
   if (!p.several || !p.several.length) return false;
   const c = effectiveChoice(p, local);
-  return !(c && c.choice === 'custom');
+  if (c && c.choice === 'custom') return false;
+  // a listing-grid cell is one cell of the page by construction: a tap on it
+  // is her decision that it is one garment, and it stands
+  const l = local && local[p.product_id];
+  return !(l && l.choice && p.parent_id && /-C\d+$/.test(p.product_id));
 }
 
 /** Sent back to Review — from the shelf, the canvas, or by the build — and not decided since. */
@@ -378,6 +408,9 @@ export function applyReviewSends(local, sends, applied = '') {
     for (const [pid, reason] of Object.entries(v.products || {})) {
       const l = local[pid];
       if (!l) continue;                  // nothing decided here: the catalogue says it
+      // a send that asks only about pictures she took (a re-cut that changed
+      // more than its edges) leaves a removed piece removed and a slot alone
+      if (v.only_chosen && !l.choice) continue;
       local[pid] = backToReviewChoice(l, reason);
       n++;
     }

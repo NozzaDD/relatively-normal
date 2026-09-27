@@ -17,7 +17,7 @@ import os, sys, json, argparse
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 CAT = ROOT + '/content/catalogue'
-TRIM_VERSION = 2          # bump when the trim changes again
+TRIM_VERSION = 3          # bump when the trim changes again (3: crop_fix, 25 Sept)
 
 
 def remap(box, prev, now):
