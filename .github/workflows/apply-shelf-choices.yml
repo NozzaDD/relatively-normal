@@ -36,9 +36,12 @@ jobs:
           fetch-depth: 1
           # cone mode: these folders plus the files at the repository root.
           # content/swipe (the original screenshots, ~2 GB) stays out.
+          # content/palettes: build_studio.py rebuilds the palettes from the
+          # AW26/27 trends file there (every run failed without it, 24-26 Sept)
           sparse-checkout: |
             content/catalogue
             content/outfits
+            content/palettes
             content/tools
             content/boards/fonts
             engine
@@ -79,8 +82,9 @@ jobs:
 
       - name: Commit the result, if anything changed
         run: |
-          # -A under the two folders so the deleted copies and stubs go too
-          git add -A content/catalogue content/outfits studio
+          # -A under the two folders so the deleted copies and stubs go too;
+          # content/palettes because build_studio.py rebuilds palettes.json
+          git add -A content/catalogue content/outfits content/palettes studio
           if git diff --cached --quiet; then
             echo "Nothing changed."
             exit 0

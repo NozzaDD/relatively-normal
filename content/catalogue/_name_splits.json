@@ -1777,6 +1777,73 @@
      "image": 0
     }
    }
+  },
+  {
+   "rows": {
+    "B110-P002": {
+     "groups": [
+      [
+       0,
+       1
+      ]
+     ],
+     "pairs": {
+      "1-0": "page agrees on pid"
+     },
+     "literal": [
+      [
+       0,
+       1
+      ]
+     ],
+     "pages": [
+      {
+       "name": "'S Max Mara Virgin wool blouse",
+       "colour": "",
+       "pid": "P01218500",
+       "domain": "mytheresa.com"
+      },
+      {
+       "name": "",
+       "colour": "",
+       "pid": "P01218500",
+       "domain": "mytheresa.com"
+      }
+     ]
+    },
+    "B114-P002": {
+     "groups": [
+      [
+       0,
+       1
+      ]
+     ],
+     "pairs": {
+      "1-0": "page agrees on name/colour"
+     },
+     "literal": [
+      [
+       0,
+       1
+      ]
+     ],
+     "pages": [
+      {
+       "name": "Camper CASI MYRA - Klassischer Ballerina - DARK BROWN",
+       "colour": "DARK BROWN",
+       "pid": "",
+       "domain": "zalando.ch"
+      },
+      {
+       "name": "Camper CASI MYRA - Klassischer Ballerina - DARK BROWN",
+       "colour": "DARK BROWN",
+       "pid": "",
+       "domain": "zalando.ch"
+      }
+     ]
+    }
+   },
+   "plan": {}
   }
  ]
 }
