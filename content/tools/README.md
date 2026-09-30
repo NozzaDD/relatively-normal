@@ -505,3 +505,17 @@ Things this ingest ran into, so the next one does not:
   light between two views of one page; undone by hand and put in `KEEP`.
 - `colourway_pictures.py` re-assigned pictures of 19 existing rows (B059-P006-V2
   lost its own); their entries in `_picture_owners.json` were put back.
+
+## Ingest, 27 September 2026 — batches B110–B115
+
+21 new screenshots (IMG_1702–IMG_1725), none a copy of anything filed, became
+19 products — layer 7, top 4, bottom 4, shoes 3, bag 1 — all sent to Review
+(`review-sends.json`, version `2026-09-27-new`). Viewing rows:
+`_viewing_rows/rows_n14.txt`. `name_split.py` split neither two-screenshot row.
+Run the way the 25 Sept notes say: after each tool pass, anything changed for
+a row outside the new batches is put back from the last commit (nothing was,
+this time), `build_products.py` last from the committed `products.csv`, and
+the existing rows' entries in `_picture_owners.json` restored after
+`colourway_pictures.py`. Worth a look in Review: B113-P001 (the cut-out holds
+the worn shot beside the shoe), B114-P001 (the screenshot is a zoomed
+close-up of one shoe), B111-P001 (on a dress form).

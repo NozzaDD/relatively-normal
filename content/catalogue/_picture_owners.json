@@ -26604,6 +26604,17 @@
    "inherited": 0,
    "replaced": [],
    "to_review": []
+  },
+  {
+   "report": {
+    "pictures moved to the row of their colour": 28,
+    "rows whose pictures changed": 48,
+    "cells given their own picture": 1071
+   },
+   "unassigned": 29,
+   "inherited": 0,
+   "replaced": [],
+   "to_review": []
   }
  ]
 }

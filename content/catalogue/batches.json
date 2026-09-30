@@ -6813,5 +6813,140 @@
   "images": [
    "content/swipe/products/IMG_1696.png"
   ]
+ },
+ {
+  "batch_id": "B110",
+  "product_id": "B110-P001",
+  "images": [
+   "content/swipe/products/IMG_1702.png"
+  ]
+ },
+ {
+  "batch_id": "B110",
+  "product_id": "B110-P002",
+  "images": [
+   "content/swipe/products/IMG_1703.png",
+   "content/swipe/products/IMG_1704.png"
+  ]
+ },
+ {
+  "batch_id": "B110",
+  "product_id": "B110-P003",
+  "images": [
+   "content/swipe/products/IMG_1705.png"
+  ]
+ },
+ {
+  "batch_id": "B110",
+  "product_id": "B110-P004",
+  "images": [
+   "content/swipe/products/IMG_1706.png"
+  ]
+ },
+ {
+  "batch_id": "B110",
+  "product_id": "B110-P005",
+  "images": [
+   "content/swipe/products/IMG_1707.png"
+  ]
+ },
+ {
+  "batch_id": "B110",
+  "product_id": "B110-P006",
+  "images": [
+   "content/swipe/products/IMG_1708.png"
+  ]
+ },
+ {
+  "batch_id": "B111",
+  "product_id": "B111-P001",
+  "images": [
+   "content/swipe/products/IMG_1712.png"
+  ]
+ },
+ {
+  "batch_id": "B111",
+  "product_id": "B111-P002",
+  "images": [
+   "content/swipe/products/IMG_1713.png"
+  ]
+ },
+ {
+  "batch_id": "B112",
+  "product_id": "B112-P001",
+  "images": [
+   "content/swipe/products/IMG_1714.png"
+  ]
+ },
+ {
+  "batch_id": "B112",
+  "product_id": "B112-P002",
+  "images": [
+   "content/swipe/products/IMG_1715.png"
+  ]
+ },
+ {
+  "batch_id": "B112",
+  "product_id": "B112-P003",
+  "images": [
+   "content/swipe/products/IMG_1716.png"
+  ]
+ },
+ {
+  "batch_id": "B112",
+  "product_id": "B112-P004",
+  "images": [
+   "content/swipe/products/IMG_1717.png"
+  ]
+ },
+ {
+  "batch_id": "B112",
+  "product_id": "B112-P005",
+  "images": [
+   "content/swipe/products/IMG_1718.png"
+  ]
+ },
+ {
+  "batch_id": "B112",
+  "product_id": "B112-P006",
+  "images": [
+   "content/swipe/products/IMG_1719.png"
+  ]
+ },
+ {
+  "batch_id": "B113",
+  "product_id": "B113-P001",
+  "images": [
+   "content/swipe/products/IMG_1720.png"
+  ]
+ },
+ {
+  "batch_id": "B114",
+  "product_id": "B114-P001",
+  "images": [
+   "content/swipe/products/IMG_1721.png"
+  ]
+ },
+ {
+  "batch_id": "B114",
+  "product_id": "B114-P002",
+  "images": [
+   "content/swipe/products/IMG_1722.png",
+   "content/swipe/products/IMG_1723.png"
+  ]
+ },
+ {
+  "batch_id": "B115",
+  "product_id": "B115-P001",
+  "images": [
+   "content/swipe/products/IMG_1724.png"
+  ]
+ },
+ {
+  "batch_id": "B115",
+  "product_id": "B115-P002",
+  "images": [
+   "content/swipe/products/IMG_1725.png"
+  ]
  }
 ]
