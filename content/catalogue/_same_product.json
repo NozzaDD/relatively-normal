@@ -1438,5 +1438,53 @@
    "centred"
   ],
   "literal": false
+ },
+ {
+  "members": [
+   {
+    "pid": "B125-P002",
+    "image": "content/swipe/products/IMG_1743.png",
+    "shot": "flat packshot",
+    "slot": "shoes",
+    "layout": "",
+    "flat": "/home/user/relatively-normal/content/catalogue/assets/B125-P002.webp",
+    "model": null,
+    "model_lab": null
+   },
+   {
+    "pid": "B125-P001",
+    "image": "content/swipe/products/IMG_1742.png",
+    "shot": "on model",
+    "slot": "shoes",
+    "layout": "",
+    "flat": null,
+    "model": "/home/user/relatively-normal/content/catalogue/assets/B125-P001.webp",
+    "model_lab": [
+     31.6,
+     -7.81,
+     -7.92
+    ],
+    "skin_share": 0.081,
+    "band": [
+     0,
+     1
+    ]
+   }
+  ],
+  "same": true,
+  "why": [],
+  "checks": [],
+  "flat": "B125-P002",
+  "model": "B125-P001",
+  "flat_lab": [
+   26.51,
+   3.42,
+   4.34
+  ],
+  "flat_model_de": 17.5,
+  "layouts": [
+   ""
+  ],
+  "literal": false
  }
 ]

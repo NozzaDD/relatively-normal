@@ -1844,6 +1844,135 @@
     }
    },
    "plan": {}
+  },
+  {
+   "rows": {
+    "B120-P001": {
+     "groups": [
+      [
+       0,
+       1
+      ]
+     ],
+     "pairs": {
+      "1-0": "page agrees on name/colour"
+     },
+     "literal": [
+      [
+       0,
+       1
+      ]
+     ],
+     "pages": [
+      {
+       "name": "STIVALET TO ANTRACITE/NERO",
+       "colour": "antracite/nero",
+       "pid": "",
+       "domain": "zalando.ch"
+      },
+      {
+       "name": "STIVALETTO ANTRACITE/NERO",
+       "colour": "antracite/nero",
+       "pid": "",
+       "domain": "zalando.ch"
+      }
+     ]
+    },
+    "B122-P001": {
+     "groups": [
+      [
+       0,
+       1
+      ]
+     ],
+     "pairs": {
+      "1-0": "page agrees on colour"
+     },
+     "literal": [
+      [
+       0,
+       1
+      ]
+     ],
+     "pages": [
+      {
+       "name": "",
+       "colour": "DUNKELBRAUN",
+       "pid": "",
+       "domain": ""
+      },
+      {
+       "name": "",
+       "colour": "DUNKELBRAUN",
+       "pid": "",
+       "domain": ""
+      }
+     ]
+    },
+    "B123-P001": {
+     "groups": [
+      [
+       0,
+       1
+      ]
+     ],
+     "pairs": {
+      "1-0": "pictures agree (dL 1.6)"
+     },
+     "literal": [
+      [
+       0,
+       1
+      ]
+     ],
+     "pages": [
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "farfetch.com"
+      },
+      {
+       "name": "",
+       "colour": "",
+       "pid": "",
+       "domain": "farfetch.com"
+      }
+     ]
+    },
+    "B126-P001": {
+     "groups": [
+      [
+       0,
+       1
+      ]
+     ],
+     "pairs": {
+      "1-0": "page agrees on name/pid"
+     },
+     "literal": [
+      [
+       0,
+       1
+      ]
+     ],
+     "pages": [
+      {
+       "name": "A.Emery Lane suede loafers",
+       "colour": "",
+       "pid": "P01170393",
+       "domain": "mytheresa.com"
+      },
+      {
+       "name": "A.Emery Lane suede loafers",
+       "colour": "",
+       "pid": "P01170393",
+       "domain": "mytheresa.com"
+      }
+     ]
+    }
+   },
+   "plan": {}
   }
  ]
 }
