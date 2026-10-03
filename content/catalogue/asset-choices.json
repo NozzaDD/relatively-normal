@@ -2321,7 +2321,9 @@
   "B123-P001": {
    "choice": "whole",
    "image": 1,
-   "base": "whole"
+   "base": "whole",
+   "splits": [],
+   "trim": 3
   },
   "B124-P001": {
    "review": "new, ingested 30 Sept \u2014 not decided yet"
