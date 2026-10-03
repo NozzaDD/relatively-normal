@@ -2287,10 +2287,14 @@
    "review": "new, ingested 30 Sept \u2014 not decided yet"
   },
   "B119-P001": {
-   "review": "new, ingested 30 Sept \u2014 not decided yet"
+   "review": "new, ingested 30 Sept \u2014 not decided yet",
+   "splits": [],
+   "trim": 3
   },
   "B119-P002": {
-   "review": "new, ingested 30 Sept \u2014 not decided yet"
+   "review": "new, ingested 30 Sept \u2014 not decided yet",
+   "splits": [],
+   "trim": 3
   },
   "B120-P001": {
    "review": "new, ingested 30 Sept \u2014 not decided yet"
@@ -2308,7 +2312,9 @@
    "review": "new, ingested 30 Sept \u2014 not decided yet"
   },
   "B123-P001": {
-   "review": "new, ingested 30 Sept \u2014 not decided yet"
+   "review": "new, ingested 30 Sept \u2014 not decided yet",
+   "splits": [],
+   "trim": 3
   },
   "B124-P001": {
    "review": "new, ingested 30 Sept \u2014 not decided yet"
@@ -2317,7 +2323,9 @@
    "review": "new, ingested 30 Sept \u2014 not decided yet"
   },
   "B126-P001": {
-   "review": "new, ingested 30 Sept \u2014 not decided yet"
+   "review": "new, ingested 30 Sept \u2014 not decided yet",
+   "splits": [],
+   "trim": 3
   },
   "B126-P002": {
    "review": "new, ingested 30 Sept \u2014 not decided yet"
