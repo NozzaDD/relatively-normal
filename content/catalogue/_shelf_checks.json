@@ -1,18 +1,5 @@
 {
  "duplicates": {
-  "B009-P004": {
-   "cause": "already in the catalogue",
-   "cluster": [
-    "B001-P004",
-    "B009-P004"
-   ],
-   "keeper": "B001-P004",
-   "measured": {
-    "de": 0.0,
-    "iou": 1.0,
-    "struct": 0.0
-   }
-  },
   "B011-P002-S1": {
    "cause": "already in the catalogue",
    "cluster": [
