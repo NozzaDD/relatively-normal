@@ -11,7 +11,8 @@ import * as M from './model.js';
 import { metrics, isTile, matOf, stripRows } from './render.js';
 import { rankByLook } from './colour.js';
 import * as X from './export.js';
-import { createReview, loadChoices, saveChoices, choicesFile, applyCrop, migrateChoices, migratePictures } from './review.js';
+import { createReview, loadChoices, saveChoices, choicesFile, applyCrop, migrateChoices, migratePictures,
+  newestFirst } from './review.js';
 import { indexPalettes, palettesIn, paletteSnapshot, placementText, outfitShares,
   rankByPalette, matchSwatch, swatchCounts } from './palette.js';
 
@@ -160,11 +161,15 @@ function setSlot(slot) {
 }
 
 // -------------------------------------------------------------------- shelf
-// Default order: the pieces that cut out cleanly first, then the page tiles.
-// It is a suggestion about picture quality, not about taste — a tile is still
+// Default order: the newest upload first (batch numbers grow with each
+// ingest), and inside one upload the pieces that cut out cleanly before the
+// page tiles. Picture quality is a suggestion, not taste — a tile is still
 // one tap away and can go on a board like anything else.
 const imageRank = (p) => (p.asset_type === 'tile' ? 2 : 0)
   + (p.asset_quality === 'good' ? 0 : 1);
+const batchOf = (p) => p.product_id.slice(0, 4);
+const shelfOrder = (a, b) => newestFirst(batchOf(a), batchOf(b))
+  || imageRank(a) - imageRank(b) || newestFirst(a.product_id, b.product_id);
 
 function currentList() {
   let list = filterProducts(S.products, S.filters, S.choices);
@@ -176,8 +181,7 @@ function currentList() {
   // nothing beyond the threshold (palette.js says where it is and why)
   else if (S.paletteSort && S.board.palette) list = rankByPalette(list, S.board.palette);
   else if (S.matchSort && look) list = rankByLook(list, look);
-  else list = list.map((p, i) => ({ p, i })).sort((a, b) => imageRank(a.p) - imageRank(b.p) || a.i - b.i)
-    .map((x) => x.p);
+  else list = [...list].sort(shelfOrder);
   return list;
 }
 
