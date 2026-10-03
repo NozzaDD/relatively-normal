@@ -1,7 +1,7 @@
 {
  "kind": "relatively-normal.asset-choices",
  "version": 1,
- "exported": "2026-09-30T19:27:35.950Z",
+ "exported": "2026-10-03T09:51:45.297Z",
  "choices": {
   "B001-P001": {
    "hidden": true,
@@ -24,7 +24,7 @@
    "trim": 3
   },
   "B002-P001": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
+   "choice": "cutout"
   },
   "B003-P001": {
    "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
@@ -434,10 +434,10 @@
    "hidden": true
   },
   "B021-P001-V3": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: row mixed colourways; now cut from its own colour's picture. Decide again."
+   "choice": "cutout"
   },
   "B021-P001-V2": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: row mixed colourways; now cut from its own colour's picture. Decide again."
+   "choice": "cutout"
   },
   "B021-P002-V2": {
    "hidden": true
@@ -640,7 +640,7 @@
    "trim": 3
   },
   "B031-P002": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
+   "choice": "cutout"
   },
   "B031-P002-V2": {
    "hidden": true
@@ -665,7 +665,7 @@
    "choice": "item"
   },
   "B032-P001": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: the cut lost the garment; now cut again from the full screenshot. Decide again."
+   "choice": "cutout"
   },
   "B032-P002": {
    "choice": "cutout"
@@ -708,7 +708,7 @@
    "hidden": true
   },
   "B037-P003": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
+   "choice": "cutout"
   },
   "B037-P004": {
    "choice": "cutout",
@@ -722,10 +722,10 @@
    "hidden": true
   },
   "B038-P002": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: panels not split; now cut from its own panel of the page. Decide again."
+   "choice": "cutout"
   },
   "B039-P002": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
+   "choice": "cutout"
   },
   "B039-P003": {
    "hidden": true
@@ -751,7 +751,7 @@
    "hidden": true
   },
   "B040-P003": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again.",
+   "choice": "cutout",
    "splits": [],
    "trim": 3
   },
@@ -925,10 +925,10 @@
    "hidden": true
   },
   "B045-P002": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
+   "choice": "cutout"
   },
   "B045-P003": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again.",
+   "choice": "cutout",
    "splits": [],
    "trim": 3
   },
@@ -942,10 +942,10 @@
    "hidden": true
   },
   "B047-P003": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
+   "choice": "cutout"
   },
   "B048-P001": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again.",
+   "choice": "cutout",
    "splits": [],
    "trim": 3
   },
@@ -1043,7 +1043,7 @@
    "trim": 3
   },
   "B052-P003": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: cut off at the edge of the picture; now cut again from the full screenshot, whole. Decide again."
+   "choice": "cutout"
   },
   "B052-P004": {
    "hidden": true,
@@ -1079,7 +1079,7 @@
    "trim": 3
   },
   "B053-P003": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
+   "choice": "cutout"
   },
   "B053-P003-V2": {
    "hidden": true
@@ -1105,7 +1105,7 @@
    "hidden": true
   },
   "B054-P005": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: jagged outline; now a soft, anti-aliased edge. Decide again."
+   "choice": "cutout"
   },
   "B054-P005-V3": {
    "hidden": true
@@ -1168,7 +1168,7 @@
    "hidden": true
   },
   "B055-P014": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
+   "choice": "cutout"
   },
   "B056-P001": {
    "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again.",
@@ -1217,10 +1217,10 @@
    "hidden": true
   },
   "B065-P003": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
+   "choice": "cutout"
   },
   "B065-P005": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
+   "choice": "cutout"
   },
   "B065-P006": {
    "hidden": true
@@ -1232,7 +1232,7 @@
    "hidden": true
   },
   "B067-P001": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
+   "choice": "cutout"
   },
   "B068-P001": {
    "choice": "cutout"
@@ -1398,10 +1398,10 @@
    "review": "re-cut 24 Sept \u2014 you hid it for: jagged outline; now a soft, anti-aliased edge. Decide again."
   },
   "B073-P006": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: jagged outline; now a soft, anti-aliased edge. Decide again."
+   "choice": "cutout"
   },
   "B073-P009": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: jagged outline; now a soft, anti-aliased edge. Decide again."
+   "choice": "cutout"
   },
   "B073-P010": {
    "choice": "custom",
@@ -1483,12 +1483,12 @@
    "review": "re-cut 24 Sept \u2014 you hid it for: the cut lost the garment; now cut again from the full screenshot. Decide again."
   },
   "B077-P007": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: row mixed different products; now the row is split; cut from its own picture. Decide again.",
+   "choice": "cutout",
    "splits": [],
    "trim": 3
   },
   "B077-P008": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: background left inside the garment; now the backdrop between the legs removed. Decide again."
+   "choice": "person"
   },
   "B077-P010": {
    "review": "re-cut 24 Sept \u2014 you hid it for: background left inside the garment; now the backdrop between the legs removed. Decide again."
@@ -1566,7 +1566,7 @@
    "base": "whole"
   },
   "B088-P001": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
+   "choice": "cutout"
   },
   "B088-P002": {
    "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
@@ -1718,7 +1718,7 @@
    "choice": "cutout"
   },
   "B018-P001": {
-   "review": "page text in the picture: the shelf picture was the page's \"Composizione\" text block, which panels.py had typed as a flat lay. Fixed; the cut-out is now the flat-lay panel of the polo \u2014 check it."
+   "choice": "cutout"
   },
   "B011-P002-S1": {
    "review": "cut from colour-swatch thumbnails on a product page (B011-P002 is Aspesi's colour picker, not a listing grid), and the box drawn on the cut-out was cropped from the full photo, so the picture took in \"Guida alle Taglie\" and the size row. Both fixed; the thumbnails are not products."
@@ -1839,79 +1839,79 @@
    "review": "new, ingested 25 Sept \u2014 not decided yet"
   },
   "B107-P016": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B107-P017": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B107-P018": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B107-P019": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B107-P020": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B107-P021": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B107-P022": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B107-P023": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B107-P024": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B107-P025": {
    "choice": "cutout"
   },
   "B107-P025-V2": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B107-P026": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B107-P027": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B107-P028": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B107-P029": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B107-P030": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B107-P031": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B107-P031-V2": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B107-P031-V3": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B107-P032": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B107-P032-V2": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B107-P032-V3": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B107-P033": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B107-P033-V2": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B107-P034": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B107-P035": {
    "choice": "cutout"
@@ -1932,10 +1932,10 @@
    "review": "new, ingested 25 Sept \u2014 not decided yet"
   },
   "B107-P039": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B107-P039-V2": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B108-P001": {
    "review": "new, ingested 25 Sept \u2014 not decided yet"
@@ -1947,18 +1947,18 @@
    "review": "new, ingested 25 Sept \u2014 not decided yet"
   },
   "B109-P003": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet"
+   "choice": "person"
   },
   "B109-P004": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet"
+   "choice": "person"
   },
   "B109-P005": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet",
+   "choice": "person",
    "splits": [],
    "trim": 3
   },
   "B109-P006": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet",
+   "choice": "person",
    "splits": [],
    "trim": 3
   },
@@ -2281,26 +2281,33 @@
    "review": "new, ingested 30 Sept \u2014 not decided yet"
   },
   "B117-P001": {
-   "review": "new, ingested 30 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B118-P001": {
-   "review": "new, ingested 30 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B119-P001": {
-   "review": "new, ingested 30 Sept \u2014 not decided yet",
+   "choice": "cutout",
    "splits": [],
    "trim": 3
   },
   "B119-P002": {
-   "review": "new, ingested 30 Sept \u2014 not decided yet",
+   "choice": "cutout",
    "splits": [],
    "trim": 3
   },
   "B120-P001": {
-   "review": "new, ingested 30 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B121-P001": {
-   "review": "new, ingested 30 Sept \u2014 not decided yet"
+   "choice": "custom",
+   "box": [
+    0,
+    0.1723,
+    0.5838,
+    0.8277
+   ],
+   "base": "asset"
   },
   "B122-P001": {
    "review": "new, ingested 30 Sept \u2014 not decided yet"
@@ -2323,12 +2330,51 @@
    "review": "new, ingested 30 Sept \u2014 not decided yet"
   },
   "B126-P001": {
-   "review": "new, ingested 30 Sept \u2014 not decided yet",
+   "choice": "cutout",
    "splits": [],
    "trim": 3
   },
   "B126-P002": {
-   "review": "new, ingested 30 Sept \u2014 not decided yet"
+   "choice": "cutout"
+  },
+  "B022-P013-C3": {
+   "choice": "cutout"
+  },
+  "B025-P007-I2-C2": {
+   "choice": "cutout"
+  },
+  "B027-P009-C0": {
+   "choice": "cutout"
+  },
+  "B028-P010-I1-C0": {
+   "choice": "cutout"
+  },
+  "B032-P001-V3": {
+   "choice": "cutout"
+  },
+  "B044-P002-C3": {
+   "choice": "cutout"
+  },
+  "B044-P004-I1-C3": {
+   "choice": "cutout"
+  },
+  "B044-P015-C0": {
+   "choice": "cutout"
+  },
+  "B044-P016-C1": {
+   "choice": "cutout"
+  },
+  "B046-P010-C1": {
+   "choice": "cutout"
+  },
+  "B049-P002-C0": {
+   "choice": "cutout"
+  },
+  "B050-P001-I2-C0": {
+   "choice": "cutout"
+  },
+  "B077-P007-V2": {
+   "choice": "cutout"
   }
  }
 }
