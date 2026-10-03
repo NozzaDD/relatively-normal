@@ -167,6 +167,18 @@ export function applyCrop(img, crop, boxW, boxH, fullW, fullH) {
   img.style.maxWidth = 'none';
 }
 
+/** B126-P002 before B126-P001 before B110-P006: batch, then product, then
+ * any -V/-C/-S suffix, all compared as numbers, largest first. */
+export function newestFirst(a, b) {
+  const key = (id) => (id.match(/\d+/g) || []).map(Number);
+  const x = key(a), y = key(b);
+  for (let i = 0; i < Math.max(x.length, y.length); i++) {
+    const d = (y[i] ?? -1) - (x[i] ?? -1);
+    if (d) return d;
+  }
+  return 0;
+}
+
 // ---------------------------------------------------------------- the tab
 export function createReview(api) {
   // api: { source, products(), choices, onChange(), toast() }
@@ -378,6 +390,9 @@ export function createReview(api) {
     const shown = list.filter((p) => (cells[p.product_id] || []).length
       ? (state.decided ? !waitingCells(p) : waitingCells(p))
       : (state.decided ? isReviewed(p, api.choices) : !isReviewed(p, api.choices)));
+    // newest upload first: product IDs grow with each ingest (B126 after
+    // B110), so the latest screenshots are at the top when Review opens
+    shown.sort((a, b) => newestFirst(a.product_id, b.product_id));
     for (const p of shown) {
       // a grid that has been cut into cells is its cells now, not a picture of
       // several garments to box: say where they are and show the ones left

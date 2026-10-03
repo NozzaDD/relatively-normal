@@ -487,5 +487,12 @@ console.log('\npalette matching (24 Sept, evening)');
   ok('asset-choices.json carries review and hidden', out.X.review === 'why' && out.X.slot === 'bag' && out.Y.hidden === true);
 }
 
+{
+  const { newestFirst } = await import('../js/review.js');
+  const ids = ['B110-P006', 'B126-P001', 'B012-P002', 'B126-P002', 'B079-P002-I1-C1', 'B012-P002-V2', 'B099-P010'];
+  eq('Review lists the newest upload first', [...ids].sort(newestFirst),
+    ['B126-P002', 'B126-P001', 'B110-P006', 'B099-P010', 'B079-P002-I1-C1', 'B012-P002-V2', 'B012-P002']);
+}
+
 console.log(`\nafter 24 Sept: ${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);
