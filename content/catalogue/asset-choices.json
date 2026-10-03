@@ -1,7 +1,7 @@
 {
  "kind": "relatively-normal.asset-choices",
  "version": 1,
- "exported": "2026-10-03T09:51:45.297Z",
+ "exported": "2026-10-03T10:58:48.000Z",
  "choices": {
   "B001-P001": {
    "hidden": true,
@@ -1992,7 +1992,7 @@
    "review": "new, ingested 27 Sept \u2014 not decided yet"
   },
   "B111-P001": {
-   "review": "new, ingested 27 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B111-P002": {
    "choice": "item"
@@ -2278,7 +2278,7 @@
    "choice": "cutout"
   },
   "B116-P001": {
-   "review": "new, ingested 30 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B117-P001": {
    "choice": "cutout"
@@ -2319,9 +2319,9 @@
    "review": "new, ingested 30 Sept \u2014 not decided yet"
   },
   "B123-P001": {
-   "review": "new, ingested 30 Sept \u2014 not decided yet",
-   "splits": [],
-   "trim": 3
+   "choice": "whole",
+   "image": 1,
+   "base": "whole"
   },
   "B124-P001": {
    "review": "new, ingested 30 Sept \u2014 not decided yet"
