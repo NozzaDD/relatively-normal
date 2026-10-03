@@ -9228,5 +9228,153 @@
   "alpha_fill": 0.86,
   "skin_share": 0.658,
   "measured": "clean"
+ },
+ "B116-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B116-P001.webp",
+  "note": "1 components; box found; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 24710,
+  "alpha_fill": 0.591,
+  "skin_share": 0.565,
+  "measured": "clean"
+ },
+ "B117-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B117-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 14786,
+  "alpha_fill": 0.492,
+  "skin_share": 0.563,
+  "measured": "backdrop not plain"
+ },
+ "B118-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B118-P001.webp",
+  "note": "1 components; box found; 67% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 100502,
+  "alpha_fill": 0.538,
+  "skin_share": 0.669,
+  "measured": "backdrop not plain"
+ },
+ "B119-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B119-P001.webp",
+  "note": "1 components; box found; 70% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 19656,
+  "alpha_fill": 0.601,
+  "skin_share": 0.696,
+  "measured": "skin in the frame"
+ },
+ "B119-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B119-P002.webp",
+  "note": "1 components; box found; 71% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 20942,
+  "alpha_fill": 0.61,
+  "skin_share": 0.708,
+  "measured": "skin in the frame"
+ },
+ "B120-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B120-P001.webp",
+  "note": "cut from the flat-lay panel of a split product page",
+  "bytes": 10866,
+  "alpha_fill": 0.503,
+  "skin_share": 0.009,
+  "measured": "clean"
+ },
+ "B121-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B121-P001.webp",
+  "note": "2 components; box found",
+  "bytes": 39882,
+  "alpha_fill": 0.446,
+  "skin_share": 0.465,
+  "measured": "backdrop not plain"
+ },
+ "B122-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B122-P001.webp",
+  "note": "1 components; box found; 72% skin and hair \u2014 the cut-out found the model, not the piece; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 35802,
+  "alpha_fill": 0.588,
+  "skin_share": 0.723,
+  "measured": "clean"
+ },
+ "B122-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B122-P002.webp",
+  "note": "1 components; box found; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 29114,
+  "alpha_fill": 0.57,
+  "skin_share": 0.248,
+  "measured": "clean"
+ },
+ "B122-P003": {
+  "asset_type": "cutout_model",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B122-P003.webp",
+  "note": "1 components; box found; cropped to the shoes band of a whole figure",
+  "bytes": 5856,
+  "alpha_fill": 0.866,
+  "skin_share": 0.001,
+  "measured": "backdrop not plain"
+ },
+ "B123-P001": {
+  "asset_type": "tile",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B123-P001.webp",
+  "note": "crop tile; box fallback, 15% of page",
+  "bytes": 32246,
+  "measured": "backdrop not plain"
+ },
+ "B124-P001": {
+  "asset_type": "cutout_model",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B124-P001.webp",
+  "note": "1 components; box found; cropped to the shoes band of a whole figure; 91% skin and hair \u2014 the cut-out found the model, not the piece",
+  "bytes": 3424,
+  "alpha_fill": 0.461,
+  "skin_share": 0.914,
+  "measured": "backdrop not plain"
+ },
+ "B126-P001": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B126-P001.webp",
+  "note": "1 components; box found",
+  "bytes": 26382,
+  "alpha_fill": 0.632,
+  "skin_share": 0.345,
+  "measured": "backdrop not plain"
+ },
+ "B126-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "good",
+  "asset_path": "content/catalogue/assets/B126-P002.webp",
+  "note": "1 components; box found",
+  "bytes": 25050,
+  "alpha_fill": 0.627,
+  "skin_share": 0.0,
+  "measured": "backdrop not plain"
+ },
+ "B125-P002": {
+  "asset_type": "cutout_flat",
+  "asset_quality": "weak",
+  "asset_path": "content/catalogue/assets/B125-P002.webp",
+  "note": "1 components; box found; 69% skin and hair \u2014 the cut-out found the model, not the piece; re-cut as a flat lay, 0 badge(s) painted out",
+  "bytes": 23828,
+  "alpha_fill": 0.653,
+  "skin_share": 0.692,
+  "measured": "clean"
  }
 }

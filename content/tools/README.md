@@ -519,3 +519,35 @@ the existing rows' entries in `_picture_owners.json` restored after
 `colourway_pictures.py`. Worth a look in Review: B113-P001 (the cut-out holds
 the worn shot beside the shoe), B114-P001 (the screenshot is a zoomed
 close-up of one shoe), B111-P001 (on a dress form).
+
+## Ingest, 30 September 2026 — batches B116–B126
+
+20 new screenshots (IMG_1727–IMG_1746, the second half of the 30 Sept upload;
+the `IMG_1712-2.png` … `IMG_1725-2.png` beside them are byte-for-byte copies of
+files B111–B115 already hold) became 16 rows in eleven batches, and
+`same_product.py --from 116 --merge` folded B125-P001 (the Loro Piana Rebecca
+Ballet Flat on a model) into B125-P002 (its flat lay; same page name and
+colour, Cedar Bronze): **15 new products, all shoes** — Chelsea boots, loafers,
+ballet flats. All sent to Review (`review-sends.json`, version
+`2026-09-30-new`). Viewing rows: `_viewing_rows/rows_n15.txt`. `name_split.py`
+split none of the four two-screenshot rows. Brand `input needed`: B118-P001
+(a mytheresa zoom, no page text) and B120-P001 (a popup covers "EMPORIO AR…");
+B125-P002's Loro Piana is `guessed` from the address bar.
+
+- **The 30 Sept review reached main as `content/catalogue/review/asset-choices.json`**
+  (and a `text.txt` stub): the share sheet saved it one folder down, where
+  neither `tidy_exports.py` nor the workflow's path filter looks, so it was
+  never applied. Moved to `asset-choices-2.json` and applied the way the
+  workflow does (`tidy_exports.py` → `migrate_trim.py` → `build_products.py`
+  → `build_studio.py --skip-inspiration`): shelf 1699 → 1721, hidden
+  386 → 392, Review 178 → 150. If a review push does not produce an *Apply
+  shelf choices (auto)* commit, look for the export under `review/`.
+- **`_processed.json` still lacked rows** — 64 existing rows for
+  `crop_figures`/`asset_quality` and 116 for `panels`. They were stamped with
+  their current fingerprint before the tools ran, so only the new rows were
+  processed. Run `incremental.py` before an ingest: "new or changed" should
+  equal the new rows.
+- `colourway_pictures.py` again moved the same 19 existing rows' pictures;
+  `_picture_owners.json` was put back. `same_product.py` rewrites
+  `sheets/same-product-pairs.jpg` with only its run's pairs; the committed
+  sheet was kept.

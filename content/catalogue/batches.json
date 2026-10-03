@@ -6948,5 +6948,115 @@
   "images": [
    "content/swipe/products/IMG_1725.png"
   ]
+ },
+ {
+  "batch_id": "B116",
+  "product_id": "B116-P001",
+  "images": [
+   "content/swipe/products/IMG_1727.png"
+  ]
+ },
+ {
+  "batch_id": "B117",
+  "product_id": "B117-P001",
+  "images": [
+   "content/swipe/products/IMG_1728.png"
+  ]
+ },
+ {
+  "batch_id": "B118",
+  "product_id": "B118-P001",
+  "images": [
+   "content/swipe/products/IMG_1729.png"
+  ]
+ },
+ {
+  "batch_id": "B119",
+  "product_id": "B119-P001",
+  "images": [
+   "content/swipe/products/IMG_1730.png"
+  ]
+ },
+ {
+  "batch_id": "B119",
+  "product_id": "B119-P002",
+  "images": [
+   "content/swipe/products/IMG_1731.png"
+  ]
+ },
+ {
+  "batch_id": "B120",
+  "product_id": "B120-P001",
+  "images": [
+   "content/swipe/products/IMG_1732.png",
+   "content/swipe/products/IMG_1733.png"
+  ]
+ },
+ {
+  "batch_id": "B121",
+  "product_id": "B121-P001",
+  "images": [
+   "content/swipe/products/IMG_1734.png"
+  ]
+ },
+ {
+  "batch_id": "B122",
+  "product_id": "B122-P001",
+  "images": [
+   "content/swipe/products/IMG_1735.png",
+   "content/swipe/products/IMG_1736.png"
+  ]
+ },
+ {
+  "batch_id": "B122",
+  "product_id": "B122-P002",
+  "images": [
+   "content/swipe/products/IMG_1737.png"
+  ]
+ },
+ {
+  "batch_id": "B122",
+  "product_id": "B122-P003",
+  "images": [
+   "content/swipe/products/IMG_1738.png"
+  ]
+ },
+ {
+  "batch_id": "B123",
+  "product_id": "B123-P001",
+  "images": [
+   "content/swipe/products/IMG_1739.png",
+   "content/swipe/products/IMG_1740.png"
+  ]
+ },
+ {
+  "batch_id": "B124",
+  "product_id": "B124-P001",
+  "images": [
+   "content/swipe/products/IMG_1741.png"
+  ]
+ },
+ {
+  "batch_id": "B125",
+  "product_id": "B125-P002",
+  "images": [
+   "content/swipe/products/IMG_1743.png",
+   "content/swipe/products/IMG_1742.png"
+  ]
+ },
+ {
+  "batch_id": "B126",
+  "product_id": "B126-P001",
+  "images": [
+   "content/swipe/products/IMG_1744.png",
+   "content/swipe/products/IMG_1745.png"
+  ]
+ },
+ {
+  "batch_id": "B126",
+  "product_id": "B126-P002",
+  "images": [
+   "content/swipe/products/IMG_1746.png"
+  ]
  }
 ]

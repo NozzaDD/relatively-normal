@@ -1,7 +1,7 @@
 {
  "kind": "relatively-normal.asset-choices",
  "version": 1,
- "exported": "2026-09-24",
+ "exported": "2026-09-30T19:27:35.950Z",
  "choices": {
   "B001-P001": {
    "hidden": true,
@@ -19,13 +19,7 @@
    "trim": 3
   },
   "B001-P004": {
-   "choice": "custom",
-   "box": [
-    0.0712,
-    0.0058,
-    0.9257,
-    0.9581
-   ],
+   "hidden": true,
    "splits": [],
    "trim": 3
   },
@@ -49,10 +43,10 @@
    "hidden": true
   },
   "B007-P001": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
+   "hidden": true
   },
   "B007-P002": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
+   "hidden": true
   },
   "B007-P003": {
    "hidden": true
@@ -87,7 +81,7 @@
    "trim": 3
   },
   "B010-P001": {
-   "review": "re-cut 25 Sept: the picture it came from was widened to the whole piece; the new cut-out takes in what the old crop left out, and changed more than its edges. Decide again.",
+   "choice": "cutout",
    "splits": [],
    "trim": 3
   },
@@ -101,6 +95,7 @@
    "choice": "cutout"
   },
   "B011-P002": {
+   "review": "colour-swatch thumbnails on a product page: the picture is Aspesi's colour picker (\"Colore NAVY\", \"Taglia 36\"), not a listing grid. Fixed; remove it, or keep the navy the page shows.",
    "splits": [
     {
      "n": 1,
@@ -141,8 +136,7 @@
      "colour_name": "",
      "base": "asset"
     }
-   ],
-   "review": "colour-swatch thumbnails on a product page: the picture is Aspesi's colour picker (\"Colore NAVY\", \"Taglia 36\"), not a listing grid. Fixed; remove it, or keep the navy the page shows."
+   ]
   },
   "B011-P003": {
    "choice": "item"
@@ -168,10 +162,10 @@
   "B011-P007": {
    "choice": "custom",
    "box": [
-    0.0896,
-    0.1185,
-    0.3044,
-    0.3174
+    0.0452,
+    0.1184,
+    0.1481,
+    0.3171
    ],
    "splits": [],
    "trim": 3
@@ -361,7 +355,8 @@
    ]
   },
   "B016-P001-V2": {
-   "review": "re-cut 25 Sept: the cut-out was B016-P001's, not this row's own picture; the new cut-out takes in what the old crop left out, and changed more than its edges. Decide again."
+   "choice": "cutout",
+   "base": "asset"
   },
   "B010-P003-V2": {
    "hidden": true
@@ -565,7 +560,7 @@
    ]
   },
   "B027-P004": {
-   "choice": "person"
+   "hidden": true
   },
   "B027-P005": {
    "choice": "cutout",
@@ -716,7 +711,7 @@
    "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again."
   },
   "B037-P004": {
-   "review": "re-cut 24 Sept \u2014 you hid it for: on a model; now cut off the model, the garment alone. Decide again.",
+   "choice": "cutout",
    "splits": [],
    "trim": 3
   },
@@ -1430,7 +1425,7 @@
    "choice": "cutout"
   },
   "B075-P002-V2": {
-   "review": "re-cut 25 Sept: the cut-out was B075-P002's, not this row's own picture; the new cut-out takes in what the old crop left out, and changed more than its edges. Decide again.",
+   "choice": "cutout",
    "splits": [],
    "trim": 3
   },
@@ -1527,7 +1522,9 @@
    "base": "asset"
   },
   "B078-P014": {
-   "review": "re-cut 25 Sept: the picture it came from was widened to the whole piece; the new cut-out takes in what the old crop left out, and changed more than its edges. Decide again.",
+   "choice": "whole",
+   "image": 1,
+   "base": "whole",
    "splits": [],
    "trim": 3
   },
@@ -1608,7 +1605,8 @@
    "trim": 3
   },
   "B089-P001-V2": {
-   "choice": "cutout"
+   "choice": "cutout",
+   "base": "asset"
   },
   "B089-P002": {
    "hidden": true,
@@ -1649,7 +1647,7 @@
    "trim": 3
   },
   "B090-P009-V2": {
-   "review": "re-cut 25 Sept: the cut-out was B090-P009's, not this row's own picture; the new cut-out takes in what the old crop left out, and changed more than its edges. Decide again.",
+   "choice": "cutout",
    "splits": [],
    "trim": 3
   },
@@ -1682,7 +1680,7 @@
    "choice": "cutout"
   },
   "B092-P002-V2": {
-   "review": "re-cut 25 Sept: the cut-out was B092-P002's, not this row's own picture; the new cut-out takes in what the old crop left out, and changed more than its edges. Decide again."
+   "choice": "cutout"
   },
   "B092-P004": {
    "choice": "cutout"
@@ -1691,7 +1689,7 @@
    "choice": "cutout"
   },
   "B092-P005-V2": {
-   "review": "re-cut 25 Sept: the cut-out was B092-P005's, not this row's own picture; the new cut-out takes in what the old crop left out, and changed more than its edges. Decide again."
+   "choice": "cutout"
   },
   "B092-P006": {
    "choice": "cutout"
@@ -1868,7 +1866,7 @@
    "review": "new, ingested 25 Sept \u2014 not decided yet"
   },
   "B107-P025": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B107-P025-V2": {
    "review": "new, ingested 25 Sept \u2014 not decided yet"
@@ -1916,16 +1914,16 @@
    "review": "new, ingested 25 Sept \u2014 not decided yet"
   },
   "B107-P035": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B107-P035-V2": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B107-P036": {
    "review": "new, ingested 25 Sept \u2014 not decided yet"
   },
   "B107-P037": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B107-P037-V2": {
    "review": "new, ingested 25 Sept \u2014 not decided yet"
@@ -1965,7 +1963,7 @@
    "trim": 3
   },
   "B109-P007": {
-   "review": "new, ingested 25 Sept \u2014 not decided yet",
+   "choice": "cutout",
    "splits": [],
    "trim": 3
   },
@@ -1976,10 +1974,10 @@
    "review": "new, ingested 25 Sept \u2014 not decided yet"
   },
   "B110-P001": {
-   "review": "new, ingested 27 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B110-P002": {
-   "review": "new, ingested 27 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B110-P003": {
    "review": "new, ingested 27 Sept \u2014 not decided yet"
@@ -1988,7 +1986,7 @@
    "review": "new, ingested 27 Sept \u2014 not decided yet"
   },
   "B110-P005": {
-   "review": "new, ingested 27 Sept \u2014 not decided yet"
+   "choice": "person"
   },
   "B110-P006": {
    "review": "new, ingested 27 Sept \u2014 not decided yet"
@@ -1997,42 +1995,332 @@
    "review": "new, ingested 27 Sept \u2014 not decided yet"
   },
   "B111-P002": {
-   "review": "new, ingested 27 Sept \u2014 not decided yet"
+   "choice": "item"
   },
   "B112-P001": {
-   "review": "new, ingested 27 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B112-P002": {
-   "review": "new, ingested 27 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B112-P003": {
-   "review": "new, ingested 27 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B112-P004": {
-   "review": "new, ingested 27 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B112-P005": {
-   "review": "new, ingested 27 Sept \u2014 not decided yet"
+   "choice": "cutout"
   },
   "B112-P006": {
    "review": "new, ingested 27 Sept \u2014 not decided yet"
   },
   "B113-P001": {
-   "review": "new, ingested 27 Sept \u2014 not decided yet"
+   "choice": "custom",
+   "box": [
+    0.0054,
+    0.5305,
+    0.9624,
+    0.2893
+   ]
   },
   "B114-P001": {
-   "review": "new, ingested 27 Sept \u2014 not decided yet",
+   "choice": "person",
    "splits": [],
    "trim": 3
   },
   "B114-P002": {
-   "review": "new, ingested 27 Sept \u2014 not decided yet"
+   "choice": "item"
   },
   "B115-P001": {
-   "review": "new, ingested 27 Sept \u2014 not decided yet"
+   "choice": "person"
   },
   "B115-P002": {
    "review": "new, ingested 27 Sept \u2014 not decided yet"
+  },
+  "B020-P005-C0": {
+   "choice": "cutout"
+  },
+  "B023-P007-C0": {
+   "choice": "cutout"
+  },
+  "B090-P010-V4": {
+   "choice": "cutout",
+   "splits": [],
+   "trim": 3
+  },
+  "B081-P002-I1-C1": {
+   "hidden": true
+  },
+  "B049-P003-I1-C1": {
+   "hidden": true
+  },
+  "B070-P021": {
+   "slot": "top"
+  },
+  "B079-P002-I1-C3": {
+   "choice": "cutout"
+  },
+  "B079-P003-C3": {
+   "choice": "cutout"
+  },
+  "B079-P004-C0": {
+   "choice": "cutout"
+  },
+  "B080-P001-C2": {
+   "choice": "cutout"
+  },
+  "B080-P002-I1-C3": {
+   "choice": "cutout"
+  },
+  "B080-P004-C1": {
+   "choice": "cutout"
+  },
+  "B080-P006-C4": {
+   "choice": "cutout"
+  },
+  "B034-P004-C1": {
+   "choice": "cutout"
+  },
+  "B044-P001-C2": {
+   "choice": "cutout"
+  },
+  "B044-P001-C3": {
+   "choice": "cutout"
+  },
+  "B043-P007-I1-C0": {
+   "choice": "cutout"
+  },
+  "B043-P007-I1-C2": {
+   "choice": "cutout"
+  },
+  "B049-P003-C0": {
+   "choice": "cutout"
+  },
+  "B049-P003-C1": {
+   "choice": "cutout"
+  },
+  "B049-P003-I2-C1": {
+   "choice": "cutout"
+  },
+  "B049-P003-I2-C2": {
+   "choice": "cutout"
+  },
+  "B049-P002-C1": {
+   "choice": "cutout"
+  },
+  "B069-P001-C1": {
+   "choice": "cutout"
+  },
+  "B078-P011-C1": {
+   "choice": "cutout"
+  },
+  "B078-P011-C2": {
+   "choice": "cutout"
+  },
+  "B078-P011-C4": {
+   "choice": "cutout"
+  },
+  "B078-P011-C5": {
+   "choice": "cutout"
+  },
+  "B078-P012-C0": {
+   "choice": "cutout"
+  },
+  "B078-P012-C1": {
+   "choice": "cutout"
+  },
+  "B078-P012-C2": {
+   "choice": "cutout"
+  },
+  "B078-P012-C3": {
+   "choice": "cutout"
+  },
+  "B078-P012-C4": {
+   "choice": "cutout"
+  },
+  "B078-P012-C5": {
+   "choice": "cutout"
+  },
+  "B078-P013-C1": {
+   "choice": "cutout"
+  },
+  "B078-P013-C2": {
+   "choice": "cutout"
+  },
+  "B078-P013-C3": {
+   "choice": "cutout"
+  },
+  "B078-P013-C4": {
+   "choice": "cutout"
+  },
+  "B079-P002-C0": {
+   "choice": "cutout"
+  },
+  "B079-P002-C2": {
+   "choice": "cutout"
+  },
+  "B079-P002-I1-C1": {
+   "choice": "cutout"
+  },
+  "B079-P002-I1-C2": {
+   "choice": "cutout"
+  },
+  "B079-P002-I2-C1": {
+   "choice": "cutout"
+  },
+  "B079-P002-I2-C2": {
+   "choice": "cutout"
+  },
+  "B079-P003-C0": {
+   "choice": "cutout"
+  },
+  "B079-P003-C1": {
+   "choice": "cutout"
+  },
+  "B079-P003-C2": {
+   "choice": "cutout"
+  },
+  "B079-P004-C2": {
+   "choice": "cutout"
+  },
+  "B080-P001-C1": {
+   "choice": "cutout"
+  },
+  "B080-P001-C3": {
+   "choice": "cutout"
+  },
+  "B080-P001-I1-C0": {
+   "choice": "cutout"
+  },
+  "B080-P001-I1-C2": {
+   "choice": "cutout"
+  },
+  "B080-P001-I1-C3": {
+   "choice": "cutout"
+  },
+  "B080-P001-I2-C0": {
+   "choice": "cutout"
+  },
+  "B080-P002-C2": {
+   "choice": "cutout"
+  },
+  "B080-P002-C3": {
+   "choice": "cutout"
+  },
+  "B080-P002-I1-C2": {
+   "choice": "cutout"
+  },
+  "B080-P002-I3-C3": {
+   "choice": "cutout"
+  },
+  "B080-P003-C1": {
+   "choice": "cutout"
+  },
+  "B080-P003-C2": {
+   "choice": "cutout"
+  },
+  "B080-P003-C3": {
+   "choice": "cutout"
+  },
+  "B080-P004-C2": {
+   "choice": "cutout"
+  },
+  "B080-P004-C3": {
+   "choice": "cutout"
+  },
+  "B080-P005-C1": {
+   "choice": "cutout"
+  },
+  "B080-P006-C1": {
+   "choice": "cutout"
+  },
+  "B080-P006-C3": {
+   "choice": "cutout"
+  },
+  "B080-P006-C5": {
+   "choice": "cutout"
+  },
+  "B080-P007-C1": {
+   "choice": "cutout"
+  },
+  "B080-P007-C3": {
+   "choice": "cutout"
+  },
+  "B080-P012-C6": {
+   "choice": "cutout"
+  },
+  "B081-P001-C0": {
+   "choice": "cutout"
+  },
+  "B082-P001-C0": {
+   "choice": "cutout"
+  },
+  "B082-P001-C1": {
+   "choice": "cutout"
+  },
+  "B082-P001-I1-C1": {
+   "choice": "cutout"
+  },
+  "B090-P003-C0": {
+   "choice": "cutout"
+  },
+  "B090-P003-C1": {
+   "choice": "cutout"
+  },
+  "B090-P003-I2-C0": {
+   "choice": "cutout"
+  },
+  "B090-P008-I1-C0": {
+   "choice": "cutout"
+  },
+  "B080-P013-C0": {
+   "choice": "cutout"
+  },
+  "B116-P001": {
+   "review": "new, ingested 30 Sept \u2014 not decided yet"
+  },
+  "B117-P001": {
+   "review": "new, ingested 30 Sept \u2014 not decided yet"
+  },
+  "B118-P001": {
+   "review": "new, ingested 30 Sept \u2014 not decided yet"
+  },
+  "B119-P001": {
+   "review": "new, ingested 30 Sept \u2014 not decided yet"
+  },
+  "B119-P002": {
+   "review": "new, ingested 30 Sept \u2014 not decided yet"
+  },
+  "B120-P001": {
+   "review": "new, ingested 30 Sept \u2014 not decided yet"
+  },
+  "B121-P001": {
+   "review": "new, ingested 30 Sept \u2014 not decided yet"
+  },
+  "B122-P001": {
+   "review": "new, ingested 30 Sept \u2014 not decided yet"
+  },
+  "B122-P002": {
+   "review": "new, ingested 30 Sept \u2014 not decided yet"
+  },
+  "B122-P003": {
+   "review": "new, ingested 30 Sept \u2014 not decided yet"
+  },
+  "B123-P001": {
+   "review": "new, ingested 30 Sept \u2014 not decided yet"
+  },
+  "B124-P001": {
+   "review": "new, ingested 30 Sept \u2014 not decided yet"
+  },
+  "B125-P002": {
+   "review": "new, ingested 30 Sept \u2014 not decided yet"
+  },
+  "B126-P001": {
+   "review": "new, ingested 30 Sept \u2014 not decided yet"
+  },
+  "B126-P002": {
+   "review": "new, ingested 30 Sept \u2014 not decided yet"
   }
  }
 }
